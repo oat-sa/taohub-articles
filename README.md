@@ -15,3 +15,7 @@ Templates and such.
 
 ## Resources
 Every main directory has a sub-directory called _resources_. This is for pictures etc.
+
+---
+
+For more details visit the (wiki of this repository)[/wiki/Getting-the-structure-right]
