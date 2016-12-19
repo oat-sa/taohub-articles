@@ -18,4 +18,4 @@ Every main directory has a sub-directory called _resources_. This is for picture
 
 ---
 
-For more details visit the wiki: [https://github.com/oat-sa/taohub-articles/wiki/Getting-the-structure-right]
+For more details visit the wiki: https://github.com/oat-sa/taohub-articles/wiki/Getting-the-structure-right
