@@ -100,10 +100,8 @@ Increase advanced testing capacity and access high level psychometric features w
 There are restrictions at the level of properties selection of columns to populate tables. It is restricted to informations connected from the results, like the age of the studeing having passed the test related to the results but it is not possible to select informations defined the other way in the model like the teacher having the student who has taken the test.
 
 -   Ergonomy of the table of results tool (UTR)\
-    Based on the outcome from usability lab planned, a re-design of the suer interfaces will be performed.<br/>
-
-    Increased usability and flexibility to create result tables combining test results, item, test, group, subject, and delivery meta-data and background information using the improved table builder and meta-data explorer, connect result table with data analysis tools directly from TAO using the embedded R user interface.<br/>
-
+    Based on the outcome from usability lab planned, a re-design of the suer interfaces will be performed.\
+    Increased usability and flexibility to create result tables combining test results, item, test, group, subject, and delivery meta-data and background information using the improved table builder and meta-data explorer, connect result table with data analysis tools directly from TAO using the embedded R user interface.\
     In addition, the current user interfaces are not consistent with graphical widgets and layout used in the tao platform in general.
 
 TAO 3.0 Open Item Bank (& Items / Extension MarketPlace)\

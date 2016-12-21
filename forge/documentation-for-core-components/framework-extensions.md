@@ -70,10 +70,8 @@ The screenshot below represents a TAO distribution into the *transferAll* folder
 Inside an extension we have the following folders structure:
 
 -   **actions**\
-    It contains the controller layer.<br/>
-
-    In the ClearFw, a **controller** is called a **module**. We are using this convention.<br/>
-
+    It contains the controller layer.\
+    In the ClearFw, a **controller** is called a **module**. We are using this convention.\
     The *actions* folder contains all the module classes (the controllers) of the extension and can also contain a *structure.xml* file that describes the User Interface structure.
 
 <!-- -->

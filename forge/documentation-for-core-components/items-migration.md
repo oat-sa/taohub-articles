@@ -53,8 +53,7 @@ To run it
 \* On a Windows System:
 
     CD taoItems\scripts
-    C:<br/>
-PHP5\php.exe -f "migrateLegacy.php" -- -arg1=value1 -arg2=value2
+    C:\PHP5\php.exe -f "migrateLegacy.php" -- -arg1=value1 -arg2=value2
 
 To get the description of the script options, just launch it with the help argument.
 

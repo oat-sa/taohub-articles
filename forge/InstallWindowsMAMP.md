@@ -74,8 +74,7 @@ The TAO platform may be run using an Apache2 virtual host instead of a subfolder
         ServerAdmin webmaster@taoplatform
         ServerName taoplatform
 
-        DocumentRoot C:<br/>
-MAMP\htdocs\tao
+        DocumentRoot C:\MAMP\htdocs\tao
 
         
             Options -Indexes +FollowSymLinks +MultiViews
@@ -84,10 +83,8 @@ MAMP\htdocs\tao
             allow from all
         
 
-        ErrorLog C:<br/>
-MAMP\logs\tao-error.log
-        CustomLog C:<br/>
-MAMP\logs\tao-access.log combined
+        ErrorLog C:\MAMP\logs\tao-error.log
+        CustomLog C:\MAMP\logs\tao-access.log combined
 
 Open the main Apache2 configuration file located at **C:<br/>
 \MAMP\\bin\\apache\\conf\\httpd.conf** and add the following line below the commented one:

@@ -87,8 +87,7 @@ The TAO platform needs to be run on an Apache Virtual Host to run correctly. We 
         ServerAdmin webmaster@taoplatform
         ServerName taoplatform
 
-        DocumentRoot C:<br/>
-wamp\www\taoplatform
+        DocumentRoot C:\wamp\www\taoplatform
 
         
             Options Indexes FollowSymLinks MultiViews

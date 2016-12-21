@@ -17,12 +17,10 @@ This document describes abstractions available for TAO 3.0. Please see [[Data ab
 The key-value storage implementation may be installed and configured under the following conditions:
 
 -   If you are using Ubuntu, make sure you have the following packages installed:
-    -   for Redis:<br/>
-
+    -   for Redis:\
         “redis-server” on the server you want to use for the storage\
         “php5-redis” on the TAO application server
-    -   for Couchbase:<br/>
-
+    -   for Couchbase:\
         “couchbase-server” (on the server you want to use for the storage)\
         PECL “couchbase” library on the TAO application server
 -   If you are using Fedora/CentOS/RHEL, make sure you have the following packages installed:

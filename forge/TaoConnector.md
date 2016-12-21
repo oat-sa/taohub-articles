@@ -26,8 +26,7 @@ used to:
 functions:
 
 -   available without authentication:
-    -   **startSession**(login, password) returns an array of informations about the user if successful.<br/>
-
+    -   **startSession**(login, password) returns an array of informations about the user if successful.\
         (sessions started this way store the user-URI and token in the php session)
 
 <!-- -->

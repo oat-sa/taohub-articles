@@ -18,8 +18,7 @@ You can import your data to:
 
 -   CSV, the import is occurring in three steps:<br/>
 
-    - first define the common options of your CSV file,<br/>
-
+    - first define the common options of your CSV file,\
     - second select your file in your file system by clicking the Browse button and\
     - thirdly map the columns of your CSV file to the properties of your class.
 

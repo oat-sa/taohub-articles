@@ -130,18 +130,12 @@ You may extend the tao\_actions\_CommonRestModule and override
 
 -   getParametersAliases()\
     example : return array\_merge(parent::getParametersAliases(), array(\
-     “login”=\> PROPERTY\_USER\_LOGIN,<br/>
-
-     “password” =\> PROPERTY\_USER\_PASSWORD,<br/>
-
-     “guiLg” =\> PROPERTY\_USER\_UILG,<br/>
-
-     “dataLg” =\> PROPERTY\_USER\_DEFLG,<br/>
-
-     “firstName”=\> PROPERTY\_USER\_LASTNAME,<br/>
-
-     “mail”=\> PROPERTY\_USER\_MAIL,<br/>
-
+     “login”=\> PROPERTY\_USER\_LOGIN,\
+     “password” =\> PROPERTY\_USER\_PASSWORD,\
+     “guiLg” =\> PROPERTY\_USER\_UILG,\
+     “dataLg” =\> PROPERTY\_USER\_DEFLG,\
+     “firstName”=\> PROPERTY\_USER\_LASTNAME,\
+     “mail”=\> PROPERTY\_USER\_MAIL,\
      “type”=\> RDF\_TYPE\
      ));
 -   getParametersRequirements()
