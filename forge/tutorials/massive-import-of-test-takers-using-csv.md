@@ -28,7 +28,7 @@ TAO supports the import of multiple formats CSV (Comma Separated Values) and RDF
 
 We will now use a sample CSV file to analyse how the Test Takers data must be formatted to be recognized by the platform and finally inserted in the database. Before continuing the tutorial, please download and open the following CSV file with your favorite spreadsheet software.
 
--   attachment:users1-header.csv: a file containing generic Test Takers data.
+-   [users1-header.csv:](../resources/users1-header.csv:) a file containing generic Test Takers data.
 
 Now that you can see the data, let us review it together.
 

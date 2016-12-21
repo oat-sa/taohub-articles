@@ -23,7 +23,7 @@ Most of the available actions in the TAO back-office are available as a service.
 
 The complete list of service is loaded into TAO during the installation process: they are available in the advanced authoring tool.
 
-The complete description of services can be found here : attachment:Services\_definition.pdf
+The complete description of services can be found here : [Services\_definition.pdf](../resources/Services\_definition.pdf)
 
 ### 1.2. Groups services
 

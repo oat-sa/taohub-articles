@@ -21,7 +21,7 @@ The Workflow API is a Javascript library which enables you to access and drive t
 
 You can either:
 
--   download the Workflow API standalone package here : attachment:wfapi.zip
+-   download the Workflow API standalone package here : [wfapi.zip](../resources/wfapi.zip)
 -   use the version included in the TAO distribution at /wfEngine/views/js/wfApi
 
 2. API

@@ -31,7 +31,7 @@ Installation
 
 Tao 2.6 does not yet use composer for the entire project, but it is used in generis. So in order to add a library:
 
-\* place the attached attachment:composer.json in /generis
+\* place the attached [composer.json](../resources/composer.json) in /generis
 
 \* delete the directories /generis/vendor/doctrine/ and /generis/vendor/easyrdf (they will be recreated)
 
@@ -46,7 +46,7 @@ Configuration
 
 Tao 2.6 does not support any Authentication configuration, so the only way to use the LDAP Adapter is to replace the Tao AuthAdapter:
 
--   replace the file /generis/core/kernel/users/class.AuthAdapter.php with the attached attachment:class.AuthAdapter.php
+-   replace the file /generis/core/kernel/users/class.AuthAdapter.php with the attached [class.AuthAdapter.php](../resources/class.AuthAdapter.php)
 -   modify the configuration in class.AuthAdapter.php to your server
 
 Usage

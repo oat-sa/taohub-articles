@@ -30,5 +30,5 @@ Screen shot taken in Firefox, this item has the identifier `i14048063114861116` 
 
 5. Download the web font kit
 
-You can use the style sheet from the kit as is, the file attachment:“mod-droid-sans.css” contains comments that explain the best practices to complete this task.
+You can use the style sheet from the kit as is, the file [mod-droid-sans.css](../resources/mod-droid-sans.css) contains comments that explain the best practices to complete this task.
 

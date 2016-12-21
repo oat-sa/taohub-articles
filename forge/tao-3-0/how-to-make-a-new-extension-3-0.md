@@ -115,9 +115,9 @@ NOTE: You should clear cache after each change of structures.xml.
 
 ### Adding a Controller
 
-\* Now you can reload page and see error. It’s because you should create controller for our tree of documents. Example of Browser controller is attached ( attachment:Browser.php ). Download and place this file to `controller` folder.
+\* Now you can reload page and see error. It’s because you should create controller for our tree of documents. Example of Browser controller is attached ( [Browser.php](../resources/Browser.php) ). Download and place this file to `controller` folder.
 
-\* Browser controller need two dependent classes: **DocsService** ( attachment:DocsService.php ) and **FileUtils** ( attachment:FileUtils.php ). This files should be downloaded and placed to `model` and `helpers` folders respectively. You need create this folders if it not exists.
+\* Browser controller need two dependent classes: **DocsService** ( [DocsService.php](../resources/DocsService.php) ) and **FileUtils** ( [FileUtils.php](../resources/FileUtils.php) ). This files should be downloaded and placed to `model` and `helpers` folders respectively. You need create this folders if it not exists.
 
 \* Now we see error about undefined `DOCS_PATH` constant. Constants in extension usually stored in `includes/constants.php`. Create folder and file and insert into code from section below.
 

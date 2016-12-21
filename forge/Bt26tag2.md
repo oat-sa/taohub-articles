@@ -37,23 +37,23 @@ The migration to Bt26tag1 to Bt26tag2 consists in 6 steps:
 Launch the QTI Tests Migration script located at `your_install_path/taoQtiTest/scripts/update/migrateQtiTests.php`. **Make sure the current user has correct read/write permissions and that the script is executed on behalf of the apache/www-data user**.
 
 1.  Delivery published with Bt26tag1 should be recompiled due to change in the Tests and Results in Bt26tag2, simply go to Delivery Extension a re-published all deliveries, if not you will have no responses in Results.
-2.  (**optional**) Copy the file attachment:“tao.eot” in the `your_install_path/tao/views/css/font/tao` directory.
+2.  (**optional**) Copy the file [tao.eot](resources/tao.eot) in the `your_install_path/tao/views/css/font/tao` directory.
 
 QTI Tests Packaging
 -------------------
 
 See the below examples to learn how to package IMS QTI Tests:
 
--   attachment:“Basic.zip”
--   attachment:“BasicNonLinear.zip”
--   attachment:“Comments.zip”
--   attachment:“MathML.zip”
--   attachment:“PreConditions.zip”
--   attachment:“RubricBlocks.zip”
--   attachment:“RubricBlocksStylesheetsBackground.zip”
--   attachment:“RubricBlocksStylesheetsBasic.zip”
--   attachment:“TestDefinitionInSubFolders.zip”
--   attachment:“TestPartMaxTimeLinearIndividual.zip”
+-   [Basic.zip](resources/Basic.zip)
+-   [BasicNonLinear.zip](resources/BasicNonLinear.zip)
+-   [Comments.zip](resources/Comments.zip)
+-   [MathML.zip](resources/MathML.zip)
+-   [PreConditions.zip](resources/PreConditions.zip)
+-   [RubricBlocks.zip](resources/RubricBlocks.zip)
+-   [RubricBlocksStylesheetsBackground.zip](resources/RubricBlocksStylesheetsBackground.zip)
+-   [RubricBlocksStylesheetsBasic.zip](resources/RubricBlocksStylesheetsBasic.zip)
+-   [TestDefinitionInSubFolders.zip](resources/TestDefinitionInSubFolders.zip)
+-   [TestPartMaxTimeLinearIndividual.zip](resources/TestPartMaxTimeLinearIndividual.zip)
 
 Suggested Deployment model for the delivery of Tests
 ----------------------------------------------------
