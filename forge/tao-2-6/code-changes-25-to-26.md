@@ -12,16 +12,16 @@ tags:
 Code changes 25 to 26
 =====================
 
-###User Service{#user-service}
+### User Service
 
 The functions *tao\_models\_classes\_UserService::addUser()* and *core\_kernel\_users\_Service::addUser()* now take the password in clear text instead of md5 encrypted
 
-###Item Model{#item-model}
+### Item Model
 
 -   *taoItems\_models\_classes\_ExportableItemModel* has been replaced by *tao\_models\_classes\_export\_ExportProvider*
 -   *taoItems\_models\_classes\_ImportableItemModel* has been replaced by *tao\_models\_classes\_import\_ImportProvider*
 
-###User Session{#user-session}
+### User Session
 
 The interface `common_session_Session` has changed:
 
@@ -29,18 +29,18 @@ The interface `common_session_Session` has changed:
 -   changed **getUserRoles()**, now expects an array of strings(the URIs) instead of an array of resources.
 -   added **getUserPropertyValues()**, only used in services (might be moved to separate interface)
 
-###Access Control{#access-control}
+### Access Control
 
 The access control has been replaced by an abstraction that needs to implement the interface `tao_models_classes_accessControl_AccessControl`.\
 To test whenever the user has access to a functionality please use `tao_models_classes_accessControl_AclProxy::hasAccess($action, $controller, $extension, $parameters = array())`
 
-###Extension Manifest{#extension-manifest}
+### Extension Manifest
 
 New properties **license**, **label**.
 
 The property **dependencies** has been replaced with the property **requires** which is an associative array with the structure (extensionId =\> versionRequired). While the keyword dependencies is still supported it is deprecated will be removed in the future
 
-###Constants{#constants}
+### Constants
 
 The following constants have been retired:
 

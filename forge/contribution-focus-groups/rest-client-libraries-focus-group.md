@@ -30,8 +30,7 @@ Targeted platform
 -   Python
 -   JavaScript (client - TAO needs to implement [CORS](http://enable-cors.org/) )
 -   JavaScript (server/node.js)
--   C\#/.NET{#net}
-
+-   C\#/.NET
 -   …
 
 Related documentation

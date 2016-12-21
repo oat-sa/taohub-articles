@@ -67,10 +67,9 @@ Ping all the IP addresses, and check the MAC addresses for the first 6 hex chara
 From a mac you may use conveniently http://ivanx.com/raspberrypi/files/PiFinder.zip\
 From Linux :
 
-    #!/bin/bash{#binbash}
-
- findPi:
-    #Find all Pi's on the LAN{#find-all-pis-on-the-lan}
+    #!/bin/bash
+    # findPi:
+    #       Find all Pi's on the LAN
 
     fping -a -r1 -g 192.168.254.0/24  &> /dev/null
     arp -n | fgrep " b8:27:eb"

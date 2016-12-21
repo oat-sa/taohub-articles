@@ -30,7 +30,7 @@ Old Server
 New Server
 ----------
 
-###File migration{#file-migration}
+### File migration
 
 \* Replace the config and data directory and to set the correct file owner/rights.
 
@@ -62,13 +62,12 @@ New Server
             'secret' => 'a0c2ef52398c24d5347109f930d907d3',
             'path' => '/opt/newTaoDataDirectory/tao/public/',
             'ttl' => 1440,
-            'fsUri' => 'http://YOUR_LOCAL_NAMESPACE#i1231456789',{#i1231456789}
-
+            'fsUri' => 'http://YOUR_LOCAL_NAMESPACE#i1231456789',
             'id' => '55a53f75bf715',
         ),
     );
 
-###Database migration{#database-migration}
+### Database migration
 
 \* Import the SQL dump into the new database
 
@@ -80,7 +79,7 @@ An example, assuming your old data was stored in **/var/www/tao/data/** and your
 
     UPDATE statements SET object = REPLACE (`object`, '/var/www/tao/data/', '/opt/taoData/') where object like '/var/www/tao/data/%';
 
-###Finally{#finally}
+### Finally
 
 -   (Mandatory) Clear the cache of the file sources by emptying the folder **NEW\_FILES\_PATH/data/generis/cache/**. This can be achieved using the following command: rm -rf NEW\_FILES\_PATH/data/generis/cache/\*.
 -   (Optional) Execute **NEW\_FILES\_PATH/tao/scripts/taoUpdate.php** to ensure all extensions are up to date and to regenerate the translation files

@@ -22,11 +22,11 @@ documentation todo
 The Waterphoenix
 ----------------
 
-###What is the waterphoenix platform ?{#what-is-the-waterphoenix-platform}
+### What is the waterphoenix platform ?
 
 The waterphoenix platform has been developed initially to author XML documents. However the plateform is built upon the concept of extension what allows developers to extend the platform to specific requirements. By instance we extend the platform to author XML documents such as BLACK documents but also XHTML and XUL documents.
 
-###Technology{#technology}
+### Technology
 
 Because of the requirement of smoothness and the technologies used for the development of the TAO platform we decided to use javascript as main technology.\
 In combination with this technology we use :
@@ -35,7 +35,7 @@ In combination with this technology we use :
 -   The library [EJS](http://embeddedjs.com/) (embedded javascript) as templates engine;
 -   The graphical library WUIB (Water User Interface Block) as building block of the GUI;
 
-###The architecture{#the-architecture}
+### The architecture
 
 This section covers the architecture of the Waterphoenix plateform. As we said above the platform is build upon the concept of extension. Even the *Core* is considered as an extension - a *super extension* actually. So the architecture of the platform is strongly linked with this “pattern”.
 
@@ -54,7 +54,7 @@ Each extension is composed by a separated file system and can be used in standal
 
 ![](http://forge.taotesting.com/attachments/download/359/wx_archi.png)
 
-####Extensions’ architecture{#extensions-architecture}
+#### Extensions’ architecture
 
 Extensions are located in the pool of extensions which is by default the xt directory in the Waterphoenix root folder. Each extension contains the same folders structure in order to be exploited by the Waterphoenix platform.
 
@@ -78,7 +78,7 @@ Moreover to be identified by the system an extension has to :
 -   Define a manifest.xml file at its root folder
 -   Extend the *Wx.Core.Classes.Models.Extension* class with a *Wx.Xt.{ExtensionName}.Classes.Extension* class
 
-####Extension’s manifest{#extensions-manifest}
+#### Extension’s manifest
 
 Each extension must have an xml manifest at its root. This manifest file describes some aspects of the extension (configuration variables, sources, required external libraries …). Based on this manifest the system will be able to load dynamically the extensions and their ressources. Moreover the system will be able to build a compiled version of each extension by minifying the sources in the directory *build* of each extension.
 
@@ -115,7 +115,7 @@ Each extension must have an xml manifest at its root. This manifest file describ
     -   **library** Reference to each libraries used by the extension. All these libraries have to be located in the directory *lib* of the extension;
     -   **css** Reference to each css files used by the extension. All these css files have to be located in the directory *views/css* of the extension;
 
-####Extensions’ bootstrap{#extensions-bootstrap}
+#### Extensions’ bootstrap
 
 Each extension has to extend the *Wx.Core.Classes.Models.Extension* class with a *Wx.Xt.{ExtensionName}.Classes.Extension* class. This class will be used as extension bootstrap. By overriding some functions of the models developers could manage their specific needs.
 
@@ -126,8 +126,7 @@ Each extension has to extend the *Wx.Core.Classes.Models.Extension* class with a
      * @class
      */
     Wx.Core.Classes.Models.Extension = Class.extend (
-    /** @lends Wx.Core.Classes.Models#Bootstrap.prototype */{#bootstrapprototype}
-
+    /** @lends Wx.Core.Classes.Models#Bootstrap.prototype */
     {   
         /** 
          * Constructor like
@@ -187,7 +186,7 @@ Each extension has to extend the *Wx.Core.Classes.Models.Extension* class with a
         , setup : function () { ... }
     });
 
-###Configuration{#configuration}
+### Configuration
 
 The configuration of the platform is drived by a configuration file which is located in the config directory of the Waterphoenix folder.
 
@@ -235,31 +234,20 @@ The configuration of the platform is drived by a configuration file which is loc
      * @type array
      */
     Wx.Config.COLOR = {
-        WIZARD_POSITION_ELEMENT_REF:    '#00FF0F',{#00ff0f}
-
-        HIGHLIGHTED_NODE:               '#7999FF',{#7999ff}
-
-        SELECTED_NODE:                  '#D00239',{#d00239}
-
-        MOVE_NODE:                      '#D00239',{#d00239}
-
-        PARENT_MOVE_NODE:               '#389438',{#389438}
-
-        OUTSIDE:                        '#FF8000',{#ff8000}
-
-        INSIDE:                         '#0080FF',{#0080ff}
-
-        QM_HIGHLIGHTED_NODE:            '#FF6868',{#ff6868}
-
-        QM_SELECTED_NODE:               '#FF3838',{#ff3838}
-
-        SV_HIGHLIGHTED_NODE:            '#80A680',{#80a680}
-
-        SV_SELECTED_NODE:               '#389438'{#389438}
-
+        WIZARD_POSITION_ELEMENT_REF:    '#00FF0F',
+        HIGHLIGHTED_NODE:               '#7999FF',
+        SELECTED_NODE:                  '#D00239',
+        MOVE_NODE:                      '#D00239',
+        PARENT_MOVE_NODE:               '#389438',
+        OUTSIDE:                        '#FF8000',
+        INSIDE:                         '#0080FF',
+        QM_HIGHLIGHTED_NODE:            '#FF6868',
+        QM_SELECTED_NODE:               '#FF3838',
+        SV_HIGHLIGHTED_NODE:            '#80A680',
+        SV_SELECTED_NODE:               '#389438'
     };
 
-###The Core extension{#the-core-extension}
+### The Core extension
 
 The core is considered as an extension - a *super extension*. An extension required by all others because it provides low and high level components (uri, document, element, attribute, perspective, workspace …) that will be used by other extensions. On the other hand, it provides also the architecture for the application layers that dependants extensions will use or change.
 
@@ -267,7 +255,7 @@ The core is considered as an extension - a *super extension*. An extension requi
 
 ![](http://forge.taotesting.com/attachments/download/338/wx_core_models_class_diagram.png)
 
-###The application layers{#the-application-layers}
+### The application layers
 
 As we said below the core provides to other extensions the application layers which will drive the main behaviors of the software.
 
@@ -282,26 +270,25 @@ By instance if an extension want to add a new document type to the list of docum
 -   Create a class which extend the *Wx.Core.Classes.Models.Document* of the core extension;
 -   Register this new document class with the document factory of the core extension;
 
-###The provided extensions{#the-provided-extensions}
+### The provided extensions
 
 The waterphoenix platform comes with several extension developed to manage various aspects and to group in each extension the features relative to a specific area.
 
-####Xml{#xml}
+#### Xml
 
 Because the Waterphoenix has been developped to edit XML document the Xml extension like the Core extension is one of the pillar extension of the authoring tool.\
 This extension allow to manage any type of XML document. It is required by the Xhtml, Xul and Black extensions. The Xhtml, Xul and Black are Xml based languages.
 
-####BLACK{#black}
+#### BLACK
 
-###TAO{#tao}
+#### TAO
 
-###Workflow{#workflow}
+#### Workflow
 
-###XHTML{#xhtml}
+#### XHTML
 
-###XUL{#xul}
+#### XUL
 
-###XulRunner{#xulrunner}
+#### XulRunner
 
-##Create a new extension{#create-a-new-extension}
-
+### Create a new extension

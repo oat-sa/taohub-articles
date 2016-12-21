@@ -23,7 +23,7 @@ https://github.com/oat-sa/generis-auth-ldap
 Installation
 ------------
 
-###Preparation{#preparation}
+### Preparation
 
 -   Ensure the PHP LDAP module is installed, and enabled for your apache config.
 -   Ensure composer is installed (https://getcomposer.org/download/)

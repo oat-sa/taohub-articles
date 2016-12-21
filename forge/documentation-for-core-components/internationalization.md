@@ -21,7 +21,7 @@ Extension Locales
 
 In TAO, a *Locale* is the definition of all *messages* to be translated for a given TAO Extension. Indeed, the internationalization process applies on each TAO Extension. Any translation description files are located in the */locales* directory of the Extension to be translated. In this */locales* folder you will find a directory dedicated to each language. The directory name for a language contained in the */locales* directory is actually its international code (e.g. *FR* for *French*) and will be used as a unique identifier for this locale across Extensions.
 
-###Locale Structure{#locale-structure}
+### Locale Structure
 
 An Extension *Locale* is composed of several translation files. For instance, the French *Locale* for the Extension *taoGroups* is located in the */[tao\_installation\_path]/taoGroups/locales/FR* directory and contains the following files:
 
@@ -55,7 +55,7 @@ The same technique to generate *messages* can applies to JavaScript source code 
 PO Files
 --------
 
-###PO Files Format{#po-files-format}
+### PO Files Format
 
 TAO implements the [gettext](http://www.gnu.org/software/gettext/) [PO file format](http://www.gnu.org/software/hello/manual/gettext/PO-Files.html) to provide a fast and easy way to translate *messages* in its source code.
 
@@ -93,11 +93,11 @@ The **msgid** component corresponds to the initial message extracted from the so
 
 The **msgstr** component contains the translation of *msgid*, that will be displayed to the end user that selects the related locale. When extracted from the source code, the *msgstr* component will appear empty. The translator will have to enter its value.
 
-###How to Edit PO Files{#how-to-edit-po-files}
+### How to Edit PO Files
 
 Because PO files are just plain text files, you can use your favorite editor to modify them. In this case, please make sure that the encoding in use is **UTF-8**. On the other and, you can use specialize gettext editor that will display messages to be translated in a more friendly way. We recommend the use of [POEdit](http://www.poedit.net/): a free and multi-platform gettext editor.
 
-###PO files Compilation{#po-files-compilation}
+### PO files Compilation
 
 When *messages* contained in a PO File are updated (e.g. correction of an existing translation) or are simply added, it has to be compiled. Indeed, only compiled translations are available to the end-users for better performance. TAO is packaged with translation tools making you able to compile PO files on your own. To do so, please refer to the [[tao\_scripts\_translate|TAO Translate Script Documentation]].
 
@@ -128,7 +128,7 @@ Dealing with your own locales
 
 The TAO Platform comes with dedicated tools that help you to create and maintain your own locales. It takes shape as a command line script that can be accessed throuh PHP CLI. These dedicated tools will make you able to create and update your own locales in TAO.
 
-###Create a locale{#create-a-locale}
+### Create a locale
 
 Create a new locale is easy as a single command line. Open your favourite command line interface and go in the */path\_to\_your\_install/tao/scripts* directory. In the following example, we will create a locale es-MX (Mexican Spanish) for each extension delivered in the Open Source release of TAO.
 
@@ -155,7 +155,7 @@ Examples (You are not forced to used region tags. The only requirement is a firs
 How to update or add translations
 ---------------------------------
 
-###Scan the source files for **() enclosed strings{#scan-the-source-files-for-enclosed-strings}
+### Scan the source files for **() enclosed strings
 
     php tao/scripts/taoTranslate.php -v -a=create -e=taoQtiTest -l=fr-FR
     /** if already exists */
@@ -164,11 +164,11 @@ How to update or add translations
 This will generate a the following file: \$ext/locales/\$lang/messages.po.\
 Fill generated po file with your translation.
 
-###Compile the file into php and javascript{#compile-the-file-into-php-and-javascript}
+### Compile the file into php and javascript
 
     php tao/scripts/taoTranslate.php -v -a=compile -e=taoDelivery -l=fr-FR
 
-###Update TAO{#update-tao}
+### Update TAO
 
     php tao/scripts/taoUpdate.php
 

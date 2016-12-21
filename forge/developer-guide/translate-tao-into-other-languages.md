@@ -34,7 +34,7 @@ Here both UI and Data Language are in French\
 Here only Data Language is in French\
 ![](../resources//attachments/download/2599/S%C3%A9lection_051.png)
 
-###User Interface{#user-interface}
+### User Interface
 
 All the message sent to the user are gather in `messages.po` using *Gettext* translation files. To summarize, the *PO* files are text files that contains couple of lines with the string identifier in English and a line for the string to be translated. We use the English texts as identifiers, it’s the reason why it’s the identifier for the translations. So the English is the base for the translation.
 
@@ -56,7 +56,7 @@ This is it!
 \>\* It’s possible that some strings are not in the software anymore. The translations files are cleaned only once by release.\
 \>\* Save your files using UTF-8 encoding.
 
-###Data{#data}
+### Data
 
 Data are stored in the knowledge base and could be translate for content created by the user tranks to the translate button feature that create an alternate value in a different language, that why in that previous example “Elections in the United States” have been translated into “Elections américaines”.
 
@@ -109,5 +109,5 @@ If you want to understand how the translations are implemented into the TAO Fram
 See also:
 
 -   [the Gettext manual](http://www.gnu.org/software/gettext/manual/gettext.html)
--   [the PO file format](http://www.gnu.org/software/gettext/manual/gettext.html#PO-Files){#po-files}
+-   [the PO file format](http://www.gnu.org/software/gettext/manual/gettext.html#PO-Files)
 

@@ -24,7 +24,7 @@ The presentation of results is accomplished by **UTR** component (**Ultimate Tab
 
 Before explaining the functionalities of UTR, we propose brief theoretical information
 
-###Theoretical Background{#theoretical-background}
+### Theoretical Background
 
 All information are stored following the RDF h model, this model allows a high flexibility to describe the structure of resources and relations between them. In our case, the main purpose resource is the instance of classes. Each class has a set of instances that represent a specific resource with a set of property values. So, in order to exploit these resources, on should get the structure of its class and get all the property values that are defined within the class description.
 
@@ -32,15 +32,12 @@ All information are stored following the RDF h model, this model allows a high f
 
 To do that the RDF model provides a specific type of relations (predicate) to ensure the correspondence between classes, properties, instances and property values of instances.
 
--   http://www.w3.org/2000/01/rdf-schema\#domain{#domain}
-
--   http://www.w3.org/2000/01/rdf-schema\#label{#label}
-
--   http://www.w3.org/2000/01/rdf-schema\#range{#range}
-
+-   http://www.w3.org/2000/01/rdf-schema\#domain
+-   http://www.w3.org/2000/01/rdf-schema\#label
+-   http://www.w3.org/2000/01/rdf-schema\#range
 -   …
 
-In addition of the class structure, there is an important relation between class that is the *Range* http:www.w3.org/2000/01/rdf-schema\#range. With the range, on can establish a specific relation between class and use it as junction (as in SQL) to get the appropriate instance of class base on instance of other one.{#range-with-the-range-on-can-establish-a-specific-relation-between-class-and-use-it-as-junction-as-in-sql-to-get-the-appropriate-instance-of-class-base-on-instance-of-other-one}
+In addition of the class structure, there is an important relation between class that is the *Range* http:www.w3.org/2000/01/rdf-schema\#range. With the range, on can establish a specific relation between class and use it as junction (as in SQL) to get the appropriate instance of class base on instance of other one.
 
 ![](http://forge.taotesting.com/attachments/download/205/rangeclass.gif)
 
@@ -74,7 +71,7 @@ The extension contains 4 classes
 3.  **UtrStatistic** in this version, it gives a percentage of no null value for rows and column
 4.  **UtrFilter**: addes filter feature to the table according to a complex filter criteria.
 
-###Structure of the table{#structure-of-the-table}
+### Structure of the table
 
 ***T*** : an *UTR* table is 2-tuple :
 
@@ -93,7 +90,7 @@ The extension contains 4 classes
 *PU* : Property URI is the URI of a property of the ranged class.\
 *Sep* : is a separator. In the current version Sep = ‘**’
 
-###The path{#the-path}
+### The path
 
 The path constitutes an important notion in the description of a column. The path permits to establish a relation with instances of other classes.
 

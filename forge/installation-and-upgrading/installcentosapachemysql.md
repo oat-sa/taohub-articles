@@ -19,14 +19,14 @@ This installation guide focuses on installing the TAO platform on CentOS, Red Ha
 1. Apache2, PHP & mySQL Installation
 ------------------------------------
 
-###1.1. Apache2 Installation{#11-apache2-installation}
+### 1.1. Apache2 Installation
 
 The first step of the installation of our environment is to install the Apache2 web server. To do so, open up a terminal and type the following command lines. The *yum update* command aims at updating your system. You can skip this command if you think your system is up to date.
 
     sudo yum update
     sudo yum install httpd
 
-###1.2. PHP Installation{#12-php-installation}
+### 1.2. PHP Installation
 
 To Install PHP and modules needed by the TAO platform to run, open up a terminal and enter the following commands.
 
@@ -40,7 +40,7 @@ To Install PHP and modules needed by the TAO platform to run, open up a terminal
 
 PHP and its modules required by TAO are now installed on the computer.
 
-###1.3. mySQL Installation{#13-mysql-installation}
+### 1.3. mySQL Installation
 
 The last component to install is mySQL server.
 
@@ -51,9 +51,9 @@ mySQL server is now installed with a preconfigured mySQL user *root* without pas
 2. Apache2, PHP & mySQL Setup
 -----------------------------
 
-###2.1. Apache2 Setup{#21-apache2-setup}
+### 2.1. Apache2 Setup
 
-###2.1.1. Service Configuration{#211-service-configuration}
+#### 2.1.1. Service Configuration
 
 We now have to configure Apache2. First, we will make the Apache2 service start when the Operating System starts up. We will also start the service for the first time.
 
@@ -62,7 +62,7 @@ We now have to configure Apache2. First, we will make the Apache2 service start 
 
 To check if Apache2 is running, simply open up your web browser and access *http://localhost*. An Apache2 test page should be displayed in your web browser.
 
-####2.1.2. Virtual Host{#212-virtual-host}
+#### 2.1.2. Virtual Host
 
 The TAO platform requires to be run with an *Apache Virtual Host*. We will create such a virtual host in the Apache2 configuration file. Edit the file located at */etc/httpd/conf/httpd.conf* with your favourite editor. We will use *nano*.
 
@@ -98,7 +98,7 @@ More information about Apache directives and virtual hosting:
 -   [Apache directives](http://httpd.apache.org/docs/2.0/mod/core.html)
 -   [Apache virtual hosting](http://httpd.apache.org/docs/2.0/vhosts/)
 
-####2.1.3. Rewrite Module{#213-rewrite-module}
+#### 2.1.3. Rewrite Module
 
 The TAO Platform requires the Apache2 module *rewrite\_module* to be installed to run perfectly. The Rewrite Module of Apache is most of the time enabled at installation time in major Linux distributions. To check if *rewrite\_module* is present and running, type the following command in your terminal.
 
@@ -106,7 +106,7 @@ The TAO Platform requires the Apache2 module *rewrite\_module* to be installed t
 
 You should see the list of running modules and the *rewrite\_module (shared)* entry. If you find it, you can skip this and go to the next section of this guide. If you do not see it, please go the [*rewrite\_module* official page](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) to get information about how to install it.
 
-####2.1.4. Folders, Rights and Host Resolution{#214-folders-rights-and-host-resolution}
+#### 2.1.4. Folders, Rights and Host Resolution
 
 We now have to create the *taoplatform* folder in /var/www. To do so, type the following commands.
 
@@ -129,7 +129,7 @@ Finally, we restart Apache to take this new configuration into account.
 
     sudo service httpd restart
 
-###2.2. PHP Setup{#22-php-setup}
+### 2.2. PHP Setup
 
 The PHP Setup is quick and simple. Open the PHP configuration file located at */etc/php.ini*.
 
@@ -145,7 +145,7 @@ In most versions of PHP, they are correctly set. However, if you have to make an
 
     sudo service httpd restart
 
-###2.3. mySQL Setup{#23-mysql-setup}
+### 2.3. mySQL Setup
 
 Your first task is to configure the service to start it when the Operating System starts up.
 
@@ -162,7 +162,7 @@ If you need more information about database privileges and databases, please vis
 3. TAO Platform Deployment
 --------------------------
 
-###3.1. Download the Latest Version of TAO{#31-download-the-latest-version-of-tao}
+### 3.1. Download the Latest Version of TAO
 
 We will now download the latest version of the TAO source code and deploy it on the web server. Go to the official TAO download page and download the last [Stable Release](http://www.tao.lu/html/index.php?option=com_content&view=article&id=62&Itemid=139).
 
@@ -189,7 +189,7 @@ If you list the content of */var/www/taoplatform*, you should see the following 
 -   */var/www/taoplatform/taoTests*
 -   */var/www/taoplatform/wfEngine*
 
-###3.2. File System Permissions{#32-file-system-permissions}
+### 3.2. File System Permissions
 
 We now have to make sure that file system permission in the */var/www/taoplatform* directory makes Apache able to read, write, and execute correctly files belonging to the TAO platform. All files must be accessible by the *apache* user & group.
 
@@ -198,7 +198,7 @@ We now have to make sure that file system permission in the */var/www/taoplatfor
     chgrp -R apache taoplatform
     chmod -R 775 taoplatform
 
-###2.3. TAO Installation Wizard{#23-tao-installation-wizard}
+### 2.3. TAO Installation Wizard
 
 For this last step of the installation process, open up your favourite web browser at http://taoplatform/tao/install. The installation wizard appears.
 

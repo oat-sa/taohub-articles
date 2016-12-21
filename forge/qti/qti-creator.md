@@ -42,7 +42,7 @@ Any later reference of “qtiCreator/” in this wiki page means `{tao_root}/tao
 Tutorial : implement a new qti item creator widget
 --------------------------------------------------
 
-###step 0: define the behaviour you want to implement{#step-0-define-the-behaviour-you-want-to-implement}
+### step 0: define the behaviour you want to implement
 
 First, please have a look to the existing implementations so you can have a better feel of expecting behaviour.\
 The test can be found here: `{tao_root}/taoQtiItem/views/js/qtiCreator/test/renderer/`
@@ -82,7 +82,7 @@ The template will be available in the style-guide.
 
 Once the behaviour clrealy defined, we can get started !
 
-###step 1: extending the qti item model for authoring{#step-1-extending-the-qti-item-model-for-authoring}
+### step 1: extending the qti item model for authoring
 
 **Location** : `{tao_root}/taoQtiItem/views/js/qtiCreator/model`
 
@@ -134,8 +134,7 @@ Tip for developers : if you are implementing a new interaction and its choice fo
                 var rank = _.size(this.getChoices());
 
                 choice
-                    .body('choice' + ' #' + rank){#rank}
-
+                    .body('choice' + ' #' + rank)
                     .buildIdentifier('choice');
 
                 if(this.getRenderer()){
@@ -168,7 +167,7 @@ You can follow the example here: `qtiCreator/model/choices/SimpleChoice.js`
         return Choice.extend(methods);
     });
 
-###step 2 : define the qtiCreatorRenderer{#step-2-define-the-qticreatorrenderer}
+### step 2 : define the qtiCreatorRenderer
 
 **Location:** `taoQtiItem/views/js/qtiCreator/renderers`
 
@@ -231,13 +230,13 @@ For a creator choice renderer, we are doing the same : loading its commonRendere
 **Important notice** : please do not forget to declare the new renderer in the\
 `taoQtiItem/views/js/qtiCreator/renderers/config.js` otherwise, the commonRenderer will still be called instead of this one/
 
-###step 3 : define the widget and its states{#step-3-define-the-widget-and-its-states}
+### step 3 : define the widget and its states
 
 **location** : `taoQtiItem/views/js/qtiCreator/renderers`\
 Because of the complexity of the authoring widgets, it would be difficult to manage everything in a single render file like we are doing in the CommonRenderers. Instead everything is managed by qti creator Widgets. The behaviour of every widgets change according to their states. All interactions and choices share the same set of states.\
 This is to ensure behaviour consistency across all interactions and other qti elements implementations and decrease overall complexity.
 
-####widget{#widget}
+#### widget
 
 The widget define the common structure for the qti element that is being edited.\
 The stack of states will bring and enrich the behaviour as needed.
@@ -277,7 +276,7 @@ The call sequence is thus this:
 
 From here, all behaviour will be managed by the different states that have been registered in the widget.
 
-####states{#states}
+#### states
 
 The states are defined as follow.\
 ![](../resources/taoQtiCreatorStates.png)
@@ -290,7 +289,7 @@ State hierarchy :\
 The states are hierachical. When you are in the question state, you will also inherit the behaviour of the active state. When you are editing a response in the correct state, you will inherit the behaviour of both the active and answer states. The following diagram illustrates a stack of states when an interaciton or a choice is in the correct state.\
 ![](../resources/taoQtiCreatorStatesStacks.png)
 
-####defining a widget state{#defining-a-widget-state}
+#### defining a widget state
 
 There are 3 ways to define a state for a qti creator widget. All of them must be done with the state factory: qtiCreator/widgets/states/factory.js
 
@@ -348,7 +347,7 @@ In the example below, the generic question state of the abstract block interacti
 
 According to your need (whever you need to define new behaviours from the parent or not), the second or third method should be used. Doing this will ensure an overall consistency accros all widget and states!
 
-####variable access in your states{#variable-access-in-your-states}
+#### variable access in your states
 
 Upon instanciation, a state is given the reference of the widget it represents.\
 You can access anything you want in the state in this.widget:
@@ -373,7 +372,7 @@ You can access anything you want in the state in this.widget:
         });
     });
 
-###step 4 : create the option forms{#step-4-create-the-option-forms}
+### step 4 : create the option forms
 
 The widgets in the center panel of the item creator allow editing the item, interaction and choice contents. Some properties can also be edited (pin/shuffle).\
 However, most of the meta, options are to be positioned in the right side bar in an appropriate form.
@@ -382,7 +381,7 @@ However, most of the meta, options are to be positioned in the right side bar in
 -   every choice has its own form too
 -   most of interaction will be sharing the same response processing form - string interactions have more options because they allow more than one baseType (string, integer, float)
 
-####define the template{#define-the-template}
+#### define the template
 
 Using the qti 2.1 standard, please make note of all properties required for the qti element you are working on.\
 Then use either the style guide or an existing example to create your html template. Location: qtiCreator/tpl/forms/\
@@ -396,7 +395,7 @@ You may note the use of specific validator to easily control the input value : i
 
         
 
-####Append the form to the DOM{#append-the-form-to-the-dom}
+#### Append the form to the DOM
 
 Within a state, you have access to the \$form by this.widget.\$form property, which is the container of the form.\
 After you leave the state, this container will automatically be emptied. You only have to worry about its initialization as in the example below:
@@ -409,7 +408,7 @@ After you leave the state, this container will automatically be emptied. You onl
 
 This exemple comes from /qtiCreator/widgets/choices/simpleChoice/states/Choice.js
 
-####Init the data binding{#init-the-data-binding}
+#### Init the data binding
 
 You need to use taoQtiItem/qtiCreator/widgets/helpers/formElement to bind modification of any declared element of your form to callback function.\
 This callback will only be executed when the input is valid. To set your form element validation, please have a look on the exemple of the “define the template” section
@@ -447,7 +446,7 @@ Working with the Qti Creator Item Model
 
 We are using the model we defined in the step 1 of the tutorial.
 
-###Editing API{#editing-api}
+### Editing API
 
 When you are inside a widget or a state, you have access to the element you are currently working on.\
 The goal is to modify this object : modify attributes, add choice, modify a choice content, modify the body (if applicable), etc.\
@@ -456,14 +455,16 @@ Please use the api and not idrect access to object because those methods trigger
 
 The main methods you may need are:
 
-####get and set attribute value{#get-and-set-attribute-value}
+#### get and set attribute value
+
 
     interaction.attr('maxChoices', 3);
 
     var maxChoices = interaction.attr('maxChoices');
     console.log('maxChoices');//output: 3
 
-####create a choice for an interaction{#create-a-choice-for-an-interaction}
+#### create a choice for an interaction
+
 
     var interaction = new ChoiceInteraction();
 
@@ -474,13 +475,15 @@ The main methods you may need are:
     var choices = interaction.getChoices();
     console.log(_.size(choices));//output: 3
 
-####get and set container body{#get-and-set-container-body}
+#### get and set container body
+
 
     item.body('my qti item content');
     var itemBody = item.body();
     console.log(itemBody);//output: "my qti item content"
 
-####create elements in the container body{#create-elements-in-the-container-body}
+#### create elements in the container body
+
 
     item1.createElements('My QTI Item{{choiceInteraction:new}}', function(newElts){
 
@@ -490,70 +493,70 @@ The main methods you may need are:
             console.log(_.size(interactions));//output 1
     });
 
-###Events{#events}
+### Events
 
 When the model is modified, an event is trigger at the document level.
 
-####list of events:{#list-of-events}
+#### list of events:
 
 They all are triggered in the same namespace “.qti-widget”
 
-#####attributeChange{#attributechange}
+##### attributeChange
 
 Triggered by `element.attr(name, value)`\
 see any interactions in qtiCreator/model/mixin/editable.js
 
-#####deleted{#deleted}
+##### deleted
 
 Triggered by `element.remove()`\
 see any interactions in qtiCreator/model/mixin/editable.js
 
-#####choiceCreated{#choicecreated}
+##### choiceCreated
 
 Triggered by `interaction.createChoice()`\
 see any interactions in qtiCreator/model/interactions/
 
-#####containerBodyChange{#containerbodychange}
+##### containerBodyChange
 
 Triggered by `interaction.body()`\
 see any interactions in qtiItem/core/Container.js
 
-#####choiceTextChange{#choicetextchange}
+##### choiceTextChange
 
 Triggered by `interaction.createChoice()`\
 see any interactions in qtiCreator/model/choices/TextVariableChoice.js
 
-#####responseTemplateChange{#responsetemplatechange}
+##### responseTemplateChange
 
 Triggered by `responseDeclaration.setTemplate()`\
 See qtiCreator/model/variables/ResponseDeclaration.js
 
-#####correctResponseChange{#correctresponsechange}
+##### correctResponseChange
 
 Triggered by `responseDeclaration.setCorrect()`\
 See qtiCreator/model/variables/ResponseDeclaration.js
 
-#####mapEntryChange{#mapentrychange}
+##### mapEntryChange
 
 Triggered by `responseDeclaration.setMapEntry()`\
 See qtiCreator/model/variables/ResponseDeclaration.js
 
-#####mapEntryRemove{#mapentryremove}
+##### mapEntryRemove
 
 Triggered by `responseDeclaration.removeMapEntry()`\
 See qtiCreator/model/variables/ResponseDeclaration.js
 
-#####mappingAttributeChange{#mappingattributechange}
+##### mappingAttributeChange
 
 Triggered by `responseDeclaration.setMappingAttribute()`\
 See qtiCreator/model/variables/ResponseDeclaration.js
 
-#####metaChange{#metachange}
+##### metaChange
 
 Triggered by `editable.data(key, value)`\
 See qtiCreator/model/mixin/editable.js
 
-####listen to those events{#listen-to-those-events}
+#### listen to those events
 
 You may want to listen to any modification mode to the qti element.\
 There is a simple way to do that via a method of the widget.\
@@ -578,7 +581,8 @@ Implementation example :
 
 Following the tutorial above, here is a sample skeleton for the mediaInteraction. (the uploadInteraction, which has no choices too, can follow the same example).
 
-###*qtiCreator/model/interactions/MediaInteraction.js*{#qticreatormodelinteractionsmediainteractionjs}
+### *qtiCreator/model/interactions/MediaInteraction.js*
+
 
     define([
         'lodash',
@@ -615,7 +619,8 @@ Then I added a new entry in *qtiCreator/model/qtiClasses.js* to declare this new
 
     'mediaInteraction' : 'taoQtiItem/qtiCreator/model/interactions/MediaInteraction'
 
-###*qtiCreator/renderers/interactions/MediaInteraction.js*{#qticreatorrenderersinteractionsmediainteractionjs}
+### *qtiCreator/renderers/interactions/MediaInteraction.js*
+
 
     define([
         'lodash',
@@ -644,7 +649,8 @@ Then I added a new entry to *qtiCreator/renderers/config.js* to declare this new
 
     'mediaInteraction' : 'taoQtiItem/qtiCreator/renderers/interactions/MediaInteraction'
 
-###*qtiCreator/widgets/interactions/mediaInteraction/Widget.js*{#qticreatorwidgetsinteractionsmediainteractionwidgetjs}
+### *qtiCreator/widgets/interactions/mediaInteraction/Widget.js*
+
 
     define([
         'taoQtiItem/qtiCreator/widgets/interactions/Widget',
@@ -672,7 +678,8 @@ Then I added a new entry to *qtiCreator/renderers/config.js* to declare this new
         return MediaInteractionWidget;
     });
 
-###*qtiCreator/widgets/interactions/mediaInteraction/states/states.js*{#qticreatorwidgetsinteractionsmediainteractionstatesstatesjs}
+### *qtiCreator/widgets/interactions/mediaInteraction/states/states.js*
+
 
     define([
         'taoQtiItem/qtiCreator/widgets/states/factory',
@@ -685,7 +692,8 @@ Then I added a new entry to *qtiCreator/renderers/config.js* to declare this new
         return factory.createBundle(states, arguments, ['answer', 'correct', 'map']);
     });
 
-###*qtiCreator/widgets/interactions/mediaInteraction/states/Answer.js*{#qticreatorwidgetsinteractionsmediainteractionstatesanswerjs}
+### *qtiCreator/widgets/interactions/mediaInteraction/states/Answer.js*
+
 
     define([
         'taoQtiItem/qtiCreator/widgets/states/factory',
@@ -712,7 +720,8 @@ Then I added a new entry to *qtiCreator/renderers/config.js* to declare this new
         return MediaInteractionStateAnswer;
     });
 
-###*qtiCreator/widgets/interactions/mediaInteraction/states/Question.js*{#qticreatorwidgetsinteractionsmediainteractionstatesquestionjs}
+### *qtiCreator/widgets/interactions/mediaInteraction/states/Question.js*
+
 
     define([
         'taoQtiItem/qtiCreator/widgets/states/factory',
@@ -740,8 +749,7 @@ Then I added a new entry to *qtiCreator/renderers/config.js* to declare this new
                 minPlays : parseInt(interaction.attr('minPlays')),
                 maxPlays : parseInt(interaction.attr('maxPlays')),
 
-                //tpl data for the "object", this part is going to be reused by the "objectWidget", http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10173{#element10173}
-
+                //tpl data for the "object", this part is going to be reused by the "objectWidget", http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10173
                 data:interaction.object.attr('data'),
                 type:interaction.object.attr('type'),//use the same as the uploadInteraction, contact jerome@taotesting.com for this
                 width:interaction.object.attr('width'),
@@ -768,10 +776,17 @@ Then I added a new entry to *qtiCreator/renderers/config.js* to declare this new
         return MediaInteractionStateQuestion;
     });
 
-###*qtiCreator/tpl/forms/interactions/media.tpl*{#qticreatortplformsinteractionsmediatpl}
+### *qtiCreator/tpl/forms/interactions/media.tpl*
 
-          TO BE COMPLETED : add "object" editor (see : http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10173){#element10173}
 
+
+          TO BE COMPLETED : add "object" editor (see : http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10173)
+
+
+
+        
+            
+            
             {{__ "autostart"}}
         
         

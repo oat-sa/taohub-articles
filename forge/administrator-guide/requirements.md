@@ -37,16 +37,16 @@ TAO is a web application and needs to be hosted on a web server to be reachable 
 TAO needs Apache to be loaded with a specific module which is [mod\_rewrite](http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html). It enables TAO to rewrite requested URLs on the fly. To check if mod\_rewrite is up and running on your Apache instance, launch the following command in a console: *httpd -l*. This command lists all Apache modules running. You should see mod\_rewrite.c in the output list. If not please make sure that:
 
 -   the */modules* directory of your Apache folder contains *mod\_rewrite.so* file.
--   the *LoadModule rewrite\_module modules/mod\_rewrite.so* directive exists in your httpd.conf configuration file. Remove any comment sign (‘\#’) if it is the first character of the related line.{#if-it-is-the-first-character-of-the-related-line}
+-   the *LoadModule rewrite\_module modules/mod\_rewrite.so* directive exists in your httpd.conf configuration file. Remove any comment sign (‘\#’) if it is the first character of the related line.
 
 Please also check that the *AllowOverride All* directive is set for your DocumentRoot. You can find it in httpd.conf as\
 in the following example:
 
-    #{#}
+    #
+    # This Directory must point where your Root Directory is.
+    #
 
- This Directory must point where your Root Directory is.
-    #Options Indexes FollowSymLinks MultiViews{#options-indexes-followsymlinks-multiviews}
-
+        Options Indexes FollowSymLinks MultiViews
         AllowOverride all
         Order Allow,Deny
         Allow from all
@@ -58,13 +58,13 @@ PHP 5
 
 PHP runs the applicative part of TAO and must be installed as an Apache module. TAO requires PHP **5.4** or higher.
 
-###Compilation & Configuration{#compilation-configuration}
+### Compilation & Configuration
 
 -   Make sure that PHP was not compiled with *—disable-all* or *—disable-json* or *—disable-dom*
 -   Make sure that PHP was compile with the following *configure* options
     -   *—enable-mbstring*
 
-###Extensions{#extensions}
+### Extensions
 
 TAO also needs several extensions to run correctly:
 

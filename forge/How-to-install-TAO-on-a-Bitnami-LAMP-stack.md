@@ -81,15 +81,13 @@ Go through the installation of TAO, from the GUI or using the taoInstall.php scr
 Additional errors
 -----------------
 
-###Error 1: Errors with Vhosts and Aliases\{#error-1-errors-with-vhosts-and-aliases}
-
+### Error 1: Errors with Vhosts and Aliases\
 If you find some errors when installing such as: Not Found e.g. The requested URL /taotesting/tao/Main/entry was not found on this server.\
 Please note that alias/prefixes have some errors when installing TAO testing e.g. httpd-prefix.conf or Alias /taotesting/ “/opt/bitnami/apps/taotesting/htdocs/”
 
 TAO 3.0 was successfully installed onto a Bitnami stack (Amazon Web Services) when using Virtual Hosts e.g. httpd-vhosts.conf or <VirtualHost *:80>
 
-###Error 2: Errors with mod\_rewrite\{#error-2-errors-with-mod-rewrite}
-
+### Error 2: Errors with mod\_rewrite\
 Even if mod\_rewrite is successfully enabled, you may have to edit tao/.htaccess as there is a strange error being thrown on install (mod\_rewrite not being detected)
 
 Please see this link on how to fix mod\_rewrite problems on install: [[http://forge.taotesting.com/issues/3434]]\
@@ -98,7 +96,6 @@ That’s all folks!
 References:
 -----------
 
-- https://wiki.bitnami.com/Components/Apache\#How\_to\_configure\_the\_Apache\_server.3f\{#how-to-configure-the-apache-server3f}
-
+- https://wiki.bitnami.com/Components/Apache\#How\_to\_configure\_the\_Apache\_server.3f\
 - https://wiki.bitnami.com/Components/MySQL
 

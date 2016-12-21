@@ -34,7 +34,7 @@ Class to extends to build your own test case [[GenerisPhpUnitTestRunner]] or [[T
 
 A global testsuite is available in the root to launch all tests.
 
-###Goals{#goals}
+### Goals
 
 -   Test all classes
 -   Test Isolated methods
@@ -42,7 +42,7 @@ A global testsuite is available in the root to launch all tests.
 -   Run TestSuites very often
 -   Mostly Test logical part of the application
 
-###Principles{#principles}
+### Principles
 
 -   One Class, one TestCase
 -   Test all non-trivial methods

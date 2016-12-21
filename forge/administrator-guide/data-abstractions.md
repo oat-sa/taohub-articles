@@ -39,11 +39,11 @@ Delivery execution informations storage abstraction
 Delivery execution information cover everything related to what test taker has started/finished which delivery.\
 The choice of the abstraction is done in *config/taoDelivery/execution\_service.conf.php*.
 
-###Storing delivery execution informations in the ontology (default){#storing-delivery-execution-informations-in-the-ontology-default}
+### Storing delivery execution informations in the ontology (default)
 
     return new taoDelivery_models_classes_execution_OntologyService();
 
-###Storing delivery execution informations in a key-value server{#storing-delivery-execution-informations-in-a-key-value-server}
+### Storing delivery execution informations in a key-value server
 
 To switch to a KeyValue persistence we need to first change the service to *taoDelivery\_models\_classes\_execution\_KeyValueService* in *config/taoDelivery/execution\_service.conf.php*:
 
@@ -77,17 +77,17 @@ URI provider
 
 The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
 
-###Using the SQL server as URI provider (default){#using-the-sql-server-as-uri-provider-default}
+### Using the SQL server as URI provider (default)
 
 By default Generis uses the SQL database to generate new URIs:
 
-    return new core_kernel_uri_DatabaseSerialUriProvider(array('persistence' => 'default','namespace' => LOCAL_NAMESPACE.'#'));{#}
+    return new core_kernel_uri_DatabaseSerialUriProvider(array('persistence' => 'default','namespace' => LOCAL_NAMESPACE.'#'));
 
-##Using the key-value server as URI provider{#using-the-key-value-server-as-uri-provider}
+### Using the key-value server as URI provider
 
 To switch to a the advanced key-value implementation the service in *config/generis/uriProvider.conf.php* needs to be changed to:
 
-    return new core_kernel_uri_AdvKeyValueUriProvider(array('persistence' => 'uriProvider','namespace' => LOCAL_NAMESPACE.'#'));{#}
+    return new core_kernel_uri_AdvKeyValueUriProvider(array('persistence' => 'uriProvider','namespace' => LOCAL_NAMESPACE.'#'));
 
     'uriProvider' => array(
         'driver' => 'phpredis',
@@ -104,7 +104,7 @@ Service state storage abstraction
 
 The service state storage manages the state of any service that has been started. This can include among many the states of items (selected responses), states of the test (current item) and state of the delivery. This is by default stored in the key-value persistence identified by **’serviceState’** (key is defined in *config/generis/stateStorage.conf.php*).
 
-###Storing service states in the filesystem (default){#storing-service-states-in-the-filesystem-default}
+### Storing service states in the filesystem (default)
 
 The default persistence is defined in *config/generis/persistences.conf.php* and will store the state of the services in the directory *data/generis/serviceState*.
 
@@ -112,7 +112,7 @@ The default persistence is defined in *config/generis/persistences.conf.php* and
         'driver' => 'phpfile',
     )
 
-###Storing service states in a Redis or Couchbase server{#storing-service-states-in-a-redis-or-couchbase-server}
+### Storing service states in a Redis or Couchbase server
 
 If you prefer to store these states in an alternative storage, edit the file *config/generis/persistences.conf.php* and modify the ‘serviceState’ entry to the following:
 
@@ -143,11 +143,11 @@ PHP session storage abstraction
 This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.\
 See also: http://php.net/manual/en/function.session-set-save-handler.php
 
-###System session storage (default){#system-session-storage-default}
+### System session storage (default)
 
 By default the PHP environment will handle all session storage and retrieval on a system-level.
 
-###Storing the session in a key-value server{#storing-the-session-in-a-key-value-server}
+### Storing the session in a key-value server
 
 To use the key-value storage for the php session change the service used in *config/tao/session.conf.php*:
 

@@ -15,7 +15,7 @@ This installation guide focuses on installing the TAO platform on a Microsoft Wi
 1. Installation & Setup of MAMP
 -------------------------------
 
-###1.1. Installation{#11-installation}
+### 1.1. Installation
 
 MAMP is the Windows port of a famous and widely used AMP stack for Mac OS X. It comes with an installer that takes care of everything to set up your web server and has MySQL and PHP built-in.
 
@@ -23,13 +23,13 @@ The first step is to download the latest [MAMP Windows package](https://www.mamp
 
 {{thumbnail(MAMP installation.png,size=800,title=MAMP installation)}}
 
-###1.2. Setup{#12-setup}
+### 1.2. Setup
 
-##1.2.1. PHP Setup{#121-php-setup}
+### 1.2.1. PHP Setup
 
 The TAO platform requires a few PHP extensions to be loaded to run correctly on your web server. However, the MAMP default configuration already complies with those requirements. The same goes for PHP configuration, the default one is already good for the job.
 
-###1.2.2. (Optional) MySQL Setup{#122-optional-mysql-setup}
+### 1.2.2. (Optional) MySQL Setup
 
 In practice, you may need to create a local MySQL user with all privileges (except the ‘grant’ privilege) on a TAO specific database name such as ‘tao’. You may skip this step if you only go for a quick TAO trial and use later in the TAO installer the Autoconfiguration option at the database configuration step.
 
@@ -37,7 +37,7 @@ If you need more information about database privileges and databases, please vis
 
 {{thumbnail(MAMP MySQL create tao user 3.png,size=800,title=Create a TAO specific MySQL account)}}
 
-###1.2.3. Apache2 Setup{#123-apache2-setup}
+### 1.2.3. Apache2 Setup
 
 The **Apache2 rewrite module** must be enabled to install TAO. With MAMP, this module is already enabled.
 
@@ -46,7 +46,7 @@ You are now ready to deploy the TAO platform.
 2. TAO Platform Deployment
 --------------------------
 
-###2.1. Download the Latest Version of TAO{#21-download-the-latest-version-of-tao}
+### 2.1. Download the Latest Version of TAO
 
 We will now download the latest version of the TAO source code and deploy it on the web server. Go to the official TAO [download page](http://taotesting.com/get-tao/official-tao-packages/) and download the latest manual install release. You may also download the latest nightly build.
 
@@ -61,7 +61,7 @@ You should now have the following folders:
 -   taoDelivery (full path: C:\\MAMP\\htdocs\\tao\\taoDelivery\\)
 -   etc.
 
-###2.2. (Optional) Creation of a Virtual Host for TAO{#22-optional-creation-of-a-virtual-host-for-tao}
+### 2.2. (Optional) Creation of a Virtual Host for TAO
 
 The TAO platform may be run using an Apache2 virtual host instead of a subfolder installation. We will create a new **virtual host** named **taoplatform** by editing the virtual host configuration file of Apache2. Depending on your installation settings, it should be located at **C:\\MAMP\\bin\\apache\\conf\\extra\\**. Create a new configuration file httpd-taoplatform.conf with your favorite text editor (we recommend Notepad++) and edit it accordingly:
 
@@ -83,12 +83,10 @@ The TAO platform may be run using an Apache2 virtual host instead of a subfolder
 
 Open the main Apache2 configuration file located at **C:\\MAMP\\bin\\apache\\conf\\httpd.conf** and add the following line below the commented one:
 
-    #Various default settings{#various-default-settings}
+    # Various default settings
+    #Include conf/extra/httpd-default.conf
 
-Include conf/extra/httpd-default.conf
-
-    #add this line -->{#add-this-line}
-
+    # add this line -->
     Include conf/extra/httpd-taoplatform.conf
 
 This will integrate your virtual host configuration in the main Apache2 configuration file.
@@ -101,7 +99,7 @@ Do not forget to make the hostname reachable by editing your system **hosts** fi
 
 You can now restart your web server (click on ‘Stop Servers’ then ‘Start Servers’) to take into account the new configuration settings.
 
-###2.3. TAO Installation Wizard{#23-tao-installation-wizard}
+### 2.3. TAO Installation Wizard
 
 For this last step of the installation process, open up your favourite web browser. If you followed step 2.2, then you will reach TAO at this URL: http://taoplatform/. If you didn’t, use the default URL: http://localhost/tao/. The installation wizard will appear.
 
@@ -109,7 +107,7 @@ For this last step of the installation process, open up your favourite web brows
 
 Follow the instructions to finalize your TAO installation.
 
-###3. (Optional) Fine tuning{#3-optional-fine-tuning}
+### 3. (Optional) Fine tuning
 
 To improve performance, you are strongly advised to enable in MAMP a PHP opcode caching such as OPCache:\
 {{thumbnail(PHP opcode cache.png,size=800,title=OPCache)}}

@@ -23,9 +23,9 @@ Config file
 The config file can be wrote either in json or yaml. In order to use a yaml file you have to have the yaml extension for php on your server.\
 The file will contain some mandatory and optional properties, they are listed below. You can find a example of this file [here](https://github.com/oat-sa/tao-core/blob/master/scripts/sample/config.json)
 
-###Mandatory properties{#mandatory-properties}
+### Mandatory properties
 
-###super-user{#super-user}
+#### super-user
 
 This option is the one that will set your first tao user as a super user. It requires a login and a password. It can contain but not needed a first name, last name and an email.
 
@@ -37,7 +37,7 @@ This option is the one that will set your first tao user as a super user. It req
         "password": "admin"
       }
 
-####configuration{#configuration}
+#### configuration
 
 This section have several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.\
 Mandatory configuration :
@@ -52,7 +52,7 @@ Optional configuration :
 -   awsClient
 -   …
 
-#####global{#global}
+##### global
 
 The global part of the configuration contains all the properties required for the tao installation.
 
@@ -81,15 +81,15 @@ The global part of the configuration contains all the properties required for th
           "import_data": true
         },
 
-#####generis{#generis}
+##### generis
 
-#####persistences{#persistences}
+###### persistences
 
-#####log{#log}
+###### log
 
-##Optionnal properties{#optionnal-properties}
+### Optionnal properties
 
-###extensions{#extensions}
+#### extensions
 
 This property allows you to choose which extensions you want to install by default for your instance
 
@@ -100,7 +100,6 @@ This property allows you to choose which extensions you want to install by defau
 
 By default if you let this array empty it will install taoCe.
 
-####configurable services{#configurable-services}
+#### configurable services
 
-###postInstall{#postinstall}
-
+#### postInstall

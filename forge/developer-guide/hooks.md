@@ -33,11 +33,11 @@ Runtime data storage services
 
 More informations on how to configure them can be found on the [[Data abstractions]] page.
 
-###Uri Provider{#uri-provider}
+### Uri Provider
 
 `common_uri_AbstractUriProvider`
 
-###Delivery execution informations{#delivery-execution-informations}
+### Delivery execution informations
 
 `taoDelivery_models_classes_execution_Service`
 
@@ -49,15 +49,15 @@ On every model level there can be custom implementations.
 Every content model can implement `tao_models_classes_import_ImportProvider` and `tao_models_classes_export_ExportProvider` to\
 provide import and export capabilities.
 
-###Item model{#item-model}
+### Item model
 
 `taoItems_models_classes_itemModel`
 
-###Test model{#test-model}
+### Test model
 
 `taoTests_models_classes_TestModel`
 
-###Delivery model{#delivery-model}
+### Delivery model
 
 `taoDelivery_models_classes_ContentModel`
 

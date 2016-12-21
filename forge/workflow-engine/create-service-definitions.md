@@ -24,7 +24,7 @@ The complete list of service is loaded into TAO during the installation process:
 
 The complete description of services can be found here : attachment:Services\_definition.pdf
 
-###1.2. Groups services{#12-groups-services}
+### 1.2. Groups services
 
 -   Group class selection
 -   Group selection
@@ -38,7 +38,7 @@ The complete description of services can be found here : attachment:Services\_de
 -   Groups searching
 -   Group removing
 
-###1.3. Items services{#13-items-services}
+### 1.3. Items services
 
 -   Item class selection
 -   Item selection
@@ -52,12 +52,12 @@ The complete description of services can be found here : attachment:Services\_de
 -   Items searching
 -   Item removing
 
-###1.4. Results services{#14-results-services}
+### 1.4. Results services
 
 -   Results searching
 -   Result Table
 
-###1.5. Subjects services{#15-subjects-services}
+### 1.5. Subjects services
 
 -   Subject class selection
 -   Subject selection
@@ -70,7 +70,7 @@ The complete description of services can be found here : attachment:Services\_de
 -   Subjects searching
 -   Subject removing
 
-###1.6. Tests services{#16-tests-services}
+### 1.6. Tests services
 
 -   Test class selection
 -   Test selection
@@ -86,7 +86,7 @@ The complete description of services can be found here : attachment:Services\_de
 -   Tests searching
 -   Test removing
 
-###1.7. Delivery services{#17-delivery-services}
+### 1.7. Delivery services
 
 -   Delivery class selection
 -   Delivery selection
@@ -119,7 +119,8 @@ The complete description of services can be found here : attachment:Services\_de
 -   ResultServer removing
 
 For instance, the source of the service to edit an item is in the following file: *yourWebRootPath/taoItems/actions/class.SaSItems.php*\
-As previously said in [[Process Definition Model\#Service\_definition]], a service is defined by its URL. Provided that its url is accesible via URL, it can be a service in TAO. The service *’sasEditInstance’* below is accessible via the URL */taoItems/SaSItems/sasEditInstance* (with URL rewriting engine activated in TAO){#service-definition-a-service-is-defined-by-its-url-provided-that-its-url-is-accesible-via-url-it-can-be-a-service-in-tao-the-service-saseditinstance-below-is-accessible-via-the-url-taoitemssasitemssaseditinstance-with-url-rewriting-engine-activated-in-tao}
+As previously said in [[Process Definition Model\#Service\_definition]], a service is defined by its URL. Provided that its url is accesible via URL, it can be a service in TAO. The service *’sasEditInstance’* below is accessible via the URL */taoItems/SaSItems/sasEditInstance* (with URL rewriting engine activated in TAO)
+
 
     class taoItems_actions_SaSItems extends taoItems_actions_Items {
         [...]
@@ -159,7 +160,8 @@ You may use the *createServiceDefinition()* method of the process authoring tool
 -   The second is the URL to be called to access the service (here, *“http://www.myWebSite.com/myServiceScript.php”*).
 -   The last is an array of *formal parameters* that will be created (if they do not exist yet) or set (if they already exist) for the service. The associative array follows the format *’parameter name’ =\> ’default value’*. The *parameter name* is the key to be used to retrieve the parameter value in the service (*\$\_GET method*). The default value is either a constant or a process variable. The example below has two parameters (*param3* and *param4*) with default values set to constants (respectively *’myConstantValue’* and *null*). If you want to define the default value as a process variable like *param1* or *param2* below, add a *“\^”* before the code of your process variable, e.g. *\^myProcessVarCode2*, where *myProcessVarCode2* is the *code* of a process variable (say *“process variable 2”*). If the process variable with the code *myProcessVarCode2* exists, it will be set. If it does not exist yet, it will be created during the service definition creation. Alternatively, you can also directly give in the array a process variable resource like the *param1* below.
 
-For more details about the way the complete URL of a service is built at runtime (including the parameters), please refer to [[Execution of a process\#From the activity definition to the screen display|the process execution section]].{#from-the-activity-definition-to-the-screen-displaythe-process-execution-section}
+For more details about the way the complete URL of a service is built at runtime (including the parameters), please refer to [[Execution of a process\#From the activity definition to the screen display|the process execution section]].
+
 
     $myProcessVar1 = null;
     $myProcessVar1 = $this->authoringService->getProcessVariable('myProcessVarCode1', true);
@@ -186,7 +188,8 @@ You may want to implement a service directly within your TAO file system, to tak
 The short tutorial below shows how to create a basic service that embeds a URL in an iframe, in the taoDelivery extension.
 
 To build a basic service, you need to create a controller in the actions folder of an extension, that extends *CommonModule*.\
-First create a new controller, called *taoDelivery\_actions\_WebService* (see: [[Guidelines\#Namespace|naming convention in TAO]]) in the actions directory of the taoDelivery extension: *yourWebRootPath/taoDeliveries/actions/class.WebService.php*{#namespacenaming-convention-in-tao-in-the-actions-directory-of-the-taodelivery-extension-yourwebrootpathtaodeliveriesactionsclasswebservicephp}
+First create a new controller, called *taoDelivery\_actions\_WebService* (see: [[Guidelines\#Namespace|naming convention in TAO]]) in the actions directory of the taoDelivery extension: *yourWebRootPath/taoDeliveries/actions/class.WebService.php*
+
 
     class taoDelivery_actions_WebService extends tao_actions_CommonModule{
         public function __construct(){}

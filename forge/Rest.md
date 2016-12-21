@@ -76,27 +76,7 @@ Let’s assume you want to retrieve the list of test takers … (for other metho
 The outcome according to application/json :
 
 
-    {"success":true,"data":[{"uri":"http:\/\/tao-dev\/taodev.rdf#i1372425843494221","properties":[{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf{#i1372425843494221propertiespredicateurihttpwwwtaoluontologiesgenerisrdf}
-
-userFirstName","values":[{"valueType":"literal","value":"Patrick"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userLastName","values":[{"valueType":"literal","value":"Plichart"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf{#userlastnamevaluesvaluetypeliteralvalueplichartpredicateurihttpwwwtaoluontologiesgenerisrdf}
-
-login","values":[{"valueType":"literal","value":"ppl"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#password","values":[{"valueType":"literal","value":"5396681eea50ad639ae3c9f8ca17b7d8"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf{#passwordvaluesvaluetypeliteralvalue5396681eea50ad639ae3c9f8ca17b7d8predicateurihttpwwwtaoluontologiesgenerisrdf}
-
-userMail","values":[{"valueType":"literal","value":"patrick@taotesting.com"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userDefLg","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf{#userdeflgvaluesvaluetyperesourcevaluehttpwwwtaoluontologiestaordf}
-
-Langen-US"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userUILg","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf{#useruilgvaluesvaluetyperesourcevaluehttpwwwtaoluontologiestaordf}
-
-Langen-US"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userRoles","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf{#userrolesvaluesvaluetyperesourcevaluehttpwwwtaoluontologiestaordf}
-
-DeliveryRole"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#generisRessourceComment"},{"predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns{#generisressourcecommentpredicateurihttpwwww3org19990222-rdf-syntax-ns}
-
-type","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAOSubject.rdf#Subject"}]},{"predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns{#subjectpredicateurihttpwwww3org19990222-rdf-syntax-ns}
-
-value"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#comment"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema{#commentpredicateurihttpwwww3org200001rdf-schema}
-
-label","values":[{"valueType":"literal","value":"Patrick Plichart"}]},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#seeAlso"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema{#seealsopredicateurihttpwwww3org200001rdf-schema}
-
-isDefinedBy"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#member"}]}],"version":"2.5-alpha"}{#memberversion25-alpha}
+    {"success":true,"data":[{"uri":"http:\/\/tao-dev\/taodev.rdf#i1372425843494221","properties":[{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userFirstName","values":[{"valueType":"literal","value":"Patrick"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userLastName","values":[{"valueType":"literal","value":"Plichart"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#login","values":[{"valueType":"literal","value":"ppl"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#password","values":[{"valueType":"literal","value":"5396681eea50ad639ae3c9f8ca17b7d8"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userMail","values":[{"valueType":"literal","value":"patrick@taotesting.com"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userDefLg","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userUILg","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userRoles","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#DeliveryRole"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#generisRessourceComment"},{"predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAOSubject.rdf#Subject"}]},{"predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#value"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#comment"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#label","values":[{"valueType":"literal","value":"Patrick Plichart"}]},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#seeAlso"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#isDefinedBy"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#member"}]}],"version":"2.5-alpha"}
 
 The outcome according to application/xml :
 
@@ -108,88 +88,119 @@ The outcome according to application/xml :
       true
       
         
-          http://tao-dev/taodev.rdf#i1372425843494221{#i1372425843494221}
-
-              http://www.tao.lu/Ontologies/generis.rdf#userFirstName{#userfirstname}
-
+          http://tao-dev/taodev.rdf#i1372425843494221
+          
+            
+              http://www.tao.lu/Ontologies/generis.rdf#userFirstName
+              
+                
                   literal
                   Patrick
                 
               
             
             
-              http://www.tao.lu/Ontologies/generis.rdf#userLastName{#userlastname}
-
+              http://www.tao.lu/Ontologies/generis.rdf#userLastName
+              
+                
                   literal
                   Plichart
                 
               
             
             
-              http://www.tao.lu/Ontologies/generis.rdf#login{#login}
-
+              http://www.tao.lu/Ontologies/generis.rdf#login
+              
+                
                   literal
                   ppl
                 
               
             
             
-              http://www.tao.lu/Ontologies/generis.rdf#password{#password}
-
+              http://www.tao.lu/Ontologies/generis.rdf#password
+              
+                
                   literal
                   5396681eea50ad639ae3c9f8ca17b7d8
                 
               
             
             
-              http://www.tao.lu/Ontologies/generis.rdf#userMail{#usermail}
-
+              http://www.tao.lu/Ontologies/generis.rdf#userMail
+              
+                
                   literal
                   patrick@taotesting.com
                 
               
             
             
-              http://www.tao.lu/Ontologies/generis.rdf#userDefLg{#userdeflg}
-
+              http://www.tao.lu/Ontologies/generis.rdf#userDefLg
+              
+                
                   resource
-                  http://www.tao.lu/Ontologies/TAO.rdf#Langen-US{#langen-us}
-
-              http://www.tao.lu/Ontologies/generis.rdf#userUILg{#useruilg}
-
+                  http://www.tao.lu/Ontologies/TAO.rdf#Langen-US
+                
+              
+            
+            
+              http://www.tao.lu/Ontologies/generis.rdf#userUILg
+              
+                
                   resource
-                  http://www.tao.lu/Ontologies/TAO.rdf#Langen-US{#langen-us}
-
-              http://www.tao.lu/Ontologies/generis.rdf#userRoles{#userroles}
-
+                  http://www.tao.lu/Ontologies/TAO.rdf#Langen-US
+                
+              
+            
+            
+              http://www.tao.lu/Ontologies/generis.rdf#userRoles
+              
+                
                   resource
-                  http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole{#deliveryrole}
-
-              http://www.tao.lu/Ontologies/generis.rdf#generisRessourceComment{#generisressourcecomment}
-
-              http://www.w3.org/1999/02/22-rdf-syntax-ns#type{#type}
-
+                  http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole
+                
+              
+            
+            
+              http://www.tao.lu/Ontologies/generis.rdf#generisRessourceComment
+            
+            
+              http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+              
+                
                   resource
-                  http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject{#subject}
-
-              http://www.w3.org/1999/02/22-rdf-syntax-ns#value{#value}
-
-              http://www.w3.org/2000/01/rdf-schema#comment{#comment}
-
-              http://www.w3.org/2000/01/rdf-schema#label{#label}
-
+                  http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject
+                
+              
+            
+            
+              http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+            
+            
+              http://www.w3.org/2000/01/rdf-schema#comment
+            
+            
+              http://www.w3.org/2000/01/rdf-schema#label
+              
+                
                   literal
                   Patrick Plichart
                 
               
             
             
-              http://www.w3.org/2000/01/rdf-schema#seeAlso{#seealso}
-
-              http://www.w3.org/2000/01/rdf-schema#isDefinedBy{#isdefinedby}
-
-              http://www.w3.org/2000/01/rdf-schema#member{#member}
-
+              http://www.w3.org/2000/01/rdf-schema#seeAlso
+            
+            
+              http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+            
+            
+              http://www.w3.org/2000/01/rdf-schema#member
+            
+          
+        
+      
       2.5-alpha
 
 }}
@@ -259,8 +270,9 @@ If your request is successful you will receive the URI of the newly created reso
 
       true
       
-        http://tao-dev/taodev.rdf#i137242883388823{#i137242883388823}
-
+        http://tao-dev/taodev.rdf#i137242883388823
+        
+        
         core_kernel_persistence_smoothsql_Class::createInstanceWithProperties
       
       2.5-alpha
@@ -304,13 +316,11 @@ Creating a test taker with custom properties / type or language
     "login: pplichart",
     "password: dummy",
 
-    "type: http://tao-dev/taodev.rdf#i1372428806753422",{#i1372428806753422}
-
-    "datalg: http://www.tao.lu/Ontologies/TAO.rdf#Langfr-FR",{#langfr-fr}
+    "type: http://tao-dev/taodev.rdf#i1372428806753422",
+    "datalg: http://www.tao.lu/Ontologies/TAO.rdf#Langfr-FR",
 
     //uses a property defines on the particular class hosting the newly created test taker or by inheritance
-    "http://tao-dev/taodev.rdf#i1372429454323825: 35"{#i1372429454323825-35}
-
+    "http://tao-dev/taodev.rdf#i1372429454323825: 35"
     ));
 
     //set your credentials
@@ -342,14 +352,13 @@ You may re-assign a new type to the test taker.
     curl_setopt($process, CURLOPT_PUT, 1);
     curl_setopt($process,CURLOPT_HTTPHEADER, array(
     "Accept: application/json",
-    "uri: http://tao-dev/taodev.rdf#i1372425843494221",{#i1372425843494221}
+    "uri: http://tao-dev/taodev.rdf#i1372425843494221",
 
     "label: Patrick Plichart",
     "lastname: Plichart",
     "firstname: Plichart",
-    "type: http://tao-dev/taodev.rdf#i1372428806753422",{#i1372428806753422}
-
-    "datalg: http://www.tao.lu/Ontologies/TAO.rdf#Langfr-FR"{#langfr-fr}
+    "type: http://tao-dev/taodev.rdf#i1372428806753422",
+    "datalg: http://www.tao.lu/Ontologies/TAO.rdf#Langfr-FR"
 
     ));
     curl_setopt($process, CURLOPT_USERPWD, "myLogin:myPassword");
@@ -373,8 +382,7 @@ Retrieve a particular test taker
     curl_setopt($process, CURLOPT_HTTPGET, 1);
     curl_setopt($process,CURLOPT_HTTPHEADER, array(
     "Accept: application/json",
-    "uri: http://tao-dev/taodev.rdf#i1372425843494221"{#i1372425843494221}
-
+    "uri: http://tao-dev/taodev.rdf#i1372425843494221"
     ));
     curl_setopt($process, CURLOPT_USERPWD, "myLogin:myPassword");
     curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
@@ -391,88 +399,118 @@ Retrieve a particular test taker
 
       true
       
-        http://tao-dev/taodev.rdf#i1372425843494221{#i1372425843494221}
-
-            http://www.tao.lu/Ontologies/generis.rdf#userFirstName{#userfirstname}
-
+        http://tao-dev/taodev.rdf#i1372425843494221
+        
+          
+            http://www.tao.lu/Ontologies/generis.rdf#userFirstName
+            
+              
                 literal
                 Patrick
               
             
           
           
-            http://www.tao.lu/Ontologies/generis.rdf#userLastName{#userlastname}
-
+            http://www.tao.lu/Ontologies/generis.rdf#userLastName
+            
+              
                 literal
                 Plichart
               
             
           
           
-            http://www.tao.lu/Ontologies/generis.rdf#login{#login}
-
+            http://www.tao.lu/Ontologies/generis.rdf#login
+            
+              
                 literal
                 ppl
               
             
           
           
-            http://www.tao.lu/Ontologies/generis.rdf#password{#password}
-
+            http://www.tao.lu/Ontologies/generis.rdf#password
+            
+              
                 literal
                 5396681eea50ad639ae3c9f8ca17b7d8
               
             
           
           
-            http://www.tao.lu/Ontologies/generis.rdf#userMail{#usermail}
-
+            http://www.tao.lu/Ontologies/generis.rdf#userMail
+            
+              
                 literal
                 patrick@taotesting.com
               
             
           
           
-            http://www.tao.lu/Ontologies/generis.rdf#userDefLg{#userdeflg}
-
+            http://www.tao.lu/Ontologies/generis.rdf#userDefLg
+            
+              
                 resource
-                http://www.tao.lu/Ontologies/TAO.rdf#Langen-US{#langen-us}
-
-            http://www.tao.lu/Ontologies/generis.rdf#userUILg{#useruilg}
-
+                http://www.tao.lu/Ontologies/TAO.rdf#Langen-US
+              
+            
+          
+          
+            http://www.tao.lu/Ontologies/generis.rdf#userUILg
+            
+              
                 resource
-                http://www.tao.lu/Ontologies/TAO.rdf#Langen-US{#langen-us}
-
-            http://www.tao.lu/Ontologies/generis.rdf#userRoles{#userroles}
-
+                http://www.tao.lu/Ontologies/TAO.rdf#Langen-US
+              
+            
+          
+          
+            http://www.tao.lu/Ontologies/generis.rdf#userRoles
+            
+              
                 resource
-                http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole{#deliveryrole}
-
-            http://www.tao.lu/Ontologies/generis.rdf#generisRessourceComment{#generisressourcecomment}
-
-            http://www.w3.org/1999/02/22-rdf-syntax-ns#type{#type}
-
+                http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole
+              
+            
+          
+          
+            http://www.tao.lu/Ontologies/generis.rdf#generisRessourceComment
+          
+          
+            http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+            
+              
                 resource
-                http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject{#subject}
-
-            http://www.w3.org/1999/02/22-rdf-syntax-ns#value{#value}
-
-            http://www.w3.org/2000/01/rdf-schema#comment{#comment}
-
-            http://www.w3.org/2000/01/rdf-schema#label{#label}
-
+                http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject
+              
+            
+          
+          
+            http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+          
+          
+            http://www.w3.org/2000/01/rdf-schema#comment
+          
+          
+            http://www.w3.org/2000/01/rdf-schema#label
+            
+              
                 literal
                 Patrick Plichart
               
             
           
           
-            http://www.w3.org/2000/01/rdf-schema#seeAlso{#seealso}
-
-            http://www.w3.org/2000/01/rdf-schema#isDefinedBy{#isdefinedby}
-
-            http://www.w3.org/2000/01/rdf-schema#member{#member}
-
+            http://www.w3.org/2000/01/rdf-schema#seeAlso
+          
+          
+            http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+          
+          
+            http://www.w3.org/2000/01/rdf-schema#member
+          
+        
+      
       2.5-alpha
 
 
@@ -491,8 +529,7 @@ Delete a test taker.
     curl_setopt($process, CURLOPT_CUSTOMREQUEST, "DELETE");
     curl_setopt($process,CURLOPT_HTTPHEADER, array(
     "Accept: application/json",
-    "uri: http://tao-dev/taodev.rdf#i1372425843494221"{#i1372425843494221}
-
+    "uri: http://tao-dev/taodev.rdf#i1372425843494221"
     ));
     curl_setopt($process, CURLOPT_USERPWD, "myLogin:myPassword");
     curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
@@ -609,11 +646,8 @@ You may send multiple values for a property using the standard multi valued http
 
     curl_setopt($process,CURLOPT_PUT, array(
     "Accept: application/json",
-    "member: http://tao-dev/taodev.rdf#i1372775158285588, http://tao-dev/taodev.rdf{#i1372775158285588-httptao-devtaodevrdf}
-
-i1372775318526138"
-    "uri: http://tao-dev/taodev.rdf#i1372775158243322"{#i1372775158243322}
-
+    "member: http://tao-dev/taodev.rdf#i1372775158285588, http://tao-dev/taodev.rdf#i1372775318526138"
+    "uri: http://tao-dev/taodev.rdf#i1372775158243322"
     ));
 
 How to submit files for creating a new item ?

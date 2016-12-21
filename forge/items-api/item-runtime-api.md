@@ -57,14 +57,11 @@ The following example is provided with the API, under the *examples* folder. We 
 
         $(document).ready(function(){
 
-            $("#header").text("Hello " + getSubjectName());{#headertexthello-getsubjectname}
+            $("#header").text("Hello " + getSubjectName());
 
-            $("#next").click(function(){{#nextclickfunction}
-
-                setAnsweredValues($('#answer').val());{#answerval}
-
-                if($('#answer').val() == ''){{#answerval}
-
+            $("#next").click(function(){
+                setAnsweredValues($('#answer').val());
+                if($('#answer').val() == ''){
                     setEndorsment(false);
                     setScore(0);
                 }
@@ -92,15 +89,14 @@ How it works?
 3.  There is to fields in the body of the page: a text field *answer* and a button *next*
 4.  Inside the script tag:
     -   We initialize the connections to be synchronous: `initDataSource` will retrieve the data from the server. So we want to continue only once the data are there. Particularly to get the name of the test taker and to write it in the header: `getSubjectName()` , line 16. We initialize also the `push` to be synchronous, in order to know if the data has been pushed.
-    -   With JQuery we bind a click listener on the next button. Once the button is clicked, we take the value of the field and save it as it is: `setAnsweredValues($('#answer').val());`{#answerval}
-
+    -   With JQuery we bind a click listener on the next button. Once the button is clicked, we take the value of the field and save it as it is: `setAnsweredValues($('#answer').val());`
     -   Then if the value is empty, the test taker has wrong and it’s score is 0. If he has entered something, it’s score is 1: line 20 to 27.
     -   The last step, we send all the collected data to the server: the answered value, the score and the endorsement. By calling the `push()` method manually, and because it has be defined synchronously: once the data is sent or not it returns true or false to the button (if true the button could go to the next item).
 
 Create your item in TAO with the Item Runtime API
 -------------------------------------------------
 
-To learn how you can create your own application/item with this item runtime API, then import and execute it in TAO, see [[Free Form Items\#TAO Item Runtime API integration|the Open Web Item wiki page]].{#tao-item-runtime-api-integrationthe-open-web-item-wiki-page}
+To learn how you can create your own application/item with this item runtime API, then import and execute it in TAO, see [[Free Form Items\#TAO Item Runtime API integration|the Open Web Item wiki page]].
 
 Further documentation on the Item Runtime API
 ---------------------------------------------

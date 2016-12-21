@@ -94,11 +94,11 @@ Complete the process by connecting the connector ‘else’ to a new activity la
 
 The wfEngine extension also provides other services and helpers to help building processes. Below is a short introduction to them. For more information, please refer to the [phpDoc](http://forge.tao.lu/docs/phpdoc/index.html) **package wfEngine**
 
-###3.1. ProcessUtil helper{#31-processutil-helper}
+### 3.1. ProcessUtil helper
 
 This process helper provides convenient methods to check the type of a [[Generis Overview|Generis resource]], in particular if the resource is a connector or an activity. If it is an activity, is it an initial or a final one.
 
-###3.2. Process checker{#32-process-checker}
+### 3.2. Process checker
 
 Building a process could be a complex task.\
 Frequent mistakes are:
@@ -109,7 +109,7 @@ Frequent mistakes are:
 
 It is therefore useful to use a tool to check the validity of a process definition. Hereafter, you’ll find the purpose of the process checker.
 
-####3.2.1. Check a process{#321-check-a-process}
+#### 3.2.1. Check a process
 
 From a previously created process definition ‘\$processDefinition’, load it into the process checker:
 
@@ -142,7 +142,7 @@ You can also directly validate the connector with a list of available checking m
         echo 'the process is not valid';
     }
 
-####3.2.2. Add a new verification rule{#322-add-a-new-verification-rule}
+#### 3.2.2. Add a new verification rule
 
 You may also want to extend the functionalities of the basic *Process Checker*. The ProcessChecker class allows you to easily implement your own checking methods. To add a new check method, you only need to add a function, the name of which starts with “check” (like the *checkMyProcessHasTenActivities()* method below). The return value of the method must be of boolean type. You can use the class properties “process” to get the loaded process definition and “authoringService” as the singleton of the process authoring service.
 
@@ -164,7 +164,7 @@ You may also want to extend the functionalities of the basic *Process Checker*. 
         echo 'the process is not valid';
     }
 
-###3.3. Process cloner{#33-process-cloner}
+### 3.3. Process cloner
 
 After building a valid process, a process definition resource can be cloned completely or cloned by segment. Currently, only sequential and conditional processes can be cloned.
 

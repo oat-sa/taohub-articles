@@ -19,7 +19,7 @@ Utilities
 
 Helpers contain transverse functionalities of the application or an extension. By definition a *helper* helps manage non-business operations. It could be used everywhere but shouldn’t be defined in one of the MVC layers. A common representation of the helper is the toolbox: each helper is a toolbox providing a set of utilities for a particular domain.
 
-###TAO helpers overview{#tao-helpers-overview}
+### TAO helpers overview
 
 You can see in the schema below an overview of some of the TAO meta-extension helpers. These helpers are independent classes, they use mainly static methods and attest to the toolbox concept.\
 For instance, the *tao\_helpers\_File* helper provides some convenience methods to manipulate files.
@@ -61,7 +61,7 @@ The Form Engine is mainly used in TAO as a front-end for the data model through 
 
 > A kind of possible contribution would be to extend the engine to render more widgets or to implement other rendering: XUL, JS forms, etc.
 
-###Form Engine architecture overview{#form-engine-architecture-overview}
+### Form Engine architecture overview
 
 ![](http://forge.taotesting.com/attachments/389/form-engine-model.png)
 
@@ -77,7 +77,7 @@ The Form Engine is mainly used in TAO as a front-end for the data model through 
 -   The *tao\_helpers\_form\_Decorator* interface provides you with methods to decorate the rendering of the form components (elements, groups, forms and errors). The decorators use a wrapping process to add some decoration elements before and after the component. For instance, in XHTML we use he *tao\_helpers\_form\_xhtml\_TagWrapper* class. It implements the *Decorator* interface to enclose the rendering of components into an XHTML tag: the *TagWrapper::preRender* method creates the open tag and the *tao\_helpers\_form\_xhtml\_TagWrapper::postRender* method add the closing tag.
 -   The *tao\_helpers\_form\_FormContainer* is a model of class to embed the form creation. The purpose of this class is to prevent the form creation inside the Controllers or the Models layer. This practice needs a consequent number of code’s lines to create a form and it will reduce readability. That’s the reason why the *tao\_helpers\_form\_FormContainer* provides an abstract model to encapsulate the form creation.
 
-###Form Elements{#form-elements}
+### Form Elements
 
 The Form Elements have been structured hierarchically. The *tao\_helpers\_form\_FormElement* is the abstract class with methods shared by all the *tao\_helpers\_form\_FormElements*. Then each kind of element will be created into another abstract. And those 2nd abstract classes will be inherited by classes regarding the rendering mode.
 
@@ -96,7 +96,7 @@ Look at the following piece of code that will render an HTML text field:
 
     Enter your firstname
 
-###Tutorial: the Form Container model{#tutorial-the-form-container-model}
+### Tutorial: the Form Container model
 
 The *TAO\_helpers\_form\_Form Container* provides you with a convenient solution to add forms into your application. This is only a container in which you will put your instructions to create the forms and the form elements.\
 In this tutorial, we will show you how to create a simple form, a login form using the *TAO\_helpers\_form\_Form Container* architecture.

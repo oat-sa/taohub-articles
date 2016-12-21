@@ -32,9 +32,8 @@ Objectives
 
 Our main objective is to make all QTI interactions that are currently implemented by Drag & Drop operations compliant with mobile platforms. These interactions are the following:
 
--   [OrderInteraction](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10283){#element10283}
-
--   [AssociateInteraction](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10291){#element10291}
+-   [OrderInteraction](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10283)
+-   [AssociateInteraction](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10291)
 
 Process
 -------

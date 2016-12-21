@@ -33,12 +33,8 @@ The RDF model
 
 The versioning is represented by two resources :
 
--   http://www.tao.lu/Ontologies/generis.rdf\#VersionedRepository ( [see rdf](http://forge.taotesting.com/projects/tao/repository/entry/trunk/generis/trunk/core/ontology/generis.rdf{#versionedrepository-see-rdfhttpforgetaotestingcomprojectstaorepositoryentrytrunkgeneristrunkcoreontologygenerisrdf}
-
-L171) ) describes versioned repository resources
--   http://www.tao.lu/Ontologies/generis.rdf\#VersionedFile( [see rdf](http://forge.taotesting.com/projects/tao/repository/entry/trunk/generis/trunk/core/ontology/generis.rdf{#versionedfile-see-rdfhttpforgetaotestingcomprojectstaorepositoryentrytrunkgeneristrunkcoreontologygenerisrdf}
-
-L223) ) describes versioned file resources
+-   http://www.tao.lu/Ontologies/generis.rdf\#VersionedRepository ( [see rdf](http://forge.taotesting.com/projects/tao/repository/entry/trunk/generis/trunk/core/ontology/generis.rdf#L171) ) describes versioned repository resources
+-   http://www.tao.lu/Ontologies/generis.rdf\#VersionedFile( [see rdf](http://forge.taotesting.com/projects/tao/repository/entry/trunk/generis/trunk/core/ontology/generis.rdf#L223) ) describes versioned file resources
 
 The model
 ---------
@@ -50,7 +46,7 @@ As you can see on the schema the proxy pattern has been used to implement the ve
 Version your content
 --------------------
 
-###Version a file{#version-a-file}
+### Version a file
 
 In order to create a new versioned content the object *core\_kernel\_versioning\_File* provides a factory, its static function *create*.
 

@@ -39,9 +39,8 @@ Supposing that the subject and delivery models have the property â€œdifficultyâ€
     define('DIFFICULTY_EASY', 1);
     define('DIFFICULTY_MEDIUM', 2);
     define('DIFFICULTY_HARD', 3);
-    define('PROPERTY_SUBJECT_DIFFULTY', '#propertyDeliveryDifficulty');//i.e. uri of the subject difficulty property here{#propertydeliverydifficultyie-uri-of-the-subject-difficulty-property-here}
-
-    define('PROPERTY_DELIVERY_DIFFULTY', '#propertySubjectDifficulty');{#propertysubjectdifficulty}
+    define('PROPERTY_SUBJECT_DIFFULTY', '#propertyDeliveryDifficulty');//i.e. uri of the subject difficulty property here
+    define('PROPERTY_DELIVERY_DIFFULTY', '#propertySubjectDifficulty');
 
 You only need to add this function to the delivery server service *taoDelivery\_models\_classes\_DeliveryServerService*, or better, to a class that extends this class, e.g. taoDelivery\_models\_classes\_myDeliveryServerService (following the [[Guidelines]] for naming conventions)
 

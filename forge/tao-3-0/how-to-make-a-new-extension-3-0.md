@@ -32,7 +32,7 @@ Create the extension
 Simple Examples
 ---------------
 
-###Hello World{#hello-world}
+### Hello World
 
 \* Create the `TestController.php` in the `controller` folder
 
@@ -45,7 +45,7 @@ Simple Examples
 
 -   To run the action visit *ROOT\_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in tao as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
 
-###Hello Template{#hello-template}
+### Hello Template
 
 \* Create the `hello.tpl` file in views/templates
 
@@ -61,7 +61,7 @@ Simple Examples
 
 -   To test this action visit *<span class="URL:/taoDocs/TestController/sayHello"></span>*
 
-###Hello Parameter{#hello-parameter}
+### Hello Parameter
 
 \* Update the `sayHello()` method to use the GET parameter “name”
 
@@ -81,7 +81,7 @@ Simple Examples
 Integration with TAO
 --------------------
 
-###Adding a structure{#adding-a-structure}
+### Adding a structure
 
 \* Open the `controller/structures.xml` ( see more at [[Tao\_30\_structuresxml\_format| guide about structures.xml ]] )
 
@@ -102,7 +102,7 @@ Integration with TAO
 -   Since Tao 2.6 the structures are cached, so you will need to empty your cache (by default situated in *data/generis/cache*. Also you can use taoDevTools scripts)
 -   When refreshing the TAO home screen, the new extension should be visible
 
-###Adding a tree{#adding-a-tree}
+### Adding a tree
 
 \* Add the tag into `trees` in the `structures.xml` file ( [[How\_to\_add\_a\_new\_items\_type|How to add a new items type]] )
 
@@ -113,7 +113,7 @@ Integration with TAO
 
 NOTE: You should clear cache after each change of structures.xml.
 
-###Adding a Controller{#adding-a-controller}
+### Adding a Controller
 
 \* Now you can reload page and see error. It’s because you should create controller for our tree of documents. Example of Browser controller is attached ( attachment:Browser.php ). Download and place this file to `controller` folder.
 
@@ -129,7 +129,7 @@ Our documents will be placed on `taoDocs/views/docs/` folder. Also you need crea
 
 -   If you placed some files to created folder, the extension taoDocs now should shows a list of the files in it.
 
-###Adding an action{#adding-an-action}
+### Adding an action
 
 \* Add the tag into `actions` in the `structures.xml` file
 

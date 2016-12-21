@@ -18,18 +18,18 @@ taoDelivery has been split into two extensions:
 -   **taoDelivery** for the test-taker experience
 -   **taoDeliveryRdf** for the delivery management
 
-###Controllers{#controllers}
+### Controllers
 
 The old taoDelivery controllers *taoDelivery\_actions*\*\_ have been moved from taoDelivery/action to controller of their respective extension:
 
 -   *taoDelivery\_actions\_DeliveryServer* to *oat\\taoDelivery\\controller\\DeliveryServer*
 -   all others to *oat\\taoDeliveryRdf\\controller\\\**
 
-###Delivery execution state identifiers{#delivery-execution-state-identifiers}
+### Delivery execution state identifiers
 
 These states were in the past stored as either global constants or using *oat\\taoFrontOffice\\model\\interfaces\\DeliveryExecution*, but will in the future be part of the **oat\\taoDelivery\\model\\execution\\DeliveryExecution** interface.
 
-###Services{#services}
+### Services
 
 Almost all services (with the exception of *taoDelivery\_models\_classes\_DeliveryServerService* and *taoDelivery\_models\_classes\_execution*\*\_) were part of the delivery management and have therefore been moved to taoDeliveryRdf:
 
@@ -47,7 +47,7 @@ Almost all services (with the exception of *taoDelivery\_models\_classes\_Delive
 
 -   *taoDelivery\_models\_classes\_DeliveryRdf* has been deprecated in favor of *oat\\taoDelivery\\model\\Assignment* that represents the link between the test-taker and the delivery
 
-###Assets{#assets}
+### Assets
 
 Templates and JavaScripts have been split between the two extensions according to split of the controllers.
 

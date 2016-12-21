@@ -58,7 +58,7 @@ in config/generis/complexSearch.conf :
 service basic usage :
 ---------------------
 
-###criteria basic search :{#criteria-basic-search}
+### criteria basic search :
 
 search every items with label equal to ‘foo’.
 
@@ -72,15 +72,14 @@ search every items with label equal to ‘foo’.
 
     $result = $search->getGateway()->search($queryBuilder);
 
-###search by type :{#search-by-type}
+### search by type :
 
 search every test takers.
 
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
     $queryBuilder = $search->query();
-    $query = $search->searchType( $queryBuilder , 'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true);{#subject-true}
-
+    $query = $search->searchType( $queryBuilder , 'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true);
     $queryBuilder->setCriteria($query);
     $result = $search->getGateway()->search($queryBuilder);
 
@@ -90,8 +89,7 @@ add criteria :
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
 
     $queryBuilder = $search->query();
-    $query = $search->searchType($queryBuilder , 'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true){#subject-true}
-
+    $query = $search->searchType($queryBuilder , 'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true)
                      ->add(RDFS_LABEL)
                      ->contains('foo');
 
@@ -99,7 +97,8 @@ add criteria :
 
     $result = $search->getGateway()->search($queryBuilder);
 
-###language search :{#language-search}
+### language search :
+
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
     $queryBuilder = $search->query();
@@ -111,7 +110,8 @@ add criteria :
 
     $result = $search->getGateway()->search($queryBuilder);
 
-###multiple criteria search :{#multiple-criteria-search}
+### multiple criteria search :
+
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
 
@@ -127,7 +127,8 @@ add criteria :
 
     $result = $search->getGateway()->search($queryBuilder);
 
-###multiple values on same criterion search :{#multiple-values-on-same-criterion-search}
+### multiple values on same criterion search :
+
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
 
@@ -154,7 +155,8 @@ with different operator :
     $queryBuilder->setCriteria($query);
     $result = $search->getGateway()->search($queryBuilder);
 
-###use OR :{#use-or}
+### use OR :
+
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
 
@@ -215,13 +217,11 @@ to search test takers which label begin by ‘a’ or begin by ‘z’ :
 
     $queryBuilder = $search->query();
 
-    $query = $search->searchType($queryBuilder ,'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true){#subject-true}
-
+    $query = $search->searchType($queryBuilder ,'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true)
                      ->add(RDFS_LABEL)
                      ->begin('a');
 
-    $queryOr = $search->searchType( $queryBuilder ,'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true){#subject-true}
-
+    $queryOr = $search->searchType( $queryBuilder ,'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true)
                      ->add(RDFS_COMMENT)
                      ->begin('z');
 
@@ -239,8 +239,7 @@ to search test takers which label begin by ‘a’ or begin by ‘z’ :
 
     $queryBuilder = $search->query();
 
-    $query = $search->searchType($queryBuilder ,'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true){#subject-true}
-
+    $query = $search->searchType($queryBuilder ,'http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject' , true)
                      ->add(RDFS_LABEL)
                      ->begin('a')
                      ->addOr('b');
@@ -252,7 +251,7 @@ to search test takers which label begin by ‘a’ or begin by ‘z’ :
 supported operators :
 ---------------------
 
-###operators list :{#operators-list}
+### operators list :
 
   Constant               string value   SQL operator                     Comment
   ---------------------- -------------- -------------------------------- -----------------------------------------
@@ -270,7 +269,7 @@ supported operators :
 
 use oat\\search\\helper\\SupportedOperatorHelper to see all supported operators
 
-###usage examples :{#usage-examples}
+### usage examples :
 
 **simple value example :**
 
@@ -386,14 +385,14 @@ Gateway :
 gateway is the highter component of complex search.\
 It provide query builder and it execute query using default database driver.
 
-###only get number of result :{#only-get-number-of-result}
+### only get number of result :
 
 to get query number of result use count method :
 
 
     $total = $search->getGateway()->count($queryBuilder);
 
-###debugging :{#debugging}
+### debugging :
 
 to debug query use printQuery method :
 
@@ -409,7 +408,8 @@ It’s an arrayIterator adding total method which return full number for your qu
 
 Each entry of result set is a tao resource Object.
 
-###basic usage :{#basic-usage}
+### basic usage :
+
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
 
@@ -424,7 +424,8 @@ Each entry of result set is a tao resource Object.
     }
 
 
-###use total :{#use-total}
+### use total :
+
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
     $queryBuilder = $search->query();

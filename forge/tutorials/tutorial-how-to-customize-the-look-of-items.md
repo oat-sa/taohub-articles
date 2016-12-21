@@ -34,20 +34,16 @@ Screen shot taken in Firefox, this item has the identifier `i14048063114861116` 
 As a basis for this tutorial we create a very simple CSS file and upload it through the *Style Sheet Manager*. It is important that all your styles start with `body div.qti-item.tao-scope` to be sure you don’t make any unwanted modifications!
 
         body div.qti-item.tao-scope {
-            background-color: #eeeeff;{#eeeeff}
-
-            color: #333366;{#333366}
-
+            background-color: #eeeeff;
+            color: #333366; 
             font-family: 'Segoe UI',Candara,'Bitstream Vera Sans',sans-serif;
         }
 
 As you might spot this changes the font, the background color and the text color. In the next step we will add a company logo. All external resources such as pictures need to be `base64` encoded before they can be added to the style sheet. There are tools on the web that can help you with that, we found [this one](http://webcodertools.com/imagetobase64converter) particularly good. If we add the code from the field *CSS background* to the CSS and add positioning to our style sheet it will look something like this:
 
         body div.qti-item.tao-scope {
-            background-color: #eeeeff;{#eeeeff}
-
-            color: #333366;{#333366}
-
+            background-color: #eeeeff;
+            color: #333366; 
             font-family: 'Segoe UI',Candara,'Bitstream Vera Sans',sans-serif;
             background-image: url(data:image/png;base64,iVBORw[...]ErkJggg==);
             background-position: 20px 30px;
@@ -62,8 +58,7 @@ If you want to go further and change the appearance of the interactions you will
 If your line doesn’t contain the class `qti-interaction` you will need to scroll a bit - it must be somewhere very close. Interactions are normally tagged with two or more class names. In the example above we have \`qti-interaction\` which is a class name shared by all qti interactions; `qti-blockInteraction` which is shared by interactions that have a similar format; and `qti-choiceInteraction` which is specific to this one type of interaction. So if you want all *Choice Interactions* to have a gray background, you could do this:
 
     body div.qti-item.tao-scope .qti-choiceInteraction {
-        background-color: #ddd;{#ddd}
-
+        background-color: #ddd;
     }
 
 As another example, a question we had recently was how to remove the little check box in front of the *Hot Text Interaction*. Upon inspection of the element you will see that it has at least the class names `qti-choice`, `qti-hottext` and `hottext`. The check box itself has the HTML code

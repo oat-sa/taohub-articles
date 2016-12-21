@@ -14,8 +14,7 @@ Results and Events
 
 ------------------------------------------------------------------------
 
-###1. [[Result Data Model]]\{#1-result-data-model}
-
+### 1. [[Result Data Model]]\
 2. [[Process storing Data]]\
 3. [[Data Presentation]]\
 4. [[Event Based Scoring]]

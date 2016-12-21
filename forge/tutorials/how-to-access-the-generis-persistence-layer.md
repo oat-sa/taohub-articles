@@ -22,7 +22,7 @@ In order to follow this How-to you will need to be proficient in PHP and [[RDF]]
 Accessing the TAO API
 ---------------------
 
-###Web access{#web-access}
+### Web access
 
 -   If you have already completed the How-To [[Make\_a\_new\_extension|Make a New Extension]] tutorial, you know how to add your own Module (Controller) to a TAO Extension. In this case It would probably be most comfortable to define a new module and include every of these code snippets in its own actions. These can then be called easily via your browser.
 
@@ -30,7 +30,7 @@ Accessing the TAO API
 
 -   Further down in the example we’re accessing constants of the extension `TaoItems`. For these please add the extension `TaoItems` to your dependencies.
 
-###Command-line access{#command-line-access}
+### Command-line access
 
 -   If you are planning to run your script in command-line PHP, you will need to initialise the TAO Framework in order to access to it’s functionalities. For this all you need to do is include **FILESYSTEM\_TAO\_FOLDER/tao/includes/raw\_start.php** at the beginning of your file. This will not only make use of the TAO autoloader, but will also load the required constants and use the credentials of your current installation to access the persistence layer.
 
@@ -41,26 +41,23 @@ Accessing the TAO API
 Read
 ----
 
-###Literals{#literals}
+### Literals
 
 During the installation, a new user (the admin account) is added to TAO. If we to wanted view the label of this user we would call:
 
-    $user = new core_kernel_classes_Resource(LOCAL_NAMESPACE.'#superUser');{#superuser}
-
-    $propertyLabel = new core_kernel_classes_Property(RDFS_LABEL); // http://www.w3.org/2000/01/rdf-schema#label{#label}
+    $user = new core_kernel_classes_Resource(LOCAL_NAMESPACE.'#superUser');
+    $propertyLabel = new core_kernel_classes_Property(RDFS_LABEL); // http://www.w3.org/2000/01/rdf-schema#label
 
     $literals = $user->getPropertyValues($propertyLabel);
 
 In this example `$literals` will be an array with a single string.
 
-###Resources{#resources}
+### Resources
 
 If we wanted to know which roles a user has, we would call:
 
-    $user = new core_kernel_classes_Resource(LOCAL_NAMESPACE.'#superUser');{#superuser}
-
-    $propertyRoles = new core_kernel_classes_Property(PROPERTY_USER_ROLES); // http://www.tao.lu/Ontologies/generis.rdf#userRoles{#userroles}
-
+    $user = new core_kernel_classes_Resource(LOCAL_NAMESPACE.'#superUser');
+    $propertyRoles = new core_kernel_classes_Property(PROPERTY_USER_ROLES); // http://www.tao.lu/Ontologies/generis.rdf#userRoles
     $uris = $user->getPropertyValues($propertyRoles);
 
 Since the values are references to existing roles and not literals as in our last example, the elements of `$resources` are the URIs of these resources. In order to visualise them we can create a resource of type `core_kernel_classes_Resource` an use the same `$resource->getPropertyValues($propertyLabel)` we used earlier. But there is an even simpler way since generis offers a shortcut: `getLabel()`
@@ -75,9 +72,8 @@ Update
 
 If we want to add a statement to the database the Syntax is very similar, instead of `getPropertyValues` we call **setPropertyValue**:
 
-    $user = new core_kernel_classes_Resource(LOCAL_NAMESPACE.'#superUser');{#superuser}
-
-    $propertyComment = new core_kernel_classes_Property(RDFS_COMMENT); // http://www.w3.org/2000/01/rdf-schema#comment{#comment}
+    $user = new core_kernel_classes_Resource(LOCAL_NAMESPACE.'#superUser');
+    $propertyComment = new core_kernel_classes_Property(RDFS_COMMENT); // http://www.w3.org/2000/01/rdf-schema#comment
 
     $success = $user->setPropertyValue($propertyComment, 'a nice guy');
 
@@ -102,7 +98,7 @@ Create
 
 In order to add a new instance to the system we call **createInstance** on the class we want to create an instance of:
 
-    $itemClass = new core_kernel_classes_Class(TAO_ITEM_CLASS); //http://www.tao.lu/Ontologies/TAOItem.rdf#Item{#item}
+    $itemClass = new core_kernel_classes_Class(TAO_ITEM_CLASS); //http://www.tao.lu/Ontologies/TAOItem.rdf#Item
 
     $newItem = $itemClass->createInstance('optionalItemLabel');
 
@@ -114,8 +110,7 @@ In order to create a new class, you can either subClass an existing class using 
 
 or since classes are only instances of the master class, instantiate it:
 
-    $classClass = new core_kernel_classes_Class('http://www.w3.org/2000/01/rdf-schema#Class');{#class}
-
+    $classClass = new core_kernel_classes_Class('http://www.w3.org/2000/01/rdf-schema#Class');
     $newClass = $classClass->createInstance('optionalLabel'); 
 
 Delete
@@ -123,8 +118,7 @@ Delete
 
 In order to delete a resource a simple call to **delete** of this resource suffices:
 
-    $resource = new core_kernel_classes_Resource(LOCAL_NAMESPACE.'#instance1');{#instance1}
-
+    $resource = new core_kernel_classes_Resource(LOCAL_NAMESPACE.'#instance1');
     $success = $resource->delete();
 
 This will delete all statements having as subject this resource.
@@ -143,7 +137,7 @@ Sometimes we require the reverse operation of getPropertyValues() and we want to
 If for example we want to find all the users that have the role ‘Global Manager Role’ we can use **searchInstances**:
 
     $userClass = new core_kernel_classes_Class(CLASS_GENERIS_USER);
-    $globalManagerRole = new core_kernel_classes_Resource(INSTANCE_ROLE_GLOBALMANAGER); // http://www.tao.lu/Ontologies/TAO.rdf#GlobalManagerRole{#globalmanagerrole}
+    $globalManagerRole = new core_kernel_classes_Resource(INSTANCE_ROLE_GLOBALMANAGER); // http://www.tao.lu/Ontologies/TAO.rdf#GlobalManagerRole
 
     $resources = $userClass->searchInstances(array(
         PROPERTY_USER_ROLES => $globalManagerRole
@@ -185,7 +179,7 @@ These are the currently supported options, please note that they are subject to 
 Comments
 --------
 
-###Literals{#literals}
+### Literals
 
 Sometimes functions (such as getUniquePropertyValue(), getOnePropertyValue, …) return an instance of type `core_kernel_classes_Literal`, if the value of the property is a literal. To get the string representation we simply call the `__toString()` explicitly or we cast it to the string PHP datatype which will trigger the conversion implicitly.
 

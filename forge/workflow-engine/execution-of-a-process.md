@@ -25,7 +25,7 @@ It consists in:\
 2. Running an activity
 ----------------------
 
-###2.1. From the activity definition to the screen display{#21-from-the-activity-definition-to-the-screen-display}
+### 2.1. From the activity definition to the screen display
 
 From an activity definition, the current user’s credential is checked against the access control mode of that activity. (see: [[userService+authentification part]]) If the user has the right to access the activity, an activity execution is created.\
 And the so called activity is executed. This means that the system simply fetches the list of services in that activity and inserts each of them in an iframe. See ProcessBrowser controller.
@@ -37,7 +37,7 @@ The picture above shows that all three services have a different url, one of whi
 ![](../resources/build_the_service_url.png)\
 ![](../resources/build_the_service_url_2.png)
 
-###2.2. Activity Execution resource{#22-activity-execution-resource}
+### 2.2. Activity Execution resource
 
 ![](../resources/generis_actiivty_instance_resource.png)\
 The property *“finished”* tells if that activity execution has been finished, i.e., if the owning user has performed a *“transition”* (see the description of a *“transition”* in the following section).\
@@ -55,7 +55,7 @@ A token is created as soon as a transition is performed. The token is aimed at b
 ![](../resources/tokens1.png)\
 ![](../resources/tokens2.png)
 
-Tokens also play the role of saving the current values of the process variables. Activity services or connector transition rules (see [[Process Definition Model\#conditional|conditional connector & transition rule]]) use process variable respectively to set input parameter values and to evaluate the transition rules. Tokens therefore provide a very good snapshot of a process execution, and a helpful resource for process execution debugging.{#conditionalconditional-connector-transition-rule-use-process-variable-respectively-to-set-input-parameter-values-and-to-evaluate-the-transition-rules-tokens-therefore-provide-a-very-good-snapshot-of-a-process-execution-and-a-helpful-resource-for-process-execution-debugging}
+Tokens also play the role of saving the current values of the process variables. Activity services or connector transition rules (see [[Process Definition Model\#conditional|conditional connector & transition rule]]) use process variable respectively to set input parameter values and to evaluate the transition rules. Tokens therefore provide a very good snapshot of a process execution, and a helpful resource for process execution debugging.
 
 Each time a process variable is created, it automatically becomes a property of the token class. Therefore a token instance will be able to “carry” the value of the newly created process variable with it.\
 For more technical details about the way the token is set and moved, see [the phpDoc of the TokenService](http://forge.tao.lu/docs/phpdoc/wfEngine/models_classes/wfEngine_models_classes_TokenService.html).

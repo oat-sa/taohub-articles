@@ -56,7 +56,7 @@ The decision which events should be logged will be taken by using either:
     *Example*: To log everything except TRACE and WARNING, one would use 110110 = 32+16+4+2 = 54
 -   **tag**: an array of tags of which ONE tag must be used in the logitem
 
-###SingleFileAppender{#singlefileappender}
+### SingleFileAppender
 
 ‘file’ =\> the absolute path to the logfile\
 ‘format’ =\> the format of the log entry\
@@ -64,7 +64,7 @@ The decision which events should be logged will be taken by using either:
 
 upon reaching max\_file\_size, the first half of the log file will be deleted. Default is 1 MB, an entry of 0 disables this feature.
 
-####ArchiveFileAppender{#archivefileappender}
+#### ArchiveFileAppender
 
 ‘file’ =\> the absolute path to the logfile\
 ‘format’ =\> the format of the log entry\
@@ -76,13 +76,13 @@ upon reaching max\_file\_size, the log file will be appended the current date an
 the configuration parameter ‘directory’ if present or the same directory as the logfile if absent. If this file already exists\
 a serial number will be appended to the filename.
 
-###XMLAppender{#xmlappender}
+### XMLAppender
 
 ‘file’ =\> the absolute path to the logfile
 
 this fileappender has no limit to it’s size and should not yet be used in production
 
-###UDPAppender{#udpappender}
+### UDPAppender
 
 Warning: *enabling this appender on windows will require uncommenting ’extension=php\_sockets.dll’ in the php.ini*
 
@@ -94,7 +94,7 @@ the item is JSON formated and send via udp.
 Formats
 -------
 
-###FileAppenders{#fileappenders}
+### FileAppenders
 
 The Fileappenders (SingelFileAppender, ArchiveFileAppender) append a String to the logfile that can contain the following informations:
 
@@ -111,7 +111,7 @@ The Fileappenders (SingelFileAppender, ArchiveFileAppender) append a String to t
 The default format is: %d [%s] \\‘%m\\’ %f %l\
 resulting in: DATE [SEVERITY] MESSAGE ERRORFILE ERRORLINE
 
-###XMLAppender{#xmlappender}
+### XMLAppender
 
 The XMLAppender inserts an xml item into the structure that has the following format:
 
@@ -127,7 +127,7 @@ The XMLAppender inserts an xml item into the structure that has the following fo
         
       
 
-###UDPAppender{#udpappender}
+### UDPAppender
 
 sends an json encoded String of the following array structure:
 

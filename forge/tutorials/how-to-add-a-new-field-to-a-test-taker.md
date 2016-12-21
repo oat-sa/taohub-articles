@@ -29,8 +29,7 @@ We can see a sample such as the field userMail.
         
       
 
-Step 1 - add the following code under \#userMail and note that is is a duplicate (with only the about attribute changed){#usermail-and-note-that-is-is-a-duplicate-with-only-the-about-attribute-changed}
-
+Step 1 - add the following code under \#userMail and note that is is a duplicate (with only the about attribute changed)
 ========================================================================================================================
 
 
@@ -58,12 +57,13 @@ Option 1: Add a constant to refer to the property URI in generis/common/constant
 -------------------------------------------------------------------------------------
 
 
-    define('PROPERTY_USER_COMPANY' ,                GENERIS_NS . '#company' , true);{#company-true}
+    define('PROPERTY_USER_COMPANY' ,                GENERIS_NS . '#company' , true);
 
 Option 2: Get all the users that meet the new company parameter
 ---------------------------------------------------------------
 
-###Option 2a: Add a get method in tao/models/classes/class.UserService.php{#option-2a-add-a-get-method-in-taomodelsclassesclassuserservicephp}
+### Option 2a: Add a get method in tao/models/classes/class.UserService.php
+
 
     /**
          * Short description of method getAllUsersWithCompany
@@ -85,7 +85,8 @@ Option 2: Get all the users that meet the new company parameter
             return (array) $returnValue;
         }
 
-###Option 2b: Call the function from your controller (if you create your own extension){#option-2b-call-the-function-from-your-controller-if-you-create-your-own-extension}
+### Option 2b: Call the function from your controller (if you create your own extension)
+
 
     use tao_models_classes_UserService;
 

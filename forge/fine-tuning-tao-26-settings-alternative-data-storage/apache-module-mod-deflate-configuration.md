@@ -16,9 +16,8 @@ A generic sample configuration
 
 
 
-    #Force compression for mangled headers.{#force-compression-for-mangled-headers}
-
- https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.html
+    # Force compression for mangled headers.
+    # https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.html
 
 
 
@@ -27,28 +26,26 @@ A generic sample configuration
 
 
 
-    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -{#}
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
- Mark certain resources as been compressed in order to:
-    #{#}
-
- 1) prevent Apache from recompressing them
-    #2) ensure that they are served with the correct{#2-ensure-that-they-are-served-with-the-correct}
-
- `Content-Encoding` HTTP response header
+    # Mark certain resources as been compressed in order to:
+    #
+    # 1) prevent Apache from recompressing them
+    # 2) ensure that they are served with the correct
+    # `Content-Encoding` HTTP response header
 
 
     AddEncoding gzip svgz
 
 
-    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -{#}
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
- Compress all output labeled with one of the following media types.
+    # Compress all output labeled with one of the following media types.
 
-    #IMPORTANT: For Apache versions below 2.3.7 you don't need to enable{#important-for-apache-versions-below-237-you-dont-need-to-enable}
+    # IMPORTANT: For Apache versions below 2.3.7 you don't need to enable
+    # `mod_filter` and can remove the `` & ``
+    # lines as `AddOutputFilterByType` is still in the core directives.
 
- `mod_filter` and can remove the `` & ``
-    #lines as `AddOutputFilterByType` is still in the core directives.{#lines-as-addoutputfilterbytype-is-still-in-the-core-directives}
 
     AddOutputFilterByType DEFLATE "application/atom+xml" \
     "application/javascript" \

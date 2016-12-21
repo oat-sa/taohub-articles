@@ -31,28 +31,24 @@ You may notice that MAMP comes bundled with MAMP PRO,\
 
 https://www.mamp.info/en/downloads/
 
-    #Double click the downloaded .pkg file to start the MAMP (web server) installation{#double-click-the-downloaded-pkg-file-to-start-the-mamp-web-server-installation}
-
+    # Double click the downloaded .pkg file to start the MAMP (web server) installation
     By default the downloaded .pkg file will be located into your Downloads folder
 
 ![](../resources/pkgfile.png)
 
 ![](../resources/mamp.png)
 
-    #Proceed with the Mamp installation using the default options unless you know what you are doing{#proceed-with-the-mamp-installation-using-the-default-options-unless-you-know-what-you-are-doing}
-
+    # Proceed with the Mamp installation using the default options unless you know what you are doing 
     (So click on "Continue", until you reach the end)
-    #Agree to the license terms{#agree-to-the-license-terms}
-
- When you are prompted for how to install the software, you may have to confirm by clicking on the "install for all users"
-    #You may also be prompted for a password: this is the password of an administrator account of your Mac{#you-may-also-be-prompted-for-a-password-this-is-the-password-of-an-administrator-account-of-your-mac}
+    # Agree to the license terms
+    # When you are prompted for how to install the software, you may have to confirm by clicking on the "install for all users"
+    # You may also be prompted for a password: this is the password of an administrator account of your Mac
 
 Congratulations! You have now your MAMP successfully installed, you may now launch it.
 
-    #Double click the MAMP icon from your Applications directory (located at /Applications/MAMP/or from your dock bar){#double-click-the-mamp-icon-from-your-applications-directory-located-at-applicationsmampor-from-your-dock-bar}
-
- You may be suggsted by MAMP vendor to switch to a pro version, for the purpose of this tutorial, we recommend you to stick to the normal MAMP version
-    #Click the "Start servers", the boxes near "Apache server" and "MySQL server" in the top right corner should switch to green ones{#click-the-start-servers-the-boxes-near-apache-server-and-mysql-server-in-the-top-right-corner-should-switch-to-green-ones}
+    # Double click the MAMP icon from your Applications directory (located at /Applications/MAMP/or from your dock bar)
+    # You may be suggsted by MAMP vendor to switch to a pro version, for the purpose of this tutorial, we recommend you to stick to the normal MAMP version
+    # Click the "Start servers", the boxes near "Apache server" and "MySQL server" in the top right corner should switch to green ones
 
 ![](../resources/StartingMamp.png)
 
@@ -72,8 +68,7 @@ Please download one of these build packages:
 
 ![](../resources/extracttao.png)
 
-    #You need now to copy all the files from the downloaded archive into your /Applications/MAMP/htdocs folder.{#you-need-now-to-copy-all-the-files-from-the-downloaded-archive-into-your-applicationsmamphtdocs-folder}
-
+    # You need now to copy all the files from the downloaded archive into your /Applications/MAMP/htdocs folder.
      (You may do a drag and drop of the files. Make sure you obtain the directories "generis", "tao", "taoItems" under /Applications/MAMP/htdocs
 
     Warning : there are files that are considered as system file by Mac and are not always visible in the finder.. Those files are extracted by the built in archive utility, however, if they are hidden, they won't be selected during the drag and drop and won't be copied . This will result into a *file not found error message* after installation. 
@@ -91,11 +86,10 @@ Install TAO itselfs
 
 Come back to your web browser that popped up when you started your MAMP server (you may also launch another web browser and type in the adress to tao)
 
-    #Connect at this adress http://localhost:8888/tao/install{#connect-at-this-adress-httplocalhost8888taoinstall}
-
+    # Connect at this adress http://localhost:8888/tao/install 
     (please note that the server port may change depending on your settings into the MAMP preferences for ports
      example : http://localhost/tao/install)
-    #Complete the tao installation procedure (standard procedure){#complete-the-tao-installation-procedure-standard-procedure}
+    # Complete the tao installation procedure (standard procedure)
 
 ![](../resources/install1.png)
 
@@ -116,7 +110,7 @@ Read and accept to license agreements.
 ![](../resources/Screenshot%202016-05-27%2010.36.24.png)\
 Congratulations!
 
-###Start up TAO{#start-up-tao}
+### Start up TAO
 
 In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the locahost:8888 url.\
 You may ease this work by fine tuning your MAMP.
@@ -131,7 +125,7 @@ Optionnaly, we recommend you to do the following configuration :
 
 This way you may launch tao by simply clicking the MAMP icon from your dock bar.
 
-###Troubleshooting{#troubleshooting}
+### Troubleshooting
 
 -   Mamp does not start correctly, the Apache Server status does not switch on
 

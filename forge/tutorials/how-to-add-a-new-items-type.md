@@ -91,7 +91,7 @@ You may also add your file in the extension manifest to add this new Items type 
 ItemsService
 ------------
 
-###TAO 2.3 or earlier{#tao-23-or-earlier}
+### TAO 2.3 or earlier
 
 Once your type is added into TAO you may customize the deploy method of taoItems/class.ItemsService.php to add your specific behavior for your new type. For now this service handle those type of Items.
 
@@ -113,7 +113,7 @@ In most of the case, the ItemsService just call a specific renderer to retrieve 
         $output = taoItems_models_classes_Survey_Item::renderItem($item);
     }
 
-###TAO 2.4{#tao-24}
+### TAO 2.4
 
 Create a new class for your item type that implements the interface **taoItems\_models\_classes\_itemModel**. Optionaly it can also implement the interface **taoItems\_models\_classes\_evaluatableItemModel**
 

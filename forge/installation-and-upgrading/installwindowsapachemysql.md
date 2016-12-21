@@ -19,15 +19,15 @@ This installation guide focuses on installing the TAO platform on a Microsoft Wi
 1. Installation & Setup of WampServer2
 --------------------------------------
 
-###1.1. Installation{#11-installation}
+### 1.1. Installation
 
 WampServer is the most famours and used AMP stack. It comes with an installer that takes care of everything to set up your web server. First, download the latest [WampServer2 package](http://www.wampserver.com/en/) on the official website. Download the 32 or 64 bit package depending on your Operating System version. Follow the instructions on the screen and launch WampServer.
 
-###1.2. Setup{#12-setup}
+### 1.2. Setup
 
 A WampServer icon now appears in your Windows system tray. This icon in the tray is a tool that will help us to set up our newly created web server for TAO.
 
-###1.2.1. PHP Setup{#121-php-setup}
+### 1.2.1. PHP Setup
 
 The platform requires multiple PHP extensions to be loaded to run correctly on your Web Server. The PHP extensions that must be running on your web server are the following:
 
@@ -46,14 +46,14 @@ Your next task is to open the PHP configuration file (php.ini) and changes 3 dir
     short_open_tag = On
     register_globals = Off
 
-###1.2.2. MySQL Setup{#122-mysql-setup}
+### 1.2.2. MySQL Setup
 
 If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:\
 EXECUTE, SELECT, SHOW DATABASES, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, DELETE, DROP, INDEX, INSERT, UPDATE, RELOAD
 
 If you need more information about database privileges and databases, please visit the [[DatabaseUserPrivileges|page dedicated to this topic]].
 
-###1.2.3. Apache Setup{#123-apache-setup}
+### 1.2.3. Apache Setup
 
 The last thing to do is to activate the **Apache Rewrite module**. TAO needs this module to run. To do so, open WampServer in the system tray and check “rewrite\_module” in the **Apache/Apache modules** list.
 
@@ -62,7 +62,7 @@ You are now ready to deploy the TAO platform.
 2. TAO Platform Deployment
 --------------------------
 
-###2.1. Download the Latest Version of TAO{#21-download-the-latest-version-of-tao}
+### 2.1. Download the Latest Version of TAO
 
 We will now download the latest version of the TAO source code and deploy it on the web server. Go to the official TAO [download page](http://taotesting.com/resources/download-tao) and download the latest stable release.
 
@@ -74,7 +74,7 @@ Create a folder named **taoplatform** in the root directory of your web server. 
 -   C:\\wamp\\www\\taoplatform\\taoGroups
 -   …
 
-###2.2. Creation of a Virtual Host{#22-creation-of-a-virtual-host}
+### 2.2. Creation of a Virtual Host
 
 The TAO platform needs to be run on an Apache Virtual Host to run correctly. We will create a new **Virtual Host** named **taoplatform** by editing the virtual host configuration file of Apache. Depending on your installation settings, it should be located at **C:\\wamp\\bin\\apache\\Apache2.x\\conf\\extra-httpd-vhosts.conf**. Open this file with your favourite text editor and add the following lines at its end.
 
@@ -91,7 +91,7 @@ The TAO platform needs to be run on an Apache Virtual Host to run correctly. We 
             allow from all
         
 
-Open the main Apache2 configuration file located at **C:\\wamp\\bin\\apache\\Apache2.x\\conf\\httpd.conf** and uncomment the following line by removing the leading **\#** character. This will integrate your virtual host configuration in the main Apache2 configuration file.{#character-this-will-integrate-your-virtual-host-configuration-in-the-main-apache2-configuration-file}
+Open the main Apache2 configuration file located at **C:\\wamp\\bin\\apache\\Apache2.x\\conf\\httpd.conf** and uncomment the following line by removing the leading **\#** character. This will integrate your virtual host configuration in the main Apache2 configuration file.
 
     Include conf/extra/httpd-vhosts.conf
 
@@ -101,7 +101,7 @@ Do not forget to make the host resolvable by editing your **hosts** file. Open n
 
 You can now restart your web server to take the new configuration settings into account. To do so, click on the WampServer icon in the system tray and click the **Restart All Services** button.
 
-###2.3. TAO Installation Wizard{#23-tao-installation-wizard}
+### 2.3. TAO Installation Wizard
 
 For this last step of the installation process, open up your favourite web browser at http://taoplatform/tao/install. The installation wizard appears. Follow the instructions to finalize your TAO Platform installation.
 

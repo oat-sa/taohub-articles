@@ -42,7 +42,7 @@ The reverse action is also provided to get the data form optimized (“compiled�
 3. How to optimize my TAO/how to compile my data:
 -------------------------------------------------
 
-###3.1. From CLI{#31-from-cli}
+### 3.1. From CLI
 
 Go to the script path located on *TAO\_ROOT/wfEngine/scripts/* then execute the following command:\
 to compile:\
@@ -55,7 +55,7 @@ to decompile:\
 
 Please be patient, it may take a while according to the quantity of data you have.
 
-###3.2. From GUI: via tao backoffice{#32-from-gui-via-tao-backoffice}
+### 3.2. From GUI: via tao backoffice
 
 This functionality is also available in the TAO back office, accessible via the “setting” menu from the TAO home as illustrated below:\
 ![](../resources/perf_opt_setting.png)
@@ -86,7 +86,7 @@ Decompile button works the same way: you only need to click on the “decompile�
 4. Benchmark
 ------------
 
-###4.1. TAO v2.0 vs v2.1{#41-tao-v20-vs-v21}
+### 4.1. TAO v2.0 vs v2.1
 
 Benchmark has been done with Jmeter to compare the prformance improvement between v2.0 and 2.1 (to see how to banchmark with Jmeter see the related section):
 
@@ -137,7 +137,7 @@ After (TAO v2.1 - optimized):
   \_=. 200                     =. 778                  =. 905           =. 2353             =. 904          =. 716
   ---------------------------- ----------------------- ---------------- ------------------- --------------- -------------------
 
-###4.2. more realistic scenario on TAO v2.1{#42-more-realistic-scenario-on-tao-v21}
+### 4.2. more realistic scenario on TAO v2.1
 
 The benchmark results below show a more realistic scenario, with **10000 test takers** in the data base. In **60 seconds**, the given number of test takers log into the delivery server and executes a delivery of **25 items**. Each action is triggered by a Gaussian random timer defined as follow:
 

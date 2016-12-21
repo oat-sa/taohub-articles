@@ -17,11 +17,11 @@ Users Management Model for TAO versions prior to 2.4
 Back-office
 -----------
 
-###General information{#general-information}
+### General information
 
 TAO concerns various types of users for various types of features. One of the main feature we provide gives users the opportunity to build some tests and manage the whole test delivery. All these features are gathered in the Back-office of the TAO platform but they may be accessed in 2 different ways, either using the complete Back-office Interface or running a process monitored by the Workflow Engine providing access to available services from the platform.
 
-###Manage Back-office Users{#manage-back-office-users}
+### Manage Back-office Users
 
 The *Tao Manager 1* User defined in figure 3 is the one created when installing the platform that lets you access all features of the TAO platform and should only be accessed by a User having the *TaoManager* Role which is an instance of the *BackOffice* Role that controls all access to Back-office’s Services.\
 The *TaoManager* Role is also a sub-class of User Class in order to inherit specific properties of the User Class such as User’s *Login, Password, Last Name, First Name,* Languages.

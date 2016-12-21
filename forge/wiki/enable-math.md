@@ -27,9 +27,8 @@ Be sure to have `wget` (or `curl` with 3.0 version), `tar` and `gzip` installed 
 Install MathJax library manually
 --------------------------------
 
-MathML is not rendered natively in all browsers. [Firefox and Safari are among the only one that render it natively](http://caniuse.com/#feat=mathml). To ensure a consistent cross-browser experience in TAO, we rely on a third-party MathML library called [MathJax](http://www.mathjax.org/). Because of license compatibility issue, it cannot be included within the default TAO package. That is why you need to install this library separately to enable math expression in your items.\{#featmathml-to-ensure-a-consistent-cross-browser-experience-in-tao-we-rely-on-a-third-party-mathml-library-called-mathjaxhttpwwwmathjaxorg-because-of-license-compatibility-issue-it-cannot-be-included-within-the-default-tao-package-that-is-why-you-need-to-install-this-library-separately-to-enable-math-expression-in-your-items}
-
-You can download it freely [here](http://docs.mathjax.org/en/latest/installation.html#obtaining-mathjax-via-an-archive) and unzip it into the following folder: {YOUR\_TAO\_ROOT}/taoQtiItem/views/js/mathjax. Your file system should look like the enclosed screenshot below.{#obtaining-mathjax-via-an-archive-and-unzip-it-into-the-following-folder-your-tao-roottaoqtiitemviewsjsmathjax-your-file-system-should-look-like-the-enclosed-screenshot-below}
+MathML is not rendered natively in all browsers. [Firefox and Safari are among the only one that render it natively](http://caniuse.com/#feat=mathml). To ensure a consistent cross-browser experience in TAO, we rely on a third-party MathML library called [MathJax](http://www.mathjax.org/). Because of license compatibility issue, it cannot be included within the default TAO package. That is why you need to install this library separately to enable math expression in your items.\
+You can download it freely [here](http://docs.mathjax.org/en/latest/installation.html#obtaining-mathjax-via-an-archive) and unzip it into the following folder: {YOUR\_TAO\_ROOT}/taoQtiItem/views/js/mathjax. Your file system should look like the enclosed screenshot below.
 
 Shrink MathJax
 --------------

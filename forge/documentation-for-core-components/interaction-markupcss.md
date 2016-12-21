@@ -47,7 +47,7 @@ The HTML looks roughly like this:
 <!-- keep .qti-choice and .qti-block nested if possible -->
 <li class="qti-choice">
 <div class="qti-block">
-\#1</div>{#1div}
+\#1</div>
 
 </li>
 </ul>
@@ -55,7 +55,7 @@ The HTML looks roughly like this:
 <ul class="result-area solid block-listing">
 <li class="qti-choice">
 <div class="qti-block">
-\#2</div>{#2div}
+\#2</div>
 
 </li>
 </ul>

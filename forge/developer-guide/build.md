@@ -19,11 +19,11 @@ Compile client side resources
 
 The SASS files needs to be compiled to CSS as well as the JavaScript modules that needs to be bundled. This step is required when you install TAO in production mode and ensure you better performances than the development mode.
 
-###Dependencies{#dependencies}
+### Dependencies
 
 Be sure node.js, npm, grunt and sass are available on your system. See [this section](http://forge.taotesting.com/projects/tao/wiki/Front_tools) for installation instructions.
 
-####Compilation{#compilation}
+#### Compilation
 
 Go to the build folder (where `{tao_dist}` is your TAO installation directory):
 

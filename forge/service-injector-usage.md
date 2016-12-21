@@ -29,14 +29,14 @@ Sercice injector implement [container interop interface](https://github.com/cont
         $myService = $this->getServiceInjector()->get('myService');
     }
 
-###get service injector in your objects :{#get-service-injector-in-your-objects}
+### get service injector in your objects :
 
 you must implement \\oat\\oatbox\\service\\ServiceInjectorAwareInterface and use \\oat\\oatbox\\service\\ServiceInjectorAwareTrait (or implement interface methods) AND instanciate by the service injector.
 
 Add your own dependencies using Zend ServiceLocator :
 -----------------------------------------------------
 
-###for a new extension :{#for-a-new-extension}
+### for a new extension :
 
 An helper is available to overload tao configuration :
 
@@ -84,7 +84,7 @@ see [Service Locator Usage](https://framework.zend.com/manual/2.4/en/modules/zen
         ]
     ]
 
-###Add your favorite container :{#add-your-favorite-container}
+### Add your favorite container :
 
 **1 . Create a service factory :**
 
@@ -112,9 +112,7 @@ see [Service Locator Usage](https://framework.zend.com/manual/2.4/en/modules/zen
 
 **reminder :** your container must implement [container interop interface](https://github.com/container-interop/container-interop).
 
-\#\{#}
-
-\#Update an existing extension :{#update-an-existing-extension}
+\#\#\# Update an existing extension :
 
 In your update class :
 
@@ -130,7 +128,7 @@ In your update class :
                         $injectorConfig
                     );
 
-###Over load an other extension :{#over-load-an-other-extension}
+### Over load an other extension :
 
 is it possible to overload an other extension configuration :
 

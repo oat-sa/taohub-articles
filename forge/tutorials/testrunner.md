@@ -32,7 +32,7 @@ You should already be familar with:
 The components
 --------------
 
-###Extension{#extension}
+### Extension
 
 The following three files are required for any extension:
 
@@ -40,7 +40,7 @@ The following three files are required for any extension:
 -   **.htaccess** uses mod\_rewrite to redirects requests to index.php
 -   **index.php** runs the Bootstrap and initialises the system for every request.
 
-###Test model{#test-model}
+### Test model
 
 A test model is a class implementing the interface *taoTests\_models\_classes\_TestModel*. See [[Testmodel 2.5]]
 
@@ -49,7 +49,7 @@ A test model is a class implementing the interface *taoTests\_models\_classes\_T
 
 These allow us to create a test with this model.
 
-###Test runner{#test-runner}
+### Test runner
 
 In order to be able to execute our test, we need to implement a test runner.
 
@@ -58,7 +58,7 @@ In order to be able to execute our test, we need to implement a test runner.
 -   ./includes/ **constants.php** assigns constants to the service and the parameter for a cleaner code.
 -   ./views/templates/ **testrunner.tpl** contains the view of the test-runner
 
-###Compilation{#compilation}
+### Compilation
 
 To prepare the items in a way that the test runner can execute them, we have to compile them first
 
@@ -72,7 +72,7 @@ This is one of the simplest test models that can be implemented:
 During the execution of a random test one item will be chosen by random from the pool of available items (at the time of compilation)\
 and after the test-taker has responded to this item the test will terminate.
 
-###Test compilation{#test-compilation}
+### Test compilation
 
 The compilation of a delivery is comparable to a depth-first search. In order to be able to compile a delivery the tests contained within have\
 to be compiled. In order to compile the tests, their containing items have to be compiled first.
@@ -105,7 +105,7 @@ After storing this structure into a .php file that we create in the provided dir
 
 This service call is then stored in the compiled delivery and will be called during the execution of this delivery
 
-###Test runner implementation{#test-runner-implementation}
+### Test runner implementation
 
 Because in Tao the items as well as the deliveries can have several different implementation the test runner must be independent from\
 these. The interface between the item runner and the delivery runner are service calls.
@@ -126,11 +126,11 @@ The execution of a delivery containing our random test would run through the fol
 Next steps
 ----------
 
-###Authoring{#authoring}
+### Authoring
 
 Most test models will require an authoring to select which items should be included and advanced options concerning the execution.
 
-###Test session{#test-session}
+### Test session
 
 Since most models will contain more than a single item it will be required to keep track of the current test session. Information related\
 to current item, already passed items, elapsed time and so on needs to be stored in order to track the users progress and allow test session\

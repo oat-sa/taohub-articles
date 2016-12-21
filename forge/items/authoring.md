@@ -62,7 +62,7 @@ The Graphical User Interface of the authoring is made of 4 different spaces
 -   The interactions toolbar where the user can pick up some interactions and add them to the item content
 -   The workspace that is the main item content editor
 
-###The Menu{#the-menu}
+### The Menu
 
 1.  The menu on the top left allows to save the item. Make sure you save regularly, if you exit the authoring tool and go to another part of the platform, if you close your web browser, all data entered won’t be saved if you didn’t click this button explicitely.
 2.  Light preview\
@@ -72,13 +72,13 @@ The Graphical User Interface of the authoring is made of 4 different spaces
 4.  The debug function\
     This function is intended for software developers only.
 
-###The settings menu{#the-settings-menu}
+### The settings menu
 
 The properties is a multi-level menu giving to you the possibility to edit some properties about the item, change the response processing or add stylesheet.
 
-###The workspace{#the-workspace}
+### The workspace
 
-##Adding new interactions to the workspace{#adding-new-interactions-to-the-workspace}
+### Adding new interactions to the workspace
 
 ![](../resources/qti-authoring.png)
 
@@ -91,7 +91,7 @@ The properties is a multi-level menu giving to you the possibility to edit some 
 \> \* The choices editor allows you to add, edit and delete choices of the current interaction.\
 \> \* The response editor allows you to select the way you want the response of your interaction to be processed. The available types are correct, map and map point. These three response-processing templates are standard QTI template: for more information on the default QTI response processing templates, please refer to the official IMS webpage (http://www.imsglobal.org/question/).
 
-####Stylesheet{#stylesheet}
+#### Stylesheet
 
 A feature of the QTI specification allows to layout items using a stylesheet, this gives the opportunity to focus on the content creation and apply a style sheet on items with a consistent layout across items and reducing effort in layout activities.
 
@@ -138,7 +138,7 @@ Interaction css class :
 -   qti\_hottext\_interaction
 -   qti\_hotspot\_interaction
 
-###External Objects{#external-objects}
+### External Objects
 
 ![](http://forge.taotesting.com/attachments/1741/external-a.png)
 
@@ -165,7 +165,7 @@ Choose your type of response processing :
 
 Manual, comming with the *taoCoding extension*, allow you to define manual scoring for the interaction. You set the guidelines for scoring and the expected answer, next you choose the type of scale and set the parameters.
 
-###Quick tip{#quick-tip}
+### Quick tip
 
 To add correct answer for *correct* and *map* use the ‘+’ button in the grid bottom left corner. New fields appears to be filled, use **enter** to validate your entries.
 

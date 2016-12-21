@@ -41,7 +41,7 @@ You can find all the documentation of the methods and useful examples in the pac
 
 The interface below is an overview of the available methods:
 
-###3.1. Workflow controls{#31-workflow-controls}
+### 3.1. Workflow controls
 
     /**
      * Trigger the forward control:
@@ -61,7 +61,7 @@ The interface below is an overview of the available methods:
      */
     function pause();
 
-###3.2. Finish event handlers{#32-finish-event-handlers}
+### 3.2. Finish event handlers
 
     /**
      * Define the item's state as finished.
@@ -84,7 +84,7 @@ The interface below is an overview of the available methods:
      */
     function afterFinish(callback);
 
-###3.3. Recovery{#33-recovery}
+### 3.3. Recovery
 
     /**
      * Initialize the interfaces communication for the context recovery.

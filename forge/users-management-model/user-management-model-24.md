@@ -35,7 +35,7 @@ In addition, the following business logic is applied to them.
 
 ![](../resources/newmodel-2013-user-roles-instances.png)
 
-###2.1. Users{#21-users}
+### 2.1. Users
 
 Users in TAO are represented as instances of the *User* class. This class is structured as it follows.
 
@@ -56,7 +56,7 @@ Users in TAO are represented as instances of the *User* class. This class is str
   User Interface Language   generis:userUILg        tao:Languages       The default GUI language of the user
   Roles                     generis:userRoles       generis:ClassRole   The Role(s) of the user
 
-###2.2. Roles{#22-roles}
+### 2.2. Roles
 
 Roles in TAO are represented as instances of the *Role* class. This class is structured as it follows.
 
@@ -78,7 +78,7 @@ You might wonder why this Users and Roles Management Model exists, and to what i
 -   **Users Authentication**: Authenticate users against the system in multiple contexts (Management, Delivery, Workflows)
 -   **Functionality Access Control**: Grant access or not to users depending on the roles they were given.
 
-###3.1. Users Authentication{#31-users-authentication}
+### 3.1. Users Authentication
 
 To authenticate a user against the system the login and password property values of the user are used in addition with the roles it had been given.
 
@@ -89,7 +89,7 @@ For instance, the *TAO meta-extension* which is the main access to the *TAO Back
 
 If these two conditions are met, the user is indeed authenticated against the *TAO Back Office*.
 
-###3.2. Functonality Access Control{#32-functonality-access-control}
+### 3.2. Functonality Access Control
 
 When your user is authenticated, you might want to know what are the features he can access or not. Our Users Management Model takes this in consideration by extending the concept of Role. For each Role, administrators will be able to define what are the functionalities that can be accesssed.
 

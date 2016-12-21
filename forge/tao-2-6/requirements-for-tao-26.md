@@ -28,14 +28,14 @@ Client-side (Authoring)
 
 The TAO platform requires a modern web browser with JavaScript enabled.
 
-###Operating Systems{#operating-systems}
+### Operating Systems
 
 -   Windows 7 or greater
 -   MacOS 10.8 or greater
 -   Linux (tested on Ubuntu 12+)
 -   Chrome OS 32+.
 
-###Browser{#browser}
+### Browser
 
 -   Internet Explorer 10+
 -   Chrome (latest versions, tested on versions 31 to 36)
@@ -47,7 +47,7 @@ Client-side (Test Delivery)
 
 Although technically deliveries could be done on many mobile phones we recommend that you use at least a 7" screen.
 
-###Operating Systems{#operating-systems}
+### Operating Systems
 
 -   Windows 7 or greater
 -   MacOS 10.8 or greater
@@ -56,7 +56,7 @@ Although technically deliveries could be done on many mobile phones we recommend
 -   iOS 7
 -   Android 4.2+
 
-###Browser{#browser}
+### Browser
 
 -   Internet Explorer 10+
 -   Chrome (latest versions, tested on versions 31 to 36)

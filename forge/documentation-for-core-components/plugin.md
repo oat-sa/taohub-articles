@@ -41,9 +41,7 @@ Once you implemented your plugin you have to expose some of its method to get it
         expose : ['method1', 'method2']
     });
 
-Pluginifier is a tool that will turn your JQuery script into a plugin. You will be able to use it as a JQuery plugin (ie `$("#selector").myPlugin();`). This will also expose methods that you want them to be public. This methods have to be in the option `expose` as an array. After that you can use these methods like `$("{#selectormyplugin-this-will-also-expose-methods-that-you-want-them-to-be-public-this-methods-have-to-be-in-the-option-expose-as-an-array-after-that-you-can-use-these-methods-like}
-
-selector").myPlugin('method1');`.
+Pluginifier is a tool that will turn your JQuery script into a plugin. You will be able to use it as a JQuery plugin (ie `$("#selector").myPlugin();`). This will also expose methods that you want them to be public. This methods have to be in the option `expose` as an array. After that you can use these methods like `$("#selector").myPlugin('method1');`.
 
 Javascript Plugin
 -----------------
@@ -146,7 +144,7 @@ First create a folder named as your plugin that contains a test.html and a test.
         
 
 the `<base/>` should refere to the tao/views folder in order to load correct js and css. with this code you will load all librairies that are needed to launch your tests. You can also add blanket `js/lib/blanket/blanket.min.js`.\
-You can put all you want in the \#qunit-fixture div, this will be cleaned after each test so you will not have side effect.{#qunit-fixture-div-this-will-be-cleaned-after-each-test-so-you-will-not-have-side-effect}
+You can put all you want in the \#qunit-fixture div, this will be cleaned after each test so you will not have side effect.
 
     define(['jquery', 'your/plugin'], function($, plugin){
         'use strict';

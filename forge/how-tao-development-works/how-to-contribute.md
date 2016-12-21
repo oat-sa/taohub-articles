@@ -19,7 +19,7 @@ How TAO development works
 
 As an open source project, TAO is open to any contributor who demonstrates commitment to the project.
 
-###1.1 What can you do?{#11-what-can-you-do}
+### 1.1 What can you do?
 
 If you are interested in contributing to TAO, you have various options:
 
@@ -30,7 +30,7 @@ If you are interested in contributing to TAO, you have various options:
 -   Anyone can help us improve TAO Documentation. See Howto [[Help document TAO]]
 -   Anyone can join the testing effort. See Howto [[Join the testing effort]]
 
-###1.2 How can you do it?{#12-how-can-you-do-it}
+### 1.2 How can you do it?
 
 In order to contribute to the testing effort or to post new features, you need to use the appropriate tracker for **New Issue**. You will get the opportunity to discuss it with the team into more details and then, we’ll decide on which future version it could be made available (roadmap).
 
@@ -72,7 +72,7 @@ TAO is the result of the work of many developers. Here is a [list of TAO’s con
 
 In order to improve the efficiency of the team’s work, we set up some tools within the TAO Forge.
 
-###4.1. TAO Forge{#41-tao-forge}
+### 4.1. TAO Forge
 
 TAO source code is available on the [Subversion repository](http://vcs.taotesting.com/svn/tao/). There is an update every day made by our team.
 
@@ -97,7 +97,7 @@ TAO Team members are *developers*. A *developer* can
 
 If you want larger access rights, please let us know !
 
-###4.2. Validation{#42-validation}
+### 4.2. Validation
 
 Over time, TAO is getting more and more complex (see [[TAO Architecture]]), meanwhile here is a list of TAO team members that can help you for different sections listed below and who will be in charge of validating contributions and assure the overall TAO Product Quality. Please be also sure to follow [[guidelines]] and common conventions used by the TAO team.
 

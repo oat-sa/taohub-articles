@@ -14,8 +14,7 @@ Hawai (deprecated)
 
 ------------------------------------------------------------------------
 
-###1. [[Hawai standard]]\{#1-hawai-standard}
-
+### 1. [[Hawai standard]]\
 2. [[Hawai authoring]]\
 3. [[Hawai runtime]]
 

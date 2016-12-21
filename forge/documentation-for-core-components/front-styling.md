@@ -27,13 +27,13 @@ SASS
 
 TAO uses [SASS](http://sass-lang.com/) to create the TAO main theme.
 
-###Structure{#structure}
+### Structure
 
-###Main and bootstrap{#main-and-bootstrap}
+#### Main and bootstrap
 
 The folder `tao/views/scss/` contains the main theme (`tao-main-style.scss`) as well as a bootstrap (`inc/bootstrap.scss`) that provides variables, functions and mixins you can reuse into your own SASS files.
 
-####Extension’s custom styles{#extensions-custom-styles}
+#### Extension’s custom styles
 
 You can create your own style sheets into a specific extension. You need to create a structure according to the hierarchy described into [[Front Structure]].\
 In extension’s SCSS files, include the bootstrap.
@@ -44,14 +44,14 @@ In extension’s SCSS files, include the bootstrap.
 
 Do not forget to add the path to the bootstrap into your compiler’s options (`--load-path=tao/views/scss`)
 
-###Compiling{#compiling}
+### Compiling
 
 In order to compile (or watch) your SASS files to the target CSS, you can either use:\
  - The grunt task provided with TAO (see [[Front Tools]])\
  - The SASS CLI tool provided by SASS (requires ruby and the sass gem)\
  - Your favorite IDE SASS plugin
 
-####Build using Grunt{#build-using-grunt}
+#### Build using Grunt
 
 To compile the main theme, you need the [[Front Tools]] up and running. Then open a terminal into `tao/views/build`.
 
@@ -67,7 +67,7 @@ To compile files as you edit (watching):
 
 (`grunt watch:{nameOfTheExtension.toLowerCase()}sass`)
 
-####Your theme{#your-theme}
+#### Your theme
 
 To ensure your theme is compiled during the build phase, add new line into `{extension}/views/build/grunt/sass.js` (if the file does not exists, you can copy it from another extension)
 

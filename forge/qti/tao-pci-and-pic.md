@@ -32,8 +32,7 @@ TAO offers an additional hook in its item creator, which enable every item autho
 
 Since PIC is highly inspired by PCI, the following sections will successively introduce how to create PCI for TAO then present the difference for PIC.
 
-The base proposal from IMS is a draft version subimitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html#_Toc353965343)\{#toc353965343}
-
+The base proposal from IMS is a draft version subimitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html#_Toc353965343)\
 The proposal form Passific Metrics attempts to solve some issues from the original proposal with the introduction of the concept of “shared libraries” and a better structured XML serialization of PCIs. [Pacific Metrics proposal](http://www.imsglobal.org/assessment/PCI_Change_Request_v1pd.html)
 
 We use both of them to write our own proposal, which is backed by this currently working implementation. The proposal can be found here.
@@ -124,7 +123,7 @@ Unless stated otherwise, all fields are required.
         }
     }
 
-###For PIC :{#for-pic}
+### For PIC :
 
 The previous statements apply to PIC with the following notable exceptions :\
 The two required files are respectively called picCreator.json and pciCreator.js (instead of pciCreator.json and picCreator.js)\
@@ -219,14 +218,14 @@ It is an AMD module that returns an object that exposes the following functions 
         return likertScaleInteractionCreator;
     });
 
-###For PIC :{#for-pic}
+### For PIC :
 
 All previous statements apply to PIC except for the name of file that should be picCreator.js
 
 Implementing pciCreator.js
 --------------------------
 
-###Dependencies and libraries inclusion{#dependencies-and-libraries-inclusion}
+### Dependencies and libraries inclusion
 
 pciCreator.js can have dependencies to any libraries available in TAO. They may be:
 
@@ -244,13 +243,13 @@ Multiple instance of a single PCI implementation will therefore share the same f
 
 As a consequence, if you want to attach a media file to your PCI markup, please do not forget to add its namespace. Instead of <img src="img/icon.svg" />, write <img src="myAwesomePci/img/icon.svg" /> since img/icon.svg declared in the manifest will be copied to myAwesomePci/img/icon.svg.
 
-###Custom Interaction Registry{#custom-interaction-registry}
+### Custom Interaction Registry
 
 It is an especially useful helper located at [taoQtiItem/qtiCreator/editor/customInteractionRegistry](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/customInteractionRegistry.js)\
 It enables you to retrieve any data related to your PCI such as the content of the manifest or baseUrl.\
 Since you are not supposed to know the location of the package is the file system, using customInteractionRegistry.getBaseUrl() is the only way you can get the link to a picture you want to use in your creator widget.
 
-###For PIC :{#for-pic}
+### For PIC :
 
 The same rules of thumb apply.\
 The Portable Info Control registry is located at [taoQtiItem/qtiCreator/editor/infoControlRegistry.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/infoControlRegistry.js)
@@ -271,7 +270,7 @@ The commonRenderer will basically call the the runtime code, which is initialize
 
 ![](http://forge.taotesting.com/attachments/download/3430/pciCreatorSequence.png)
 
-###For PIC :{#for-pic}
+### For PIC :
 
 The same principle applies.\
 The members and locations are :\

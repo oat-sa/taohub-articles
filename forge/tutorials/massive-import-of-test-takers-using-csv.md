@@ -32,7 +32,7 @@ We will now use a sample CSV file to analyse how the Test Takers data must be fo
 
 Now that you can see the data, let us review it together.
 
-###2.1. Targeted properties{#21-targeted-properties}
+### 2.1. Targeted properties
 
 The first line of the file is dedicated to the labels of the properties defining your Test Takers. In the TAO ontology, Test Takers are defined by the following properties:
 
@@ -46,11 +46,9 @@ The first line of the file is dedicated to the labels of the properties defining
 
 You can of course use existing CSV data files of your organization that have more than these properties as a basis. The mapping between your properties and the properties of the Test Taker class in the TAO ontology will be done at import time later on.
 
-You probably noticed in the TAO properties’ descriptions that the type of **UserUILg** is Resource. This means that you have to provide a value corresponding to a URI (Universal Resource Identifier) that identifies a resource in the database. In TAO every resource is identified with a URI. Because languages are instances of the language class, they are considered as resources. In this example, the language resource in use for both properties is the English one, identified by the *http://www.tao.lu/Ontologies/TAO.rdf\#LangEN* URI. Other language resources exists in TAO such *as http://www.tao.lu/Ontologies/TAO.rdf\{#langen-uri-other-language-resources-exists-in-tao-such-as-httpwwwtaoluontologiestaordf}
+You probably noticed in the TAO properties’ descriptions that the type of **UserUILg** is Resource. This means that you have to provide a value corresponding to a URI (Universal Resource Identifier) that identifies a resource in the database. In TAO every resource is identified with a URI. Because languages are instances of the language class, they are considered as resources. In this example, the language resource in use for both properties is the English one, identified by the *http://www.tao.lu/Ontologies/TAO.rdf\#LangEN* URI. Other language resources exists in TAO such *as http://www.tao.lu/Ontologies/TAO.rdf\#LangFR* where *FR* is the ISO code for the French language.
 
-LangFR* where *FR* is the ISO code for the French language.
-
-###2.2. Rows of data{#22-rows-of-data}
+### 2.2. Rows of data
 
 Each row of the file is related to a Test Taker to import in the database. Each cell of the row is a value to be set for a particular property.
 

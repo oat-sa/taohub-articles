@@ -17,18 +17,18 @@ Extension update guide
 
 Excerpts from the documentation (https://getcomposer.org/doc/):
 
-###composer install{#composer-install}
+### composer install
 
     The install command checks if a lock file is present, and if it is, it downloads the versions specified there (regardless of what composer.json says).
     If no composer.lock file exists, Composer will read the dependencies and versions from composer.json and create the lock file after executing the update or the install command.
 
     Note: Composer will display a Warning when executing an install command if composer.lock and composer.json are not synchronized.
 
-###composer update{#composer-update}
+### composer update
 
     The update command will fetch the latest matching versions (according to your composer.json file) and also update the lock file with the new version.
 
-###versions references in composer.json{#versions-references-in-composerjson}
+### versions references in composer.json
 
 tilde (\~):
 

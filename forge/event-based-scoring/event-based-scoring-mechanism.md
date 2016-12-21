@@ -46,7 +46,7 @@ Three main tasks have to be implemented to ensure the event based scoring. See t
 
 ![](http://forge.taotesting.com/attachments/download/478/RM_EBS_technical_req.jpg)
 
-###Global process{#global-process}
+### Global process
 
 The global process of scoring is shown in the Figure below:
 

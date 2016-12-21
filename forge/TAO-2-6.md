@@ -10,14 +10,14 @@ TAO 2.6
 
 [[Requirements for Tao 2.6]]
 
-###REST{#rest}
+### REST
 
 {{collapse(Details …)\
 Exposes our API thanks to a REST wrapper\
 ![](resources/RestWrapper.png)\
 }}
 
-###Update{#update}
+### Update
 
 Adapting Extensions to [[Code changes 2.5 to 2.6]]
 

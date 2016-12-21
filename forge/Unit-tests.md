@@ -17,11 +17,11 @@ Setup
 Running tests
 -------------
 
-###All tests:{#all-tests}
+### All tests:
 
     grunt testall
 
-###Specific extension:{#specific-extension}
+### Specific extension:
 
     cd tao/views/build
     grunt connect:test [extname+test]
@@ -29,7 +29,7 @@ Running tests
     grunt connect:test taotest
     ...
 
-###Specific test:{#specific-test}
+### Specific test:
 
 You can either open the test.html in a browser or adapt the following command line:
 
@@ -89,7 +89,7 @@ Store your tests in the following directory, so they are run by the CI engine:
 
 Create with a subdirectory containing the two following files:
 
-###test.html{#testhtml}
+### test.html
 
 Use the following template:
 
@@ -121,14 +121,14 @@ Customise:
 
 -   the test title
 -   the path to the test file, starting with the extension folder and omitting the view/js subdirectories
--   you can put all you want in the \#qunit-fixture div, this will be cleaned after each test so you will not have side effect.{#qunit-fixture-div-this-will-be-cleaned-after-each-test-so-you-will-not-have-side-effect}
+-   you can put all you want in the \#qunit-fixture div, this will be cleaned after each test so you will not have side effect.
 
 Optionnal dependencies:
 
 -   blanket adds code coverage. Specify the file to cover with the *data-cover-only* attribute.
 -   parameterize is a QUnit plugin useful for parameterized tests https://github.com/AStepaniuk/qunit-parameterize
 
-###test.js{#testjs}
+### test.js
 
     define([
         'jquery',

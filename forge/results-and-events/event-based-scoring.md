@@ -14,8 +14,7 @@ Event based scoring
 
 ------------------------------------------------------------------------
 
-###1. [[Event Based Scoring Mechanism]]\{#1-event-based-scoring-mechanism}
-
+### 1. [[Event Based Scoring Mechanism]]\
 2. [[Event Based Scoring Architecture]]\
 3. [[Event Based Scoring Model]]\
 4. [[Event Based Scoring Process]]\

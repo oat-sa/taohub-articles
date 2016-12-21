@@ -25,7 +25,7 @@ Preparation
 3.  Unzip it in your tao root folder
 4.  Make sure your webserver has read/write access to taoDocs
 
-###Install the extension{#install-the-extension}
+### Install the extension
 
 1.  Log into Tao Back Office with your TaoManager account
 2.  Go to “Settings”(upper right corner) -\> “Extensions Manager”
@@ -34,7 +34,7 @@ Preparation
 Simple Examples
 ---------------
 
-###Hello World{#hello-world}
+### Hello World
 
 \* Create the `class.TestController.php` in the actions folder
 
@@ -52,7 +52,7 @@ Simple Examples
 
 -   To run the action visit *ROOT\_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in tao as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
 
-###Hello Template{#hello-template}
+### Hello Template
 
 \* Create the `hello.tpl` file in views/templates
 
@@ -67,7 +67,7 @@ Simple Examples
 
 -   To test this action visit *<span class="URL:/taoDocs/TestController/sayHello"></span>*
 
-###Hello Parameter{#hello-parameter}
+### Hello Parameter
 
 \* Update the `sayHello()` method to use the GET parameter “name”
 
@@ -87,7 +87,7 @@ Simple Examples
 Integration with TAO
 --------------------
 
-###Adding a structure{#adding-a-structure}
+### Adding a structure
 
 \* Open the `actions/structures.xml`
 
@@ -108,13 +108,13 @@ Integration with TAO
 
 -   When refreshing the TAO home screen, the new extension should be visible
 
-###Adding a tree{#adding-a-tree}
+### Adding a tree
 
 \* Add the tag into `trees` in the `structures.xml` file
 
 -   The extension taoDocs now shows a list of the files in in
 
-###Adding an action{#adding-an-action}
+### Adding an action
 
 \* Add the tag into `actions` in the `structures.xml` file
 

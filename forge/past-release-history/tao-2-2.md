@@ -26,33 +26,33 @@ see also [[Plans for the future]].
 -   New QTI processing type “Composite” for detailed item scores (by interaction)
 -   Paperbased items (not activated by default)
 
-###[[taoCoding|Human based scoring]]{#taocodinghuman-based-scoring}
+### [[taoCoding|Human based scoring]]
 
 -   taoItems [[Measurements]]
 -   new Variable storage
 -   Grading
 -   Conciliaton
 
-###[[Functionality access control]]{#functionality-access-control}
+### [[Functionality access control]]
 
-##[[Versioned content]]{#versioned-content}
+### [[Versioned content]]
 
-##Internationalization{#internationalization}
+### Internationalization
 
 -   Script to support source code translations by extension (Create, Update, Delete)
 -   Script to support ontologies translations by extension (Create, Update, Delete)
 -   Cross-language items. The same item resource can exist in multiple languages at authoring and delivery time
 
-###RDF{#rdf}
+### RDF
 
 -   Script to import RDF (RDF-XML) models from the Command Line Interface (CLI)
 -   Configurable URI generation strategies
 
-###Modeling{#modeling}
+### Modeling
 
 -   Ordering of properties at the Graphical User Interface (GUI) level
 
-###CSV Import{#csv-import}
+### CSV Import
 
 -   Default values depending on the targeted property range
 

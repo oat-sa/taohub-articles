@@ -44,7 +44,7 @@ As the other rest services, you may expect http standard error messages such as 
 GET result
 ----------
 
-\#Retrieve List of Delivery Results{#retrieve-list-of-delivery-results}
+\# Retrieve List of Delivery Results
 
     Accept: application/json
 
@@ -54,56 +54,46 @@ GET result
        "success":true,
        "data":[  
           {  
-             "uri":"http:\/\/tao26\/tao26.rdf#i1401263502507166",{#i1401263502507166}
-
+             "uri":"http:\/\/tao26\/tao26.rdf#i1401263502507166",
              "properties":[  
                 {  
-                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#Identifier",{#identifier}
-
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#Identifier",
                    "values":[  
                       {  
                          "valueType":"resource",
-                         "value":"http:\/\/tao26\/tao26.rdf#i1401263502655265"{#i1401263502655265}
-
+                         "value":"http:\/\/tao26\/tao26.rdf#i1401263502655265"
                       }
                    ]
                 },
                 {  
-                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#resultOfDelivery",{#resultofdelivery}
-
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#resultOfDelivery",
                    "values":[  
                       {  
                          "valueType":"resource",
-                         "value":"http:\/\/tao26\/tao26.rdf#i1401263469976162"{#i1401263469976162}
-
+                         "value":"http:\/\/tao26\/tao26.rdf#i1401263469976162"
                       }
                    ]
                 },
                 {  
-                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#resultOfSubject",{#resultofsubject}
-
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#resultOfSubject",
                    "values":[  
                       {  
                          "valueType":"resource",
-                         "value":"http:\/\/tao26\/tao26.rdf#i140126348250764"{#i140126348250764}
-
+                         "value":"http:\/\/tao26\/tao26.rdf#i140126348250764"
                       }
                    ]
                 },
                 {  
-                   "predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type",{#type}
-
+                   "predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type",
                    "values":[  
                       {  
                          "valueType":"resource",
-                         "value":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#DeliveryResult"{#deliveryresult}
-
+                         "value":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#DeliveryResult"
                       }
                    ]
                 },
                 {  
-                   "predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#label",{#label}
-
+                   "predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#label",
                    "values":[  
                       {  
                          "valueType":"literal",
@@ -123,19 +113,18 @@ GET result
 <!-- -->
 
     Accept: application/json
-    uri: http://tao26/tao26.rdf#i1401263502507166{#i1401263502507166}
+    uri: http://tao26/tao26.rdf#i1401263502507166
+
 
     {  
        "success":true,
        "data":{  
-          "http:\/\/tao26\/tao26.rdf#i1401263507808067":[{#i1401263507808067}
-
+          "http:\/\/tao26\/tao26.rdf#i1401263507808067":[  
              {  
                 "value":"1",
                 "identifier":"numAttempts",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -148,8 +137,7 @@ GET result
                 "value":"<'MiddleAges'; 'Prehistory'; 'ContemporaryEra'; 'ModernEra'; 'Antiquity'>",
                 "identifier":"RESPONSE",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -162,8 +150,7 @@ GET result
                 "value":"completed",
                 "identifier":"completionStatus",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",{#outcomevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -176,8 +163,7 @@ GET result
                 "value":"PT5S",
                 "identifier":"duration",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -190,8 +176,7 @@ GET result
                 "value":"0",
                 "identifier":"SCORE",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",{#outcomevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -201,14 +186,12 @@ GET result
                 "basetype":"float"
              }
           ],
-          "http:\/\/tao26\/tao26.rdf#i1401263511454873":[{#i1401263511454873}
-
+          "http:\/\/tao26\/tao26.rdf#i1401263511454873":[  
              {  
                 "value":"9",
                 "identifier":"RESPONSE",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -221,8 +204,7 @@ GET result
                 "value":"0",
                 "identifier":"SCORE",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",{#outcomevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -235,8 +217,7 @@ GET result
                 "value":"completed",
                 "identifier":"completionStatus",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",{#outcomevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -249,8 +230,7 @@ GET result
                 "value":"PT4S",
                 "identifier":"duration",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -263,8 +243,7 @@ GET result
                 "value":"1",
                 "identifier":"numAttempts",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -274,14 +253,12 @@ GET result
                 "basetype":"integer"
              }
           ],
-          "http:\/\/tao26\/tao26.rdf#i140126352144279":[{#i140126352144279}
-
+          "http:\/\/tao26\/tao26.rdf#i140126352144279":[  
              {  
                 "value":"[Tr Mo; Ga Ju; Ea Ne]",
                 "identifier":"RESPONSE",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -294,8 +271,7 @@ GET result
                 "value":"1",
                 "identifier":"numAttempts",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -308,8 +284,7 @@ GET result
                 "value":"1",
                 "identifier":"SCORE",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",{#outcomevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -322,8 +297,7 @@ GET result
                 "value":"completed",
                 "identifier":"completionStatus",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",{#outcomevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#OutcomeVariable",
                    "label":"",
                    "comment":"",
                    "debug":""
@@ -336,8 +310,7 @@ GET result
                 "value":"PT9S",
                 "identifier":"duration",
                 "type":{  
-                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",{#responsevariable}
-
+                   "uriResource":"http:\/\/www.tao.lu\/Ontologies\/TAOResult.rdf#ResponseVariable",
                    "label":"",
                    "comment":"",
                    "debug":""

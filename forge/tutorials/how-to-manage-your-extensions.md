@@ -26,7 +26,7 @@ TAO is a versatile product. It provides an Extension mechanism enabling you to f
 
 The TAOExtensions script can be accessed by CLI on your web server. It is located at *PATH\_TO\_PLATFORM/tao/scripts/taoExtensions.php*. It provides multiple *actions* you can call to install or configure your extensions.
 
-###2.1. setConfig action{#21-setconfig-action}
+### 2.1. setConfig action
 
 The *setConfig* action allows you to configure the behaviour of your Extensions. With this tool, you can change 3 different configuration parameters that are:
 
@@ -47,15 +47,15 @@ Some information about this command:
 -   **-cV** is the configuration value *<span class="boolean"></span>*
 -   **-e** is the extension your parameter will apply on *<span class="string"></span>*
 
-###2.2. install action{#22-install-action}
+### 2.2. install action
 
 The *install* action enables you to install a third-party extension on your existing TAO platform instance. The procedure is split in two steps.
 
-####2.2.1 Unzip your extension{#221-unzip-your-extension}
+#### 2.2.1 Unzip your extension
 
 Third-party extensions are packaged as ZIP archives. The first task you have to do is to unzip your extension in the root directory of your TAO installation, on the server-side. When done, you should find a directory named as the identifier of the extension. For instance, unzipping the *taoDocs* extension will produce a *taoDocs* folder in the root directory of your TAO installation.
 
-####2.2.1 Install your extension{#221-install-your-extension}
+#### 2.2.1 Install your extension
 
 You now have to invoke the *install* action of the *TAOExtensions* script to activate the extension. You will find below an example that installs the *taoDocs* extension on your platform.
 

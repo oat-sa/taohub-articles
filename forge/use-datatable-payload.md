@@ -28,12 +28,9 @@ Example:
     protected function getPropertiesMap()
     {
         return [
-            'firstname' => 'http://www.tao.lu/Ontologies/generis.rdf#userFirstName',{#userfirstname}
-
-            'lastname' => 'http://www.tao.lu/Ontologies/generis.rdf#userLastName',{#userlastname}
-
-            'identifier' => 'http://www.tao.lu/Ontologies/mpart.rdf#studentid',{#studentid}
-
+            'firstname' => 'http://www.tao.lu/Ontologies/generis.rdf#userFirstName',
+            'lastname' => 'http://www.tao.lu/Ontologies/generis.rdf#userLastName',
+            'identifier' => 'http://www.tao.lu/Ontologies/mpart.rdf#studentid',
         ];
     }
 
@@ -42,8 +39,7 @@ Example:
 
     protected function getType()
     {
-        return 'http://www.tao.lu/Ontologies/mpart.rdf#Student';{#student}
-
+        return 'http://www.tao.lu/Ontologies/mpart.rdf#Student';
     }
 
 To get datatable payload just call *DatatablePayload::getPayload()* method. All necessary data (such as filter data, page number, number of rows, ordering etc.) will be automatically fetched from request and datatable json will be generated. Usage example in controller:

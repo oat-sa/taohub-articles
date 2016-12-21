@@ -22,11 +22,11 @@ Items, Tests and Deliveries are each split into two distinct parts:
 -   The model which allows the user to import/design/export the definition of the item/test/delivery which contains the authoring and the data model.
 -   The runner which during execution of a delivery (by the test-taker) renders the component and handles interactions with the user.
 
-###Content model{#content-model}
+### Content model
 
 There is no interface on the content level between items and tests or tests and deliveries. The interface that an implementation needs to implement can be found in models/classes of the extensions taoItems, taoTests and taoDeliveries respectively.
 
-###Runner{#runner}
+### Runner
 
 In order to be able to execute a delivery that contains different implementations, the interfaces between the Tao Platform and the Delivery Runner, the Delivery Runner and the Test Runner and between the Test Runner and the Item Runner had to be clear. To keep these implementation as independent as possible we implemented this by a [[Service call]], which is very similar to an URL as it contains the service to be called and the parameters with which this service should be executed.
 

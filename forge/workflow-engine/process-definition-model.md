@@ -47,14 +47,14 @@ An activity can be considered as an empty container of services. The actual busi
 3. Service definition & call of service
 ---------------------------------------
 
-###3.1. Service definition{#31-service-definition}
+### 3.1. Service definition
 
 The services define the actual business of an activity: « when I get access to an activity, what will be executed and/or displayed on the screen and what should/could I do? »\
 Services in the workflow engine are defined by a URL. It means that all scripts accessible through a URL could be a service.\
 A service could have input parameters. It allows the process creator to tell the systems which parameter shall be passed as a parameter of the service. A service definition must be given the input parameters that it needs to work. The definition of such a parameter is called “formal parameter”.\
 At runtime, the URL is opened in an iframe HTML element and all parameters values given via the HTTP GET method.
 
-###3.2. Call of service{#32-call-of-service}
+### 3.2. Call of service
 
 A service created in an activity is a *“Call of Service”*. A call of service is the implementation of a service definition. A call of service is therefore associated to a service definition and the actual parameters define the values of the formal parameters of the service definition.\
 A call of service is the service definition + the values of parameters +into a specific activity.
@@ -67,21 +67,21 @@ The image below illustrates the difference between a service definition (*“ser
 
 Connectors link activities together and thus define the logic of the process flow. A connector connects a unique previous activity to one or more following activities, according to its type. There are currently four types of connectors in TAO, two of them are yet at an experimental stage.
 
-###4.1. sequential:{#41-sequential}
+### 4.1. sequential:
 
 A connector that links the previous activity to the unique following one.\
 ![](../resources/sequence.png)
 
-###4.2. conditional:{#42-conditional}
+### 4.2. conditional:
 
 A connector that links the previous activity to two others. At runtime, the workflow engine evaluates which activity should be the next one according to the transition rule. Therefore, a transition rule has to be defined for this type of connector.\
 ![](../resources/delivery_conditionnal.png)
 
-###4.3. parallel (experimental):{#43-parallel-experimental}
+### 4.3. parallel (experimental):
 
 A connector that allows parallelization of the process. It divides the process flow into multiple parallel threads. Each thread can be executed independently and simultaneously by different users. (see the same diagram as join connector below).
 
-###4.4. join (experimental):{#44-join-experimental}
+### 4.4. join (experimental):
 
 This complementary connector of the parallel one allows joining several parallel process branches to a unique one. In order to proceed to the transition, it will wait for all branches to get to this connector. The fastest users who have completed the activity of their branch will be paused.\
 ![](../resources/delivery_parallel_join.png)

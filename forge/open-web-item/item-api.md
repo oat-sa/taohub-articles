@@ -31,7 +31,7 @@ The stub or the injected API will look for a global function (in the `window` sc
 API Documentation
 -----------------
 
-###SaveResponses{#saveresponses}
+### SaveResponses
 
     /**
      * Save test taker's responses
@@ -51,7 +51,7 @@ Example:
         itemApi.saveResponses({'QUESTION_3': 'bar'});
     }
 
-###SaveScores{#savescores}
+### SaveScores
 
     /**
      * Save test taker's scores
@@ -71,7 +71,7 @@ Example:
         itemApi.saveScores({'FINAL': 6.25});
     }
 
-###BeforeFinish{#beforefinish}
+### BeforeFinish
 
     /**
      * Add a callback to be executed in stack before the finish
@@ -100,7 +100,7 @@ Example:
         });
     }
 
-###Finish{#finish}
+### Finish
 
     /**
      * Flag the item as finish 
@@ -114,7 +114,7 @@ Example:
         //nothing after
     }
 
-###SetVariable{#setvariable}
+### SetVariable
 
     /**
      * Store variable (not persistant)
@@ -133,7 +133,7 @@ Example:
         itemApi.setVariable('answer2-time', 58);
     }
 
-###GetVariable{#getvariable}
+### GetVariable
 
     /**
      * Get a stored variable
@@ -150,7 +150,7 @@ Example:
         });
     }
 
-###TraceEvents{#traceevents}
+### TraceEvents
 
     /**
      * Log events

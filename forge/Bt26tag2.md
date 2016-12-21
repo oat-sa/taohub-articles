@@ -13,22 +13,24 @@ Bt26tag2
 Benchmarks
 ----------
 
-###Deployment benchmarked description{#deployment-benchmarked-description}
+### Deployment benchmarked description
 
 Migration
 ---------
 
 The migration to Bt26tag1 to Bt26tag2 consists in 6 steps:
 
-\#Do a complete backup of the TAO Platform.{#do-a-complete-backup-of-the-tao-platform}
+\# Do a complete backup of the TAO Platform.
 
-\#Apply the provided patch.{#apply-the-provided-patch}
+\# Apply the provided patch.
 
-\#(**optional**) Add following line at the end of file `your_install_path/generis/common/conf/generis.conf.php`, the file was not under version control so will not be updated by the patch.{#optional-add-following-line-at-the-end-of-file-your-install-pathgeneriscommonconfgenerisconfphp-the-file-was-not-under-version-control-so-will-not-be-updated-by-the-patch}
+\# (**optional**) Add following line at the end of file `your_install_path/generis/common/conf/generis.conf.php`, the file was not under version control so will not be updated by the patch.
+
 
     define('VENDOR_PATH' , GENERIS_BASE_PATH.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR);
 
-\#(**To be tested again**) A QTI Tests Migration script is required to modify test structure to support new feature such as RubricBlock,add following line at the beginning of the script `your_install_path/taoQtiTest/scripts/update/migrateQtiTests.php`{#to-be-tested-again-a-qti-tests-migration-script-is-required-to-modify-test-structure-to-support-new-feature-such-as-rubricblockadd-following-line-at-the-beginning-of-the-script-your-install-pathtaoqtitestscriptsupdatemigrateqtitestsphp}
+\# (**To be tested again**) A QTI Tests Migration script is required to modify test structure to support new feature such as RubricBlock,add following line at the beginning of the script `your_install_path/taoQtiTest/scripts/update/migrateQtiTests.php`
+
 
     require_once dirname(__FILE__) .'/../../includes/raw_start.php';
 
@@ -75,7 +77,7 @@ This requires to configure tao to :
 
 Our tests used the same redis server for all three, note that you may use different servers.
 
-###Storing Results in a Redis server{#storing-results-in-a-redis-server}
+### Storing Results in a Redis server
 
 -   Make sure you have installed the packages :\
     “redis-server” (on the server you want to use for the storage)\
@@ -106,7 +108,7 @@ This process takes a couple of minutes if you migrate back into taoResults datab
 
 We suggest that, once you have successfully migrated all the data, you backup your redis database and dump all keys. To avoid multiple copies of the same data into the target storage.
 
-###Storing service states in a Redis server{#storing-service-states-in-a-redis-server}
+### Storing service states in a Redis server
 
 Service states are always stored in a KeyValue storage which is defined in *generis.conf.php*. By default this is using the *phpfile* driver which stores the states in files. To switch this to Redis exchange it with the following bit:
 
@@ -116,7 +118,7 @@ Service states are always stored in a KeyValue storage which is defined in *gene
         'port' => 6379
     )
 
-###Storing delivery execution informations in a Redis server{#storing-delivery-execution-informations-in-a-redis-server}
+### Storing delivery execution informations in a Redis server
 
 Which delivery executions are currently active by which user is by default stored in the ontology. To switch this to a KeyValue persistence the constant *DELIVERY\_EXECUTION\_HANDLER* in *generis.conf.php* needs to be set to *taoDelivery\_models\_classes\_execution\_KeyValueService*:
 
@@ -130,7 +132,7 @@ Additionally the persistence used for the KeyValue service needs to be defined i
         'port' => 6379
     )
 
-###Storing the session in a Redis server{#storing-the-session-in-a-redis-server}
+### Storing the session in a Redis server
 
 KeyValue Session storage is enabled by default on this tag (constant *PHP\_SESSION\_HANDLER* in *generis.conf.php*). The persistence used\
 for the session is defined in *persistences.conf.php* and set to *SqlKvWrapper* by default. In order to switch to Redis exchange the session\
@@ -149,30 +151,21 @@ Redis configuration check
 
 <!-- -->
 
-    ################################SNAPSHOTTING{#snapshotting}
-
-################################{#}
-
-
-    #Save the DB on disk:{#save-the-db-on-disk}
-
-
-    #save{#save}
-
-
-    #Will save the DB if both the given number of seconds and the given{#will-save-the-db-if-both-the-given-number-of-seconds-and-the-given}
-
-   number of write operations against the DB occurred.
-    #{#}
-
-   In the example below the behaviour will be to save:
-    #after 900 sec (15 min) if at least 1 key changed{#after-900-sec-15-min-if-at-least-1-key-changed}
-
-   after 300 sec (5 min) if at least 10 keys changed
-    #after 60 sec if at least 10000 keys changed{#after-60-sec-if-at-least-10000-keys-changed}
-
-
-    #Note: you can disable saving at all commenting all the "save" lines.{#note-you-can-disable-saving-at-all-commenting-all-the-save-lines}
+    ################################ SNAPSHOTTING  #################################
+    #
+    # Save the DB on disk:
+    #
+    #   save  
+    #
+    #   Will save the DB if both the given number of seconds and the given
+    #   number of write operations against the DB occurred.
+    #
+    #   In the example below the behaviour will be to save:
+    #   after 900 sec (15 min) if at least 1 key changed
+    #   after 300 sec (5 min) if at least 10 keys changed
+    #   after 60 sec if at least 10000 keys changed
+    #
+    #   Note: you can disable saving at all commenting all the "save" lines.
 
     save 900 1
     save 300 10
@@ -182,20 +175,15 @@ Redis configuration check
 
 <!-- -->
 
-    ###################################LIMITS{#limits}
+    ################################### LIMITS ####################################
 
-###################################{#}
-
- Set the max number of connected clients at the same time. By default there
-    #is no limit, and it's up to the number of file descriptors the Redis process{#is-no-limit-and-its-up-to-the-number-of-file-descriptors-the-redis-process}
-
- is able to open. The special value '0' means no limits.
-    #Once the limit is reached Redis will close all the new connections sending{#once-the-limit-is-reached-redis-will-close-all-the-new-connections-sending}
-
- an error 'max number of clients reached'.
-    #{#}
-
- maxclients 128
+    # Set the max number of connected clients at the same time. By default there
+    # is no limit, and it's up to the number of file descriptors the Redis process
+    # is able to open. The special value '0' means no limits.
+    # Once the limit is reached Redis will close all the new connections sending
+    # an error 'max number of clients reached'.
+    #
+    # maxclients 128
 
 -   Optionnaly, you may create a slave of your redis server, and acting as a backup server
 
@@ -214,7 +202,7 @@ We have to define in Varnish a director group and choose the most suited directo
 
 For a multiple TAO server pool, the main requirement is to support sticky sessions, which is done by using the specific ‘client’ director. Thus, after a client connects for the first time to TAO, each time it goes back to TAO, it will be redirected to the same backend server.
 
-###Configuration{#configuration}
+### Configuration
 
 The initial setup of Varnish starts with the Varnish daemon options configuration file, usually located at /etc/default/varnish. It allows 4 configuration alternatives (cf this file to see the differences). For our own setup, we the second one is needed: a configuration with the VCL (Varnish Configuration Language).\
 The Varnish Configuration Language (VCL) is a domain-specific language used to define the caching policy. Most of the configuration is written into subroutines and follows a pre-defined flow during the request and response phase. The default configuration is seen as commented.
@@ -272,14 +260,14 @@ In case an error occurs, use the following command to get further details:
 
     /usr/sbin/varnishd -Cf /etc/varnish/default.vcl
 
-###Varnish commands{#varnish-commands}
+### Varnish commands
 
 The main Varnish-related commands are varnishtop and varnishstat:\
 - varnishtop gives regular feedbacks about backend server status (healthy, sick, back healthy, went sick).\
 - varnishstat is a real-time monitoring and statistics tool. The main values to monitor are probably the hitrate and hitrate average values.\
 varnishlog and varnishhist are complementary commands.
 
-###Logging with Varnish{#logging-with-varnish}
+### Logging with Varnish
 
 By default, Varnish logging is disabled. To enable it, set to the VARNISHNCSA\_ENABLED attribute from 0 to 1 in /etc/default/varnishncsa.\
 To reload the logging configuration, use the command:

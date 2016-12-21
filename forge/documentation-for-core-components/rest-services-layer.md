@@ -57,7 +57,7 @@ Generic headers aliases:
 
 Generic headers\
 By default you may refer to any attribute of the target resource type using header with the uri reference :\
-“http://tao-dev/taodev.rdf\#i1372429454323825” : “35”{#i1372429454323825-35}
+“http://tao-dev/taodev.rdf\#i1372429454323825” : “35”
 
 Specific header aliases\
 Specific header aliases may be supported on extension basis, example :
@@ -93,7 +93,8 @@ example in XML :
      
     true
      
-    http://tao-dev/taodev.rdf#i13777687654193852{#i13777687654193852}
+    http://tao-dev/taodev.rdf#i13777687654193852
+
 
     core_kernel_persistence_smoothsql_Class::createInstanceWithProperties
      

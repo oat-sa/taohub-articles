@@ -38,31 +38,31 @@ Patrick Plichart
 Activities
 ----------
 
-###Document the result storage interface and provide a “Hello world” extension of TAO implementing that interface.{#document-the-result-storage-interface-and-provide-a-hello-world-extension-of-tao-implementing-that-interface}
+### Document the result storage interface and provide a “Hello world” extension of TAO implementing that interface.
 
 Volunteer : Patrick\
 Status : done\
 If there is a need to extend the interface or for further documentation let me know, the materials are linked below.
 
-###Identify the most relevant data repositorie(s){#identify-the-most-relevant-data-repositories}
+### Identify the most relevant data repositorie(s)
 
 Which data repository do we focus on ? What are JasperSoft connector possibilities ?
 
 Volunteer :
 
-###Document the data repository access protocol (HTTP-based REST? SOAP?, SQL?, credentials, security related aspects, etc.){#document-the-data-repository-access-protocol-http-based-rest-soap-sql-credentials-security-related-aspects-etc}
+### Document the data repository access protocol (HTTP-based REST? SOAP?, SQL?, credentials, security related aspects, etc.)
 
 Volunteer :
 
-###Implement an extension of TAO implementing the storage into the target data repository.{#implement-an-extension-of-tao-implementing-the-storage-into-the-target-data-repository}
+### Implement an extension of TAO implementing the storage into the target data repository.
 
 Volunteer :
 
-###Test the extension{#test-the-extension}
+### Test the extension
 
 Volunteer : Patrick
 
-###Integrate the extension in the official release of TAO{#integrate-the-extension-in-the-official-release-of-tao}
+### Integrate the extension in the official release of TAO
 
 Volunteer : Lionel
 

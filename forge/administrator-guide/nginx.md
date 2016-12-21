@@ -36,7 +36,7 @@ Tao now supports a single entry point simplifying the config even further:
         rewrite  ^  /index.php;
     }
 
-###Known issues{#known-issues}
+### Known issues
 
 -   max upload filesize is not detected correctly from nginx client\_max\_body\_size configuration
 
@@ -57,7 +57,7 @@ Nginx and Tao 3.0
         rewrite  ^/([^//]*)/.*$  /$1/index.php;
     }
 
-###Known issues{#known-issues}
+### Known issues
 
 -   max upload filesize is not detected correctly from nginx client\_max\_body\_size configuration
 -   HTTP basic authentication not working for REST api
@@ -67,7 +67,7 @@ Nginx and Tao 2.6
 
 Uses the same configuration as 3.0
 
-###Known issues{#known-issues}
+### Known issues
 
 -   item preview requires Tao \>= 2.6.7 to work
 

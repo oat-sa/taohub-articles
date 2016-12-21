@@ -47,7 +47,7 @@ Figure 2: A QTI assessmentItem containing 3 Portable Custom Interaction instance
 Interaction Rendering
 ---------------------
 
-###Clarification about Concepts{#clarification-about-concepts}
+### Clarification about Concepts
 
 The initial IMS Portable Custom Interaction (PCI) specification introduces the notion of Communication Bridge. In the documentation however, it is difficult to concretely grasp what this bridge actually is and does. There indeed seems to be a confusion between the Rendering Engine and the Communication Bridge itself. From our understanding, the bridge should be the global qtiCustomInteractionContext object and the Rendering Engine is therefore something totally different, out of the scope of this document. In this proposal, Open Assessment Technologies considers the Rendering Engine as the hosting platform, and the Communication Bridge as the global qtiCustomInteractionContext. This improves the understandability of the specification, and reduces its learning curve. Finnaly, it makes tangible the initial Interaction Rendering Conceptual Diagram.\
 Figure 3: The initial Interaction Rendering Conceptual Diagram.\
@@ -60,7 +60,7 @@ Before going further, let’s first redefine in depth the role and responsibilit
 
 3\. The Rendering Engine makes the Communication Bridge available in the JavaScript scope of every Custom Interaction Instance. The Rendering Engine provides an implementation of the Communication Bridge which in turn, uses the methods exposed by Custom Interaction Hooks to fulfill its duty. Vendors are free on the implementation of the Rendering Engine itself because with this approach, it is invisible to Custom Interaction Hooks. On the other hand, Custom Interaction Hooks will have access to the Communication Bridge by dependency injection.
 
-###Interaction Rendering Sequence{#interaction-rendering-sequence}
+### Interaction Rendering Sequence
 
 The new sequence diagram below clearly depicts the responsibilities of each component. It also reflects the content of this proposal and the current experimental implementation in the TAO Platform.\
 Figure 4. Interaction Rendering Sequence Diagram\
@@ -73,7 +73,7 @@ Portable Custom Interaction APIs
 
 Open Assessment Technologies recommends to clearly define the APIs (Application Programming Interface), rather than describing existing implementations. This may cause misunderstandings about what is mandatory to be implemented or not to support Portable Custom Interactions. However, Open Assessment Technologies admits it was an excellent starting point. The following section might be a good lever between recommendation and standardization. Information about the implementation from Open Assessment Technologies is given later in this document.
 
-###Communication Bridge API{#communication-bridge-api}
+### Communication Bridge API
 
 As discussed in the previous sections of this proposal, the qtiCustomInteractionContext object is actually an instance of the Communication Bridge. The following skeleton describes the Communication Bridge API, which provide the methods available to Custom Interaction Hooks to communicate with the hosting platform.\
 As this proposal is built upon the AMD (Asynchronous Module Definition) paradigm, it is implemented as an AMD module, to be required as an AMD dependency by Custom Interaction Hook implementations.\
@@ -138,17 +138,17 @@ Table 1. Communication Bridge Skeleton
     56:  return qtiCustomInteractionContext;
     57:});
 
-####Revoking the Initialization Role{#revoking-the-initialization-role}
+#### Revoking the Initialization Role
 
 As shown in Figure 4, Open Assessment Technologies recommend redistributing the responsibility of initializing an interaction to the Rendering Engine. Indeed, the vendor certainly has an existing initialization function for built-in QTI interactions so it seems legitimate to let the delivery engine decide the right time to call the initialize() method on Custom Interaction Instances.\
 To redistribute the initialization responsibility to the Rendering Engine in the implementation from Open Assessment Technologies, the global object implements a getter function (which is not part of the Communication Bridge API) to retrieve previously registered Custom Interaction Hooks. The function createPciInstance() (which is also not part of the Communication Bridge API, but part of our own implementation) therefore returns the clone of a previously registered Custom Interaction Hook, to provide an up and running Custom Interaction Instance object.
 
-####Notification{#notification}
+#### Notification
 
 The notifyReady() and notifyDone() functions now require their unique argument to be a Custom Interaction instance object, in place of an identifier. Giving the Custom Interaction Instance object instead of an identifier also makes qtiCustomInteractionContext implementation able to collect useful information from the Custom Interaction Instances. Finally, from a cosmetic perspective, it makes the API more elegant.\
 Simply put, the qtiCustomInteractionContext object should only serve as a registry to available PCI Hooks. Moreover, The functions exposed by the qtiCustomInteractionContext object might be useful to Rendering Engines wanting to implement QTI built-in interactions in a PCI way.
 
-###Custom Interaction Hook API{#custom-interaction-hook-api}
+### Custom Interaction Hook API
 
 The following section describes a Custom Interaction Hook skeleton. It clearly depicts what are the methods to be implemented by a Portable Custom interaction author to be compliant with the specification. In other words, it exposes the Custom Interaction Hook API. The changes described in this proposal focus on three aspects:
 
@@ -475,7 +475,7 @@ Table 4. Item XML Definition
 
      
 
-###PCI Configuration - Properties{#pci-configuration-properties}
+### PCI Configuration - Properties
 
 We agree with Pacific Metrics about the need for more a structured way to store configuration parameter in the XML and have implemented as such. All the values in the <entry> will be passed to the PCI initialize function as strings. It will be up to the PCI implementer to check their validity or re-interpret the value if necessary.\
 Table 5. XML PCI Properties
@@ -492,7 +492,7 @@ Table 5. XML PCI Properties
 Call of eval() indeed should be avoided to prevent bad JavaScript inclusion. This also enables validation of configuration parameters if necessary.\
 On top of that, authoring tool implementers need a structured way to store interaction configuration parameters to make it “authorable”.
 
-###PCI Markup{#pci-markup}
+### PCI Markup
 
 In the original recommendation, there is no mention of the XML namespace used by HTML markups in PCI. In the example of the original recommendation:
 
@@ -507,7 +507,7 @@ The question that naturally raises is which HTML namespace(s) does PCI actually 
 We consider (by experience) that validating the content of <pci:markup> would be difficult, and force the markup to be in a particular flavour too much restrictive. The only thing we can provide are recommendations.\
 However, In the Open Assessment Technologies implementations of Portable Custom Interactions, we chose and recommend the XHTML5 solution.
 
-####XHTML Subset from QTI{#xhtml-subset-from-qti}
+#### XHTML Subset from QTI
 
 Using QTI-XHTML (as defined in QTI 2.1) may be a first and simple answer because QTI 2.1 already defines a clear subset of XHTML. This also means that PCI developers need to be careful about their markup usage. The advantage is that all HTML markups will share the same namespace (the one of QTI) which would help preventing confusions. On the other hand, the XHTML subset of QTI seems too small to accommodate for all the possibilities that current web technologies offer.\
 Using the XHTML subset of QTI as a markup language for Portable Custom Interactions.
@@ -525,7 +525,7 @@ Table 7. XHTML Subset of QTI as a Markup Language for Portable Custom Interactio
       
       
 
-####XHTML and XHTML 5{#xhtml-and-xhtml-5}
+#### XHTML and XHTML 5
 
 Since the role of PCI recommendation is to propose a way to create item that extends far beyond anything available currently in the QTI standard, it appears that HTML 5 is a good candidate. HTML5 is the growing leading web standard and likely the dominant one in the future. Moreover, its XML serialization format, XHTML 5, enables PCI implementers to take advantage of current technologies. HTML5 indeed standardizes new elements like <video>, <audio>, <canvas> to allow more possibilities in term of item creation. However, XHTML is still perfectly a valid solution but less rich than XHTML5.\
 It would also means that an XSD needs to be written if we want to it be possibly validated, which is going to be very difficult. A solution to this validation issue may simply not to validate the content of <pci:markup>.\
@@ -548,7 +548,7 @@ The libraries embedded in a custom interaction must be fully AMD compliant and m
 JSON Representation
 -------------------
 
-###JSON Schema Revision{#json-schema-revision}
+### JSON Schema Revision
 
 The original JSON Schema (shipped with the previous version of “IMS Portable Custom Interaction Best Practice”), aiming at validating the response returned by custom interactions, unfortunately does not work as expected with JSON Schema Lint.\
 Moreover, it does not enable production of embedded NULL values as parts of the response payload. Beyond the use of the QTI Base Types and Multiple, Ordered and Record containers in the context of Portable Custom Interactions, the JSON representation of values suits very well the needs of built-in QTI interactions and efficient data transmission between client and server sides. Because of this but also the existence of the QTI customOperator, we consider important to make possible the use of scalar NULL values and hybrid containers such as [1, 2, NULL, 3] or [“A” =\> 1, “B” =\> NULL, “C” =\> 2].\
@@ -566,7 +566,7 @@ JSON Representation Examples Revision
 
 Because it is now possible to express the NULL value within this proposal, the JSON examples in the Appendix A of the original version of IMS Portable Custom Interaction Best Practice should be updated.
 
-###QTI Base Types to JSON Representation{#qti-base-types-to-json-representation}
+### QTI Base Types to JSON Representation
 
 Table A.1. QTI Base Types to JSON Representation\
 QTI Base Type\
@@ -604,7 +604,7 @@ The modifications applied on table A.1 are the following:\
  2. The File base type example now emphases the existence of the name attribute.\
  3. The sample Duration changes to match the regular expression of the original JSON schema (ISO 8601 durations).
 
-###QTI Multiple/Ordered Cardinality to JSON Representation{#qti-multipleordered-cardinality-to-json-representation}
+### QTI Multiple/Ordered Cardinality to JSON Representation
 
 Table A.2 QTI Multiple/Ordered Cardinality to JSON Representation\
 QTI Base Type\
@@ -636,7 +636,7 @@ QTI Base Type\
 
 The modifications applied on table A.2 is that the Duration example is modified to match the regular expression of the JSON Schema.
 
-###QTI Record Cardinality to JSON Representation{#qti-record-cardinality-to-json-representation}
+### QTI Record Cardinality to JSON Representation
 
 Table A.3. QTI Record Cardinality to JSON Representation\
 QTI Base Type\
@@ -678,10 +678,8 @@ Table A.4. JSON Schema Revision
 
 
     {
-        "id": "#",{#}
-
-        "$schema": "http://json-schema.org/draft-04/schema#",{#}
-
+        "id": "#",
+        "$schema": "http://json-schema.org/draft-04/schema#",
         "description": "Portable Custom Interaction Base Types JSON Representation Schema by Michael Aumock (maumock@pacificmetrics.com), Jérôme Bogaerts (jerome@taotesting.com), Somsack Sipasseuth (sam@taotesting.com).",
         "type": "object",
 
@@ -692,34 +690,21 @@ Table A.4. JSON Schema Revision
                     "null"
                 ],
                 "properties": {
-                    "boolean": { "$ref": "#/definitions/boolean" },{#definitionsboolean}
-
-                    "integer": { "$ref": "#/definitions/integer" },{#definitionsinteger}
-
-                    "float": { "$ref": "#/definitions/float" },{#definitionsfloat}
-
-                    "string": { "$ref": "#/definitions/string" },{#definitionsstring}
-
-                    "uri": { "$ref": "#/definitions/uri" },{#definitionsuri}
-
-                    "identifier": { "$ref": "#/definitions/identifier"},{#definitionsidentifier}
-
-                    "point": { "$ref": "#/definitions/point" },{#definitionspoint}
-
-                    "pair": { "$ref": "#/definitions/pair"},{#definitionspair}
-
-                    "directedPair": { "$ref": "#/definitions/pair" },{#definitionspair}
-
-                    "duration": { "$ref": "#/definitions/duration" },{#definitionsduration}
-
-                    "file": { "$ref": "#/definitions/file" },{#definitionsfile}
-
+                    "boolean": { "$ref": "#/definitions/boolean" },
+                    "integer": { "$ref": "#/definitions/integer" },
+                    "float": { "$ref": "#/definitions/float" },
+                    "string": { "$ref": "#/definitions/string" },
+                    "uri": { "$ref": "#/definitions/uri" },
+                    "identifier": { "$ref": "#/definitions/identifier"},
+                    "point": { "$ref": "#/definitions/point" },
+                    "pair": { "$ref": "#/definitions/pair"},
+                    "directedPair": { "$ref": "#/definitions/pair" },
+                    "duration": { "$ref": "#/definitions/duration" },
+                    "file": { "$ref": "#/definitions/file" },
                     "intOrIdentifier": {
                         "oneOf": [
-                            { "$ref": "#/definitions/integer" },{#definitionsinteger}
-
-                            { "$ref": "#/definitions/identifier" }{#definitionsidentifier}
-
+                            { "$ref": "#/definitions/integer" },
+                            { "$ref": "#/definitions/identifier" }
                         ]
                     }
                 },
@@ -733,8 +718,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/boolean" },{#definitionsboolean}
-
+                                { "$ref": "#/definitions/boolean" },
                                 { "type": "null" }
                             ]
                         }
@@ -743,8 +727,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/integer" },{#definitionsinteger}
-
+                                { "$ref": "#/definitions/integer" },
                                 { "type": "null" }
                             ]
                         }
@@ -754,8 +737,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/float" },{#definitionsfloat}
-
+                                { "$ref": "#/definitions/float" },
                                 { "type": "null" }
                             ]
                         }
@@ -764,8 +746,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/string" },{#definitionsstring}
-
+                                { "$ref": "#/definitions/string" },
                                 { "type": "null" }
                             ]
                         }
@@ -774,8 +755,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/uri" },{#definitionsuri}
-
+                                { "$ref": "#/definitions/uri" },
                                 { "type": "null" }
                             ]
                         }
@@ -784,8 +764,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/identifier" },{#definitionsidentifier}
-
+                                { "$ref": "#/definitions/identifier" },
                                 { "type": "null" }
                             ]
                         }
@@ -794,8 +773,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/point" },{#definitionspoint}
-
+                                { "$ref": "#/definitions/point" },
                                 { "type": "null" }
                             ]
                         }
@@ -804,8 +782,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/pair" },{#definitionspair}
-
+                                { "$ref": "#/definitions/pair" },
                                 { "type": "null" }
                             ]
                         }
@@ -814,8 +791,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/pair" },{#definitionspair}
-
+                                { "$ref": "#/definitions/pair" },
                                 { "type": "null" }
                             ]
                         }
@@ -824,8 +800,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/duration" },{#definitionsduration}
-
+                                { "$ref": "#/definitions/duration" },
                                 { "type": "null" }
                             ]
                         }
@@ -834,8 +809,7 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/file" },{#definitionsfile}
-
+                                { "$ref": "#/definitions/file" },
                                 { "type": "null" }
                             ]
                         }
@@ -844,10 +818,8 @@ Table A.4. JSON Schema Revision
                         "type": "array",
                         "items": {
                             "oneOf": [
-                                { "$ref": "#/definitions/integer" },{#definitionsinteger}
-
-                                { "$ref": "#/definitions/identifier" },{#definitionsidentifier}
-
+                                { "$ref": "#/definitions/integer" },
+                                { "$ref": "#/definitions/identifier" },
                                 { "type": "null" }
                             ]
                         }
@@ -858,8 +830,7 @@ Table A.4. JSON Schema Revision
 
             "record": {
                 "type": "array",
-                "items": { "$ref": "#/definitions/recordRow" }{#definitionsrecordrow}
-
+                "items": { "$ref": "#/definitions/recordRow" }
             },
 
             "recordRow": {
@@ -868,10 +839,8 @@ Table A.4. JSON Schema Revision
                     "name": {
                         "type": "string"
                     },
-                    "base": { "$ref": "#/definitions/base" },{#definitionsbase}
-
-                    "list": { "$ref": "#/definitions/list" }{#definitionslist}
-
+                    "base": { "$ref": "#/definitions/base" },
+                    "list": { "$ref": "#/definitions/list" }
                 },
                 "required": [
                     "name"
@@ -899,22 +868,19 @@ Table A.4. JSON Schema Revision
             },
             "identifier": {
                 "type": "string",
-                "pattern": "^[_a-zA-Z][\\w-\\.#\\[\\]]*$"{#}
-
+                "pattern": "^[_a-zA-Z][\\w-\\.#\\[\\]]*$"
             },
             "point": {
                 "type": "array",
                 "maxItems": 2,
                 "minItems": 2,
-                "items": { "$ref": "#/definitions/integer" }{#definitionsinteger}
-
+                "items": { "$ref": "#/definitions/integer" }
             },
             "pair": {
                 "type": "array",
                 "maxItems": 2,
                 "minItems": 2,
-                "items": { "$ref": "#/definitions/identifier" }{#definitionsidentifier}
-
+                "items": { "$ref": "#/definitions/identifier" }
             },
             "duration": {
                 "type": "string",
@@ -922,12 +888,9 @@ Table A.4. JSON Schema Revision
             },
             "file": {
                 "properties": {
-                    "data": { "$ref": "#/definitions/base64" },{#definitionsbase64}
-
-                    "mime": { "$ref": "#/definitions/mime" },{#definitionsmime}
-
-                    "name": { "$ref": "#/definitions/string" }{#definitionsstring}
-
+                    "data": { "$ref": "#/definitions/base64" },
+                    "mime": { "$ref": "#/definitions/mime" },
+                    "name": { "$ref": "#/definitions/string" } 
                 },
                 "required": [
                     "data",
@@ -946,12 +909,9 @@ Table A.4. JSON Schema Revision
         },
 
         "properties": {
-            "base": { "$ref": "#/definitions/base" },{#definitionsbase}
-
-            "list": { "$ref": "#/definitions/list" },{#definitionslist}
-
-            "record": { "$ref": "#/definitions/record" }{#definitionsrecord}
-
+            "base": { "$ref": "#/definitions/base" },
+            "list": { "$ref": "#/definitions/list" },
+            "record": { "$ref": "#/definitions/record" }
         },
         "additionalProperties": false
     }

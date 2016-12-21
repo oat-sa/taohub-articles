@@ -50,8 +50,7 @@ Call the function from your controller
 
     $testTakers = array();
     //This is a hard coded URI of a test taker (just to test)
-    array_push($testTakers, 'http://localhost/projects/taotesting/john.rdf#i1441541566133340');{#i1441541566133340}
-
+    array_push($testTakers, 'http://localhost/projects/taotesting/john.rdf#i1441541566133340');
     $rdsResultsStorage = new RdsResultStorage();
     $deliveryIDs = $rdsResultsStorage->getAllDeliveryIdsByTesttaker($testTakers);
     foreach ($deliveryIDs as $deliveryID) 

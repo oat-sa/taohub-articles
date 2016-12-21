@@ -29,7 +29,7 @@ Even if all major browser are able to render PDF files, the way they render them
 
 Because of license compatibility issue, it cannot be included within the default TAO package. That is why you need to install this library separately to use a consistent pdf viewer.
 
-You can download it freely [here](https://mozilla.github.io/pdf.js/getting_started/#download) and unzip it into the following folder: {YOUR\_TAO\_ROOT}/tao/views/js/lib/pdfjs. Your file system should look like this:{#download-and-unzip-it-into-the-following-folder-your-tao-roottaoviewsjslibpdfjs-your-file-system-should-look-like-this}
+You can download it freely [here](https://mozilla.github.io/pdf.js/getting_started/#download) and unzip it into the following folder: {YOUR\_TAO\_ROOT}/tao/views/js/lib/pdfjs. Your file system should look like this:
 
     /tao
         [...]

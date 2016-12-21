@@ -134,7 +134,7 @@ Here some example of reports generated
 Additional builds
 -----------------
 
-###Build Tag{#build-tag}
+### Build Tag
 
 In order to create the stable release version we also have gather different utilities in\
 https://github.com/oat-sa/package-build-tag
@@ -145,7 +145,7 @@ https://github.com/oat-sa/package-build-tag
 -   Create tag for all extensions that will be part of the release
 -   Re create new develop branch in each extension to start a new cycle
 
-###Build JS{#build-js}
+### Build JS
 
 This build available at https://github.com/oat-sa/package-build-js gather script to compile client side resources
 
@@ -154,7 +154,7 @@ This build available at https://github.com/oat-sa/package-build-js gather script
 -   Run compilation of all JS file like explain in [[build]]
 -   Commit and push change into each extension repository
 
-###Build Repository package{#build-repository-package}
+### Build Repository package
 
 All extensions are registered on [Packagist](https://packagist.org). We also have composer backup repository of our packages built every night and available at http://packages.taocloud.org/. Build and configuration to build this backup are available https://github.com/oat-sa/repositories-packages and https://github.com/oat-sa/repositories-packages-utils
 

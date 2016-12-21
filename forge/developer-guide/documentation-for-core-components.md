@@ -20,13 +20,13 @@ Documentation for TAO core components
 2. Extensions and Framework
 ---------------------------
 
-###2.1. [[Framework-Extensions|Extensions]]{#21-framework-extensionsextensions}
+### 2.1. [[Framework-Extensions|Extensions]]
 
 2.1.1. [[How to install an extension]]\
 2.1.2. [[How to make a new extension 3 0 v2]]\
 2.1.3. [[Extension update guide]]
 
-###2.2. Framework{#22-framework}
+### 2.2. Framework
 
 2.2.1. [[Overview]]\
 2.2.2. [[Controllers]]\
@@ -40,8 +40,7 @@ Documentation for TAO core components
 3. Generis
 ----------
 
-###3.1. [[Generis Overview]]\{#31-generis-overview}
-
+### 3.1. [[Generis Overview]]\
 3.2. [[Generis API]]
 
 3.2.1. [[Versioned content]]
@@ -49,8 +48,7 @@ Documentation for TAO core components
 4. Front End Development
 ------------------------
 
-###4.1 [[Style guide]]\{#41-style-guide}
-
+### 4.1 [[Style guide]]\
 4.2 [[Front structure|Structure]]\
 4.3 [[Front styling|Styling]]\
 4.3 [[Interaction Markup/CSS|Interaction Markup/CSS]]\
@@ -67,14 +65,14 @@ Documentation for TAO core components
 6. [[Workflow Engine]]
 ----------------------
 
-###6.1. Process Definition{#61-process-definition}
+### 6.1. Process Definition
 
 6.1.1. [[Process definition model]]\
 6.1.2. [[Create a process definition with the authoring service|Process Creation with API “Process Authoring Service”]]\
 6.1.3. [[Create service definitions|Service Creation with API “Process Authoring Service”]]\
 6.1.4. [[An implementation of process authoring tool|Process Creation Tool]]
 
-###6.2. Process Execution{#62-process-execution}
+### 6.2. Process Execution
 
 6.2.1. [[Execution of a process]]\
 6.2.2. [[Workflow API|Client-side Workflow API]]
@@ -82,30 +80,29 @@ Documentation for TAO core components
 7. Items
 --------
 
-###7.1. [[Items’ Types]]{#71-items-types}
+### 7.1. [[Items’ Types]]
 
 7.1.1. [[QTI]]\
 7.1.2. [[Free Form Items|Open WEB Items]]\
 7.1.2.3 [[Item API]]
 
-###7.2. [[Items’ migration]]{#72-items-migration}
+### 7.2. [[Items’ migration]]
 
 8. [[What is a delivery?|Delivery]]
 -----------------------------------
 
-###8.1. [[Create and author a delivery|Create and Author a delivery]]\{#81-create-and-author-a-deliverycreate-and-author-a-delivery}
-
+### 8.1. [[Create and author a delivery|Create and Author a delivery]]\
 8.2. [[Compile a delivery]]\
 8.3. [[Delivery server|Execute a delivery]]
 
 9. taoResultServer Interface & taoResult storage
 ------------------------------------------------
 
-###9.1 [[Results Storage components]]{#91-results-storage-components}
+### 9.1 [[Results Storage components]]
 
-##9.2 [[Result Storage Interface| Result Storage Interface (TAO 2.5)]]{#92-result-storage-interface-result-storage-interface-tao-25}
+### 9.2 [[Result Storage Interface| Result Storage Interface (TAO 2.5)]]
 
-##9.3 [[Results Data Model| taoResults Storage Data Model (TAO 2.5)]]{#93-results-data-model-taoresults-storage-data-model-tao-25}
+### 9.3 [[Results Data Model| taoResults Storage Data Model (TAO 2.5)]]
 
 10. [[Rest Services Layer]]
 ---------------------------
@@ -113,8 +110,7 @@ Documentation for TAO core components
 11. [[Helpers]]
 ---------------
 
-###11.1. [[Form]]\{#111-form}
-
+### 11.1. [[Form]]\
 11.2. [[Grid]]\
 11.3. [[Logger]]\
 11.4. [[Translations Helpers|Translations]]

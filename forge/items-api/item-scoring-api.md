@@ -39,7 +39,7 @@ and ensure that it is included into your html page
 
 Secondly you need to initialize the matching engine. The matching can take several parameters. Depending on these parameters the engine will be initialized in client mode or in server mode.
 
-###Initialize in client mode{#initialize-in-client-mode}
+### Initialize in client mode
 
 To initialize the response matching engine on client side, add the following code (javascript) to your own script.
 
@@ -55,17 +55,17 @@ To initialize the response matching engine on client side, add the following cod
 
 By setting the parameter **data** the matching API will be initialized in local client mode. You can define the matching data directly during the initialization or later through the provided API functions.
 
-*rule* ([[Item Scoring API\#Rules|TaoMatchingRule]]) : The rule that will be used to evaluate the user’s responses;{#rulestaomatchingrule-the-rule-that-will-be-used-to-evaluate-the-users-responses}
+*rule* ([[Item Scoring API\#Rules|TaoMatchingRule]]) : The rule that will be used to evaluate the user’s responses;
 
-*corrects* ([[Item Scoring API\#Variables|TaoMatchingVariable]]) : The correct responses of the item;{#variablestaomatchingvariable-the-correct-responses-of-the-item}
+*corrects* ([[Item Scoring API\#Variables|TaoMatchingVariable]]) : The correct responses of the item;
 
-*maps* ([[Item Scoring API\#Mapping-Variables|TaoMappingVariable]][\*]) : The mapping responses of the item;{#mapping-variablestaomappingvariable-the-mapping-responses-of-the-item}
+*maps* ([[Item Scoring API\#Mapping-Variables|TaoMappingVariable]][\*]) : The mapping responses of the item;
 
-*outcomes* ([[Item Scoring API\#Variables|TaoMatchingVariable]][\*]) : The outcome variables of the item;{#variablestaomatchingvariable-the-outcome-variables-of-the-item}
+*outcomes* ([[Item Scoring API\#Variables|TaoMatchingVariable]][\*]) : The outcome variables of the item;
 
-*responses* ([[Item Scoring API\#Variables|TaoMatchingVariable]][\*]) : The user’s responses;{#variablestaomatchingvariable-the-users-responses}
+*responses* ([[Item Scoring API\#Variables|TaoMatchingVariable]][\*]) : The user’s responses;
 
-####Example{#example}
+##### Example
 
 For instance, a single qti *choice interaction* is initialized on the local matching engine as follows.
 
@@ -77,13 +77,13 @@ For instance, a single qti *choice interaction* is initialized on the local matc
         }
     });
 
-*rule* : Here the matching engine will evaluate the user’s response with the predefined template rule [[Item Scoring API\#Match-Correct-Template|TAO\_MATCHING.RULE.MATCH\_CORRECT]].{#match-correct-templatetao-matchingrulematch-correct}
+*rule* : Here the matching engine will evaluate the user’s response with the predefined template rule [[Item Scoring API\#Match-Correct-Template|TAO\_MATCHING.RULE.MATCH\_CORRECT]].
 
-*corrects* : Based on the given correct variable **RESPONSE** initialized with the value **identifier1**, the rule is waiting for a user’s response of type string and with single cardinality. See how the template rule works ([[Item Scoring API\#Match-Correct-Template|TAO\_MATCHING.RULE.MATCH\_CORRECT]]){#match-correct-templatetao-matchingrulematch-correct}
+*corrects* : Based on the given correct variable **RESPONSE** initialized with the value **identifier1**, the rule is waiting for a user’s response of type string and with single cardinality. See how the template rule works ([[Item Scoring API\#Match-Correct-Template|TAO\_MATCHING.RULE.MATCH\_CORRECT]])
 
-*outcomes* : Initialization of an outcome variable identified by **SCORE** with a type double. See how the template rule works ([[Item Scoring API\#Match-Correct-Template|TAO\_MATCHING.RULE.MATCH\_CORRECT]]){#match-correct-templatetao-matchingrulematch-correct}
+*outcomes* : Initialization of an outcome variable identified by **SCORE** with a type double. See how the template rule works ([[Item Scoring API\#Match-Correct-Template|TAO\_MATCHING.RULE.MATCH\_CORRECT]])
 
-##Initialize in server mode{#initialize-in-server-mode}
+### Initialize in server mode
 
 By setting the parameter **url** the matching API will be initialized in remote server mode. This provides you a secure way to evaluate the user’s responses.
 
@@ -96,7 +96,7 @@ By setting the parameter **url** the matching API will be initialized in remote 
 
 *params* (object): The parameters be sent to the remote matching engine. You can set as many parameters as you want in this attribute.
 
-#####Example{#example}
+##### Example
 
     matchingInit ({
         url         : "/taoDelivery/ResultDelivery/evaluate"
@@ -112,7 +112,7 @@ By setting the parameter **url** the matching API will be initialized in remote 
 Variables
 ---------
 
-###Definition{#definition}
+### Definition
 
 All variables (corrects, outcomes & responses) are defined following the model :
 
@@ -123,15 +123,15 @@ All variables (corrects, outcomes & responses) are defined following the model :
 
 *identifier* (string) : Identifier of the variable;
 
-*value* ([[Item Scoring API\#Value-Format|taoValueFormat]]) : Value of the variable;{#value-formattaovalueformat-value-of-the-variable}
+*value* ([[Item Scoring API\#Value-Format|taoValueFormat]]) : Value of the variable;
 
 *type* (string) (optional) : One of the available types of variable : string, float, integer, tuple, list. For the known types if the value has been defined, the type will be infered based on it;
 
-###Value format{#value-format}
+### Value format
 
 The value of a variable accept the following representation :
 
-####Scalar types{#scalar-types}
+#### Scalar types
 
 *string* :
 
@@ -161,7 +161,7 @@ The value of a variable accept the following representation :
         , "value":true
     }
 
-####Container types{#container-types}
+#### Container types
 
 *list* : The container list accepts a list of variables of the same type.
 
@@ -185,7 +185,7 @@ The value of a variable accept the following representation :
         }
     }
 
-####List of containers{#list-of-containers}
+#### List of containers
 
 *list of list* :
 
@@ -218,9 +218,9 @@ The value of a variable accept the following representation :
         ]
     }
 
-###Mapping Variables{#mapping-variables}
+### Mapping Variables
 
-###Definition{#definition}
+#### Definition
 
 Mapping variables are special variables used to create a mapping from a source of any base type to a single float. Based on the specification of QTI a mapping variable allows test creator to :
 
@@ -242,7 +242,7 @@ Mapping variables are defined following the model :
 
 *identifier* (string) : Identifier of the variable to map;
 
-*value* ([[Item Scoring API\#Map-Entry|mapEntry]]) : The map is defined by a set of mapEntries, each of which maps a single value from the source set onto a single float;{#map-entrymapentry-the-map-is-defined-by-a-set-of-mapentries-each-of-which-maps-a-single-value-from-the-source-set-onto-a-single-float}
+*value* ([[Item Scoring API\#Map-Entry|mapEntry]]) : The map is defined by a set of mapEntries, each of which maps a single value from the source set onto a single float;
 
 *defaultValue* (float) : The default value from the target set to be used when no explicit mapping for a source value is given.
 
@@ -250,7 +250,7 @@ Mapping variables are defined following the model :
 
 *upperBound* (float) : (Optional) The upper bound for the result of mapping a container. If unspecified there is no upper-bound.
 
-####Examples{#examples}
+#### Examples
 
 By example for a multiple choice item where the instruction is to select the correct elements which are used to form the water.
 
@@ -280,7 +280,7 @@ Look at the example below which explains how to use the mapping variable to solv
     , "value":[{"key":"Hydrogen", "value":1}, {"key":"Oxygen", "value":1}, {"key":"mercure", "value":-2}]
     }
 
-###Map Entry{#map-entry}
+### Map Entry
 
 Map entry are special variables used by the mapping variable to create a mapping from a source variable to a single float. Map entry variables are defined following the model :
 
@@ -291,20 +291,20 @@ Map entry are special variables used by the mapping variable to create a mapping
 
     }
 
-*key* ([[Item Scoring API\#Value-Format|taoValueFormat]]) : The value be used to map a source value;{#value-formattaovalueformat-the-value-be-used-to-map-a-source-value}
+*key* ([[Item Scoring API\#Value-Format|taoValueFormat]]) : The value be used to map a source value;
 
 *value* (float) : The value to use if the source match the key;
 
 Rules
 -----
 
-###Templates{#templates}
+### Templates
 
-###Match Correct Template{#match-correct-template}
+#### Match Correct Template
 
-The match correct response processing template uses the [[Item Scoring API\#Custom-Rules|match]] operator to match the value of a response variable (idenfitified by RESPONSE) with its correct value (identified by RESPONSE). It sets the outcome variable SCORE to either 0 or 1 depending on the outcome of the test. A response variable called RESPONSE must have been declared and have an associated correct value. Similarly, the outcome variable SCORE must also have been declared. The template applies to responses of any baseType and cardinality though bear in mind the limitations of matching more complex data types.{#custom-rulesmatch-operator-to-match-the-value-of-a-response-variable-idenfitified-by-response-with-its-correct-value-identified-by-response-it-sets-the-outcome-variable-score-to-either-0-or-1-depending-on-the-outcome-of-the-test-a-response-variable-called-response-must-have-been-declared-and-have-an-associated-correct-value-similarly-the-outcome-variable-score-must-also-have-been-declared-the-template-applies-to-responses-of-any-basetype-and-cardinality-though-bear-in-mind-the-limitations-of-matching-more-complex-data-types}
+The match correct response processing template uses the [[Item Scoring API\#Custom-Rules|match]] operator to match the value of a response variable (idenfitified by RESPONSE) with its correct value (identified by RESPONSE). It sets the outcome variable SCORE to either 0 or 1 depending on the outcome of the test. A response variable called RESPONSE must have been declared and have an associated correct value. Similarly, the outcome variable SCORE must also have been declared. The template applies to responses of any baseType and cardinality though bear in mind the limitations of matching more complex data types.
 
-Note that the match correct template is strongly linked to the behavior of the [[Item Scoring API\#Custom-Rules|match]] operator : the correct variables and user’s responses associated to the same identifier (RESPONSE) must be the same type, the outcome variable SCORE will be set to 0 otherwise.{#custom-rulesmatch-operator-the-correct-variables-and-users-responses-associated-to-the-same-identifier-response-must-be-the-same-type-the-outcome-variable-score-will-be-set-to-0-otherwise}
+Note that the match correct template is strongly linked to the behavior of the [[Item Scoring API\#Custom-Rules|match]] operator : the correct variables and user’s responses associated to the same identifier (RESPONSE) must be the same type, the outcome variable SCORE will be set to 0 otherwise.
 
 This template rule is defined with the constant *TAO\_MATCHING.RULE.MATCH\_CORRECT*.
 
@@ -316,9 +316,9 @@ This template rule is defined with the constant *TAO\_MATCHING.RULE.MATCH\_CORRE
         setOutcomeValue("SCORE", 0);
     }
 
-####Map Response Template{#map-response-template}
+#### Map Response Template
 
-The map response processing template uses the [[Item Scoring API\#Custom-Rules|mapResponse]] operator to map the value of a response variable (idenfitified by RESPONSE) onto a value for the outcome SCORE. Both variables must have been declared and RESPONSE must have an associated mapping. The template applies to responses of any baseType and cardinality.{#custom-rulesmapresponse-operator-to-map-the-value-of-a-response-variable-idenfitified-by-response-onto-a-value-for-the-outcome-score-both-variables-must-have-been-declared-and-response-must-have-an-associated-mapping-the-template-applies-to-responses-of-any-basetype-and-cardinality}
+The map response processing template uses the [[Item Scoring API\#Custom-Rules|mapResponse]] operator to map the value of a response variable (idenfitified by RESPONSE) onto a value for the outcome SCORE. Both variables must have been declared and RESPONSE must have an associated mapping. The template applies to responses of any baseType and cardinality.
 
 This template rule is defined in the constant *TAO\_MATCHING.RULE.MAP\_RESPONSE*.
 
@@ -330,9 +330,9 @@ This template rule is defined in the constant *TAO\_MATCHING.RULE.MAP\_RESPONSE*
         setOutcomeValue("SCORE", mapResponse(null, getMap("RESPONSE"), getResponse("RESPONSE"))); 
     }
 
-####Examples{#examples}
+#### Examples
 
-####Single choice interaction{#single-choice-interaction}
+##### Single choice interaction
 
 For instance, a single choice interaction is initialized in the local matching engine as follows :
 
@@ -361,7 +361,7 @@ After the evaluation of the user’s response done you could get the outcome var
     //    "SCORE" : {"identifier":"SCORE", "value":1}
     // }
 
-#####Multiple choice interaction{#multiple-choice-interaction}
+##### Multiple choice interaction
 
     matchingInit ({
         "data"    :   {
@@ -390,9 +390,9 @@ After the evaluation of the user’s response, you can get the outcome variables
     // 1 with ["identifier2", "identifier1"] the list is not ordered
     // 0 with ["identifier2", "identifier12"] the user's response is not exact
 
-#####Map a text{#map-a-text}
+##### Map a text
 
-In the case of free text entry you will need to map the user’s responses with a set of predefined responses. The template [[Item Scoring API\#Map-Response-Template|MAP\_RESPONSE]] could be relevant in such a case.{#map-response-templatemap-response-could-be-relevant-in-such-a-case}
+In the case of free text entry you will need to map the user’s responses with a set of predefined responses. The template [[Item Scoring API\#Map-Response-Template|MAP\_RESPONSE]] could be relevant in such a case.
 
     matchingInit ({
         "data"    :   {
@@ -432,9 +432,9 @@ After collecting the user’s responses.
     // 0.1 for paris
     // 0 for Lyon
 
-###Custom Rules{#custom-rules}
+### Custom Rules
 
-The real power is [[Item Scoring API\#Custom-Rules|here]]. The TAO Matching API provides a set of operators to evaluate an item and its variables. Whatever the rule it can be interpreted both on client and server side.{#custom-ruleshere-the-tao-matching-api-provides-a-set-of-operators-to-evaluate-an-item-and-its-variables-whatever-the-rule-it-can-be-interpreted-both-on-client-and-server-side}
+The real power is [[Item Scoring API\#Custom-Rules|here]]. The TAO Matching API provides a set of operators to evaluate an item and its variables. Whatever the rule it can be interpreted both on client and server side.
 
 *Set of available operators* :
 
@@ -735,9 +735,9 @@ The real power is [[Item Scoring API\#Custom-Rules|here]]. The TAO Matching API 
          */
         , sum : function (options)
 
-####Examples{#examples}
+#### Examples
 
-####Partial scoring on tuple{#partial-scoring-on-tuple}
+##### Partial scoring on tuple
 
 Let think about a formula one racing. Where the question could be :
 

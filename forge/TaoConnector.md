@@ -15,7 +15,7 @@ Basic usage
 
 This should cover most use cases and consists of the following classes
 
-###taoUserService{#taouserservice}
+### taoUserService
 
 used to:
 
@@ -37,7 +37,7 @@ functions:
     -   **setLanguage**(languageCode) 2 letter uppercase code (‘EN’, ‘FR’, …)
     -   **changePassword**(oldPassword, newPassword)
 
-###taoAdminService{#taoadminservice}
+### taoAdminService
 
 taoAdminService extends taoUserService by functionalities that might not be available to every user
 
@@ -48,7 +48,7 @@ taoAdminService extends taoUserService by functionalities that might not be avai
     -   **getUserRoles**(userUri) returns a list of the roles of a specific user
     -   **getRoleUsers**(roleUri) returns a list of the users that have the specified role
 
-###taoSessionRequiredException{#taosessionrequiredexception}
+### taoSessionRequiredException
 
 taoSessionRequiredException is thrown whenever a functions is accessed that requires authentication without\
 providing a valid login first.

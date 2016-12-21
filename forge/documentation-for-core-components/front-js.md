@@ -20,7 +20,7 @@ The JavaScript code is split into web modules using the [AMD](http://en.wikipedi
 
 > **Any piece of JavaScript code into TAO must be a valid AMD module!**
 
-###Controllers and routing{#controllers-and-routing}
+### Controllers and routing
 
 In order to load code regarding the MVC routing used in TAO server side code, a routing strategy has been implemented on the client side.\
 The strategy works for any Ajax request made inside the TAO backend that display HTML (using the mime-type set in the response headers).
@@ -82,13 +82,13 @@ In the preview example, the controller `controller/preview/itemRunner` will look
         return itemRunnerController;
     });
 
-###Give arguments to the controller{#give-arguments-to-the-controller}
+### Give arguments to the controller
 
 Often the controller needs some data from the server, different solutions are available with each advantages and disadvantages:
 
-####Request parameters{#request-parameters}
+#### Request parameters
 
-The request parameters sent along with the Ajax request are by default available inside the controller. By example, a call to `/taoItems/ItemPreview/index?itemId=24` gives you an access to the `itemId` parameter. You can get from the [module configuration](http://requirejs.org/docs/api.html#config-moduleconfig) :{#config-moduleconfig}
+The request parameters sent along with the Ajax request are by default available inside the controller. By example, a call to `/taoItems/ItemPreview/index?itemId=24` gives you an access to the `itemId` parameter. You can get from the [module configuration](http://requirejs.org/docs/api.html#config-moduleconfig) :
 
     //module is a reserved dependency key, that gives you access to the module configuration
     define(['module'], function(module){
@@ -104,7 +104,7 @@ The request parameters sent along with the Ajax request are by default available
         return itemRunnerController;
     });
 
-####Module configuration{#module-configuration}
+#### Module configuration
 
 To add new options to the module configuration, you can update it outside the module. When you have **no other choices** it could be used inside the template:
 
@@ -121,7 +121,7 @@ To add new options to the module configuration, you can update it outside the mo
        } 
     });
 
-####DOM{#dom}
+#### DOM
 
 There is some use cases where the DOM can be used to store data: if you’ve already a list of data or a form with the needed values, why don’t you use them?
 
@@ -137,15 +137,14 @@ Then in your controller you can easily retrieve those values:
 
         var myController = {
             start : function(){
-                var $items = $('#my-item-list');{#my-item-list}
-
+                var $items = $('#my-item-list');
                 console.log($items.find('li').data('uri'));  //Oh Yeah! : ['uri1', 'uri2', ...]
             }
         };
         return myController;
     });
 
-####Ajax{#ajax}
+#### Ajax
 
 Some components needs to call directly the server to retrieve JSON data, this could be the best option if you’re able to limit the number of requests…
 
@@ -171,7 +170,7 @@ Some libraries can change your life, some of them are available:
 
 (\*) Check the code, as it is difficult to maintain without a dependency manager like [Bower](http://bower.io)
 
-###Optimizations{#optimizations}
+### Optimizations
 
 In production mode, TAO will not load each separate JavaScript files but bundles that contains some of these files concatenated and optimized. Those bundles are:
 
@@ -195,7 +194,7 @@ You can optimize one extension:
 Guidelines
 ----------
 
-###Coding style and linting{#coding-style-and-linting}
+### Coding style and linting
 
 In place of a formal guideline, lint your code. The following basic rules applies:
 
@@ -250,7 +249,7 @@ For a particular file
 
     grunt jshint:file --file=../../../taoQtiItem/views/js/runtime/qtiLoader.js
 
-###Documentation{#documentation}
+### Documentation
 
 JavaScript code MUST be documented using the http://usejsdoc.org/ format. Even though no web site documentation is generated, this format is used to have consistent comments accross the source code.
 

@@ -11,18 +11,18 @@ Past Roadmap Objectives
 TAO 2.4 - Non functionnal : TAO code base Quality Improvements : Unit tests - Database abstraction - Performances (Spring 2013)
 -------------------------------------------------------------------------------------------------------------------------------
 
-###1. PHP 5.4 support{#1-php-54-support}
+### 1. PHP 5.4 support
 
 To stay up to date according to PHP’s development, we plan to support PHP 5.4.
 
-###2. Tests Coverage{#2-tests-coverage}
+### 2. Tests Coverage
 
 This release doens’t include new specific features for users but will improve the overall quality of tao and avoid future regressions and bugs.\
 The team will try to reach a unit tests coverage of 80% of all the source code of tao. Currently all unit tests are checked upon release and help to detect any regression, side-effects of new features on the platform.
 
 The unit test framework used will be simpleTest(no change)
 
-###3. Database abstraction component replacement{#3-database-abstraction-component-replacement}
+### 3. Database abstraction component replacement
 
 Currently TAO uses AdoDB that is now deprecated. TAO would benefit in terms of maintenance and performances from using PDO native implementation now available in PHP.\
 In terms of effort, since TAO makes use of standard and simple SQL queries and since AdoDb works similarly, msot of the effort will eb concenntrated on the rewriting of the returned results handling (mixed objects instead of adoDBResult). Running the unit tests, should allow us to detect regressions during the migration. We target to replace AdoDB with [PDO (PHP Data Objects)](http://www.php.net/manual/en/intro.pdo.php). We anticipate to have some performances improvements with this migration.
@@ -34,11 +34,11 @@ The team will also check compliance of TAO 2.4 using mainstream SQL database ser
 
 Support of proprietary DBMS such as Microsoft SQL Server and Oracle are also on their way for next versions.
 
-###4. Users And Roles assignment Models{#4-users-and-roles-assignment-models}
+### 4. Users And Roles assignment Models
 
 A refactoring of our users amnagements is being performed with aim to improve the overall performances.
 
-###5. Performances{#5-performances}
+### 5. Performances
 
 Several improvements are going to be added to TAO 2.4
 
@@ -47,11 +47,11 @@ Several improvements are going to be added to TAO 2.4
 3.  PHP 5.4 comes with a major performance gain of approximatively 40%.
 4.  Default engine for Mysql tables are set to MyIsam, TAO has been checked successfully using INNODB engine that brings performances improvements
 
-###6. Extensions’ Mechanism{#6-extensions-mechanism}
+### 6. Extensions’ Mechanism
 
 TAO extensions mechanism had been reviewed and is going to be refactored, the main goal is to provides developers and partners a better set of hooks and Delegation Interface to customize TAO. One result of this work is that some extensions will be split up into multiple parts and benefits from these new features available in the platform. We will keep investigating new features that extensions developers may required in order to continually add hooks and Delegation interface into TAO.
 
-###7. miscellaneous{#7-miscellaneous}
+### 7. miscellaneous
 
 1.  Our file widget that you may configure for any new property has been corrected. (This feature enable for example to upload documents along an item)
 2.  The QTI authoring tool has been stabilized with more than 15 issues fixed.
@@ -60,22 +60,21 @@ TAO extensions mechanism had been reviewed and is going to be refactored, the ma
 TAO 2.3 - Ease of Install, Extension Management, third-party libraries dependencies rationalization (Aug 2012 TAO 2.3.1 Final Release)
 --------------------------------------------------------------------------------------------------------------------------------------
 
-###Easy to use installer\{#easy-to-use-installer}
-
+### Easy to use installer\
 Reduce time and effort to install and setup TAO, facilitate TAO install for evaluation before final deployment, make install easily done by non-IT users
 
 A new installer has been developped in TAO. It includes new user interfaces built as a wizard, contextual help for every setting asked to the users and feedback help.
 
-###Extensions Management{#extensions-management}
+### Extensions Management
 
 -   Extension manager . Tao would benefit from an embedded service enabling user to browse and install easily extensions directory providing dedicated features or custom adaptations of the tao platform.\
     The extension manager has been partly implemented in TAO 2.3, it is available under the settings pane of the backoffice. You amy easily install new extensions from there. The online directory exposing all available extensions hasn’t been set up yet.
 
 <!-- -->
 
--   Upgrading the platform Automatic update of the platform on startup (patching mechanism) (Feature \#511){#511}
+-   Upgrading the platform Automatic update of the platform on startup (patching mechanism) (Feature \#511)
 
-##Third-party libraries dependencies{#third-party-libraries-dependencies}
+### Third-party libraries dependencies
 
 Multiple instances of the same third party component were included in the platform using different versions. It was resulting into a more complex maintainance and also some performances decrease on the client side. A complete refactoring and review of the code has been implemented. Redundant libraries have been removed.
 
@@ -84,8 +83,7 @@ An improvement to the way libraries are included and laoded will be investigated
 TAO 2.2 - Advanced Grading and Resources Versioning capabilities (July 2012 TAO 2.2 Final Release - Partly implemented)
 -----------------------------------------------------------------------------------------------------------------------
 
-###1. Human-Based Scoring\{#1-human-based-scoring}
-
+### 1. Human-Based Scoring\
 *This work is achieved in close collaboration with the medical university: Karolinska Institute and is currently applied in the domain of Health-Care Education*
 
 \> **Status**\
@@ -103,12 +101,12 @@ This will enable the grading functionnality, includign the possibility to define
 \> \* Reconciliation user interface exposing all conflicting grades from graders and prompting for a reconciled score\
 \> \* Compute statistics from grades.
 
-###2. Resources (Item Bank) Versioning\*{#2-resources-item-bank-versioning}
+### 2. Resources (Item Bank) Versioning\*
 
 \>Items, Tests but also other resources of TAO evolve over time. CBA brings some specific challenges in terms of management like the issue of collecting data from items which have evolved between the data collection and the data analysis, etc.\
 \>his new capability enable to manage the different versions of resources, check the history of modifications and perform “version restore” operations.
 
-###3. Bug fixes{#3-bug-fixes}
+### 3. Bug fixes
 
 \>The TAO 2.2 will bring many bug fixes not yet release since the last 2.1 version of tao.\
 \>[List of Solved issues in 2.2](http://forge.taotesting.com/projects/tao/issues?set_filter=1&f[]=status_id&op[status_id]=o&f[]=fixed_version_id&op[fixed_version_id]=%3D&v[fixed_version_id][]=71&f[]=&c[]=status&c[]=priority&c[]=subject&c[]=author&c[]=assigned_to&c[]=updated_on&c[]=fixed_version&group_by=)
@@ -155,30 +153,21 @@ In addition, it should be possible to add set/bag activities with general select
 
 There are other features required for the workflow engine induced by the advanced tests section of this page.
 
-###Specific tools for specific tasks of CBA processes (TAO 2.0 released){#specific-tools-for-specific-tasks-of-cba-processes-tao-20-released}
+### Specific tools for specific tasks of CBA processes (TAO 2.0 released)
 
 The computer based assessment platform and authoring facilities are crucial but CBA usecases also require companion/extra tools for the different stakeholders to perform their usual tasks like an item translation tool with a translation memory, an item review/feedback tool, a test-taker free response coding tool with instructions, advanced statistical tool for results. Those tools are intended for non technical persons and are part of the whole CBA process. Thankfully, the TAO platform comes with a workflow engine. There is a need to identify classic processes used in CBA projects, and provide tools involved in those projects together with the TAO platform.
 
 Related tasks
 -------------
 
--   \#792 Governing CBA Organisational processes with TAO Advanced workflow features{#792-governing-cba-organisational-processes-with-tao-advanced-workflow-features}
-
--   \#799 Specific tools for specific tasks of CBA processes{#799-specific-tools-for-specific-tasks-of-cba-processes}
-
--   \#804 Advanced Tests - User Friendly Authoring tool, I18N, Sub-processes, …{#804-advanced-tests-user-friendly-authoring-tool-i18n-sub-processes}
-
--   \#814 Advanced Results{#814-advanced-results}
-
--   \#820 Ease of Installation{#820-ease-of-installation}
-
--   \#825 Ease of Use{#825-ease-of-use}
-
--   \#828 Delivery Media{#828-delivery-media}
-
--   \#833 Test Delivery Security{#833-test-delivery-security}
-
--   \#839 General Security Review{#839-general-security-review}
-
--   \#842 Standards & Softwares{#842-standards-softwares}
+-   \#792 Governing CBA Organisational processes with TAO Advanced workflow features
+-   \#799 Specific tools for specific tasks of CBA processes
+-   \#804 Advanced Tests - User Friendly Authoring tool, I18N, Sub-processes, …
+-   \#814 Advanced Results
+-   \#820 Ease of Installation
+-   \#825 Ease of Use
+-   \#828 Delivery Media
+-   \#833 Test Delivery Security
+-   \#839 General Security Review
+-   \#842 Standards & Softwares
 

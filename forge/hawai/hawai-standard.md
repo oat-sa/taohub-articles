@@ -28,26 +28,25 @@ TODO
 Document
 --------
 
-###What does HAWAI mean ?{#what-does-hawai-mean}
+### What does HAWAI mean ?
 
 HAWAI is the abbreviation for \*H\*yper \*A\*daptive \*W\*ork \*A\*rea \*I\*tem. The HAWAI Item as a very powerful item type enabling the creation of complex item types providing the whole palette of up-to-date graphical user interface design possibilities.
 
-###Why a HAWAI format ?{#why-a-hawai-format}
+### Why a HAWAI format ?
 
 In the TAO platform the HAWAI format fills the gap between the QTI items and the free form items. QTI items allows items’ creators to create items easily with our powerful QTI items but the format could be limited if the requirements are too specific. In the other hand free form items allows items’ creators to create powerful items but this format is intended to IT experts. Our format associated with our authoring tool allows items’ creator to create powerful items (in a defined scope) without any expert knowledge in IT.
 
-###What is the Hawaï standard ?{#what-is-the-hawai-standard}
+### What is the Hawaï standard ?
 
 The Hawaï standard is not just a document format it is a package of standard developed and used around the process of items’ creation :
 
--   [document format \#Hawaï\_format]{#hawai-format}
-
+-   [document format \#Hawaï\_format]
 -   widget standard
 -   template standard
 
 These standards will contribute by themselves to the building of a community. By sharing a model of widgets and templates the software could accept contribution from any creators.
 
-###Hawaï format{#hawai-format}
+### Hawaï format
 
 The hawaï format is actually a free form item which use the **briques de base** such as widgets and events model for its runtime … bla bla bla
 
@@ -58,77 +57,71 @@ The widgets are a way to explain needs of items’ creator. They allow items’ 
 
 We provide with our platform a format of xml document based on BLACK (an xml n-tiers model) to create widgets. The following documentation will present you this format
 
-###manifest{#manifest}
+### manifest
 
 *Attribute* : xmlns:{namespace\_name} [\*] : string
 
-*Contains* : [[Hawaï\_standard\#business|business]] [0-1]\{#businessbusiness-0-1}
+*Contains* : [[Hawaï\_standard\#business|business]] [0-1]\
+*Contains* : [[Hawaï\_standard\#layout|layout]] [0-1]\
+*Contains* : [[Hawaï\_standard\#action|action]] [0-1]\
+*Contains* : [[Hawaï\_standard\#content|content]] [0-1]\
+*Contains* : [[Hawaï\_standard\#knowledge|knowledge]] [0-1]
 
-*Contains* : [[Hawaï\_standard\#layout|layout]] [0-1]\{#layoutlayout-0-1}
-
-*Contains* : [[Hawaï\_standard\#action|action]] [0-1]\{#actionaction-0-1}
-
-*Contains* : [[Hawaï\_standard\#content|content]] [0-1]\{#contentcontent-0-1}
-
-*Contains* : [[Hawaï\_standard\#knowledge|knowledge]] [0-1]{#knowledgeknowledge-0-1}
-
-##business{#business}
+### business
 
 Widget Setting is the area where the business model of the widget will be defined.
 
-*Contains* : [[Hawaï\_standard\#widgetsetting|widgetSetting]] [1]{#widgetsettingwidgetsetting-1}
+*Contains* : [[Hawaï\_standard\#widgetsetting|widgetSetting]] [1]
 
-##layout{#layout}
+### layout
 
 see documentation about the black format [TODO Missing reference]
 
-###action{#action}
+### action
 
-*Contains* : [[Hawaï\_standard\#authoringaction|authoringaction]] [0-1]{#authoringactionauthoringaction-0-1}
+*Contains* : [[Hawaï\_standard\#authoringaction|authoringaction]] [0-1]
 
-*Contains* : [[Hawaï\_standard\#runtimeaction|runtimeaction]] [0-1]{#runtimeactionruntimeaction-0-1}
+*Contains* : [[Hawaï\_standard\#runtimeaction|runtimeaction]] [0-1]
 
-##authoring action{#authoring-action}
+### authoring action
 
 Authoring action allows widgets’ creator to associate an authoring behavior to his widget. All the behavior defined here will be available only during the authoring of the item.
 
-###content (a){#content-a}
+### content (a)
 
 see documentation about the black format\
 *content title is misunderstood by redmine. Redmine create a big white box…*
 
-*Contains* : [[Hawaï\_standard\#templates|templates]] [\*]{#templatestemplates}
+*Contains* : [[Hawaï\_standard\#templates|templates]] [\*]
 
-##init{#init}
+### init
 
 Init represents the initialization process and can be use either in the authoring context or in the runtime context.
 
-*Contains* : [[Hawaï\_standard\#expressions|expression]] [\*]{#expressionsexpression}
+*Contains* : [[Hawaï\_standard\#expressions|expression]] [\*]
 
-##(abstract) expression{#abstract-expression}
+### (abstract) expression
 
 Derived elements :\
-[[Hawaï\_standard\#lock|lock]], [[Hawaï\_standard\{#locklock-hawai-standard}
+[[Hawaï\_standard\#lock|lock]], [[Hawaï\_standard\#unlock|unlock]]
 
-unlock|unlock]]
-
-###knowledge{#knowledge}
+### knowledge
 
 see documentation about the black format
 
-###lock{#lock}
+### lock
 
 The lock expression allows widgets’ creator to lock a variable of his widget’s data model during the authoring of his widget.
 
 *Attribute* : variableIdentifier [1] : string Identifier of the variable
 
-###unlock{#unlock}
+### unlock
 
 The lock expression allows widgets’ creator to unlock a variable of his widget’s data model during the authoring of his widget.
 
 *Attribute* : variableIdentifier [1] : string Identifier of the variable
 
-###variabledeclaration{#variabledeclaration}
+### variabledeclaration
 
 Variable declaration allows widgets’ creator to associate a variable to a widget. The instance of the variable could be used by the business of the widget by instance :
 
@@ -138,7 +131,7 @@ Variable declaration allows widgets’ creator to associate a variable to a widg
 
 *Attribute* : name [1] : string Identifier of the variable. This identifier has to be unique.
 
-*Attribute* : type [1] : string Type of the variable. A variable has to be a scalar for now (see [[Hawaï\_standard\#variables\_opening|opening]]) :{#variables-openingopening}
+*Attribute* : type [1] : string Type of the variable. A variable has to be a scalar for now (see [[Hawaï\_standard\#variables\_opening|opening]]) :
 
 -   boolean;
 -   id;
@@ -153,11 +146,11 @@ Variable declaration allows widgets’ creator to associate a variable to a widg
 
 *Attribute* : wpVisible [0-1] : boolean Show the attribute during edition. The default value is true.
 
-*Contains* : [[Hawaï\_standard\#variabledependancy|variabledependancy]] [0-1]{#variabledependancyvariabledependancy-0-1}
+*Contains* : [[Hawaï\_standard\#variabledependancy|variabledependancy]] [0-1]
 
-*Contains* : [[Hawaï\_standard\#defaultvalue|defaultvalue]] [0-1]{#defaultvaluedefaultvalue-0-1}
+*Contains* : [[Hawaï\_standard\#defaultvalue|defaultvalue]] [0-1]
 
-###Example{#example}
+#### Example
 
 *1. A simple string variable*
 
@@ -175,15 +168,15 @@ If we want to provide a range of available values to a variable. By instance dur
         image
         text
 
-###variabledependancy{#variabledependancy}
+### variabledependancy
 
 Variable dependancy allows widget’s creator to associate a data model to the widget. With this element widget’s creator could associate together variables following some rules.
 
 *Attribute* : variableidentifier [1] : string The identifier of the variable.
 
-*Contains* : [[Hawaï\_standard\#variabledeclaration|defaultvalue]] [0-1]{#variabledeclarationdefaultvalue-0-1}
+*Contains* : [[Hawaï\_standard\#variabledeclaration|defaultvalue]] [0-1]
 
-###Example{#example}
+#### Example
 
 *1. lock a variable functions of the value of another*
 
@@ -192,11 +185,11 @@ Here we want to lock the variable *buttonLabel* if the value of the variable *bu
 
         
 
-###widgetsetting{#widgetsetting}
+### widgetsetting
 
-*Contains* : [[Hawaï\_standard\#template|template]] [\*]{#templatetemplate}
+*Contains* : [[Hawaï\_standard\#template|template]] [\*]
 
-*Contains* : [[Hawaï\_standard\#variabledeclaration|variabledeclaration]] [\*]{#variabledeclarationvariabledeclaration}
+*Contains* : [[Hawaï\_standard\#variabledeclaration|variabledeclaration]] [\*]
 
 Templates
 ---------
@@ -206,22 +199,22 @@ Template are the fastest way to create easy to create reusable items. These kind
 opening
 -------
 
-###defaultvalue opening{#defaultvalue-opening}
+### defaultvalue opening
 
-It will be used if the following [[Hawaï\_standard\#variables\_dependancies\_opening|opening]] is validated{#variables-dependancies-openingopening-is-validated}
+It will be used if the following [[Hawaï\_standard\#variables\_dependancies\_opening|opening]] is validated
 
-##expressions opening{#expressions-opening}
+### expressions opening
 
 The set of expressions which are provided to the widgets’ creator are not enough. Think about usefull expressions, an example of grammar and management of this one could be the tao matching API.
 
-###variables opening{#variables-opening}
+### variables opening
 
 Right now the black manages scalar variables but we are thinking about more complex variables such as object, array, tuple … and so on.
 
 -   Are these variables needed ?
 -   How to explain the needs ?
 
-###variables dependancies opening{#variables-dependancies-opening}
+### variables dependancies opening
 
 -   The regexp should be placed between the characters “/” and “/”
 -   variablelock is an expression which does not require a value. variableunlock will be its opposite.

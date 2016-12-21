@@ -24,7 +24,7 @@ An extension called taoUpdate is available since TAO 2.4 to allow System adminit
 7.  New Version of TAO is now deployed, the next step to finish the installation is install new extensions and migrate the data according to the new version. All extension are still jammed except taoUpdate that will allow you to do so. if once again you loose the link to continue the update just connect to “http://ROOT\_URL/taoUpdate/data/index?key=\$key” where key is still the same and had been now moved to taoUpdate/data/\
     ![](http://forge.taotesting.com/attachments/download/2573/S%C3%A9lection_050.png)
 
-###Offline Upgrade{#offline-upgrade}
+### Offline Upgrade
 
 If you require an offline upgrade, simply copy the standard package [TAO\_2.5\_build.zip](http://releases.taotesting.com/TAO_2.5_build.zip) in the folder taoUpdate/data/local/ . It will then follow same procedure that the online update.
 

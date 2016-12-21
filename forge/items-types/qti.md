@@ -61,7 +61,7 @@ The QTI PHP model is outlined by the UML model below. Not all properties and met
 
 You can find the complete source code documentation in the [PHP Doc](http://forge.tao.lu/docs/phpdoc/index.html) (Package: *taoQTI*, SubPackage: *models\_classes\_QTI*)
 
-###Sample code usage{#sample-code-usage}
+### Sample code usage
 
 To create QTI item programatically, you can directly use the QTI model described in the previous section.\
 Here is an example to create an Item with one single Interaction:
@@ -82,10 +82,8 @@ Here is an example to create an Item with one single Interaction:
     $myChoice3 = $myInteraction->createChoice();
 
     //edit the choice content or attributes:
-    $myChoice1->setContent('answer #1');{#1}
-
-    $myChoice2->setContent('answer #2');{#2}
-
+    $myChoice1->setContent('answer #1');
+    $myChoice2->setContent('answer #2');
     $myChoice3->attr('fixed', true);
 
     //remove a choice from "myInteraction"
@@ -110,15 +108,15 @@ QTI Item are managed by 3 (+1) Javascript libraries on the client side:
 -   QtiItem
 -   QtiRunner (+DefaultRenderer)
 
-###QtiCreator{#qticreator}
+### QtiCreator
 
 It contains the codes to author a qti item. The complete documentation on Qti Creator can be found here : [[Qti Creator]]
 
-###QtiItem{#qtiitem}
+### QtiItem
 
 It represents a QTI item in Javascript. It is closely tighted to the PHP implementation.
 
-###QtiRunner{#qtirunner}
+### QtiRunner
 
 It contains codes required to run a QTI item.
 

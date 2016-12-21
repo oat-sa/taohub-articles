@@ -29,7 +29,7 @@ A tutorial how to apply a patch on different environment may be found [here](htt
 Current version
 ---------------
 
-###[[TAO\_2\_6|TAO 2.6 June 2014]]{#tao-2-6tao-26-june-2014}
+### [[TAO\_2\_6|TAO 2.6 June 2014]]
 
 Available patchs
 
@@ -42,7 +42,7 @@ Available patchs
 -   [07\_fix\_jstimeout\_previewfpm\_cookieProb.patch](http://releases.taotesting.com/patchs/2.6/patchs/07_fix_jstimeout_previewfpm_cookieProb.patch)
 -   [08\_fix\_modal\_feeback.patch](http://releases.taotesting.com/patchs/2.6/patchs/08_fix_modal_feeback.patch)
 
-###[[TAO\_2\_5|TAO 2.5 October 2013]]{#tao-2-5tao-25-october-2013}
+### [[TAO\_2\_5|TAO 2.5 October 2013]]
 
 Available patchs
 
@@ -58,7 +58,7 @@ Available patchs
 Previous versions history
 -------------------------
 
-###[[TAO\_2\_5|TAO 2.4 April 2013]]{#tao-2-5tao-24-april-2013}
+### [[TAO\_2\_5|TAO 2.4 April 2013]]
 
 Available patchs
 
@@ -70,28 +70,28 @@ Available patchs
 -   [06\_SAStemplate\_QTIexport\_ResultTable.patch](http://releases.taotesting.com/patchs/2.4/patchs/06_SAStemplate_QTIexport_ResultTable.patch)
 -   [07\_QtiAuthoringTools\_ResultReport\_fix.patch](http://releases.taotesting.com/patchs/2.4/patchs/07_QtiAuthoringTools_ResultReport_fix.patch)
 
-###TAO 2.3 October 2012{#tao-23-october-2012}
+### TAO 2.3 October 2012
 
 Available patchs
 
 -   [01\_patch\_save\_lg\_save\_do\_not\_work.txt](http://releases.taotesting.com/patchs/2.3/patchs/01_patch_save_lg_save_do_not_work.txt)
 
-###TAO 2.2 July 2012{#tao-22-july-2012}
+### TAO 2.2 July 2012
 
-##TAO 2.1 August 2011{#tao-21-august-2011}
+### TAO 2.1 August 2011
 
 Available patchs
 
 -   [TAO\_2.1\_patch01.txt](http://releases.taotesting.com/patchs/2.1/patchs/TAO_2.1_patch01.txt) Generis Fix
 -   [TAO\_2.1\_patch02.txt](http://releases.taotesting.com/patchs/2.1/patchs/TAO_2.1_patch02.txt) Mac OSX compatibility
 
-###TAO 2.0 March 2011{#tao-20-march-2011}
+### TAO 2.0 March 2011
 
 Available patchs
 
 -   [00\_install\_in\_subfolder.patch](http://releases.taotesting.com/patchs/2.0.1/patchs/00_install_in_subfolder.patch)
 
-###TAO 1.3 December 2010{#tao-13-december-2010}
+### TAO 1.3 December 2010
 
 Available patchs
 
@@ -104,13 +104,13 @@ Available patchs
 -   [06\_patch\_1.3.patch](http://releases.taotesting.com/patchs/1.3/patchs/06_patch_1.3.patch)
 -   [06\_patch\_1.3.sql](http://releases.taotesting.com/patchs/1.3/patchs/06_patch_1.3.sql)
 
-###TAO 1.2 July 2010{#tao-12-july-2010}
+### TAO 1.2 July 2010
 
 Available patchs
 
 -   [0\_patch\_waterphoenix\_bug\_fix\_323.txt](http://releases.taotesting.com/patchs/1.2/patchs/0_patch_waterphoenix_bug_fix_323.txt)
 
-###TAO 1.1 March 2010{#tao-11-march-2010}
+### TAO 1.1 March 2010
 
 Available patchs
 
@@ -120,7 +120,7 @@ Available patchs
 -   [03\_editPropertyValues - multivalues.patch](http://releases.taotesting.com/patchs/1.1/patchs/03_editPropertyValues%20-%20multivalues.patch)
 -   [04\_editPropertyValues - multivalues numeric values fix.patch](http://releases.taotesting.com/patchs/1.1/patchs/04_editPropertyValues%20-%20multivalues%20numeric%20values%20fix.patch)
 
-###TAO 1.0 January 2010{#tao-10-january-2010}
+### TAO 1.0 January 2010
 
 Available patchs
 

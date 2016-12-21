@@ -22,7 +22,7 @@ A clean migration of Tao is only possible for Tao 2.5 or newer. If you want to m
 Migration steps
 ---------------
 
-###File migration{#file-migration}
+### File migration
 
 -   Copy the entire tao directory from the old server to the new server, make sure to include the .htaccess in the root folder and to set the correct file owner/rights
 -   Modify **install/directory/generis/common/conf/db.conf.php** to reflect your new database configuration\
@@ -37,7 +37,7 @@ Migration steps
 -   Update the folder value in **install/directory/tao/includes/configGetFile.php** to point to your **install/directory/taoDelivery/data/compiled/** directory\
     \><pre><?php return array(0 => array(‘secret’ =\> ‘1234567890abcde1234567890abcde12’,‘folder’ =\> ‘/install/directory/generis/data/tao/public/’));</pre>
 
-###Database migration{#database-migration}
+### Database migration
 
 \* Create a dump of the database, and make sure to include the routines (if you are using mysql, use mysqldump -R) and reimport it in the new system
 
@@ -49,13 +49,12 @@ In a standard install it is likely the path would end with /generis/data/
 
 \> For 2.6 onwards it is possible to store data outside the default directory, it is important to ensure that the FILES\_PATH in **install/directory/generis/common/conf/generis.conf.php** corresponds to the required directory:\
 \><pre>\
-\#generis paths\{#generis-paths}
-
+\#generis paths\
 …\
 define(‘FILES\_PATH’,‘/path/to/NEW\_DIRECTORY/’);
 
 </pre>
-###Finaly{#finaly}
+### Finaly
 
 -   Clear the cache of the filesources by emptying the folder **install/directory/generis/data/generis/cache/**
 

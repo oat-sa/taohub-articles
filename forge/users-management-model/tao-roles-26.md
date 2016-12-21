@@ -71,7 +71,7 @@ Back Office
 
 -   **System Administrator** This role is used for administrative tasks only. It is required to update your platform, install new extensions, change system settings among others. This role is automatically assigned to the super user during install.
 
-###Exceptions{#exceptions}
+### Exceptions
 
 -   “taoDelivery Manager” does NOT grant access to the delivery server, to prevent non test takers from taking tests
 

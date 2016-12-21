@@ -58,7 +58,7 @@ Service state storage abstraction
 
 The service state storage manages the state of any service that has been started. This can include among many the states of items (selected responses), states of the test(current item) and state of the delivery. This is always stored in the key-value persistence identified by **’serviceState’**.
 
-###Storing service states in the filesystem (default){#storing-service-states-in-the-filesystem-default}
+### Storing service states in the filesystem (default)
 
 The default persistence is defined in *generis/common/conf/default/persistences.conf.php* and will store the state of the services in the directory *generis/data/serviceState*.
 
@@ -66,7 +66,7 @@ The default persistence is defined in *generis/common/conf/default/persistences.
         'driver' => 'phpfile',
     )
 
-###Storing service states in a Redis server{#storing-service-states-in-a-redis-server}
+### Storing service states in a Redis server
 
 If you prefer to store these states in an alternativ storage copy the file *generis/common/conf/default/persistences.conf.php* to *generis/common/conf/persistences.conf.phpgeneris.conf.php* and modify the ‘serviceState’ entry to the following:
 
@@ -81,11 +81,11 @@ Delivery execution informations storage abstraction
 
 Delivery execution information cover everything related to what test taker has started/finished which delivery. The choice of the abstraction is done via the constant *DELIVERY\_EXECUTION\_HANDLER* in *generis/common/conf/generis.conf.php*.
 
-###Storing delivery execution informations in the ontology (default){#storing-delivery-execution-informations-in-the-ontology-default}
+### Storing delivery execution informations in the ontology (default)
 
     define('DELIVERY_EXECUTION_HANDLER', 'taoDelivery_models_classes_execution_OntologyService');
 
-###Storing delivery execution informations in a key-value server{#storing-delivery-execution-informations-in-a-key-value-server}
+### Storing delivery execution informations in a key-value server
 
 To switch to a KeyValue persistence the constant *DELIVERY\_EXECUTION\_HANDLER* in *generis.conf.php* needs to be set to *taoDelivery\_models\_classes\_execution\_KeyValueService*:
 
@@ -105,16 +105,15 @@ PHP session storage abstraction
 This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.\
 See also: http://php.net/manual/en/function.session-set-save-handler.php
 
-###System session storage (default){#system-session-storage-default}
+### System session storage (default)
 
 By default the PHP environment will handle all session storage and retrieval on a system-level.
 
-###Storing the session in a key-value server{#storing-the-session-in-a-key-value-server}
+### Storing the session in a key-value server
 
 To enable the user-level key-value storage of the php session uncomment the following line in *generis/common/conf/generis.conf*:
 
-    #default will use defautl php session handling{#default-will-use-defautl-php-session-handling}
-
+    # default will use defautl php session handling
     define('PHP_SESSION_HANDLER', 'common_session_php_KeyValueSessionHandler');
 
 The persistence used for the session is defined in *persistences.conf.php* and set to *SqlKvWrapper* by default. If you wish to switch to Redis exchange the session configuration with the following:
@@ -130,13 +129,13 @@ URI provider
 
 The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
 
-###Using the SQL server as URI provider (default){#using-the-sql-server-as-uri-provider-default}
+### Using the SQL server as URI provider (default)
 
 By default Generis uses the SQL database to generate new URIs
 
     define('GENERIS_URI_PROVIDER', 'DatabaseSerialUriProvider');
 
-###Using the key-value server as URI provider{#using-the-key-value-server-as-uri-provider}
+### Using the key-value server as URI provider
 
 To switch to a the advanced key-value implementation the constant GENERIS\_URI\_PROVIDER in generis.conf.php needs to be changed:
 

@@ -17,8 +17,7 @@ The TAO Platform provides a *Maintenance Mode* aiming at helping administrators 
 To set the system in *Maintenance Mode*, find the following constant and set it to *false*.
 
 
-    #application state{#application-state}
-
+    # application state
     define('SYS_READY', false);
 
 **Users** will then see the following page to be informed that the platform is under maintenance.
@@ -33,6 +32,5 @@ To set the system in *Maintenance Mode*, find the following constant and set it 
 To make the system running again and available to your users, set the *SYS\_READY* constant to *true*.
 
 
-    #application state{#application-state}
-
+    # application state
     define('SYS_READY', true);

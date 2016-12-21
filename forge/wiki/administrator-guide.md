@@ -18,13 +18,12 @@ Administrator Guide
 2. [[Installation and Upgrading]]
 ---------------------------------
 
-###2.1. [[InstallTaoInstance|Quick install of a TAO instance]]{#21-installtaoinstancequick-install-of-a-tao-instance}
+### 2.1. [[InstallTaoInstance|Quick install of a TAO instance]]
 
 3. Configuration Settings
 -------------------------
 
-###3.1. [[Deployment Mode]]\{#31-deployment-mode}
-
+### 3.1. [[Deployment Mode]]\
 3.2. [[Security and Performance|Security]]\
 3.3. [[Site administration setting|Site administration settings]]\
 3.4. [[Maintenance]]\

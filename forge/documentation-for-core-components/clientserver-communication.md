@@ -35,7 +35,7 @@ The mechanism is composed by the following components :
 -   An Ajax Wrapper (Client)
 -   A common Ajax Response (Server)
 
-###Ajax Wrapper{#ajax-wrapper}
+### Ajax Wrapper
 
 The ajax wrapper is located in the meta extension TAO (/tao/views/js/tao.ajaxWrapper.js).\
 It is based on the *ajax* function of the library [jQuery](http://jquery.com)
@@ -57,7 +57,7 @@ The behavior of its parent function has been adapted to control every exchanges 
 (string) **position** The position to add the function in the queue of callback error functions (‘begin’, ‘end’, integer to represent the position)|Add a default error callback. This success callback will be called after each ajax requests which encoutered a problem|\
 |**removeErrorCallback**|(string) **position** The position of the function to remove|Remove a default error callback function|
 
-###Common Ajax Response{#common-ajax-response}
+### Common Ajax Response
 
 The common ajax response is located in the class **common\_AjaxResponse**. It ensures the homogeneity of the communication from the server to the client.
 
@@ -106,7 +106,7 @@ With this tool, TAO is able to control its executed code. So when the server enc
 Examples
 --------
 
-###Make a classic ajax request{#make-a-classic-ajax-request}
+### Make a classic ajax request
 
 **client**
 

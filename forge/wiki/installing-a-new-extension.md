@@ -21,13 +21,13 @@ Download
 
 Depending on your install there are two different ways to obtain an extension:
 
-###Composer Install{#composer-install}
+### Composer Install
 
 If you installed TAO using composer simply run the following line in the root of TAO:
 
     composer require PACKAGE_NAME
 
-###Packaged Version{#packaged-version}
+### Packaged Version
 
 If you installed TAO from a package downloaded at http://www.taotesting.com you will need to:
 

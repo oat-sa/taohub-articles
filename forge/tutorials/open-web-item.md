@@ -41,7 +41,7 @@ In this section you will learn how to create your first Open WEB Item. The follo
 -   Transform this Web application to integrate the TAO APIs.
 -   Package and import the item into a TAO Platform instance.
 
-###2.1. An existing Web application as a Open WEB Item{#21-an-existing-web-application-as-a-open-web-item}
+### 2.1. An existing Web application as a Open WEB Item
 
 The first step of this tutorial consists in download and inspect [an existing Web application](http://forge.taotesting.com/attachments/download/2640/my-first-owi-stub.zip) that we provide you. You can make work this item *out of the box* to get an overview. To do so, unzip the archive on your file system, and double-click the `index.html` file.
 
@@ -70,7 +70,7 @@ The structure of the item is architectured as followed:
 
 *“The general structure of this item was chosen arbitrarily. When you develop a Open WEB Item, you can organize its content as you want. The only convention to respect is to put an `index.html` file, acting as the entry point of your item, at the root of the folder hierarchy like in the organization above.”*
 
-###2.2. TAO Item API integration{#22-tao-item-api-integration}
+### 2.2. TAO Item API integration
 
 The [[Item API]] contains different implementations : one for the preview in TAO, one for the delivery time and one for the development.\
 Once the item is into TAO, the [[Item API]] is loaded **automatically** into your item. But to help you at the level of the item development you can include the [taoItemApi-stub.js](http://forge.taotesting.com/attachments/download/2637/taoItemApi-stub.js) into your item. It contains the development implementation plus a mechanism that starts it if the item isn’t in TAO.
@@ -80,7 +80,7 @@ Download it and add a reference at the end of the `index.html` file.
 
 
 
-####Modify the stub of the Item{#modify-the-stub-of-the-item}
+#### Modify the stub of the Item
 
 We will now add the JavaScript instructions needed to interact with TAO when the test taker clicks on the *Validate* button, at the bottom of the Open WEB Item. First, locate the following instructions at the end of the `scripts/biggestthing.js` file.
 
@@ -116,12 +116,9 @@ To do so, modify the `onValidateClicked` method body like this:
 
             //disable actions once validated
             itemApi.beforeFinish(function disableActions(){
-                    changeButtonState($('#validate'), true);{#validate-true}
-
-                    changeButtonState($('#next'), true);{#next-true}
-
-                    changeButtonState($('#previous'), true);{#previous-true}
-
+                    changeButtonState($('#validate'), true);
+                    changeButtonState($('#next'), true);
+                    changeButtonState($('#previous'), true);
             });
 
             itemApi.finish();

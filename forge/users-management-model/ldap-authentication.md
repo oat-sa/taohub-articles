@@ -23,7 +23,7 @@ https://github.com/oat-sa/generis-auth-ldap
 Installation
 ------------
 
-###Preparation{#preparation}
+### Preparation
 
 -   Ensure the PHP LDAP module is installed, and enabled for your apache config.
 -   Ensure composer is installed (https://getcomposer.org/download/)
@@ -66,5 +66,5 @@ Additional settings
 
 TAO uses ZendFramework 2 LDAP adapter, list of options it supports and some guidlines on usage can be found here:
 
-https://packages.zendframework.com/docs/latest/manual/en/modules/zend.authentication.adapter.ldap.html\#server-options{#server-options}
+https://packages.zendframework.com/docs/latest/manual/en/modules/zend.authentication.adapter.ldap.html\#server-options
 
