@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: General_features
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-10-24 16:09:52'
@@ -37,4 +35,5 @@ Settings part enables you to choose the interface and data language.
 **3** **Media manager** ![](../resources/1-media.png)
 
 With the Media Manager you can manage (upload, delete, etc.) the different resources (images, videos, etc.) used in TAO.
+
 

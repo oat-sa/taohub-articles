@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Installation_and_Upgrading
 author:
     - 'Gyula Szucs'
 created_at: '2016-11-22 16:48:51'
@@ -26,7 +24,8 @@ Usages:
 
      ./installTaoInstance.sh act https://raw.githubusercontent.com/oat-sa/deploy-test-package/nightly/act/composer.json?token=xxx taoAct
 
-\>h2. Warning<br/>
-\><br/>
+\>h2. Warning\
+\>\
 \>**Only use it in development environment!**
+
 

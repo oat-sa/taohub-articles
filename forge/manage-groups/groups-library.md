@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Groups
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-03 14:15:47'
@@ -21,4 +19,5 @@ You can move groups in order to change their belonging class by drag and drop, o
 Different actions are available by right clicking (edit, new class, new group, move, duplicate, delete) depending on whether a class or a group is selected.
 
 You can filter the Groups library. Only the groups and classes labels that meet the string enter in the text field will be displayed.
+
 

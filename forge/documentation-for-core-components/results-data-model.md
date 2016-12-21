@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Patrick Plichart'
 created_at: '2013-10-15 13:23:01'
@@ -25,4 +23,5 @@ An itemResult is identified by the instanciation of the item, in other words if 
 Internally into TAO, the identifier of the item results is arising from the callId of the item delivery service.
 
 A variable may be related to an itemresult or may directly refer to a test, which means a test variable rather than an item variable.
+
 

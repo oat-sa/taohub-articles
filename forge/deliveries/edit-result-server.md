@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 15:55:25'
@@ -16,4 +14,5 @@ Edit result server
 
 -   The Edit result server box is displayed when a result server is selected in the Result server library box.
 -   The Edit result server box provides the result server properties which are defined in the parent classes properties and are available for modification.
+
 

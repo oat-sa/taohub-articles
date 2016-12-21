@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-11 15:24:21'
@@ -50,4 +48,5 @@ The [[Tests Advanced authoring tool]] tab is only available if you installed Pro
 This tab permits to create a complex list of items.<br/>
 
 Indeed, without the Processes tab, it is only possible to create tests with a sequential list of items.
+
 

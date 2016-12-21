@@ -57,3 +57,4 @@ This will activate the user modules in both the item preview and the old test/it
             'taoExtension/userScripts/myModule2'
         )
     ));
+

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-02-08 14:42:30'
@@ -23,4 +21,5 @@ Only these three are important:
 -   The *extension* table contains the list of TAO/Generis extensions.
 
 ![](http://forge.taotesting.com/attachments/396/tao-database-schema.png)
+
 

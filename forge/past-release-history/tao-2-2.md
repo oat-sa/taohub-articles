@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Past_release_history
 author:
     - 'Lionel Lecaque'
 created_at: '2011-12-02 11:53:53'
@@ -60,4 +58,5 @@ Migration
 ---------
 
 [[Migration 2 1 to 2 2|Migration 2.1 to 2.2]]
+
 

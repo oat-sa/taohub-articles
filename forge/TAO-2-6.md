@@ -12,12 +12,13 @@ TAO 2.6
 
 ### REST
 
-{{collapse(Details …)<br/>
-Exposes our API thanks to a REST wrapper<br/>
-![](resources/RestWrapper.png)<br/>
+{{collapse(Details …)\
+Exposes our API thanks to a REST wrapper\
+![](resources/RestWrapper.png)\
 }}
 
 ### Update
 
 Adapting Extensions to [[Code changes 2.5 to 2.6]]
+
 

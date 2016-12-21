@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: FAQ
 author:
     - 'Christophe Noel'
 created_at: '2016-03-18 11:53:36'
@@ -130,4 +128,5 @@ If the release doesn’t need to run a script, you still need to update the vers
 **Javascript / CSS**
 
 Finally, **make sure you compile any javascript/css if needed.**
+
 

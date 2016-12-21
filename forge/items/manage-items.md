@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-04-21 16:04:55'
@@ -74,7 +72,7 @@ Manage item content pane¶
 
 ![](../resources/items-content.png)
 
-\* In the Edit item pane, when you click on the Content button, the Management of the item content box is displayed<br/>
+\* In the Edit item pane, when you click on the Content button, the Management of the item content box is displayed\
  \* When the item has no content, the Management of the item content box allows you to import content for your item.<br/>
 
  \* When the item has content, the Management of the item content box also allows you to download this content on your computer.
@@ -159,4 +157,5 @@ Import pane¶
  \* If you choose to import your data to QTI Package, you must indicate the QTI item you want to import (in ZIP format).<br/>
 
  \* If you choose to import your data to XHTML Package, you must indicate the XHTML item you want to import (in ZIP format).
+
 

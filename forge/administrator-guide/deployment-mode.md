@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-02-11 11:00:03'
@@ -49,4 +47,5 @@ What defines categories: where are test takers, where stands the delivery, where
 -   infrastructure to handle database and several server
 -   server farm : http caching, cpu in parallel, database load balancing, https load balancing, session sharing
 -   how/when people pass the test, from where
+
 

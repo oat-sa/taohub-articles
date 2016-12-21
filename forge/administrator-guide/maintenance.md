@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-02-03 16:01:34'
@@ -34,3 +32,4 @@ To make the system running again and available to your users, set the *SYS\_READ
 
     # application state
     define('SYS_READY', true);
+

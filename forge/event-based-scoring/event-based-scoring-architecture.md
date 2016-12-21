@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Event_Based_Scoring
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-10 11:44:02'
@@ -31,7 +29,7 @@ This component parses the query formulated with the proposed language and invoke
 3. Toolbox of functions
 -----------------------
 
-The Toolbox contains all functions needed in the assessment. One can enumerate three kinds<br/>
+The Toolbox contains all functions needed in the assessment. One can enumerate three kinds\
 of functions:
 
 -   Simple Matching and Scoring functions calculate the score according to a direct comparison between the value of an event element and the correct response.
@@ -41,9 +39,10 @@ of functions:
 4. Variable Generator
 ---------------------
 
-The Variable Generator intercepts the variables’ values and creates a specific list of variables<br/>
+The Variable Generator intercepts the variables’ values and creates a specific list of variables\
 that can be used in two manners:
 
 -   As output of the scoring engine;
 -   As input for the Variable Persistence Component in order to set the variables’ values in the Result Ontology
+
 

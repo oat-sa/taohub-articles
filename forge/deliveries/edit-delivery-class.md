@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 15:18:15'
@@ -30,4 +28,5 @@ Edit delivery class
     -   Delivery process
 -   The Simple mode allows creating properties from widgets and previously created lists.
 -   The Advanced mode allows creating properties from widgets and resources of the platform.
+
 

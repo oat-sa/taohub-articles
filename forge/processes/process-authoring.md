@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Processes
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-04-22 09:46:38'
@@ -73,4 +71,5 @@ Compilation box
 -   The Compilation box compiles the activities composing the selected process. The compilation is necessary for the process execution.<br/>
 
     ~~En attente de la documentation développeurs~~
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-04 17:33:54'
@@ -38,4 +36,5 @@ The example below lists the source of the taoItem’s extension bootstrap, locat
     $bootStrap->dispatch();
 
 ![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Overview|Return to Top]]
+
 

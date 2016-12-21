@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-11 16:09:15'
@@ -37,4 +35,5 @@ The main functions of this tab:
 -   [[Create table in Groups|Create table]]
 -   [[Export in Groups|Export]]
 -   [[Import in Groups|Import]]
+
 

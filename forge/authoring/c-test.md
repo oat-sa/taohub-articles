@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Authoring
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-19 19:50:33'
@@ -21,4 +19,5 @@ To create a C-Test you have to write the text into the text field. Mark (double 
 There is one parameter to define, it is the time allowed to fill in the gaps. The test taker won’t be able to access a following text before the specified time has expired.
 
 Apply your changes by clicking on the Save button.
+
 

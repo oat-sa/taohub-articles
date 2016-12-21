@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-09-13 11:20:33'
@@ -76,4 +74,5 @@ Open up your favorite web browser and go to the TAO backoffice at http://www.myd
 -   Click on the Import button at the bottom of the form.
 
 **Congratulations, you successfuly imported your first set of Test Takers using the CSV Import feature of TAO!**
+
 

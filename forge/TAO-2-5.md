@@ -21,8 +21,8 @@ Currently TAO implements QTI 2.0 for items, It covers the different item interac
 
 The plan is to support :<br/>
 
-- Math ML<br/>
-- Assesment Test, section and information item model<br/>
+- Math ML\
+- Assesment Test, section and information item model\
 From the execution perspective, this is going to be implemented by a new QTI State Machine (allowing for branching and general rules evaluation), but for test banking, the QTI format will be used for storing and authoring. (similarly to the way we proceed for QTI (the rendering html is only used at delivery preparation time).<br/>
 
 This includes Time limitations, Test structure, navigation submission, Pre-conditions and branching and Test Level FeedBack.<br/>
@@ -31,36 +31,36 @@ This includes Time limitations, Test structure, navigation submission, Pre-condi
 
 Detailed planned QTI coverage :
 
-|*.Feature |*.TAO 2.4 |\_.TAO 2.5 | Unplanned|<br/>
-|Item session | support of interacting and closed state | Fully implement other states : modal feedback, suspended, solution, review<br/>
-Support of item session control options whatsoever (this will be made available with the implementation of QTI test, see later slides)||<br/>
-|Item variables |Items Variables and Outcome Variables are solely implemented to output the item score for an item | Outcome variable support||<br/>
-|Content Model |implemented, except the following entities|Rubric block;FeedbackElement (see 9. Feedback);|Printed variable (see 10. Item emplates); InfoControl ; Number formatting rules|<br/>
-|MathML|Currently, no support of MathML at all| Planning to add support of MathML both in authoring and runtime; Combination of Template Variables and MathML||<br/>
-|Supported Interactions|<br/>
-Choice<br/>
-Inline Choice<br/>
-Associate<br/>
-Order<br/>
-Match<br/>
-Gap Match<br/>
-Hottext<br/>
-Text Entry<br/>
-Extended text<br/>
-Hotspot<br/>
-Graphic Order<br/>
-Graphic Associate<br/>
-Graphic Gap Match<br/>
-Select Point<br/>
-Slider|<br/>
-Media Interaction (music, video: a must)<br/>
-End Attempt Interaction (required to trigger feedbacks)|<br/>
-Position object interaction (not planned, quite similar to graphic gap)<br/>
-Upload Interaction<br/>
-Drawing Interaction|<br/>
-|Response Processing| The three standard templates are implemented: match correct, map response and map response point.|Allows for custom response processing rule (XML)|Provide commodity to ease the writing of custom response processing rule (limitation to the list of currently implemented operators listed in section 15. Expressions)|<br/>
-|Feedback |/|Support for QTI adaptive items;Feedback rule definition;Feedback block and feedback inline;Feedback modal||<br/>
-|Item templates|/|/|Support of template declaration and printed variable in authoring;Template processing rule definition;Support of template processing and printed variable on runtime;Enable generation of many versions of an item dynamically on runtime;Enable the cloning engine : batch item creation from an item template|<br/>
+|*.Feature |*.TAO 2.4 |\_.TAO 2.5 | Unplanned|\
+|Item session | support of interacting and closed state | Fully implement other states : modal feedback, suspended, solution, review\
+Support of item session control options whatsoever (this will be made available with the implementation of QTI test, see later slides)||\
+|Item variables |Items Variables and Outcome Variables are solely implemented to output the item score for an item | Outcome variable support||\
+|Content Model |implemented, except the following entities|Rubric block;FeedbackElement (see 9. Feedback);|Printed variable (see 10. Item emplates); InfoControl ; Number formatting rules|\
+|MathML|Currently, no support of MathML at all| Planning to add support of MathML both in authoring and runtime; Combination of Template Variables and MathML||\
+|Supported Interactions|\
+Choice\
+Inline Choice\
+Associate\
+Order\
+Match\
+Gap Match\
+Hottext\
+Text Entry\
+Extended text\
+Hotspot\
+Graphic Order\
+Graphic Associate\
+Graphic Gap Match\
+Select Point\
+Slider|\
+Media Interaction (music, video: a must)\
+End Attempt Interaction (required to trigger feedbacks)|\
+Position object interaction (not planned, quite similar to graphic gap)\
+Upload Interaction\
+Drawing Interaction|\
+|Response Processing| The three standard templates are implemented: match correct, map response and map response point.|Allows for custom response processing rule (XML)|Provide commodity to ease the writing of custom response processing rule (limitation to the list of currently implemented operators listed in section 15. Expressions)|\
+|Feedback |/|Support for QTI adaptive items;Feedback rule definition;Feedback block and feedback inline;Feedback modal||\
+|Item templates|/|/|Support of template declaration and printed variable in authoring;Template processing rule definition;Support of template processing and printed variable on runtime;Enable generation of many versions of an item dynamically on runtime;Enable the cloning engine : batch item creation from an item template|\
 |Assessment Test|/|Navigation mode (linear, non-linear);<br/>
 
 Submission mode (individual, simultaneous);<br/>
@@ -79,7 +79,7 @@ Precondition and branch rules;<br/>
 
 QTI test package validation, import and export;||
 
-The authoring tool of test will be reviewed to build compliant QTI 2.1 test descriptions<br/>
+The authoring tool of test will be reviewed to build compliant QTI 2.1 test descriptions\
 }}
 
 ### 2. [Learning Platform Interoperability - LTI](http://www.imsglobal.org/toolsinteroperability2.cfm)
@@ -98,7 +98,7 @@ Depending on the configuration, it would allow to link from moodle 2.2 Learning 
 
 LTI is about linking the services and from that perspective different from a content interoperability standard, the content provided by a tool producer is also serviced by this tool.
 
-LTI 1.1.1 will be implemented in TAO 2.5 according to this implementation guide http://www.imsglobal.org/LTI/v1p1p1/ltiIMGv1p1p1.html<br/>
+LTI 1.1.1 will be implemented in TAO 2.5 according to this implementation guide http://www.imsglobal.org/LTI/v1p1p1/ltiIMGv1p1p1.html\
 From the point of view of the standard, the whole specification is planned to be implemented and from a tool perspective :<br/>
 
 - The test delivery service of tao will be exposed as a tool available (TP) from LTI compliant TC.<br/>
@@ -111,7 +111,7 @@ Documentation of TAO will be updated from an administrative perspective (configu
 
 ### 3. Moodle/Sakaï integration
 
-{{collapse(Details…)<br/>
+{{collapse(Details…)\
 As a consequence on our work on LTI, TAO tests will be embeddable within Moodle and Sakaï courses. The required student/learner information for identification will be exchanged automatically.<br/>
 
 }}
@@ -130,13 +130,13 @@ So far, we were generating the source code from our architecture models.
 
 The advantages were the following :<br/>
 
-- Continuous consistency between the architecture and the source code<br/>
+- Continuous consistency between the architecture and the source code\
 - High quality models as they start from an abstract design.
 
 The drawbacks were the following :<br/>
 
-- PHP5 generation in OS were restricted to argouml tool<br/>
-- Access to external contributions may be limited<br/>
+- PHP5 generation in OS were restricted to argouml tool\
+- Access to external contributions may be limited\
 - the software engineering is not “common”
 
 So, here is the suggestion on the table :<br/>
@@ -147,10 +147,10 @@ Advantages :<br/>
 
 - Consistency would be preserved.<br/>
 
-- No tool dependency, use what the hell you want just yet another uml editor<br/>
+- No tool dependency, use what the hell you want just yet another uml editor\
 - common software dev./ access toe external development.<br/>
 
-- benefit from the community and the partners more easily<br/>
+- benefit from the community and the partners more easily\
 - Changing the Sw dev process would be simple.
 
 Criticisms :<br/>
@@ -169,9 +169,9 @@ From the point of view of the process and ongoing developments over time, the co
 
 ### 5. Assessment delivery on mobile devices
 
-{{collapse(Details…)<br/>
-Address today’s test takers technological environments and nomadic access<br/>
-Mobile device compatibility (smart phones, tablets…). Ipad IOS, Android, google OS<br/>
+{{collapse(Details…)\
+Address today’s test takers technological environments and nomadic access\
+Mobile device compatibility (smart phones, tablets…). Ipad IOS, Android, google OS\
 Focus will be set on :
 
 -   IOS
@@ -187,7 +187,7 @@ The TAO platform will remain delivered on mobile devices through the web browser
 
 ### 7. (Unplanned) “SIF”
 
-### 8. (Unplanned) SCORM/ Elearning platforms<br/>
+### 8. (Unplanned) SCORM/ Elearning platforms\
 Manage test and items from tao as Scorm compliant elearning objects.
 
 ### 9. (Unplanned) Provide connectors to legacy systems. Ex. : The tests takers database would reflect what is available from enterprise/school/system databases.
@@ -198,4 +198,5 @@ Migration
 ---------
 
 Please see [[Migration 2.4 to 2.5]] for instructions on adoptions that might be required in your extensions
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-12-28 16:23:41'
@@ -47,4 +45,5 @@ The following rights are needed to properly access data stored by TAO:
 -   CONNECT on the database
 -   TEMPORARY on the database
 -   USAGE on the *plpgsql* language
+
 

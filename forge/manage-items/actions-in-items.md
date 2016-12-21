@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-09 16:30:20'
@@ -19,4 +17,5 @@ When a **class** is selected in the Item library, only the New class, New item, 
 When an **item** is selected the Item library, only the Duplicate, Move, Preview, Meta data icons are enabled.
 
 The Search, Delete, Lists, and Export icons are enabled for both.
+
 

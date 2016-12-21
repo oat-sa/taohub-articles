@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Past_release_history
 author:
     - 'Lionel Lecaque'
 created_at: '2012-06-15 10:19:03'
@@ -24,4 +22,5 @@ see [[Plans for the future]]
 -   Access Control Layers Custom Roles UI
 
 We also resolved 80 software issues that had been submitted on the Forge and did many core optimizations to keep improving performances and code maintainability
+
 

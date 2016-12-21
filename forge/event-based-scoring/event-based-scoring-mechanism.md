@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Event_Based_Scoring
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-10 11:43:27'
@@ -51,4 +49,5 @@ Three main tasks have to be implemented to ensure the event based scoring. See t
 The global process of scoring is shown in the Figure below:
 
 ![](http://forge.taotesting.com/attachments/download/370/RM_EBS_overview.jpg)
+
 

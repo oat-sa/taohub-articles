@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Wiki
 author:
     - 'Cyril Hazotte'
 created_at: '2015-08-10 10:43:24'
@@ -51,4 +49,5 @@ Install
 -   Log into TAO as a System Administrator.
 -   Open the Extensions Manager (Under “Settings” in the upper right corner).
 -   Select the extension you downloaded and click on install (If the extension is missing in the list please verify the path and the file permissions).
+
 

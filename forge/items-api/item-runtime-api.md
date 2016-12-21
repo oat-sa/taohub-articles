@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: 'Items''_API'
 author:
     - 'Joel Bout'
 created_at: '2011-03-04 11:30:38'
@@ -31,7 +29,7 @@ The **taoApi** provides the following services:
 
 \* Set and get pre-defined variables. These variables are then used in the TAO platform, like the `setScore` , `getSubjectLogin` or `setAnsweredValues` functions.<br/>
 
- \* Set and get your variables using the `set/getUserVar` function<br/>
+ \* Set and get your variables using the `set/getUserVar` function\
  \* Communicate with a server-side platform. You can retrieve data from a server-side platform and push the collected data. By default, the API is connected to TAO, using authentication by token.<br/>
 
  \* Trace the events. Each action made by the user (clicks, mouse move, entered text, etc.) can be logged by the API and sent to the server-side platform.<br/>
@@ -284,4 +282,5 @@ The interface below outlines the available methods:
     function initEventServices(source, destination);
 
 ![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Item\_Runtime\_API|Return to Top]]
+
 

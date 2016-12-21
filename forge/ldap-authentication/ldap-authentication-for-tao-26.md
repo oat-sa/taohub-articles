@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: LDAP_Authentication
 author:
     - 'Joel Bout'
 created_at: '2015-03-30 14:18:33'
@@ -59,4 +57,5 @@ Limitations
 
 -   LDAP authentication in Tao 2.6 will replace the Tao user authentication, so you will not be able to use your Tao login anymore
 -   LDAP authentication in Tao 2.6. only works for test-takers
+
 

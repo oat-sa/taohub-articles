@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-14 10:24:32'
@@ -107,3 +105,4 @@ The main function of this section:
 
 8. [[Deliveries Advanced authoring tool]] (in the Deliveries part)
 ------------------------------------------------------------------
+

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Dieter Raber'
 created_at: '2014-01-15 09:37:08'
@@ -14,6 +12,7 @@ Directory structure for views
 
 ![](../resources/directory-structure.png)
 
-Download this structure (Note: all files are dummies)<br/>
+Download this structure (Note: all files are dummies)\
 [directory-structure.zip](../resources/directory-structure.zip)
+
 

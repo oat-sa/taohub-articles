@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-02-29 15:29:32'
@@ -21,4 +19,5 @@ You can move items in order to change their belonging class by drag and drop, or
 Different actions are available by right clicking (edit, new class, new item, move, duplicate, delete) depending on whether a class or an item is selected.
 
 You can filter the Items library. Only the items and classes labels that meet the string enter in the text field will be displayed.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-02-15 15:28:16'
@@ -63,4 +61,5 @@ Apache mod\_rewrite is correctly installed but I still have 404 Page Not Found E
 --------------------------------------------------------------------------------------
 
 Check if your Apache configuration contains an **AllowOverride** statement set to **None**. It might prevent TAO .htaccess files to be correctly processed.
+
 

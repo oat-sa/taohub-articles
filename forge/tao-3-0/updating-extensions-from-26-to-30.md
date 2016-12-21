@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_3_0
 author:
     - 'Joel Bout'
 created_at: '2014-08-19 14:29:10'
@@ -25,4 +23,5 @@ Steps required:
 <!-- -->
 
 -   “New Item” is no longer shared by all item types, but has been moved to taoQtiItem. Custom item types need to add their own “add Item” action.
+
 

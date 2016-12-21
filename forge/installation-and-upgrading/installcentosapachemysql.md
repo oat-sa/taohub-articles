@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Installation_and_Upgrading
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-09 16:42:44'
@@ -206,4 +204,5 @@ For this last step of the installation process, open up your favourite web brows
 Check if all the System Configuration entries are “green”. If it is not the case, please check that each step of this guide are done. If you still experience issues, feel free to contact us on the forum.
 
 Finally, follow the instructions to finalize your TAO Platform installation.
+
 

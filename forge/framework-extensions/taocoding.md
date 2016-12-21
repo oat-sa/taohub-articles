@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Framework-Extensions
 author:
     - 'Joel Bout'
 created_at: '2012-06-15 16:12:07'
@@ -18,4 +16,5 @@ Purpose
 -------
 
 This extension handles human based grading of delivery results
+
 

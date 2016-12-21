@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Lionel Lecaque'
 created_at: '2011-02-08 14:44:43'
@@ -31,4 +29,5 @@ How to comment your code:
 Retrieve, modify and commit the source code:
 
 -   [Svnbook](http://svnbook.red-bean.com/nightly/fr/index.html) (the free online O’Reilly user manual!)
+
 

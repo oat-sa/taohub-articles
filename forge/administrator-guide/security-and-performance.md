@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Thomas Garrard'
 created_at: '2011-02-13 04:36:47'
@@ -19,17 +17,17 @@ Encrypting connections between client and server
 
 SSL/TLS is the primary method of encrypting client/server communications (ie. “https://” rather than “http://”). Implementation of this is independent from TAO on the server.
 
-\>h4. HTTPS principles<br/>
-\><br/>
+\>h4. HTTPS principles\
+\>\
 \>HTTPS relies on [TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security) (Transport Layer Security, formerly known as SSL). TLS encrypts the communication between two programs - in this case, a browser (client) and the server. The purpose is not only to encrypt the data but also to confirm the identity of the server to clients.
 
-\>h4. HTTPS setup<br/>
-\><br/>
+\>h4. HTTPS setup\
+\>\
 \>Most TAO implementations will be delivered via apache but similar documentation is available for alternatives:<br/>
 
-\><br/>
-\>http://httpd.apache.org/docs/current/ssl/ssl\_howto.html<br/>
-\><br/>
+\>\
+\>http://httpd.apache.org/docs/current/ssl/ssl\_howto.html\
+\>\
 \>In addition to the steps in the link above, you will also need to aquire a certificate. A self-signed certificate will generate warnings in users’ browsers. If this is a concern then consider purchasing a certificate from a trusted [certificate authority](http://en.wikipedia.org/wiki/Certificate_Authority)
 
 Hardening PHP and encrypting user session data
@@ -59,4 +57,5 @@ Confidentiality and privacy
 ---------------------------
 
 In many jurisdictions you are required to provide a statement regarding user data. In any case, it is a good idea to inform users of where and how you store their data. If deploying TAO with user information or data from outside sources it is important to secure agreements with both data owners and data keepers.
+
 

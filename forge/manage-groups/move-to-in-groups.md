@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Groups
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-12 18:29:49'
@@ -17,4 +15,5 @@ Move to
 The Move to box is displayed when a group is selected in the tree and when you click on the Move action (in the right-click menu or in the Actions box).
 
 To move a group, just click on the target class.
+
 

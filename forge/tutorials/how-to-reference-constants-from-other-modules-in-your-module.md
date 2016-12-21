@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Rex Wallen Tan'
 created_at: '2015-12-27 08:09:09'
@@ -28,6 +26,7 @@ Step 3 - Add the following code
 -------------------------------
 
 This is a sample to import the constants for TAO results
+
 
 
 

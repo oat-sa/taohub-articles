@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Test_Takers
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-12 17:24:51'
@@ -19,4 +17,5 @@ When a class is selected, only the New class, New test taker, Create table and I
 When a test taker is selected, only the Duplicate, Move, Preview, and Meta data are enabled.
 
 The Search, Delete, Lists, and Export icons are enabled for both.
+
 

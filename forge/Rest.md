@@ -43,7 +43,7 @@ The following describes how to call remotely services from TAO. They are illustr
 Connection and Identification (Basic)
 -------------------------------------
 
-Under PHP, you may use [cURL](http://php.net/manual/fr/book.curl.php)<br/>
+Under PHP, you may use [cURL](http://php.net/manual/fr/book.curl.php)\
 As per the Basic HTTP authentication, you will need to send the credentials over each request.
 
 Let’s assume you want to retrieve the list of test takers … (for other methods, please check subsequent parts of this tutorial)
@@ -302,7 +302,7 @@ If your request is successful you will receive the URI of the newly created reso
 
 **Possible error codes returned**
 
-\* 412 Precondition Failed<br/>
+\* 412 Precondition Failed\
 You probably tried to create a test taker with an already existing login
 
 
@@ -314,8 +314,8 @@ You probably tried to create a test taker with an already existing login
     2.5-alpha
       
 
--   400 Bad Request<br/>
-    A mandatory parameter is missing<br/>
+-   400 Bad Request\
+    A mandatory parameter is missing\
     ![](resources/{width:300px}nologin.png)
 
 Creating a test taker with custom properties / type or language
@@ -393,7 +393,7 @@ You may re-assign a new type to the test taker.
 
 **Possible error codes returned**
 
--   412<br/>
+-   412\
     Modifying the login of a subject is not allowed : 412
 
 Retrieve a particular test taker
@@ -540,7 +540,7 @@ Retrieve a particular test taker
 
 **Possible error codes returned**
 
--   204 No Content<br/>
+-   204 No Content\
     Nothing was found with respect to the uri provided
 
 Delete a test taker.
@@ -566,7 +566,7 @@ Identification using Digest
 
 The Digest protocol is not yet implemented. Steps left for implementing it :<br/>
 
-- Store along user definition their hash upon user creation and update<br/>
+- Store along user definition their hash upon user creation and update\
 - Retreeve this hash and combine it within RestCommonModule.php
 
 How to contribute here ?
@@ -688,4 +688,5 @@ Specifying the language to be used for the returned data
 Accept\_language …
 
 Patrick
+
 

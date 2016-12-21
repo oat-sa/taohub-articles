@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Contribution_Focus_Groups
 author:
     - 'Joel Bout'
 created_at: '2013-10-28 14:27:34'
@@ -44,4 +42,5 @@ A very early tentative draft
 ### Harmonisation
 
 -   Compare diffrent implementation in order to identify common components
+
 

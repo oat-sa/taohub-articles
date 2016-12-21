@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Joel Bout'
 created_at: '2010-12-02 16:09:34'
@@ -14,7 +12,7 @@ tags:
 Make a new extension 2.4 - 2.5
 ==============================
 
-For [[TAO\_2\_6|Tao 2.6]] see [[How to make a new extension 2 6]]<br/>
+For [[TAO\_2\_6|Tao 2.6]] see [[How to make a new extension 2 6]]\
 For [[TAO\_3\_0|Tao 3.0]] see [[How to make a new extension 3 0]]
 
 Preparation
@@ -135,4 +133,5 @@ Integration with TAO
 <!-- -->
 
 -   If you wish you can now try to add your own actions, like duplicating a file, or creating an form to upload new files
+
 

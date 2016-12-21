@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Jérôme Bogaerts'
 created_at: '2010-12-02 16:27:34'
@@ -16,6 +14,7 @@ Generis API Architecture
 
 ![](http://forge.taotesting.com/attachments/download/762/GenerisCoreKernel.png)
 
-Relative documentation<br/>
+Relative documentation\
 [[Versioned content]]
+
 

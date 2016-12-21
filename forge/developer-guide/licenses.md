@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-02-08 14:43:55'
@@ -69,7 +67,8 @@ You do not have right to use TAO Trademark (i.e., the name of TAO to distribute 
 
 More infos on TAO website :
 
-[Legal notice](http://taotesting.com/resources/legal-notice)<br/>
-[FAQ on licensing](http://taotesting.com/resources/license)<br/>
+[Legal notice](http://taotesting.com/resources/legal-notice)\
+[FAQ on licensing](http://taotesting.com/resources/license)\
 [Trademark Policy](http://taotesting.com/resources/trademark-policy)
+
 

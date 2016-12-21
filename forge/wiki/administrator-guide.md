@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Wiki
 author:
     - 'Gyula Szucs'
 created_at: '2010-11-23 14:55:01'
@@ -23,14 +21,14 @@ Administrator Guide
 3. Configuration Settings
 -------------------------
 
-### 3.1. [[Deployment Mode]]<br/>
-3.2. [[Security and Performance|Security]]<br/>
-3.3. [[Site administration setting|Site administration settings]]<br/>
-3.4. [[Maintenance]]<br/>
-3.5. [[Performance optimization]]<br/>
-3.6. [[Enable versioning]]<br/>
-3.7. [[Data abstractions|Data abstractions for scalability]]<br/>
-3.8. [[Server\_Migration|Server migration steps for TAO 3.x]] and [[Server\_Migration\_25|below]]<br/>
+### 3.1. [[Deployment Mode]]\
+3.2. [[Security and Performance|Security]]\
+3.3. [[Site administration setting|Site administration settings]]\
+3.4. [[Maintenance]]\
+3.5. [[Performance optimization]]\
+3.6. [[Enable versioning]]\
+3.7. [[Data abstractions|Data abstractions for scalability]]\
+3.8. [[Server\_Migration|Server migration steps for TAO 3.x]] and [[Server\_Migration\_25|below]]\
 3.9. [[Cleanup Procedure]]
 
 4. [[Users\_Management\_Model|Users Model Management]]
@@ -44,3 +42,4 @@ Administrator Guide
 
 7. [[See also admin|See also]]
 ------------------------------
+

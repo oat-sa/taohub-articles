@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Cyril Hazotte'
 created_at: '2010-12-02 16:13:49'
@@ -26,13 +24,13 @@ Here is an example both UI Language and Data Language are in English.<br/>
 
 ![](../resources//attachments/download/2593/S%C3%A9lection_053.png)
 
-Here UI Language have been switched to French<br/>
+Here UI Language have been switched to French\
 ![](../resources//attachments/download/2592/S%C3%A9lection_054.png)
 
-Here both UI and Data Language are in French<br/>
+Here both UI and Data Language are in French\
 ![](../resources//attachments/download/2600/S%C3%A9lection_055.png)
 
-Here only Data Language is in French<br/>
+Here only Data Language is in French\
 ![](../resources//attachments/download/2599/S%C3%A9lection_051.png)
 
 ### User Interface
@@ -115,4 +113,5 @@ See also:
 
 -   [the Gettext manual](http://www.gnu.org/software/gettext/manual/gettext.html)
 -   [the PO file format](http://www.gnu.org/software/gettext/manual/gettext.html#PO-Files)
+
 

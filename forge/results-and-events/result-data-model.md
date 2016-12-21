@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Results_And_Events
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-10 11:40:33'
@@ -66,4 +64,5 @@ The XML file that describes the model is :
         
 
      
+
 

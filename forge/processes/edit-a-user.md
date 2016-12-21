@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Processes
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-04-22 09:51:34'
@@ -20,4 +18,5 @@ Edit a user box
 ---------------
 
 -   The Edit a user box integrates the properties which can be redefined to edit a user.
+
 

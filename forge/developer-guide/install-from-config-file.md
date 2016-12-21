@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Antoine Robin'
 created_at: '2016-12-12 13:49:42'
@@ -106,3 +104,4 @@ By default if you let this array empty it will install taoCe.
 #### configurable services
 
 #### postInstall
+

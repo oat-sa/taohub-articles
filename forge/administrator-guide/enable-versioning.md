@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-02-29 17:29:22'
@@ -11,7 +9,7 @@ tags:
 
 
 
-**TODO Content need to be update**<br/>
+**TODO Content need to be update**\
 New UI has been design to support versionning activation
 
 Enable versioning
@@ -55,4 +53,5 @@ If you did not use the generis config file, you can pass arguments to the script
     php taoVersioning.php -e -type svn -u my_login -p my_password --path /path/to/the/local/working_copy --url http://url_of_the/svn
 
 Be sure that the directory you choose as local working copy and its subfolders are writable for the http user (www-data for apache)
+
 

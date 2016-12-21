@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Bertrand Chevrier'
 created_at: '2014-01-15 09:37:11'
@@ -51,3 +49,4 @@ For MacOS user, ruby comes installed to your system, you just have to install sa
 Then you should be able to see available grunt tasks from the `tao/views/build` directory:
 
     grunt --help
+

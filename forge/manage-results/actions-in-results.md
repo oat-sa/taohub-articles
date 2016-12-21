@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Results
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-12 19:20:40'
@@ -15,4 +13,5 @@ Actions
 ![](../resources/results-actions.png)
 
 According to your actions in the interface, the actions icons will be activated or deactivated.
+
 

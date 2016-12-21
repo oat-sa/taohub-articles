@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Server_Migration
 author:
     - 'Cyril Hazotte'
 created_at: '2016-08-12 11:27:46'
@@ -84,4 +82,5 @@ An example, assuming your old data was stored in **/var/www/tao/data/** and your
 
 -   (Mandatory) Clear the cache of the file sources by emptying the folder **NEW\_FILES\_PATH/data/generis/cache/**. This can be achieved using the following command: rm -rf NEW\_FILES\_PATH/data/generis/cache/\*.
 -   (Optional) Execute **NEW\_FILES\_PATH/tao/scripts/taoUpdate.php** to ensure all extensions are up to date and to regenerate the translation files
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-16 17:01:37'
@@ -23,4 +21,5 @@ Here you can:
 -   and edit properties that you have created in the parent class
 
 After saving, you can edit your item content by the “Authoring” button or tab.
+
 

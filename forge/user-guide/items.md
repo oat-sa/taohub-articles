@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Armando Estañol'
 created_at: '2011-03-11 15:03:00'
@@ -56,4 +54,5 @@ The Preview tab allows viewing the previously selected item in the Manage items 
 The main function of this tab are:
 
 -   [[Preview]]
+
 

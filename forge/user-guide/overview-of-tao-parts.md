@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-11 11:52:47'
@@ -72,4 +70,5 @@ Here you can create tables to visualize the results and then export them for fur
 This part is optional.<br/>
 
 It manages the process creation and allows you to build processes to drive activities into workflow.
+
 

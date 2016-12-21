@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Groups
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-03 15:28:14'
@@ -17,4 +15,5 @@ Edit group
 The Edit group pane is displayed when a group is selected in the Groups library box.
 
 The Edit group pane provides the test properties which are defined in the parent classes properties and are available for modification.
+
 

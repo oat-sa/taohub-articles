@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: How_TAO_development_works
 author:
     - 'Lionel Lecaque'
 created_at: '2011-02-16 16:24:04'
@@ -130,4 +128,5 @@ Available patchs
 -   [03\_patch\_r2059.txt](http://releases.taotesting.com/patchs/1.0/patchs/03_patch_r2059.txt)
 -   [04\_lastModifiedDateOfProperty.patch](http://releases.taotesting.com/patchs/1.0/patchs/04_lastModifiedDateOfProperty.patch)
 -   [05\_ApiModelOO\_getSubject\_getObject.patch](http://releases.taotesting.com/patchs/1.0/patchs/05_ApiModelOO_getSubject_getObject.patch)
+
 

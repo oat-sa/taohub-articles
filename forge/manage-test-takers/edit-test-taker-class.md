@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Test_Takers
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 16:48:29'
@@ -23,4 +21,5 @@ By default, some properties are predefined, as they constitute the specification
 You can add different type of properties: a short text, a date, a multiple choice list, etc.
 
 -\> For advanced users: you can create properties from widgets and all resources available on the platform (model, literal, container, etc.) in the Advanced mode.
+
 

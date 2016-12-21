@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Guidelines
 author:
     - 'Konstantin Sasim'
 created_at: '2015-07-02 10:25:23'
@@ -25,4 +23,5 @@ invokeProtectedMethod
 Helper for accessing protected/private methods of tested classes.<br/>
 
 Based on ReflectionClass.
+
 

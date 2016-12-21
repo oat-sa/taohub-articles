@@ -51,7 +51,7 @@ taoAdminService extends taoUserService by functionalities that might not be avai
 
 ### taoSessionRequiredException
 
-taoSessionRequiredException is thrown whenever a functions is accessed that requires authentication without<br/>
+taoSessionRequiredException is thrown whenever a functions is accessed that requires authentication without\
 providing a valid login first.
 
 Advanced usage
@@ -72,4 +72,5 @@ If the library needs to connect to multiple instances of tao at once, taoConnect
     -   followed by **authenticate(login, password)**
 -   Restoring an authenticated session:
     -   **taoConnection::restore(serverUrl, userUri, userToken)**
+
 

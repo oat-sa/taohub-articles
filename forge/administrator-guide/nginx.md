@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Joel Bout'
 created_at: '2013-06-21 10:05:44'
@@ -96,4 +94,5 @@ If you try to get Tao 2.4 to work with Nginx, you might want to:
     }
 
 -   production mode will not fully work
+
 

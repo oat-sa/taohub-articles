@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_2_6
 author:
     - 'Joel Bout'
 created_at: '2013-12-03 10:24:57'
@@ -58,4 +56,5 @@ The following constants are deprecates:
 -   TAOBASE\_WWW
 
 please use the helper `oat\tao\helpers\Template` instead.
+
 

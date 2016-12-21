@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Processes
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 16:25:36'
@@ -19,4 +17,5 @@ The Processes library provides a tree-view of the processes ![](../resources/ite
 When a process is selected in the Processes library, different actions are available by right clicking (edit, new process, duplicate, delete).
 
 You can filter the Processes library. Only the processes labels that meet the string enter in the text field will be displayed.
+
 

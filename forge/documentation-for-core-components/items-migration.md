@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Joel Bout'
 created_at: '2011-02-08 11:14:38'
@@ -44,7 +42,7 @@ How to migrate items
 
 There is a command line script to run with a few arguments to migrate your items.
 
-The script is located in `taoItems/scripts` and is called `migrateLegacy.php`<br/>
+The script is located in `taoItems/scripts` and is called `migrateLegacy.php`\
 To run it
 
 \* On a Mac/Unix/Linux System:
@@ -88,3 +86,4 @@ For example, for the second scenario, we will use the *input*, *output* and *pac
 *or using the shortcuts syntax*
 
     php migrateLegacy.php -i path/to/myQCM.xml -o path/to/newitem/folder/ -p true
+

@@ -10,7 +10,8 @@ PHP libraries
 
 *For TAO version 2.4.*
 
-HTML Purifier<br/>
-\> **Version** : 4.5.0<br/>
+HTML Purifier\
+\> **Version** : 4.5.0\
 \> **URL** : http://htmlpurifier.org
 ------------------------------------
+

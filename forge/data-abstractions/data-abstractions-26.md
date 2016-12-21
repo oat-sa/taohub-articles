@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Data_abstractions
 author:
     - 'Cyril Hazotte'
 created_at: '2015-06-19 09:23:35'
@@ -34,7 +32,7 @@ The KeyValue Result storage implementation may be installed and configured under
 
 -   Make sure you have installed the packages :<br/>
 
-    “redis-server” (on the server you want to use for the storage)<br/>
+    “redis-server” (on the server you want to use for the storage)\
     “phpredis” on the TAO application server
 
 <!-- -->
@@ -149,3 +147,4 @@ To switch to a the advanced key-value implementation the constant GENERIS\_URI\_
         'host' => '127.0.0.1',
         'port' => 6379
     )
+

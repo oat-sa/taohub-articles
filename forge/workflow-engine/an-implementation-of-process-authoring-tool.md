@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Workflow_Engine
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-02 18:09:08'
@@ -19,4 +17,5 @@ With TAO, you will have the opportunity to implement the process authoring tool,
 ![](../resources/add_activity_sequence_diagram.png)
 
 It uses the [[Models|M]][[Views|V]][[Controllers|C]] php [[Framework|framework]] of TAO.
+
 

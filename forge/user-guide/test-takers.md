@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-11 15:48:20'
@@ -37,4 +35,5 @@ The main functions of this tab are:
 -   [[Create table in Test takers|Create table]]
 -   [[Export in Test takers|Export]]
 -   [[Import in Test takers|Import]]
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-12-02 12:02:10'
@@ -34,4 +32,5 @@ Access Control
 --------------
 
 -   Every module and actions in any extensions can now be address by a specific Role in order to set up your platform in order to configure the way platform’s user access different feature, more information in [[Functionality\_access\_control|dedicated page]]
+
 

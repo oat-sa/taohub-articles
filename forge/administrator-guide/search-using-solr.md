@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Mikhail Kamarouski'
 created_at: '2015-05-22 10:21:13'
@@ -36,7 +34,7 @@ Configure Solr
 
 You have to run and create core based on default tao preset
 
-solr start<br/>
+solr start\
 solr create\_core -c **CORE\_NAME** -d \*TAO\_ROOT\_DIRECTORY\*/vendor/oat-sa/lib-tao-solarium/doc/solr/conf
 
 Activation script assumes that
@@ -55,4 +53,5 @@ sudo -u www-data php \*TAO\_ROOT\_DIRECTORY\*/vendor/oat-sa/lib-tao-solarium/bin
 It should return “Switched to Solr search using Solarium”
 
 Search engine configuration is stored in **TAO\_ROOT\_DIRECTORY/config/tao/search.conf.php**
+
 

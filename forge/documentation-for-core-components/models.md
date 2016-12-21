@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-04 17:39:38'
@@ -35,4 +33,5 @@ The advantages of such an architecture are:
 -   The *GenerisService* is an abstract service. It provides a set of methods shared between the extension’s services that are managing a RDF model.
 
 ![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Models|Return to Top]]
+
 

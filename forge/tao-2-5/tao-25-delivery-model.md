@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_2_5
 author:
     - 'Cyril Hazotte'
 created_at: '2013-11-19 14:25:07'
@@ -54,7 +52,7 @@ Delivery Execution
 
 To launch a compiled/published delivery, all we need to do is execute the service call stored in it, by pointing the user to the indicated action.
 
-{{thumbnail(deliveryGraph.png, size=500, title=Delivery Graph)}}<br/>
+{{thumbnail(deliveryGraph.png, size=500, title=Delivery Graph)}}\
 Please note that in the diagram the calls to the delivery/test/item-runner have been simplified. For now all these calls are made by the web client.
 
 Step by Step explanation:
@@ -77,4 +75,5 @@ Open Issues
 -----------
 
 -   The way the abstraction is implemented still varies between item, test and delivery and needs to be homogenized.
+
 

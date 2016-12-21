@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: How_TAO_development_works
 author:
     - 'Jérôme Bogaerts'
 created_at: '2010-09-29 11:48:05'
@@ -30,4 +28,5 @@ TAO Team members are *developers*. A *developer* can
 -   commit its developments in subversion
 
 If you want a larger access right, please let us know !
+
 

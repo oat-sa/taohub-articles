@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Stephan Holtmeier'
 created_at: '2015-04-14 10:36:40'
@@ -30,4 +28,5 @@ And run `composer update`
 Now the taoBooklet extension enables you to create paper version of your tests.
 
 **Please note that only choices, text entries and extended text interactions are supported for now.**
+
 

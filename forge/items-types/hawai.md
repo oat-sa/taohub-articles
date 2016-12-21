@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: 'Items''_Types'
 author:
     - 'Somsack Sipasseuth'
 created_at: '2011-02-08 11:05:18'
@@ -14,11 +12,12 @@ Hawai (deprecated)
 
 ------------------------------------------------------------------------
 
-### 1. [[Hawai standard]]<br/>
-2. [[Hawai authoring]]<br/>
+### 1. [[Hawai standard]]\
+2. [[Hawai authoring]]\
 3. [[Hawai runtime]]
 
 ------------------------------------------------------------------------
 
 Overview
 --------
+

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Cyril Hazotte'
 created_at: '2010-12-02 16:15:55'
@@ -26,9 +24,9 @@ Different versions to test
 alpha
 -----
 
-http://alpha.taotesting.com<br/>
-login : alpha<br/>
-password : alpha<br/>
+http://alpha.taotesting.com\
+login : alpha\
+password : alpha\
 **All data on this instance are removed regularly.**
 
 Here we host the very latest version of TAO, this version gathers the very last features that have been developed and which have not been tested yet. It is updated from Subversion and reinstalled regularly, many work in progress may break some features.
@@ -36,9 +34,9 @@ Here we host the very latest version of TAO, this version gathers the very last 
 beta
 ----
 
-http://beta.taotesting.com<br/>
-login : beta<br/>
-password : beta<br/>
+http://beta.taotesting.com\
+login : beta\
+password : beta\
 **All data on this instance are removed regularly.**
 
 Here we host a more stable version, either the latest beta version or the latest release candidate we wanted to test. Most of the basic features should work fine and give you a preview of what the next TAO version will be.
@@ -46,10 +44,11 @@ Here we host a more stable version, either the latest beta version or the latest
 demo
 ----
 
-http://demo.taotesting.com<br/>
-login : demo<br/>
-password : demo<br/>
+http://demo.taotesting.com\
+login : demo\
+password : demo\
 **All data on this instance are removed regularly (see the sandbox timer on the page footer).**
 
 Here we host the latest stable TAO version.
+
 

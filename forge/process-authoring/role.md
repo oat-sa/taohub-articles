@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Process_Authoring
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 16:09:24'
@@ -16,4 +14,5 @@ Role
 -   The Role box defines the allowed users that can execute an activity. A user can have one or several roles. Only users with the right role can run the activity.<br/>
 
     ~~En attente de la documentation développeur~~
+
 

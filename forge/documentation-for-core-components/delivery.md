@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-03 10:36:14'
@@ -16,8 +14,8 @@ Delivery
 
 ------------------------------------------------------------------------
 
-### 1. [[Create and author a delivery|Create and Author a delivery]]<br/>
-2. [[Compile a delivery]]<br/>
+### 1. [[Create and author a delivery|Create and Author a delivery]]\
+2. [[Compile a delivery]]\
 3. [[Delivery server|Execute a delivery]]
 
 ------------------------------------------------------------------------
@@ -49,4 +47,5 @@ The delivery model on the Generis representation below shows the properties of t
 ![](../resources/generis_delivery.png)
 
 Please refer the [[Delivery server|delivery server section]] to see how this properties apply on delivery executio
+
 

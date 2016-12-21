@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Somsack Sipasseuth'
 created_at: '2011-06-22 11:25:02'
@@ -50,12 +48,12 @@ Go to the script path located on *TAO\_ROOT/wfEngine/scripts/* then execute the 
 
 to compile:<br/>
 
-`php wfEngineOptimizer.php -c -i`<br/>
+`php wfEngineOptimizer.php -c -i`\
 (c for complie, i for indexing)
 
 to decompile:<br/>
 
-`php wfEngineOptimizer.php -d`<br/>
+`php wfEngineOptimizer.php -d`\
 (d for decompile)
 
 Please be patient, it may take a while according to the quantity of data you have.
@@ -109,14 +107,14 @@ The database is filled with **1000 test takers**. A given number of test taker (
 
 The server configuration is as follow (on virtual machine):<br/>
 
-processors : 4<br/>
-vendor\_id : GenuineIntel<br/>
-cpu family : 6<br/>
-model : 26<br/>
-model name : Intel® Xeon® CPU E5530 @ 2.40GHz<br/>
-stepping : 5<br/>
-cpu MHz : 2400.085<br/>
-cache size : 8192 KB<br/>
+processors : 4\
+vendor\_id : GenuineIntel\
+cpu family : 6\
+model : 26\
+model name : Intel® Xeon® CPU E5530 @ 2.40GHz\
+stepping : 5\
+cpu MHz : 2400.085\
+cache size : 8192 KB\
 memory : 3 Go
 
 The two tables below show the benchmark results, before and after optimization. The number is the **average time in milliseconds** to accomplish the action.
@@ -165,5 +163,6 @@ This simulates a delivery during which each test taker takes on average **2 seco
   \_=. 200                     =. 430                  =. 608           =. 2206             =. 1237         =. 1086
   \_=. 300                     =. 535                  =. 793           =. 2819             =. 2070         =. 1765
   ---------------------------- ----------------------- ---------------- ------------------- --------------- -------------------
+
 
 

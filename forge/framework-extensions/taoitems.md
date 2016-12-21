@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Framework-Extensions
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-02-10 15:01:29'
@@ -31,4 +29,5 @@ Ontology model
 --------------
 
 ![](http://forge.taotesting.com/attachments/1222/taoItemRDF.png)
+
 

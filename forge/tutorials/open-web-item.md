@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Bertrand Chevrier'
 created_at: '2011-02-11 12:22:06'
@@ -158,4 +156,5 @@ To import your Open WEB Item into TAO:
 ![](../resources/2-free_form_item_import.png)
 
 **Your Open WEB Item is now ready to use! You can change its label, include it in a test and a delivery to make it available to your test takers!**
+
 

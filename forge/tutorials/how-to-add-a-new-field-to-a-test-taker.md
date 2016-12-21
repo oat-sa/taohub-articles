@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Rex Wallen Tan'
 created_at: '2015-10-08 12:04:15'
@@ -97,4 +95,5 @@ Option 2: Get all the users that meet the new company parameter
             foreach ($users as $currentUser) {
                 echo ("".$currentUser);
             }
+
 

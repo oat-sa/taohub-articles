@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Framework-Extensions
 author:
     - 'Joel Bout'
 created_at: '2012-11-09 13:27:23'
@@ -110,4 +108,5 @@ The manifest file of an extension must be placed in its root directory. For inst
     -   *optional* *array* install[‘checks’]
 -   *array* classLoaderPackages
 -   *optional* constants
+
 

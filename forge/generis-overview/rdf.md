@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Generis_Overview
 author:
     - 'Joel Bout'
 created_at: '2013-05-31 09:57:42'
@@ -23,4 +21,5 @@ Detailed documentations
 -   http://www.w3schools.com/rdf/rdf\_intro.asp
 -   http://www.lesliesikos.com/tutorials/rdf
 -   http://www.rdfabout.com
+
 

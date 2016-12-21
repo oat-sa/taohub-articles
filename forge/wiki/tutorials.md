@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Wiki
 author:
     - 'Camille Moyon'
 created_at: '2011-09-13 11:22:48'
@@ -38,4 +36,5 @@ Front End Customisation
 -   [[Tutorial - How to customize the look of items]]
 -   [[Tutorial - Using a custom font on items]]
 -   [[Tutorial - SVG Icons]]
+
 

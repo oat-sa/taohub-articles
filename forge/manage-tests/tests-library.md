@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Tests
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-22 17:30:08'
@@ -21,4 +19,5 @@ You can move tests in order to change their belonging class by drag and drop, or
 Different actions are available by right clicking (edit, new class, new test, move, duplicate, delete) depending on whether a class or a test is selected.
 
 You can filter the Tests library. Only the tests and classes that contain the input strings in their label will be displayed.
+
 

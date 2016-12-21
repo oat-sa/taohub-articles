@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 15:43:05'
@@ -21,4 +19,5 @@ You can move campaigns in order to change their belonging class by drag and drop
 Different actions are available by right clicking (edit, new class, new campaign, move, duplicate, delete) depending on whether a class or a campaign is selected.
 
 You can filter the Campaigns library. Only the campaigns and classes labels that meet the string enter in the text field will be displayed.
+
 

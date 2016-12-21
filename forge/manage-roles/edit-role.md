@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Roles
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 16:30:22'
@@ -16,4 +14,5 @@ Edit role
 
 -   The Edit role box is displayed when a role is selected in the Roles library box.
 -   The Edit role box provides the role properties to define.
+
 

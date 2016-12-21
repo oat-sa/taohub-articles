@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Lionel Lecaque'
 created_at: '2014-07-17 15:32:30'
@@ -40,4 +38,5 @@ The first command `npm install` will install/update the node.js packages require
 The 2nd command `npm run build` will create bundles, minimify the content, inline some assets and compile the SASS files to CSS.<br/>
 
 These commands may take some time according to your CPU power.
+
 

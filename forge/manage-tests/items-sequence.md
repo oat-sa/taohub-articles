@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Tests
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-22 18:15:01'
@@ -17,4 +15,5 @@ Items sequence
 The Items sequence pane is displayed when a test is selected in the Tests library.
 
 Here you can define the sequence order of your items.
+
 

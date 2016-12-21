@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Installation_and_Upgrading
 author:
     - 'Gyula Szucs'
 created_at: '2012-09-27 14:48:30'
@@ -40,33 +38,33 @@ To install the latest PHP and modules needed by the TAO platform to run, open up
 
 \> To remove the old php packages installed, use the following commands:<br/>
 
-\> <pre><br/>
+\> <pre>\
  \# replace PACKAGE with the proper names of the PHP packages installed, like “php5-cli php5-curl” etc.<br/>
 
- sudo apt-get remove —purge PACKAGE<br/>
+ sudo apt-get remove —purge PACKAGE\
  sudo apt-get update
 
 </pre>
-\> Use the following set of command to add PPA and install **PHP 5.5 or 5.6**<br/>
-\><pre><br/>
-sudo add-apt-repository ppa:ondrej/php<br/>
-sudo apt-get update<br/>
-sudo apt-get install -y php5.5 php5.5-gd php5.5-mysql php5.5-tidy php5.5-curl php5.5-mbstring php5.5-zip php5.5-xml php-xml-parser \#for PHP 5.5<br/>
+\> Use the following set of command to add PPA and install **PHP 5.5 or 5.6**\
+\><pre>\
+sudo add-apt-repository ppa:ondrej/php\
+sudo apt-get update\
+sudo apt-get install -y php5.5 php5.5-gd php5.5-mysql php5.5-tidy php5.5-curl php5.5-mbstring php5.5-zip php5.5-xml php-xml-parser \#for PHP 5.5\
 sudo apt-get install -y php5.6 php5.6-gd php5.6-mysql php5.6-tidy php5.6-curl php5.6-mbstring php5.6-zip php5.6-xml php-xml-parser \#for PHP 5.6
 
 </pre>
 \> If you need **PHP 5.4**, use the these commands:<br/>
 
-\><pre><br/>
-sudo add-apt-repository ppa:ondrej/php5-oldstable<br/>
-sudo apt-get update<br/>
-sudo apt-get upgrade<br/>
+\><pre>\
+sudo add-apt-repository ppa:ondrej/php5-oldstable\
+sudo apt-get update\
+sudo apt-get upgrade\
 sudo apt-get install -y php5 php5-gd php5-mysql php5-tidy php5-curl php5-mbstring php5-zip php5-xml php-xml-parser
 
 </pre>
 \> If you’ve selected the second option, you should have two php version installed on your system by now. To switch between the versions, use the following commands:<br/>
 
-\> \* Apache <pre>sudo a2dismod php7.0 ; sudo a2enmod php5.6 ; sudo service apache2 restart</pre><br/>
+\> \* Apache <pre>sudo a2dismod php7.0 ; sudo a2enmod php5.6 ; sudo service apache2 restart</pre>\
 \> \* CLI <pre>sudo ln -sfn /usr/bin/php5.6 /etc/alternatives/php</pre>
 
 PHP and its modules required by TAO are now installed on the computer.
@@ -245,4 +243,5 @@ For this last step of the installation process, open up your favourite web brows
 Check if all the System Configuration entries are “green”. If it is not the case, please check that each step of this guide are done. If you still experience issues, feel free to contact us on the forum.
 
 Finally, follow the instructions to finalize your TAO Platform installation.
+
 

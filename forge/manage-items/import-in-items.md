@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-19 19:22:07'
@@ -22,25 +20,26 @@ You can import your data to:
 
     - first define the common options of your CSV file,<br/>
 
-    - second select your file in your file system by clicking the Browse button and<br/>
+    - second select your file in your file system by clicking the Browse button and\
     - thirdly map the columns of your CSV file to the properties of your class.
 
 <!-- -->
 
--   RDF<br/>
+-   RDF\
     - you must indicate the RDF item you want to import.
 
 <!-- -->
 
--   QTI Item<br/>
+-   QTI Item\
     - you must indicate the QTI item you want to import.
 
 <!-- -->
 
--   QTI Package<br/>
+-   QTI Package\
     - you must indicate the QTI item you want to import (in ZIP format).
 
 <!-- -->
 
 -   Open Web Item package
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Delivery
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-03 11:37:27'
@@ -21,7 +19,7 @@ Compiling a delivery means getting the delivery content ready for execution.
 
 The need for test compilation is due to the potential issue of server access and/or overload during test campaign. Typically, many subjects are likely to run the test at once. The server overload issue is particularly true when the delivery includes items, with many media files that are located in different remote servers.<br/>
 
-The path to a compiled item of a test of a delivery execution is *taoDelivery/compiled/deliveryId/testId/itemId/*<br/>
+The path to a compiled item of a test of a delivery execution is *taoDelivery/compiled/deliveryId/testId/itemId/*\
 ![](../resources/compilation_path.png)
 
 2. Operation performed
@@ -36,4 +34,5 @@ The method that compiles a test is *taoDelivery\_models\_classes\_DeliveryServic
 It loops over all items of the test and deploy them individually in the proper folder.<br/>
 
 For more information on the item deployment process, see the source of the method *taoItems\_models\_classes\_ItemsService::deployItem()*.
+
 

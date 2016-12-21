@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Joel Bout'
 created_at: '2011-03-04 17:36:10'
@@ -44,11 +42,11 @@ For example, have a look at the following URL:
 
 If you split the URL, each part is used as a piece of information for the mapping:<br/>
 
-|*.Token|*.Information|<br/>
-|`www.tao.lu`| the TAO domain name|<br/>
-|tao| the extension name (the meta-extension TAO)|<br/>
-|Users| the module name|<br/>
-|add| the action name|<br/>
+|*.Token|*.Information|\
+|`www.tao.lu`| the TAO domain name|\
+|tao| the extension name (the meta-extension TAO)|\
+|Users| the module name|\
+|add| the action name|\
 |name=john| the parameters|
 
 By calling this URL the method `add` of the class *tao\_action\_Users* in the `tao` meta-extension will be executed:
@@ -122,4 +120,5 @@ The following schema illustrates the way the action widget works:
 ![](http://forge.taotesting.com/attachments/387/actions_widget.png)
 
 ![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Controllers|Return to Top]]
+
 

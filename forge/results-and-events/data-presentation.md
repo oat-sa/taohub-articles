@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Results_And_Events
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-10 11:41:48'
@@ -99,4 +97,5 @@ The path constitutes an important notion in the description of a column. The pat
 -   The path is created based on a other sub function : get the range of the class, get the description of the properties …See php Doc.<br/>
 
     On can put only the information related to the test it self, or on can also put other information from other class that are in relation with result classes. This is an interesting feature to use.
+
 

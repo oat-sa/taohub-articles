@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Roles
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-18 17:02:56'
@@ -17,4 +15,5 @@ Meta data
 The Meta data box is displayed when a role is selected in the Roles library and when you click on the Meta data action.
 
 You can edit a comment at the selected role. For that you should click on the Edit icon, write a comment in the box which appears and click on the Save button.
+
 

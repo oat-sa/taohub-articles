@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Contribution_Focus_Groups
 author:
     - 'Bertrand Chevrier'
 created_at: '2013-10-15 11:34:08'
@@ -51,14 +49,14 @@ The diagram below represents a simplified view of a connector architecture:
 -   The `RestClient` helps you to call HTTP requests. There is libraries in most languages to perform this operations (Jersey for Java, jQuery for JavaScript, etc.)
 -   The `Service` components :
 
-\* Provides to the user an API of the implemented methods (the interface)<br/>
- \* Uses the configured `RestClient` to call TAO’s REST services<br/>
+\* Provides to the user an API of the implemented methods (the interface)\
+ \* Uses the configured `RestClient` to call TAO’s REST services\
  \* The services can be split by TAO’s extension: `TestTakerService`, `ItemService`, etc.
 
 -   The `FactoryService` is the entry point :
 
-\* It reads the configuration (TAO URL, authentication details, format, additional headers, etc.)<br/>
- \* Instantiate the `RestClient` (usually a good practice is to keep the same instance of the `RestClient` across all calls, even though between services)<br/>
+\* It reads the configuration (TAO URL, authentication details, format, additional headers, etc.)\
+ \* Instantiate the `RestClient` (usually a good practice is to keep the same instance of the `RestClient` across all calls, even though between services)\
  \* Instantiate the requested `Service`
 
 Java (using Generic for the factory):
@@ -70,3 +68,4 @@ PHP
 
     $testTakerService = FactoryService.getService("TestTakerRestService");
     $testTakers = $testTakerService->.getAll();
+

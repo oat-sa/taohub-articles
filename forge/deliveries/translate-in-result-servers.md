@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-12 19:15:07'
@@ -11,3 +9,4 @@ tags:
 
 Translate
 =========
+

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Wiki
 author:
     - 'Antoine Robin'
 created_at: '2010-11-23 15:09:25'
@@ -61,3 +59,4 @@ Developer Guide
 
 8. [[See also]]
 ---------------
+

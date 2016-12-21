@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Hawai
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-09 15:11:48'
@@ -294,3 +292,4 @@ This extension allow to manage any type of XML document. It is required by the X
 #### XulRunner
 
 ### Create a new extension
+

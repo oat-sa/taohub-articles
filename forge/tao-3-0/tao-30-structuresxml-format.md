@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_3_0
 author:
     - 'Aamir Rasheed'
 created_at: '2014-09-19 10:36:32'
@@ -25,7 +23,7 @@ Where as absence of many url attributes in the <tree> child element of the <tree
 
 Check out above changes to see if you have the new format of structures.xml.
 
-***Example***<br/>
+***Example***\
 Here’s an example of what a legacy structures.xml file might look like:
 -----------------------------------------------------------------------
 
@@ -118,4 +116,5 @@ The new-style structures.xml might look like what is below.
                 
             
         
+
 

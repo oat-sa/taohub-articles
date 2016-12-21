@@ -161,3 +161,4 @@ My Extension 2 config
                                     ]
                                 ],
                         ]
+

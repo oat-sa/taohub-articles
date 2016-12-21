@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Results_And_Events
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-10 11:34:29'
@@ -27,4 +25,5 @@ The variable description structure is a composed of two parts; DTIS and variable
 ![](http://forge.taotesting.com/attachments/download/476/RM_interception_Result.jpg)
 
 The delivery classes will be created dynamically, base on the **iMBR** (incremental Model Builder for Result) algorithm (see later). We can add instances in the TAO\_ITEM\_RESULTS and in the flexible Model of TAO\_DELIVERY\_RESULTS with incremental building feature. Result Delivery classes are created as well as their properties dynamically. Regarding to each new result, we create or not the class and the property. It is important to check the existence of the instance also to add the property name for the appropriate instance.
+
 

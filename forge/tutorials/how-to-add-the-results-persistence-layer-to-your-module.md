@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Rex Wallen Tan'
 created_at: '2016-01-01 02:40:35'
@@ -46,3 +44,4 @@ Add the following code to your construct() function in your module, while this c
         $this->resultsService = ResultsService::singleton();
         $this->resultsService->setImplementation($this->rdsResultsStorage);
         }
+

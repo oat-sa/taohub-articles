@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Wiki
 author:
     - 'Rex Wallen Tan'
 created_at: '2016-03-13 16:47:51'
@@ -47,4 +45,5 @@ Step 4: Access Test.php through your Browser
 --------------------------------------------
 
 You should see something similar to {[success](../resources/true,"data":"Hello) world“,”version“:”3.0.0"}200
+
 

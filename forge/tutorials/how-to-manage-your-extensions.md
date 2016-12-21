@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-05-24 11:18:33'
@@ -69,4 +67,5 @@ where:
 -   **-p** is the TAO backoffice password *<span class="string"></span>*
 -   **-a** is the action to perform. In this situation, install an extension *<span class="string"></span>*
 -   **-e** is the identifier of the extension to install *<span class="string"></span>*
+
 

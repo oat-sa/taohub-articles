@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Cyril Hazotte'
 created_at: '2015-09-15 10:17:28'
@@ -25,4 +23,5 @@ You just have to put the script in you taoDelivery/script directory and then go 
 This will launch the script and tell you what has been removed and if some failure has been encountered
 
 **Note:** The first attached script is compatible with TAO 3.1+ only, while the second works with TAO 3.0 version.
+
 

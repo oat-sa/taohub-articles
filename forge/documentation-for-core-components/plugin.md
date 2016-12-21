@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Antoine Robin'
 created_at: '2015-03-11 08:50:10'
@@ -164,4 +162,5 @@ You can put all you want in the \#qunit-fixture div, this will be cleaned after 
     });
 
 This script javascript is used to test the plugin. You can have more information on how to test your plugin here : http://api.qunitjs.com/.
+
 

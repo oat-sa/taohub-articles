@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 15:30:23'
@@ -16,4 +14,5 @@ Add to delivery campaign
 
 -   The Add to delivery campaign box is displayed when a delivery is selected in the Deliveries library.
 -   The Add to delivery campaign box allows indicating the campaign(s) where the delivery should be.
+
 

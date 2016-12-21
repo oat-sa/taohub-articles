@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-12-01 15:10:37'
@@ -50,4 +48,5 @@ p((((. ![](../resources/Create_Delivery2.png)
 ---------------------------------------------------------------------
 
 p((((. ![](../resources/View_Result.png)
+
 

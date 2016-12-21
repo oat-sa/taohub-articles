@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_3_1
 author:
     - 'Christophe Garcia'
 created_at: '2015-06-18 13:17:42'
@@ -270,4 +268,5 @@ Add some actions on structures.xml :
 **Empty cache and enjoy.**
 
 ![](../resources/tao_extension_3.png)
+
 

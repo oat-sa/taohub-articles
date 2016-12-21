@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Contribution_Focus_Groups
 author:
     - 'Patrick Plichart'
 created_at: '2013-10-15 10:48:26'
@@ -40,8 +38,8 @@ Activities
 
 ### Document the result storage interface and provide a “Hello world” extension of TAO implementing that interface.
 
-Volunteer : Patrick<br/>
-Status : done<br/>
+Volunteer : Patrick\
+Status : done\
 If there is a need to extend the interface or for further documentation let me know, the materials are linked below.
 
 ### Identify the most relevant data repositorie(s)
@@ -69,7 +67,7 @@ Volunteer : Lionel
 Materials
 ---------
 
-- [[Result Storage Interface| Result Storage Interface (TAO 2.5)]]<br/>
+- [[Result Storage Interface| Result Storage Interface (TAO 2.5)]]\
 - [[Results Data Model| taoResults Storage Data Model (TAO 2.5)]]
 
 - taoResultsUdp.zip, a simple new extension implementing a basic forward of the collected data over UDP.
@@ -79,6 +77,7 @@ Materials
 1.  taoResults implementation : The tao results model documentation
 2.  taoLtiBasicOutcome implementation
 
-- JasperSoft data ware house connectors possibilities documentation<br/>
+- JasperSoft data ware house connectors possibilities documentation\
 - Meeting Minutes
+
 

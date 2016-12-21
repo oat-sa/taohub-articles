@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_2_4
 author:
     - 'Joel Bout'
 created_at: '2013-03-15 08:43:02'
@@ -9,8 +7,8 @@ tags:
     - 'TAO 2 4'
 -->
 
-Migration 2 3 to 2 4<br/>
-\*<br/>
+Migration 2 3 to 2 4\
+\*\
 In progress\*
 =====================
 
@@ -45,4 +43,5 @@ Extension Migration
 -   retired constants: DIR\_HELPERS, DIR\_MODELS
 -   added pre install checks by extension, in [‘install’][‘checks’]
 -   added the possibility for every extension to add local data using [‘local’][’php]
+
 

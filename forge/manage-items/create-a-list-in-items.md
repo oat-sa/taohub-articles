@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-12 16:52:34'
@@ -19,4 +17,5 @@ The Create a list pane is displayed when you click on the Lists icon.<br/>
 To create a list, just define the name and the number of elements.<br/>
 
 After that, you have to edit the elements in the created list and save it.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 15:38:15'
@@ -16,4 +14,5 @@ Translate
 
 -   In the Delivery properties box, when you click on the Translate button, the Translate box is displayed.
 -   The Translate box allows translating the delivery properties.
+
 

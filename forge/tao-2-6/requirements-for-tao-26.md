@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_2_6
 author:
     - 'Joel Bout'
 created_at: '2014-09-05 10:17:31'
@@ -62,4 +60,5 @@ Although technically deliveries could be done on many mobile phones we recommend
 -   Chrome (latest versions, tested on versions 31 to 36)
 -   Firefox (latest versions, tested on versions 29 to 32)
 -   Safari (latest versions, tested version 7 on MacOS)
+
 

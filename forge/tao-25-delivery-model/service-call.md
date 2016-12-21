@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tao_25_Delivery_model
 author:
     - 'Joel Bout'
 created_at: '2013-11-20 10:51:43'
@@ -33,4 +31,5 @@ Call Parameters
 The **values** that should be associated to the In-Parameters of the service for a particular service call.
 
 In addition to the specified parameters, the caller must also provide a **serviceCallId** at runtime. This identifier allows the caller to associate responses of the service to the corresponding service call and it allows the called service to identify service calls that have already been initialized (for example a test-taker returning to an item he has already responded to).
+
 

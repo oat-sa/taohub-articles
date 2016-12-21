@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Konstantin Sasim'
 created_at: '2011-02-08 10:41:00'
@@ -47,4 +45,5 @@ A global testsuite is available in the root to launch all tests.
 -   One Class, one TestCase
 -   Test all non-trivial methods
 -   Build separate TestSuite for different parts of the application.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Roles
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-18 14:48:12'
@@ -15,4 +13,5 @@ Actions
 ![](../resources/roles-actions.png)
 
 •According to your actions in the interface, the actions icons will be activated ar deactivated.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Cyril Hazotte'
 created_at: '2010-11-23 16:14:15'
@@ -44,3 +42,4 @@ There is currently an experimental MacOS X distribution (10.4 and later). This d
 
 [[Upgrade the TAO Platform]]
 ----------------------------
+

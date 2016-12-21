@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Yaw Onidin'
 created_at: '2015-01-08 18:27:16'
@@ -11,3 +9,4 @@ tags:
 
 How to do search on meta data
 =============================
+

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: General_features
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-12-02 10:40:49'
@@ -61,4 +59,5 @@ p((((. ![](../resources/Duplicate_icon.png) Duplicate
 p((((. ![](../resources/Delete_icon.png) Delete
 
 All these actions can also be performed via the corresponding icons in the Actions panel.
+
 

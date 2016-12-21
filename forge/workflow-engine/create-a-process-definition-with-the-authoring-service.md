@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Workflow_Engine
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-02 17:20:18'
@@ -185,4 +183,5 @@ The unit tests dedicated to the Workflow Engine provide other examples of proces
 -   ProcessExecutionTestCase and TokenServiceTestCase offer complete examples of process creation-execution cycle
 
 You can find more details about the workflow services presented in this page in the [phpDoc](http://forge.tao.lu/docs/phpdoc/index.html)
+
 

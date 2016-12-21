@@ -26,3 +26,4 @@ Configure Solr as a service
 Start at boot
 
     chkconfig --add solr
+

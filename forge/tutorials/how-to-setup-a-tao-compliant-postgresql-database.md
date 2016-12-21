@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Jérôme Bogaerts'
 created_at: '2013-01-02 11:32:44'
@@ -69,4 +67,5 @@ The statements above
 -------------
 
 You are now able to setup a TAO compliant PostgreSQL database. Please read the [PostgreSQL documentation](http://www.postgresql.org/docs/9.2/static/sql-grant.html) if you want to know more about permissions.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: 'Items''_Types'
 author:
     - 'Somsack Sipasseuth'
 created_at: '2011-02-08 11:04:37'
@@ -25,12 +23,12 @@ The implemention of the QTI standard enables TAO to be more open and interoperab
 
 The current available QTI features in TAO are:
 
-\* Import QTI Item (XML files compatible with [QTI 2.0](http://www.imsglobal.org/question/qti_v2p0/imsqti_infov2p0.html) or [QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))<br/>
- \* Import QTI Package (ZIP files compatible with [IMS Content Packaging v1.1.4](http://www.imsglobal.org/content/packaging/cpv1p1p4/imscp_infov1p1p4.html))<br/>
- \* Save the item content in the QTI format (XML)<br/>
- \* Create or edit a QTI Item ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))<br/>
- \* Export item to XML file ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))<br/>
- \* Export one or more items to zip package ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))<br/>
+\* Import QTI Item (XML files compatible with [QTI 2.0](http://www.imsglobal.org/question/qti_v2p0/imsqti_infov2p0.html) or [QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))\
+ \* Import QTI Package (ZIP files compatible with [IMS Content Packaging v1.1.4](http://www.imsglobal.org/content/packaging/cpv1p1p4/imscp_infov1p1p4.html))\
+ \* Save the item content in the QTI format (XML)\
+ \* Create or edit a QTI Item ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))\
+ \* Export item to XML file ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))\
+ \* Export one or more items to zip package ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))\
  \* Render QTI item in XHTML, CSS, Javascript
 
 For additional information regarding the QTI standard, please refer to the IMS Consortium web site:
@@ -50,8 +48,8 @@ Then with the PHP object, you can update the item - add an interaction, change t
 
 Once you are finished working on your model, you can save it, render it, etc :
 
-\* QTI XML format to save and export your item<br/>
- \* XHTML to preview and deliver the item<br/>
+\* QTI XML format to save and export your item\
+ \* XHTML to preview and deliver the item\
  \* PHP Array for other format transformation, e.g. json
 
 The QTI PHP model is outlined by the UML model below. Not all properties and methods are displayed, only the most significant ones.
@@ -151,7 +149,7 @@ Portable Custom Interaction
 
 Since TAO 3.0, TAO offers complete PCI and PCI hooks to enable developers to extend the functonalities offered by IMS QTI 2.1 standard.
 
-Portable Custom Interaction Best Practice Change Proposal<br/>
+Portable Custom Interaction Best Practice Change Proposal\
 The Change proposal recommendation to implement TAO PCI can be found in [[TAO PCI]]
 
 The base proposal from IMS is a draft version subimitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html)
@@ -161,4 +159,5 @@ The proposal form Passific Metrics attempts to solve some issues from the origin
 We use both of them to write our own proposal, which is backed by this currently working implementation. The proposal can be found here.[[TAO PCI]]
 
 To implement PCI in TAO, the following wiki page provides a good starting point [[TAO PCI and PIC]].
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Dieter Raber'
 created_at: '2016-04-29 17:14:19'
@@ -56,3 +54,4 @@ SVG can be used several ways, for instance as source an <code><img /></code> ele
     use, g.use {
         fill: currentColor !important;
     }
+

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Groups
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-03 15:27:52'
@@ -17,4 +15,5 @@ Select group deliveries
 The Select group deliveries pane is displayed when a group is selected in the Groups library.
 
 The Select group deliveries pane allows indicating the deliveries which should be associated with the selected group.
+
 

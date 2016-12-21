@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Dieter Raber'
 created_at: '2014-01-15 09:35:04'
@@ -320,3 +318,4 @@ You can see below an example of jsdoc documentation.
             }
         };
     });
+

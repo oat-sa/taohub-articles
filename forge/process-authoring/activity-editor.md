@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Process_Authoring
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 16:11:29'
@@ -15,4 +13,5 @@ Activity editor
 -   The Activity editor box allows creating activities and editing the connectors that define the workflow logic. The dynamic activity arborescence summarizes the workflow being edited. Every action can be done on the workflow with a right-click contextual menu.<br/>
 
     ~~En attente de la documentation développeur~~
+
 

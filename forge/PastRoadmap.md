@@ -62,7 +62,7 @@ TAO extensions mechanism had been reviewed and is going to be refactored, the ma
 TAO 2.3 - Ease of Install, Extension Management, third-party libraries dependencies rationalization (Aug 2012 TAO 2.3.1 Final Release)
 --------------------------------------------------------------------------------------------------------------------------------------
 
-### Easy to use installer<br/>
+### Easy to use installer\
 Reduce time and effort to install and setup TAO, facilitate TAO install for evaluation before final deployment, make install easily done by non-IT users
 
 A new installer has been developped in TAO. It includes new user interfaces built as a wizard, contextual help for every setting asked to the users and feedback help.
@@ -86,10 +86,10 @@ An improvement to the way libraries are included and laoded will be investigated
 TAO 2.2 - Advanced Grading and Resources Versioning capabilities (July 2012 TAO 2.2 Final Release - Partly implemented)
 -----------------------------------------------------------------------------------------------------------------------
 
-### 1. Human-Based Scoring<br/>
+### 1. Human-Based Scoring\
 *This work is achieved in close collaboration with the medical university: Karolinska Institute and is currently applied in the domain of Health-Care Education*
 
-\> **Status**<br/>
+\> **Status**\
 The human based scoring has been partly implemented within the 2.2. Using TAO 2.2 version of TAO, you may first install the the human based grading extension quite easily by going to the settings menu, extensions manager then search for the grading extension and clikc on the install button.
 
 This will enable the grading functionnality, includign the possibility to define scoring guidelines, a score scale (min, max, step) for every QTI item interaction. After data collection, independenant graders may score individuals for every essay, input against the scoring guidelines. The conflict reconciliation supporting features (if independant graders give different scores) is not yet available within the 2.2.
@@ -100,10 +100,10 @@ This will enable the grading functionnality, includign the possibility to define
 
 \> Functionalities :<br/>
 
-\> \* Specify a scale (min, max, and step) for the manual grading of items in item authoring tool<br/>
+\> \* Specify a scale (min, max, and step) for the manual grading of items in item authoring tool\
 \> \* Provide a GUI, in the results extension, enabling graders to browse test takers (anonymously or not) and grade for each items and interactions of items according to the specified scale. Advanced browsing will make use of properties defined on items as criteria to grade by focusing exclusively on subsets of items.<br/>
 
-\> \* Reconciliation user interface exposing all conflicting grades from graders and prompting for a reconciled score<br/>
+\> \* Reconciliation user interface exposing all conflicting grades from graders and prompting for a reconciled score\
 \> \* Compute statistics from grades.
 
 ### 2. Resources (Item Bank) Versioning\*
@@ -179,4 +179,5 @@ Related tasks
 -   \#833 Test Delivery Security
 -   \#839 General Security Review
 -   \#842 Standards & Softwares
+
 

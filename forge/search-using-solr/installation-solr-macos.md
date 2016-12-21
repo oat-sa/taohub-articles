@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Search_using_Solr
 author:
     - 'Mikhail Kamarouski'
 created_at: '2015-06-10 17:00:53'
@@ -19,4 +17,5 @@ brew install solr
 To have launchd start solr at login:
 
 ln -sfv /usr/local/opt/solr/\*.plist \~/Library/LaunchAgents
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Bertrand Chevrier'
 created_at: '2014-01-16 11:54:24'
@@ -49,8 +47,8 @@ Do not forget to add the path to the bootstrap into your compiler’s options (`
 
 In order to compile (or watch) your SASS files to the target CSS, you can either use:<br/>
 
- - The grunt task provided with TAO (see [[Front Tools]])<br/>
- - The SASS CLI tool provided by SASS (requires ruby and the sass gem)<br/>
+ - The grunt task provided with TAO (see [[Front Tools]])\
+ - The SASS CLI tool provided by SASS (requires ruby and the sass gem)\
  - Your favorite IDE SASS plugin
 
 #### Build using Grunt
@@ -76,3 +74,4 @@ To ensure your theme is compiled during the build phase, add new line into `{ext
 By example, if you want `taoQtiTest/views/scss/creator.scss` to be compiled to `taoQtiTest/views/css/creator.css`, edit the file `taoQtiTest/views/build/grunt/sass.js` to add the line:
 
         sass.taoqtitest.files[root + 'css/creator.css'] = root + 'scss/creator.scss';
+

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 15:46:07'
@@ -16,4 +14,5 @@ Select delivery
 
 -   The Select delivery box is displayed when a campaign is selected in the Campaigns library.
 -   The Select delivery box allows indicating the deliveries which should constitute the selected campaign.
+
 

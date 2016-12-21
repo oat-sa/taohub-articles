@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Processes
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-17 14:27:18'
@@ -17,4 +15,5 @@ Export
 The Export box is displayed when a process or a class is selected in the Processes library and when you click on the Export action.<br/>
 
 When you export your data, you have just to indicate the data you want.
+
 

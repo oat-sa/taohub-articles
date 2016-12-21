@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-12 16:51:04'
@@ -17,4 +15,5 @@ Move to
 The Move to pane is displayed when an item is selected in the tree and when you click on the Move icon (in the right click menu or in the Actions pane).
 
 To move an item, just click on the target class.
+
 

@@ -84,3 +84,4 @@ Cleaning up the database
 
 -   The table ‘workspace’ can now safely be dropped.
 
+

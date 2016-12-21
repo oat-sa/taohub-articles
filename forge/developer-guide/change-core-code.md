@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Thomas Garrard'
 created_at: '2010-12-02 16:11:40'
@@ -21,4 +19,5 @@ It will be dealt with as soon as possible.
 [TAO Forum](http://forge.taotesting.com/projects/tao/boards) is the better place to exchange about the best solution to improve the code.<br/>
 
 You can also contact us to discuss your ideas.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Tests
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-22 18:06:30'
@@ -17,4 +15,5 @@ Select related items
 The Select related items pane is displayed when a test is selected in the Tests library.
 
 A test is composed by items, and this pane allows choosing the items which will compose the selected test.
+
 

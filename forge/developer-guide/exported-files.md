@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Antoine Robin'
 created_at: '2016-03-30 15:37:11'
@@ -253,4 +251,5 @@ This file allow you to have an overview of the delivery executions of you instan
   taker1        20         3                2
 
 The first column is the test taker login, the second one is the number of item answered by this test taker. Then we have the number of executions started by this test taker, finally we have the number of test the test taker has finished.
+
 

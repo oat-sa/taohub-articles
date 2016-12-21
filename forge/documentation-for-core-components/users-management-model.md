@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Joel Bout'
 created_at: '2013-03-07 09:34:17'
@@ -21,4 +19,5 @@ Alternate User Directories
 
 -   [[LDAP Authentication]]
 -   Key-Value storage
+
 

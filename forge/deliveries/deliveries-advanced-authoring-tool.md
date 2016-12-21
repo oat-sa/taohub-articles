@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-04-22 09:22:11'
@@ -24,7 +22,7 @@ Service definition box
 -   The Service definition box defines the services that will be integrated into an activity.
 -   The services are shared with every delivery which is in advanced mode, e.g. modifying a service definition will affect every delivery that is using it.<br/>
 
-    ~~Question : modification aussi dans processes et deliveries ? en attente de réponse~~<br/>
+    ~~Question : modification aussi dans processes et deliveries ? en attente de réponse~~\
     ~~En attente de la documentation développeur~~
 
 Formal parameter box
@@ -69,4 +67,5 @@ Process properties box
 -   The Process properties box allows editing general properties if the current process, i.e. label, name and associated process variables.<br/>
 
     ~~En attente de la documentation développeur~~
+
 

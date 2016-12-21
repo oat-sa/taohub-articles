@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Somsack Sipasseuth'
 created_at: '2011-03-03 14:38:33'
@@ -14,10 +12,11 @@ Items’ Types
 
 ------------------------------------------------------------------------
 
-### 1. [[QTI]]<br/>
+### 1. [[QTI]]\
 2. [[Free Form Items|Open WEB Items]]
 
 ------------------------------------------------------------------------
 
 Overview
 --------
+

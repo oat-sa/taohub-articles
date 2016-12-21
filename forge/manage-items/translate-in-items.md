@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-16 17:18:39'
@@ -19,4 +17,5 @@ In the Edit item pane, when you click on the Translate button, the Translate box
 Here you can translate the **item properties**.
 
 —\> To translate the **item content**, you initially have to choose the data language targeted in the Settings extension, then translate the content in the item Authoring tool.
+
 

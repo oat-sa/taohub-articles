@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Users_Management_Model
 author:
     - 'Joel Bout'
 created_at: '2014-02-20 10:20:15'
@@ -78,4 +76,5 @@ Back Office
 <!-- -->
 
 -   “taoItems Manager” also grants access to the extensions taoOpenWebItem and taoQTI (QTI item extension) in order to allow authoring of these kind of items
+
 

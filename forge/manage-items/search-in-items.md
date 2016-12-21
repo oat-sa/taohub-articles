@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-12 16:47:40'
@@ -19,4 +17,5 @@ The Search pane is displayed when you click on the Search icon, in the Actions p
 In the first extension of the Search box, you should define the search options which permit to refine search results.
 
 In the second extension of the Search box, you should define at least one filter to allow the search.
+
 

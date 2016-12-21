@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Rex Wallen Tan'
 created_at: '2015-12-27 15:15:10'
@@ -58,3 +56,4 @@ Call the function from your controller
       echo print_r($deliveryID);
       echo "";
      }
+

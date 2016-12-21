@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Installation_and_Upgrading
 author:
     - 'Jérôme Bogaerts'
 created_at: '2014-09-16 13:25:52'
@@ -48,3 +46,4 @@ Get the Dependencies
 
 Install TAO
 -----------
+

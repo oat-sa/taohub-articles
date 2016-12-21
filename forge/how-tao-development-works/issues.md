@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: How_TAO_development_works
 author:
     - 'Jérôme Bogaerts'
 created_at: '2010-10-05 15:05:55'
@@ -52,60 +50,60 @@ Tracker
 
 The field *Tracker* is the issue’s type.
 
-\>**Bug**<br/>
-\><br/>
+\>**Bug**\
+\>\
 \> You choose **Bug** if you want to report an error in a TAO version.<br/>
 
-\> You have to<br/>
-\> \* summarize the error<br/>
-\> \* explain everything that can be useful to reproduce it<br/>
+\> You have to\
+\> \* summarize the error\
+\> \* explain everything that can be useful to reproduce it\
 \> \* specify the TAO version if you are in test mode
 
-\> **Feature**<br/>
-\><br/>
+\> **Feature**\
+\>\
 \> You choose **Feature** if you want to add a new feature.<br/>
 
 \> If you want to add it in the roadmap of a version, you have to specify the Target version.
 
-\> **Support**<br/>
-\><br/>
+\> **Support**\
+\>\
 \> You choose **Support** if you want to add some requirements for documentation, or formation, or other things that are not directly connected to the code of TAO tool.
 
 Status
 ------
 
-\>**New**<br/>
+\>**New**\
 \> Default status for new issue.<br/>
 
-\><br/>
-\>**Feedback**<br/>
+\>\
+\>**Feedback**\
 \> The manager needs more information from the reporter to understand the issue.<br/>
 
-\><br/>
-\>**Assigned**<br/>
+\>\
+\>**Assigned**\
 \> The issue has been allocated to someone.<br/>
 
-\><br/>
-\>**In progress**<br/>
+\>\
+\>**In progress**\
 \> The assigned developer is working on the issue.<br/>
 
-\><br/>
-\>**To be tested**<br/>
-\> The issue has been resolved but need to be tested by the reporter<br/>
-\><br/>
-\>**Resolved**<br/>
+\>\
+\>**To be tested**\
+\> The issue has been resolved but need to be tested by the reporter\
+\>\
+\>**Resolved**\
 \> The issue is resolved.<br/>
 
-\><br/>
-\>**Reopened**<br/>
+\>\
+\>**Reopened**\
 \> The solution is not good. The issue is reopened.<br/>
 
-\><br/>
-\>**Rejected**<br/>
+\>\
+\>**Rejected**\
 \> The issue won’t be / doesn’t need to be solved.<br/>
 
-\><br/>
-\>**Closed**<br/>
+\>\
+\>**Closed**\
 \> The solution to this issue is released.
 
 Target Version
@@ -127,4 +125,5 @@ Tested Version
 The **Tested Version** field appears only if the **Tracker** is a **Bug**.<br/>
 
 The idea is to put the TAO version for each encountered problem.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 15:51:58'
@@ -21,4 +19,5 @@ You can move results server in order to change their belonging class by drag and
 Different actions are available by right clicking (edit, new class, new result server, move, duplicate, delete) depending on whether a class or a result server is selected.
 
 You can filter the Result Servers library. Only the result servers and classes labels that meet the string enter in the text field will be displayed.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Installation_and_Upgrading
 author:
     - 'Cyril Hazotte'
 created_at: '2012-02-19 21:51:25'
@@ -114,4 +112,5 @@ You can now restart your web server to take the new configuration settings into 
 ### 2.3. TAO Installation Wizard
 
 For this last step of the installation process, open up your favourite web browser at http://taoplatform/tao/install. The installation wizard appears. Follow the instructions to finalize your TAO Platform installation.
+
 

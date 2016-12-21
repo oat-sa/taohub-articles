@@ -93,3 +93,4 @@ Make sure that you configured multiple filter strategy (*filterStrategy: ’mult
             filterable: true
         }]
     });
+

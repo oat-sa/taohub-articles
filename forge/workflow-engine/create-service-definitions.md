@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Workflow_Engine
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-02 18:05:10'
@@ -119,7 +117,7 @@ The complete description of services can be found here : [Services\_definition.p
 -   ResultServer related delivery
 -   ResultServer removing
 
-For instance, the source of the service to edit an item is in the following file: *yourWebRootPath/taoItems/actions/class.SaSItems.php*<br/>
+For instance, the source of the service to edit an item is in the following file: *yourWebRootPath/taoItems/actions/class.SaSItems.php*\
 As previously said in [[Process Definition Model\#Service\_definition]], a service is defined by its URL. Provided that its url is accesible via URL, it can be a service in TAO. The service *’sasEditInstance’* below is accessible via the URL */taoItems/SaSItems/sasEditInstance* (with URL rewriting engine activated in TAO)
 
 
@@ -250,4 +248,5 @@ The snippet to import your service definition becomes:
     );
 
 To build more complicated services to manage your ontology resources, you could follow the examples of the preloaded TAO services.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Rest_Services_Layer
 author:
     - 'Antoine Robin'
 created_at: '2014-05-28 10:06:14'
@@ -352,4 +350,5 @@ GET result
        },
        "version":"2.6-beta2"
     }
+
 

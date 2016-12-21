@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Roles
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-18 17:02:18'
@@ -17,4 +15,5 @@ The Search box is displayed when you click on the Search action, in the Actions 
 In the first part of the Search box, you should define the search options which permit to refine search results.<br/>
 
 In the second part of the Search box, you should define one filter to minimum to allow the search.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Joel Bout'
 created_at: '2015-07-14 18:52:42'
@@ -96,4 +94,5 @@ New Server
 
 -   (Mandatory) Clear the cache of the file sources by emptying the folder **NEW\_FILES\_PATH/data/generis/cache/**. This can be achieved using the following command: rm -rf NEW\_FILES\_PATH/data/generis/cache/\*.
 -   (Optional) Execute **NEW\_FILES\_PATH/tao/scripts/taoUpdate.php** to ensure all extensions are up to date and to regenerate the translation files
+
 

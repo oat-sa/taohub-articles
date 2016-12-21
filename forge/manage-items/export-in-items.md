@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-19 19:19:55'
@@ -18,9 +16,10 @@ The Export pane is displayed when an item or a class is selected in the Items li
 
 You can export your data to RDF, XML or QTI Package.
 
--   RDF<br/>
+-   RDF\
     \> you must indicate the namespaces or the instances you want to export.
--   XML<br/>
+-   XML\
     \> you have to indicate the items you want to export.
 -   QTI Package
+
 

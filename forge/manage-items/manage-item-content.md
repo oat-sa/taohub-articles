@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-19 18:59:45'
@@ -23,4 +21,5 @@ Here you can:
 <!-- -->
 
 -   **download** the content of your item on your computer (*if defined already*)
+
 

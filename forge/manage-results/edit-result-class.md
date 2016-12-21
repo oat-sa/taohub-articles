@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Manage_Results
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 16:15:45'
@@ -16,4 +14,5 @@ Edit result class
 
 -   The Edit result class box is displayed when a class is selected in the Results library.
 -   The Edit result class box does not provide the possibility creating, modifying or deleting properties. Indeed, the properties are automatically created depending the delivery of the results stored.
+
 

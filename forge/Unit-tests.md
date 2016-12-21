@@ -149,3 +149,4 @@ Optionnal dependencies:
 -   we need all tests cases to be wrapped under a QUnit.module (for reporting)
 -   for an example of parameterized test, see https://github.com/oat-sa/tao-core/blob/develop/views/js/test/core/encoder/str2array/test.js
 
+

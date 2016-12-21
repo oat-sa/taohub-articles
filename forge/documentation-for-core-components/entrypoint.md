@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Joel Bout'
 created_at: '2014-05-27 12:17:39'
@@ -19,18 +17,19 @@ There are currently three entry-points in Tao:
 Backoffice
 ----------
 
-Accessible to users with the role “Back Office”<br/>
+Accessible to users with the role “Back Office”\
 Used to create items, manage item and test banks, organize cohorts and deliveries, prepare reports, set up workflows.
 
 Delivery server
 ---------------
 
-Accessible to users with the role “Test-Taker”<br/>
+Accessible to users with the role “Test-Taker”\
 Used to take or continue a test.
 
 Workflow Assistant
 ------------------
 
-Accessible to users with the role “Workflow Participant”<br/>
+Accessible to users with the role “Workflow Participant”\
 Used to execute workflows for assessment preparation
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Wiki
 author:
     - 'Christophe Noel'
 created_at: '2016-04-27 11:52:02'
@@ -17,7 +15,7 @@ Setting the following categories in the QTI test creator unlocks secret features
 x-tao-option-endTestWarning
 ---------------------------
 
-displays a warning before the user finishes the test<br/>
+displays a warning before the user finishes the test\
 requires Sprint 36 / taoQtiTest \>= 5.20.0
 
 x-tao-option-nextSectionWarning
@@ -28,7 +26,7 @@ displays a next section button that warns the user that they will not be able to
 x-tao-option-noExitTimedSectionWarning
 --------------------------------------
 
-disable the warning automatically displayed upon exiting a timed section<br/>
+disable the warning automatically displayed upon exiting a timed section\
 requires Sprint 37 / taoQtiTest \>= 5.24.0
 
 x-tao-option-nextSection
@@ -74,4 +72,5 @@ How to configure those options at the level of a particular test ?
 You may enable those features at the level of a test by adding the relevant category in the test authoring next to the section level settings pane.
 
 ![](../resources/EditingCustomFeaturesusingcategories.png )
+
 

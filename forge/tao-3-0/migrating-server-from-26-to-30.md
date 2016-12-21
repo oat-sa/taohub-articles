@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_3_0
 author:
     - 'Joel Bout'
 created_at: '2014-08-19 14:26:10'
@@ -17,4 +15,5 @@ This is work in progress and will definitely change. Only after 3.0 has been rel
 Changes:
 
 -   The configuration has been moved from ROOT\_PATH/generis/common/conf to ROOT\_PATH/config
+
 

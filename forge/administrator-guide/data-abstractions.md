@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Cyril Hazotte'
 created_at: '2014-02-12 11:44:13'
@@ -21,11 +19,11 @@ The key-value storage implementation may be installed and configured under the f
 -   If you are using Ubuntu, make sure you have the following packages installed:
     -   for Redis:<br/>
 
-        “redis-server” on the server you want to use for the storage<br/>
+        “redis-server” on the server you want to use for the storage\
         “php5-redis” on the TAO application server
     -   for Couchbase:<br/>
 
-        “couchbase-server” (on the server you want to use for the storage)<br/>
+        “couchbase-server” (on the server you want to use for the storage)\
         PECL “couchbase” library on the TAO application server
 -   If you are using Fedora/CentOS/RHEL, make sure you have the following packages installed:
     -   for Redis: “php56u-pecl-redis”, “php56w-pecl-redis” or prior versions of these packages
@@ -187,7 +185,7 @@ User authentication storage abstraction
 
 Currently, there are at least two user authentication methods available:<br/>
 
-- using the Generis model user adapter (default method)<br/>
+- using the Generis model user adapter (default method)\
 - using the key-value user adapter
 
 **Note:** Key-value authentication currently works solely for test-takers.
@@ -263,4 +261,5 @@ If you have chosen to use a remote Redis server or wanted to have Redis running 
 -   When you configure a delivery, you may now decide to send the results to the Redis server, in that case choose the option *KeyValueResultStorage* in the delivery configuration tool.
 
 }}
+
 

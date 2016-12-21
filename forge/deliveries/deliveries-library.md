@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-03-29 15:11:34'
@@ -21,4 +19,5 @@ You can move deliveries in order to change their belonging class by drag and dro
 Different actions are available by right clicking (edit, new class, new delivery, move, duplicate, delete) depending on whether a class or a delivery is selected.
 
 You can filter the Deliveries library. Only the deliveries and classes labels that meet the string enter in the text field will be displayed.
+
 

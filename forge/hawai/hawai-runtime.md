@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Hawai
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-15 10:36:08'
@@ -13,3 +11,4 @@ tags:
 
 Hawai runtime
 =============
+

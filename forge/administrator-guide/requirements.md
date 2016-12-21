@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Joel Bout'
 created_at: '2011-02-15 15:27:25'
@@ -39,7 +37,7 @@ TAO needs Apache to be loaded with a specific module which is [mod\_rewrite](htt
 -   the */modules* directory of your Apache folder contains *mod\_rewrite.so* file.
 -   the *LoadModule rewrite\_module modules/mod\_rewrite.so* directive exists in your httpd.conf configuration file. Remove any comment sign (‘\#’) if it is the first character of the related line.
 
-Please also check that the *AllowOverride All* directive is set for your DocumentRoot. You can find it in httpd.conf as<br/>
+Please also check that the *AllowOverride All* directive is set for your DocumentRoot. You can find it in httpd.conf as\
 in the following example:
 
     #
@@ -94,4 +92,5 @@ Next step
 You now have to configure TAO itself. For this purpose, the [[Installation and Upgrading]] section is at your disposal.<br/>
 
 You will learn how to set up the MySQL connection, create the knowledge base and the very first administrator user.
+
 

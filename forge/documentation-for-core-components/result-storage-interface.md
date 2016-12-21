@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Patrick Plichart'
 created_at: '2013-10-16 15:26:05'
@@ -20,8 +18,8 @@ The results storage interface is made available in taoResultServer extension of 
 Implementing the interface.
 ---------------------------
 
-Implementing a new results storage consists at minimum in creating a new extension<br/>
-- with class(es) implementing taoResultServer\_models\_classes\_ResultStorage<br/>
+Implementing a new results storage consists at minimum in creating a new extension\
+- with class(es) implementing taoResultServer\_models\_classes\_ResultStorage\
 - with the rdf declaration of a new results storage model available to result server.
 
 ``` {code="xml"}
@@ -38,7 +36,7 @@ Concepts
 
 *deliveryResultIdentifier*
 
-Used to identify the set of information collected for the instanciation of a test delivery by a test taker. This identifier is used for further calls to the implementation in order to stack extra information as the data gets collected by the driver. The implementation should rely strictly on this to store the data adequately. The implementation can’t rely on any other “state” information like a session(the test session may be interrupted, etc.)<br/>
+Used to identify the set of information collected for the instanciation of a test delivery by a test taker. This identifier is used for further calls to the implementation in order to stack extra information as the data gets collected by the driver. The implementation should rely strictly on this to store the data adequately. The implementation can’t rely on any other “state” information like a session(the test session may be interrupted, etc.)\
 The spawn function to be implemented should return a valid unique new identifier (string).
 
 For every single execution of the same test delivery by the same test taker a specific deliveryResultIdentifier will be used.
@@ -92,3 +90,4 @@ interface taoResultServer\_models\_classes\_ResultStorage
          * @return string deliveryResultIdentifier
          */
         public function spawnResult();
+

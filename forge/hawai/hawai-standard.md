@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Hawai
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-09 10:54:43'
@@ -62,10 +60,10 @@ We provide with our platform a format of xml document based on BLACK (an xml n-t
 
 *Attribute* : xmlns:{namespace\_name} [\*] : string
 
-*Contains* : [[Hawaï\_standard\#business|business]] [0-1]<br/>
-*Contains* : [[Hawaï\_standard\#layout|layout]] [0-1]<br/>
-*Contains* : [[Hawaï\_standard\#action|action]] [0-1]<br/>
-*Contains* : [[Hawaï\_standard\#content|content]] [0-1]<br/>
+*Contains* : [[Hawaï\_standard\#business|business]] [0-1]\
+*Contains* : [[Hawaï\_standard\#layout|layout]] [0-1]\
+*Contains* : [[Hawaï\_standard\#action|action]] [0-1]\
+*Contains* : [[Hawaï\_standard\#content|content]] [0-1]\
 *Contains* : [[Hawaï\_standard\#knowledge|knowledge]] [0-1]
 
 ### business
@@ -90,7 +88,7 @@ Authoring action allows widgets’ creator to associate an authoring behavior to
 
 ### content (a)
 
-see documentation about the black format<br/>
+see documentation about the black format\
 *content title is misunderstood by redmine. Redmine create a big white box…*
 
 *Contains* : [[Hawaï\_standard\#templates|templates]] [\*]
@@ -220,4 +218,5 @@ Right now the black manages scalar variables but we are thinking about more comp
 
 -   The regexp should be placed between the characters “/” and “/”
 -   variablelock is an expression which does not require a value. variableunlock will be its opposite.
+
 

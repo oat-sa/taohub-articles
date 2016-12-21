@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Deliveries
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-04-12 19:11:58'
@@ -17,4 +15,5 @@ Translate
 In the Edit campaign box, when you click on the Translate button, the Translate box is displayed.<br/>
 
 The Translate box allows translating the campaign properties.
+
 

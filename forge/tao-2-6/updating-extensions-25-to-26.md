@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_2_6
 author:
     - 'Joel Bout'
 created_at: '2013-11-18 11:19:39'
@@ -16,4 +14,5 @@ Manifest
 --------
 
 -   The entry ‘managementRole’ will be nescessary if your extension includes actions that should be available to the global manager.
+
 

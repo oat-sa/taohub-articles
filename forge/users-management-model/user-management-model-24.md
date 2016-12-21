@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Users_Management_Model
 author:
     - 'Jérôme Bogaerts'
 created_at: '2013-03-07 09:35:51'
@@ -134,4 +132,5 @@ Now that you are familiar with Users and Roles in TAO, we will now describe the 
 -------------------
 
 -   [[Functionality\_Access\_Control|Functionality Access Control]]
+
 

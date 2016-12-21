@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Wiki
 author:
     - 'Cyril Hazotte'
 created_at: '2013-05-03 09:09:13'
@@ -96,21 +94,21 @@ Come back to your web browser that popped up when you started your MAMP server (
 
 ![](../resources/install1.png)
 
-![](../resources/install2.png)<br/>
+![](../resources/install2.png)\
 Define the hostname, commonly it is http://localhost:8888 but it could be http://localhost depending on the settings set up in your MAMP. If you are not sure check the adress used in your web browser as a reference.
 
 We recommend you to use the pre-load data sample option, this way you will have some basic item examples to start with.
 
-![](../resources/install3.png)<br/>
+![](../resources/install3.png)\
 Please note that the default login and password to access mysql from MAMP is root/root
 
-![](../resources/install4.png)<br/>
+![](../resources/install4.png)\
 Choose an admin account for your tao installation, this is the login and password you will have to use on your fresh tao installation.
 
-![](../resources/install5.png)<br/>
+![](../resources/install5.png)\
 Read and accept to license agreements.
 
-![](../resources/Screenshot%202016-05-27%2010.36.24.png)<br/>
+![](../resources/Screenshot%202016-05-27%2010.36.24.png)\
 Congratulations!
 
 ### Start up TAO
@@ -152,4 +150,5 @@ If you see a 505 error message in the browser console, this is likely due to MAM
 You may want to have a short webinar introduction to TAO, check our website and ask for a 1:1 demo
 
 Patrick
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Wiki
 author:
     - 'Jean-Sébastien Conan'
 created_at: '2016-09-21 15:35:10'
@@ -57,3 +55,4 @@ You can download it freely [here](https://mozilla.github.io/pdf.js/getting_start
                             /viewer.js
                         /LICENSE
                     [...]
+

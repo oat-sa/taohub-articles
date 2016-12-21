@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Joel Bout'
 created_at: '2011-03-04 17:31:25'
@@ -60,7 +58,7 @@ In order to use a layer from the meta-extension, the dependent extension’s cla
 3. Extension’s Structure
 ------------------------
 
-Each extension is built upon the [ClearFw](http://code.google.com/p/clearfw/) a really simple php5 MVC framework. This framework provides basic functionalities to develop web applications according to some very simple and good practices…<br/>
+Each extension is built upon the [ClearFw](http://code.google.com/p/clearfw/) a really simple php5 MVC framework. This framework provides basic functionalities to develop web applications according to some very simple and good practices…\
 The current release of TAO is built on the evolution of the framework that can be found [here](http://clearfw.googlecode.com/svn/tags/taoTransfer) .
 
 Each extension uses and extends this model. From the point of view of the file-system, an extension is contained into a folder. The folder’s name is the extension’s name. Even though there are dependencies among the extensions, they are all at the same level of the file-system, into your *TAO distribution* directory.
@@ -71,7 +69,7 @@ The screenshot below represents a TAO distribution into the *transferAll* folder
 
 Inside an extension we have the following folders structure:
 
--   **actions**<br/>
+-   **actions**\
     It contains the controller layer.<br/>
 
     In the ClearFw, a **controller** is called a **module**. We are using this convention.<br/>
@@ -80,48 +78,49 @@ Inside an extension we have the following folders structure:
 
 <!-- -->
 
--   **helpers**<br/>
+-   **helpers**\
     It contains all utility class: the shared components (the dynamic form component), the transverse functionalities (security) and some common utilities (Uri or String helper)
 
 <!-- -->
 
--   **includes**<br/>
+-   **includes**\
     It contains the configuration files, constant files and may also contain the Bootstrap.
 
 <!-- -->
 
--   **install**<br/>
+-   **install**\
     It contains an extension specific data and scripts to install the extension. The SQL Database, the RDF Model and PHP scripts to be executed during the installation
 
 <!-- -->
 
--   **locales**<br/>
+-   **locales**\
     The framework handles internationalisation. Locale variables are stored in file *messages.po* in a directory corresponding to the language. For example, locales/EN/messages.po contains the translation file for English. We use the *gettext* format.
 
 <!-- -->
 
--   **models**<br/>
+-   **models**\
     It contains the data models of the extension and the business classes. The manipulation of the model is made through a service layer. The **services** provide methods to manage the data from any data source. We usually create services to manage RDF models through the *Generis API*, row data from the database, files or web-services.
 
 <!-- -->
 
--   **scripts**<br/>
+-   **scripts**\
     It contains command lines or utility scripts.
 
 <!-- -->
 
--   **test**<br/>
+-   **test**\
     It contains Unit Tests.
 
 <!-- -->
 
--   **views**<br/>
+-   **views**\
     It contains the view layer: the HTML templates, the common web resources like images, style-sheets and client-side scripts
 
 <!-- -->
 
--   /<br/>
+-   /\
     The root of the extension contains the front bootstrap *index.php*, the [[ExtensionManifestDescription|extension description]] file *manifest.php* and the web server configuration file *.htaccess* (describing the URL rewriting, the redirections and the authentication rules).
 
 ![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Framework-Extensions|Return to Top]]
+
 

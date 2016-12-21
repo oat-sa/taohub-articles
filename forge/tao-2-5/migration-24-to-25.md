@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_2_5
 author:
     - 'Joel Bout'
 created_at: '2013-06-04 14:36:21'
@@ -42,4 +40,5 @@ Upgrading
 ---------
 
 A new update procedure now allow you to smothly upgrade from 2.4 to 2.5, [[Installation\_and\_Upgrading]]
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Christophe Noel'
 created_at: '2011-03-04 17:42:01'
@@ -177,4 +175,5 @@ Fill generated po file with your translation.
 \ Use -f to reset actual translations po files
 
 ![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Internationalization|Return to Top]]
+
 

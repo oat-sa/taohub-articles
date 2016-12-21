@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Dieter Raber'
 created_at: '2014-06-30 11:50:17'
@@ -88,4 +86,5 @@ Further reading
 ---------------
 
 -   [[Tutorial - Using a custom font on items]]
+
 

@@ -62,19 +62,19 @@ PCI that support versioning will have the version set as the property “version
 
 ### Semantic versionning
 
-PCI version number follow the semantic versionning: MAJOR.MINOR.PATCH<br/>
+PCI version number follow the semantic versionning: MAJOR.MINOR.PATCH\
 MAJOR : incompatible change, both runtime libs and existing qti xml need to be updated (properties, response declaration, response processing). In this case, a separate update script is required to update the xml (items or/and deliveries) before the existing items can make use of the new major version.<br/>
 
-MINOR : new features, libs are updated, qti xml does not need to be updated<br/>
+MINOR : new features, libs are updated, qti xml does not need to be updated\
 PATCH : bug fix, libs may be updated, qti xml does not need to be updated
 
 ### How to: update my PCI in TAO
 
 If is a minor or a patch, the pci just need to be registered with the updated version number in the manifest. In practice, most of the portable elements being implemented for TAO are registered from their source directories, so you only need to:<br/>
 
-increase the version<br/>
-re-register it in the update script<br/>
-make a regular PR<br/>
+increase the version\
+re-register it in the update script\
+make a regular PR\
 This actual PR makes a patch to the text reader PCI and simply illustrates this process https://github.com/oat-sa/extension-pcisample/pull/12
 
 If it is a major version, it requires updating the item xml with a php: changing the portable element markup, properties or the item level response declaration or response processing etc. In such a situation, the related updater.php needs to call an item update script like https://github.com/oat-sa/extension-pcisample/blob/master/scripts/tool/FixTextReaderDefaultValue.php to perform the changes : TBD.<br/>
@@ -112,4 +112,5 @@ This is a suggestion of checklist for PCI and PIC related PR review:
 -   version: has any version upgrade, compliant with semantic versioning
 -   test authoring, preview, delivery
 -   use strict, header and licensing
+
 

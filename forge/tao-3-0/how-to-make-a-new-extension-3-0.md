@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: TAO_3_0
 author:
     - 'Christophe Garcia'
 created_at: '2014-09-17 10:33:59'
@@ -166,4 +164,5 @@ Attribute **binding** define handler for this action in front-side application (
 <!-- -->
 
 -   If you wish you can now try to add your own actions, like duplicating a file, or creating an form to upload new files
+
 

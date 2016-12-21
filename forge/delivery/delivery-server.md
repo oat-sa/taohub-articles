@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Delivery
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-03 11:52:14'
@@ -82,4 +80,5 @@ All check functions must start by “check”.<br/>
 They will be given an array of parameters (currently, the delivery and the subject resources) and must return a variable with the boolean type (true if the condition is fulfilled, false otherwise).
 
 You can add a property in the model and make the corresponding check on a custom delivery server check function.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Event_Based_Scoring
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-10 11:45:09'
@@ -40,3 +38,4 @@ Example :
             1962
             btn_next
         
+

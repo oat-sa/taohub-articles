@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Patrick Plichart'
 created_at: '2011-01-21 11:09:09'
@@ -18,8 +16,8 @@ From a global perspective, the TAO architecture does not fundamentally differ fr
 
 On the server side, a database management system stores data - this function is achieved by the Generis platform through the use of dedicated API. This layer is called *Persistence Layer*. On top of this first layer, an *Application Layer* written in PHP implements all the functions specific to eTesting. This Application Layer complies with the Model-View-Controller framework and thus, it builds the views that are delivered to the web browser on the client side. On the client side, Javascript scripts interact with the Application Layer (located on the server side), update the views if needed (or request new ones from the server), and generally operate the client-side business logic (e.g. simple validation of input data). The communication between client- and server-side relies on AJAX mechanism; thus, by reducing the need for complete page reload, it clearly adds comfort in the user’s experience. The jQuery library is used to ease this ajax-based communication.
 
-![](../resources/taoarchi.PNG)<br/>
-![](../resources/archi.png)<br/>
+![](../resources/taoarchi.PNG)\
+![](../resources/archi.png)\
 ![](../resources/archiExt.png)
 
 TAO Persistence Layer
@@ -61,4 +59,5 @@ The complete application layer of TAO has been split into autonomous services th
 ![](../resources/workflow.PNG)
 
 The quality Layer is made of a Services/widgets directory, the workflow engine presenting the services to the right connected user and a process designer tool. More information about the workflow engine can be found here: [[Workflow\_Engine]]
+
 

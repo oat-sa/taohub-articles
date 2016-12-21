@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Documentation_for_core_components
 author:
     - 'Jérôme Bogaerts'
 created_at: '2012-02-20 11:08:29'
@@ -43,22 +41,22 @@ It is based on the *ajax* function of the library [jQuery](http://jquery.com)
 
 **Methods**
 
-|*.Method name|*.Parameters|\_.Description|<br/>
-|**ajax**|(array) **options** Array of options<br/>
-(function) **options.success** The success callback function<br/>
-(function) **options.error** The error callback function which is called if : the call failed; the server generate an exception; the server return a success=false|The ajax method is an overloading of the jQuery ajax function, this function get the same options than the original one. To get more information take a look to the following documentation http://api.jquery.com/jQuery.ajax<br/>
+|*.Method name|*.Parameters|\_.Description|\
+|**ajax**|(array) **options** Array of options\
+(function) **options.success** The success callback function\
+(function) **options.error** The error callback function which is called if : the call failed; the server generate an exception; the server return a success=false|The ajax method is an overloading of the jQuery ajax function, this function get the same options than the original one. To get more information take a look to the following documentation http://api.jquery.com/jQuery.ajax\
 This overloading makes homogeneous exchanges between the client and the server.<br/>
 
 The behavior of its parent function has been adapted to control every exchanges between the client and the server and so it allows :<br/>
 
 - to intercept server exceptions ;<br/>
 
-- to manage under control errors ;|<br/>
-|**addSuccessCallback**|(function) **fct** The default success callback to add<br/>
-(string) **position** The position to add the function in the queue of callback success functions (‘begin’, ‘end’, integer to represent the position)|Add a default success callback. This success callback will be called after each successfull ajax requests|<br/>
-|**removeSuccessCallback**|(string) **position** The position of the function to remove|Remove a default success callback function|<br/>
-|**addErrorCallback**|(function) **fct** The default error callback to add<br/>
-(string) **position** The position to add the function in the queue of callback error functions (‘begin’, ‘end’, integer to represent the position)|Add a default error callback. This success callback will be called after each ajax requests which encoutered a problem|<br/>
+- to manage under control errors ;|\
+|**addSuccessCallback**|(function) **fct** The default success callback to add\
+(string) **position** The position to add the function in the queue of callback success functions (‘begin’, ‘end’, integer to represent the position)|Add a default success callback. This success callback will be called after each successfull ajax requests|\
+|**removeSuccessCallback**|(string) **position** The position of the function to remove|Remove a default success callback function|\
+|**addErrorCallback**|(function) **fct** The default error callback to add\
+(string) **position** The position to add the function in the queue of callback error functions (‘begin’, ‘end’, integer to represent the position)|Add a default error callback. This success callback will be called after each ajax requests which encoutered a problem|\
 |**removeErrorCallback**|(string) **position** The position of the function to remove|Remove a default error callback function|
 
 ### Common Ajax Response
@@ -67,11 +65,11 @@ The common ajax response is located in the class **common\_AjaxResponse**. It en
 
 **Methods**
 
-|*.Method name|*.Parameters|\_.Description|<br/>
-|**\_\_construct**|(array) **options** Array of options<br/>
-(boolean) **options.success** The request has been a success (by default true)<br/>
-(string) **options.type** The type of return (‘json’, ‘exception’) (by default json)<br/>
-(mixed) **options.data** The return of the request (by default null)<br/>
+|*.Method name|*.Parameters|\_.Description|\
+|**\_\_construct**|(array) **options** Array of options\
+(boolean) **options.success** The request has been a success (by default true)\
+(string) **options.type** The type of return (‘json’, ‘exception’) (by default json)\
+(mixed) **options.data** The return of the request (by default null)\
 (string) **options.message** The message attached to the return (by default an empty string)|The constructor of the common\_AjaxResponse. It builds and it displays the output|
 
 By default the common\_AjaxResponse object returns a message :
@@ -125,7 +123,8 @@ Examples
         }
     });
 
-**server return**<br/>
+**server return**\
 if the server is ready it will return the following message
 
     {"success":true,"type":"json","message":"","data":null}
+

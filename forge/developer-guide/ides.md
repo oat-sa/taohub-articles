@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Developer_Guide
 author:
     - 'Joel Bout'
 created_at: '2011-02-08 14:42:40'
@@ -83,4 +81,5 @@ PhpStorm is a standalone application but it may also interact with your browser 
 <!-- -->
 
 -   [PhpStorm 4](http://www.jetbrains.com/phpstorm/)
+
 

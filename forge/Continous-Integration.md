@@ -136,7 +136,7 @@ Additional builds
 
 ### Build Tag
 
-In order to create the stable release version we also have gather different utilities in<br/>
+In order to create the stable release version we also have gather different utilities in\
 https://github.com/oat-sa/package-build-tag
 
 -   Download package-tao from github
@@ -157,4 +157,5 @@ This build available at https://github.com/oat-sa/package-build-js gather script
 ### Build Repository package
 
 All extensions are registered on [Packagist](https://packagist.org). We also have composer backup repository of our packages built every night and available at http://packages.taocloud.org/. Build and configuration to build this backup are available https://github.com/oat-sa/repositories-packages and https://github.com/oat-sa/repositories-packages-utils
+
 

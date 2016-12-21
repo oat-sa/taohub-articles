@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Jagan Mohan'
 created_at: '2011-02-28 13:00:49'
@@ -56,7 +54,7 @@ You can add an HTTP Authentication to protect your TAO instance.<br/>
 
 \# Create the password file using the command listed below. You can create it in the directory you want but consider these 2 security restrictions:<br/>
 
-• the directoy (here /var/opt) must not be accessible via HTTP<br/>
+• the directoy (here /var/opt) must not be accessible via HTTP\
 • the apache user (usualy www-data) can read it, bot the other cannot
 
     htpasswd -c login password
@@ -70,3 +68,4 @@ The `htpasswd` command is provided by Apache. You can have a look at [documentat
     define('USE_HTTP_AUTH', true);
     define('USE_HTTP_USER', 'login');
     define('USE_HTTP_PASS', 'password');
+

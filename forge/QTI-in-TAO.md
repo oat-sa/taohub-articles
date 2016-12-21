@@ -86,3 +86,4 @@ Composite items created with the item authoring tool - the QTI Creator - generat
 
 Although the QTI Creator does not currently allow generalized response rule definition, the QTI Player can process any response processing rule and expression. This means that you can import QTI 2.1 items with any qti valid response rules you want into TAO and run them in TAO.
 
+

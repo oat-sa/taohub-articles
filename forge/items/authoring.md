@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Items
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-05-27 17:00:53'
@@ -37,11 +35,11 @@ The features available are the following :
 QTI Examples in TAO
 ===================
 
-![](http://forge.taotesting.com/attachments/1736/QTI%20Example%201.png)<br/>
-A reordering item in TAO built with the QTI authoring tool<br/>
-![](http://forge.taotesting.com/attachments/1737/QTI%20Example%202.png)<br/>
-A scale item in TAO built with the QTI authoring tool<br/>
-![](http://forge.taotesting.com/attachments/1739/QTI%20Example3.png)<br/>
+![](http://forge.taotesting.com/attachments/1736/QTI%20Example%201.png)\
+A reordering item in TAO built with the QTI authoring tool\
+![](http://forge.taotesting.com/attachments/1737/QTI%20Example%202.png)\
+A scale item in TAO built with the QTI authoring tool\
+![](http://forge.taotesting.com/attachments/1739/QTI%20Example3.png)\
 A hot spot item
 
 The authoring tool
@@ -67,11 +65,11 @@ The Graphical User Interface of the authoring is made of 4 different spaces
 ### The Menu
 
 1.  The menu on the top left allows to save the item. Make sure you save regularly, if you exit the authoring tool and go to another part of the platform, if you close your web browser, all data entered won’t be saved if you didn’t click this button explicitely.
-2.  Light preview<br/>
+2.  Light preview\
     This preview allows you tog et a quick preview in a pop-up window
-3.  Export function<br/>
+3.  Export function\
     The export function is intended for advanced users. It allows you to download the source xml format of your item for edition outside tao. (see the hints section)
-4.  The debug function<br/>
+4.  The debug function\
     This function is intended for software developers only.
 
 ### The settings menu
@@ -114,17 +112,17 @@ Send your own css file, one or more.
 
 The uploaded file is putted under ‘style/’ folder, so you have your item structure as :
 
-- qti.xml<br/>
-- style /<br/>
+- qti.xml\
+- style /\
 \>- mycss.css
 
 Usable css class :
 
--   qti\_item<br/>
-    \> \* qti\_item\_body<br/>
-    \> \> \* qti\_widget<br/>
-    \> \> \> \* prompt (p)<br/>
-    \> \* qti\_control<br/>
+-   qti\_item\
+    \> \* qti\_item\_body\
+    \> \> \* qti\_widget\
+    \> \> \> \* prompt (p)\
+    \> \* qti\_control\
     \> \> \* qti\_validate
 -   qti\_simple\_interaction
 
@@ -215,4 +213,5 @@ QTI items are described in XML as specified by the IMS consortium.
 - Another possibility to create qti items in TAO consists in editing Xml files with an xml editor according to the specifications or any other platforms. It is important here to consider that all the platforms don’t implement the same way the standards and that differences in the rendering or in the processing may still apply. Also, advanced features of the specifications may not be implmented. Please, check that the feature is correctly implemented before producing large number of items and report any misconception.
 
 - You may also download the content of an item produced using the authoring tool, edit the file with variations (change the question content, etc. ) then upload them a new item
+
 

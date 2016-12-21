@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Open_web_item
 author:
     - 'Joel Bout'
 created_at: '2013-10-18 11:12:24'
@@ -14,7 +12,7 @@ tags:
 Item API
 ========
 
-**This API is available since *TAO 2.5*. Previous versions are still supported but deprecated.**<br/>
+**This API is available since *TAO 2.5*. Previous versions are still supported but deprecated.**\
 **This API is intended to evolve in a further release.**
 
 Getting Started
@@ -167,3 +165,4 @@ Example:
             'AREA_hover_3' : {x: 27, y: 38}
         });
     }
+

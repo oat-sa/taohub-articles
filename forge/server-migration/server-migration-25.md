@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Server_Migration
 author:
     - 'Cyril Hazotte'
 created_at: '2013-10-28 11:12:15'
@@ -25,7 +23,7 @@ Migration steps
 ### File migration
 
 -   Copy the entire tao directory from the old server to the new server, make sure to include the .htaccess in the root folder and to set the correct file owner/rights
--   Modify **install/directory/generis/common/conf/db.conf.php** to reflect your new database configuration<br/>
+-   Modify **install/directory/generis/common/conf/db.conf.php** to reflect your new database configuration\
     \><pre>define(‘DATABASE\_NAME’,‘tao\_head’);<br/>
 
     define(‘DATABASE\_LOGIN’,‘root’);<br/>
@@ -35,11 +33,11 @@ Migration steps
     define(’DATABASE\_URL’,‘localhost’);<br/>
 
     define(‘SGBD\_DRIVER’,‘pdo\_mysql’);</pre>
--   In **install/directory/generis/common/conf/generis.conf.php** update the ROOT\_PATH and ROOT\_URL each ending with a trailing slash/directory delimiter. (Do NOT change GENERIS\_INSTANCE\_NAME or LOCAL\_NAMESPACE)<br/>
+-   In **install/directory/generis/common/conf/generis.conf.php** update the ROOT\_PATH and ROOT\_URL each ending with a trailing slash/directory delimiter. (Do NOT change GENERIS\_INSTANCE\_NAME or LOCAL\_NAMESPACE)\
     \><pre>define(‘ROOT\_PATH’,‘/install/directory/’);<br/>
 
     define(‘ROOT\_URL’,‘http://tao.lan/’);</pre>
--   Update the folder value in **install/directory/tao/includes/configGetFile.php** to point to your **install/directory/taoDelivery/data/compiled/** directory<br/>
+-   Update the folder value in **install/directory/tao/includes/configGetFile.php** to point to your **install/directory/taoDelivery/data/compiled/** directory\
     \><pre><?php return array(0 => array(‘secret’ =\> ‘1234567890abcde1234567890abcde12’,‘folder’ =\> ‘/install/directory/generis/data/tao/public/’));</pre>
 
 ### Database migration
@@ -54,9 +52,9 @@ In a standard install it is likely the path would end with /generis/data/
 
 \> For 2.6 onwards it is possible to store data outside the default directory, it is important to ensure that the FILES\_PATH in **install/directory/generis/common/conf/generis.conf.php** corresponds to the required directory:<br/>
 
-\><pre><br/>
-\#generis paths<br/>
-…<br/>
+\><pre>\
+\#generis paths\
+…\
 define(‘FILES\_PATH’,‘/path/to/NEW\_DIRECTORY/’);
 
 </pre>
@@ -74,4 +72,5 @@ Open Issues
 /\/NEW_URL\/filemanager/g' {} \;
 
 This line might change the owner of the qti.xml and you might have to correct them.
+
 

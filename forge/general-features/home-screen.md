@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: General_features
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-10-24 15:49:01'
@@ -19,4 +17,5 @@ On the home screen, you can choose which part you want to access by clicking on 
 or via the menu bar on the top.
 
 ![](../resources/Menubar_firstscreen.png)
+
 

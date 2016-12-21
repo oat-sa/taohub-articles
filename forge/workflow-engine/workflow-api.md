@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Workflow_Engine
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-10 11:42:08'
@@ -107,3 +105,4 @@ The interface below is an overview of the available methods:
      * Remove a context (once you don't need you to recover it anymore) 
      */
     function deleteRecoveryContext(key);
+

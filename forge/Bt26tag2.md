@@ -82,7 +82,7 @@ Our tests used the same redis server for all three, note that you may use differ
 
 -   Make sure you have installed the packages :<br/>
 
-    “redis-server” (on the server you want to use for the storage)<br/>
+    “redis-server” (on the server you want to use for the storage)\
     “phpredis” on the tao application server
 
 <!-- -->
@@ -91,7 +91,7 @@ Our tests used the same redis server for all three, note that you may use differ
 
 ![](resources/{width:900px}extension.png)
 
--   If you have chosen to use a remote redis server or wanted to have redis running on a different port than the default one (6379)<br/>
+-   If you have chosen to use a remote redis server or wanted to have redis running on a different port than the default one (6379)\
     you may have to adapt the configuration file /generis/common/conf/default/persistences.conf.php
 
 <!-- -->
@@ -102,7 +102,7 @@ Our tests used the same redis server for all three, note that you may use differ
 
 <!-- -->
 
--   Results storage migration tool<br/>
+-   Results storage migration tool\
     Once the data colellection is finished, you won’t get the results directly visible under taoResutls, you need first to migrate them from redis back into TAO :
 
 ![](resources/{width:900px}migrationconfirm.png)
@@ -137,8 +137,8 @@ Additionally the persistence used for the KeyValue service needs to be defined i
 
 ### Storing the session in a Redis server
 
-KeyValue Session storage is enabled by default on this tag (constant *PHP\_SESSION\_HANDLER* in *generis.conf.php*). The persistence used<br/>
-for the session is defined in *persistences.conf.php* and set to *SqlKvWrapper* by default. In order to switch to Redis exchange the session<br/>
+KeyValue Session storage is enabled by default on this tag (constant *PHP\_SESSION\_HANDLER* in *generis.conf.php*). The persistence used\
+for the session is defined in *persistences.conf.php* and set to *SqlKvWrapper* by default. In order to switch to Redis exchange the session\
 configuration with the following:
 
     'session' => array(
@@ -301,8 +301,8 @@ Benchmarks
 
 Our benchmarks were achieved using a topology on our network as such:<br/>
 
-- One load balancer appliance (Varnish)<br/>
-- Two desktop computers acting as application servers with php-fpm (one high end with 8 cores-SSD, one mid end 4 cores)<br/>
+- One load balancer appliance (Varnish)\
+- Two desktop computers acting as application servers with php-fpm (one high end with 8 cores-SSD, one mid end 4 cores)\
 - One redis server . (a low end computer)
 
 ![](resources/bench1k.png)
@@ -315,4 +315,5 @@ Known Issues
 ------------
 
 -   We noticed that QTI tests had to be published again to see results appearing in the Results extension.
+
 

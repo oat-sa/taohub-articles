@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-11 16:22:56'
@@ -95,4 +93,5 @@ The [[Deliveries Advanced authoring tool]] tab is only available if the Processe
 This tab permits to create a complex list of tests.<br/>
 
 Indeed, without the Processes extension, it is only possible to create deliveries with a sequential list of tests.
+
 

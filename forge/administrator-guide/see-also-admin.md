@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Administrator_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-02-15 17:02:02'
@@ -21,4 +19,5 @@ The following links could be helpful, if you need a particular configuration of 
 -   [PHP Documentation](http://www.php.net/manual/en/index.php)
 -   [MySql Server Documentation](http://dev.mysql.com/doc/)
 -   [eAccelerator](http://eaccelerator.net/) (for performance optimizations)
+
 

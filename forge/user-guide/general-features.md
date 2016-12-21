@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-10-24 16:08:30'
@@ -23,3 +21,4 @@ General features
 
 4. [[Library]]
 --------------
+

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: How_to_make_a_new_extension_3_0_v2
 author:
     - 'Christophe Noel'
 created_at: '2016-06-17 15:12:14'
@@ -43,4 +41,5 @@ confrim installation :
 Done !
 
 ![](../resources/install_6.png)
+
 

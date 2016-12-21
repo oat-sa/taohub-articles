@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Tutorials
 author:
     - 'Joel Bout'
 created_at: '2013-05-30 13:49:01'
@@ -184,3 +182,4 @@ Comments
 Sometimes functions (such as getUniquePropertyValue(), getOnePropertyValue, …) return an instance of type `core_kernel_classes_Literal`, if the value of the property is a literal. To get the string representation we simply call the `__toString()` explicitly or we cast it to the string PHP datatype which will trigger the conversion implicitly.
 
     echo 'Label: '.(string)current($literals);
+

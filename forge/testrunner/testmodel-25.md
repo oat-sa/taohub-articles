@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: Testrunner
 author:
     - 'Joel Bout'
 created_at: '2013-10-31 17:51:03'
@@ -68,4 +66,5 @@ This function will prepare a datastructure for the test that is exploitable by t
     $serviceCall = $compiler->compile($itemCompiler);
 
 This method should return an instance of *tao\_models\_classes\_service\_ServiceCall* that points to the testrunner and provides the nescessary parameters to run this test.
+
 

@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: 'Items''_API'
 author:
     - 'Joel Bout'
 created_at: '2011-03-04 11:29:03'
@@ -769,14 +767,14 @@ But we want to give some points to the test takers who give a partial answer : *
 
 *See below the full example* :
 
-    var myRule = 'if (match(null, getResponse("RESPONSE"), getCorrect("RESPONSE"))) { <br/>
-        setOutcomeValue("SCORE", 1); <br/>
-    }  <br/>
-    else if (match(null, getResponse("RESPONSE"), createVariable({"type":"tuple"}, "DriverC", "DriverA", "DriverB"))) { <br/>
-        setOutcomeValue ("SCORE", 0.5); <br/>
-    }  <br/>
-    else { <br/>
-        setOutcomeValue("SCORE", 0); <br/>
+    var myRule = 'if (match(null, getResponse("RESPONSE"), getCorrect("RESPONSE"))) { \
+        setOutcomeValue("SCORE", 1); \
+    }  \
+    else if (match(null, getResponse("RESPONSE"), createVariable({"type":"tuple"}, "DriverC", "DriverA", "DriverB"))) { \
+        setOutcomeValue ("SCORE", 0.5); \
+    }  \
+    else { \
+        setOutcomeValue("SCORE", 0); \
     }';
 
     var correct = {
@@ -806,3 +804,4 @@ But we want to give some points to the test takers who give a partial answer : *
     var outcomes = matchingGetOutcomes ();
     // { "SCORE" : {"identifier":"SCORE", "value":0.5} }
     // 1 with the right answer {"0":"DriverC", "1":"DriverB", "2":"DriverA"}
+

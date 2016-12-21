@@ -123,3 +123,4 @@ To improve performance, you are strongly advised to enable in MAMP a PHP opcode 
 
 {{thumbnail(PHP opcode cache.png,size=800,title=OPCache)}}
 
+

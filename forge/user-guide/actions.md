@@ -1,6 +1,4 @@
 <!--
-parent:
-    title: User_Guide
 author:
     - 'Jérôme Bogaerts'
 created_at: '2011-03-11 13:49:56'
@@ -143,4 +141,5 @@ To search an element from class properties (all parts except Deliveries, Process
 -------------------------------------
 
 To activate the simple mode of the editor (specific to the Tests and Deliveries parts)
+
 
