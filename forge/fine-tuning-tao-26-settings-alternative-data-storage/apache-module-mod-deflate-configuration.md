@@ -48,27 +48,27 @@ s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
     # lines as `AddOutputFilterByType` is still in the core directives.
 
 
-    AddOutputFilterByType DEFLATE "application/atom+xml" \
-    "application/javascript" \
-    "application/json" \
-    "application/ld+json" \
-    "application/manifest+json" \
-    "application/rss+xml" \
-    "application/vnd.geo+json" \
-    "application/vnd.ms-fontobject" \
-    "application/x-font-ttf" \
-    "application/x-web-app-manifest+json" \
-    "application/xhtml+xml" \
-    "application/xml" \
-    "font/opentype" \
-    "image/svg+xml" \
-    "image/x-icon" \
-    "text/cache-manifest" \
-    "text/css" \
-    "text/html" \
-    "text/plain" \
-    "text/vtt" \
-    "text/x-component" \
+    AddOutputFilterByType DEFLATE "application/atom+xml" <br/>
+    "application/javascript" <br/>
+    "application/json" <br/>
+    "application/ld+json" <br/>
+    "application/manifest+json" <br/>
+    "application/rss+xml" <br/>
+    "application/vnd.geo+json" <br/>
+    "application/vnd.ms-fontobject" <br/>
+    "application/x-font-ttf" <br/>
+    "application/x-web-app-manifest+json" <br/>
+    "application/xhtml+xml" <br/>
+    "application/xml" <br/>
+    "font/opentype" <br/>
+    "image/svg+xml" <br/>
+    "image/x-icon" <br/>
+    "text/cache-manifest" <br/>
+    "text/css" <br/>
+    "text/html" <br/>
+    "text/plain" <br/>
+    "text/vtt" <br/>
+    "text/x-component" <br/>
     "text/xml"
 
 

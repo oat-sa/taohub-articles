@@ -119,7 +119,7 @@ The complete description of services can be found here : attachment:Services\_de
 -   ResultServer related delivery
 -   ResultServer removing
 
-For instance, the source of the service to edit an item is in the following file: *yourWebRootPath/taoItems/actions/class.SaSItems.php*\
+For instance, the source of the service to edit an item is in the following file: *yourWebRootPath/taoItems/actions/class.SaSItems.php*<br/>
 As previously said in [[Process Definition Model\#Service\_definition]], a service is defined by its URL. Provided that its url is accesible via URL, it can be a service in TAO. The service *’sasEditInstance’* below is accessible via the URL */taoItems/SaSItems/sasEditInstance* (with URL rewriting engine activated in TAO)
 
 

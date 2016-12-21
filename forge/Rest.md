@@ -43,7 +43,7 @@ The following describes how to call remotely services from TAO. They are illustr
 Connection and Identification (Basic)
 -------------------------------------
 
-Under PHP, you may use [cURL](http://php.net/manual/fr/book.curl.php)\
+Under PHP, you may use [cURL](http://php.net/manual/fr/book.curl.php)<br/>
 As per the Basic HTTP authentication, you will need to send the credentials over each request.
 
 Let’s assume you want to retrieve the list of test takers … (for other methods, please check subsequent parts of this tutorial)
@@ -302,7 +302,7 @@ If your request is successful you will receive the URI of the newly created reso
 
 **Possible error codes returned**
 
-\* 412 Precondition Failed\
+\* 412 Precondition Failed<br/>
 You probably tried to create a test taker with an already existing login
 
 
@@ -314,8 +314,8 @@ You probably tried to create a test taker with an already existing login
     2.5-alpha
       
 
--   400 Bad Request\
-    A mandatory parameter is missing\
+-   400 Bad Request<br/>
+    A mandatory parameter is missing<br/>
     ![](resources/{width:300px}nologin.png)
 
 Creating a test taker with custom properties / type or language
@@ -393,7 +393,7 @@ You may re-assign a new type to the test taker.
 
 **Possible error codes returned**
 
--   412\
+-   412<br/>
     Modifying the login of a subject is not allowed : 412
 
 Retrieve a particular test taker
@@ -540,7 +540,7 @@ Retrieve a particular test taker
 
 **Possible error codes returned**
 
--   204 No Content\
+-   204 No Content<br/>
     Nothing was found with respect to the uri provided
 
 Delete a test taker.
@@ -566,7 +566,7 @@ Identification using Digest
 
 The Digest protocol is not yet implemented. Steps left for implementing it :<br/>
 
-- Store along user definition their hash upon user creation and update\
+- Store along user definition their hash upon user creation and update<br/>
 - Retreeve this hash and combine it within RestCommonModule.php
 
 How to contribute here ?

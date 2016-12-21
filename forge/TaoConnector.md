@@ -51,7 +51,7 @@ taoAdminService extends taoUserService by functionalities that might not be avai
 
 ### taoSessionRequiredException
 
-taoSessionRequiredException is thrown whenever a functions is accessed that requires authentication without\
+taoSessionRequiredException is thrown whenever a functions is accessed that requires authentication without<br/>
 providing a valid login first.
 
 Advanced usage

@@ -19,8 +19,8 @@ Install MathJax library, using the script
 
 For users with a Unix machine, you can use the following bash scripts **<span class="installation TAO your of root the in"></span>** to download and install MathJax.<br/>
 
-TAO 2.5: [mathjaxdl\_tao25.sh](../resources//attachments/download/3154/mathjaxdl_tao25.sh)\
-TAO 2.6: [mathjaxdl\_tao26.sh](../resources//attachments/download/3215/mathjaxdl_tao26.sh)\
+TAO 2.5: [mathjaxdl\_tao25.sh](../resources//attachments/download/3154/mathjaxdl_tao25.sh)<br/>
+TAO 2.6: [mathjaxdl\_tao26.sh](../resources//attachments/download/3215/mathjaxdl_tao26.sh)<br/>
 TAO 3.0: [MathJax\_Install\_TAO\_3x.sh](../resources//attachments/download/3964/MathJax_Install_TAO_3x.sh)
 
 Be sure to have `wget` (or `curl` with 3.0 version), `tar` and `gzip` installed and available in your `PATH`. Then just launch it (as a user, not root) from the root of your TAO distribution.

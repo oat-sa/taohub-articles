@@ -34,8 +34,8 @@ On your own workstation from which you would like either to create new tests or 
 TAO account
 -----------
 
-TAO is presinstalled and contains already an admin account\
-Access TAO using your web browser at http://pitao/\
+TAO is presinstalled and contains already an admin account<br/>
+Access TAO using your web browser at http://pitao/<br/>
 TAO admin user : pitao/pitao
 
 System account

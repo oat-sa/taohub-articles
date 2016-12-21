@@ -9,8 +9,8 @@ tags:
     - 'TAO 2 4'
 -->
 
-Migration 2 3 to 2 4\
-\*\
+Migration 2 3 to 2 4<br/>
+\*<br/>
 In progress\*
 =====================
 

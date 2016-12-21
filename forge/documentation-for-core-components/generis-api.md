@@ -16,6 +16,6 @@ Generis API Architecture
 
 ![](http://forge.taotesting.com/attachments/download/762/GenerisCoreKernel.png)
 
-Relative documentation\
+Relative documentation<br/>
 [[Versioned content]]
 

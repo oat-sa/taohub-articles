@@ -49,14 +49,14 @@ We would like to support as most interactions as we can at the end of these iter
 Mobile Devices Available for Testing
 ------------------------------------
 
-|*.Member |*.Device |\_.OS Version |\
-|/6.Diego |iPad 1 |N/A |\
- |iPad 2 |N/A |\
- |iPad mini |N/A |\
- |iPhone 5 |N/A |\
- |iPhone 5s |N/A |\
- |iPod 4 |N/A |\
-|/3.Jérôme |Samsung Galaxy Gio |Android 2.2 (Froyo) |\
- |Samsung Galaxy Tab (GT-P1000) |Android 2.2 (Froyo) |\
+|*.Member |*.Device |\_.OS Version |<br/>
+|/6.Diego |iPad 1 |N/A |<br/>
+ |iPad 2 |N/A |<br/>
+ |iPad mini |N/A |<br/>
+ |iPhone 5 |N/A |<br/>
+ |iPhone 5s |N/A |<br/>
+ |iPod 4 |N/A |<br/>
+|/3.Jérôme |Samsung Galaxy Gio |Android 2.2 (Froyo) |<br/>
+ |Samsung Galaxy Tab (GT-P1000) |Android 2.2 (Froyo) |<br/>
  |IPad 1 |N/A |
 

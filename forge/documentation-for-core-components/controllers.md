@@ -44,11 +44,11 @@ For example, have a look at the following URL:
 
 If you split the URL, each part is used as a piece of information for the mapping:<br/>
 
-|*.Token|*.Information|\
-|`www.tao.lu`| the TAO domain name|\
-|tao| the extension name (the meta-extension TAO)|\
-|Users| the module name|\
-|add| the action name|\
+|*.Token|*.Information|<br/>
+|`www.tao.lu`| the TAO domain name|<br/>
+|tao| the extension name (the meta-extension TAO)|<br/>
+|Users| the module name|<br/>
+|add| the action name|<br/>
 |name=john| the parameters|
 
 By calling this URL the method `add` of the class *tao\_action\_Users* in the `tao` meta-extension will be executed:

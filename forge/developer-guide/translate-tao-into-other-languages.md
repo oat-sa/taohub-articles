@@ -26,13 +26,13 @@ Here is an example both UI Language and Data Language are in English.<br/>
 
 ![](../resources//attachments/download/2593/S%C3%A9lection_053.png)
 
-Here UI Language have been switched to French\
+Here UI Language have been switched to French<br/>
 ![](../resources//attachments/download/2592/S%C3%A9lection_054.png)
 
-Here both UI and Data Language are in French\
+Here both UI and Data Language are in French<br/>
 ![](../resources//attachments/download/2600/S%C3%A9lection_055.png)
 
-Here only Data Language is in French\
+Here only Data Language is in French<br/>
 ![](../resources//attachments/download/2599/S%C3%A9lection_051.png)
 
 ### User Interface

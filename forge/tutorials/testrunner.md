@@ -69,16 +69,16 @@ Explications
 
 This is one of the simplest test models that can be implemented:
 
-During the execution of a random test one item will be chosen by random from the pool of available items (at the time of compilation)\
+During the execution of a random test one item will be chosen by random from the pool of available items (at the time of compilation)<br/>
 and after the test-taker has responded to this item the test will terminate.
 
 ### Test compilation
 
-The compilation of a delivery is comparable to a depth-first search. In order to be able to compile a delivery the tests contained within have\
+The compilation of a delivery is comparable to a depth-first search. In order to be able to compile a delivery the tests contained within have<br/>
 to be compiled. In order to compile the tests, their containing items have to be compiled first.
 
-So during compilation we iterate over the available items and compile them. The item compiler will return a [[service call]], which consists of\
-the runner associated with the item model and the parameter that allows the item runner to access the resources of this specific item. By serializing these\
+So during compilation we iterate over the available items and compile them. The item compiler will return a [[service call]], which consists of<br/>
+the runner associated with the item model and the parameter that allows the item runner to access the resources of this specific item. By serializing these<br/>
 service calls we can create the following structure:
 
     array(
@@ -108,7 +108,7 @@ This service call is then stored in the compiled delivery and will be called dur
 
 ### Test runner implementation
 
-Because in Tao the items as well as the deliveries can have several different implementation the test runner must be independent from\
+Because in Tao the items as well as the deliveries can have several different implementation the test runner must be independent from<br/>
 these. The interface between the item runner and the delivery runner are service calls.
 
 The execution of a delivery containing our random test would run through the following steps:
@@ -133,7 +133,7 @@ Most test models will require an authoring to select which items should be inclu
 
 ### Test session
 
-Since most models will contain more than a single item it will be required to keep track of the current test session. Information related\
-to current item, already passed items, elapsed time and so on needs to be stored in order to track the users progress and allow test session\
+Since most models will contain more than a single item it will be required to keep track of the current test session. Information related<br/>
+to current item, already passed items, elapsed time and so on needs to be stored in order to track the users progress and allow test session<br/>
 to be interrupted and resumed.
 

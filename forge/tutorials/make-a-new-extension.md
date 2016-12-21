@@ -14,7 +14,7 @@ tags:
 Make a new extension 2.4 - 2.5
 ==============================
 
-For [[TAO\_2\_6|Tao 2.6]] see [[How to make a new extension 2 6]]\
+For [[TAO\_2\_6|Tao 2.6]] see [[How to make a new extension 2 6]]<br/>
 For [[TAO\_3\_0|Tao 3.0]] see [[How to make a new extension 3 0]]
 
 Preparation

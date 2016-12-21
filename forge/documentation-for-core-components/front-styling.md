@@ -49,8 +49,8 @@ Do not forget to add the path to the bootstrap into your compiler’s options (`
 
 In order to compile (or watch) your SASS files to the target CSS, you can either use:<br/>
 
- - The grunt task provided with TAO (see [[Front Tools]])\
- - The SASS CLI tool provided by SASS (requires ruby and the sass gem)\
+ - The grunt task provided with TAO (see [[Front Tools]])<br/>
+ - The SASS CLI tool provided by SASS (requires ruby and the sass gem)<br/>
  - Your favorite IDE SASS plugin
 
 #### Build using Grunt

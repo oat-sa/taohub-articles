@@ -55,12 +55,12 @@ Generic headers aliases:
 -   comment
 -   type
 
-Generic headers\
+Generic headers<br/>
 By default you may refer to any attribute of the target resource type using header with the uri reference :<br/>
 
 “http://tao-dev/taodev.rdf\#i1372429454323825” : “35”
 
-Specific header aliases\
+Specific header aliases<br/>
 Specific header aliases may be supported on extension basis, example :
 
 -   “login”
@@ -130,8 +130,8 @@ Building your own controller for your own extension
 
 You may extend the tao\_actions\_CommonRestModule and override
 
--   getParametersAliases()\
-    example : return array\_merge(parent::getParametersAliases(), array(\
+-   getParametersAliases()<br/>
+    example : return array\_merge(parent::getParametersAliases(), array(<br/>
      “login”=\> PROPERTY\_USER\_LOGIN,<br/>
 
      “password” =\> PROPERTY\_USER\_PASSWORD,<br/>
@@ -144,24 +144,24 @@ You may extend the tao\_actions\_CommonRestModule and override
 
      “mail”=\> PROPERTY\_USER\_MAIL,<br/>
 
-     “type”=\> RDF\_TYPE\
+     “type”=\> RDF\_TYPE<br/>
      ));
 -   getParametersRequirements()
 
 example :<br/>
 
-return array(\
- /\*\* you may use either the alias or the uri, if the parameter identifier\
- \* is set it will become mandatory for the operation in \$key\
- \* Default Parameters Requirents are applied\
- \* type by default is not required and the root class type is applied\
- \*/\
- “post”=\> array(“login”, “password”)\
+return array(<br/>
+ /\*\* you may use either the alias or the uri, if the parameter identifier<br/>
+ \* is set it will become mandatory for the operation in \$key<br/>
+ \* Default Parameters Requirents are applied<br/>
+ \* type by default is not required and the root class type is applied<br/>
+ \*/<br/>
+ “post”=\> array(“login”, “password”)<br/>
  );<br/>
 
 This abstract controller will handle for you
 
--   the http request and trigger the correct service from your implementation of service set up in\
+-   the http request and trigger the correct service from your implementation of service set up in<br/>
     \$this-\>service = taoSubjects\_models\_classes\_CrudSubjectsService::singleton();
 -   Authentification
 -   parameters check, ACL controls

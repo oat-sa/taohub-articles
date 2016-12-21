@@ -136,7 +136,7 @@ Additional builds
 
 ### Build Tag
 
-In order to create the stable release version we also have gather different utilities in\
+In order to create the stable release version we also have gather different utilities in<br/>
 https://github.com/oat-sa/package-build-tag
 
 -   Download package-tao from github

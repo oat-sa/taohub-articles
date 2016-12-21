@@ -37,11 +37,11 @@ The features available are the following :
 QTI Examples in TAO
 ===================
 
-![](http://forge.taotesting.com/attachments/1736/QTI%20Example%201.png)\
-A reordering item in TAO built with the QTI authoring tool\
-![](http://forge.taotesting.com/attachments/1737/QTI%20Example%202.png)\
-A scale item in TAO built with the QTI authoring tool\
-![](http://forge.taotesting.com/attachments/1739/QTI%20Example3.png)\
+![](http://forge.taotesting.com/attachments/1736/QTI%20Example%201.png)<br/>
+A reordering item in TAO built with the QTI authoring tool<br/>
+![](http://forge.taotesting.com/attachments/1737/QTI%20Example%202.png)<br/>
+A scale item in TAO built with the QTI authoring tool<br/>
+![](http://forge.taotesting.com/attachments/1739/QTI%20Example3.png)<br/>
 A hot spot item
 
 The authoring tool
@@ -67,11 +67,11 @@ The Graphical User Interface of the authoring is made of 4 different spaces
 ### The Menu
 
 1.  The menu on the top left allows to save the item. Make sure you save regularly, if you exit the authoring tool and go to another part of the platform, if you close your web browser, all data entered won’t be saved if you didn’t click this button explicitely.
-2.  Light preview\
+2.  Light preview<br/>
     This preview allows you tog et a quick preview in a pop-up window
-3.  Export function\
+3.  Export function<br/>
     The export function is intended for advanced users. It allows you to download the source xml format of your item for edition outside tao. (see the hints section)
-4.  The debug function\
+4.  The debug function<br/>
     This function is intended for software developers only.
 
 ### The settings menu
@@ -114,17 +114,17 @@ Send your own css file, one or more.
 
 The uploaded file is putted under ‘style/’ folder, so you have your item structure as :
 
-- qti.xml\
-- style /\
+- qti.xml<br/>
+- style /<br/>
 \>- mycss.css
 
 Usable css class :
 
--   qti\_item\
-    \> \* qti\_item\_body\
-    \> \> \* qti\_widget\
-    \> \> \> \* prompt (p)\
-    \> \* qti\_control\
+-   qti\_item<br/>
+    \> \* qti\_item\_body<br/>
+    \> \> \* qti\_widget<br/>
+    \> \> \> \* prompt (p)<br/>
+    \> \* qti\_control<br/>
     \> \> \* qti\_validate
 -   qti\_simple\_interaction
 

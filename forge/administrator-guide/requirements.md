@@ -39,7 +39,7 @@ TAO needs Apache to be loaded with a specific module which is [mod\_rewrite](htt
 -   the */modules* directory of your Apache folder contains *mod\_rewrite.so* file.
 -   the *LoadModule rewrite\_module modules/mod\_rewrite.so* directive exists in your httpd.conf configuration file. Remove any comment sign (‘\#’) if it is the first character of the related line.
 
-Please also check that the *AllowOverride All* directive is set for your DocumentRoot. You can find it in httpd.conf as\
+Please also check that the *AllowOverride All* directive is set for your DocumentRoot. You can find it in httpd.conf as<br/>
 in the following example:
 
     #

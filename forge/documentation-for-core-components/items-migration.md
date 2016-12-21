@@ -44,7 +44,7 @@ How to migrate items
 
 There is a command line script to run with a few arguments to migrate your items.
 
-The script is located in `taoItems/scripts` and is called `migrateLegacy.php`\
+The script is located in `taoItems/scripts` and is called `migrateLegacy.php`<br/>
 To run it
 
 \* On a Mac/Unix/Linux System:

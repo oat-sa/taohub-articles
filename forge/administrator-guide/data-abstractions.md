@@ -21,11 +21,11 @@ The key-value storage implementation may be installed and configured under the f
 -   If you are using Ubuntu, make sure you have the following packages installed:
     -   for Redis:<br/>
 
-        “redis-server” on the server you want to use for the storage\
+        “redis-server” on the server you want to use for the storage<br/>
         “php5-redis” on the TAO application server
     -   for Couchbase:<br/>
 
-        “couchbase-server” (on the server you want to use for the storage)\
+        “couchbase-server” (on the server you want to use for the storage)<br/>
         PECL “couchbase” library on the TAO application server
 -   If you are using Fedora/CentOS/RHEL, make sure you have the following packages installed:
     -   for Redis: “php56u-pecl-redis”, “php56w-pecl-redis” or prior versions of these packages
@@ -36,7 +36,7 @@ There are currently 6 distinct storages that are used during the delivery:
 Delivery execution informations storage abstraction
 ---------------------------------------------------
 
-{{collapse(View details…)
+
 
 Delivery execution information cover everything related to what test taker has started/finished which delivery.<br/>
 
@@ -76,7 +76,7 @@ If you would like to use Couchbase you would add the following block:
 URI provider
 ------------
 
-{{collapse(View details…)
+
 
 The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
 
@@ -103,7 +103,7 @@ To switch to a the advanced key-value implementation the service in *config/gene
 Service state storage abstraction
 ---------------------------------
 
-{{collapse(View details…)
+
 
 The service state storage manages the state of any service that has been started. This can include among many the states of items (selected responses), states of the test (current item) and state of the delivery. This is by default stored in the key-value persistence identified by **’serviceState’** (key is defined in *config/generis/stateStorage.conf.php*).
 
@@ -141,7 +141,7 @@ If you prefer to store these states in an alternative storage, edit the file *co
 PHP session storage abstraction
 -------------------------------
 
-{{collapse(View details…)
+
 
 This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.<br/>
 
@@ -183,11 +183,11 @@ The persistence used for the session needs to be defined in *config/generis/pers
 User authentication storage abstraction
 ---------------------------------------
 
-{{collapse(View details…)
+
 
 Currently, there are at least two user authentication methods available:<br/>
 
-- using the Generis model user adapter (default method)\
+- using the Generis model user adapter (default method)<br/>
 - using the key-value user adapter
 
 **Note:** Key-value authentication currently works solely for test-takers.
@@ -228,7 +228,7 @@ Importing test-takers to Redis is achieved through a CSV import script.
 Result storage abstraction
 --------------------------
 
-{{collapse(View details…)
+
 
 The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server.<br/>
 

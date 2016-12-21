@@ -33,7 +33,7 @@ TAO offers an additional hook in its item creator, which enable every item autho
 
 Since PIC is highly inspired by PCI, the following sections will successively introduce how to create PCI for TAO then present the difference for PIC.
 
-The base proposal from IMS is a draft version subimitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html#_Toc353965343)\
+The base proposal from IMS is a draft version subimitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html#_Toc353965343)<br/>
 The proposal form Passific Metrics attempts to solve some issues from the original proposal with the introduction of the concept of “shared libraries” and a better structured XML serialization of PCIs. [Pacific Metrics proposal](http://www.imsglobal.org/assessment/PCI_Change_Request_v1pd.html)
 
 We use both of them to write our own proposal, which is backed by this currently working implementation. The proposal can be found here.
@@ -51,12 +51,12 @@ The shared libraries define the resource.<br/>
 
 The hook is the entry point.
 
-**Important note 1 :**\
+**Important note 1 :**<br/>
 Any Javascript code in PCI and PIC must be wrapped as proper AMD. No code such as window.myGlobalScope = {…} is allowed.<br/>
 
 This requirement includes all embedded libraries. Indeed there is no way to know in advance which libraries and which version would be used in PCI. Failure to comply with the AMD pattern would break interoperability and perhaps the delivery or creator engine itself.
 
-**Important note 2 :**\
+**Important note 2 :**<br/>
 Because we don’t know which libs and files will be used, all PCI-runtime AMD files are loaded in a separate requirejs context. That is of a particular importance when using JQuery. **Two instances of JQuery cannot communicate with each other**. The consequence is :
 
 1.  custom events fired in one context, cannot be listened in the other
@@ -76,7 +76,7 @@ First, let’s have a look at a sample implementation available at [qtiItemPci/v
 
 File structure :<br/>
 
-The root folder must contains two files : pciCreator.js and pciCreator.json\
+The root folder must contains two files : pciCreator.js and pciCreator.json<br/>
 The file pciCreator.json is the manifest file that contains all the data required by the server and the client to describe the pciCreator (name, label, required js, css etc).<br/>
 
 The file pciCreator.js is an AMD module that will be the hook for the Item Creator upon initialization.<br/>
@@ -135,8 +135,8 @@ Unless stated otherwise, all fields are required.
 
 The previous statements apply to PIC with the following notable exceptions :<br/>
 
-The two required files are respectively called picCreator.json and pciCreator.js (instead of pciCreator.json and picCreator.js)\
-icon : this is not currently used but is still required for consistency with the PCI package and keping for future usage (e.g. a more visual PIC selection toolbar)\
+The two required files are respectively called picCreator.json and pciCreator.js (instead of pciCreator.json and picCreator.js)<br/>
+icon : this is not currently used but is still required for consistency with the PCI package and keping for future usage (e.g. a more visual PIC selection toolbar)<br/>
 response : this is not useful for PIC since no response is expected from an info control so should not appear in picCreator.json
 
 the entry point : pciCreator.js
@@ -256,7 +256,7 @@ As a consequence, if you want to attach a media file to your PCI markup, please 
 
 ### Custom Interaction Registry
 
-It is an especially useful helper located at [taoQtiItem/qtiCreator/editor/customInteractionRegistry](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/customInteractionRegistry.js)\
+It is an especially useful helper located at [taoQtiItem/qtiCreator/editor/customInteractionRegistry](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/customInteractionRegistry.js)<br/>
 It enables you to retrieve any data related to your PCI such as the content of the manifest or baseUrl.<br/>
 
 Since you are not supposed to know the location of the package is the file system, using customInteractionRegistry.getBaseUrl() is the only way you can get the link to a picture you want to use in your creator widget.
@@ -274,12 +274,12 @@ The previous sections described every needed components to create a PCI creator 
 
 The members involved in this process are :<br/>
 
-portableCustomInteraction : [qtiCreator/model/interactions/PortableCustomInteraction.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/interactions/PortableCustomInteraction.js)\
-containerHelper : [qtiCreator/model/helper/container.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/helper/container.js)\
-registry : [qtiCreator/editor/customInteractionRegistry.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/customInteractionRegistry.js)\
-creatorRenderer : [qtiCreator/renderers/interactions/PortableCustomInteraction.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/renderers/interactions/PortableCustomInteraction.js)\
-creator Widget : the one returned by pciCreator.getWidget(), e.g. [a sample implementation](https://github.com/oat-sa/extension-tao-itemqti-pci/blob/master/views/js/pciCreator/dev/likertScaleInteraction/widget/Widget.js)\
-commonRender : [qtiCommonRenderer/renderers/interactions/PortableCustomInteraction.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCommonRenderer/renderers/interactions/PortableCustomInteraction.js)\
+portableCustomInteraction : [qtiCreator/model/interactions/PortableCustomInteraction.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/interactions/PortableCustomInteraction.js)<br/>
+containerHelper : [qtiCreator/model/helper/container.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/helper/container.js)<br/>
+registry : [qtiCreator/editor/customInteractionRegistry.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/customInteractionRegistry.js)<br/>
+creatorRenderer : [qtiCreator/renderers/interactions/PortableCustomInteraction.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/renderers/interactions/PortableCustomInteraction.js)<br/>
+creator Widget : the one returned by pciCreator.getWidget(), e.g. [a sample implementation](https://github.com/oat-sa/extension-tao-itemqti-pci/blob/master/views/js/pciCreator/dev/likertScaleInteraction/widget/Widget.js)<br/>
+commonRender : [qtiCommonRenderer/renderers/interactions/PortableCustomInteraction.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCommonRenderer/renderers/interactions/PortableCustomInteraction.js)<br/>
 The commonRenderer will basically call the the runtime code, which is initialized by the call to the method initialize() of the object registered in manifest.entryPoint.
 
 ![](http://forge.taotesting.com/attachments/download/3430/pciCreatorSequence.png)
@@ -290,11 +290,11 @@ The same principle applies.<br/>
 
 The members and locations are :<br/>
 
-portableInfoControl : [qtiCreator/model/PortableInfoControl.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/PortableInfoControl.js)\
-containerHelper : [qtiCreator/model/helper/container.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/helper/container.js)\
-registry : [qtiCreator/editor/infoControlRegistry.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/infoControlRegistry.js)\
-creatorRenderer : [qtiCreator/renderers/PortableInfoControl.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/renderers/PortableInfoControl.js)\
-creator Widget : the one returned by picCreator.getWidget(), e.g. [a sample implementation](https://github.com/oat-sa/extension-tao-itemqti-pic/blob/develop/views/js/picCreator/dev/studentToolSample/creator/widget/Widget.js)\
+portableInfoControl : [qtiCreator/model/PortableInfoControl.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/PortableInfoControl.js)<br/>
+containerHelper : [qtiCreator/model/helper/container.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/helper/container.js)<br/>
+registry : [qtiCreator/editor/infoControlRegistry.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/infoControlRegistry.js)<br/>
+creatorRenderer : [qtiCreator/renderers/PortableInfoControl.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/renderers/PortableInfoControl.js)<br/>
+creator Widget : the one returned by picCreator.getWidget(), e.g. [a sample implementation](https://github.com/oat-sa/extension-tao-itemqti-pic/blob/develop/views/js/picCreator/dev/studentToolSample/creator/widget/Widget.js)<br/>
 commonRender : [qtiCommonRenderer/renderers/PortableInfoControl.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCommonRenderer/renderers/PortableInfoControl.js)
 
 Implementing Creator Widget
@@ -304,12 +304,12 @@ A PCI or PIC creator widget follow strictly the same rules as any standard qti c
 
 Tips :<br/>
 
-The standard QTI creator widget works directly on the DOM to reflect changes and new config set by the item author. This is the basis of the WYSIWYG experience associated with the new item creator. The sequence diagram in the previous section shows that the creator widget is built on top of the DOM generated by the runtime code\
+The standard QTI creator widget works directly on the DOM to reflect changes and new config set by the item author. This is the basis of the WYSIWYG experience associated with the new item creator. The sequence diagram in the previous section shows that the creator widget is built on top of the DOM generated by the runtime code<br/>
 Quick recap, the DOM first comes from the runtime code execution. The creator widget is creates ui components on top of the runtime code. There are two strategies to implement a wysiwyg experience:<br/>
 
-1 : update the dom to reflect every changes\
-2 : refresh the whole interaction to reflect it\
-3 : a mix of them\
+1 : update the dom to reflect every changes<br/>
+2 : refresh the whole interaction to reflect it<br/>
+3 : a mix of them<br/>
 See an example of call to widget refresh() in [qtiItemPci/views/js/pciCreator/dev/likertScaleInteraction/creator/widget/states/Question.js](https://github.com/oat-sa/extension-tao-itemqti-pci/blob/develop/views/js/pciCreator/dev/likertScaleInteraction/creator/widget/states/Question.js)
 
 

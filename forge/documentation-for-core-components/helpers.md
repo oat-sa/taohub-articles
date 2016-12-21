@@ -43,8 +43,8 @@ We use it to write MVC URLs for you and to encode/decode the RDFS resources URIs
 
 For example, the method `_url('index')` will return to the index action of the current module.<br/>
 
-The following code sample will display “http://yourdomain.tld/taoItems/PreviewApi/runner?match=client&context=false”\
-<code class="php">\
+The following code sample will display “http://yourdomain.tld/taoItems/PreviewApi/runner?match=client&context=false”<br/>
+<code class="php"><br/>
  echo \_url(‘runner’, ‘PreviewApi’, ‘taoItems’, array(‘match’ =\> ‘client’, ‘context’ =\> false));<br/>
 
 </code>
@@ -71,7 +71,7 @@ The Form Engine is mainly used in TAO as a front-end for the data model through 
 
 ![](http://forge.taotesting.com/attachments/389/form-engine-model.png)
 
--   The *tao\_helpers\_form\_FormFactory* class enables you to retrieve initialized instances of *tao\_helpers\_form\_Forms*, *tao\_helpers\_form\_FormElements* and *tao\_helpers\_form\_Validators* classes for a defined rendering mode (the XHTML is the default rendering). For example, you can get an instance by using\
+-   The *tao\_helpers\_form\_FormFactory* class enables you to retrieve initialized instances of *tao\_helpers\_form\_Forms*, *tao\_helpers\_form\_FormElements* and *tao\_helpers\_form\_Validators* classes for a defined rendering mode (the XHTML is the default rendering). For example, you can get an instance by using<br/>
     <code class='php'>FormFactory::getForm(‘formName’);</code>
 -   The *tao\_helpers\_form\_GenerisFormFactory* class gives you some utilities to generate forms from an RDFS model using the Generis API. For example, the method *map* returns the map between the widgets (from the Widget ontology) and the *tao\_helpers\_form\_FormElements* tied to a widget.
 

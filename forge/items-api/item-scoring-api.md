@@ -769,14 +769,14 @@ But we want to give some points to the test takers who give a partial answer : *
 
 *See below the full example* :
 
-    var myRule = 'if (match(null, getResponse("RESPONSE"), getCorrect("RESPONSE"))) { \
-        setOutcomeValue("SCORE", 1); \
-    }  \
-    else if (match(null, getResponse("RESPONSE"), createVariable({"type":"tuple"}, "DriverC", "DriverA", "DriverB"))) { \
-        setOutcomeValue ("SCORE", 0.5); \
-    }  \
-    else { \
-        setOutcomeValue("SCORE", 0); \
+    var myRule = 'if (match(null, getResponse("RESPONSE"), getCorrect("RESPONSE"))) { <br/>
+        setOutcomeValue("SCORE", 1); <br/>
+    }  <br/>
+    else if (match(null, getResponse("RESPONSE"), createVariable({"type":"tuple"}, "DriverC", "DriverA", "DriverB"))) { <br/>
+        setOutcomeValue ("SCORE", 0.5); <br/>
+    }  <br/>
+    else { <br/>
+        setOutcomeValue("SCORE", 0); <br/>
     }';
 
     var correct = {

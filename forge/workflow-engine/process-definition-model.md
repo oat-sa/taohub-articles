@@ -23,7 +23,7 @@ The activities define one or more actions to be performed at a given step of the
 
 The connectors link several activities together to define the process flow.
 
-A basic representation of simple conditional process can be found on the diagram below\
+A basic representation of simple conditional process can be found on the diagram below<br/>
 ![](../resources/process_model_architecture_diagram.png)
 
 2. Activity definition
@@ -35,16 +35,16 @@ An activity can be seen as the container of one or several services. As a contai
 
 The [[Generis Overview|Generis]] representation of an activity class below shows its properties:<br/>
 
-![](../resources/generis_activity_definition.png)\
+![](../resources/generis_activity_definition.png)<br/>
 You can define the access control mode, whether it should be hidden or not (typically for a system activity that should not be visible by the end user) and whether the user can move forward or backward in the process execution interface.
 
 Each activity can be given an access control mode, to control how the limitation is managed in each case.<br/>
 
 Four types of access control modes are currently implemented:<br/>
 
-1- Role: all users with the right role can access it (however, the first user to access it becomes the owner of the activity and the only one able to access it later)\
-2- Role restricted user: identical to the previous mode, but applies to parallel branches only\
-3- Role restricted user inherited: it behaves initially like the “role restricted user”: however, once an activity with the right role has been executed by a user, all other activities with that access mode and that selected role will only be accessible by that user. (This mode is useful for a delivery since all items of a test must be taken only by a single and unique user)\
+1- Role: all users with the right role can access it (however, the first user to access it becomes the owner of the activity and the only one able to access it later)<br/>
+2- Role restricted user: identical to the previous mode, but applies to parallel branches only<br/>
+3- Role restricted user inherited: it behaves initially like the “role restricted user”: however, once an activity with the right role has been executed by a user, all other activities with that access mode and that selected role will only be accessible by that user. (This mode is useful for a delivery since all items of a test must be taken only by a single and unique user)<br/>
 4- User: only the designated user will be granted the access to the service
 
 An activity can be considered as an empty container of services. The actual business, actions to be executed, is defined within the services. An activity can contain one or several services.
@@ -54,7 +54,7 @@ An activity can be considered as an empty container of services. The actual busi
 
 ### 3.1. Service definition
 
-The services define the actual business of an activity: « when I get access to an activity, what will be executed and/or displayed on the screen and what should/could I do? »\
+The services define the actual business of an activity: « when I get access to an activity, what will be executed and/or displayed on the screen and what should/could I do? »<br/>
 Services in the workflow engine are defined by a URL. It means that all scripts accessible through a URL could be a service.<br/>
 
 A service could have input parameters. It allows the process creator to tell the systems which parameter shall be passed as a parameter of the service. A service definition must be given the input parameters that it needs to work. The definition of such a parameter is called “formal parameter”.<br/>

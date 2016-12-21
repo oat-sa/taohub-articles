@@ -36,8 +36,8 @@ Then run:
 Redirect tao output to the console
 ----------------------------------
 
-- install TaoDevTools extension\
-- configure a UPD appender in /tao/config/generis/log.conf.php\
+- install TaoDevTools extension<br/>
+- configure a UPD appender in /tao/config/generis/log.conf.php<br/>
 - launch the UDP listener
 
     php /tao/taoDevTools/scripts/UDPListener.php

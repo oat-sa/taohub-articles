@@ -74,7 +74,7 @@ Manage item content pane¶
 
 ![](../resources/items-content.png)
 
-\* In the Edit item pane, when you click on the Content button, the Management of the item content box is displayed\
+\* In the Edit item pane, when you click on the Content button, the Management of the item content box is displayed<br/>
  \* When the item has no content, the Management of the item content box allows you to import content for your item.<br/>
 
  \* When the item has content, the Management of the item content box also allows you to download this content on your computer.

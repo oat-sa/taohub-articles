@@ -16,8 +16,8 @@ An item theme in TAO is nothing more than an alternative CSS implementation with
 
 The look of a standard interaction is defined by several files:
 
-1\. `taoQtiItem/views/js/qtiCommonRenderer/tpl/interactions/[interaction].tpl`\
-2. `taoQtiItem/views/scss/qti/_[interaction].scss` which extends `taoQtiItem/views/scss/qti-runner.scss`\
+1\. `taoQtiItem/views/js/qtiCommonRenderer/tpl/interactions/[interaction].tpl`<br/>
+2. `taoQtiItem/views/scss/qti/_[interaction].scss` which extends `taoQtiItem/views/scss/qti-runner.scss`<br/>
 3. `taoQtiItem/views/scss/qtiCreator/_[interaction].scss` which extends `taoQtiItem/views/scss/item-creator.scss`
 
 HTML
@@ -76,34 +76,34 @@ The base SCSS file structure could look like this for instance:
 
 @import “path/to/bootstrap/if/any”;
 
-// always start with the name of your extension\
- .qti-myInteraction {\
- .choice-area {\
- .qti-choice { }\
- }\
- .result-area {\
- .qti-choice { }\
+// always start with the name of your extension<br/>
+ .qti-myInteraction {<br/>
+ .choice-area {<br/>
+ .qti-choice { }<br/>
+ }<br/>
+ .result-area {<br/>
+ .qti-choice { }<br/>
  }
 
-// Maybe your interaction supports two directions\
- </code>&<code class="sass">.qti-vertical {\
- .choice-area {\
- .qti-choice { }\
- }\
- .result-area {\
- .qti-choice { }\
- }\
+// Maybe your interaction supports two directions<br/>
+ </code>&<code class="sass">.qti-vertical {<br/>
+ .choice-area {<br/>
+ .qti-choice { }<br/>
+ }<br/>
+ .result-area {<br/>
+ .qti-choice { }<br/>
+ }<br/>
  }
 
-</code>&<code class="sass">.qti-horizontal {\
- .choice-area {\
- .qti-choice { }\
- }\
- .result-area {\
- .qti-choice { }\
- }\
- }\
- }\
+</code>&<code class="sass">.qti-horizontal {<br/>
+ .choice-area {<br/>
+ .qti-choice { }<br/>
+ }<br/>
+ .result-area {<br/>
+ .qti-choice { }<br/>
+ }<br/>
+ }<br/>
+ }<br/>
 </code>
 
 </pre>

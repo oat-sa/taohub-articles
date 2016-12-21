@@ -22,22 +22,22 @@ You can import your data to:
 
     - first define the common options of your CSV file,<br/>
 
-    - second select your file in your file system by clicking the Browse button and\
+    - second select your file in your file system by clicking the Browse button and<br/>
     - thirdly map the columns of your CSV file to the properties of your class.
 
 <!-- -->
 
--   RDF\
+-   RDF<br/>
     - you must indicate the RDF item you want to import.
 
 <!-- -->
 
--   QTI Item\
+-   QTI Item<br/>
     - you must indicate the QTI item you want to import.
 
 <!-- -->
 
--   QTI Package\
+-   QTI Package<br/>
     - you must indicate the QTI item you want to import (in ZIP format).
 
 <!-- -->

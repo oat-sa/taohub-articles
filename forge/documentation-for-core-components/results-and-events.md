@@ -14,15 +14,15 @@ Results and Events
 
 ------------------------------------------------------------------------
 
-### 1. [[Result Data Model]]\
-2. [[Process storing Data]]\
-3. [[Data Presentation]]\
+### 1. [[Result Data Model]]<br/>
+2. [[Process storing Data]]<br/>
+3. [[Data Presentation]]<br/>
 4. [[Event Based Scoring]]
 
-4.1. [[Event Based Scoring Mechanism]]\
-4.2. [[Event Based Scoring Architecture]]\
-4.3. [[Event Based Scoring Model]]\
-4.4. [[Event Based Scoring Process]]\
+4.1. [[Event Based Scoring Mechanism]]<br/>
+4.2. [[Event Based Scoring Architecture]]<br/>
+4.3. [[Event Based Scoring Model]]<br/>
+4.4. [[Event Based Scoring Process]]<br/>
 4.5. [[Event Based Scoring API]]
 
 ------------------------------------------------------------------------

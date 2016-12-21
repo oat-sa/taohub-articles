@@ -29,26 +29,26 @@ The group may also use the forum. Depending on how the different groups evolve, 
 List of Focus Groups
 --------------------
 
-### [[UX Focus Group]]\
+### [[UX Focus Group]]<br/>
 Share your opinion to improve TAO user experience !<br/>
 
 Coordinator : Sophie Doublet
 
-### [[Alternative Results Storage Focus Group]]\
+### [[Alternative Results Storage Focus Group]]<br/>
 Leverage external tools functionnality by storing the data collected by TAO in other data repositories.<br/>
 
 Coordinator : Patrick Plichart
 
-### [[Adaptive Testing Work Group]]\
+### [[Adaptive Testing Work Group]]<br/>
 Extend TAO to drive adaptive tests.<br/>
 
 Coordinator : Joel Bout
 
-### [[Mobile TAO Focus Group]]\
-Help getting TAO tests running on mobile paltforms\
+### [[Mobile TAO Focus Group]]<br/>
+Help getting TAO tests running on mobile paltforms<br/>
 Coordinator : Jérôme Bogaerts
 
-### [[Rest Client Libraries Focus Group]]\
+### [[Rest Client Libraries Focus Group]]<br/>
 Build convenient libraries to access TAO remote REST services from other technological stacks easily.<br/>
 
 Coordinator : Bertrand Chevrier

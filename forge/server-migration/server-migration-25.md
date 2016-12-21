@@ -25,7 +25,7 @@ Migration steps
 ### File migration
 
 -   Copy the entire tao directory from the old server to the new server, make sure to include the .htaccess in the root folder and to set the correct file owner/rights
--   Modify **install/directory/generis/common/conf/db.conf.php** to reflect your new database configuration\
+-   Modify **install/directory/generis/common/conf/db.conf.php** to reflect your new database configuration<br/>
     \><pre>define(‘DATABASE\_NAME’,‘tao\_head’);<br/>
 
     define(‘DATABASE\_LOGIN’,‘root’);<br/>
@@ -35,11 +35,11 @@ Migration steps
     define(’DATABASE\_URL’,‘localhost’);<br/>
 
     define(‘SGBD\_DRIVER’,‘pdo\_mysql’);</pre>
--   In **install/directory/generis/common/conf/generis.conf.php** update the ROOT\_PATH and ROOT\_URL each ending with a trailing slash/directory delimiter. (Do NOT change GENERIS\_INSTANCE\_NAME or LOCAL\_NAMESPACE)\
+-   In **install/directory/generis/common/conf/generis.conf.php** update the ROOT\_PATH and ROOT\_URL each ending with a trailing slash/directory delimiter. (Do NOT change GENERIS\_INSTANCE\_NAME or LOCAL\_NAMESPACE)<br/>
     \><pre>define(‘ROOT\_PATH’,‘/install/directory/’);<br/>
 
     define(‘ROOT\_URL’,‘http://tao.lan/’);</pre>
--   Update the folder value in **install/directory/tao/includes/configGetFile.php** to point to your **install/directory/taoDelivery/data/compiled/** directory\
+-   Update the folder value in **install/directory/tao/includes/configGetFile.php** to point to your **install/directory/taoDelivery/data/compiled/** directory<br/>
     \><pre><?php return array(0 => array(‘secret’ =\> ‘1234567890abcde1234567890abcde12’,‘folder’ =\> ‘/install/directory/generis/data/tao/public/’));</pre>
 
 ### Database migration
@@ -54,9 +54,9 @@ In a standard install it is likely the path would end with /generis/data/
 
 \> For 2.6 onwards it is possible to store data outside the default directory, it is important to ensure that the FILES\_PATH in **install/directory/generis/common/conf/generis.conf.php** corresponds to the required directory:<br/>
 
-\><pre>\
-\#generis paths\
-…\
+\><pre><br/>
+\#generis paths<br/>
+…<br/>
 define(‘FILES\_PATH’,‘/path/to/NEW\_DIRECTORY/’);
 
 </pre>

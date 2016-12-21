@@ -102,15 +102,15 @@ If you want larger access rights, please let us know !
 
 Over time, TAO is getting more and more complex (see [[TAO Architecture]]), meanwhile here is a list of TAO team members that can help you for different sections listed below and who will be in charge of validating contributions and assure the overall TAO Product Quality. Please be also sure to follow [[guidelines]] and common conventions used by the TAO team.
 
-**TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339), [Raynald Jadoul](http://forge.taotesting.com/users/630)\
-**Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Patrick Plichart](http://forge.taotesting.com/users/339)\
-**TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)\
-**TAO Delivery** [Somsack Sipasseuth](http://forge.taotesting.com/users/361)\
-**TAO Groups** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)\
-**TAO Items** [Raynald Jadoul](http://forge.taotesting.com/users/630), [Cedric Alfonsi](http://forge.taotesting.com/users/352), [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)\
-**TAO Results** [Younes Djaghloul](http://forge.taotesting.com/users/347)\
-**TAO Subjects** [Raynald Jadoul](http://forge.taotesting.com/users/630)\
-**WfEngine** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)\
+**TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Patrick Plichart](http://forge.taotesting.com/users/339)<br/>
+**TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Delivery** [Somsack Sipasseuth](http://forge.taotesting.com/users/361)<br/>
+**TAO Groups** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Items** [Raynald Jadoul](http://forge.taotesting.com/users/630), [Cedric Alfonsi](http://forge.taotesting.com/users/352), [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)<br/>
+**TAO Results** [Younes Djaghloul](http://forge.taotesting.com/users/347)<br/>
+**TAO Subjects** [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**WfEngine** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)<br/>
 **TAO Documentation** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Laure Conde](http://forge.taotesting.com/users/503)
 
 Please feel free to discuss about your input in the [Forum](http://forge.taotesting.com/projects/tao/boards)

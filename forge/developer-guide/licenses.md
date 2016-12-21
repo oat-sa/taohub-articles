@@ -69,7 +69,7 @@ You do not have right to use TAO Trademark (i.e., the name of TAO to distribute 
 
 More infos on TAO website :
 
-[Legal notice](http://taotesting.com/resources/legal-notice)\
-[FAQ on licensing](http://taotesting.com/resources/license)\
+[Legal notice](http://taotesting.com/resources/legal-notice)<br/>
+[FAQ on licensing](http://taotesting.com/resources/license)<br/>
 [Trademark Policy](http://taotesting.com/resources/trademark-policy)
 

@@ -8,7 +8,7 @@ updated_at: '2013-10-11 10:25:58'
 Tao on a Raspberry
 ==================
 
-![](resources/raspberry-pi-7.jpg)\
+![](resources/raspberry-pi-7.jpg)<br/>
 So, you want to use raspberry as a tao web server and deliver your tests over a local Wi-Fi ?
 
 1. Download RaspDebian
@@ -19,8 +19,8 @@ It is right here : http://downloads.raspberrypi.org/raspbian\_latest
 2. Prepare a SD card
 --------------------
 
-From Windows : http://sourceforge.net/projects/win32diskimager\
-From Mac OS X : http://ivanx.com/raspberrypi\
+From Windows : http://sourceforge.net/projects/win32diskimager<br/>
+From Mac OS X : http://ivanx.com/raspberrypi<br/>
 From Linux :
 
     sudo apt-get install ImageWriter
@@ -37,7 +37,7 @@ Insert the sd card into your raspberry, plug the power.
 
 *Scenario 1: You have a screen connected on the raspberry.*
 
-Login as “pi” using password “raspberry”\
+Login as “pi” using password “raspberry”<br/>
 Type in the shell
 
      ifconfig
@@ -62,10 +62,10 @@ and take note of the resulting IP adress.
 
 *Scenario 2: Like us, you couldn’t afford buying a screen …*
 
-This one is diffcult, all raspberry have a MAC adress starting with b8:27:eb\
+This one is diffcult, all raspberry have a MAC adress starting with b8:27:eb<br/>
 Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.<br/>
 
-From a mac you may use conveniently http://ivanx.com/raspberrypi/files/PiFinder.zip\
+From a mac you may use conveniently http://ivanx.com/raspberrypi/files/PiFinder.zip<br/>
 From Linux :
 
     #!/bin/bash
@@ -80,13 +80,13 @@ From Windows : ???
 5. Connect to your raspberry PI
 -------------------------------
 
-ssh pi@THEFOUNDIP\
+ssh pi@THEFOUNDIP<br/>
 using the default password raspberry
 
 6. Give your Raspberry a fixed IP
 ---------------------------------
 
-You may follow this guide : https://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address\
+You may follow this guide : https://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address<br/>
 This step may become mandatory especially if you don’t use vhost. As tao memorizes the root url at installation time, if you use the IP for installing tao (step 8) and that afterwards its ip change, test takers won’t be able to connect. We recommend either to use a vhost configuration or to use a fixed IP.
 
 7. Change pi password
@@ -99,11 +99,11 @@ This step may become mandatory especially if you don’t use vhost. As tao memor
 http://forge.taotesting.com/projects/tao/wiki/InstallUbuntuApacheMySQL
 ----------------------------------------------------------------------
 
-9. Start TAO installation\
+9. Start TAO installation<br/>
 From any computer on the same network :<br/>
 
-http://yourip/tao/install\
-or vhost\
+http://yourip/tao/install<br/>
+or vhost<br/>
 http://vhost/tao/install
 ----------------------------------------
 

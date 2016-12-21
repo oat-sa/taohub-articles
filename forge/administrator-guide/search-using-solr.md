@@ -36,7 +36,7 @@ Configure Solr
 
 You have to run and create core based on default tao preset
 
-solr start\
+solr start<br/>
 solr create\_core -c **CORE\_NAME** -d \*TAO\_ROOT\_DIRECTORY\*/vendor/oat-sa/lib-tao-solarium/doc/solr/conf
 
 Activation script assumes that

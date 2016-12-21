@@ -14,10 +14,10 @@ Event based scoring
 
 ------------------------------------------------------------------------
 
-### 1. [[Event Based Scoring Mechanism]]\
-2. [[Event Based Scoring Architecture]]\
-3. [[Event Based Scoring Model]]\
-4. [[Event Based Scoring Process]]\
+### 1. [[Event Based Scoring Mechanism]]<br/>
+2. [[Event Based Scoring Architecture]]<br/>
+3. [[Event Based Scoring Model]]<br/>
+4. [[Event Based Scoring Process]]<br/>
 5. [[Event Based Scoring API]]
 
 ------------------------------------------------------------------------

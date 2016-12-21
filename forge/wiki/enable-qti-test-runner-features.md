@@ -17,7 +17,7 @@ Setting the following categories in the QTI test creator unlocks secret features
 x-tao-option-endTestWarning
 ---------------------------
 
-displays a warning before the user finishes the test\
+displays a warning before the user finishes the test<br/>
 requires Sprint 36 / taoQtiTest \>= 5.20.0
 
 x-tao-option-nextSectionWarning
@@ -28,7 +28,7 @@ displays a next section button that warns the user that they will not be able to
 x-tao-option-noExitTimedSectionWarning
 --------------------------------------
 
-disable the warning automatically displayed upon exiting a timed section\
+disable the warning automatically displayed upon exiting a timed section<br/>
 requires Sprint 37 / taoQtiTest \>= 5.24.0
 
 x-tao-option-nextSection

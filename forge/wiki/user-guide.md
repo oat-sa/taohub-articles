@@ -25,9 +25,9 @@ Part 1: General presentation of TAO
 
 ### 4. [[General features]]
 
-4.1. [[Home screen]]\
-4.2. [[Menus]]\
-4.3. [[Screen organization]]\
+4.1. [[Home screen]]<br/>
+4.2. [[Menus]]<br/>
+4.3. [[Screen organization]]<br/>
 4.4. [[Library]]
 
 ### 5. [[Actions]]

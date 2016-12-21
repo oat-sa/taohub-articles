@@ -21,7 +21,7 @@ Compiling a delivery means getting the delivery content ready for execution.
 
 The need for test compilation is due to the potential issue of server access and/or overload during test campaign. Typically, many subjects are likely to run the test at once. The server overload issue is particularly true when the delivery includes items, with many media files that are located in different remote servers.<br/>
 
-The path to a compiled item of a test of a delivery execution is *taoDelivery/compiled/deliveryId/testId/itemId/*\
+The path to a compiled item of a test of a delivery execution is *taoDelivery/compiled/deliveryId/testId/itemId/*<br/>
 ![](../resources/compilation_path.png)
 
 2. Operation performed

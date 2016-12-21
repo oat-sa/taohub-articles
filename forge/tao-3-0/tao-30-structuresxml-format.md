@@ -25,7 +25,7 @@ Where as absence of many url attributes in the <tree> child element of the <tree
 
 Check out above changes to see if you have the new format of structures.xml.
 
-***Example***\
+***Example***<br/>
 Here’s an example of what a legacy structures.xml file might look like:
 -----------------------------------------------------------------------
 

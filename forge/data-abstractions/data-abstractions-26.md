@@ -34,7 +34,7 @@ The KeyValue Result storage implementation may be installed and configured under
 
 -   Make sure you have installed the packages :<br/>
 
-    “redis-server” (on the server you want to use for the storage)\
+    “redis-server” (on the server you want to use for the storage)<br/>
     “phpredis” on the TAO application server
 
 <!-- -->

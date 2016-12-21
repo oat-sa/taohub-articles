@@ -50,12 +50,12 @@ Go to the script path located on *TAO\_ROOT/wfEngine/scripts/* then execute the 
 
 to compile:<br/>
 
-`php wfEngineOptimizer.php -c -i`\
+`php wfEngineOptimizer.php -c -i`<br/>
 (c for complie, i for indexing)
 
 to decompile:<br/>
 
-`php wfEngineOptimizer.php -d`\
+`php wfEngineOptimizer.php -d`<br/>
 (d for decompile)
 
 Please be patient, it may take a while according to the quantity of data you have.
@@ -109,14 +109,14 @@ The database is filled with **1000 test takers**. A given number of test taker (
 
 The server configuration is as follow (on virtual machine):<br/>
 
-processors : 4\
-vendor\_id : GenuineIntel\
-cpu family : 6\
-model : 26\
-model name : Intel® Xeon® CPU E5530 @ 2.40GHz\
-stepping : 5\
-cpu MHz : 2400.085\
-cache size : 8192 KB\
+processors : 4<br/>
+vendor\_id : GenuineIntel<br/>
+cpu family : 6<br/>
+model : 26<br/>
+model name : Intel® Xeon® CPU E5530 @ 2.40GHz<br/>
+stepping : 5<br/>
+cpu MHz : 2400.085<br/>
+cache size : 8192 KB<br/>
 memory : 3 Go
 
 The two tables below show the benchmark results, before and after optimization. The number is the **average time in milliseconds** to accomplish the action.

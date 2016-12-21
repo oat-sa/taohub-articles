@@ -31,7 +31,7 @@ This component parses the query formulated with the proposed language and invoke
 3. Toolbox of functions
 -----------------------
 
-The Toolbox contains all functions needed in the assessment. One can enumerate three kinds\
+The Toolbox contains all functions needed in the assessment. One can enumerate three kinds<br/>
 of functions:
 
 -   Simple Matching and Scoring functions calculate the score according to a direct comparison between the value of an event element and the correct response.
@@ -41,7 +41,7 @@ of functions:
 4. Variable Generator
 ---------------------
 
-The Variable Generator intercepts the variables’ values and creates a specific list of variables\
+The Variable Generator intercepts the variables’ values and creates a specific list of variables<br/>
 that can be used in two manners:
 
 -   As output of the scoring engine;

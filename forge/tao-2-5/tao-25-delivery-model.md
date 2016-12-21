@@ -54,7 +54,7 @@ Delivery Execution
 
 To launch a compiled/published delivery, all we need to do is execute the service call stored in it, by pointing the user to the indicated action.
 
-{{thumbnail(deliveryGraph.png, size=500, title=Delivery Graph)}}\
+{{thumbnail(deliveryGraph.png, size=500, title=Delivery Graph)}}<br/>
 Please note that in the diagram the calls to the delivery/test/item-runner have been simplified. For now all these calls are made by the web client.
 
 Step by Step explanation:

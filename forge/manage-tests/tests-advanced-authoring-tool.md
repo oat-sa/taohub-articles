@@ -24,7 +24,7 @@ Service definition box
 -   The Service definition box defines the services that will be integrated into an activity.
 -   The services are shared with every test which is in advanced mode, e.g. modifying a service definition will affect every test that is using it.<br/>
 
-    ~~Question : modification aussi dans processes et deliveries ? en attente de réponse~~\
+    ~~Question : modification aussi dans processes et deliveries ? en attente de réponse~~<br/>
     ~~En attente de la documentation développeur sur cette extensionie pour avoir plus d’information sur la nature des services~~
 
 Formal parameter box
@@ -32,7 +32,7 @@ Formal parameter box
 
 -   A Service definition can receive input parameters (e.g. in case of a test delivery, a required parameter would be the subject’s id).<br/>
 
-    ~~<span class="concernées extensionies autres les sur copier à"></span>~~\
+    ~~<span class="concernées extensionies autres les sur copier à"></span>~~<br/>
     ~~En attente de la documentation développeur~~
 
 Role box
@@ -69,6 +69,6 @@ Process properties box
 
 -   The Process properties box allows editing general properties of the current process, i.e. label, name and associated process variables.<br/>
 
-    ~~<span class="concernées extensionies autres les sur copier à"></span>~~\
+    ~~<span class="concernées extensionies autres les sur copier à"></span>~~<br/>
     ~~En attente de la documentation développeur~~
 

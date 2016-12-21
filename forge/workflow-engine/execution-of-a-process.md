@@ -15,12 +15,12 @@ Execution of a process
 1. Init a process execution
 ---------------------------
 
-A process execution is initiated in the ProcessExecutionFactory: *wfEngine\_models\_classes\_ProcessExecutionFactory*\
+A process execution is initiated in the ProcessExecutionFactory: *wfEngine\_models\_classes\_ProcessExecutionFactory*<br/>
 It consists in:<br/>
 
-- creating a process execution resource\
-- finding the first activity from the process definition\
-- creating an empty token and places it on the first activity\
+- creating a process execution resource<br/>
+- finding the first activity from the process definition<br/>
+- creating an empty token and places it on the first activity<br/>
 - setting the initial process variables values in that token (see token)
 
 2. Running an activity
@@ -38,12 +38,12 @@ The image below shows 3 services displayed for an activity:<br/>
 
 The picture above shows that all three services have a different url, one of which has some parameters. The url is indeed processed and built for each service according to the process described as follows:<br/>
 
-![](../resources/build_the_service_url.png)\
+![](../resources/build_the_service_url.png)<br/>
 ![](../resources/build_the_service_url_2.png)
 
 ### 2.2. Activity Execution resource
 
-![](../resources/generis_actiivty_instance_resource.png)\
+![](../resources/generis_actiivty_instance_resource.png)<br/>
 The property *“finished”* tells if that activity execution has been finished, i.e., if the owning user has performed a *“transition”* (see the description of a *“transition”* in the following section).<br/>
 
 The property “activity definition” tells which activity definition the current activity execution is the execution of.<br/>
@@ -61,7 +61,7 @@ Tokens keep the current context of execution. It moves along the process, to tel
 
 A token is created as soon as a transition is performed. The token is aimed at being taken by a user who has the right to access the activity. Once the token is assigned to the right user, the latter becomes the owner of the token and the only one allowed to move the token.<br/>
 
-![](../resources/tokens1.png)\
+![](../resources/tokens1.png)<br/>
 ![](../resources/tokens2.png)
 
 Tokens also play the role of saving the current values of the process variables. Activity services or connector transition rules (see [[Process Definition Model\#conditional|conditional connector & transition rule]]) use process variable respectively to set input parameter values and to evaluate the transition rules. Tokens therefore provide a very good snapshot of a process execution, and a helpful resource for process execution debugging.
@@ -77,8 +77,8 @@ Perform transition is a method of the *wfEngine\_models\_classes\_ProcessExecuti
 
 It calls the *wfEngine\_models\_classes\_ProcessExecution::getNewActivities()* to get the list of the following activities. The *getNewActivities()* function evaluates the transition condition for each type of connector:<br/>
 
-- sequential: immediate transition to the next for a sequential one\
-- conditional: evaluate the transition rule to define the next activity (following the “then” or “else” branch?)\
+- sequential: immediate transition to the next for a sequential one<br/>
+- conditional: evaluate the transition rule to define the next activity (following the “then” or “else” branch?)<br/>
 - parallel: how many activities (i.e., branches) would be created?<br/>
 
 - join: are every user finished with their activities in their branches?<br/>

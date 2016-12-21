@@ -61,9 +61,9 @@ In order to ensure partially completed updates get resumed properly, the abstrac
 
 So instead of:
 
-<code style="php"><pre>\
-if (\$currentVersion == ‘2.7.9’) {\
- // magic happens here\
+<code style="php"><pre><br/>
+if (\$currentVersion == ‘2.7.9’) {<br/>
+ // magic happens here<br/>
  \$currentVersion = ‘2.7.10’;<br/>
 
 }
@@ -73,9 +73,9 @@ if (\$currentVersion == ‘2.7.9’) {\
 
 please use
 
-<code style="php"><pre>\
-if (\$this-\>isVersion(‘2.7.9’)) {\
- // magic happens here\
+<code style="php"><pre><br/>
+if (\$this-\>isVersion(‘2.7.9’)) {<br/>
+ // magic happens here<br/>
  \$this-\>setVersion(‘2.7.10’);<br/>
 
 }

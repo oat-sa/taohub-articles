@@ -51,7 +51,7 @@ The HAWAI editor
 
 \> \* The HAWAI editor has three modes: the templates mode, the designer mode and the XML mode.<br/>
 
-\> \* The templates mode is the simplest mode. It allows building an item from a template. To choose a template, just click on it, after that, the construction of the item is fully coordinate by the system. Simply answer the various questions it asks you. (En attente de répondre concernant la gestion des réponses …)\
+\> \* The templates mode is the simplest mode. It allows building an item from a template. To choose a template, just click on it, after that, the construction of the item is fully coordinate by the system. Simply answer the various questions it asks you. (En attente de répondre concernant la gestion des réponses …)<br/>
 \> \* The designer mode allows building an item from “graphical user interface elements”. To choose a graphical user interface element, just click on it, after that, the construction of the graphical user interface element is fully coordinate by the system. Simply answer the various questions it asks you.<br/>
 
 \> \* The XML mode allows building an item using the XML computer language.

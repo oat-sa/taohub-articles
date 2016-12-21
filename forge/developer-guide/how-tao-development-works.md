@@ -106,16 +106,16 @@ Over time, TAO is getting more and more complex (see [[TAO Architecture]]), mean
 
 **Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Joel Bout](http://forge.taotesting.com/users/692),<br/>
 
-**TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Joel Bout](http://forge.taotesting.com/users/692), [Bertrand Chevrier](http://forge.taotesting.com/users/331)\
+**TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Joel Bout](http://forge.taotesting.com/users/692), [Bertrand Chevrier](http://forge.taotesting.com/users/331)<br/>
 **TAO Delivery** [Joel Bout](http://forge.taotesting.com/users/692),<br/>
 
-**TAO Groups** [Bertrand Chevrier](http://forge.taotesting.com/users/331)\
-**TAO Items** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)\
-**TAO Test** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Bertrand Chevrier](http://forge.taotesting.com/users/331)\
+**TAO Groups** [Bertrand Chevrier](http://forge.taotesting.com/users/331)<br/>
+**TAO Items** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)<br/>
+**TAO Test** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Bertrand Chevrier](http://forge.taotesting.com/users/331)<br/>
 **TAO Results** [Patrick Plichart](http://forge.taotesting.com/users/339),<br/>
 
-**TAO Subjects** [Bertrand Chevrier](http://forge.taotesting.com/users/331)\
-**WfEngine** [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)\
+**TAO Subjects** [Bertrand Chevrier](http://forge.taotesting.com/users/331)<br/>
+**WfEngine** [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)<br/>
 **TAO Documentation** [Lionel Lecaque](http://forge.taotesting.com/users/305),
 
 Please feel free to discuss about your input in the [Forum](http://forge.taotesting.com/projects/tao/boards)

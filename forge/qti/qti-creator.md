@@ -156,7 +156,7 @@ Tip for developers : if you are implementing a new interaction and its choice fo
         return Interaction.extend(methods);
     });
 
-For the choices, you only need to define the getDefaultAttributes() and applying the editable mixin\
+For the choices, you only need to define the getDefaultAttributes() and applying the editable mixin<br/>
 You can follow the example here: `qtiCreator/model/choices/SimpleChoice.js`
 
 
@@ -235,12 +235,12 @@ For a creator choice renderer, we are doing the same : loading its commonRendere
 
 **Note** : an interaction widget require one more argument compared to a choice : the ‘responseOptionForm’
 
-**Important notice** : please do not forget to declare the new renderer in the\
+**Important notice** : please do not forget to declare the new renderer in the<br/>
 `taoQtiItem/views/js/qtiCreator/renderers/config.js` otherwise, the commonRenderer will still be called instead of this one/
 
 ### step 3 : define the widget and its states
 
-**location** : `taoQtiItem/views/js/qtiCreator/renderers`\
+**location** : `taoQtiItem/views/js/qtiCreator/renderers`<br/>
 Because of the complexity of the authoring widgets, it would be difficult to manage everything in a single render file like we are doing in the CommonRenderers. Instead everything is managed by qti creator Widgets. The behaviour of every widgets change according to their states. All interactions and choices share the same set of states.<br/>
 
 This is to ensure behaviour consistency across all interactions and other qti elements implementations and decrease overall complexity.
@@ -406,7 +406,7 @@ However, most of the meta, options are to be positioned in the right side bar in
 
 Using the qti 2.1 standard, please make note of all properties required for the qti element you are working on.<br/>
 
-Then use either the style guide or an existing example to create your html template. Location: qtiCreator/tpl/forms/\
+Then use either the style guide or an existing example to create your html template. Location: qtiCreator/tpl/forms/<br/>
 You may note the use of specific validator to easily control the input value : in the following example, the identifier must not be empty (meaning it is required), and must also be a string that match the qti identifier format and must also not be already used.
 
 
@@ -533,57 +533,57 @@ They all are triggered in the same namespace “.qti-widget”
 
 ##### attributeChange
 
-Triggered by `element.attr(name, value)`\
+Triggered by `element.attr(name, value)`<br/>
 see any interactions in qtiCreator/model/mixin/editable.js
 
 ##### deleted
 
-Triggered by `element.remove()`\
+Triggered by `element.remove()`<br/>
 see any interactions in qtiCreator/model/mixin/editable.js
 
 ##### choiceCreated
 
-Triggered by `interaction.createChoice()`\
+Triggered by `interaction.createChoice()`<br/>
 see any interactions in qtiCreator/model/interactions/
 
 ##### containerBodyChange
 
-Triggered by `interaction.body()`\
+Triggered by `interaction.body()`<br/>
 see any interactions in qtiItem/core/Container.js
 
 ##### choiceTextChange
 
-Triggered by `interaction.createChoice()`\
+Triggered by `interaction.createChoice()`<br/>
 see any interactions in qtiCreator/model/choices/TextVariableChoice.js
 
 ##### responseTemplateChange
 
-Triggered by `responseDeclaration.setTemplate()`\
+Triggered by `responseDeclaration.setTemplate()`<br/>
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### correctResponseChange
 
-Triggered by `responseDeclaration.setCorrect()`\
+Triggered by `responseDeclaration.setCorrect()`<br/>
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### mapEntryChange
 
-Triggered by `responseDeclaration.setMapEntry()`\
+Triggered by `responseDeclaration.setMapEntry()`<br/>
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### mapEntryRemove
 
-Triggered by `responseDeclaration.removeMapEntry()`\
+Triggered by `responseDeclaration.removeMapEntry()`<br/>
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### mappingAttributeChange
 
-Triggered by `responseDeclaration.setMappingAttribute()`\
+Triggered by `responseDeclaration.setMappingAttribute()`<br/>
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### metaChange
 
-Triggered by `editable.data(key, value)`\
+Triggered by `editable.data(key, value)`<br/>
 See qtiCreator/model/mixin/editable.js
 
 #### listen to those events

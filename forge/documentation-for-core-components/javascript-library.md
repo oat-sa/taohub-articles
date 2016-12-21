@@ -14,28 +14,28 @@ Javascript libraries
 
 *For TAO version 2.3.*
 
-JQuery\
-\> **Version** : 1.8 (up to date)\
+JQuery<br/>
+\> **Version** : 1.8 (up to date)<br/>
 \> **URL** : www.jquery.com
 ----------------------------------
 
-JQuery UI\
-\> **Version** : 1.8.23 (up to date)\
+JQuery UI<br/>
+\> **Version** : 1.8.23 (up to date)<br/>
 \> **URL** : www.jqueryui.com
 -------------------------------------
 
-require\
-\> **Version** : 2.0.6 (up to date)\
+require<br/>
+\> **Version** : 2.0.6 (up to date)<br/>
 \> **URL** : www.requirejs.org
 ------------------------------------
 
-jqGrid\
-\> **Version** : 4.4.0 (up to date)\
+jqGrid<br/>
+\> **Version** : 4.4.0 (up to date)<br/>
 \> **URL** : www.trirand.com
 ------------------------------------
 
-jsTree\
-\> **Version** : 0.0.9a\
+jsTree<br/>
+\> **Version** : 0.0.9a<br/>
 \> **URL** : www.jstree.com
 ---------------------------
 
@@ -43,29 +43,29 @@ Do not upgrade ! The newest 1.0 version has no compatibility.<br/>
 
 Need to rewrite all custom parts.
 
-uploadify\
-\> **Version** : 2.1.4\
+uploadify<br/>
+\> **Version** : 2.1.4<br/>
 \> **URL** : www.uploadify.com
 ------------------------------
 
 Newest version exist (+3.1)
 
-wysiwyg\
-\> **Version** : 0.93\
+wysiwyg<br/>
+\> **Version** : 0.93<br/>
 \> **URL** : https://github.com/akzhan/jwysiwyg
 -----------------------------------------------
 
 Newest version exist (+0.97)
 
-Raphaël\
-\> **Version** : 1.5.2\
+Raphaël<br/>
+\> **Version** : 1.5.2<br/>
 \> **URL** : www.raphaeljs.com
 ------------------------------
 
 Newest version exist (+2.1.0)
 
-jqPlot\
-\> **Version** : 1.0.3 (up to date)\
+jqPlot<br/>
+\> **Version** : 1.0.3 (up to date)<br/>
 \> **URL** : www.jqplot.com
 ------------------------------------
 

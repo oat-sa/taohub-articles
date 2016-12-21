@@ -14,6 +14,6 @@ Directory structure for views
 
 ![](../resources/directory-structure.png)
 
-Download this structure (Note: all files are dummies)\
+Download this structure (Note: all files are dummies)<br/>
 attachment:directory-structure.zip
 

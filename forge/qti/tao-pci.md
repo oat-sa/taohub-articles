@@ -15,10 +15,10 @@ tags:
 
 Authors:<br/>
 
-Jérôme Bogaerts (Open Assessment Technologies, LU)\
-Somsack Sipasseuth (Open Assessment Technologies, LU)\
-Version: Public Draft\
-Version Date: 10 October 2014\
+Jérôme Bogaerts (Open Assessment Technologies, LU)<br/>
+Somsack Sipasseuth (Open Assessment Technologies, LU)<br/>
+Version: Public Draft<br/>
+Version Date: 10 October 2014<br/>
 Release: 1.0
 
 Summary:
@@ -50,7 +50,7 @@ An interaction has been implemented to validate the experimental support of PCI 
 
 The screenshot below shows a QTI assessmentItem component with three instances of the “Likert Scale Portable Custom Interaction” instantiated with different configuration options.<br/>
 
-Figure 2: A QTI assessmentItem containing 3 Portable Custom Interaction instances\
+Figure 2: A QTI assessmentItem containing 3 Portable Custom Interaction instances<br/>
 ![](http://forge.taotesting.com/attachments/download/3449/sampleRendering.png)
 
 Interaction Rendering
@@ -76,7 +76,7 @@ Before going further, let’s first redefine in depth the role and responsibilit
 
 The new sequence diagram below clearly depicts the responsibilities of each component. It also reflects the content of this proposal and the current experimental implementation in the TAO Platform.<br/>
 
-Figure 4. Interaction Rendering Sequence Diagram\
+Figure 4. Interaction Rendering Sequence Diagram<br/>
 ![](http://forge.taotesting.com/attachments/download/3451/pciSequence.png)
 
 The next three sections will go into the implementation details of the communication bridge, a sample PCI hook and the rendering engine.
@@ -383,7 +383,7 @@ We therefore recommend having the following methods and attributes in the Commun
 
 Implementers will do all necessary clean-up to performed when the Rendering Engine decides to destruct an initialized Custom Interaction Hook Instance.
 
-id\
+id<br/>
 Implementers of Custom Interaction Hooks will make the id attribute public to make the Rendering Engine able to identify Custom Interaction Hook Instance.<br/>
 
 The modifications in this section provide a nice and clean programmatic interface to implement the Communication Bridge and:<br/>
@@ -611,35 +611,35 @@ Because it is now possible to express the NULL value within this proposal, the J
 
 ### QTI Base Types to JSON Representation
 
-Table A.1. QTI Base Types to JSON Representation\
-QTI Base Type\
- JSON Representation\
- NULL\
- { [base]() null }\
- Boolean\
- { [base]() { [boolean]() true } }\
- Integer\
- { [base]() { [integer]() 123 } }\
- Float\
- { [base]() { [float]() 23.23 } }\
- String\
- { [base]() { [string]() “string” } }\
- Point\
- { [base]() { [point]() [10, 20] } }\
- Pair\
- { [base]() { [pair]() [“A”, “B”] } }\
- Directed Pair\
- { [base]() { [directedPair]() [“a”, “b”] } }\
- Duration\
- { [base]() { [duration]() “P10Y3M20DT4H30M25S” } }\
- File\
- { [base]() { [file]() { [data]() “cGxlYXN1cmUu”, [mime]()\
- “text/plain”, [name]() “hello­world.txt” } } }\
- URI\
- { [base]() { [uri]() “http://www.imsglobal.org” } }\
- IntOrIdentifier\
- { [base]() { [intOrIdentifier]() “\_identifier” } }\
- Identifier\
+Table A.1. QTI Base Types to JSON Representation<br/>
+QTI Base Type<br/>
+ JSON Representation<br/>
+ NULL<br/>
+ { [base]() null }<br/>
+ Boolean<br/>
+ { [base]() { [boolean]() true } }<br/>
+ Integer<br/>
+ { [base]() { [integer]() 123 } }<br/>
+ Float<br/>
+ { [base]() { [float]() 23.23 } }<br/>
+ String<br/>
+ { [base]() { [string]() “string” } }<br/>
+ Point<br/>
+ { [base]() { [point]() [10, 20] } }<br/>
+ Pair<br/>
+ { [base]() { [pair]() [“A”, “B”] } }<br/>
+ Directed Pair<br/>
+ { [base]() { [directedPair]() [“a”, “b”] } }<br/>
+ Duration<br/>
+ { [base]() { [duration]() “P10Y3M20DT4H30M25S” } }<br/>
+ File<br/>
+ { [base]() { [file]() { [data]() “cGxlYXN1cmUu”, [mime]()<br/>
+ “text/plain”, [name]() “hello­world.txt” } } }<br/>
+ URI<br/>
+ { [base]() { [uri]() “http://www.imsglobal.org” } }<br/>
+ IntOrIdentifier<br/>
+ { [base]() { [intOrIdentifier]() “\_identifier” } }<br/>
+ Identifier<br/>
  { [base]() { [identifier]() “\_identifier” } }
 
 The modifications applied on table A.1 are the following:<br/>
@@ -652,73 +652,73 @@ The modifications applied on table A.1 are the following:<br/>
 
 ### QTI Multiple/Ordered Cardinality to JSON Representation
 
-Table A.2 QTI Multiple/Ordered Cardinality to JSON Representation\
-QTI Base Type\
- JSON Representation\
- Boolean\
- {[list]() { [boolean]() [true, false,true, true]}}\
- Integer\
- { [list]() { [integer]() [2, 3, 5, 7, 11, 13] } }\
- Float\
- { [list]() { [float]() [3.1415926, 12.34, 98.76] } }\
- String\
- { [list]() { [string]() [“Another”, “And Another”] } }\
- Point\
- { [list]() { [point]() [[123, 456], [640, 480]] } }\
- Pair\
- { [list]() { [pair]() [[“A”, “B”], [“D”, “C”]] } }\
- Directed Pair\
- { [list]() { [directedPair]() [[“A”, “B”], [“C”, “D”]] } }\
- Duration\
- { [list]() { [duration]() [“P10Y3M20DT4H30M25S”] } }\
- File\
- { [list]() { [file]() [{[data]() “cGx1YXN1cmUu”, [mime]() “text/plain” }] } }\
- URI\
- { [list]() { [uri]() [“http://www.imsglobal.org”, “http://www.w3.org”] } }\
- IntOrIdentifier\
- { [list]() { [intOrIdentifier]() [2, “\_id”] } }\
- Identifier\
+Table A.2 QTI Multiple/Ordered Cardinality to JSON Representation<br/>
+QTI Base Type<br/>
+ JSON Representation<br/>
+ Boolean<br/>
+ {[list]() { [boolean]() [true, false,true, true]}}<br/>
+ Integer<br/>
+ { [list]() { [integer]() [2, 3, 5, 7, 11, 13] } }<br/>
+ Float<br/>
+ { [list]() { [float]() [3.1415926, 12.34, 98.76] } }<br/>
+ String<br/>
+ { [list]() { [string]() [“Another”, “And Another”] } }<br/>
+ Point<br/>
+ { [list]() { [point]() [[123, 456], [640, 480]] } }<br/>
+ Pair<br/>
+ { [list]() { [pair]() [[“A”, “B”], [“D”, “C”]] } }<br/>
+ Directed Pair<br/>
+ { [list]() { [directedPair]() [[“A”, “B”], [“C”, “D”]] } }<br/>
+ Duration<br/>
+ { [list]() { [duration]() [“P10Y3M20DT4H30M25S”] } }<br/>
+ File<br/>
+ { [list]() { [file]() [{[data]() “cGx1YXN1cmUu”, [mime]() “text/plain” }] } }<br/>
+ URI<br/>
+ { [list]() { [uri]() [“http://www.imsglobal.org”, “http://www.w3.org”] } }<br/>
+ IntOrIdentifier<br/>
+ { [list]() { [intOrIdentifier]() [2, “\_id”] } }<br/>
+ Identifier<br/>
  { [list]() { [identifier]() [“\_id1”, “id2”, “ID3”] } }
 
 The modifications applied on table A.2 is that the Duration example is modified to match the regular expression of the JSON Schema.
 
 ### QTI Record Cardinality to JSON Representation
 
-Table A.3. QTI Record Cardinality to JSON Representation\
-QTI Base Type\
- JSON Representation\
- Record\
- {\
- [record]() [\
- {\
+Table A.3. QTI Record Cardinality to JSON Representation<br/>
+QTI Base Type<br/>
+ JSON Representation<br/>
+ Record<br/>
+ {<br/>
+ [record]() [<br/>
+ {<br/>
  [name]() “rock”,<br/>
 
- [base]() {\
- [boolean]() true\
- }\
+ [base]() {<br/>
+ [boolean]() true<br/>
+ }<br/>
  },<br/>
 
- {\
+ {<br/>
  [name]() “paper”,<br/>
 
- [list]() {\
- [string]() [“p”,“a”,“p”,“e”,“r”]\
- }\
+ [list]() {<br/>
+ [string]() [“p”,“a”,“p”,“e”,“r”]<br/>
+ }<br/>
  },<br/>
 
- {\
+ {<br/>
  [name]() “scissors”,<br/>
 
- [list]() {\
- [integer]() [1, 2, 3, 4]\
- }\
+ [list]() {<br/>
+ [integer]() [1, 2, 3, 4]<br/>
+ }<br/>
  },<br/>
 
- {\
- [name]() “empty”\
- [base]() null\
- }\
- ]\
+ {<br/>
+ [name]() “empty”<br/>
+ [base]() null<br/>
+ }<br/>
+ ]<br/>
 }
 
 The only modification done is that The record entry named “empty” now a NULL “base” instead of being omitted.

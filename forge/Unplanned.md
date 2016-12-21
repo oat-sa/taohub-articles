@@ -19,7 +19,7 @@ OrientDB, MongoDB
 TAO X.X (Unplanned) OATBox
 --------------------------
 
-Refactor the file system\
+Refactor the file system<br/>
 Split tao, generis and core framework
 
 TAO X.X (Unplanned) Ubiquitous deployment
@@ -27,7 +27,7 @@ TAO X.X (Unplanned) Ubiquitous deployment
 
 ### 1. (Unplanned) Cloud deployment (SaaS capabilities)
 
-Avoid the burden of maintaining costly and rapidly outdated IT infrastructure and systems, enable rapid and on-demand capacity scaling for large-scale or high throughput assessment\
+Avoid the burden of maintaining costly and rapidly outdated IT infrastructure and systems, enable rapid and on-demand capacity scaling for large-scale or high throughput assessment<br/>
 Pay what you use. (resources usage as peaks)
 
 -   Experiment TAO using Amazon virtual instances : Standard, Cluster High I/O
@@ -39,15 +39,15 @@ Pay what you use. (resources usage as peaks)
 
 Deliver assessment within :<br/>
 
-- Locked down environment\
-- Virtual machine\
-- Usb Key : for both online (locked environment) and offline tests (then embedding servers). (candidate for 4.1)\
+- Locked down environment<br/>
+- Virtual machine<br/>
+- Usb Key : for both online (locked environment) and offline tests (then embedding servers). (candidate for 4.1)<br/>
 - LiveCd (control the operating system)
 
 TAO X.X (Unplanned) Security
 ----------------------------
 
-New security and identity management features such as: proctoring, secured thin web client, content and communication encryption, cheating detection tools, item exposure control, etc…\
+New security and identity management features such as: proctoring, secured thin web client, content and communication encryption, cheating detection tools, item exposure control, etc…<br/>
 Address High stakes and/or Summative assessment. Protect your Item Bank.
 
 ### 1. Man in the middle
@@ -77,6 +77,6 @@ Prevent third party entity to access data from network : Encrypt all communicati
 
 ### 8. Item Exposure
 
-Business intelligence and archiving modules\
+Business intelligence and archiving modules<br/>
 Easily store and analyse loads of longitudinal data with evolving schemas
 

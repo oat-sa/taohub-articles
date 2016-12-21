@@ -31,7 +31,7 @@ The **taoApi** provides the following services:
 
 \* Set and get pre-defined variables. These variables are then used in the TAO platform, like the `setScore` , `getSubjectLogin` or `setAnsweredValues` functions.<br/>
 
- \* Set and get your variables using the `set/getUserVar` function\
+ \* Set and get your variables using the `set/getUserVar` function<br/>
  \* Communicate with a server-side platform. You can retrieve data from a server-side platform and push the collected data. By default, the API is connected to TAO, using authentication by token.<br/>
 
  \* Trace the events. Each action made by the user (clicks, mouse move, entered text, etc.) can be logged by the API and sent to the server-side platform.<br/>

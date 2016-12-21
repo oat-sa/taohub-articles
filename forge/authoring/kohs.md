@@ -12,7 +12,7 @@ tags:
 Kohs
 ====
 
-![](../resources/kohs-authoring.png)\
+![](../resources/kohs-authoring.png)<br/>
 The Kohs editor is displayed when a Kohs item is selected in the Items library box and when you click on the Authoring button in the Edit item box or on the Authoring tab.
 
 The authoring of a Kohs-test offers a square with nine fields (left side) and six cubes with different designs (right side).

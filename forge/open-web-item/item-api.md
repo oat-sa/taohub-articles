@@ -14,7 +14,7 @@ tags:
 Item API
 ========
 
-**This API is available since *TAO 2.5*. Previous versions are still supported but deprecated.**\
+**This API is available since *TAO 2.5*. Previous versions are still supported but deprecated.**<br/>
 **This API is intended to evolve in a further release.**
 
 Getting Started

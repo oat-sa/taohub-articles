@@ -16,8 +16,8 @@ Delivery
 
 ------------------------------------------------------------------------
 
-### 1. [[Create and author a delivery|Create and Author a delivery]]\
-2. [[Compile a delivery]]\
+### 1. [[Create and author a delivery|Create and Author a delivery]]<br/>
+2. [[Compile a delivery]]<br/>
 3. [[Delivery server|Execute a delivery]]
 
 ------------------------------------------------------------------------
