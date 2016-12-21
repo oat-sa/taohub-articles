@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Joel Bout'
+created_at: '2012-06-15 10:15:20'
+updated_at: '2012-06-15 10:15:20'
+-->
 
 Functionality access control 2.3
 ================================

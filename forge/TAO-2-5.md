@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Jérôme Bogaerts'
+created_at: '2013-05-21 09:18:55'
+updated_at: '2014-01-14 16:26:14'
+-->
 
 TAO 2.5 - Education related Tools Ecosystem interoperability & Standards - Mobile Devices (Fall 2013)
 -----------------------------------------------------------------------------------------------------
@@ -10,7 +13,7 @@ TAO 2.5 - Education related Tools Ecosystem interoperability & Standards - Mobil
 Features
 --------
 
-### 1. [QTI](resources/http://www.imsglobal.org/question/) 2.1 compliance. Improve the current QTI compliance of TAO by enabling the importation of test definitions.
+###1. [QTI](http://www.imsglobal.org/question/) 2.1 compliance. Improve the current QTI compliance of TAO by enabling the importation of test definitions.{#1-qtihttpwwwimsglobalorgquestion-21-compliance-improve-the-current-qti-compliance-of-tao-by-enabling-the-importation-of-test-definitions}
 
 {{collapse(Details…)
 
@@ -68,7 +71,7 @@ QTI test package validation, import and export;||
 The authoring tool of test will be reviewed to build compliant QTI 2.1 test descriptions\
 }}
 
-### 2. [Learning Platform Interoperability - LTI](resources/http://www.imsglobal.org/toolsinteroperability2.cfm)
+###2. [Learning Platform Interoperability - LTI](http://www.imsglobal.org/toolsinteroperability2.cfm){#2-learning-platform-interoperability-ltihttpwwwimsglobalorgtoolsinteroperability2cfm}
 
 {{collapse(Details…)
 
@@ -92,13 +95,13 @@ Documentation of TAO will be updated from an administrative perspective (configu
 
 }}
 
-### 3. Moodle/Sakaï integration
+###3. Moodle/Sakaï integration{#3-moodlesakai-integration}
 
 {{collapse(Details…)\
 As a consequence on our work on LTI, TAO tests will be embeddable within Moodle and Sakaï courses. The required student/learner information for identification will be exchanged automatically.\
 }}
 
-### 4. Software engineering process review
+###4. Software engineering process review{#4-software-engineering-process-review}
 
 {{collapse(Details…)
 
@@ -106,7 +109,7 @@ Objective anticipated within TAO 2.4
 
 The purpose of this working area is to improve access to extenral contributions into the tao code base. One of the barrier to entry being our SE process including formal code generation from argoUML.
 
-#### Generate the models from the source code instead of the other way round while keeping the consistency.
+####Generate the models from the source code instead of the other way round while keeping the consistency.{#generate-the-models-from-the-source-code-instead-of-the-other-way-round-while-keeping-the-consistency}
 
 So far, we were generating the source code from our architecture models.
 
@@ -132,16 +135,16 @@ Advantages :\
 Criticisms :\
 - This implies more strong check rules on code Architecturing as the coding could not start from conceptual models. Integration process will have to be updated.
 
-#### ArgoUML replacement
+####ArgoUML replacement{#argouml-replacement}
 
 As a consequence of the Software engineering review process, a survey of CASE tool will be conducted but it will be up tot he community tto choose their own solution according tot he new process
 
-#### Integration process
+####Integration process{#integration-process}
 
 From the point of view of the process and ongoing developments over time, the core team will work similarly to the way we work for external contributions, any new development candidate for integration into the tao core will go through the Quality Manager (QM) who is Lionel Lecaque. The QM checks the contribution conformance with coding guidelines, architecture consistency, manifest in the case of extensions, documentation (wiki), checks the coverage of unit tests and run all unit tests to see any side effects of the contribution on the core. The QM, then drives the required issues fixing with the support of the dev team or the external contributor. If the contribution doesn’t match the architecture consistency or if the tool used to document the architecture of the contribution is different, the LA will decide if we will rework the architecture and the source code of the contribution on our own.\
 }}
 
-### 5. Assessment delivery on mobile devices
+###5. Assessment delivery on mobile devices{#5-assessment-delivery-on-mobile-devices}
 
 {{collapse(Details…)\
 Address today’s test takers technological environments and nomadic access\
@@ -156,16 +159,17 @@ The TAO platform will remain delivered on mobile devices through the web browser
 
 }}
 
-### 6. (Unplanned) [APIP](resources/http://www.imsglobal.org/apip/APIP_PublicDraftv1_20110404.zip) holds potential to improve the validity of test-based inferences for students with disabilities and is best accomplished by applying principles of Universal Design t hroughout the assessment development process.
+###6. (Unplanned) [APIP](http://www.imsglobal.org/apip/APIP_PublicDraftv1_20110404.zip) holds potential to improve the validity of test-based inferences for students with disabilities and is best accomplished by applying principles of Universal Design t hroughout the assessment development process.{#6-unplanned-apiphttpwwwimsglobalorgapipapip-publicdraftv1-20110404zip-holds-potential-to-improve-the-validity-of-test-based-inferences-for-students-with-disabilities-and-is-best-accomplished-by-applying-principles-of-universal-design-t-hroughout-the-assessment-development-process}
 
-### 7. (Unplanned) “SIF”
+##7. (Unplanned) “SIF”{#7-unplanned-sif}
 
-### 8. (Unplanned) SCORM/ Elearning platforms\
+##8. (Unplanned) SCORM/ Elearning platforms\{#8-unplanned-scorm-elearning-platforms}
+
 Manage test and items from tao as Scorm compliant elearning objects.
 
-### 9. (Unplanned) Provide connectors to legacy systems. Ex. : The tests takers database would reflect what is available from enterprise/school/system databases.
+###9. (Unplanned) Provide connectors to legacy systems. Ex. : The tests takers database would reflect what is available from enterprise/school/system databases.{#9-unplanned-provide-connectors-to-legacy-systems-ex-the-tests-takers-database-would-reflect-what-is-available-from-enterpriseschoolsystem-databases}
 
-### 10. (Unplanned) Align TAO with SC36 working item draft. To be determined along draft progress.
+##10. (Unplanned) Align TAO with SC36 working item draft. To be determined along draft progress.{#10-unplanned-align-tao-with-sc36-working-item-draft-to-be-determined-along-draft-progress}
 
 Migration
 ---------

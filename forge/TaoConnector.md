@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Joel Bout'
+created_at: '2013-01-31 10:59:26'
+updated_at: '2013-01-31 10:59:26'
+-->
 
 TaoConnector
 ============
@@ -12,7 +15,7 @@ Basic usage
 
 This should cover most use cases and consists of the following classes
 
-### taoUserService
+###taoUserService{#taouserservice}
 
 used to:
 
@@ -34,7 +37,7 @@ functions:
     -   **setLanguage**(languageCode) 2 letter uppercase code (‘EN’, ‘FR’, …)
     -   **changePassword**(oldPassword, newPassword)
 
-### taoAdminService
+###taoAdminService{#taoadminservice}
 
 taoAdminService extends taoUserService by functionalities that might not be available to every user
 
@@ -45,7 +48,7 @@ taoAdminService extends taoUserService by functionalities that might not be avai
     -   **getUserRoles**(userUri) returns a list of the roles of a specific user
     -   **getRoleUsers**(roleUri) returns a list of the users that have the specified role
 
-### taoSessionRequiredException
+###taoSessionRequiredException{#taosessionrequiredexception}
 
 taoSessionRequiredException is thrown whenever a functions is accessed that requires authentication without\
 providing a valid login first.

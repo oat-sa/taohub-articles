@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Joel Bout'
+created_at: '2012-05-25 15:42:03'
+updated_at: '2012-06-15 10:12:36'
+-->
 
 Functionality access control
 ============================
@@ -32,7 +35,7 @@ Once installed, it’s start in tao/include/class.AccessControlFC.php called by 
 
 The control is made by the helper tao/helpers/funcacl/class.funcACL.php :: hasAccess method. It retrieves the roles of the current user and add, even if not logged in, a base access controle role (CLASS\_ROLE\_BASEACCESS) giving the access for logging and basic access like that. This is valid for all 3 kind of loggin
 
-![](resources/http://forge.taotesting.com/attachments/1669/taofuncacl.png)
+![](http://forge.taotesting.com/attachments/1669/taofuncacl.png)
 
 Optimisation
 ------------
@@ -44,7 +47,7 @@ Managing
 
 An interface exist to give access for entire module or specific action in the user management. It’s more for developper than user by the way it shows methods and classes (actions/modules).
 
-![](resources/http://forge.taotesting.com/attachments/1680/manager_roles_rights.png)
+![](http://forge.taotesting.com/attachments/1680/manager_roles_rights.png)
 
 It’s hidded ! To activate it, in the structures.xml of tao add this line
 
@@ -53,5 +56,5 @@ The interface show the roles, select one to display modules by extension, showin
 
 Edit a user to attach role.
 
-![](resources/http://forge.taotesting.com/attachments/1681/edit_user_roles.png)
+![](http://forge.taotesting.com/attachments/1681/edit_user_roles.png)
 

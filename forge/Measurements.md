@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Joel Bout'
+created_at: '2012-06-15 10:40:44'
+updated_at: '2012-06-15 14:30:47'
+-->
 
 Measurements
 ============
@@ -12,20 +15,20 @@ Measurements allow us to describe the variables that will be created during the 
 Generation
 ----------
 
-### QTI Items
+###QTI Items{#qti-items}
 
 Using the outpoutVariables declaration we generate the measurements automatically.
 
-### Open Wep Items (todo)
+###Open Wep Items (todo){#open-wep-items-todo}
 
 Informations concerning the measurements cannot yet be provided, but could be gathered in a manifest at a later stage.
 
-### Visualisation/Authoring (todo)
+###Visualisation/Authoring (todo){#visualisationauthoring-todo}
 
 not yet available
 
 Data model
 ----------
 
-![](resources/http://forge.taotesting.com/attachments/1710/taoItemMeasurements.png)
+![](http://forge.taotesting.com/attachments/1710/taoItemMeasurements.png)
 

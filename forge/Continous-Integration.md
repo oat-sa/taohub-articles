@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Lionel Lecaque'
+created_at: '2014-09-25 12:39:35'
+updated_at: '2014-09-26 00:42:35'
+-->
 
 TAO Contuinous Integration
 ==========================
@@ -18,11 +21,11 @@ Build the package
 Quality checks
 --------------
 
--   Generate dependency report with other software metrics using [PHP\_Depend](resources/http://pdepend.org)
--   Look for several potential problems within the source [PHP Mess Detector](resources/http://phpmd.org)
--   Find duplicate code using [PHPCPD](resources/https://github.com/sebastianbergmann/phpcpd)
--   Measuring the size and analyzing the structure of the project using [PHPLOC](resources/https://github.com/sebastianbergmann/phploc)
--   Tokenises PHP, JavaScript and CSS files and detects violations of a defined set of coding standards using [PHP\_CodeSniffer](resources/http://github.com/squizlabs/PHP_CodeSniffer). Ruleset considered are defined in conf/phpcs.xml
+-   Generate dependency report with other software metrics using [PHP\_Depend](http://pdepend.org)
+-   Look for several potential problems within the source [PHP Mess Detector](http://phpmd.org)
+-   Find duplicate code using [PHPCPD](https://github.com/sebastianbergmann/phpcpd)
+-   Measuring the size and analyzing the structure of the project using [PHPLOC](https://github.com/sebastianbergmann/phploc)
+-   Tokenises PHP, JavaScript and CSS files and detects violations of a defined set of coding standards using [PHP\_CodeSniffer](http://github.com/squizlabs/PHP_CodeSniffer). Ruleset considered are defined in conf/phpcs.xml
 
 Unit Test
 ---------
@@ -122,16 +125,16 @@ Reports
 
 Here some example of reports generated
 
--   [Main Page](resources/http://docs.taotesting.com/reports/main.pdf)
--   [PHPLOC](resources/http://docs.taotesting.com/reports/phploc.pdf)
--   [PHP\_Depend](resources/http://docs.taotesting.com/reports/jdepend.pdf)
--   [phpunit](resources/http://docs.taotesting.com/reports/build-tao%20%2352%20Test%20Results%20%5BJenkins%5D.pdf)
--   [coverage](resources/http://docs.taotesting.com/coverage/)
+-   [Main Page](http://docs.taotesting.com/reports/main.pdf)
+-   [PHPLOC](http://docs.taotesting.com/reports/phploc.pdf)
+-   [PHP\_Depend](http://docs.taotesting.com/reports/jdepend.pdf)
+-   [phpunit](http://docs.taotesting.com/reports/build-tao%20%2352%20Test%20Results%20%5BJenkins%5D.pdf)
+-   [coverage](http://docs.taotesting.com/coverage/)
 
 Additional builds
 -----------------
 
-### Build Tag
+###Build Tag{#build-tag}
 
 In order to create the stable release version we also have gather different utilities in\
 https://github.com/oat-sa/package-build-tag
@@ -142,7 +145,7 @@ https://github.com/oat-sa/package-build-tag
 -   Create tag for all extensions that will be part of the release
 -   Re create new develop branch in each extension to start a new cycle
 
-### Build JS
+###Build JS{#build-js}
 
 This build available at https://github.com/oat-sa/package-build-js gather script to compile client side resources
 
@@ -151,7 +154,7 @@ This build available at https://github.com/oat-sa/package-build-js gather script
 -   Run compilation of all JS file like explain in [[build]]
 -   Commit and push change into each extension repository
 
-### Build Repository package
+###Build Repository package{#build-repository-package}
 
-All extensions are registered on [Packagist](resources/https://packagist.org). We also have composer backup repository of our packages built every night and available at http://packages.taocloud.org/. Build and configuration to build this backup are available https://github.com/oat-sa/repositories-packages and https://github.com/oat-sa/repositories-packages-utils
+All extensions are registered on [Packagist](https://packagist.org). We also have composer backup repository of our packages built every night and available at http://packages.taocloud.org/. Build and configuration to build this backup are available https://github.com/oat-sa/repositories-packages and https://github.com/oat-sa/repositories-packages-utils
 

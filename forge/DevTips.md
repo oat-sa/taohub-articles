@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Christophe Noel'
+created_at: '2016-03-30 14:39:43'
+updated_at: '2016-07-20 10:37:38'
+-->
 
 Development tips
 ================
@@ -37,9 +40,3 @@ Redirect tao output to the console
 - launch the UDP listener
 
     php /tao/taoDevTools/scripts/UDPListener.php
-
-Jérôme je t’aiiiiime
-====================
-
-(signé: une admiratrice anonyme)
-

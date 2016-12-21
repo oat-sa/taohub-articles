@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Jérôme Bogaerts'
+created_at: '2013-05-31 09:53:44'
+updated_at: '2013-05-31 12:11:48'
+-->
 
 RDF by example
 ==============
@@ -27,37 +30,65 @@ So to represent the information we know about “Abraham Antler” we would stor
 
   Subject                       Predicate                           Object
   ----------------------------- ----------------------------------- -------------------------------
-  http://www.example.org/\#p1   http://www.example.org/\#name       Abraham Antler
-  http://www.example.org/\#p1   http://www.example.org/\#birthday   1.1.1980
-  http://www.example.org/\#p1   http://www.example.org/\#class      http://www.example.org/\#c101
+  http://www.example.org/\#p1   http://www.example.org/\{#p1-httpwwwexampleorg}
+
+name       Abraham Antler
+  http://www.example.org/\#p1   http://www.example.org/\{#p1-httpwwwexampleorg}
+
+birthday   1.1.1980
+  http://www.example.org/\#p1   http://www.example.org/\{#p1-httpwwwexampleorg}
+
+class      http://www.example.org/\#c101{#c101}
 
 Plus one information which was implicit in our traditional database, the information that he is a pupil:
 
   Subject                       Predicate                                          Object
   ----------------------------- -------------------------------------------------- --------------------------------
-  http://www.example.org/\#p1   http://www.w3.org/1999/02/22-rdf-syntax-ns\#type   http://www.example.org/\#pupil
+  http://www.example.org/\#p1   http://www.w3.org/1999/02/22-rdf-syntax-ns\{#p1-httpwwww3org19990222-rdf-syntax-ns}
+
+type   http://www.example.org/\#pupil{#pupil}
 
 A single line, in this model would be called a ‘statement’
 
-### Namespace prefix
+###Namespace prefix{#namespace-prefix}
 
 So if we took all the informations in our traditional table we would receive:
 
   Subject                       Predicate                                          Object
   ----------------------------- -------------------------------------------------- --------------------------------
-  http://www.example.org/\#p1   http://www.example.org/\#name                      Abraham Antler
-  http://www.example.org/\#p1   http://www.example.org/\#birthday                  1.1.1980
-  http://www.example.org/\#p1   http://www.example.org/\#class                     http://www.example.org/\#c101
-  http://www.example.org/\#p1   http://www.w3.org/1999/02/22-rdf-syntax-ns\#type   http://www.example.org/\#pupil
-  http://www.example.org/\#p2   http://www.example.org/\#name                      Bart Bond
-  http://www.example.org/\#p2   http://www.example.org/\#birthday                  2.2.1981
-  http://www.example.org/\#p2   http://www.example.org/\#class                     http://www.example.org/\#c102
-  http://www.example.org/\#p2   http://www.w3.org/1999/02/22-rdf-syntax-ns\#type   http://www.example.org/\#pupil
+  http://www.example.org/\#p1   http://www.example.org/\{#p1-httpwwwexampleorg}
+
+name                      Abraham Antler
+  http://www.example.org/\#p1   http://www.example.org/\{#p1-httpwwwexampleorg}
+
+birthday                  1.1.1980
+  http://www.example.org/\#p1   http://www.example.org/\{#p1-httpwwwexampleorg}
+
+class                     http://www.example.org/\#c101{#c101}
+
+  http://www.example.org/\#p1   http://www.w3.org/1999/02/22-rdf-syntax-ns\{#p1-httpwwww3org19990222-rdf-syntax-ns}
+
+type   http://www.example.org/\#pupil{#pupil}
+
+  http://www.example.org/\#p2   http://www.example.org/\{#p2-httpwwwexampleorg}
+
+name                      Bart Bond
+  http://www.example.org/\#p2   http://www.example.org/\{#p2-httpwwwexampleorg}
+
+birthday                  2.2.1981
+  http://www.example.org/\#p2   http://www.example.org/\{#p2-httpwwwexampleorg}
+
+class                     http://www.example.org/\#c102{#c102}
+
+  http://www.example.org/\#p2   http://www.w3.org/1999/02/22-rdf-syntax-ns\{#p2-httpwwww3org19990222-rdf-syntax-ns}
+
+type   http://www.example.org/\#pupil{#pupil}
 
 In order to make this a litle easier to read we can substituate the namesspaces with a prefix
 
--   xmlns:ex=“http://www.example.org/\#”
--   xmlns:rdf=“http://www.w3.org/1999/02/22-rdf-syntax-ns\#type”
+-   xmlns:ex=“http://www.example.org/\#”{#}
+
+-   xmlns:rdf=“http://www.w3.org/1999/02/22-rdf-syntax-ns\#type”{#type}
 
 which allows us to represent the list as following
 

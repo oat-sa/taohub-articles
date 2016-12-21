@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Lionel Lecaque'
+created_at: '2014-11-26 11:39:25'
+updated_at: '2014-11-26 11:40:16'
+-->
 
 Installation solr centos
 ========================

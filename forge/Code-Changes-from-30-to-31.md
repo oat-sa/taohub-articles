@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Joel Bout'
+created_at: '2015-12-09 15:54:05'
+updated_at: '2015-12-15 17:42:13'
+-->
 
 {{\>toc}}
 
@@ -15,18 +18,18 @@ taoDelivery has been split into two extensions:
 -   **taoDelivery** for the test-taker experience
 -   **taoDeliveryRdf** for the delivery management
 
-### Controllers
+###Controllers{#controllers}
 
 The old taoDelivery controllers *taoDelivery\_actions*\*\_ have been moved from taoDelivery/action to controller of their respective extension:
 
 -   *taoDelivery\_actions\_DeliveryServer* to *oat\\taoDelivery\\controller\\DeliveryServer*
 -   all others to *oat\\taoDeliveryRdf\\controller\\\**
 
-### Delivery execution state identifiers
+###Delivery execution state identifiers{#delivery-execution-state-identifiers}
 
 These states were in the past stored as either global constants or using *oat\\taoFrontOffice\\model\\interfaces\\DeliveryExecution*, but will in the future be part of the **oat\\taoDelivery\\model\\execution\\DeliveryExecution** interface.
 
-### Services
+###Services{#services}
 
 Almost all services (with the exception of *taoDelivery\_models\_classes\_DeliveryServerService* and *taoDelivery\_models\_classes\_execution*\*\_) were part of the delivery management and have therefore been moved to taoDeliveryRdf:
 
@@ -44,7 +47,7 @@ Almost all services (with the exception of *taoDelivery\_models\_classes\_Delive
 
 -   *taoDelivery\_models\_classes\_DeliveryRdf* has been deprecated in favor of *oat\\taoDelivery\\model\\Assignment* that represents the link between the test-taker and the delivery
 
-### Assets
+###Assets{#assets}
 
 Templates and JavaScripts have been split between the two extensions according to split of the controllers.
 

@@ -1,6 +1,9 @@
----
-tags: Forge
----
+<!--
+author:
+    - 'Patrick Plichart'
+created_at: '2014-03-18 11:15:39'
+updated_at: '2014-08-19 14:34:37'
+-->
 
 TAO 3.0
 =======
@@ -8,18 +11,18 @@ TAO 3.0
 Features
 --------
 
-### Portable Custom Interaction (PCI)
+###Portable Custom Interaction (PCI){#portable-custom-interaction-pci}
 
 "The QTI™ (Question and Test Interoperability™) and APIP™ (Accessible Portable Item Protocol™) workgroups have defined a standard way for technology enhanced items (TEIs) or Custom Interaction types to be represented as part of the QTI specification.
 
 This best practice document outlines a method that allows an author to define an almost unlimited variety of custom interaction types, while still keeping the item portable between different systems. This is achieved by making use of common web technologies combined with an agreement about how to communicate the results of a learner’s interaction to a QTI/APIP rendering engine. By following the best practice documented here, most TEIs and assessment components can increase their value by supporting interoperability."\
 src: http://www.imsglobal.org/assessment/interactions.html
 
-### General User Interface Review
+###General User Interface Review{#general-user-interface-review}
 
 TAO 2.6 exposed a brand new WYSIWYG editor with a modern flat design. TAO 3.0 enforces this new shift with the overall user interfaces being revisited for more consistency and according to this flat design and color schemes.
 
-### Data Rights Access Management
+###Data Rights Access Management{#data-rights-access-management}
 
 {{collapse(Details …)\
 Computer based assessment project involve several stakeholders, the resources, items, tests are designed and authored sometimes collaboratively. In addition to the authentication system, a fine grained control access should be added so that resources or informations access (read, write, delete, create) may be set considering specific groups of users or roles.
