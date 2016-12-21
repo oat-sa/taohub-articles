@@ -15,7 +15,7 @@ DEPRECATED
 Hawai item format
 =================
 
-{{\>toc}}
+
 
 **Notice: This page is just a draft. Work on Hawaï standard is still in progress : Important changes may still occurs on it. If you are interested about work on it, please free to contact us in the** [forums](http://forge.taotesting.com/projects/tao/boards)
 

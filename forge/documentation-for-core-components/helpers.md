@@ -12,7 +12,7 @@ tags:
 Helpers
 =======
 
-{{\>toc}}
+
 
 Utilities
 ---------

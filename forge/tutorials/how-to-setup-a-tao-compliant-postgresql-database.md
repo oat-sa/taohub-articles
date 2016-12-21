@@ -9,7 +9,7 @@ tags:
     - Tutorials
 -->
 
-{{\>toc}}
+
 
 How to setup a TAO compliant PostgreSQL database
 ================================================

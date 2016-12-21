@@ -12,7 +12,7 @@ tags:
 InstallUnbuntuApacheMySQLComposer
 =================================
 
-{{\>toc}}
+
 
 Install your LAMP Stack
 -----------------------

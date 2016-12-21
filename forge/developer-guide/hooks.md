@@ -11,7 +11,7 @@ tags:
 
 The following document is work in progress
 
-{{\>toc}}
+
 
 Hooks in Tao 2.6
 ================

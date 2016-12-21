@@ -9,7 +9,7 @@ tags:
     - Tutorials
 -->
 
-{{\>toc}}
+
 
 How to manage your Extensions
 =============================

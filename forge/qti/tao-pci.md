@@ -9,7 +9,7 @@ tags:
     - QTI
 -->
 
-{{\>toc}}
+
 
 ﻿h1. Portable Custom Interaction Best Practice Change Proposal: Changes and Recommendations Based on an Experimental Implementation
 

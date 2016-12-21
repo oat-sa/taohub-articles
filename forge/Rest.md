@@ -8,7 +8,7 @@ updated_at: '2015-10-04 14:10:25'
 Rest Services Layer Tutorial
 ============================
 
-{{\>toc}}
+
 
 related pages.
 --------------

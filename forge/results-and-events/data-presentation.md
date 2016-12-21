@@ -9,7 +9,7 @@ tags:
     - 'Results And Events'
 -->
 
-{{\>toc}}
+
 
 Data Presentation
 =================

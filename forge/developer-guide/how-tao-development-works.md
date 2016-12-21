@@ -9,7 +9,7 @@ tags:
     - 'Developer Guide'
 -->
 
-{{\>toc}}
+
 
 How TAO development works
 =========================

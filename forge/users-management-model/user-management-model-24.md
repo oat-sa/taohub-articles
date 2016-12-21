@@ -12,7 +12,7 @@ tags:
 Users Management Model for TAO versions 2.4 and later
 =====================================================
 
-{{\>toc}}
+
 
 1. Introduction
 ---------------

@@ -9,7 +9,7 @@ tags:
     - 'Developer Guide'
 -->
 
-{{\>toc}}
+
 
 Documentation for TAO core components
 =====================================

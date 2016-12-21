@@ -12,7 +12,7 @@ tags:
 Controllers
 ===========
 
-{{\>toc}}
+
 
 ![](http://forge.taotesting.com/attachments/download/760/attention.png) The information on these page relates to Tao 2.5 or earlier and might not reflect the current version.
 

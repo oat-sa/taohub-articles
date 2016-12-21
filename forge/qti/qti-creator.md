@@ -12,7 +12,7 @@ tags:
 Qti Item Creator
 ================
 
-{{\>toc}}
+
 
 Lexicon
 -------

@@ -12,7 +12,7 @@ tags:
 Overview of TAO parts
 =====================
 
-{{\>toc}}
+
 
 *This section briefly presents the seven parts that constitute TAO.*
 

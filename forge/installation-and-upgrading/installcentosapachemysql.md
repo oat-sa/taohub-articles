@@ -12,7 +12,7 @@ tags:
 TAO on CentOS, Red Hat, Fedora, Amazon Linux with Apache2 & mySQL
 =================================================================
 
-{{\>toc}}
+
 
 This installation guide focuses on installing the TAO platform on CentOS, Red Hat, Amazon Linux using Apache2, PHP & mySQL.
 

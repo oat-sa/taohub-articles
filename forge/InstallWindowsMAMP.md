@@ -8,7 +8,7 @@ updated_at: '2015-10-12 15:10:47'
 TAO on Windows with Apache2 & MySQL using MAMP
 ==============================================
 
-{{\>toc}}
+
 
 This installation guide focuses on installing the TAO platform on a Microsoft Windows environment using Apache2, PHP & MySQL. We will use a ready to use AMP (Apache2 MySQL PHP) stack named MAMP. The tested MAMP version is 3.1.0 (64-bit).
 

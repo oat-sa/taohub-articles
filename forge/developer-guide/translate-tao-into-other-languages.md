@@ -12,7 +12,7 @@ tags:
 Translate TAO into other languages
 ==================================
 
-{{\>toc}}
+
 
 How TAO internalization works
 -----------------------------

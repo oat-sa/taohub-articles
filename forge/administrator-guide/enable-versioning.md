@@ -9,7 +9,7 @@ tags:
     - 'Administrator Guide'
 -->
 
-{{\>toc}}
+
 
 **TODO Content need to be update**<br/>
 New UI has been design to support versionning activation

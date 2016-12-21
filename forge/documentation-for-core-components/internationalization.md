@@ -12,7 +12,7 @@ tags:
 Internationalization (i18n)
 ===========================
 
-{{\>toc}}
+
 
 The TAO application comes up with utilities to translate its Graphical User Interface and Models. The application can be translated in any language that can be written using [Unicode](http://www.unicode.org) (with UTF-8 encoding).
 

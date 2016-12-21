@@ -9,7 +9,7 @@ tags:
     - 'Developer Guide'
 -->
 
-{{\>toc}}
+
 
 Licenses
 ========

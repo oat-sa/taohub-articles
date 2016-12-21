@@ -9,7 +9,7 @@ tags:
     - 'Documentation for core components'
 -->
 
-{{\>toc}}
+
 
 TAO Architecture
 ================

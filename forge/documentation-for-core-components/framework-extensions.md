@@ -12,7 +12,7 @@ tags:
 Extensions
 ==========
 
-{{\>toc}}
+
 
 TAO extensions enable the use of other extensions handling concepts and relations that define the domain. They cover all phases of the assessment process, from authoring, planning and other administration back-office operations, to delivery, result collection and analysis. The incorporation of these concepts in the platform is performed thanks to its modular architecture.<br/>
 

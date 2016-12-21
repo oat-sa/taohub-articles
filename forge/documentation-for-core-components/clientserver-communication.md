@@ -12,7 +12,7 @@ tags:
 Client/Server communication
 ===========================
 
-{{\>toc}}
+
 
 An unified mechanism
 --------------------

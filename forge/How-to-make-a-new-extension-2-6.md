@@ -5,7 +5,7 @@ created_at: '2014-01-08 18:09:49'
 updated_at: '2014-11-05 11:23:34'
 -->
 
-{{\>toc}}
+
 
 Make a new extension
 ====================

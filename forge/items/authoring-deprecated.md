@@ -12,7 +12,7 @@ tags:
 Authoring
 =========
 
-{{\>toc}}
+
 
 Item types before TAO 2.2.
 

@@ -9,7 +9,7 @@ tags:
     - Delivery
 -->
 
-{{\>toc}}
+
 
 Compile a delivery
 ==================

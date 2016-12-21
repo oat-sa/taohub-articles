@@ -12,7 +12,7 @@ tags:
 Performance optimization
 ========================
 
-{{\>toc}}
+
 
 1. Performance issue
 --------------------

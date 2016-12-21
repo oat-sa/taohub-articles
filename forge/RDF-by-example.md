@@ -8,7 +8,7 @@ updated_at: '2013-05-31 12:11:48'
 RDF by example
 ==============
 
-{{\>toc}}
+
 
 Example 1: how to store the **name**, **birthday** and **class** of the pupils of a school.
 -------------------------------------------------------------------------------------------

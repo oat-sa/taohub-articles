@@ -12,7 +12,7 @@ tags:
 TAO on Debian, Ubuntu with Apache2 & mySQL
 ==========================================
 
-{{\>toc}}
+
 
 This installation guide focuses on installing the TAO platform on Ubuntu using Apache2, PHP & mySQL.
 

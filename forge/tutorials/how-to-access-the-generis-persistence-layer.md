@@ -9,7 +9,7 @@ tags:
     - Tutorials
 -->
 
-{{\>toc}}
+
 
 Accessing the generis persistence layer
 =======================================

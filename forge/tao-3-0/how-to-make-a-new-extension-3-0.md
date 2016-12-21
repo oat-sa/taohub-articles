@@ -9,7 +9,7 @@ tags:
     - 'TAO 3 0'
 -->
 
-{{\>toc}}
+
 
 How to make a new extension 3 0
 ===============================

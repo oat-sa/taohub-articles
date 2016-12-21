@@ -12,7 +12,7 @@ tags:
 TAO on Microsoft Windows with Apache2 & mySQL using WampServer
 ==============================================================
 
-{{\>toc}}
+
 
 This installation guide focuses on installing the TAO platform on a Microsoft Windows environment using Apache2, PHP & mySQL. We will use a ready to use AMP (Apache mySQL PHP) stack named WampServer2. It is very simple to install and manage.
 

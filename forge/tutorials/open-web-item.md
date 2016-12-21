@@ -9,7 +9,7 @@ tags:
     - Tutorials
 -->
 
-{{\>toc}}
+
 
 Open WEB Items
 ==============

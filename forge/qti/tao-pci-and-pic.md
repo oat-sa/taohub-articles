@@ -12,7 +12,7 @@ tags:
 TAO PCI and PIC
 ===============
 
-{{\>toc}}
+
 
 ﻿h1. PCI and PIC specifications
 

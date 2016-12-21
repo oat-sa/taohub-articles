@@ -12,7 +12,7 @@ tags:
 Users Management Model for TAO versions prior to 2.4
 ====================================================
 
-{{\>toc}}
+
 
 Back-office
 -----------

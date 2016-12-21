@@ -9,7 +9,7 @@ tags:
     - Items
 -->
 
-{{\>toc}}
+
 
 QTI
 ===

@@ -9,7 +9,7 @@ tags:
     - 'Event Based Scoring'
 -->
 
-{{\>toc}}
+
 
 Event Based Scoring Mechanism
 =============================

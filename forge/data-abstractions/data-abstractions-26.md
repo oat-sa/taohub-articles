@@ -14,7 +14,7 @@ Data abstractions 2.6
 
 This document describes abstractions available for Tao 2.6. Please see [[Data abstractions]] for the current version of Tao.
 
-{{\>toc}}
+
 
 There are currently 5 distinct storages that are used during the delivery:
 

@@ -9,7 +9,7 @@ tags:
     - 'Items'' API'
 -->
 
-{{\>toc}}
+
 
 ![](http://forge.taotesting.com/attachments/download/760/attention.png)**This page is deprecated since TAO 2.5 please visit [[Item API]]**
 

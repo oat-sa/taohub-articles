@@ -14,7 +14,7 @@ Logger Tao 2.2
 
 Valid as of [[TAO\_2\_2|TAO 2.2]] until [[TAO\_2\_6|TAO 2.6]]. Please refer to [[Logger]] for current version.
 
-{{\>toc}}
+
 
 Objectives
 ----------

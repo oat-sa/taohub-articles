@@ -14,7 +14,7 @@ Data abstractions
 
 This document describes abstractions available for TAO 3.0. Please see [[Data abstractions 2.6]] for TAO 2.6.
 
-{{\>toc}}
+
 
 The key-value storage implementation may be installed and configured under the following conditions:
 

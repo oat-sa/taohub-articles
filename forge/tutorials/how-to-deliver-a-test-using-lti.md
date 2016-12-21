@@ -12,7 +12,7 @@ tags:
 How to deliver a test using LTI
 ===============================
 
-{{\>toc}}
+
 
 Preparation
 -----------

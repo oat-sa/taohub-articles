@@ -10,7 +10,7 @@ Functionality access control
 
 This pages describes the implementation of the funcACL in [[TAO\_2\_2|TAO 2.2]]. Changes can be found in [[FuncACL 2.3]].
 
-{{\>toc}}
+
 
 Goal
 ----

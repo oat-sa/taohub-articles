@@ -9,7 +9,7 @@ tags:
     - 'How TAO development works'
 -->
 
-{{\>toc}}
+
 
 How TAO development works
 =========================

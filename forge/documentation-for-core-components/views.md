@@ -12,7 +12,7 @@ tags:
 Views
 =====
 
-{{\>toc}}
+
 
 User Interface: the views
 -------------------------

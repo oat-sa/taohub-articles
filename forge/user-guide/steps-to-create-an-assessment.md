@@ -12,7 +12,7 @@ tags:
 Steps to create an assessment
 =============================
 
-{{\>toc}}
+
 
 To manage the different steps of the computer based assessment processes, you have to:
 
