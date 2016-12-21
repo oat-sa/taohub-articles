@@ -12,7 +12,8 @@ tags:
 Rest Client Libraries Focus Group
 =================================
 
-The goal of this focus group is to coordinate the development of TAO’s consumer libraries for other languages/platforms.\
+The goal of this focus group is to coordinate the development of TAO’s consumer libraries for other languages/platforms.<br/>
+
 These libraries should help others to integrate with TAO, using high level functions calls.
 
 Useful informations

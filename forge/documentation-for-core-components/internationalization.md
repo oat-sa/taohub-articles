@@ -161,7 +161,8 @@ How to update or add translations
     /** if already exists */
     php tao/scripts/taoTranslate.php -v -a=update -e=taoQtiTest -l=fr-FR
 
-This will generate a the following file: \$ext/locales/\$lang/messages.po.\
+This will generate a the following file: \$ext/locales/\$lang/messages.po.<br/>
+
 Fill generated po file with your translation.
 
 ### Compile the file into php and javascript
@@ -172,7 +173,8 @@ Fill generated po file with your translation.
 
     php tao/scripts/taoUpdate.php
 
-/!\\ Use -f to reset actual translations po files
+/!<br/>
+\ Use -f to reset actual translations po files
 
 ![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Internationalization|Return to Top]]
 

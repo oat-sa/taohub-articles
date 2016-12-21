@@ -39,7 +39,8 @@ jsTree\
 \> **URL** : www.jstree.com
 ---------------------------
 
-Do not upgrade ! The newest 1.0 version has no compatibility.\
+Do not upgrade ! The newest 1.0 version has no compatibility.<br/>
+
 Need to rewrite all custom parts.
 
 uploadify\

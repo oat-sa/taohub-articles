@@ -17,13 +17,15 @@ New UI has been design to support versionning activation
 Enable versioning
 =================
 
-By default the versioning feature is not enabled when you install TAO. The versioning require a versioning server which is not installed by default on your computer.\
+By default the versioning feature is not enabled when you install TAO. The versioning require a versioning server which is not installed by default on your computer.<br/>
+
 If you have access to a versioning system, you can follow the next points to enable versioning into TAO.
 
 Local working copy
 ------------------
 
-Firstly you need to be sure that you have a local folder where the http user (www-data for apache) can checkout the remote repository.\
+Firstly you need to be sure that you have a local folder where the http user (www-data for apache) can checkout the remote repository.<br/>
+
 By instance be sure that the folder *generis/data/versioning/* and its subfolders are writable for the http user (www-data for apache).
 
 Update the config file

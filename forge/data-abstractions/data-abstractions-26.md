@@ -21,7 +21,8 @@ There are currently 5 distinct storages that are used during the delivery:
 Result storage abstraction
 --------------------------
 
-The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server.\
+The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server.<br/>
+
 This happens in the back office user interface respectively into the “Result Servers Management” and “Delivery” tabs.
 
 Two major implementation of result Storage exist:
@@ -31,7 +32,8 @@ Two major implementation of result Storage exist:
 
 The KeyValue Result storage implementation may be installed and configured under the following conditions:
 
--   Make sure you have installed the packages :\
+-   Make sure you have installed the packages :<br/>
+
     “redis-server” (on the server you want to use for the storage)\
     “phpredis” on the TAO application server
 
@@ -102,7 +104,8 @@ Additionally the persistence used by the key value service needs to be defined i
 PHP session storage abstraction
 -------------------------------
 
-This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.\
+This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.<br/>
+
 See also: http://php.net/manual/en/function.session-set-save-handler.php
 
 ### System session storage (default)

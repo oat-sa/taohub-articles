@@ -41,7 +41,8 @@ or at
 
 #### HTTP Authentication
 
-You can add an HTTP Authentication to protect your TAO instance.\
+You can add an HTTP Authentication to protect your TAO instance.<br/>
+
 **The following example outlines how to establish a Basic HTTP Authentication to protect all the TAO instances with one account.**
 
 \# Edit the file: `.htaccess` at the root of the TAO folder.
@@ -53,7 +54,8 @@ You can add an HTTP Authentication to protect your TAO instance.\
     AuthUserFile "/var/opt/.htpassword"
     Require valid-user
 
-\# Create the password file using the command listed below. You can create it in the directory you want but consider these 2 security restrictions:\
+\# Create the password file using the command listed below. You can create it in the directory you want but consider these 2 security restrictions:<br/>
+
 • the directoy (here /var/opt) must not be accessible via HTTP\
 • the apache user (usualy www-data) can read it, bot the other cannot
 

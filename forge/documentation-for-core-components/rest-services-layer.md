@@ -56,7 +56,8 @@ Generic headers aliases:
 -   type
 
 Generic headers\
-By default you may refer to any attribute of the target resource type using header with the uri reference :\
+By default you may refer to any attribute of the target resource type using header with the uri reference :<br/>
+
 “http://tao-dev/taodev.rdf\#i1372429454323825” : “35”
 
 Specific header aliases\
@@ -84,8 +85,10 @@ Depending on the type of operation and the type of target resource types, some r
 Returned types and exception handling
 -------------------------------------
 
-Depending on the type of operation and the type of target resource types,\
-a message is always returned using the requested encoding with a status information and a message :\
+Depending on the type of operation and the type of target resource types,<br/>
+
+a message is always returned using the requested encoding with a status information and a message :<br/>
+
 example in XML :
 
 
@@ -129,17 +132,24 @@ You may extend the tao\_actions\_CommonRestModule and override
 
 -   getParametersAliases()\
     example : return array\_merge(parent::getParametersAliases(), array(\
-     “login”=\> PROPERTY\_USER\_LOGIN,\
-     “password” =\> PROPERTY\_USER\_PASSWORD,\
-     “guiLg” =\> PROPERTY\_USER\_UILG,\
-     “dataLg” =\> PROPERTY\_USER\_DEFLG,\
-     “firstName”=\> PROPERTY\_USER\_LASTNAME,\
-     “mail”=\> PROPERTY\_USER\_MAIL,\
+     “login”=\> PROPERTY\_USER\_LOGIN,<br/>
+
+     “password” =\> PROPERTY\_USER\_PASSWORD,<br/>
+
+     “guiLg” =\> PROPERTY\_USER\_UILG,<br/>
+
+     “dataLg” =\> PROPERTY\_USER\_DEFLG,<br/>
+
+     “firstName”=\> PROPERTY\_USER\_LASTNAME,<br/>
+
+     “mail”=\> PROPERTY\_USER\_MAIL,<br/>
+
      “type”=\> RDF\_TYPE\
      ));
 -   getParametersRequirements()
 
-example :\
+example :<br/>
+
 return array(\
  /\*\* you may use either the alias or the uri, if the parameter identifier\
  \* is set it will become mandatory for the operation in \$key\
@@ -147,7 +157,8 @@ return array(\
  \* type by default is not required and the root class type is applied\
  \*/\
  “post”=\> array(“login”, “password”)\
- );\
+ );<br/>
+
 This abstract controller will handle for you
 
 -   the http request and trigger the correct service from your implementation of service set up in\

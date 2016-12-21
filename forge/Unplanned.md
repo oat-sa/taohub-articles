@@ -37,7 +37,8 @@ Pay what you use. (resources usage as peaks)
 
 ### 2. (Unplanned) Control Test Taker environment / legacy infrastructure support
 
-Deliver assessment within :\
+Deliver assessment within :<br/>
+
 - Locked down environment\
 - Virtual machine\
 - Usb Key : for both online (locked environment) and offline tests (then embedding servers). (candidate for 4.1)\

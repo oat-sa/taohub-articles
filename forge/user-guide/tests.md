@@ -21,7 +21,8 @@ The Tests part has two tabs:
 1. [[Manage Tests]]
 -------------------
 
-The Manage tests tab manages the tests list and the properties of these tests.\
+The Manage tests tab manages the tests list and the properties of these tests.<br/>
+
 And, the test creation consists by the items selection and by the choice of their order.
 
 The main functions of this tab are:
@@ -44,7 +45,9 @@ The main functions of this tab are:
 2. Advanced authoring tool
 --------------------------
 
-The [[Tests Advanced authoring tool]] tab is only available if you installed Processes part.\
-This tab permits to create a complex list of items.\
+The [[Tests Advanced authoring tool]] tab is only available if you installed Processes part.<br/>
+
+This tab permits to create a complex list of items.<br/>
+
 Indeed, without the Processes tab, it is only possible to create tests with a sequential list of items.
 

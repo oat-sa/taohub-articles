@@ -17,9 +17,12 @@ QTI
 A standard
 ----------
 
-The QTI standard version 2.0 was first implemented as the main item type in TAO version 1.3.\
-From version 2.5, TAO moves from QTI 2.0 to 2.1.\
-The implemention of the QTI standard enables TAO to be more open and interoperable with other systems.\
+The QTI standard version 2.0 was first implemented as the main item type in TAO version 1.3.<br/>
+
+From version 2.5, TAO moves from QTI 2.0 to 2.1.<br/>
+
+The implemention of the QTI standard enables TAO to be more open and interoperable with other systems.<br/>
+
 The current available QTI features in TAO are:
 
 \* Import QTI Item (XML files compatible with [QTI 2.0](http://www.imsglobal.org/question/qti_v2p0/imsqti_infov2p0.html) or [QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))\
@@ -39,9 +42,12 @@ For additional information regarding the QTI standard, please refer to the IMS C
 PHP Modelling
 -------------
 
-We use a PHP Object oriented model to represent a QTI item and enable you to manage it.\
-This model is the core of the development. The main idea is to import xml documents in the QTI format, in order to parse it and instantiate PHP objects.\
-Then with the PHP object, you can update the item - add an interaction, change the properties, update the response model, etc.\
+We use a PHP Object oriented model to represent a QTI item and enable you to manage it.<br/>
+
+This model is the core of the development. The main idea is to import xml documents in the QTI format, in order to parse it and instantiate PHP objects.<br/>
+
+Then with the PHP object, you can update the item - add an interaction, change the properties, update the response model, etc.<br/>
+
 Once you are finished working on your model, you can save it, render it, etc :
 
 \* QTI XML format to save and export your item\
@@ -63,7 +69,8 @@ You can find the complete source code documentation in the [PHP Doc](http://forg
 
 ### Sample code usage
 
-To create QTI item programatically, you can directly use the QTI model described in the previous section.\
+To create QTI item programatically, you can directly use the QTI model described in the previous section.<br/>
+
 Here is an example to create an Item with one single Interaction:
 
     //create an item:
@@ -126,8 +133,10 @@ The QtiRunner.js is called to:
 -   collect and sent responses to the result server
 -   display feedback
 
-The QtiRunner lib also contains the programmatic interface of QTI renderers. The goal of a QTI renderer is to transform a QTI Item Javascript object into a user-friendly HTML, CSS and JS widgets.\
-This interface is first introduced in TAO 2.5 and has currently only one implementation: the QTI DefaultRenderer (hence the +1).\
+The QtiRunner lib also contains the programmatic interface of QTI renderers. The goal of a QTI renderer is to transform a QTI Item Javascript object into a user-friendly HTML, CSS and JS widgets.<br/>
+
+This interface is first introduced in TAO 2.5 and has currently only one implementation: the QTI DefaultRenderer (hence the +1).<br/>
+
 Though not mature yet, this interface is designed to welcome anyone to implement its own qti renderer in the future. This page will be updated in due time.
 
 CSS template

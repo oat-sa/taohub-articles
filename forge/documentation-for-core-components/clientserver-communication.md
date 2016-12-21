@@ -37,7 +37,8 @@ The mechanism is composed by the following components :
 
 ### Ajax Wrapper
 
-The ajax wrapper is located in the meta extension TAO (/tao/views/js/tao.ajaxWrapper.js).\
+The ajax wrapper is located in the meta extension TAO (/tao/views/js/tao.ajaxWrapper.js).<br/>
+
 It is based on the *ajax* function of the library [jQuery](http://jquery.com)
 
 **Methods**
@@ -46,9 +47,12 @@ It is based on the *ajax* function of the library [jQuery](http://jquery.com)
 |**ajax**|(array) **options** Array of options\
 (function) **options.success** The success callback function\
 (function) **options.error** The error callback function which is called if : the call failed; the server generate an exception; the server return a success=false|The ajax method is an overloading of the jQuery ajax function, this function get the same options than the original one. To get more information take a look to the following documentation http://api.jquery.com/jQuery.ajax\
-This overloading makes homogeneous exchanges between the client and the server.\
-The behavior of its parent function has been adapted to control every exchanges between the client and the server and so it allows :\
-- to intercept server exceptions ;\
+This overloading makes homogeneous exchanges between the client and the server.<br/>
+
+The behavior of its parent function has been adapted to control every exchanges between the client and the server and so it allows :<br/>
+
+- to intercept server exceptions ;<br/>
+
 - to manage under control errors ;|\
 |**addSuccessCallback**|(function) **fct** The default success callback to add\
 (string) **position** The position to add the function in the queue of callback success functions (‘begin’, ‘end’, integer to represent the position)|Add a default success callback. This success callback will be called after each successfull ajax requests|\

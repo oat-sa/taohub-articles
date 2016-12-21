@@ -25,7 +25,8 @@ Download TAO builds on the document root, extract them and rename extracted fold
     unzip TAO_2.6.7_build.zip && mv TAO_2.6.7_build tao267
     unzip TAO_3.0.0_build.zip && mv TAO_3.0.0_build tao3
 
-The TAO 2.6.7 installer gives such outcome:\
+The TAO 2.6.7 installer gives such outcome:<br/>
+
 ![](resources/{width:1024px}/attachments/download/3805/bitnami_lamp_stack_tao267_requirements_check_1.png)
 
 (Optional, for TAO 2.6 only) The ‘short\_open\_tag’ PHP directive needs to be set to ‘On’.
@@ -45,10 +46,12 @@ We set the right permissions for the right owners (daemon is the user and group 
     sudo chmod -R ug+rwX tao267 tao3
     sudo chown -R daemon:daemon tao267 tao3
 
-The TAO 2.6.7 installer gives now such outcome:\
+The TAO 2.6.7 installer gives now such outcome:<br/>
+
 ![](resources/{width:1024px}/attachments/3804/bitnami_lamp_stack_tao267_requirements_check_2.png)
 
-Same goes for the TAO 3.0 installer:\
+Same goes for the TAO 3.0 installer:<br/>
+
 ![](resources/{width:1024px}/attachments/3799/bitnami_lamp_stack_tao3_requirements_check.png)
 
 Step 2: Prepare MySQL for a TAO database and user
@@ -82,7 +85,8 @@ Additional errors
 -----------------
 
 ### Error 1: Errors with Vhosts and Aliases\
-If you find some errors when installing such as: Not Found e.g. The requested URL /taotesting/tao/Main/entry was not found on this server.\
+If you find some errors when installing such as: Not Found e.g. The requested URL /taotesting/tao/Main/entry was not found on this server.<br/>
+
 Please note that alias/prefixes have some errors when installing TAO testing e.g. httpd-prefix.conf or Alias /taotesting/ “/opt/bitnami/apps/taotesting/htdocs/”
 
 TAO 3.0 was successfully installed onto a Bitnami stack (Amazon Web Services) when using Virtual Hosts e.g. httpd-vhosts.conf or <VirtualHost *:80>

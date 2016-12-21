@@ -137,10 +137,14 @@ Our documents will be placed on `taoDocs/views/docs/` folder. Also you need crea
           
       
 
-Attribute **id** link this actions with tree. So for Delete button we need define id as “delete”, as in tree.\
-Attribute **name** define text on button.\
-Attribute **url** define path to controller action.\
-Attribute **group** tell where action (button) should be placed. In our case it will be places in tree, below list of files.\
+Attribute **id** link this actions with tree. So for Delete button we need define id as “delete”, as in tree.<br/>
+
+Attribute **name** define text on button.<br/>
+
+Attribute **url** define path to controller action.<br/>
+
+Attribute **group** tell where action (button) should be placed. In our case it will be places in tree, below list of files.<br/>
+
 Attribute **binding** define handler for this action in front-side application (javascript). How should be organised frontend application see here: [[Front\_js]]
 
 \* Add the following code to the controller `Browser.php`

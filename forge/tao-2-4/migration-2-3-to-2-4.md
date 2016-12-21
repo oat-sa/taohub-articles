@@ -19,7 +19,8 @@ In progress\*
 Database Migration
 ------------------
 
-We usually provide automatic scripts that handle operation to convert the database from last version to the actual. For this new 2.4 version, we will not be able to do so because of the deep change that occurs on the User/Role Model.\
+We usually provide automatic scripts that handle operation to convert the database from last version to the actual. For this new 2.4 version, we will not be able to do so because of the deep change that occurs on the User/Role Model.<br/>
+
 In the future we planned to provide better tools to help platform administrator to automaticaly update their data to the last version, in order to do so, we have changed the logic of the update process, we now start from the last version that is able to retrieve data from previous version though a dedicate extension.
 
 So you need to create a fresh install of new TAO 2.4, and then install the extension found in attachment of this guide called taoMigration, extract the zip file a the root of your TAO installation. This extension is still experimental and for now do not require any installation but we are really interest in having any feedback about it. It only provides a script you may call providing data about your previous TAO 2.3 database and installation, the script will then manage to retrieve all the items, test taker, user and roles in a dedicated language you may have created in TAO 2.3 with all their meta-data and their content. You may found this script in taoMigration/scripts/taoMigrate.php

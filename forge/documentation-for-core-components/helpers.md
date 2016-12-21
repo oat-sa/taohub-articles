@@ -21,7 +21,8 @@ Helpers contain transverse functionalities of the application or an extension. B
 
 ### TAO helpers overview
 
-You can see in the schema below an overview of some of the TAO meta-extension helpers. These helpers are independent classes, they use mainly static methods and attest to the toolbox concept.\
+You can see in the schema below an overview of some of the TAO meta-extension helpers. These helpers are independent classes, they use mainly static methods and attest to the toolbox concept.<br/>
+
 For instance, the *tao\_helpers\_File* helper provides some convenience methods to manipulate files.
 
 ![](http://forge.taotesting.com/attachments/391/tao-helpers.png)
@@ -32,16 +33,20 @@ Unlike the previous helpers, the class diagram below outlines a more complex hel
 
 **The Uri helper**
 
-This helper deserves your attention because you will need it or see it a lot. It’s a toolbox to manage URIs and URLs.\
+This helper deserves your attention because you will need it or see it a lot. It’s a toolbox to manage URIs and URLs.<br/>
+
 We use it to write MVC URLs for you and to encode/decode the RDFS resources URIs.
 
--   **MVC Urls** : the method *tao\_helpers\_Uri::url* (or its convenient short-cut \_*url*, ) builds the URL for you instead of writing it manually.\
+-   **MVC Urls** : the method *tao\_helpers\_Uri::url* (or its convenient short-cut \_*url*, ) builds the URL for you instead of writing it manually.<br/>
+
     You can give the action, module and/or extension’s name in parameters and then, this method renders the right URL.
 
-For example, the method `_url('index')` will return to the index action of the current module.\
+For example, the method `_url('index')` will return to the index action of the current module.<br/>
+
 The following code sample will display “http://yourdomain.tld/taoItems/PreviewApi/runner?match=client&context=false”\
 <code class="php">\
- echo \_url(‘runner’, ‘PreviewApi’, ‘taoItems’, array(‘match’ =\> ‘client’, ‘context’ =\> false));\
+ echo \_url(‘runner’, ‘PreviewApi’, ‘taoItems’, array(‘match’ =\> ‘client’, ‘context’ =\> false));<br/>
+
 </code>
 
 > Please note that to access web resources you have to use the method *tao\_helpers\_Uri::getBaseUrl()* (or *tao\_helpers\_Uri::getRootUrl()* if the resource is located in another extension). For example, to access an image source:
@@ -56,7 +61,8 @@ The following code sample will display “http://yourdomain.tld/taoItems/Preview
 the Form Generator Engine
 -------------------------
 
-One of the helper has grown up and became a complete library. The purpose of this library is to build and manage forms dynamically. It provides a convenient way to manipulate forms as object entities from the server side. It outlines a generic model to represent forms and to build them for a particular rendering. For instance, we have implemented the XHTML rendering mode. In other words, you can instantiate objects from your PHP codes that will generate a full XHTML code.\
+One of the helper has grown up and became a complete library. The purpose of this library is to build and manage forms dynamically. It provides a convenient way to manipulate forms as object entities from the server side. It outlines a generic model to represent forms and to build them for a particular rendering. For instance, we have implemented the XHTML rendering mode. In other words, you can instantiate objects from your PHP codes that will generate a full XHTML code.<br/>
+
 The Form Engine is mainly used in TAO as a front-end for the data model through the Generis API. So, it enables us to easily edit a RDF resource: the form is built regarding the resources information.
 
 > A kind of possible contribution would be to extend the engine to render more widgets or to implement other rendering: XUL, JS forms, etc.
@@ -85,7 +91,8 @@ The diagram below outlines this structure. It represents only a part of the *tao
 
 ![](http://forge.taotesting.com/attachments/388/form-elements.png)
 
-One of the main methods of implementation is the *rendering* method. It will produce the output to be displayed.\
+One of the main methods of implementation is the *rendering* method. It will produce the output to be displayed.<br/>
+
 Look at the following piece of code that will render an HTML text field:
 
      $textField = new tao_helpers_form_elements_xhtml_Textbox('firstname');
@@ -98,7 +105,8 @@ Look at the following piece of code that will render an HTML text field:
 
 ### Tutorial: the Form Container model
 
-The *TAO\_helpers\_form\_Form Container* provides you with a convenient solution to add forms into your application. This is only a container in which you will put your instructions to create the forms and the form elements.\
+The *TAO\_helpers\_form\_Form Container* provides you with a convenient solution to add forms into your application. This is only a container in which you will put your instructions to create the forms and the form elements.<br/>
+
 In this tutorial, we will show you how to create a simple form, a login form using the *TAO\_helpers\_form\_Form Container* architecture.
 
 We assume that you have a valid extension in which you can make your tests. We will refer to this extensions with the name *myExt*

@@ -16,9 +16,12 @@ Processes
 
 ![](../resources/processes-tabs1.png)
 
-The Processes extension manages the processes creation.\
-The Processes extension allows creating processes, in a tutorial goal for example.\
-This extension also manages the roles creation, the association of the selected role to user(s), and manages users (creation, modification and deletion).\
+The Processes extension manages the processes creation.<br/>
+
+The Processes extension allows creating processes, in a tutorial goal for example.<br/>
+
+This extension also manages the roles creation, the association of the selected role to user(s), and manages users (creation, modification and deletion).<br/>
+
 The Processes extension installation leads eight new sections (six sections are in the Processes extension, one in Test extension, one in Deliveries extension).
 
 1. [[Manage Processes]]
@@ -55,7 +58,8 @@ The main functions of this section:
 3. [[Manage Roles]]
 -------------------
 
-This section manages the roles creation.\
+This section manages the roles creation.<br/>
+
 It is also possible to assign user(s) to role.
 
 The main functions of this section:
@@ -72,7 +76,8 @@ The main functions of this section:
 4. [[Manage Users]]
 -------------------
 
-This section allows having an overview of the platform users and the users specifically create for the Processes extension.\
+This section allows having an overview of the platform users and the users specifically create for the Processes extension.<br/>
+
 This section also permits adding, editing and deleting users.
 
 The main function of this section:

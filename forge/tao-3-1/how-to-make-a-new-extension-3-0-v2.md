@@ -18,7 +18,8 @@ Preparation
 -----------
 
 1.  Install TAO (3.0) (https://github.com/oat-sa/package-tao)
-2.  download taoDevTools extension using composer :\
+2.  download taoDevTools extension using composer :<br/>
+
     <code>composer require “oat-sa/extension-tao-devtools” —dev</code>
 3.  Make sure the extension taoDevTools has been installed ([[How to install an extension]]).
 
@@ -48,7 +49,8 @@ Now, create a simple action using a template file.
 
         }
 
-To create your first template: go to directory views/templates and create Hello folder.\
+To create your first template: go to directory views/templates and create Hello folder.<br/>
+
 Create myName.tpl file.
 
 
@@ -57,7 +59,8 @@ Create myName.tpl file.
 
 -   To test this action visit *<span class="URL:/taoDocs/Hello/myName"></span>*
 
-to Add link to hello world on extension menu. Return to controller directory and Open structures.xml.\
+to Add link to hello world on extension menu. Return to controller directory and Open structures.xml.<br/>
+
 In the sections tag, add this section
 
 

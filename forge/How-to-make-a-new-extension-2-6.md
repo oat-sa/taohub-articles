@@ -37,7 +37,8 @@ Simple Examples
               echo 'Hello World';
          }
 
--   Before you can test it, you will need to run the script **funcAcl/scripts/taoPreparePublicActions.php** (in a shell using php). This will grant you access to the newly created action.\
+-   Before you can test it, you will need to run the script **funcAcl/scripts/taoPreparePublicActions.php** (in a shell using php). This will grant you access to the newly created action.<br/>
+
      For example:<pre>sudo -u www-data php funcAcl/scripts/taoPreparePublicActions.php</pre>
 
 <!-- -->

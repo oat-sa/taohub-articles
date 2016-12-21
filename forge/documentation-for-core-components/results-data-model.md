@@ -12,8 +12,10 @@ tags:
 Results Data Model TAO 2.5
 ==========================
 
-This is the data model used for storing and exploiting the results in the taoResults extension part of TAO.\
-This storage is inspired by the QTI results standardisation but supports results arising from non QTI tests (including an object).\
+This is the data model used for storing and exploiting the results in the taoResults extension part of TAO.<br/>
+
+This storage is inspired by the QTI results standardisation but supports results arising from non QTI tests (including an object).<br/>
+
 [[http://www.imsglobal.org/question/qtiv2p1/imsqti\_resultv2p1.html]]
 
 Elements of understanding

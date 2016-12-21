@@ -29,12 +29,14 @@ Called when the label of a test changes
 
 ### prepareContent( core\_kernel\_classes\_Resource \$test, \$items = array())
 
-Creates a test content specific to the test model. If possible this content should be based on \$items.\
+Creates a test content specific to the test model. If possible this content should be based on \$items.<br/>
+
 This function is called whenever a test model is assigned to an test.
 
 ### deleteContent( core\_kernel\_classes\_Resource \$test)
 
-This should delete the content of the test, however not the compiled content.\
+This should delete the content of the test, however not the compiled content.<br/>
+
 Usually called on deletion of test or change of test model.
 
 ### getItems( core\_kernel\_classes\_Resource \$test)

@@ -22,8 +22,10 @@ Session management has been delegated to `common_session_SessionManager`, but th
 Extension’s Changes
 -------------------
 
-Many changes occurs, many extensions have been split into 2 or 3 to improve modularity.\
-taoCoding had been removed.\
+Many changes occurs, many extensions have been split into 2 or 3 to improve modularity.<br/>
+
+taoCoding had been removed.<br/>
+
 ltiProvider have been reorganised into taoLti and taoLtiBasicOutcomes
 
 Items

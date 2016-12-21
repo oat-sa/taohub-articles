@@ -25,8 +25,10 @@ Let’s:
 Install the web server (MAMP installation)
 ------------------------------------------
 
-Go on the MAMP home page and download the free MAMP version,\
-You may notice that MAMP comes bundled with MAMP PRO,\
+Go on the MAMP home page and download the free MAMP version,<br/>
+
+You may notice that MAMP comes bundled with MAMP PRO,<br/>
+
  however we don’t really need this and you may ignore the MAMP PRO and continue with MAMP.
 
 https://www.mamp.info/en/downloads/
@@ -57,7 +59,8 @@ Starting the MAMP installation…
 Install TAO into your MAMP
 --------------------------
 
-You need now to download all tao files and copy it into your MAMP.\
+You need now to download all tao files and copy it into your MAMP.<br/>
+
 Please download one of these build packages:
 
 -   http://releases.taotesting.com/TAO\_3.0.0\_build.zip
@@ -112,7 +115,8 @@ Congratulations!
 
 ### Start up TAO
 
-In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the locahost:8888 url.\
+In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the locahost:8888 url.<br/>
+
 You may ease this work by fine tuning your MAMP.
 
 Optionnaly, we recommend you to do the following configuration :

@@ -21,13 +21,16 @@ As explained previously, in the ClearFw, a MVC **controller** is called a **modu
 URL Mapping
 -----------
 
-The module classes (the controllers) provide a set of actions to be executed regarding the user workflow (the http request). The purpose of these actions is to manage view rendering that are populated by the data loaded from the business model. You can get more details regarding this behavior by having a look at the MVC documentation (see [Wikipedia](http://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)).\
+The module classes (the controllers) provide a set of actions to be executed regarding the user workflow (the http request). The purpose of these actions is to manage view rendering that are populated by the data loaded from the business model. You can get more details regarding this behavior by having a look at the MVC documentation (see [Wikipedia](http://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)).<br/>
+
 To summarize this approach: a user requests an action. This action is executed by the controller layer and renders a view with the data extracted by the model.
 
-TAO extensions take advantage of the *URL rewriting* for the action mapping. Each URL of the application is mapped to a particular action.\
+TAO extensions take advantage of the *URL rewriting* for the action mapping. Each URL of the application is mapped to a particular action.<br/>
+
 When a user requests a URL of the TAO application, a mechanism called *dispatching* looks for the right action to execute it. You need to understand those principles to call actions into TAO.
 
-The URLs into TAO are not formatted to refer to resources (i.e., a PHP file). They contain information that will be used to find the actions to be executed.\
+The URLs into TAO are not formatted to refer to resources (i.e., a PHP file). They contain information that will be used to find the actions to be executed.<br/>
+
 A URL contains the following information:
 
 -   the target extension
@@ -39,7 +42,8 @@ For example, have a look at the following URL:
 
 > `http://www.tao.lu/tao/Users/add?name=john`
 
-If you split the URL, each part is used as a piece of information for the mapping:\
+If you split the URL, each part is used as a piece of information for the mapping:<br/>
+
 |*.Token|*.Information|\
 |`www.tao.lu`| the TAO domain name|\
 |tao| the extension name (the meta-extension TAO)|\
@@ -51,8 +55,10 @@ By calling this URL the method `add` of the class *tao\_action\_Users* in the `t
 
       tao_action_Users::add($_GET['name']);
 
-The mapping is made by a *Resolver* using requests analysis. Of course, there is no resource */tao/Users/add* (file or CGI script) in the web server.\
-For each request matching a given format, the main entry file is executed (`extensionName/index.php`) and so, the dispatching loop is launched.\
+The mapping is made by a *Resolver* using requests analysis. Of course, there is no resource */tao/Users/add* (file or CGI script) in the web server.<br/>
+
+For each request matching a given format, the main entry file is executed (`extensionName/index.php`) and so, the dispatching loop is launched.<br/>
+
 This mechanism is available thanks to the *mod\_rewrite* of the Apache web server.
 
 Actions structure
@@ -82,7 +88,8 @@ A sample structure.xml file:
 
 -   [structure.xml](https://github.com/oat-sa/tao-core/blob/master/actions/structures.xml)
 
-The TAO extension is the main entry point for any request. The URL */tao/Main/index* is called with the browser and contains the extension and section parameters.\
+The TAO extension is the main entry point for any request. The URL */tao/Main/index* is called with the browser and contains the extension and section parameters.<br/>
+
 The main action is called, loads the appropriate *structure.xml* file and renders a main template (it’s a global container). The components, widgets, forms, etc of the current extension/section are initialized regarding the context parameters, the data from the *structure.xml* file and the session. It provides us with a general frame of navigation where extensions only have the role of specialization.
 
 The initialization workflow is detailed in the following schema:

@@ -13,7 +13,8 @@ tags:
 
 ﻿h1. Portable Custom Interaction Best Practice Change Proposal: Changes and Recommendations Based on an Experimental Implementation
 
-Authors:\
+Authors:<br/>
+
 Jérôme Bogaerts (Open Assessment Technologies, LU)\
 Somsack Sipasseuth (Open Assessment Technologies, LU)\
 Version: Public Draft\
@@ -23,24 +24,32 @@ Release: 1.0
 Summary:
 --------
 
-This proposal changes and recommendations about IMS Portable Custom Interaction Best Practice is adapted from the original work from IMS and the Pacific Metrics. It proposes changes and recommendations on various aspects of the specification, based on a working prototype of Portable Custom Interaction into the TAO Computer Based Assessment Platform, developed by Open Assessment Technologies.\
-The goal of the proposal is to emphasize the software components and their APIs, which compose the cornerstones of the specification, in order to provide software developers guidance to author Portable Custom Interactions.\
+This proposal changes and recommendations about IMS Portable Custom Interaction Best Practice is adapted from the original work from IMS and the Pacific Metrics. It proposes changes and recommendations on various aspects of the specification, based on a working prototype of Portable Custom Interaction into the TAO Computer Based Assessment Platform, developed by Open Assessment Technologies.<br/>
+
+The goal of the proposal is to emphasize the software components and their APIs, which compose the cornerstones of the specification, in order to provide software developers guidance to author Portable Custom Interactions.<br/>
+
 Finally, this proposal wants to leverage the AMD (Asynchronous Module Definition) paradigm by recommending to implement Portable Custom Interactions as AMD modules.
 
 Introduction
 ------------
 
-This proposal for IMS Portable Custom Interaction (PCI) Best Practice specification is based upon the original work of IMS and the proposal of Pacific Metrics.\
-To verify the technical feasibility of the basis documents, several prototypes were implemented at Open Assessment Technologies. During the prototyping phase, we identified key issues and developed guidance on how to make PCI more Delivery Engine and Item authors friendly : enabling it to be flexible enough to fit in as much delivery engines as possible in the market and widely adopted by Portable Custom Interaction authors as well.\
-Since version alpha 3.0.0, TAO has incorporated an experimental PCI specification support implementing the content of this proposal. The motivations that drive this proposal are the balance between development cost and end-user interests (portability, features, ease of authoring) - two essential components to any decision maker considering to adopt or implement the PCI specification. To achieve this goal, Open Assessment Technologies wants through this proposal attempt, leverage the AMD paradigm by recommending to implement Portable Custom Interactions as AMD modules, which will definitely encourage interaction developers to package and share their implementations in an appropriate way, fostering the adoption of the IMS Portable Custom Interaction (PCI) Best Practice specification.\
-The concept map below illustrates the numerous concepts and the process that helped to shape this proposal, to give readers an overview of all the things being considered while writing this proposal attempt.\
+This proposal for IMS Portable Custom Interaction (PCI) Best Practice specification is based upon the original work of IMS and the proposal of Pacific Metrics.<br/>
+
+To verify the technical feasibility of the basis documents, several prototypes were implemented at Open Assessment Technologies. During the prototyping phase, we identified key issues and developed guidance on how to make PCI more Delivery Engine and Item authors friendly : enabling it to be flexible enough to fit in as much delivery engines as possible in the market and widely adopted by Portable Custom Interaction authors as well.<br/>
+
+Since version alpha 3.0.0, TAO has incorporated an experimental PCI specification support implementing the content of this proposal. The motivations that drive this proposal are the balance between development cost and end-user interests (portability, features, ease of authoring) - two essential components to any decision maker considering to adopt or implement the PCI specification. To achieve this goal, Open Assessment Technologies wants through this proposal attempt, leverage the AMD paradigm by recommending to implement Portable Custom Interactions as AMD modules, which will definitely encourage interaction developers to package and share their implementations in an appropriate way, fostering the adoption of the IMS Portable Custom Interaction (PCI) Best Practice specification.<br/>
+
+The concept map below illustrates the numerous concepts and the process that helped to shape this proposal, to give readers an overview of all the things being considered while writing this proposal attempt.<br/>
+
 ![](http://forge.taotesting.com/attachments/download/3452/pciMindMap.png)
 
 Example Implementation
 ----------------------
 
-An interaction has been implemented to validate the experimental support of PCI in the TAO Platform. It is a simple “likert scale” interaction that will be used as an example to illustrate this proposal.\
-The screenshot below shows a QTI assessmentItem component with three instances of the “Likert Scale Portable Custom Interaction” instantiated with different configuration options.\
+An interaction has been implemented to validate the experimental support of PCI in the TAO Platform. It is a simple “likert scale” interaction that will be used as an example to illustrate this proposal.<br/>
+
+The screenshot below shows a QTI assessmentItem component with three instances of the “Likert Scale Portable Custom Interaction” instantiated with different configuration options.<br/>
+
 Figure 2: A QTI assessmentItem containing 3 Portable Custom Interaction instances\
 ![](http://forge.taotesting.com/attachments/download/3449/sampleRendering.png)
 
@@ -49,11 +58,14 @@ Interaction Rendering
 
 ### Clarification about Concepts
 
-The initial IMS Portable Custom Interaction (PCI) specification introduces the notion of Communication Bridge. In the documentation however, it is difficult to concretely grasp what this bridge actually is and does. There indeed seems to be a confusion between the Rendering Engine and the Communication Bridge itself. From our understanding, the bridge should be the global qtiCustomInteractionContext object and the Rendering Engine is therefore something totally different, out of the scope of this document. In this proposal, Open Assessment Technologies considers the Rendering Engine as the hosting platform, and the Communication Bridge as the global qtiCustomInteractionContext. This improves the understandability of the specification, and reduces its learning curve. Finnaly, it makes tangible the initial Interaction Rendering Conceptual Diagram.\
-Figure 3: The initial Interaction Rendering Conceptual Diagram.\
+The initial IMS Portable Custom Interaction (PCI) specification introduces the notion of Communication Bridge. In the documentation however, it is difficult to concretely grasp what this bridge actually is and does. There indeed seems to be a confusion between the Rendering Engine and the Communication Bridge itself. From our understanding, the bridge should be the global qtiCustomInteractionContext object and the Rendering Engine is therefore something totally different, out of the scope of this document. In this proposal, Open Assessment Technologies considers the Rendering Engine as the hosting platform, and the Communication Bridge as the global qtiCustomInteractionContext. This improves the understandability of the specification, and reduces its learning curve. Finnaly, it makes tangible the initial Interaction Rendering Conceptual Diagram.<br/>
+
+Figure 3: The initial Interaction Rendering Conceptual Diagram.<br/>
+
 ![](http://forge.taotesting.com/attachments/download/3450/renderingConcept.png)
 
-Before going further, let’s first redefine in depth the role and responsibility of each component involved in interaction rendering process for a better understanding of this proposal.\
+Before going further, let’s first redefine in depth the role and responsibility of each component involved in interaction rendering process for a better understanding of this proposal.<br/>
+
 1. The Custom Interaction Hook component brings all the code required to identify, render and execute a Custom Interaction instance. All required methods must be implemented. A custom interaction is first registered in the Communication Bridge as a Custom Interaction Hook. It represents the prototype of future Custom Interaction Instances. This hook is uniquely identified by its typeIdentifier. A Custom Interaction Hook is to be cloned to produce a Custom Interaction Instance each time it has to be rendered. It is useful to make the distinction between the Custom Interaction Hook (or prototype) from its instances because there may be more than one occurrence of such custom interaction within a single QTI assessmentItem. In this document, a Custom Interaction Hook refers to the prototype whilst Custom Interaction instances refer to its clone (which is intended to be initialized and executed at rendering time). The Custom Interaction Hook, is the former Custom Interaction in Figure 3.
 
 2\. The Communication Bridge component, as known as the qtiCustomInteractionContext object, is the unique way for a given custom interaction and the Rendering Engine to communicate with each other. All required methods must be implemented. Since it is where the Custom Interaction Hooks get registered, it also serve as a registry for them.
@@ -62,7 +74,8 @@ Before going further, let’s first redefine in depth the role and responsibilit
 
 ### Interaction Rendering Sequence
 
-The new sequence diagram below clearly depicts the responsibilities of each component. It also reflects the content of this proposal and the current experimental implementation in the TAO Platform.\
+The new sequence diagram below clearly depicts the responsibilities of each component. It also reflects the content of this proposal and the current experimental implementation in the TAO Platform.<br/>
+
 Figure 4. Interaction Rendering Sequence Diagram\
 ![](http://forge.taotesting.com/attachments/download/3451/pciSequence.png)
 
@@ -75,8 +88,10 @@ Open Assessment Technologies recommends to clearly define the APIs (Application 
 
 ### Communication Bridge API
 
-As discussed in the previous sections of this proposal, the qtiCustomInteractionContext object is actually an instance of the Communication Bridge. The following skeleton describes the Communication Bridge API, which provide the methods available to Custom Interaction Hooks to communicate with the hosting platform.\
-As this proposal is built upon the AMD (Asynchronous Module Definition) paradigm, it is implemented as an AMD module, to be required as an AMD dependency by Custom Interaction Hook implementations.\
+As discussed in the previous sections of this proposal, the qtiCustomInteractionContext object is actually an instance of the Communication Bridge. The following skeleton describes the Communication Bridge API, which provide the methods available to Custom Interaction Hooks to communicate with the hosting platform.<br/>
+
+As this proposal is built upon the AMD (Asynchronous Module Definition) paradigm, it is implemented as an AMD module, to be required as an AMD dependency by Custom Interaction Hook implementations.<br/>
+
 Table 1. Communication Bridge Skeleton
 
 
@@ -140,12 +155,14 @@ Table 1. Communication Bridge Skeleton
 
 #### Revoking the Initialization Role
 
-As shown in Figure 4, Open Assessment Technologies recommend redistributing the responsibility of initializing an interaction to the Rendering Engine. Indeed, the vendor certainly has an existing initialization function for built-in QTI interactions so it seems legitimate to let the delivery engine decide the right time to call the initialize() method on Custom Interaction Instances.\
+As shown in Figure 4, Open Assessment Technologies recommend redistributing the responsibility of initializing an interaction to the Rendering Engine. Indeed, the vendor certainly has an existing initialization function for built-in QTI interactions so it seems legitimate to let the delivery engine decide the right time to call the initialize() method on Custom Interaction Instances.<br/>
+
 To redistribute the initialization responsibility to the Rendering Engine in the implementation from Open Assessment Technologies, the global object implements a getter function (which is not part of the Communication Bridge API) to retrieve previously registered Custom Interaction Hooks. The function createPciInstance() (which is also not part of the Communication Bridge API, but part of our own implementation) therefore returns the clone of a previously registered Custom Interaction Hook, to provide an up and running Custom Interaction Instance object.
 
 #### Notification
 
-The notifyReady() and notifyDone() functions now require their unique argument to be a Custom Interaction instance object, in place of an identifier. Giving the Custom Interaction Instance object instead of an identifier also makes qtiCustomInteractionContext implementation able to collect useful information from the Custom Interaction Instances. Finally, from a cosmetic perspective, it makes the API more elegant.\
+The notifyReady() and notifyDone() functions now require their unique argument to be a Custom Interaction instance object, in place of an identifier. Giving the Custom Interaction Instance object instead of an identifier also makes qtiCustomInteractionContext implementation able to collect useful information from the Custom Interaction Instances. Finally, from a cosmetic perspective, it makes the API more elegant.<br/>
+
 Simply put, the qtiCustomInteractionContext object should only serve as a registry to available PCI Hooks. Moreover, The functions exposed by the qtiCustomInteractionContext object might be useful to Rendering Engines wanting to implement QTI built-in interactions in a PCI way.
 
 ### Custom Interaction Hook API
@@ -160,7 +177,8 @@ The following section describes a Custom Interaction Hook skeleton. It clearly d
 
 4\. Modify slightly the existing API, giving more control to integrated platforms hosting Portable Custom Interaction Instances, especially from an authoring perspective.
 
-Point 1. , 2. and 3. make the Portable Custom Interaction specification entirely based on AMD modules, from Custom Interaction Hook implementations to shared libraries. On the other hand, point 4. makes the Custom Interaction Hook API more fine-grained. In this way, the client code of Custom Interaction Hooks and Instances are in control to manage the interaction lifecycle.\
+Point 1. , 2. and 3. make the Portable Custom Interaction specification entirely based on AMD modules, from Custom Interaction Hook implementations to shared libraries. On the other hand, point 4. makes the Custom Interaction Hook API more fine-grained. In this way, the client code of Custom Interaction Hooks and Instances are in control to manage the interaction lifecycle.<br/>
+
 The following source code is a Custom Interaction Hook skeleton. It acts as a strong basis for any new Custom Interaction Hook implementation but describes the proposed Custom Interaction Hook API as well.
 
 
@@ -345,8 +363,10 @@ The following source code is a Custom Interaction Hook skeleton. It acts as a st
     178:
     179:});
 
-For the sake of code clarity, Open Assessment Technologies proposes splitting the initialization process in three distinct steps: initialization, state management and response management. The three of them fundamentally are different operations so should be separated. It also provides more control to client code to manipulate Custom Interaction Hook Instances. A good example of such a client-code would be an authoring tool.\
-Another advantage of this is to allow the Rendering Engine to dynamically change the state or the response without being required to destroy and reinitialize the whole interaction (while previewing and authoring interactions for instance). This would be particularly useful to complex Custom Interaction Hook implementations where the actual initialization process is a heavy operation.\
+For the sake of code clarity, Open Assessment Technologies proposes splitting the initialization process in three distinct steps: initialization, state management and response management. The three of them fundamentally are different operations so should be separated. It also provides more control to client code to manipulate Custom Interaction Hook Instances. A good example of such a client-code would be an authoring tool.<br/>
+
+Another advantage of this is to allow the Rendering Engine to dynamically change the state or the response without being required to destroy and reinitialize the whole interaction (while previewing and authoring interactions for instance). This would be particularly useful to complex Custom Interaction Hook implementations where the actual initialization process is a heavy operation.<br/>
+
 We therefore recommend having the following methods and attributes in the Communication Bridge API, making a rendering engine able to manage the lifecycle of Custom Interaction Hook Instances:
 
 -   initialize(id, dom, config)
@@ -364,17 +384,23 @@ We therefore recommend having the following methods and attributes in the Commun
 Implementers will do all necessary clean-up to performed when the Rendering Engine decides to destruct an initialized Custom Interaction Hook Instance.
 
 id\
-Implementers of Custom Interaction Hooks will make the id attribute public to make the Rendering Engine able to identify Custom Interaction Hook Instance.\
-The modifications in this section provide a nice and clean programmatic interface to implement the Communication Bridge and:\
- 1. Allow the Rendering Engine providing the necessary communication channels to Custom Interaction Hooks.\
+Implementers of Custom Interaction Hooks will make the id attribute public to make the Rendering Engine able to identify Custom Interaction Hook Instance.<br/>
+
+The modifications in this section provide a nice and clean programmatic interface to implement the Communication Bridge and:<br/>
+
+ 1. Allow the Rendering Engine providing the necessary communication channels to Custom Interaction Hooks.<br/>
+
  2. Enable Custom Interaction Hooks to register to the Rendering Engine but also notify it for some through the notifyDone() and notifyReady() methods.
 
 Item XML Definition
 -------------------
 
-We agree with the proposal from Pacific Metrics in general. We adapted our sample implementation of likert scale interaction based on theirs. We insist on adding clear XML namespaces to keep the XML clear and clean.\
-What about the entry point? Because a QTI assessmentItem might contain multiple custom interactions, the entry-point/hook to be used by a custom interaction should be described. pci:portableCustomInteraction-\>entryPoint ?\
-What about local shared libraries definition? Allowing both absolute and relative URL would make the trick.\
+We agree with the proposal from Pacific Metrics in general. We adapted our sample implementation of likert scale interaction based on theirs. We insist on adding clear XML namespaces to keep the XML clear and clean.<br/>
+
+What about the entry point? Because a QTI assessmentItem might contain multiple custom interactions, the entry-point/hook to be used by a custom interaction should be described. pci:portableCustomInteraction-\>entryPoint ?<br/>
+
+What about local shared libraries definition? Allowing both absolute and relative URL would make the trick.<br/>
+
 What about custom-interaction-specific CSS : a PCI provider might want to propose a default CSS to render its PCI out of the item context, which is different from the item stylesheet which is aimed at defining the style of the whole item (including or not the style of the its interactions)
 
 Table 4. Item XML Definition
@@ -477,7 +503,8 @@ Table 4. Item XML Definition
 
 ### PCI Configuration - Properties
 
-We agree with Pacific Metrics about the need for more a structured way to store configuration parameter in the XML and have implemented as such. All the values in the <entry> will be passed to the PCI initialize function as strings. It will be up to the PCI implementer to check their validity or re-interpret the value if necessary.\
+We agree with Pacific Metrics about the need for more a structured way to store configuration parameter in the XML and have implemented as such. All the values in the <entry> will be passed to the PCI initialize function as strings. It will be up to the PCI implementer to check their validity or re-interpret the value if necessary.<br/>
+
 Table 5. XML PCI Properties
 
 
@@ -489,7 +516,8 @@ Table 5. XML PCI Properties
 
      
 
-Call of eval() indeed should be avoided to prevent bad JavaScript inclusion. This also enables validation of configuration parameters if necessary.\
+Call of eval() indeed should be avoided to prevent bad JavaScript inclusion. This also enables validation of configuration parameters if necessary.<br/>
+
 On top of that, authoring tool implementers need a structured way to store interaction configuration parameters to make it “authorable”.
 
 ### PCI Markup
@@ -502,14 +530,18 @@ Table 6. PCI Original Markup Recommendation
 
      
 
-It looks more like a W3C XHTML or HTML5 than the XHTML subset described in the QTI 2.1 specification: the style attribute is indeed forbidden in QTI, preventing any XSD validator to successfully validate the file.\
-The question that naturally raises is which HTML namespace(s) does PCI actually support? This section will try to answer that question by comparing the XHTML subset of QTI, XHTML and XHTML 5 or any exotic markup flavour.\
-We consider (by experience) that validating the content of <pci:markup> would be difficult, and force the markup to be in a particular flavour too much restrictive. The only thing we can provide are recommendations.\
+It looks more like a W3C XHTML or HTML5 than the XHTML subset described in the QTI 2.1 specification: the style attribute is indeed forbidden in QTI, preventing any XSD validator to successfully validate the file.<br/>
+
+The question that naturally raises is which HTML namespace(s) does PCI actually support? This section will try to answer that question by comparing the XHTML subset of QTI, XHTML and XHTML 5 or any exotic markup flavour.<br/>
+
+We consider (by experience) that validating the content of <pci:markup> would be difficult, and force the markup to be in a particular flavour too much restrictive. The only thing we can provide are recommendations.<br/>
+
 However, In the Open Assessment Technologies implementations of Portable Custom Interactions, we chose and recommend the XHTML5 solution.
 
 #### XHTML Subset from QTI
 
-Using QTI-XHTML (as defined in QTI 2.1) may be a first and simple answer because QTI 2.1 already defines a clear subset of XHTML. This also means that PCI developers need to be careful about their markup usage. The advantage is that all HTML markups will share the same namespace (the one of QTI) which would help preventing confusions. On the other hand, the XHTML subset of QTI seems too small to accommodate for all the possibilities that current web technologies offer.\
+Using QTI-XHTML (as defined in QTI 2.1) may be a first and simple answer because QTI 2.1 already defines a clear subset of XHTML. This also means that PCI developers need to be careful about their markup usage. The advantage is that all HTML markups will share the same namespace (the one of QTI) which would help preventing confusions. On the other hand, the XHTML subset of QTI seems too small to accommodate for all the possibilities that current web technologies offer.<br/>
+
 Using the XHTML subset of QTI as a markup language for Portable Custom Interactions.
 
 Table 7. XHTML Subset of QTI as a Markup Language for Portable Custom Interactions
@@ -527,8 +559,10 @@ Table 7. XHTML Subset of QTI as a Markup Language for Portable Custom Interactio
 
 #### XHTML and XHTML 5
 
-Since the role of PCI recommendation is to propose a way to create item that extends far beyond anything available currently in the QTI standard, it appears that HTML 5 is a good candidate. HTML5 is the growing leading web standard and likely the dominant one in the future. Moreover, its XML serialization format, XHTML 5, enables PCI implementers to take advantage of current technologies. HTML5 indeed standardizes new elements like <video>, <audio>, <canvas> to allow more possibilities in term of item creation. However, XHTML is still perfectly a valid solution but less rich than XHTML5.\
-It would also means that an XSD needs to be written if we want to it be possibly validated, which is going to be very difficult. A solution to this validation issue may simply not to validate the content of <pci:markup>.\
+Since the role of PCI recommendation is to propose a way to create item that extends far beyond anything available currently in the QTI standard, it appears that HTML 5 is a good candidate. HTML5 is the growing leading web standard and likely the dominant one in the future. Moreover, its XML serialization format, XHTML 5, enables PCI implementers to take advantage of current technologies. HTML5 indeed standardizes new elements like <video>, <audio>, <canvas> to allow more possibilities in term of item creation. However, XHTML is still perfectly a valid solution but less rich than XHTML5.<br/>
+
+It would also means that an XSD needs to be written if we want to it be possibly validated, which is going to be very difficult. A solution to this validation issue may simply not to validate the content of <pci:markup>.<br/>
+
 This means placing the responsibility of html markup definition and validation on each individual PCI implementer.
 
 Table 9. XHTML 5 with Namespace as Markup Language
@@ -550,15 +584,24 @@ JSON Representation
 
 ### JSON Schema Revision
 
-The original JSON Schema (shipped with the previous version of “IMS Portable Custom Interaction Best Practice”), aiming at validating the response returned by custom interactions, unfortunately does not work as expected with JSON Schema Lint.\
-Moreover, it does not enable production of embedded NULL values as parts of the response payload. Beyond the use of the QTI Base Types and Multiple, Ordered and Record containers in the context of Portable Custom Interactions, the JSON representation of values suits very well the needs of built-in QTI interactions and efficient data transmission between client and server sides. Because of this but also the existence of the QTI customOperator, we consider important to make possible the use of scalar NULL values and hybrid containers such as [1, 2, NULL, 3] or [“A” =\> 1, “B” =\> NULL, “C” =\> 2].\
-By rewriting the JSON format using JSON Schema Draft 4, the following changes can be applied:\
- 1. The ‘Point’ base type is modified to contain only two values, instead of 2 or 3 in the previous version. Indeed, the QTI 2.1 specification says about the Point base type that “A point value represents an integer tuple corresponding to a graphic point. The two integers correspond to the horizontal (x-axis) and vertical (y-axis) positions respectively. The up/down and left/right senses of the axes are context dependent”.\
- 2. Pair and DirectedPair values must now be composed of Identifier values instead of plain strings.\
- 3. The author attribute is removed because it is not a JSON Schema concept. Authors are now referenced in the content of the description attribute.\
- 4. Use of JSON Schema’s additionalProperties attribute to prevent the use of other keys than base, list and record but also prevent the use of nonexistent base types.\
- 5. Character escaping in duration’s regular expression.\
- 6. Make possible the use of NULL for base types, list items, and record values.\
+The original JSON Schema (shipped with the previous version of “IMS Portable Custom Interaction Best Practice”), aiming at validating the response returned by custom interactions, unfortunately does not work as expected with JSON Schema Lint.<br/>
+
+Moreover, it does not enable production of embedded NULL values as parts of the response payload. Beyond the use of the QTI Base Types and Multiple, Ordered and Record containers in the context of Portable Custom Interactions, the JSON representation of values suits very well the needs of built-in QTI interactions and efficient data transmission between client and server sides. Because of this but also the existence of the QTI customOperator, we consider important to make possible the use of scalar NULL values and hybrid containers such as [1, 2, NULL, 3] or [“A” =\> 1, “B” =\> NULL, “C” =\> 2].<br/>
+
+By rewriting the JSON format using JSON Schema Draft 4, the following changes can be applied:<br/>
+
+ 1. The ‘Point’ base type is modified to contain only two values, instead of 2 or 3 in the previous version. Indeed, the QTI 2.1 specification says about the Point base type that “A point value represents an integer tuple corresponding to a graphic point. The two integers correspond to the horizontal (x-axis) and vertical (y-axis) positions respectively. The up/down and left/right senses of the axes are context dependent”.<br/>
+
+ 2. Pair and DirectedPair values must now be composed of Identifier values instead of plain strings.<br/>
+
+ 3. The author attribute is removed because it is not a JSON Schema concept. Authors are now referenced in the content of the description attribute.<br/>
+
+ 4. Use of JSON Schema’s additionalProperties attribute to prevent the use of other keys than base, list and record but also prevent the use of nonexistent base types.<br/>
+
+ 5. Character escaping in duration’s regular expression.<br/>
+
+ 6. Make possible the use of NULL for base types, list items, and record values.<br/>
+
 The JSON Schema Proposal implementing the above changes is available in Appendix A – JSON Schema. This proposal aims at being backward compatible with existing JSON Response Data.
 
 JSON Representation Examples Revision
@@ -599,9 +642,12 @@ QTI Base Type\
  Identifier\
  { [base]() { [identifier]() “\_identifier” } }
 
-The modifications applied on table A.1 are the following:\
- 1. Added an example of NULL value.\
- 2. The File base type example now emphases the existence of the name attribute.\
+The modifications applied on table A.1 are the following:<br/>
+
+ 1. Added an example of NULL value.<br/>
+
+ 2. The File base type example now emphases the existence of the name attribute.<br/>
+
  3. The sample Duration changes to match the regular expression of the original JSON schema (ISO 8601 durations).
 
 ### QTI Multiple/Ordered Cardinality to JSON Representation
@@ -645,23 +691,29 @@ QTI Base Type\
  {\
  [record]() [\
  {\
- [name]() “rock”,\
+ [name]() “rock”,<br/>
+
  [base]() {\
  [boolean]() true\
  }\
- },\
+ },<br/>
+
  {\
- [name]() “paper”,\
+ [name]() “paper”,<br/>
+
  [list]() {\
  [string]() [“p”,“a”,“p”,“e”,“r”]\
  }\
- },\
+ },<br/>
+
  {\
- [name]() “scissors”,\
+ [name]() “scissors”,<br/>
+
  [list]() {\
  [integer]() [1, 2, 3, 4]\
  }\
- },\
+ },<br/>
+
  {\
  [name]() “empty”\
  [base]() null\
@@ -884,7 +936,14 @@ Table A.4. JSON Schema Revision
             },
             "duration": {
                 "type": "string",
-                "pattern": "^P([\\d]+([,\\.][\\d]+)?Y)?([\\d]+([,\\.][\\d]+)?M)?([\\d]+([,\\.][\\d]+)?W)?([\\d]+([,\\.][\\d]+)?D)?(T([\\d]+([,\\.][\\d]+)?H)?([\\d]+([,\\.][\\d]+)?M)?([\\d]+([,\\.][\\d]+)?S)?)?$"
+                "pattern": "^P([\\d]+([,<br/>
+\.][\\d]+)?Y)?([\\d]+([,<br/>
+\.][\\d]+)?M)?([\\d]+([,<br/>
+\.][\\d]+)?W)?([\\d]+([,<br/>
+\.][\\d]+)?D)?(T([\\d]+([,<br/>
+\.][\\d]+)?H)?([\\d]+([,<br/>
+\.][\\d]+)?M)?([\\d]+([,<br/>
+\.][\\d]+)?S)?)?$"
             },
             "file": {
                 "properties": {

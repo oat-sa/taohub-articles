@@ -27,7 +27,8 @@ This wiki page will present how you may implement PCI and PIC into TAO.
 Two Hooks to rule them all : Delivery/Runtime Hook versus Authoring/Creator Hook :
 ==================================================================================
 
-Before going further, it is worth noting that there are two distinct aspects when implementing a PCI or PIC : authoring on the one hand, and delivery on the other hand. The former requires the later. The IMS PCI only deals with the delivery, that is how the PCI should be implemented to be executable in any PCI-compliant vendor. This hook is standardized by IMS.\
+Before going further, it is worth noting that there are two distinct aspects when implementing a PCI or PIC : authoring on the one hand, and delivery on the other hand. The former requires the later. The IMS PCI only deals with the delivery, that is how the PCI should be implemented to be executable in any PCI-compliant vendor. This hook is standardized by IMS.<br/>
+
 TAO offers an additional hook in its item creator, which enable every item author to create and configure such PCIs via the GUI. This authoring hook is therefore specific to TAO. As stated in the previous paragraph, the runtime code is required because the item creator is based on a WYSWYG experience : although it is not required, we encourage PCI implementor to follow this principle to offer an optimal user experience.
 
 Since PIC is highly inspired by PCI, the following sections will successively introduce how to create PCI for TAO then present the difference for PIC.
@@ -42,13 +43,17 @@ Delivery/Runtime Hook
 
 To implement a PCI for delivery execution : you only have to follow the PCI specification.
 
-The PCI specification (add ref.) explain how a PCI should be implemented. PIC follows the same principle. The main concept being :\
-The XML present the interoperable format for a PCI and PIC.\
-The shared libraries define the resource.\
+The PCI specification (add ref.) explain how a PCI should be implemented. PIC follows the same principle. The main concept being :<br/>
+
+The XML present the interoperable format for a PCI and PIC.<br/>
+
+The shared libraries define the resource.<br/>
+
 The hook is the entry point.
 
 **Important note 1 :**\
-Any Javascript code in PCI and PIC must be wrapped as proper AMD. No code such as window.myGlobalScope = {…} is allowed.\
+Any Javascript code in PCI and PIC must be wrapped as proper AMD. No code such as window.myGlobalScope = {…} is allowed.<br/>
+
 This requirement includes all embedded libraries. Indeed there is no way to know in advance which libraries and which version would be used in PCI. Failure to comply with the AMD pattern would break interoperability and perhaps the delivery or creator engine itself.
 
 **Important note 2 :**\
@@ -69,10 +74,13 @@ The goal of this section is to give an overview of the way a PCI Creator Hook is
 
 First, let’s have a look at a sample implementation available at [qtiItemPci/views/js/pciCreator/dev/likertScaleInteraction](https://github.com/oat-sa/extension-tao-itemqti-pci/tree/develop/views/js/pciCreator/dev/likertScaleInteraction).
 
-File structure :\
+File structure :<br/>
+
 The root folder must contains two files : pciCreator.js and pciCreator.json\
-The file pciCreator.json is the manifest file that contains all the data required by the server and the client to describe the pciCreator (name, label, required js, css etc).\
-The file pciCreator.js is an AMD module that will be the hook for the Item Creator upon initialization.\
+The file pciCreator.json is the manifest file that contains all the data required by the server and the client to describe the pciCreator (name, label, required js, css etc).<br/>
+
+The file pciCreator.js is an AMD module that will be the hook for the Item Creator upon initialization.<br/>
+
 The remaining files are the source or media used in pciCreator.js and pciCreator.json. The pci creator implementor is free to organize those files as will but we would recommend clearly separating code of the delivery from the authoring (e.g. runtime folder / creator folder).
 
 manifest file : pciCreator.json
@@ -125,7 +133,8 @@ Unless stated otherwise, all fields are required.
 
 ### For PIC :
 
-The previous statements apply to PIC with the following notable exceptions :\
+The previous statements apply to PIC with the following notable exceptions :<br/>
+
 The two required files are respectively called picCreator.json and pciCreator.js (instead of pciCreator.json and picCreator.js)\
 icon : this is not currently used but is still required for consistency with the PCI package and keping for future usage (e.g. a more visual PIC selection toolbar)\
 response : this is not useful for PIC since no response is expected from an info control so should not appear in picCreator.json
@@ -237,8 +246,10 @@ You can use available requiresjs extension such as tpl![](../resources/, css), j
 
 You can also reference any file relative to your directory in the namespace of your PCI. The namespace is the unique typeIdentifier of your PCI : e.g. when the typeIdentifier of the PCI is likertScaleInteraction, likertScaleInteraction/creator/widget/Widget refer to the file that is located at ./creator/widget/Widget.js
 
-When adding a PCI into your item, all required files declared in the manifest json will be copied into the item content folder :\
-For example, a file defined as ./creator/media/icon.svg will be copied to {{itemContentDir}}/{{typeIdentifier}}/creator/media/icon.svg (where itemContentDir is the absolute path to the item content directory and typeIdentifier is the PCI typeIdentifier).\
+When adding a PCI into your item, all required files declared in the manifest json will be copied into the item content folder :<br/>
+
+For example, a file defined as ./creator/media/icon.svg will be copied to {{itemContentDir}}/{{typeIdentifier}}/creator/media/icon.svg (where itemContentDir is the absolute path to the item content directory and typeIdentifier is the PCI typeIdentifier).<br/>
+
 Multiple instance of a single PCI implementation will therefore share the same files and multiple implementations of PCIs will not overwrite the files of each other. For example two PCIs (myGreatPCI and myAwesomePci) may have a file named ./js/lib/common.js but they will end up in two different folders when added to the item, respectively {{myGreatPCI}}/js/lib/common.js and {{myAwesomePci}}/js/lib/common.js.
 
 As a consequence, if you want to attach a media file to your PCI markup, please do not forget to add its namespace. Instead of <img src="img/icon.svg" />, write <img src="myAwesomePci/img/icon.svg" /> since img/icon.svg declared in the manifest will be copied to myAwesomePci/img/icon.svg.
@@ -246,12 +257,14 @@ As a consequence, if you want to attach a media file to your PCI markup, please 
 ### Custom Interaction Registry
 
 It is an especially useful helper located at [taoQtiItem/qtiCreator/editor/customInteractionRegistry](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/customInteractionRegistry.js)\
-It enables you to retrieve any data related to your PCI such as the content of the manifest or baseUrl.\
+It enables you to retrieve any data related to your PCI such as the content of the manifest or baseUrl.<br/>
+
 Since you are not supposed to know the location of the package is the file system, using customInteractionRegistry.getBaseUrl() is the only way you can get the link to a picture you want to use in your creator widget.
 
 ### For PIC :
 
-The same rules of thumb apply.\
+The same rules of thumb apply.<br/>
+
 The Portable Info Control registry is located at [taoQtiItem/qtiCreator/editor/infoControlRegistry.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/infoControlRegistry.js)
 
 Under the hood
@@ -259,7 +272,8 @@ Under the hood
 
 The previous sections described every needed components to create a PCI creator package. The sequence diagram below gives an overview of what is happening during execution of this code. This shall give PCI implementors better understand of PCI implementation in TAO.
 
-The members involved in this process are :\
+The members involved in this process are :<br/>
+
 portableCustomInteraction : [qtiCreator/model/interactions/PortableCustomInteraction.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/interactions/PortableCustomInteraction.js)\
 containerHelper : [qtiCreator/model/helper/container.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/helper/container.js)\
 registry : [qtiCreator/editor/customInteractionRegistry.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/customInteractionRegistry.js)\
@@ -272,8 +286,10 @@ The commonRenderer will basically call the the runtime code, which is initialize
 
 ### For PIC :
 
-The same principle applies.\
-The members and locations are :\
+The same principle applies.<br/>
+
+The members and locations are :<br/>
+
 portableInfoControl : [qtiCreator/model/PortableInfoControl.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/PortableInfoControl.js)\
 containerHelper : [qtiCreator/model/helper/container.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/model/helper/container.js)\
 registry : [qtiCreator/editor/infoControlRegistry.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCreator/editor/infoControlRegistry.js)\
@@ -286,9 +302,11 @@ Implementing Creator Widget
 
 A PCI or PIC creator widget follow strictly the same rules as any standard qti creator widget in TAO (e.g. Item, ChoiceInteraction, SimpleChoice, Img, Math etc.). For more information please go to the dedicated wiki page (link)
 
-Tips :\
+Tips :<br/>
+
 The standard QTI creator widget works directly on the DOM to reflect changes and new config set by the item author. This is the basis of the WYSIWYG experience associated with the new item creator. The sequence diagram in the previous section shows that the creator widget is built on top of the DOM generated by the runtime code\
-Quick recap, the DOM first comes from the runtime code execution. The creator widget is creates ui components on top of the runtime code. There are two strategies to implement a wysiwyg experience:\
+Quick recap, the DOM first comes from the runtime code execution. The creator widget is creates ui components on top of the runtime code. There are two strategies to implement a wysiwyg experience:<br/>
+
 1 : update the dom to reflect every changes\
 2 : refresh the whole interaction to reflect it\
 3 : a mix of them\

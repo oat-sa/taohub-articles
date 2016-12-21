@@ -22,7 +22,8 @@ The TAO platform rely on two different languages configuration that can be confi
 -   The Interface Language configuration handle all messages that came from the platform features.
 -   The Data Language concerns business related data and meta-data.
 
-Here is an example both UI Language and Data Language are in English.\
+Here is an example both UI Language and Data Language are in English.<br/>
+
 ![](../resources//attachments/download/2593/S%C3%A9lection_053.png)
 
 Here UI Language have been switched to French\
@@ -50,10 +51,14 @@ To translate the string `"Welcome to TAO"` to French (for example), you have to 
 
 This is it!
 
-\> **Be careful**:\
-\>\* If you let a *msgstr* empty, the English identifier will be displayed.\
-\>\* Never change the identifier, neither a space, a dot or a letter. If it’s the case, the translated string will not be displayed.\
-\>\* It’s possible that some strings are not in the software anymore. The translations files are cleaned only once by release.\
+\> **Be careful**:<br/>
+
+\>\* If you let a *msgstr* empty, the English identifier will be displayed.<br/>
+
+\>\* Never change the identifier, neither a space, a dot or a letter. If it’s the case, the translated string will not be displayed.<br/>
+
+\>\* It’s possible that some strings are not in the software anymore. The translations files are cleaned only once by release.<br/>
+
 \>\* Save your files using UTF-8 encoding.
 
 ### Data

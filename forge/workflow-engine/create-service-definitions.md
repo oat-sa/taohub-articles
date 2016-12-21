@@ -19,7 +19,8 @@ The services of an activity define the actual business of the activity.
 1. Preloaded services in TAO
 ----------------------------
 
-Most of the available actions in the TAO back-office are available as a service.\
+Most of the available actions in the TAO back-office are available as a service.<br/>
+
 The complete list of service is loaded into TAO during the installation process: they are available in the advanced authoring tool.
 
 The complete description of services can be found here : attachment:Services\_definition.pdf
@@ -187,7 +188,8 @@ You may want to implement a service directly within your TAO file system, to tak
 
 The short tutorial below shows how to create a basic service that embeds a URL in an iframe, in the taoDelivery extension.
 
-To build a basic service, you need to create a controller in the actions folder of an extension, that extends *CommonModule*.\
+To build a basic service, you need to create a controller in the actions folder of an extension, that extends *CommonModule*.<br/>
+
 First create a new controller, called *taoDelivery\_actions\_WebService* (see: [[Guidelines\#Namespace|naming convention in TAO]]) in the actions directory of the taoDelivery extension: *yourWebRootPath/taoDeliveries/actions/class.WebService.php*
 
 
@@ -206,9 +208,11 @@ Next, add a default *“index”* method, which will be the default action calle
         }
     }
 
-\_Note: you can directly reuse the method of the php framwork like *getRequestParameter()* to get a parameter from the *\$\_REQUEST* global array, or use the *\$\_POST* or *\$\_GET* global arrays instead.\_
+\_Note: you can directly reuse the method of the php framwork like *getRequestParameter()* to get a parameter from the *\$\_REQUEST* global array, or use the *\$\_POST* or *\$\_GET* global arrays instead.<br/>
+_
 
-The current service is called by the url */taoDelivery/WebService/index* (URL rewriting engine on).\
+The current service is called by the url */taoDelivery/WebService/index* (URL rewriting engine on).<br/>
+
 The *“url”* parameter for the service needs to be given via the *HTTP method GET*.
 
 Such a service definition can be created in TAO with the same previously introduced method *createServiceDefinition()*:

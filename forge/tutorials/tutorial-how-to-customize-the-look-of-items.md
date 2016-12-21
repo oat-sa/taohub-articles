@@ -28,7 +28,8 @@ The *Style Sheet Manager* allows to add your own CSS files to an item. If you wa
 
 Style sheets are stored along with the item in `/tao/generis/data/taoItems/itemData/ITEM_ID/itemContent/en-US`. To find the Item Id you need to inspect the source code of the item in the console of your browsers, search for `data-identifier`:
 
-![](../resources/find-item-serial.png).\
+![](../resources/find-item-serial.png).<br/>
+
 Screen shot taken in Firefox, this item has the identifier `i14048063114861116` and is hence located at `/tao/generis/data/taoItems/itemData/i14048063114861116/itemContent/en-US`
 
 As a basis for this tutorial we create a very simple CSS file and upload it through the *Style Sheet Manager*. It is important that all your styles start with `body div.qti-item.tao-scope` to be sure you don’t make any unwanted modifications!

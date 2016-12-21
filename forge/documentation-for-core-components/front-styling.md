@@ -35,7 +35,8 @@ The folder `tao/views/scss/` contains the main theme (`tao-main-style.scss`) as 
 
 #### Extension’s custom styles
 
-You can create your own style sheets into a specific extension. You need to create a structure according to the hierarchy described into [[Front Structure]].\
+You can create your own style sheets into a specific extension. You need to create a structure according to the hierarchy described into [[Front Structure]].<br/>
+
 In extension’s SCSS files, include the bootstrap.
 
     @import "inc/bootstrap";
@@ -46,7 +47,8 @@ Do not forget to add the path to the bootstrap into your compiler’s options (`
 
 ### Compiling
 
-In order to compile (or watch) your SASS files to the target CSS, you can either use:\
+In order to compile (or watch) your SASS files to the target CSS, you can either use:<br/>
+
  - The grunt task provided with TAO (see [[Front Tools]])\
  - The SASS CLI tool provided by SASS (requires ruby and the sass gem)\
  - Your favorite IDE SASS plugin

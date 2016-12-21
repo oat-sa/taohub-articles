@@ -31,7 +31,8 @@ The interface `common_session_Session` has changed:
 
 ### Access Control
 
-The access control has been replaced by an abstraction that needs to implement the interface `tao_models_classes_accessControl_AccessControl`.\
+The access control has been replaced by an abstraction that needs to implement the interface `tao_models_classes_accessControl_AccessControl`.<br/>
+
 To test whenever the user has access to a functionality please use `tao_models_classes_accessControl_AclProxy::hasAccess($action, $controller, $extension, $parameters = array())`
 
 ### Extension Manifest

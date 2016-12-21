@@ -19,10 +19,12 @@ This document describes abstractions available for TAO 3.0. Please see [[Data ab
 The key-value storage implementation may be installed and configured under the following conditions:
 
 -   If you are using Ubuntu, make sure you have the following packages installed:
-    -   for Redis:\
+    -   for Redis:<br/>
+
         “redis-server” on the server you want to use for the storage\
         “php5-redis” on the TAO application server
-    -   for Couchbase:\
+    -   for Couchbase:<br/>
+
         “couchbase-server” (on the server you want to use for the storage)\
         PECL “couchbase” library on the TAO application server
 -   If you are using Fedora/CentOS/RHEL, make sure you have the following packages installed:
@@ -36,7 +38,8 @@ Delivery execution informations storage abstraction
 
 {{collapse(View details…)
 
-Delivery execution information cover everything related to what test taker has started/finished which delivery.\
+Delivery execution information cover everything related to what test taker has started/finished which delivery.<br/>
+
 The choice of the abstraction is done in *config/taoDelivery/execution\_service.conf.php*.
 
 ### Storing delivery execution informations in the ontology (default)
@@ -140,7 +143,8 @@ PHP session storage abstraction
 
 {{collapse(View details…)
 
-This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.\
+This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.<br/>
+
 See also: http://php.net/manual/en/function.session-set-save-handler.php
 
 ### System session storage (default)
@@ -181,7 +185,8 @@ User authentication storage abstraction
 
 {{collapse(View details…)
 
-Currently, there are at least two user authentication methods available:\
+Currently, there are at least two user authentication methods available:<br/>
+
 - using the Generis model user adapter (default method)\
 - using the key-value user adapter
 
@@ -225,7 +230,8 @@ Result storage abstraction
 
 {{collapse(View details…)
 
-The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server.\
+The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server.<br/>
+
 This happens in the back office user interface respectively in “Result Servers Management” and “Delivery” tabs.
 
 Two major implementations of Result Storage exist:

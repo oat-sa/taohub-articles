@@ -34,7 +34,8 @@ New Server
 
 \* Replace the config and data directory and to set the correct file owner/rights.
 
-\* Modify **config/generis.conf.php** to reflect your new domain and directories.\
+\* Modify **config/generis.conf.php** to reflect your new domain and directories.<br/>
+
 *Note: Do NOT change GENERIS\_INSTANCE\_NAME or LOCAL\_NAMESPACE and watch out for the trailing slashes when writing paths!*
 
     define('ROOT_PATH','/var/www/newTaoDirectory/');

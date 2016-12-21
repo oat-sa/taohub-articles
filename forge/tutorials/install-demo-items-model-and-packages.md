@@ -12,7 +12,8 @@ tags:
 Install demo items model and packages
 =====================================
 
-This files contained in this archive will be used during the IAEA 2013 conference in Tel Aviv. Please simply download the archives on your machine prior to the workshop.\
+This files contained in this archive will be used during the IAEA 2013 conference in Tel Aviv. Please simply download the archives on your machine prior to the workshop.<br/>
+
 The files to download are:
 
 1.  The [Sample Item package](http://forge.taotesting.com/attachments/download/2621/TAO%202.5%20Sample%20item%20package.zip) containing the RDF files for the folder hierarchy and the sample items packages.

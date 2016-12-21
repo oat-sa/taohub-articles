@@ -21,7 +21,8 @@ The Deliveries part has four tabs:
 1. [[Manage Deliveries]]
 ------------------------
 
-The Manage Deliveries tab manages the deliveries list and the properties of these deliveries.\
+The Manage Deliveries tab manages the deliveries list and the properties of these deliveries.<br/>
+
 The delivery creation is carried by the selection of test(s), the selection of group(s), the selection of test taker(s) to be excluded and the selection of campaign(s).
 
 The main functions of this tab:
@@ -47,7 +48,8 @@ The main functions of this tab:
 2. [[Manage Campaigns]]
 -----------------------
 
-The Manage Campaigns tab manages the campaigns list and the properties of these campaigns.\
+The Manage Campaigns tab manages the campaigns list and the properties of these campaigns.<br/>
+
 The campaign creation is carried by the selection of delivery(ies).
 
 The main functions of this tab:
@@ -67,7 +69,8 @@ The main functions of this tab:
 3. [[Manage Result Servers]]
 ----------------------------
 
-This tab manages the result servers list and the properties of these result servers.\
+This tab manages the result servers list and the properties of these result servers.<br/>
+
 The result server creation is carried by the selection of delivery(ies).
 
 The main functions of this section:
@@ -87,7 +90,9 @@ The main functions of this section:
 4. Advanced authoring tool
 --------------------------
 
-The [[Deliveries Advanced authoring tool]] tab is only available if the Processes part is installed.\
-This tab permits to create a complex list of tests.\
+The [[Deliveries Advanced authoring tool]] tab is only available if the Processes part is installed.<br/>
+
+This tab permits to create a complex list of tests.<br/>
+
 Indeed, without the Processes extension, it is only possible to create deliveries with a sequential list of tests.
 

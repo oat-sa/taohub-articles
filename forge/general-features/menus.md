@@ -22,7 +22,8 @@ You can navigate through the different parts of the platform by clicking on the 
 On the top right of the screen
 ------------------------------
 
-The icons allows you to perform different actions:\
+The icons allows you to perform different actions:<br/>
+
 ![](../resources/Icon_menu.png)
 
 **1** **Users** ![](../resources/1-users.png)

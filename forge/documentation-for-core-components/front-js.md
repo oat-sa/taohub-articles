@@ -15,14 +15,16 @@ JavaScript Guidelines
 Require.js
 ----------
 
-[Require.js](http://requirejs.org/) is the framework used by TAO to structure client side code.\
+[Require.js](http://requirejs.org/) is the framework used by TAO to structure client side code.<br/>
+
 The JavaScript code is split into web modules using the [AMD](http://en.wikipedia.org/wiki/Asynchronous_module_definition) (Asynchronous module definition) standard.
 
 > **Any piece of JavaScript code into TAO must be a valid AMD module!**
 
 ### Controllers and routing
 
-In order to load code regarding the MVC routing used in TAO server side code, a routing strategy has been implemented on the client side.\
+In order to load code regarding the MVC routing used in TAO server side code, a routing strategy has been implemented on the client side.<br/>
+
 The strategy works for any Ajax request made inside the TAO backend that display HTML (using the mime-type set in the response headers).
 
 > **Routing does not work with redirect** (due to the way the browser handles it), avoid AJAX redirect and prefer *forward*
@@ -65,7 +67,8 @@ The structure of the routes object is the following, contained into : `$extensio
 -   ‘deps’ : list the scripts to load by action
 -   ’\$actionName : the scripts to load or an array of scripts to load. They will be loaded for all requests that match /\$extensionName/\$ModuleName/\$actionName
 
-The loaded scripts are considered as controller, it means : if the script expose of function `start`, this function will be executed after load.\
+The loaded scripts are considered as controller, it means : if the script expose of function `start`, this function will be executed after load.<br/>
+
 In the preview example, the controller `controller/preview/itemRunner` will look like:
 
     define(function(){

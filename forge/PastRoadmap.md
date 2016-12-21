@@ -17,14 +17,16 @@ To stay up to date according to PHP’s development, we plan to support PHP 5.4.
 
 ### 2. Tests Coverage
 
-This release doens’t include new specific features for users but will improve the overall quality of tao and avoid future regressions and bugs.\
+This release doens’t include new specific features for users but will improve the overall quality of tao and avoid future regressions and bugs.<br/>
+
 The team will try to reach a unit tests coverage of 80% of all the source code of tao. Currently all unit tests are checked upon release and help to detect any regression, side-effects of new features on the platform.
 
 The unit test framework used will be simpleTest(no change)
 
 ### 3. Database abstraction component replacement
 
-Currently TAO uses AdoDB that is now deprecated. TAO would benefit in terms of maintenance and performances from using PDO native implementation now available in PHP.\
+Currently TAO uses AdoDB that is now deprecated. TAO would benefit in terms of maintenance and performances from using PDO native implementation now available in PHP.<br/>
+
 In terms of effort, since TAO makes use of standard and simple SQL queries and since AdoDb works similarly, msot of the effort will eb concenntrated on the rewriting of the returned results handling (mixed objects instead of adoDBResult). Running the unit tests, should allow us to detect regressions during the migration. We target to replace AdoDB with [PDO (PHP Data Objects)](http://www.php.net/manual/en/intro.pdo.php). We anticipate to have some performances improvements with this migration.
 
 The team will also check compliance of TAO 2.4 using mainstream SQL database servers for better compatibility and eventually review sql queries.
@@ -67,7 +69,8 @@ A new installer has been developped in TAO. It includes new user interfaces buil
 
 ### Extensions Management
 
--   Extension manager . Tao would benefit from an embedded service enabling user to browse and install easily extensions directory providing dedicated features or custom adaptations of the tao platform.\
+-   Extension manager . Tao would benefit from an embedded service enabling user to browse and install easily extensions directory providing dedicated features or custom adaptations of the tao platform.<br/>
+
     The extension manager has been partly implemented in TAO 2.3, it is available under the settings pane of the backoffice. You amy easily install new extensions from there. The online directory exposing all available extensions hasn’t been set up yet.
 
 <!-- -->
@@ -95,20 +98,24 @@ This will enable the grading functionnality, includign the possibility to define
 
 \> Other benefits included the possibility to use the anonymous statistics from conflicting scores and graders’ work to adapt the assignation of scoring tasks to scores thus improving the entire quality of the results management. These accomplishments and others like assessment from the test takers performance is thereby going to enhance on the overall course improvement and making amendments where needed.
 
-\> Functionalities :\
+\> Functionalities :<br/>
+
 \> \* Specify a scale (min, max, and step) for the manual grading of items in item authoring tool\
-\> \* Provide a GUI, in the results extension, enabling graders to browse test takers (anonymously or not) and grade for each items and interactions of items according to the specified scale. Advanced browsing will make use of properties defined on items as criteria to grade by focusing exclusively on subsets of items.\
+\> \* Provide a GUI, in the results extension, enabling graders to browse test takers (anonymously or not) and grade for each items and interactions of items according to the specified scale. Advanced browsing will make use of properties defined on items as criteria to grade by focusing exclusively on subsets of items.<br/>
+
 \> \* Reconciliation user interface exposing all conflicting grades from graders and prompting for a reconciled score\
 \> \* Compute statistics from grades.
 
 ### 2. Resources (Item Bank) Versioning\*
 
-\>Items, Tests but also other resources of TAO evolve over time. CBA brings some specific challenges in terms of management like the issue of collecting data from items which have evolved between the data collection and the data analysis, etc.\
+\>Items, Tests but also other resources of TAO evolve over time. CBA brings some specific challenges in terms of management like the issue of collecting data from items which have evolved between the data collection and the data analysis, etc.<br/>
+
 \>his new capability enable to manage the different versions of resources, check the history of modifications and perform “version restore” operations.
 
 ### 3. Bug fixes
 
-\>The TAO 2.2 will bring many bug fixes not yet release since the last 2.1 version of tao.\
+\>The TAO 2.2 will bring many bug fixes not yet release since the last 2.1 version of tao.<br/>
+
 \>[List of Solved issues in 2.2](http://forge.taotesting.com/projects/tao/issues?set_filter=1&f[]=status_id&op[status_id]=o&f[]=fixed_version_id&op[fixed_version_id]=%3D&v[fixed_version_id][]=71&f[]=&c[]=status&c[]=priority&c[]=subject&c[]=author&c[]=assigned_to&c[]=updated_on&c[]=fixed_version&group_by=)
 
 TAO 2.1 Scalability (TAO version 2.1 released)
@@ -137,12 +144,14 @@ Edit : Scalability features have been adressed within tao 2.1. The changes inclu
 TAO 2.0 Governing CBA Organisational processes with TAO Advanced workflow features (TAO 2.0 released)
 -----------------------------------------------------------------------------------------------------
 
-CBA operations can be achieved by the TAO platform, this includes, Items authoring, Subjects import, tests definition, Items translation, etc. For larger stakes, needs or scale, there is often a need to conduct organisational processes and the way the cba operations are performed by every stakeholders having a role into this process.\
+CBA operations can be achieved by the TAO platform, this includes, Items authoring, Subjects import, tests definition, Items translation, etc. For larger stakes, needs or scale, there is often a need to conduct organisational processes and the way the cba operations are performed by every stakeholders having a role into this process.<br/>
+
 According to tools provided and described above there is a need for advanced features of the workflow engine so that CBA managers may design their own specific CBA process for translation, item authoring, item review, test takers free response coding etc. This means to define activites of the process, roles and CBA operations with their related tool/feature from tao expected to be used.
 
 The TAO workflow engine is now available and enable you to design such organisationnal processes involving parts of tao, specific features at the righ time for the right user. There are still some functionnal requirments here :
 
-Being able to assign an activity to a specific user at run time by opposition to the design of a fixed role at process design time (a translation process could include an activity where a manager decide who is able to translate this item for the next activity.\
+Being able to assign an activity to a specific user at run time by opposition to the design of a fixed role at process design time (a translation process could include an activity where a manager decide who is able to translate this item for the next activity.<br/>
+
 In addition, it should be possible to add set/bag activities with general selection algorithms, like a random selector (which would be useful especially at the level of the test delivery for adaptive testing).
 
 -   A detailed email reporting system warning stakeholders on the progress of the processes or warning them that they are expected to take and perform some specific activity. A specific time engine could also improve time management in processes including time limitations or expiration timeouts.

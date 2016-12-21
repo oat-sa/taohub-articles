@@ -51,7 +51,8 @@ This option requires requires the *x-tao-option-reviewScreen* option.
 x-tao-option-reviewScreen
 -------------------------
 
-displays the review screen / navigator. example :\
+displays the review screen / navigator. example :<br/>
+
 ![](../resources/NavigationExample.png)
 
 This option requires a modification to the **/config/taoQtiTest/testRunner.conf.php** file. Please find the line:

@@ -25,7 +25,8 @@ Preparation
 LTI Installation
 ----------------
 
--   to Install the required extensions in Tao:\
+-   to Install the required extensions in Tao:<br/>
+
     \*\# go to Settings (Upper right corner)\
     \*\# open the tab **Extensions manager**\
     \*\# select the extensions **ltiDeliveryProvider** and **ltiProvider**\
@@ -49,8 +50,10 @@ Exchange Credentials
     \*\# Go to **Site administration** and open **Plugins** (under advanced features) ~~\> **Activity modules**~~\> **Manage activities**\
     \*\# Open **Settings** of the **External Tools** and click on **Add external tool configuration**\
     \*\# Name your configuration and enter the same Consumer Key and Shared Secret that you used in TAO\
-    **\# The Tool Base URL is TAO\_ROOT\_URL +**‘/ltiDeliveryProvider/DeliveryTool/launch’\*.\
-     (If you don’t know the url of your TAO instalation then return to the TAO back office home, look at your url and remove ‘tao/Main/index’.\
+    **\# The Tool Base URL is TAO\_ROOT\_URL +**‘/ltiDeliveryProvider/DeliveryTool/launch’\*.<br/>
+
+     (If you don’t know the url of your TAO instalation then return to the TAO back office home, look at your url and remove ‘tao/Main/index’.<br/>
+
      So if your TAO home is ‘http://localhost/tao24/tao/Main/index’ then your root url would be ‘http://localhost/tao24/’.)\
     \*\# click on ‘save Changes’
 
@@ -79,6 +82,7 @@ Testing it
 
 \*\# Login as a student registered in your course\
 \*\# Select the course and click on the activity\
-\*\# ???\
+\*\# ???<br/>
+
 \*\# Profit
 

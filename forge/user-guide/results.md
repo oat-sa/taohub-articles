@@ -19,8 +19,10 @@ The Results part has one section:
 [[Manage Results]]
 ------------------
 
-The Manage results section manages the results list and the properties of these results. All results are added automatically after passing the test(s).\
-The results stores are visible by the table creation.\
+The Manage results section manages the results list and the properties of these results. All results are added automatically after passing the test(s).<br/>
+
+The results stores are visible by the table creation.<br/>
+
 There are options to automatically create a table with for example all properties or only the score properties and there is an option to freely create a table by the manual selection of properties.
 
 The main functions of this section:

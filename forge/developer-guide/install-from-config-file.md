@@ -12,7 +12,8 @@ tags:
 Install from config file
 ========================
 
-Since tao v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.\
+Since tao v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.<br/>
+
 To call it simply use the command line :
 
     sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json
@@ -20,7 +21,8 @@ To call it simply use the command line :
 Config file
 -----------
 
-The config file can be wrote either in json or yaml. In order to use a yaml file you have to have the yaml extension for php on your server.\
+The config file can be wrote either in json or yaml. In order to use a yaml file you have to have the yaml extension for php on your server.<br/>
+
 The file will contain some mandatory and optional properties, they are listed below. You can find a example of this file [here](https://github.com/oat-sa/tao-core/blob/master/scripts/sample/config.json)
 
 ### Mandatory properties
@@ -39,7 +41,8 @@ This option is the one that will set your first tao user as a super user. It req
 
 #### configuration
 
-This section have several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.\
+This section have several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.<br/>
+
 Mandatory configuration :
 
 -   global

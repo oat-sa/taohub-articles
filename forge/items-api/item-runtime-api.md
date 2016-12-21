@@ -29,12 +29,17 @@ Description
 
 The **taoApi** provides the following services:
 
-\* Set and get pre-defined variables. These variables are then used in the TAO platform, like the `setScore` , `getSubjectLogin` or `setAnsweredValues` functions.\
+\* Set and get pre-defined variables. These variables are then used in the TAO platform, like the `setScore` , `getSubjectLogin` or `setAnsweredValues` functions.<br/>
+
  \* Set and get your variables using the `set/getUserVar` function\
- \* Communicate with a server-side platform. You can retrieve data from a server-side platform and push the collected data. By default, the API is connected to TAO, using authentication by token.\
- \* Trace the events. Each action made by the user (clicks, mouse move, entered text, etc.) can be logged by the API and sent to the server-side platform.\
- \* Trigger custom events. You can define your own events that will be traced like a common event. The custom events can be related to the item content. For example, in a math item you can trigger a *resolve equation* event when the user resolve an equation.\
- \* Define what should be done when the item is finished.\
+ \* Communicate with a server-side platform. You can retrieve data from a server-side platform and push the collected data. By default, the API is connected to TAO, using authentication by token.<br/>
+
+ \* Trace the events. Each action made by the user (clicks, mouse move, entered text, etc.) can be logged by the API and sent to the server-side platform.<br/>
+
+ \* Trigger custom events. You can define your own events that will be traced like a common event. The custom events can be related to the item content. For example, in a math item you can trigger a *resolve equation* event when the user resolve an equation.<br/>
+
+ \* Define what should be done when the item is finished.<br/>
+
  \* Say that the item is finished.
 
 Example

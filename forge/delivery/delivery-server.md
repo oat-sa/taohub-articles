@@ -22,7 +22,8 @@ The delivery editing interface allows defining the values of these properties.
 
 (see user guide: Edit a delivery)
 
-To determine whether a test taker is allowed to execute a delivery process, the method *taoDelivery\_models\_classes\_DeliveryServerService::getDeliveries* is called in the delivery server. It returns an array of deliveries for the logged subject, according to the properties set previously by the delivery creator.\
+To determine whether a test taker is allowed to execute a delivery process, the method *taoDelivery\_models\_classes\_DeliveryServerService::getDeliveries* is called in the delivery server. It returns an array of deliveries for the logged subject, according to the properties set previously by the delivery creator.<br/>
+
 The parameter *checkList* allows tuning the checking with a list of check methods to perform. By default, all methods starting by *check* are called :
 
 -   checkPeriod()
@@ -76,7 +77,8 @@ And the check function would be:
         return (bool) $returnValue;
     }
 
-All check functions must start by “check”.\
+All check functions must start by “check”.<br/>
+
 They will be given an array of parameters (currently, the delivery and the subject resources) and must return a variable with the boolean type (true if the condition is fulfilled, false otherwise).
 
 You can add a property in the model and make the corresponding check on a custom delivery server check function.

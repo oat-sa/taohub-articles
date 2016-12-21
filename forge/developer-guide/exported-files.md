@@ -14,7 +14,8 @@ tags:
 Exported Files
 ==============
 
-This article will show and explain exported files that you can get from TAO.\
+This article will show and explain exported files that you can get from TAO.<br/>
+
 These files are csv file so they will be displayed as table when opened with a spreadsheet software, in reality every column are separated by commas and the text is in quotes. There are samples of each exported files at the end of this page.
 
 Results Files
@@ -29,18 +30,178 @@ First you can have a complete export of the results. This will gather all result
 
   item           identifier             value                                                                                                                                                                                                                                                                                                              test\_taker
   -------------- ---------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ --------------
-  Item 1 Label   numAttempts            O:47:\\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";s:0:\"\";s:17:\"candidateResponse\";s:4:\"MQ==\";s:10:\"identifier\";s:11:\"numAttempts\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.74728000) 1459336098\\";}          Test taker 1
-  Item 1 Label   RESPONSE\_identifier   O:47:\\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";b:0;s:17:\"candidateResponse\";s:4:\"MA==\";s:10:\"identifier\";s:19:\"RESPONSE_identifier\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.36770800) 1459336118\\";}       Test taker 1
-  Item 1 Label   SCORE                  O:46:\\[taoResultServer\_models\_classes\_OutcomeVariable\\](../resources/7:{s:13:\"normalMaximum\";s:0:\"\";s:13:\"normalMinimum\";s:0:\"\";s:5:\"value\";s:4:\"MA==\";s:10:\"identifier\";s:5:\"SCORE\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:5:\"float\";s:5:\"epoch\";s:21:\"0.76872100) 1459336098\\";}   Test taker 1
-  Item 2 Label   numAttempts            O:47:\\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";s:0:\"\";s:17:\"candidateResponse\";s:4:\"MQ==\";s:10:\"identifier\";s:11:\"numAttempts\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.74728000) 1459336098\\";}          Test taker 1
-  Item 2 Label   RESPONSE\_identifier   O:47:\\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";b:0;s:17:\"candidateResponse\";s:4:\"MA==\";s:10:\"identifier\";s:19:\"RESPONSE_identifier\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.36770800) 1459336118\\";}       Test taker 1
-  Item 2 Label   SCORE                  O:46:\\[taoResultServer\_models\_classes\_OutcomeVariable\\](../resources/7:{s:13:\"normalMaximum\";s:0:\"\";s:13:\"normalMinimum\";s:0:\"\";s:5:\"value\";s:4:\"MA==\";s:10:\"identifier\";s:5:\"SCORE\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:5:\"float\";s:5:\"epoch\";s:21:\"0.76872100) 1459336098\\";}   Test taker 1
-  Item 1 Label   numAttempts            O:47:\\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";s:0:\"\";s:17:\"candidateResponse\";s:4:\"MQ==\";s:10:\"identifier\";s:11:\"numAttempts\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.74728000) 1459336098\\";}          Test taker 2
-  Item 1 Label   RESPONSE\_identifier   O:47:\\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";b:0;s:17:\"candidateResponse\";s:4:\"MA==\";s:10:\"identifier\";s:19:\"RESPONSE_identifier\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.36770800) 1459336118\\";}       Test taker 2
-  Item 1 Label   SCORE                  O:46:\\[taoResultServer\_models\_classes\_OutcomeVariable\\](../resources/7:{s:13:\"normalMaximum\";s:0:\"\";s:13:\"normalMinimum\";s:0:\"\";s:5:\"value\";s:4:\"MA==\";s:10:\"identifier\";s:5:\"SCORE\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:5:\"float\";s:5:\"epoch\";s:21:\"0.76872100) 1459336098\\";}   Test taker 2
-  Item 2 Label   numAttempts            O:47:\\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";s:0:\"\";s:17:\"candidateResponse\";s:4:\"MQ==\";s:10:\"identifier\";s:11:\"numAttempts\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.74728000) 1459336098\\";}          Test taker 2
-  Item 2 Label   RESPONSE\_identifier   O:47:\\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";b:0;s:17:\"candidateResponse\";s:4:\"MA==\";s:10:\"identifier\";s:19:\"RESPONSE_identifier\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.36770800) 1459336118\\";}       Test taker 2
-  Item 2 Label   SCORE                  O:46:\\[taoResultServer\_models\_classes\_OutcomeVariable\\](../resources/7:{s:13:\"normalMaximum\";s:0:\"\";s:13:\"normalMinimum\";s:0:\"\";s:5:\"value\";s:4:\"MA==\";s:10:\"identifier\";s:5:\"SCORE\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:5:\"float\";s:5:\"epoch\";s:21:\"0.76872100) 1459336098\\";}   Test taker 2
+  Item 1 Label   numAttempts            O:47:<br/>
+\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:<br/>
+"correctResponse\";s:0:<br/>
+"\";s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MQ==\";s:10:<br/>
+"identifier\";s:11:<br/>
+"numAttempts\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:7:<br/>
+"integer\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.74728000) 1459336098\\";}          Test taker 1
+  Item 1 Label   RESPONSE\_identifier   O:47:<br/>
+\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:<br/>
+"correctResponse\";b:0;s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MA==\";s:10:<br/>
+"identifier\";s:19:<br/>
+"RESPONSE_identifier\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:7:<br/>
+"integer\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.36770800) 1459336118\\";}       Test taker 1
+  Item 1 Label   SCORE                  O:46:<br/>
+\[taoResultServer\_models\_classes\_OutcomeVariable\\](../resources/7:{s:13:<br/>
+"normalMaximum\";s:0:<br/>
+"\";s:13:<br/>
+"normalMinimum\";s:0:<br/>
+"\";s:5:<br/>
+"value\";s:4:<br/>
+"MA==\";s:10:<br/>
+"identifier\";s:5:<br/>
+"SCORE\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:5:<br/>
+"float\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.76872100) 1459336098\\";}   Test taker 1
+  Item 2 Label   numAttempts            O:47:<br/>
+\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:<br/>
+"correctResponse\";s:0:<br/>
+"\";s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MQ==\";s:10:<br/>
+"identifier\";s:11:<br/>
+"numAttempts\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:7:<br/>
+"integer\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.74728000) 1459336098\\";}          Test taker 1
+  Item 2 Label   RESPONSE\_identifier   O:47:<br/>
+\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:<br/>
+"correctResponse\";b:0;s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MA==\";s:10:<br/>
+"identifier\";s:19:<br/>
+"RESPONSE_identifier\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:7:<br/>
+"integer\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.36770800) 1459336118\\";}       Test taker 1
+  Item 2 Label   SCORE                  O:46:<br/>
+\[taoResultServer\_models\_classes\_OutcomeVariable\\](../resources/7:{s:13:<br/>
+"normalMaximum\";s:0:<br/>
+"\";s:13:<br/>
+"normalMinimum\";s:0:<br/>
+"\";s:5:<br/>
+"value\";s:4:<br/>
+"MA==\";s:10:<br/>
+"identifier\";s:5:<br/>
+"SCORE\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:5:<br/>
+"float\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.76872100) 1459336098\\";}   Test taker 1
+  Item 1 Label   numAttempts            O:47:<br/>
+\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:<br/>
+"correctResponse\";s:0:<br/>
+"\";s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MQ==\";s:10:<br/>
+"identifier\";s:11:<br/>
+"numAttempts\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:7:<br/>
+"integer\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.74728000) 1459336098\\";}          Test taker 2
+  Item 1 Label   RESPONSE\_identifier   O:47:<br/>
+\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:<br/>
+"correctResponse\";b:0;s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MA==\";s:10:<br/>
+"identifier\";s:19:<br/>
+"RESPONSE_identifier\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:7:<br/>
+"integer\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.36770800) 1459336118\\";}       Test taker 2
+  Item 1 Label   SCORE                  O:46:<br/>
+\[taoResultServer\_models\_classes\_OutcomeVariable\\](../resources/7:{s:13:<br/>
+"normalMaximum\";s:0:<br/>
+"\";s:13:<br/>
+"normalMinimum\";s:0:<br/>
+"\";s:5:<br/>
+"value\";s:4:<br/>
+"MA==\";s:10:<br/>
+"identifier\";s:5:<br/>
+"SCORE\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:5:<br/>
+"float\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.76872100) 1459336098\\";}   Test taker 2
+  Item 2 Label   numAttempts            O:47:<br/>
+\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:<br/>
+"correctResponse\";s:0:<br/>
+"\";s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MQ==\";s:10:<br/>
+"identifier\";s:11:<br/>
+"numAttempts\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:7:<br/>
+"integer\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.74728000) 1459336098\\";}          Test taker 2
+  Item 2 Label   RESPONSE\_identifier   O:47:<br/>
+\[taoResultServer\_models\_classes\_ResponseVariable\\](../resources/6:{s:15:<br/>
+"correctResponse\";b:0;s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MA==\";s:10:<br/>
+"identifier\";s:19:<br/>
+"RESPONSE_identifier\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:7:<br/>
+"integer\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.36770800) 1459336118\\";}       Test taker 2
+  Item 2 Label   SCORE                  O:46:<br/>
+\[taoResultServer\_models\_classes\_OutcomeVariable\\](../resources/7:{s:13:<br/>
+"normalMaximum\";s:0:<br/>
+"\";s:13:<br/>
+"normalMinimum\";s:0:<br/>
+"\";s:5:<br/>
+"value\";s:4:<br/>
+"MA==\";s:10:<br/>
+"identifier\";s:5:<br/>
+"SCORE\";s:11:<br/>
+"cardinality\";s:6:<br/>
+"single\";s:8:<br/>
+"baseType\";s:5:<br/>
+"float\";s:5:<br/>
+"epoch\";s:21:<br/>
+"0.76872100) 1459336098\\";}   Test taker 2
 
 Here you can see that the file is divided into 4 parts :
 
@@ -49,7 +210,9 @@ Here you can see that the file is divided into 4 parts :
 
 \* The third column is the most tricky one. It contains the php serialized variable, it can be a response, an outcome or a trace variable. Letters followed by colons and numbers correspond to the type of the following variable (O= Object, s = string, i = integer …) the number corresponds to the length of the variable. For each variable you will have first the variable class (taoResultServer\_models\_classes\_ResponseVariable, taoResultServer\_models\_classes\_OutcomeVariable or taoResultServer\_models\_classes\_TraceVariable) then between curly braces you will have multiple couples of property name and value. For example :
 
-    s:17:\"candidateResponse\";s:4:\"MQ==\";
+    s:17:<br/>
+"candidateResponse\";s:4:<br/>
+"MQ==\";
 
 says that the property candidateResponse (which is a string of length 17) has for value MQ== (a string of length 4). This leads us to the last point, some of the value are base64 encoded. This is true for the candidateResponse of a ResponseVariable and the value of an OutcomeVariable. So you will have to decode them in order to get a human readable value.
 

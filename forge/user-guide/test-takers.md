@@ -19,7 +19,8 @@ The Test takers part has one tab:
 [[Manage Test Takers]]
 ----------------------
 
-The Manage Test Takers tab manages the test takers list (test takers registration) and the properties of these test takers.\
+The Manage Test Takers tab manages the test takers list (test takers registration) and the properties of these test takers.<br/>
+
 This tab also allows the association of the selected test taker to group(s).
 
 The main functions of this tab are:

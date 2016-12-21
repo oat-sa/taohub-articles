@@ -19,7 +19,8 @@ HERE MIGRATION STEPS
 ***Do I have the legacy version of structures.xml:***
 -----------------------------------------------------
 
-The presence of <icon> child element of both <structure> element and <action> element indicates the new format.\
+The presence of <icon> child element of both <structure> element and <action> element indicates the new format.<br/>
+
 Where as absence of many url attributes in the <tree> child element of the <trees> signals a legacy version of structures.xml
 
 Check out above changes to see if you have the new format of structures.xml.

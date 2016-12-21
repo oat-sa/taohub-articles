@@ -31,6 +31,7 @@ Workflow Engine
 Overview
 --------
 
-This extension provides the workflow engine to drive all workflow related resources in TAO, such as tests, deliveries or custom organizational processes.\
+This extension provides the workflow engine to drive all workflow related resources in TAO, such as tests, deliveries or custom organizational processes.<br/>
+
 This extension uses a specific RDF model to describe a process, both at [[Process definition model|the definition]] and [[Execution of a process|the execution]] level.
 

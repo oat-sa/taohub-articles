@@ -55,7 +55,8 @@ To run it
 \* On a Windows System:
 
     CD taoItems\scripts
-    C:\PHP5\php.exe -f "migrateLegacy.php" -- -arg1=value1 -arg2=value2
+    C:<br/>
+PHP5\php.exe -f "migrateLegacy.php" -- -arg1=value1 -arg2=value2
 
 To get the description of the script options, just launch it with the help argument.
 
@@ -78,7 +79,8 @@ We can distinguish 3 scenarios:
 2.  You have some items files that you would like to convert but independently of a TAO installation.
 3.  You have some items files that you would like to insert in a recent TAO distribution.
 
-Regarding the scenario that match the best to your needs, you will run the script with a specific combination of arguments.\
+Regarding the scenario that match the best to your needs, you will run the script with a specific combination of arguments.<br/>
+
 For example, for the second scenario, we will use the *input*, *output* and *pack* arguments. The command will look like this:
 
     php migrateLegacy.php --input=path/to/myQCM.xml --output=path/to/newitem/folder/ --pack=true

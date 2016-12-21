@@ -11,7 +11,8 @@ User modules & user scripts
 What are they?
 --------------
 
-User modules are pieces of Javascript that are loaded and executed at runtime by the item runner.\
+User modules are pieces of Javascript that are loaded and executed at runtime by the item runner.<br/>
+
 They should expose an object with an exec() method that will be called by the loader. They are available in both the new and old item runner.
 
 User scripts are a different - and older - implementation of the same concept. They are only implemented in the old item runner. Thus, you most probably want to create a user module rather than a user script.

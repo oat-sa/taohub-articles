@@ -64,7 +64,8 @@ So instead of:
 <code style="php"><pre>\
 if (\$currentVersion == ‘2.7.9’) {\
  // magic happens here\
- \$currentVersion = ‘2.7.10’;\
+ \$currentVersion = ‘2.7.10’;<br/>
+
 }
 
 </pre>
@@ -75,7 +76,8 @@ please use
 <code style="php"><pre>\
 if (\$this-\>isVersion(‘2.7.9’)) {\
  // magic happens here\
- \$this-\>setVersion(‘2.7.10’);\
+ \$this-\>setVersion(‘2.7.10’);<br/>
+
 }
 
 </pre>

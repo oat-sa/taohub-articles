@@ -56,7 +56,8 @@ TAO WorkFlow Engine
 
 An extra layer on top of TAO allows the definition of restricted user interfaces giving access to some particular features of the TAO platform based on roles of user connected. This is the purpose of the workflow engine described here:
 
-The complete application layer of TAO has been split into autonomous services that the user can access independently (Preview of an item, authoring tool, translation tool, etc.). An extension of TAO called “Process” allows assessment responsible to design organizational processes where users are assigned some specific activities and some particular tools expected to be used. This extension of TAO is then able to drive this process and gives the right tool to the right TAO user at the right time. For instance, this allows to standardize the way test items can be created or item translation can be performed.\
+The complete application layer of TAO has been split into autonomous services that the user can access independently (Preview of an item, authoring tool, translation tool, etc.). An extension of TAO called “Process” allows assessment responsible to design organizational processes where users are assigned some specific activities and some particular tools expected to be used. This extension of TAO is then able to drive this process and gives the right tool to the right TAO user at the right time. For instance, this allows to standardize the way test items can be created or item translation can be performed.<br/>
+
 ![](../resources/workflow.PNG)
 
 The quality Layer is made of a Services/widgets directory, the workflow engine presenting the services to the right connected user and a process designer tool. More information about the workflow engine can be found here: [[Workflow\_Engine]]

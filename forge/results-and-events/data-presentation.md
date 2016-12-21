@@ -87,7 +87,8 @@ The extension contains 4 classes
 
 ***Path* := *PU*[{ *Sep* } *PU* ]**\*
 
-*PU* : Property URI is the URI of a property of the ranged class.\
+*PU* : Property URI is the URI of a property of the ranged class.<br/>
+
 *Sep* : is a separator. In the current version Sep = ‘**’
 
 ### The path
@@ -95,6 +96,7 @@ The extension contains 4 classes
 The path constitutes an important notion in the description of a column. The path permits to establish a relation with instances of other classes.
 
 -   To get the accurate instances between classes, we use the concept of path query; each path query is a sequence of property URI, which will be used to do model exploitation. After that, for each instance, on uses the trGetBridgePropertyValues() to get exactly the appropriate set of instance corresponding to the initial instance and based on the path.
--   The path is created based on a other sub function : get the range of the class, get the description of the properties …See php Doc.\
+-   The path is created based on a other sub function : get the range of the class, get the description of the properties …See php Doc.<br/>
+
     On can put only the information related to the test it self, or on can also put other information from other class that are in relation with result classes. This is an interesting feature to use.
 

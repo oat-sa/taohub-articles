@@ -28,7 +28,8 @@ The waterphoenix platform has been developed initially to author XML documents. 
 
 ### Technology
 
-Because of the requirement of smoothness and the technologies used for the development of the TAO platform we decided to use javascript as main technology.\
+Because of the requirement of smoothness and the technologies used for the development of the TAO platform we decided to use javascript as main technology.<br/>
+
 In combination with this technology we use :
 
 -   The framework [jQuery](http://jquery.com/) as main javascript framework;
@@ -276,7 +277,8 @@ The waterphoenix platform comes with several extension developed to manage vario
 
 #### Xml
 
-Because the Waterphoenix has been developped to edit XML document the Xml extension like the Core extension is one of the pillar extension of the authoring tool.\
+Because the Waterphoenix has been developped to edit XML document the Xml extension like the Core extension is one of the pillar extension of the authoring tool.<br/>
+
 This extension allow to manage any type of XML document. It is required by the Xhtml, Xul and Black extensions. The Xhtml, Xul and Black are Xml based languages.
 
 #### BLACK

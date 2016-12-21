@@ -25,7 +25,8 @@ SSL/TLS is the primary method of encrypting client/server communications (ie. â€
 
 \>h4. HTTPS setup\
 \>\
-\>Most TAO implementations will be delivered via apache but similar documentation is available for alternatives:\
+\>Most TAO implementations will be delivered via apache but similar documentation is available for alternatives:<br/>
+
 \>\
 \>http://httpd.apache.org/docs/current/ssl/ssl\_howto.html\
 \>\

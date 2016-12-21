@@ -62,7 +62,8 @@ One week before the scheduled release, we publish Release Candidate versions. As
 
 During the development phase, we keep updating TAO from major issue. SVN-Patches are created and are directly provided to the community in the *comment* section of the related issue. Patch receives an incremental number and in the following days of the patch creation, the version available on TAO website will be updated and renamed according to the patch number. Patch’s Numbers are managed by the target version’s Head Developer.
 
-For instance, if the version of TAO available on the TAO website is *TAO 2.1.01*, *2.1* indicates the version number and *.01* indicates that the patch *01* had been applied.\
+For instance, if the version of TAO available on the TAO website is *TAO 2.1.01*, *2.1* indicates the version number and *.01* indicates that the patch *01* had been applied.<br/>
+
 All available patches for a version may also be found in the [SVN](http://forge.taotesting.com/projects/tao/repository/show/patchs)
 
 4. Contribution

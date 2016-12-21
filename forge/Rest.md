@@ -76,7 +76,28 @@ Let’s assume you want to retrieve the list of test takers … (for other metho
 The outcome according to application/json :
 
 
-    {"success":true,"data":[{"uri":"http:\/\/tao-dev\/taodev.rdf#i1372425843494221","properties":[{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userFirstName","values":[{"valueType":"literal","value":"Patrick"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userLastName","values":[{"valueType":"literal","value":"Plichart"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#login","values":[{"valueType":"literal","value":"ppl"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#password","values":[{"valueType":"literal","value":"5396681eea50ad639ae3c9f8ca17b7d8"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userMail","values":[{"valueType":"literal","value":"patrick@taotesting.com"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userDefLg","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userUILg","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userRoles","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#DeliveryRole"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#generisRessourceComment"},{"predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAOSubject.rdf#Subject"}]},{"predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#value"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#comment"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#label","values":[{"valueType":"literal","value":"Patrick Plichart"}]},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#seeAlso"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#isDefinedBy"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#member"}]}],"version":"2.5-alpha"}
+    {"success":true,"data":[{"uri":"http:<br/>
+/\/tao-dev\/taodev.rdf#i1372425843494221","properties":[{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#userFirstName","values":[{"valueType":"literal","value":"Patrick"}]},{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#userLastName","values":[{"valueType":"literal","value":"Plichart"}]},{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#login","values":[{"valueType":"literal","value":"ppl"}]},{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#password","values":[{"valueType":"literal","value":"5396681eea50ad639ae3c9f8ca17b7d8"}]},{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#userMail","values":[{"valueType":"literal","value":"patrick@taotesting.com"}]},{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#userDefLg","values":[{"valueType":"resource","value":"http:<br/>
+/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"}]},{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#userUILg","values":[{"valueType":"resource","value":"http:<br/>
+/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"}]},{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#userRoles","values":[{"valueType":"resource","value":"http:<br/>
+/\/www.tao.lu\/Ontologies\/TAO.rdf#DeliveryRole"}]},{"predicateUri":"http:<br/>
+/\/www.tao.lu\/Ontologies\/generis.rdf#generisRessourceComment"},{"predicateUri":"http:<br/>
+/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type","values":[{"valueType":"resource","value":"http:<br/>
+/\/www.tao.lu\/Ontologies\/TAOSubject.rdf#Subject"}]},{"predicateUri":"http:<br/>
+/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#value"},{"predicateUri":"http:<br/>
+/\/www.w3.org\/2000\/01\/rdf-schema#comment"},{"predicateUri":"http:<br/>
+/\/www.w3.org\/2000\/01\/rdf-schema#label","values":[{"valueType":"literal","value":"Patrick Plichart"}]},{"predicateUri":"http:<br/>
+/\/www.w3.org\/2000\/01\/rdf-schema#seeAlso"},{"predicateUri":"http:<br/>
+/\/www.w3.org\/2000\/01\/rdf-schema#isDefinedBy"},{"predicateUri":"http:<br/>
+/\/www.w3.org\/2000\/01\/rdf-schema#member"}]}],"version":"2.5-alpha"}
 
 The outcome according to application/xml :
 
@@ -213,7 +234,8 @@ The outcome according to application/xml :
 Create a new Test taker
 -----------------------
 
-You will have to provide some mandatory parameters (in this case the login and the password).\
+You will have to provide some mandatory parameters (in this case the login and the password).<br/>
+
 For some parameters (Type, language) default values are applied, but you may explicit a different type or language.
 
 In general, you need to identify the parameters using URIs, for your convenience aliases for the default parameters were added. You may defines any other inforamtions according to the properties defined along your test takers.
@@ -542,20 +564,23 @@ Delete a test taker.
 Identification using Digest
 ---------------------------
 
-The Digest protocol is not yet implemented. Steps left for implementing it :\
+The Digest protocol is not yet implemented. Steps left for implementing it :<br/>
+
 - Store along user definition their hash upon user creation and update\
 - Retreeve this hash and combine it within RestCommonModule.php
 
 How to contribute here ?
 ------------------------
 
--   A library for php to connect on our REST layer would probably help programmers, this library would expose get(\$uri=null), post(\$parameters), put(\$uri, \$parameters), delete(\$uri) methods.\
+-   A library for php to connect on our REST layer would probably help programmers, this library would expose get(\$uri=null), post(\$parameters), put(\$uri, \$parameters), delete(\$uri) methods.<br/>
+
     Difficulty: easy
 
 How to add rest services on top of my custom tao extension I wrote ?
 --------------------------------------------------------------------
 
-You will need to add a rest controller extending the rest convenience built in TAO and to implement the four commands from REST.\
+You will need to add a rest controller extending the rest convenience built in TAO and to implement the four commands from REST.<br/>
+
 Example taken from test takers :
 
 

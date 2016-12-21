@@ -22,7 +22,8 @@ Hawai item format
 TODO
 ----
 
-- HAWAI or Hawaï ???\
+- HAWAI or Hawaï ???<br/>
+
 - `==` in sources instead of `=`
 
 Document
@@ -102,7 +103,8 @@ Init represents the initialization process and can be use either in the authorin
 
 ### (abstract) expression
 
-Derived elements :\
+Derived elements :<br/>
+
 [[Hawaï\_standard\#lock|lock]], [[Hawaï\_standard\#unlock|unlock]]
 
 ### knowledge

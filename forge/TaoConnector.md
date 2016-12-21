@@ -26,7 +26,8 @@ used to:
 functions:
 
 -   available without authentication:
-    -   **startSession**(login, password) returns an array of informations about the user if successful.\
+    -   **startSession**(login, password) returns an array of informations about the user if successful.<br/>
+
         (sessions started this way store the user-URI and token in the php session)
 
 <!-- -->
@@ -60,7 +61,8 @@ The following functions are used internally and are prone to change. These are N
 
 If the project needs to manage the token manually it can use the function in order to restore an earlier session.
 
-**** **initRestSession**(taoUrl, userUri, token, skipVerify = false) connects the library using a token after validating the token.\
+**** **initRestSession**(taoUrl, userUri, token, skipVerify = false) connects the library using a token after validating the token.<br/>
+
 (sessions restored via initRestSession do not store the token in the session)
 
 If the library needs to connect to multiple instances of tao at once, taoConnection can be used. However the developer needs to keep track of the instances of taoConnection himself.

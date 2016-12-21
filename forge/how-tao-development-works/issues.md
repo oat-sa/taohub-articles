@@ -16,7 +16,8 @@ Issues
 
 Issues include bugs, features, support or documentation matters.
 
-A reporter creates an issue in the default status **New**.\
+A reporter creates an issue in the default status **New**.<br/>
+
 If it’s a bug, the issue revision where the error appears has to be specified.
 
 Then, the manager has 4 alternatives:
@@ -28,19 +29,22 @@ Then, the manager has 4 alternatives:
 
 Once the assigned person begins to work on the issue, he defines the percentage he has achieved and sets the issue status to **In progress**.
 
-Once the issue seems to be resolved, the assigned person sets it to **To be tested** status.\
+Once the issue seems to be resolved, the assigned person sets it to **To be tested** status.<br/>
+
 The solution will be clearly defined :
 
 -   if it concerns a development version, the revision number shall be specified in the comment.
 -   if it is developed on a released version, a patch have to be attached to the issue and the modalities to apply it have to be explained in comment.
 
-The reporter has to test if the solution is OK.\
+The reporter has to test if the solution is OK.<br/>
+
 He has two possibilities:
 
 1.  if the solution is satisfactory: he sets the issue to a **Resolved** status
 2.  if the solution is not satisfactory: he sets the issue to a **Reopened** status and he specifies why it is reopened.
 
-Finally, at the next release, all fixed issues are released and transferred into **Closed** status.\
+Finally, at the next release, all fixed issues are released and transferred into **Closed** status.<br/>
+
 When a release is under process, no issue should be closed.
 
 Tracker
@@ -50,7 +54,8 @@ The field *Tracker* is the issue’s type.
 
 \>**Bug**\
 \>\
-\> You choose **Bug** if you want to report an error in a TAO version.\
+\> You choose **Bug** if you want to report an error in a TAO version.<br/>
+
 \> You have to\
 \> \* summarize the error\
 \> \* explain everything that can be useful to reproduce it\
@@ -58,7 +63,8 @@ The field *Tracker* is the issue’s type.
 
 \> **Feature**\
 \>\
-\> You choose **Feature** if you want to add a new feature.\
+\> You choose **Feature** if you want to add a new feature.<br/>
+
 \> If you want to add it in the roadmap of a version, you have to specify the Target version.
 
 \> **Support**\
@@ -69,28 +75,35 @@ Status
 ------
 
 \>**New**\
-\> Default status for new issue.\
+\> Default status for new issue.<br/>
+
 \>\
 \>**Feedback**\
-\> The manager needs more information from the reporter to understand the issue.\
+\> The manager needs more information from the reporter to understand the issue.<br/>
+
 \>\
 \>**Assigned**\
-\> The issue has been allocated to someone.\
+\> The issue has been allocated to someone.<br/>
+
 \>\
 \>**In progress**\
-\> The assigned developer is working on the issue.\
+\> The assigned developer is working on the issue.<br/>
+
 \>\
 \>**To be tested**\
 \> The issue has been resolved but need to be tested by the reporter\
 \>\
 \>**Resolved**\
-\> The issue is resolved.\
+\> The issue is resolved.<br/>
+
 \>\
 \>**Reopened**\
-\> The solution is not good. The issue is reopened.\
+\> The solution is not good. The issue is reopened.<br/>
+
 \>\
 \>**Rejected**\
-\> The issue won’t be / doesn’t need to be solved.\
+\> The issue won’t be / doesn’t need to be solved.<br/>
+
 \>\
 \>**Closed**\
 \> The solution to this issue is released.
@@ -98,16 +111,20 @@ Status
 Target Version
 --------------
 
-The Field **Target Version** is used to build the versions’ roadmap.\
+The Field **Target Version** is used to build the versions’ roadmap.<br/>
+
 The **Target Version** has to be set if the issue’s solution has to be integrated in the target version’s roadmap.
 
-If you want to add a new **Target version** or to manage existing versions, you have to play the role of a *Manager* for the project.\
-You go to *Settings* tab, then to the *Versions* tab.\
+If you want to add a new **Target version** or to manage existing versions, you have to play the role of a *Manager* for the project.<br/>
+
+You go to *Settings* tab, then to the *Versions* tab.<br/>
+
 You can add new version (to create new roadmap) or edit an existing version to change its parameters.
 
 Tested Version
 --------------
 
-The **Tested Version** field appears only if the **Tracker** is a **Bug**.\
+The **Tested Version** field appears only if the **Tracker** is a **Bug**.<br/>
+
 The idea is to put the TAO version for each encountered problem.
 

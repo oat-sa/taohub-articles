@@ -13,8 +13,10 @@ TAO X.X - Surveys Management and Advanced Item Bank Translation capabilities (No
 
 ### 1. Dedicated authoring tool for surveys
 
-\> Background questionnaire and survey management: template-based survey item authoring, and survey items repository.\
-\> Design complete surveys including cognitive assessments and background data collection in a fully integrated way.\
+\> Background questionnaire and survey management: template-based survey item authoring, and survey items repository.<br/>
+
+\> Design complete surveys including cognitive assessments and background data collection in a fully integrated way.<br/>
+
 \> Design Branching rules, consistency checks and derived variables in your questionnaire.
 
 ### 2. Translation capabilities with support for a professional translation outside TAO through XLIFF standard format.
@@ -23,7 +25,8 @@ TAO X.X - Surveys Management and Advanced Item Bank Translation capabilities (No
 \> Improve the quality of content translation, and cross-language comparability through translation and verification quality processes into TAO for multilingual surveys and assessments\
 \>Translation Capabilities will be split into three different components and integrated within a new extension “lgItem” extending taoItem. This extension will include three actions to be declared inside the “structure.xml” file describing actions pertaining to a new extension.
 
-\> 1. Xliff extractor relying on one item (either QTI or OWI) , proposing an interface requesting an optional xliff file, prompting for a target language, and generating an xliff file. If a translated xliff file is provided, the generated xliff file will include the translated translation units. (see christophe for this) The generated xliff file contains an identifier for the item (which is a versionned controlled content) thus including a uri and a version number.This action relies on the validation of content files (below).\
+\> 1. Xliff extractor relying on one item (either QTI or OWI) , proposing an interface requesting an optional xliff file, prompting for a target language, and generating an xliff file. If a translated xliff file is provided, the generated xliff file will include the translated translation units. (see christophe for this) The generated xliff file contains an identifier for the item (which is a versionned controlled content) thus including a uri and a version number.This action relies on the validation of content files (below).<br/>
+
 \> 2. Item Validation. This new action will validate items (any type) against different levels of checks. Syntaxical (QTI xsd, xHTML xsd) TAO (does the item include the TAO API) lgItem (are the content files valid for xliff generations)\
 \> 3. Xliff Injection. Applies the provided xliff file into a selected Item. A user interface will prompt for a target language overwriting target language found from the xliff file. A check for the uri and the version number found in the xliff file will be eprformed against the current version of the selected item. Legacy Item types : C-TEST, requires further checks for xliff generation
 
@@ -73,7 +76,8 @@ TAO 2.X R/Concerto Integration : Advanced Results, Reports management, Item eprs
 \>Users may design reports and manage them (classify them and characterize them similarly to the way users may manage any other resources in TAO). When users design a report template they define the static content using an XHTML toolbar as used in Concerto v3 HTML templates. In addition to this static part, users may define placeholders in the template report, and assign them a variable reference directly into the report template. Using Concerto logic and by means of a graphical programming interface, they may express how to compute the data in order to populate the variable that will get substituted with the variable reference at the placeholder location. For this, while programming the logic they may rely on different sources of data which depends on the use case:
 
 -   Individual feedback : In this scenario, the user gets a contextual test taker identification, he may directly query for the collected data arising from test execution (score, [endorsement, actual response] for each items), query for data describing the test taker arising from the test taker extension of TAO and in a more general way query for any data available from TAO (characteristics of items, etc.);
--   Grouped feedback : In this scenario, the user can retrieve the same type of information but the user needs to identify the scope of individual for whom to fetch the data.\
+-   Grouped feedback : In this scenario, the user can retrieve the same type of information but the user needs to identify the scope of individual for whom to fetch the data.<br/>
+
     In all cases, the user is provided with the statistical function provided by R.
 
 ### 2. Dynamic/Concerto Items
@@ -96,8 +100,10 @@ Increase advanced testing capacity and access high level psychometric features w
 There are restrictions at the level of properties selection of columns to populate tables. It is restricted to informations connected from the results, like the age of the studeing having passed the test related to the results but it is not possible to select informations defined the other way in the model like the teacher having the student who has taken the test.
 
 -   Ergonomy of the table of results tool (UTR)\
-    Based on the outcome from usability lab planned, a re-design of the suer interfaces will be performed.\
-    Increased usability and flexibility to create result tables combining test results, item, test, group, subject, and delivery meta-data and background information using the improved table builder and meta-data explorer, connect result table with data analysis tools directly from TAO using the embedded R user interface.\
+    Based on the outcome from usability lab planned, a re-design of the suer interfaces will be performed.<br/>
+
+    Increased usability and flexibility to create result tables combining test results, item, test, group, subject, and delivery meta-data and background information using the improved table builder and meta-data explorer, connect result table with data analysis tools directly from TAO using the embedded R user interface.<br/>
+
     In addition, the current user interfaces are not consistent with graphical widgets and layout used in the tao platform in general.
 
 TAO 3.0 Open Item Bank (& Items / Extension MarketPlace)\
@@ -117,7 +123,8 @@ Miscellaneous
 
 ### Generic widget to select resources. (Planned for TAO 2.2)
 
-TAO would benefit from advanced search facilities to help users when populating groups with the adequate subjects, or when selecting items constituting a test using criteria/property based search, facet based search, full text search. All those search facilities should come together with the tree view widget that is presented each time the user is invited to select explicitly resources.\
+TAO would benefit from advanced search facilities to help users when populating groups with the adequate subjects, or when selecting items constituting a test using criteria/property based search, facet based search, full text search. All those search facilities should come together with the tree view widget that is presented each time the user is invited to select explicitly resources.<br/>
+
 h3. Active Directories : LDAP support\
 h3. Advanced models management.
 
@@ -127,7 +134,8 @@ In terms of design, the meta-tao extension tao contains all graphical user inter
 
 ### Transactions management / Inference management / rights access management
 
-Generis on which rely TAO would benefit in terms of scalability and implementation from a prolog based core engine since such rule based features and transactions management are close to horn clauses that prolog already impelments natively. The RDF parser is distributed with SWI-Prolog under the LGPL Free Software licence.\
+Generis on which rely TAO would benefit in terms of scalability and implementation from a prolog based core engine since such rule based features and transactions management are close to horn clauses that prolog already impelments natively. The RDF parser is distributed with SWI-Prolog under the LGPL Free Software licence.<br/>
+
 Hopefully the architecture of the backedn of generis is flexible and a new implementation of the generis API would fit into the architecture.
 
 ### Peer to peer network
@@ -154,15 +162,18 @@ Collect informations/statistics about the use made of resources.
 
 ### Recursive forms embedding
 
-When editing a resource, for some of the properties, fields you may point to a resource (the property is a relation). It should be possible to recursively describe this connex resource within the main form and using an embeded form.\
+When editing a resource, for some of the properties, fields you may point to a resource (the property is a relation). It should be possible to recursively describe this connex resource within the main form and using an embeded form.<br/>
+
 h2. TAO 2.X Ease of Use
 
 TAO is a full-fledged platform highly customisable. This flexibility brings complexity. The plan is not to reduce the available functionality but optimize features presented to user by either :
 
 ### 1. Persona’s
 
-\> Targeting a specific type of users. (Ex.: teachers) and provide them with additional speciifc extensions adapting vocabulary, personalizing user interfaces and hiding less relevant capabilities or settings.\
-h3. 2. Follow the learning curve.\
+\> Targeting a specific type of users. (Ex.: teachers) and provide them with additional speciifc extensions adapting vocabulary, personalizing user interfaces and hiding less relevant capabilities or settings.<br/>
+
+h3. 2. Follow the learning curve.<br/>
+
 \> Implementing different usage settings in capabilities : Simple, Advanced, Expert modes.
 
 In all cases, users may access all the functionality if wanted.

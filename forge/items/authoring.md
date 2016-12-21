@@ -14,7 +14,8 @@ tags:
 QTI
 ===
 
-QTI stands for Question and Tests Interoperability, a specification defined by the IMS consortium and that allow items interoperability between platforms. TAO implements this specification and allows users to create QTI compliant QTI items using the embedded QTI authoring tool.\
+QTI stands for Question and Tests Interoperability, a specification defined by the IMS consortium and that allow items interoperability between platforms. TAO implements this specification and allows users to create QTI compliant QTI items using the embedded QTI authoring tool.<br/>
+
 The specification may be consulted here : http://www.imsglobal.org/question/qti\_v2p0/imsqti\_oviewv2p0.html
 
 QTI covers common needs in terms of items with a focus on the type of items and interaction types that are deliverable on paper. More complex interactions taking benefit of the use of computers may be achieved in TAO through the use of Open Web Items.
@@ -22,7 +23,8 @@ QTI covers common needs in terms of items with a focus on the type of items and 
 QTI and TAO
 ===========
 
-TAO currently supports largely QTI 2.0.\
+TAO currently supports largely QTI 2.0.<br/>
+
 The features available are the following :
 
 -   Import QTI Items
@@ -82,13 +84,20 @@ The properties is a multi-level menu giving to you the possibility to edit some 
 
 ![](../resources/qti-authoring.png)
 
-\> \* The QTI item authoring is mainly composed of 2 sections: the item editor and the interaction editor.\
-\> \* The item editor is what you see when you enter in the QTI item and the interaction editor is display when you click on an interaction in the item content.\
-\> \* The item editor allows you to create the content of your item, which could be formatted test and images, as well as inserting QTI interactions in the wanted place.\
-\> \* You can start editing the content of your item simply by clicking on the text area. You can use the text tool bar above to format the text the way you want. When you have entered the text content and are ready to insert an interaction, just click on the specific place in your text, you want your interaction to be inserted, then click on one of the available interaction.\
-\> \* To open the interaction editor, click on the interaction button in your item content. All interaction editors are composed of 3 main blocs, which are the interaction properties, choices editor and response editor.\
-\> \* The interaction properties section allows you to set the properties values available in the QTI standard for a given interaction type: for more information on the interaction attributes, please refer to the official IMS webpage (http://www.imsglobal.org/question/).\
-\> \* The choices editor allows you to add, edit and delete choices of the current interaction.\
+\> \* The QTI item authoring is mainly composed of 2 sections: the item editor and the interaction editor.<br/>
+
+\> \* The item editor is what you see when you enter in the QTI item and the interaction editor is display when you click on an interaction in the item content.<br/>
+
+\> \* The item editor allows you to create the content of your item, which could be formatted test and images, as well as inserting QTI interactions in the wanted place.<br/>
+
+\> \* You can start editing the content of your item simply by clicking on the text area. You can use the text tool bar above to format the text the way you want. When you have entered the text content and are ready to insert an interaction, just click on the specific place in your text, you want your interaction to be inserted, then click on one of the available interaction.<br/>
+
+\> \* To open the interaction editor, click on the interaction button in your item content. All interaction editors are composed of 3 main blocs, which are the interaction properties, choices editor and response editor.<br/>
+
+\> \* The interaction properties section allows you to set the properties values available in the QTI standard for a given interaction type: for more information on the interaction attributes, please refer to the official IMS webpage (http://www.imsglobal.org/question/).<br/>
+
+\> \* The choices editor allows you to add, edit and delete choices of the current interaction.<br/>
+
 \> \* The response editor allows you to select the way you want the response of your interaction to be processed. The available types are correct, map and map point. These three response-processing templates are standard QTI template: for more information on the default QTI response processing templates, please refer to the official IMS webpage (http://www.imsglobal.org/question/).
 
 #### Stylesheet

@@ -23,7 +23,8 @@ TAO concerns various type of users for various types of features. One of the mai
 
 ### Manage Back-office Users
 
-The *Tao Manager 1* User defined in figure 3 is the one created when installing the platform that let you access all features of the TAO platform and should only be accessed by a User having the *TaoManager* Role which is an instance of the *BackOffice* Role that controls all accesses to Back-office’s Services.\
+The *Tao Manager 1* User defined in figure 3 is the one created when installing the platform that let you access all features of the TAO platform and should only be accessed by a User having the *TaoManager* Role which is an instance of the *BackOffice* Role that controls all accesses to Back-office’s Services.<br/>
+
 The *TaoManager* Role is also a sub-class of User Class in order to inherit specific properties of the User Class such as User’s *Login, Password, Last Name, First Name, Languages*.
 
 ![](http://forge.taotesting.com/attachments/277/role-whtoutInst.png)\

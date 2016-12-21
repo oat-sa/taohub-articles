@@ -72,7 +72,8 @@ The structure of the item is architectured as followed:
 
 ### 2.2. TAO Item API integration
 
-The [[Item API]] contains different implementations : one for the preview in TAO, one for the delivery time and one for the development.\
+The [[Item API]] contains different implementations : one for the preview in TAO, one for the delivery time and one for the development.<br/>
+
 Once the item is into TAO, the [[Item API]] is loaded **automatically** into your item. But to help you at the level of the item development you can include the [taoItemApi-stub.js](http://forge.taotesting.com/attachments/download/2637/taoItemApi-stub.js) into your item. It contains the development implementation plus a mechanism that starts it if the item isn’t in TAO.
 
 Download it and add a reference at the end of the `index.html` file.

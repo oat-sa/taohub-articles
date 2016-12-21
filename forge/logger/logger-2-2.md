@@ -19,7 +19,8 @@ Valid as of [[TAO\_2\_2|TAO 2.2]] until [[TAO\_2\_6|TAO 2.6]]. Please refer to [
 Objectives
 ----------
 
-The purpose of this logger is to improve the code by documenting errors or irregularities that might have been missed otherwise,\
+The purpose of this logger is to improve the code by documenting errors or irregularities that might have been missed otherwise,<br/>
+
 and by assisting developers in solving problems through offering insight into the events that led\
 to these errors.
 
@@ -52,7 +53,8 @@ The decision which events should be logged will be taken by using either:
 
 -   **threshold**: indicates the minimum severity an event has to have in order to be logged using this appender
 -   **mask**: defines a bit mask, allowing a fine grained control over which events are logged, with the least significant\
-    bit(2\^0) corresponding to to the TRACE severity, and the most significant bit(2\^5) corresponding to to the FATAL severity.\
+    bit(2\^0) corresponding to to the TRACE severity, and the most significant bit(2\^5) corresponding to to the FATAL severity.<br/>
+
     *Example*: To log everything except TRACE and WARNING, one would use 110110 = 32+16+4+2 = 54
 
 In addition as of [[Tao 2 3|Tao 2.3]] items can also be filtered by tag with the following option:

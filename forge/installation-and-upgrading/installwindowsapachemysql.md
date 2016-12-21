@@ -48,7 +48,8 @@ Your next task is to open the PHP configuration file (php.ini) and changes 3 dir
 
 ### 1.2.2. MySQL Setup
 
-If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:\
+If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:<br/>
+
 EXECUTE, SELECT, SHOW DATABASES, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, DELETE, DROP, INDEX, INSERT, UPDATE, RELOAD
 
 If you need more information about database privileges and databases, please visit the [[DatabaseUserPrivileges|page dedicated to this topic]].
@@ -66,23 +67,30 @@ You are now ready to deploy the TAO platform.
 
 We will now download the latest version of the TAO source code and deploy it on the web server. Go to the official TAO [download page](http://taotesting.com/resources/download-tao) and download the latest stable release.
 
-Create a folder named **taoplatform** in the root directory of your web server. Depending on your installation settings, it should be located at **C:\\wamp\\www\\**. You can now unzip the TAO source code previously downloaded in the **taoplatform** folder. You should now have the following directory structure on your file system:
+Create a folder named **taoplatform** in the root directory of your web server. Depending on your installation settings, it should be located at **C:<br/>
+\wamp\\www\\**. You can now unzip the TAO source code previously downloaded in the **taoplatform** folder. You should now have the following directory structure on your file system:
 
--   C:\\wamp\\www\\taoplatform\\filemanager
--   C:\\wamp\\www\\taoplatform\\generis
--   C:\\wamp\\www\\taoplatform\\taoDelivery
--   C:\\wamp\\www\\taoplatform\\taoGroups
+-   C:<br/>
+\wamp\\www\\taoplatform\\filemanager
+-   C:<br/>
+\wamp\\www\\taoplatform\\generis
+-   C:<br/>
+\wamp\\www\\taoplatform\\taoDelivery
+-   C:<br/>
+\wamp\\www\\taoplatform\\taoGroups
 -   …
 
 ### 2.2. Creation of a Virtual Host
 
-The TAO platform needs to be run on an Apache Virtual Host to run correctly. We will create a new **Virtual Host** named **taoplatform** by editing the virtual host configuration file of Apache. Depending on your installation settings, it should be located at **C:\\wamp\\bin\\apache\\Apache2.x\\conf\\extra-httpd-vhosts.conf**. Open this file with your favourite text editor and add the following lines at its end.
+The TAO platform needs to be run on an Apache Virtual Host to run correctly. We will create a new **Virtual Host** named **taoplatform** by editing the virtual host configuration file of Apache. Depending on your installation settings, it should be located at **C:<br/>
+\wamp\\bin\\apache\\Apache2.x\\conf\\extra-httpd-vhosts.conf**. Open this file with your favourite text editor and add the following lines at its end.
 
 
         ServerAdmin webmaster@taoplatform
         ServerName taoplatform
 
-        DocumentRoot C:\wamp\www\taoplatform
+        DocumentRoot C:<br/>
+wamp\www\taoplatform
 
         
             Options Indexes FollowSymLinks MultiViews
@@ -91,11 +99,13 @@ The TAO platform needs to be run on an Apache Virtual Host to run correctly. We 
             allow from all
         
 
-Open the main Apache2 configuration file located at **C:\\wamp\\bin\\apache\\Apache2.x\\conf\\httpd.conf** and uncomment the following line by removing the leading **\#** character. This will integrate your virtual host configuration in the main Apache2 configuration file.
+Open the main Apache2 configuration file located at **C:<br/>
+\wamp\\bin\\apache\\Apache2.x\\conf\\httpd.conf** and uncomment the following line by removing the leading **\#** character. This will integrate your virtual host configuration in the main Apache2 configuration file.
 
     Include conf/extra/httpd-vhosts.conf
 
-Do not forget to make the host resolvable by editing your **hosts** file. Open notepad in **administrator mode** and open your hosts file located at **C:\\Windows\\System32\\drivers\\etc\\hosts**. Add the following instructions at the end of the file.
+Do not forget to make the host resolvable by editing your **hosts** file. Open notepad in **administrator mode** and open your hosts file located at **C:<br/>
+\Windows\\System32\\drivers\\etc\\hosts**. Add the following instructions at the end of the file.
 
     127.0.0.1   taoplatform
 

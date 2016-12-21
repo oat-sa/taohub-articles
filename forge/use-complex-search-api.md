@@ -382,7 +382,8 @@ get 10 results offset 5 :
 Gateway :
 ---------
 
-gateway is the highter component of complex search.\
+gateway is the highter component of complex search.<br/>
+
 It provide query builder and it execute query using default database driver.
 
 ### only get number of result :
@@ -403,7 +404,8 @@ to debug query use printQuery method :
 Result Set :
 ------------
 
-a result set is returned by gateWay search method’s.\
+a result set is returned by gateWay search method’s.<br/>
+
 It’s an arrayIterator adding total method which return full number for your query .
 
 Each entry of result set is a tao resource Object.

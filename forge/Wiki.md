@@ -57,7 +57,8 @@ TAO Wiki
 
 TAO allows you to create on-line tests that can work for thousands of test takers. This Computer-Based Assessment software may be used at different levels. This manual is thus focused on how to install the application, administer the installation, and develop items, reports… or simply use it to administer and deliver your electronic tests.
 
-Start with the appropriate section for you and navigate through the pages of each chapter.\
+Start with the appropriate section for you and navigate through the pages of each chapter.<br/>
+
 Still having trouble finding what you want? Don’t forget the general **search box**.
 
 There has been a big ramp-up in development last year leading to many changes including the implementation of item standards. Make sure to upgrade to the latest version to make use of the capabilities highlighted here.

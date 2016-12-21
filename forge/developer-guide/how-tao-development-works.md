@@ -62,7 +62,8 @@ Two weeks before the scheduled release, we publish Release Candidate versions. A
 
 During the development phase, we keep updating TAO from major issue. SVN-Patches are created and are directly provided to the community in the *comment* section of the related issue. Patch receives an incremental number and in the following days of the patch creation, the version available on TAO website will be updated and renamed according to the patch number. Patch’s Numbers are managed by the target version’s Head Developer.
 
-For instance, if the version of TAO available on the TAO website is *TAO 2.1.01*, *2.1* indicates the version number and *.01* indicates that the patch *01* had been applied.\
+For instance, if the version of TAO available on the TAO website is *TAO 2.1.01*, *2.1* indicates the version number and *.01* indicates that the patch *01* had been applied.<br/>
+
 All available patches for a version may also be found in [[Past\_release\_history]]
 
 4. Contribution
@@ -101,14 +102,18 @@ If you want larger access rights, please let us know !
 
 Over time, TAO is getting more and more complex (see [[TAO Architecture]]), meanwhile here is a list of TAO team members that can help you for different sections listed below and who will be in charge of validating contributions and assure the overall TAO Product Quality. Please be also sure to follow [[guidelines]] and common conventions used by the TAO team.
 
-**TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339),\
-**Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Joel Bout](http://forge.taotesting.com/users/692),\
+**TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339),<br/>
+
+**Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Joel Bout](http://forge.taotesting.com/users/692),<br/>
+
 **TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Joel Bout](http://forge.taotesting.com/users/692), [Bertrand Chevrier](http://forge.taotesting.com/users/331)\
-**TAO Delivery** [Joel Bout](http://forge.taotesting.com/users/692),\
+**TAO Delivery** [Joel Bout](http://forge.taotesting.com/users/692),<br/>
+
 **TAO Groups** [Bertrand Chevrier](http://forge.taotesting.com/users/331)\
 **TAO Items** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)\
 **TAO Test** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Bertrand Chevrier](http://forge.taotesting.com/users/331)\
-**TAO Results** [Patrick Plichart](http://forge.taotesting.com/users/339),\
+**TAO Results** [Patrick Plichart](http://forge.taotesting.com/users/339),<br/>
+
 **TAO Subjects** [Bertrand Chevrier](http://forge.taotesting.com/users/331)\
 **WfEngine** [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)\
 **TAO Documentation** [Lionel Lecaque](http://forge.taotesting.com/users/305),

@@ -63,7 +63,8 @@ and take note of the resulting IP adress.
 *Scenario 2: Like us, you couldn’t afford buying a screen …*
 
 This one is diffcult, all raspberry have a MAC adress starting with b8:27:eb\
-Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.\
+Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.<br/>
+
 From a mac you may use conveniently http://ivanx.com/raspberrypi/files/PiFinder.zip\
 From Linux :
 
@@ -93,12 +94,14 @@ This step may become mandatory especially if you don’t use vhost. As tao memor
 
     passwd pi
 
-8. Start the LAMP stack installation :\
+8. Start the LAMP stack installation :<br/>
+
 http://forge.taotesting.com/projects/tao/wiki/InstallUbuntuApacheMySQL
 ----------------------------------------------------------------------
 
 9. Start TAO installation\
-From any computer on the same network :\
+From any computer on the same network :<br/>
+
 http://yourip/tao/install\
 or vhost\
 http://vhost/tao/install

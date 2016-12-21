@@ -11,9 +11,12 @@ TAO Service injector
 About
 -----
 
-TAO Service Injector is th way to integrate any dependencies container.\
-It must implement Container interop interface.\
-TAO provide configuration for generis Service Manager and Zend Framework Service Locator.\
+TAO Service Injector is th way to integrate any dependencies container.<br/>
+
+It must implement Container interop interface.<br/>
+
+TAO provide configuration for generis Service Manager and Zend Framework Service Locator.<br/>
+
 As well it’s possible to integrate others libraries.
 
 Usage :

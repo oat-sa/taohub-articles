@@ -40,7 +40,8 @@ Costs:
 -   material costs
 -   service costs (managing, configuration, etc.)
 
-Categories:\
+Categories:<br/>
+
 What defines categories: where are test takers, where stands the delivery, where are data (split?)…
 
 -   standalone

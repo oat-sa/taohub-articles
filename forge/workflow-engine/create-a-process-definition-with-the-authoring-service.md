@@ -80,7 +80,8 @@ Create a variable called *’myProcessVarCode1’*, and a transition rule \_‘\
 \<pre\>
 \<code class="php"\>
 \$myProcessVar1 = \$authoringService-\>getProcessVariable('myProcessVarCode1', true);
-\$authoringService-\>createTransitionRule(\$connector1, '\^myProcessVarCode1  1’);\
+\$authoringService-\>createTransitionRule(\$connector1, '\^myProcessVarCode1  1’);<br/>
+
 </code>
 
 </pre>
@@ -100,7 +101,8 @@ This process helper provides convenient methods to check the type of a [[Generis
 
 ### 3.2. Process checker
 
-Building a process could be a complex task.\
+Building a process could be a complex task.<br/>
+
 Frequent mistakes are:
 
 -   forgetting to define a process as the first one

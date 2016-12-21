@@ -15,8 +15,10 @@ Results Storage components
 Relational Database Storage (taoOutcomeRds)
 -------------------------------------------
 
-The taoOutcomeRds extension store results in a relational database, it uses 3 tables.\
-The first one stores the relation between test taker, delivery and delivery execution. This table is called results\_storage.\
+The taoOutcomeRds extension store results in a relational database, it uses 3 tables.<br/>
+
+The first one stores the relation between test taker, delivery and delivery execution. This table is called results\_storage.<br/>
+
 |*.result\_id |*.test\_taker |\_.delivery |\
 |primary key | | |\
 |delivery execution uri |test taker uri |delivery uri |

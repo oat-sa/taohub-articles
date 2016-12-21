@@ -59,7 +59,8 @@ Suggested Deployment model for the delivery of Tests
 ----------------------------------------------------
 
 -   Load balancing appliance (Varnish see configuration below)
--   N application server (TAO) with local mysql,\
+-   N application server (TAO) with local mysql,<br/>
+
     you may deploy them using database migration tools and htdocs copy (needed for the local media files)
 
 1.  For large scale each application server should use **php5-fpm** (default prefork may result in under use of the application server resources)
@@ -79,7 +80,8 @@ Our tests used the same redis server for all three, note that you may use differ
 
 ### Storing Results in a Redis server
 
--   Make sure you have installed the packages :\
+-   Make sure you have installed the packages :<br/>
+
     “redis-server” (on the server you want to use for the storage)\
     “phpredis” on the tao application server
 
@@ -94,7 +96,8 @@ Our tests used the same redis server for all three, note that you may use differ
 
 <!-- -->
 
--   When you configure a delivery, you may now decide to send the results to the redis server, choose the option *KeyValueResultStorage* in the delivery configuration tool.\
+-   When you configure a delivery, you may now decide to send the results to the redis server, choose the option *KeyValueResultStorage* in the delivery configuration tool.<br/>
+
     ![](resources/{width:900px}delviery.png)
 
 <!-- -->
@@ -204,11 +207,14 @@ For a multiple TAO server pool, the main requirement is to support sticky sessio
 
 ### Configuration
 
-The initial setup of Varnish starts with the Varnish daemon options configuration file, usually located at /etc/default/varnish. It allows 4 configuration alternatives (cf this file to see the differences). For our own setup, we the second one is needed: a configuration with the VCL (Varnish Configuration Language).\
+The initial setup of Varnish starts with the Varnish daemon options configuration file, usually located at /etc/default/varnish. It allows 4 configuration alternatives (cf this file to see the differences). For our own setup, we the second one is needed: a configuration with the VCL (Varnish Configuration Language).<br/>
+
 The Varnish Configuration Language (VCL) is a domain-specific language used to define the caching policy. Most of the configuration is written into subroutines and follows a pre-defined flow during the request and response phase. The default configuration is seen as commented.
 
-It contains the load balancing service URL and port (default port is 6081), the cache file type and size to use, the worker threads.\
-A common value for the VARNISH\_STORAGE\_SIZE is to set it to 85% of available RAM. Also, the VARNISH\_STORAGE line should be uncommented and set to: <pre>VARNISH\_STORAGE=“malloc,\${VARNISH\_STORAGE\_SIZE}”</pre>
+It contains the load balancing service URL and port (default port is 6081), the cache file type and size to use, the worker threads.<br/>
+
+A common value for the VARNISH\_STORAGE\_SIZE is to set it to 85% of available RAM. Also, the VARNISH\_STORAGE line should be uncommented and set to: <pre>VARNISH\_STORAGE=“malloc,<br/>
+${VARNISH\_STORAGE\_SIZE}”</pre>
 
 The VCL configuration file, usually located at /etc/varnish/default.vcl. This file defines the configuration that Varnish will use during the life cycle of the request. It includes the backend servers list, the server health rules to check, the load balancing type.
 
@@ -262,20 +268,26 @@ In case an error occurs, use the following command to get further details:
 
 ### Varnish commands
 
-The main Varnish-related commands are varnishtop and varnishstat:\
-- varnishtop gives regular feedbacks about backend server status (healthy, sick, back healthy, went sick).\
-- varnishstat is a real-time monitoring and statistics tool. The main values to monitor are probably the hitrate and hitrate average values.\
+The main Varnish-related commands are varnishtop and varnishstat:<br/>
+
+- varnishtop gives regular feedbacks about backend server status (healthy, sick, back healthy, went sick).<br/>
+
+- varnishstat is a real-time monitoring and statistics tool. The main values to monitor are probably the hitrate and hitrate average values.<br/>
+
 varnishlog and varnishhist are complementary commands.
 
 ### Logging with Varnish
 
-By default, Varnish logging is disabled. To enable it, set to the VARNISHNCSA\_ENABLED attribute from 0 to 1 in /etc/default/varnishncsa.\
+By default, Varnish logging is disabled. To enable it, set to the VARNISHNCSA\_ENABLED attribute from 0 to 1 in /etc/default/varnishncsa.<br/>
+
 To reload the logging configuration, use the command:
 
     service varnishncsa reload
 
-The default log file path will be located at /var/log/varnish/varnishncsa.log.\
-To get a more detailed logging, especially in a multiple backend configuration, a custom logging helps us to know who serves a given client.\
+The default log file path will be located at /var/log/varnish/varnishncsa.log.<br/>
+
+To get a more detailed logging, especially in a multiple backend configuration, a custom logging helps us to know who serves a given client.<br/>
+
 A good example of an exhaustive log configuration is given [here](http://giantdorks.org/alain/workaround-for-broken-varnishncsa-logging-due-to-shell-mishandling-of-spaces-in-log_format-variables/).
 
 Constraints
@@ -287,14 +299,16 @@ Constraints
 Benchmarks
 ----------
 
-Our benchmarks were achieved using a topology on our network as such:\
+Our benchmarks were achieved using a topology on our network as such:<br/>
+
 - One load balancer appliance (Varnish)\
 - Two desktop computers acting as application servers with php-fpm (one high end with 8 cores-SSD, one mid end 4 cores)\
 - One redis server . (a low end computer)
 
 ![](resources/bench1k.png)
 
-That small topology allowed us to reach 1000 test takers simultaneously taking a test (they all start the test in a 30 secs time frame, they all go through all the items and respond to the items quickly).\
+That small topology allowed us to reach 1000 test takers simultaneously taking a test (they all start the test in a 30 secs time frame, they all go through all the items and respond to the items quickly).<br/>
+
 Total Avg response time from the server \< 100 msecs
 
 Known Issues

@@ -14,7 +14,8 @@ Extensions
 
 {{\>toc}}
 
-TAO extensions enable the use of other extensions handling concepts and relations that define the domain. They cover all phases of the assessment process, from authoring, planning and other administration back-office operations, to delivery, result collection and analysis. The incorporation of these concepts in the platform is performed thanks to its modular architecture.\
+TAO extensions enable the use of other extensions handling concepts and relations that define the domain. They cover all phases of the assessment process, from authoring, planning and other administration back-office operations, to delivery, result collection and analysis. The incorporation of these concepts in the platform is performed thanks to its modular architecture.<br/>
+
 Each knowledge domain corresponds to an independent data domain that can be managed by different actors possibly distributed in various locations (subjects, groups, tests, items and results). For instance, and in order to ensure privacy, the management of subjects and their characteristics is managed apart from groups.
 
 ![](http://forge.taotesting.com/attachments/542/extension_model.png)
@@ -22,7 +23,8 @@ Each knowledge domain corresponds to an independent data domain that can be mana
 1. TAO Architecture
 -------------------
 
-This section covers the architecture of the TAO platform. It’s built upon the concept of extensions. Each extension is composed of a separated file-system. They contain the same folder structure in order to be exploited by the TAO Framework.\
+This section covers the architecture of the TAO platform. It’s built upon the concept of extensions. Each extension is composed of a separated file-system. They contain the same folder structure in order to be exploited by the TAO Framework.<br/>
+
 An extension may be used as a standalone program - with the exception of an extension depending on another extension. This concept of extension dependencies enabled us to create TAO extensions using abstraction layers and core components.
 
 The following schema illustrates this:
@@ -36,7 +38,8 @@ As you can see above, the Generis and TAO extensions are dependent on all other 
 
 TAO extension is a *meta-extension*. In other words, this extension cannot be used as a standalone, but it provides high-level components that will be used by their dependent extensions (i.e., items, subjects or groups).
 
-The TAO meta-extension is **required** to run any other extension. It provides the architecture for the application layers that the dependent extensions will use or change. For example, the TAO extension provides a mechanism to check if a user is authenticated. All extensions that need a logged in user will use that mechanism directly into the TAO extension.\
+The TAO meta-extension is **required** to run any other extension. It provides the architecture for the application layers that the dependent extensions will use or change. For example, the TAO extension provides a mechanism to check if a user is authenticated. All extensions that need a logged in user will use that mechanism directly into the TAO extension.<br/>
+
 In order to use a layer from the meta-extension, the dependent extension’s classes *extend* the TAO extension classes. In our example, the authentication is done by default if the extension’s actions extends the TAO’s *tao\_actions\_CommonModule* class. To change the behavior provided by the meta-extension, you can override the concerned methods.
 
 -   The TAO meta-extension provides the architecture with different layers:
@@ -69,8 +72,10 @@ The screenshot below represents a TAO distribution into the *transferAll* folder
 Inside an extension we have the following folders structure:
 
 -   **actions**\
-    It contains the controller layer.\
-    In the ClearFw, a **controller** is called a **module**. We are using this convention.\
+    It contains the controller layer.<br/>
+
+    In the ClearFw, a **controller** is called a **module**. We are using this convention.<br/>
+
     The *actions* folder contains all the module classes (the controllers) of the extension and can also contain a *structure.xml* file that describes the User Interface structure.
 
 <!-- -->

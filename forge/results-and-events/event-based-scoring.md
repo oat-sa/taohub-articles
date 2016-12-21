@@ -25,6 +25,7 @@ Event based scoring
 Overview
 --------
 
-The main point of our approach is to use some ideas from the well known domain of CEP (Complex Event Processing) in order to establish a scoring solution.\
+The main point of our approach is to use some ideas from the well known domain of CEP (Complex Event Processing) in order to establish a scoring solution.<br/>
+
 Since CEP is largely used in a lot of critical domains (such as the security, attack detection, business profiling…) we believe that the existing works in CEP can be an excellent source of inspiration that will help us in our approach.
 

@@ -91,6 +91,7 @@ TAO requires either
 Next step
 ---------
 
-You now have to configure TAO itself. For this purpose, the [[Installation and Upgrading]] section is at your disposal.\
+You now have to configure TAO itself. For this purpose, the [[Installation and Upgrading]] section is at your disposal.<br/>
+
 You will learn how to set up the MySQL connection, create the knowledge base and the very first administrator user.
 

@@ -24,7 +24,8 @@ The Result Data Model (RDM) constitutes the data level of this module. RDM allow
 2. Structure and Classes
 ------------------------
 
-Initially three classes are proposed for the RDM, the RUSULT class, TAO\_ITEM\_RESULTS, TAO\_DELIVERY\_RESULTS. See Fig 1.\
+Initially three classes are proposed for the RDM, the RUSULT class, TAO\_ITEM\_RESULTS, TAO\_DELIVERY\_RESULTS. See Fig 1.<br/>
+
 ![](http://forge.taotesting.com/attachments/download/475/RM_RDM_Classes.jpg)
 
 -   In **RDM** the **Rresult class** is just used to indicate that all other classes that heritage it is considered as a result class. So, Result class has a very restricted structure.
@@ -37,7 +38,8 @@ Initially three classes are proposed for the RDM, the RUSULT class, TAO\_ITEM\_R
 3. Initial Model builder
 ------------------------
 
-In order to create the initial model, we use the service ModelBuilderQTI that has as parameter an XML file.\
+In order to create the initial model, we use the service ModelBuilderQTI that has as parameter an XML file.<br/>
+
 ![](http://forge.taotesting.com/attachments/download/356/RM_ResultModelBuilderQTI.jpg)
 
 The XML file that describes the model is :
