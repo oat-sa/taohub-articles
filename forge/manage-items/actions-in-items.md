@@ -18,4 +18,15 @@ When an **item** is selected the Item library, only the Duplicate, Move, Preview
 
 The Search, Delete, Lists, and Export icons are enabled for both.
 
+Actions
+=======
+
+![](../resources/items-actions.png)
+
+When a **class** is selected in the Item library, only the New class, New item, Create table and Import icons are enabled.
+
+When an **item** is selected the Item library, only the Duplicate, Move, Preview, Meta data icons are enabled.
+
+The Search, Delete, Lists, and Export icons are enabled for both.
+
 

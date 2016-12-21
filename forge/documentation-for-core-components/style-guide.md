@@ -12,4 +12,9 @@ Style guide
 
 The [Style guide](http://style.taotesting.com) provides all basic guidelines to create UI components into TAO.
 
+Style guide
+===========
+
+The [Style guide](http://style.taotesting.com) provides all basic guidelines to create UI components into TAO.
+
 

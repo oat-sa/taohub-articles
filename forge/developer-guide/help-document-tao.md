@@ -12,4 +12,9 @@ Help document TAO
 
 If you have time and some experience with Tao, we would welcome your help. To correct something in the documentation or to document something not yet covered, create a [Documentation issue](http://forge.taotesting.com/projects/tao/issues/new) and explain what you want to do. We will give you access to edit the appropriate pages.
 
+Help document TAO
+=================
+
+If you have time and some experience with Tao, we would welcome your help. To correct something in the documentation or to document something not yet covered, create a [Documentation issue](http://forge.taotesting.com/projects/tao/issues/new) and explain what you want to do. We will give you access to edit the appropriate pages.
+
 
