@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-12-28 16:23:41'
 updated_at: '2013-03-05 12:14:33'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - 'Administrator Guide'
 -->

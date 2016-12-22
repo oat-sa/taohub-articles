@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2010-12-02 16:15:55'
 updated_at: '2013-12-02 13:59:42'
+authors:
+    - 'Cyril Hazotte'
 tags:
     - 'Developer Guide'
 -->

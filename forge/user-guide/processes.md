@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2011-03-14 10:24:32'
 updated_at: '2013-03-13 14:26:36'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Franck Gismondi'
 tags:
     - 'User Guide'
 -->

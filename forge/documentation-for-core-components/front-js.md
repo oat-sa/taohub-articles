@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Dieter Raber'
 created_at: '2014-01-15 09:35:04'
 updated_at: '2014-10-21 09:35:14'
+authors:
+    - 'Dieter Raber'
 tags:
     - 'Documentation for core components'
 -->

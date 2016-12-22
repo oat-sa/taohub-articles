@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2010-12-02 16:09:34'
 updated_at: '2014-10-12 18:25:23'
+authors:
+    - 'Joel Bout'
 tags:
     - Tutorials
 -->

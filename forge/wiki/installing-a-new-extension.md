@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2015-08-10 10:43:24'
 updated_at: '2016-09-15 14:59:21'
+authors:
+    - 'Cyril Hazotte'
 tags:
     - Wiki
 -->

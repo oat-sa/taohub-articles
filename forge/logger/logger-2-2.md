@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2015-10-28 13:26:22'
 updated_at: '2015-10-28 13:26:22'
+authors:
+    - 'Joel Bout'
 tags:
     - Logger
 -->

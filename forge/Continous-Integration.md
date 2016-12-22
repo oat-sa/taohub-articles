@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Lionel Lecaque'
 created_at: '2014-09-25 12:39:35'
 updated_at: '2014-09-26 00:42:35'
+authors:
+    - 'Lionel Lecaque'
 -->
 
 TAO Contuinous Integration

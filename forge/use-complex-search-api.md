@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Christophe Garcia'
 created_at: '2016-07-28 11:22:10'
 updated_at: '2016-08-04 17:10:09'
+authors:
+    - 'Christophe Garcia'
 -->
 
 Use complex search API

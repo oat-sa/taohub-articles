@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2011-03-10 11:47:53'
 updated_at: '2013-03-13 13:12:10'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - 'Event Based Scoring'
 -->

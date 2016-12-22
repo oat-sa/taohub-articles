@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Christophe Noel'
 created_at: '2016-07-11 17:27:04'
 updated_at: '2016-07-11 17:27:37'
+authors:
+    - 'Christophe Noel'
 -->
 
 User modules & user scripts

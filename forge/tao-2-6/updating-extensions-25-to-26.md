@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-11-18 11:19:39'
 updated_at: '2013-11-18 11:19:39'
+authors:
+    - 'Joel Bout'
 tags:
     - 'TAO 2 6'
 -->

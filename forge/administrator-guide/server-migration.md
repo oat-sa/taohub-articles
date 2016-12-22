@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2015-07-14 18:52:42'
 updated_at: '2016-08-12 11:34:55'
+authors:
+    - 'Joel Bout'
 tags:
     - 'Administrator Guide'
 -->

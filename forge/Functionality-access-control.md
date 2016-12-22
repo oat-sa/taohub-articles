@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2012-05-25 15:42:03'
 updated_at: '2012-06-15 10:12:36'
+authors:
+    - 'Joel Bout'
+contributors:
+    - 'Jehan Bihin'
 -->
 
 Functionality access control

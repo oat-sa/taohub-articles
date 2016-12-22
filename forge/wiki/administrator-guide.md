@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Gyula Szucs'
 created_at: '2010-11-23 14:55:01'
 updated_at: '2016-11-22 16:55:16'
+authors:
+    - 'Gyula Szucs'
 tags:
     - Wiki
 -->

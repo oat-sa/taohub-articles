@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2011-04-22 09:25:34'
 updated_at: '2013-03-13 14:23:04'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Franck Gismondi'
 tags:
     - Results
 -->

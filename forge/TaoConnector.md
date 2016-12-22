@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-01-31 10:59:26'
 updated_at: '2013-01-31 10:59:26'
+authors:
+    - 'Joel Bout'
 -->
 
 TaoConnector

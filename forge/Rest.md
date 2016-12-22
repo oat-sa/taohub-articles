@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Rex Wallen Tan'
 created_at: '2013-06-28 08:39:33'
 updated_at: '2015-10-04 14:10:25'
+authors:
+    - 'Rex Wallen Tan'
+contributors:
+    - 'Patrick Plichart'
 -->
 
 Rest Services Layer Tutorial
@@ -1202,7 +1204,8 @@ Delete a test taker.
 Identification using Digest
 ---------------------------
 
-The Digest protocol is not yet implemented. Steps left for implementing it :\
+The Digest protocol is not yet implemented. Steps left for implementing it :<br/>
+
 - Store along user definition their hash upon user creation and update\
 - Retreeve this hash and combine it within RestCommonModule.php
 

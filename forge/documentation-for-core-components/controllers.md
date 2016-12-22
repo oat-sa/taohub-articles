@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2011-03-04 17:36:10'
 updated_at: '2014-10-03 10:40:20'
+authors:
+    - 'Joel Bout'
+contributors:
+    - 'Bertrand Chevrier'
 tags:
     - 'Documentation for core components'
 -->
@@ -147,7 +149,8 @@ For example, have a look at the following URL:
 
 > `http://www.tao.lu/tao/Users/add?name=john`
 
-If you split the URL, each part is used as a piece of information for the mapping:\
+If you split the URL, each part is used as a piece of information for the mapping:<br/>
+
 |*.Token|*.Information|\
 |`www.tao.lu`| the TAO domain name|\
 |tao| the extension name (the meta-extension TAO)|\

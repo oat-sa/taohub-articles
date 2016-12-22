@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Konstantin Sasim'
 created_at: '2015-07-02 10:25:23'
 updated_at: '2015-07-02 10:25:23'
+authors:
+    - 'Konstantin Sasim'
 tags:
     - Guidelines
 -->

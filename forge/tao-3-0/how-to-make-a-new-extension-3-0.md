@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Christophe Garcia'
 created_at: '2014-09-17 10:33:59'
 updated_at: '2016-06-17 14:30:08'
+authors:
+    - 'Christophe Garcia'
 tags:
     - 'TAO 3 0'
 -->

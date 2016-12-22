@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2015-12-09 15:54:05'
 updated_at: '2015-12-15 17:42:13'
+authors:
+    - 'Joel Bout'
 -->
 
 

@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2012-06-15 16:12:07'
 updated_at: '2012-06-15 16:12:07'
+authors:
+    - 'Joel Bout'
 tags:
     - Framework-Extensions
 -->

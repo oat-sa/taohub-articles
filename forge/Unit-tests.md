@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Bertrand Chevrier'
 created_at: '2016-03-21 10:13:00'
 updated_at: '2016-09-29 15:17:24'
+authors:
+    - 'Bertrand Chevrier'
 -->
 
 Javascript unit tests

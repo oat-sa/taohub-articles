@@ -1,8 +1,11 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2013-05-03 09:09:13'
 updated_at: '2016-11-04 16:28:03'
+authors:
+    - 'Cyril Hazotte'
+contributors:
+    - 'Patrick Plichart'
+    - 'Artem Zhuk'
 tags:
     - Wiki
 -->

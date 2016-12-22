@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Patrick Plichart'
 created_at: '2013-08-29 09:35:35'
 updated_at: '2014-07-31 13:09:49'
+authors:
+    - 'Patrick Plichart'
 tags:
     - 'Documentation for core components'
 -->
@@ -204,7 +204,8 @@ Generic headers aliases:
 -   type
 
 Generic headers\
-By default you may refer to any attribute of the target resource type using header with the uri reference :\
+By default you may refer to any attribute of the target resource type using header with the uri reference :<br/>
+
 “http://tao-dev/taodev.rdf\#i1372429454323825” : “35”
 
 Specific header aliases\
@@ -234,7 +235,8 @@ Returned types and exception handling
 
 Depending on the type of operation and the type of target resource types,<br/>
 
-a message is always returned using the requested encoding with a status information and a message :\
+a message is always returned using the requested encoding with a status information and a message :<br/>
+
 example in XML :
 
 
@@ -288,7 +290,8 @@ You may extend the tao\_actions\_CommonRestModule and override
      ));
 -   getParametersRequirements()
 
-example :\
+example :<br/>
+
 return array(\
  /\*\* you may use either the alias or the uri, if the parameter identifier\
  \* is set it will become mandatory for the operation in \$key\

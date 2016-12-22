@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Ihor Siroshtan'
 created_at: '2015-02-04 14:36:01'
 updated_at: '2015-12-17 15:52:16'
+authors:
+    - 'Ihor Siroshtan'
 tags:
     - 'Users Management Model'
 -->

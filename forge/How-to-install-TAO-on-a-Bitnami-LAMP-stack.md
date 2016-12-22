@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Rex Wallen Tan'
 created_at: '2015-06-24 10:16:00'
 updated_at: '2016-02-14 11:38:48'
+authors:
+    - 'Rex Wallen Tan'
+contributors:
+    - 'Cyril Hazotte'
 -->
 
 How to install TAO on a Bitnami LAMP stack / Bitnami on Amazon Web Services
@@ -119,7 +121,8 @@ Download TAO builds on the document root, extract them and rename extracted fold
     unzip TAO_2.6.7_build.zip && mv TAO_2.6.7_build tao267
     unzip TAO_3.0.0_build.zip && mv TAO_3.0.0_build tao3
 
-The TAO 2.6.7 installer gives such outcome:\
+The TAO 2.6.7 installer gives such outcome:<br/>
+
 ![](resources/{width:1024px}/attachments/download/3805/bitnami_lamp_stack_tao267_requirements_check_1.png)
 
 (Optional, for TAO 2.6 only) The ‘short\_open\_tag’ PHP directive needs to be set to ‘On’.
@@ -139,10 +142,12 @@ We set the right permissions for the right owners (daemon is the user and group 
     sudo chmod -R ug+rwX tao267 tao3
     sudo chown -R daemon:daemon tao267 tao3
 
-The TAO 2.6.7 installer gives now such outcome:\
+The TAO 2.6.7 installer gives now such outcome:<br/>
+
 ![](resources/{width:1024px}/attachments/3804/bitnami_lamp_stack_tao267_requirements_check_2.png)
 
-Same goes for the TAO 3.0 installer:\
+Same goes for the TAO 3.0 installer:<br/>
+
 ![](resources/{width:1024px}/attachments/3799/bitnami_lamp_stack_tao3_requirements_check.png)
 
 Step 2: Prepare MySQL for a TAO database and user

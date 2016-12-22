@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Lionel Lecaque'
 created_at: '2014-07-14 18:04:23'
 updated_at: '2014-07-14 18:04:23'
+authors:
+    - 'Lionel Lecaque'
 -->
 
 Upgrade the TAO Platform from 2.4 to 2.5

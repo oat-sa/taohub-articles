@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-11-20 10:51:43'
 updated_at: '2013-11-20 10:51:43'
+authors:
+    - 'Joel Bout'
 tags:
     - 'Tao 25 Delivery model'
 -->

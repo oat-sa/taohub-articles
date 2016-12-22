@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2010-12-02 16:13:49'
 updated_at: '2013-10-11 16:59:23'
+authors:
+    - 'Cyril Hazotte'
+contributors:
+    - 'Lionel Lecaque'
 tags:
     - 'Developer Guide'
 -->
@@ -151,7 +153,8 @@ To translate the string `"Welcome to TAO"` to French (for example), you have to 
 
 This is it!
 
-\> **Be careful**:\
+\> **Be careful**:<br/>
+
 \>\* If you let a *msgstr* empty, the English identifier will be displayed.<br/>
 
 \>\* Never change the identifier, neither a space, a dot or a letter. If it’s the case, the translated string will not be displayed.<br/>

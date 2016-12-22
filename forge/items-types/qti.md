@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Somsack Sipasseuth'
 created_at: '2011-02-08 11:04:37'
 updated_at: '2014-10-21 11:25:57'
+authors:
+    - 'Somsack Sipasseuth'
 tags:
     - 'Items'' Types'
 -->

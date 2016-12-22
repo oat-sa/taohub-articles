@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-05-31 09:57:42'
 updated_at: '2013-05-31 09:58:34'
+authors:
+    - 'Joel Bout'
 tags:
     - 'Generis Overview'
 -->

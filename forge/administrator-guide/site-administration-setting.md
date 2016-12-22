@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jagan Mohan'
 created_at: '2011-02-28 13:00:49'
 updated_at: '2015-08-19 12:29:27'
+authors:
+    - 'Jagan Mohan'
 tags:
     - 'Administrator Guide'
 -->
@@ -111,7 +111,8 @@ You can add an HTTP Authentication to protect your TAO instance.<br/>
     AuthUserFile "/var/opt/.htpassword"
     Require valid-user
 
-\# Create the password file using the command listed below. You can create it in the directory you want but consider these 2 security restrictions:\
+\# Create the password file using the command listed below. You can create it in the directory you want but consider these 2 security restrictions:<br/>
+
 • the directoy (here /var/opt) must not be accessible via HTTP\
 • the apache user (usualy www-data) can read it, bot the other cannot
 

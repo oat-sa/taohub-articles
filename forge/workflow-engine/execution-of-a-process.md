@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2011-03-02 18:18:41'
 updated_at: '2013-03-13 13:03:34'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Somsack Sipasseuth'
 tags:
     - 'Workflow Engine'
 -->
@@ -76,7 +78,8 @@ Execution of a process
 ---------------------------
 
 A process execution is initiated in the ProcessExecutionFactory: *wfEngine\_models\_classes\_ProcessExecutionFactory*\
-It consists in:\
+It consists in:<br/>
+
 - creating a process execution resource\
 - finding the first activity from the process definition\
 - creating an empty token and places it on the first activity\
@@ -91,10 +94,12 @@ From an activity definition, the current user’s credential is checked against 
 
 And the so called activity is executed. This means that the system simply fetches the list of services in that activity and inserts each of them in an iframe. See ProcessBrowser controller.
 
-The image below shows 3 services displayed for an activity:\
+The image below shows 3 services displayed for an activity:<br/>
+
 ![](../resources/services_in_iframe.png)
 
-The picture above shows that all three services have a different url, one of which has some parameters. The url is indeed processed and built for each service according to the process described as follows:\
+The picture above shows that all three services have a different url, one of which has some parameters. The url is indeed processed and built for each service according to the process described as follows:<br/>
+
 ![](../resources/build_the_service_url.png)\
 ![](../resources/build_the_service_url_2.png)
 
@@ -132,7 +137,8 @@ For more technical details about the way the token is set and moved, see [the ph
 
 Perform transition is a method of the *wfEngine\_models\_classes\_ProcessExecution* class. This function is called each time a *transition* from the current activity to the following one and it is executed.<br/>
 
-It calls the *wfEngine\_models\_classes\_ProcessExecution::getNewActivities()* to get the list of the following activities. The *getNewActivities()* function evaluates the transition condition for each type of connector:\
+It calls the *wfEngine\_models\_classes\_ProcessExecution::getNewActivities()* to get the list of the following activities. The *getNewActivities()* function evaluates the transition condition for each type of connector:<br/>
+
 - sequential: immediate transition to the next for a sequential one\
 - conditional: evaluate the transition rule to define the next activity (following the “then” or “else” branch?)\
 - parallel: how many activities (i.e., branches) would be created?<br/>

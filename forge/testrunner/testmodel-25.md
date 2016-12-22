@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-10-31 17:51:03'
 updated_at: '2013-11-04 17:03:26'
+authors:
+    - 'Joel Bout'
 tags:
     - Testrunner
 -->

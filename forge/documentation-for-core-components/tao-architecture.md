@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Patrick Plichart'
 created_at: '2011-01-21 11:09:09'
 updated_at: '2013-05-21 08:35:02'
+authors:
+    - 'Patrick Plichart'
 tags:
     - 'Documentation for core components'
 -->

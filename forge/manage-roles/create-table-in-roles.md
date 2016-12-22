@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-04-18 17:03:22'
 updated_at: '2013-03-13 14:34:54'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Sophie Doublet'
 tags:
     - 'Manage Roles'
 -->

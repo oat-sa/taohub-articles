@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Patrick Plichart'
 created_at: '2013-05-21 10:05:12'
 updated_at: '2013-05-21 10:05:12'
+authors:
+    - 'Patrick Plichart'
 -->
 
 Unplanned Features
@@ -111,7 +111,8 @@ Pay what you use. (resources usage as peaks)
 
 ### 2. (Unplanned) Control Test Taker environment / legacy infrastructure support
 
-Deliver assessment within :\
+Deliver assessment within :<br/>
+
 - Locked down environment\
 - Virtual machine\
 - Usb Key : for both online (locked environment) and offline tests (then embedding servers). (candidate for 4.1)\

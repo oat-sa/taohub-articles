@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Patrick Plichart'
 created_at: '2013-05-21 07:58:09'
 updated_at: '2013-05-21 07:58:09'
+authors:
+    - 'Patrick Plichart'
 -->
 
 Thinktank

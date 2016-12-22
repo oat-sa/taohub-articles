@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Dieter Raber'
 created_at: '2014-07-02 12:01:45'
 updated_at: '2014-07-21 09:45:05'
+authors:
+    - 'Dieter Raber'
 tags:
     - 'Tutorial - How to customize the look of items'
 -->

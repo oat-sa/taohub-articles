@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2016-08-12 11:27:46'
 updated_at: '2016-10-18 10:19:10'
+authors:
+    - 'Cyril Hazotte'
 tags:
     - 'Server Migration'
 -->

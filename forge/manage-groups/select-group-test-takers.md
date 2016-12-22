@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-04-03 15:26:45'
 updated_at: '2013-03-13 13:57:50'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Sophie Doublet'
 tags:
     - 'Manage Groups'
 -->

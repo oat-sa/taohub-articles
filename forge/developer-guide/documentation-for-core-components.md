@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Christophe Noel'
 created_at: '2010-12-02 16:28:43'
 updated_at: '2016-06-17 16:51:04'
+authors:
+    - 'Christophe Noel'
 tags:
     - 'Developer Guide'
 -->

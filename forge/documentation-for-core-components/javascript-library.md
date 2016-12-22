@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Somsack Sipasseuth'
 created_at: '2012-08-22 12:06:06'
 updated_at: '2013-02-27 10:56:48'
+authors:
+    - 'Somsack Sipasseuth'
 tags:
     - 'Documentation for core components'
 -->

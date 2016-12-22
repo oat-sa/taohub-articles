@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2011-04-22 09:14:58'
 updated_at: '2013-03-13 15:13:00'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Franck Gismondi'
 tags:
     - Deliveries
 -->

@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jean-Sébastien Conan'
 created_at: '2010-09-28 11:34:07'
 updated_at: '2016-09-21 15:34:15'
+authors:
+    - 'Jean-Sébastien Conan'
 -->
 
 TAO Wiki

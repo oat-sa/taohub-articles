@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-05-24 07:53:53'
 updated_at: '2016-05-25 10:48:54'
+authors:
+    - 'Joel Bout'
 tags:
     - Tutorials
 -->
@@ -96,7 +96,8 @@ Preparation
 LTI Installation
 ----------------
 
--   to Install the required extensions in Tao:\
+-   to Install the required extensions in Tao:<br/>
+
     \*\# go to Settings (Upper right corner)
     \*\# open the tab **Extensions manager**
     \*\# select the extensions **ltiDeliveryProvider** and **ltiProvider**

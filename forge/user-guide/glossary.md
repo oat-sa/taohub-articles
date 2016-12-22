@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Franck Gismondi'
 created_at: '2012-04-18 15:27:53'
 updated_at: '2012-04-18 15:27:53'
+authors:
+    - 'Franck Gismondi'
 tags:
     - 'User Guide'
 -->

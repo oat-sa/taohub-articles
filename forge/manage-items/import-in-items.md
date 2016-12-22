@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-03-19 19:22:07'
 updated_at: '2013-03-13 13:33:25'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Sophie Doublet'
 tags:
     - 'Manage Items'
 -->
@@ -49,7 +51,8 @@ The Import pane is displayed when a class is selected in the Items library and w
 
 You can import your data to:
 
--   CSV, the import is occurring in three steps:\
+-   CSV, the import is occurring in three steps:<br/>
+
     - first define the common options of your CSV file,
     - second select your file in your file system by clicking the Browse button and
     - thirdly map the columns of your CSV file to the properties of your class.

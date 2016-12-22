@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2013-10-28 11:12:15'
 updated_at: '2016-10-18 10:19:29'
+authors:
+    - 'Cyril Hazotte'
 tags:
     - 'Server Migration'
 -->
@@ -103,7 +103,8 @@ Migration steps
 
 In a standard install it is likely the path would end with /generis/data/
 
-\> For 2.6 onwards it is possible to store data outside the default directory, it is important to ensure that the FILES\_PATH in **install/directory/generis/common/conf/generis.conf.php** corresponds to the required directory:\
+\> For 2.6 onwards it is possible to store data outside the default directory, it is important to ensure that the FILES\_PATH in **install/directory/generis/common/conf/generis.conf.php** corresponds to the required directory:<br/>
+
 \><pre>\
 \#generis paths\
 …\

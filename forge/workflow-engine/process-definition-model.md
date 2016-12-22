@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2011-03-02 15:29:09'
 updated_at: '2013-03-13 13:01:08'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Somsack Sipasseuth'
 tags:
     - 'Workflow Engine'
 -->
@@ -108,13 +110,15 @@ An activity defines one or several actions to be performed on a given step of th
 
 An activity can be seen as the container of one or several services. As a container, the purpose of an activity is to define access rights. It allows addressing the issue: “When I arrive at this point of the process, am I allowed to execute the related actions?”.
 
-The [[Generis Overview|Generis]] representation of an activity class below shows its properties:\
+The [[Generis Overview|Generis]] representation of an activity class below shows its properties:<br/>
+
 ![](../resources/generis_activity_definition.png)\
 You can define the access control mode, whether it should be hidden or not (typically for a system activity that should not be visible by the end user) and whether the user can move forward or backward in the process execution interface.
 
 Each activity can be given an access control mode, to control how the limitation is managed in each case.<br/>
 
-Four types of access control modes are currently implemented:\
+Four types of access control modes are currently implemented:<br/>
+
 1- Role: all users with the right role can access it (however, the first user to access it becomes the owner of the activity and the only one able to access it later)\
 2- Role restricted user: identical to the previous mode, but applies to parallel branches only\
 3- Role restricted user inherited: it behaves initially like the “role restricted user”: however, once an activity with the right role has been executed by a user, all other activities with that access mode and that selected role will only be accessible by that user. (This mode is useful for a delivery since all items of a test must be taken only by a single and unique user)\
@@ -140,7 +144,8 @@ A service created in an activity is a *“Call of Service”*. A call of service
 
 A call of service is the service definition + the values of parameters +into a specific activity.
 
-The image below illustrates the difference between a service definition (*“service definition 1”*) and its associated call of services (*“service 1”* and *“service 2”*):\
+The image below illustrates the difference between a service definition (*“service definition 1”*) and its associated call of services (*“service 1”* and *“service 2”*):<br/>
+
 ![](../resources/service_definition_call_of_service.png)
 
 4. Connector definition

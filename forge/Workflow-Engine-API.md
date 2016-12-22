@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Lionel Lecaque'
 created_at: '2011-09-30 17:42:06'
 updated_at: '2011-11-04 15:49:31'
+authors:
+    - 'Lionel Lecaque'
 -->
 
 Workflow Engine API

@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2013-11-19 14:25:07'
 updated_at: '2013-12-03 11:39:15'
+authors:
+    - 'Cyril Hazotte'
+contributors:
+    - 'Joel Bout'
 tags:
     - 'TAO 2 5'
 -->

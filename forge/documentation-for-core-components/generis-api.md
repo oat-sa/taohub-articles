@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2010-12-02 16:27:34'
 updated_at: '2013-03-13 12:58:49'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - 'Documentation for core components'
 -->

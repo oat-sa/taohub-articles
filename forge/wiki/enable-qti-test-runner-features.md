@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Christophe Noel'
 created_at: '2016-04-27 11:52:02'
 updated_at: '2016-10-11 10:36:23'
+authors:
+    - 'Christophe Noel'
+contributors:
+    - 'Patrick Plichart'
 tags:
     - Wiki
 -->
@@ -114,7 +116,8 @@ This option requires requires the *x-tao-option-reviewScreen* option.
 x-tao-option-reviewScreen
 -------------------------
 
-displays the review screen / navigator. example :\
+displays the review screen / navigator. example :<br/>
+
 ![](../resources/NavigationExample.png)
 
 This option requires a modification to the **/config/taoQtiTest/testRunner.conf.php** file. Please find the line:

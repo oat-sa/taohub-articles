@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Antoine Robin'
 created_at: '2016-12-12 13:49:42'
 updated_at: '2016-12-13 08:54:05'
+authors:
+    - 'Antoine Robin'
 tags:
     - 'Developer Guide'
 -->

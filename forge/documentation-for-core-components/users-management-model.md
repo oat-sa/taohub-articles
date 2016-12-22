@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-03-07 09:34:17'
 updated_at: '2015-02-04 13:35:39'
+authors:
+    - 'Joel Bout'
 tags:
     - 'Documentation for core components'
 -->

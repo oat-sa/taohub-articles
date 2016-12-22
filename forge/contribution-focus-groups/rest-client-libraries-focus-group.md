@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Bertrand Chevrier'
 created_at: '2013-10-15 11:34:08'
 updated_at: '2013-10-17 10:52:12'
+authors:
+    - 'Bertrand Chevrier'
 tags:
     - 'Contribution Focus Groups'
 -->

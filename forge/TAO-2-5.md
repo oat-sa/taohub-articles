@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2013-05-21 09:18:55'
 updated_at: '2014-01-14 16:26:14'
+authors:
+    - 'Jérôme Bogaerts'
 -->
 
 TAO 2.5 - Education related Tools Ecosystem interoperability & Standards - Mobile Devices (Fall 2013)
@@ -189,7 +189,8 @@ Features
 
 Currently TAO implements QTI 2.0 for items, It covers the different item interactions from the 2.0, composite items, responseProcessing (including customResponseProcessing), stylesheets, external objects and basic content packaging . It doesn’t support Meta-data and usage data, on items: feedbacks and adaptive items, item templates
 
-The plan is to support :\
+The plan is to support :<br/>
+
 - Math ML\
 - Assesment Test, section and information item model\
 From the execution perspective, this is going to be implemented by a new QTI State Machine (allowing for branching and general rules evaluation), but for test banking, the QTI format will be used for storing and authoring. (similarly to the way we proceed for QTI (the rendering html is only used at delivery preparation time).<br/>
@@ -268,7 +269,8 @@ Depending on the configuration, it would allow to link from moodle 2.2 Learning 
 LTI is about linking the services and from that perspective different from a content interoperability standard, the content provided by a tool producer is also serviced by this tool.
 
 LTI 1.1.1 will be implemented in TAO 2.5 according to this implementation guide http://www.imsglobal.org/LTI/v1p1p1/ltiIMGv1p1p1.html\
-From the point of view of the standard, the whole specification is planned to be implemented and from a tool perspective :\
+From the point of view of the standard, the whole specification is planned to be implemented and from a tool perspective :<br/>
+
 - The test delivery service of tao will be exposed as a tool available (TP) from LTI compliant TC.<br/>
 
 - A delivery in TAO (TC) will allow users to embed a test serviced by a third party LTI compliant tool producer.
@@ -296,19 +298,23 @@ The purpose of this working area is to improve access to extenral contributions 
 
 So far, we were generating the source code from our architecture models.
 
-The advantages were the following :\
+The advantages were the following :<br/>
+
 - Continuous consistency between the architecture and the source code\
 - High quality models as they start from an abstract design.
 
-The drawbacks were the following :\
+The drawbacks were the following :<br/>
+
 - PHP5 generation in OS were restricted to argouml tool\
 - Access to external contributions may be limited\
 - the software engineering is not “common”
 
-So, here is the suggestion on the table :\
+So, here is the suggestion on the table :<br/>
+
 What if, instead of looking another tool, we generate the models from the source code ?
 
-Advantages :\
+Advantages :<br/>
+
 - Consistency would be preserved.<br/>
 
 - No tool dependency, use what the hell you want just yet another uml editor\
@@ -317,7 +323,8 @@ Advantages :\
 - benefit from the community and the partners more easily\
 - Changing the Sw dev process would be simple.
 
-Criticisms :\
+Criticisms :<br/>
+
 - This implies more strong check rules on code Architecturing as the coding could not start from conceptual models. Integration process will have to be updated.
 
 #### ArgoUML replacement

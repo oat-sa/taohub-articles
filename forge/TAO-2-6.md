@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-05-21 09:59:42'
 updated_at: '2014-09-05 10:08:53'
+authors:
+    - 'Joel Bout'
+contributors:
+    - 'Patrick Plichart'
 -->
 
 TAO 2.6

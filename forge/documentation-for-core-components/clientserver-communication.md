@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-02-20 11:08:29'
 updated_at: '2013-03-13 12:57:53'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Cedric Alfonsi'
 tags:
     - 'Documentation for core components'
 -->
@@ -163,7 +165,8 @@ It is based on the *ajax* function of the library [jQuery](http://jquery.com)
 (function) **options.error** The error callback function which is called if : the call failed; the server generate an exception; the server return a success=false|The ajax method is an overloading of the jQuery ajax function, this function get the same options than the original one. To get more information take a look to the following documentation http://api.jquery.com/jQuery.ajax\
 This overloading makes homogeneous exchanges between the client and the server.<br/>
 
-The behavior of its parent function has been adapted to control every exchanges between the client and the server and so it allows :\
+The behavior of its parent function has been adapted to control every exchanges between the client and the server and so it allows :<br/>
+
 - to intercept server exceptions ;<br/>
 
 - to manage under control errors ;|\

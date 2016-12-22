@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Patrick Plichart'
 created_at: '2014-03-18 11:15:39'
 updated_at: '2014-08-19 14:34:37'
+authors:
+    - 'Patrick Plichart'
 -->
 
 TAO 3.0
@@ -66,7 +66,8 @@ TAO 2.6 exposed a brand new WYSIWYG editor with a modern flat design. TAO 3.0 en
 {{collapse(Details …)\
 Computer based assessment project involve several stakeholders, the resources, items, tests are designed and authored sometimes collaboratively. In addition to the authentication system, a fine grained control access should be added so that resources or informations access (read, write, delete, create) may be set considering specific groups of users or roles.
 
-Two differents approaches could be considered :\
+Two differents approaches could be considered :<br/>
+
 - Rights access at resource level, considering access control on an item globally for instance.<br/>
 
 - Rights access at knowledge level, considering access control on every knowledge defined (every meta-data)

@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-05-24 11:18:33'
 updated_at: '2013-03-13 12:48:04'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - Tutorials
 -->

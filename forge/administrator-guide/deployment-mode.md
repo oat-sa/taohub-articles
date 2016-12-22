@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2011-02-11 11:00:03'
 updated_at: '2013-03-13 12:38:44'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - 'Administrator Guide'
 -->
@@ -78,7 +78,8 @@ Costs:
 -   material costs
 -   service costs (managing, configuration, etc.)
 
-Categories:\
+Categories:<br/>
+
 What defines categories: where are test takers, where stands the delivery, where are data (split?)…
 
 -   standalone

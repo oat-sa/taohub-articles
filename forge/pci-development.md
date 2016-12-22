@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Somsack Sipasseuth'
 created_at: '2016-09-21 14:53:47'
 updated_at: '2016-11-02 10:42:37'
+authors:
+    - 'Somsack Sipasseuth'
 -->
 
 PCI/PIC development
@@ -170,7 +170,8 @@ PATCH : bug fix, libs may be updated, qti xml does not need to be updated
 
 ### How to: update my PCI in TAO
 
-If is a minor or a patch, the pci just need to be registered with the updated version number in the manifest. In practice, most of the portable elements being implemented for TAO are registered from their source directories, so you only need to:\
+If is a minor or a patch, the pci just need to be registered with the updated version number in the manifest. In practice, most of the portable elements being implemented for TAO are registered from their source directories, so you only need to:<br/>
+
 increase the version\
 re-register it in the update script\
 make a regular PR\

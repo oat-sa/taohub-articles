@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-03-29 16:09:58'
 updated_at: '2013-03-13 14:31:19'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - 'Process Authoring'
 -->

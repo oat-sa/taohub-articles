@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Somsack Sipasseuth'
 created_at: '2013-12-05 15:12:58'
 updated_at: '2013-12-11 16:26:01'
+authors:
+    - 'Somsack Sipasseuth'
 -->
 
 QTI in TAO

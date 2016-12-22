@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2013-05-31 09:53:44'
 updated_at: '2013-05-31 12:11:48'
+authors:
+    - 'Jérôme Bogaerts'
 -->
 
 RDF by example

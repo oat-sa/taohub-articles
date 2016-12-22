@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2014-02-12 11:44:13'
 updated_at: '2016-09-16 16:45:58'
+authors:
+    - 'Cyril Hazotte'
 tags:
     - 'Administrator Guide'
 -->
@@ -430,7 +430,8 @@ User authentication storage abstraction
 
 
 
-Currently, there are at least two user authentication methods available:\
+Currently, there are at least two user authentication methods available:<br/>
+
 - using the Generis model user adapter (default method)\
 - using the key-value user adapter
 

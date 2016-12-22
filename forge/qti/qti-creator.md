@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Somsack Sipasseuth'
 created_at: '2014-04-08 18:02:29'
 updated_at: '2015-03-12 10:01:42'
+authors:
+    - 'Somsack Sipasseuth'
 tags:
     - QTI
 -->
@@ -883,16 +883,20 @@ In the answer state:
 
 After integration, your interaction widget (and form) will look like this:
 
-Sleep state:\
+Sleep state:<br/>
+
 ![](../resources/item-creator-1-main.png)
 
-Question state:\
+Question state:<br/>
+
 ![](../resources/item-creator-2-question-mode.png)
 
-Choice state:\
+Choice state:<br/>
+
 ![](../resources/item-creator-3-choice-mode.png)
 
-Answer state:\
+Answer state:<br/>
+
 ![](../resources/item-creator-4-answer-mode.png)
 
 The template will be available in the style-guide.
@@ -1062,7 +1066,8 @@ The widget define the common structure for the qti element that is being edited.
 
 The stack of states will bring and enrich the behaviour as needed.
 
-Instanciation and usage:\
+Instanciation and usage:<br/>
+
 A widget is only instanciated in the qti element renderer (see previous “renderer declaration section”)
 
 Definition
@@ -1111,7 +1116,8 @@ However, for every interaction widget, you have to implement the question at lea
 
 For an interaction where a response declaration is not required (such as mediaInteraction or uploadInteraction), there is no need to define an answer state.
 
-State hierarchy :\
+State hierarchy :<br/>
+
 The states are hierachical. When you are in the question state, you will also inherit the behaviour of the active state. When you are editing a response in the correct state, you will inherit the behaviour of both the active and answer states. The following diagram illustrates a stack of states when an interaciton or a choice is in the correct state.<br/>
 
 ![](../resources/taoQtiCreatorStatesStacks.png)

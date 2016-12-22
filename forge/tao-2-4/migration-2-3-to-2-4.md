@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-03-15 08:43:02'
 updated_at: '2013-08-07 08:12:30'
+authors:
+    - 'Joel Bout'
+contributors:
+    - 'Lionel Lecaque'
 tags:
     - 'TAO 2 4'
 -->

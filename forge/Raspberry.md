@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Patrick Plichart'
 created_at: '2013-10-10 18:13:43'
 updated_at: '2013-10-11 10:25:58'
+authors:
+    - 'Patrick Plichart'
 -->
 
 Tao on a Raspberry
@@ -197,12 +197,14 @@ This step may become mandatory especially if you don’t use vhost. As tao memor
 
     passwd pi
 
-8. Start the LAMP stack installation :\
+8. Start the LAMP stack installation :<br/>
+
 http://forge.taotesting.com/projects/tao/wiki/InstallUbuntuApacheMySQL
 ----------------------------------------------------------------------
 
 9. Start TAO installation\
-From any computer on the same network :\
+From any computer on the same network :<br/>
+
 http://yourip/tao/install\
 or vhost\
 http://vhost/tao/install

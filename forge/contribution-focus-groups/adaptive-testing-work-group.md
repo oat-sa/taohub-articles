@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2013-10-28 14:27:34'
 updated_at: '2013-11-25 10:46:38'
+authors:
+    - 'Joel Bout'
 tags:
     - 'Contribution Focus Groups'
 -->

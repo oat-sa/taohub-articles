@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Christophe Noel'
 created_at: '2011-03-04 17:42:01'
 updated_at: '2016-06-17 17:09:53'
+authors:
+    - 'Christophe Noel'
 tags:
     - 'Documentation for core components'
 -->

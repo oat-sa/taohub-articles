@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Rex Wallen Tan'
 created_at: '2016-01-01 02:40:35'
 updated_at: '2016-01-01 02:41:13'
+authors:
+    - 'Rex Wallen Tan'
 tags:
     - Tutorials
 -->

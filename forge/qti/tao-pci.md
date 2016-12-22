@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Somsack Sipasseuth'
 created_at: '2014-08-14 17:40:54'
 updated_at: '2016-11-17 15:55:57'
+authors:
+    - 'Somsack Sipasseuth'
 tags:
     - QTI
 -->
@@ -918,7 +918,8 @@ Table A.4. JSON Schema Revision
 
 ﻿h1. Portable Custom Interaction Best Practice Change Proposal: Changes and Recommendations Based on an Experimental Implementation
 
-Authors:\
+Authors:<br/>
+
 Jérôme Bogaerts (Open Assessment Technologies, LU)\
 Somsack Sipasseuth (Open Assessment Technologies, LU)\
 Version: Public Draft\
@@ -1290,7 +1291,8 @@ Implementers will do all necessary clean-up to performed when the Rendering Engi
 id\
 Implementers of Custom Interaction Hooks will make the id attribute public to make the Rendering Engine able to identify Custom Interaction Hook Instance.<br/>
 
-The modifications in this section provide a nice and clean programmatic interface to implement the Communication Bridge and:\
+The modifications in this section provide a nice and clean programmatic interface to implement the Communication Bridge and:<br/>
+
  1. Allow the Rendering Engine providing the necessary communication channels to Custom Interaction Hooks.<br/>
 
  2. Enable Custom Interaction Hooks to register to the Rendering Engine but also notify it for some through the notifyDone() and notifyReady() methods.
@@ -1491,7 +1493,8 @@ The original JSON Schema (shipped with the previous version of “IMS Portable C
 
 Moreover, it does not enable production of embedded NULL values as parts of the response payload. Beyond the use of the QTI Base Types and Multiple, Ordered and Record containers in the context of Portable Custom Interactions, the JSON representation of values suits very well the needs of built-in QTI interactions and efficient data transmission between client and server sides. Because of this but also the existence of the QTI customOperator, we consider important to make possible the use of scalar NULL values and hybrid containers such as [1, 2, NULL, 3] or [“A” =\> 1, “B” =\> NULL, “C” =\> 2].<br/>
 
-By rewriting the JSON format using JSON Schema Draft 4, the following changes can be applied:\
+By rewriting the JSON format using JSON Schema Draft 4, the following changes can be applied:<br/>
+
  1. The ‘Point’ base type is modified to contain only two values, instead of 2 or 3 in the previous version. Indeed, the QTI 2.1 specification says about the Point base type that “A point value represents an integer tuple corresponding to a graphic point. The two integers correspond to the horizontal (x-axis) and vertical (y-axis) positions respectively. The up/down and left/right senses of the axes are context dependent”.<br/>
 
  2. Pair and DirectedPair values must now be composed of Identifier values instead of plain strings.<br/>
@@ -1544,7 +1547,8 @@ QTI Base Type\
  Identifier\
  { [base]() { [identifier]() “\_identifier” } }
 
-The modifications applied on table A.1 are the following:\
+The modifications applied on table A.1 are the following:<br/>
+
  1. Added an example of NULL value.<br/>
 
  2. The File base type example now emphases the existence of the name attribute.<br/>

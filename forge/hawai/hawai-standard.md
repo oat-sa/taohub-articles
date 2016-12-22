@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2011-03-09 10:54:43'
 updated_at: '2013-03-13 13:05:30'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - Hawai
 -->
@@ -311,7 +311,8 @@ Init represents the initialization process and can be use either in the authorin
 
 ### (abstract) expression
 
-Derived elements :\
+Derived elements :<br/>
+
 [[Hawaï\_standard\#lock|lock]], [[Hawaï\_standard\#unlock|unlock]]
 
 ### knowledge

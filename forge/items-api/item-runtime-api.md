@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2011-03-04 11:30:38'
 updated_at: '2014-03-07 13:51:48'
+authors:
+    - 'Joel Bout'
+contributors:
+    - 'Bertrand Chevrier'
 tags:
     - 'Items'' API'
 -->

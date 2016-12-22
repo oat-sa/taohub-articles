@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2014-09-16 13:25:52'
 updated_at: '2014-09-16 13:52:22'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - 'Installation and Upgrading'
 -->

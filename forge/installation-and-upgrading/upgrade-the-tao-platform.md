@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Lionel Lecaque'
 created_at: '2015-04-16 08:04:18'
 updated_at: '2015-04-16 08:04:35'
+authors:
+    - 'Lionel Lecaque'
 tags:
     - 'Installation and Upgrading'
 -->

@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Christophe Garcia'
 created_at: '2015-06-18 13:17:42'
 updated_at: '2016-06-20 10:08:45'
+authors:
+    - 'Christophe Garcia'
 tags:
     - 'TAO 3 1'
 -->
@@ -275,7 +275,8 @@ Preparation
 -----------
 
 1.  Install TAO (3.0) (https://github.com/oat-sa/package-tao)
-2.  download taoDevTools extension using composer :\
+2.  download taoDevTools extension using composer :<br/>
+
     <code>composer require “oat-sa/extension-tao-devtools” —dev</code>
 3.  Make sure the extension taoDevTools has been installed ([[How to install an extension]]).
 

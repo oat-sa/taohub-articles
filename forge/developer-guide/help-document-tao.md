@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Dieter Raber'
 created_at: '2010-12-02 16:15:20'
 updated_at: '2016-09-13 16:17:28'
+authors:
+    - 'Dieter Raber'
 tags:
     - 'Developer Guide'
 -->

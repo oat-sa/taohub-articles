@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Patrick Plichart'
 created_at: '2013-05-21 07:47:27'
 updated_at: '2013-05-21 08:02:32'
+authors:
+    - 'Patrick Plichart'
 -->
 
 Past Roadmap Objectives
@@ -264,7 +264,8 @@ This will enable the grading functionnality, includign the possibility to define
 
 \> Other benefits included the possibility to use the anonymous statistics from conflicting scores and graders’ work to adapt the assignation of scoring tasks to scores thus improving the entire quality of the results management. These accomplishments and others like assessment from the test takers performance is thereby going to enhance on the overall course improvement and making amendments where needed.
 
-\> Functionalities :\
+\> Functionalities :<br/>
+
 \> \* Specify a scale (min, max, and step) for the manual grading of items in item authoring tool\
 \> \* Provide a GUI, in the results extension, enabling graders to browse test takers (anonymously or not) and grade for each items and interactions of items according to the specified scale. Advanced browsing will make use of properties defined on items as criteria to grade by focusing exclusively on subsets of items.<br/>
 

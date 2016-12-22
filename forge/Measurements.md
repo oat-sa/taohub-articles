@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2012-06-15 10:40:44'
 updated_at: '2012-06-15 14:30:47'
+authors:
+    - 'Joel Bout'
 -->
 
 Measurements

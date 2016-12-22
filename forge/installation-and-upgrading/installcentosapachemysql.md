@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-03-09 16:42:44'
 updated_at: '2013-06-17 08:20:12'
+authors:
+    - 'Jérôme Bogaerts'
 tags:
     - 'Installation and Upgrading'
 -->
@@ -349,7 +349,8 @@ Your first task is to configure the service to start it when the Operating Syste
 
 The following setup operation is optional. If you want to make a secure installation of mySQL by changing its *root* password, enter the following command in your terminal. The *mysql\_secure\_installation* program will simply ask you for a new *root* password.
 
-**Important!** If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:\
+**Important!** If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:<br/>
+
 EXECUTE, SELECT, SHOW DATABASES, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, DELETE, DROP, INDEX, INSERT, UPDATE, RELOAD
 
 If you need more information about database privileges and databases, please visit the [[DatabaseUserPrivileges|page dedicated to this topic]].

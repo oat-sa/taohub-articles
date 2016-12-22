@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Antoine Robin'
 created_at: '2015-07-24 14:41:27'
 updated_at: '2015-07-27 09:29:43'
+authors:
+    - 'Antoine Robin'
 tags:
     - 'Documentation for core components'
 -->

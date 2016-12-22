@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Patrick Plichart'
 created_at: '2015-05-27 14:29:13'
 updated_at: '2015-05-27 14:30:28'
+authors:
+    - 'Patrick Plichart'
 -->
 
 Raspberry30
@@ -59,7 +59,8 @@ Getting started
 
 - The only tweaking consists in identifying the raspberry PI on your network and find out the right URL to be typed in into your favorite web browser.
 
-Plug it on your network ! Find its IP on your network :\
+Plug it on your network ! Find its IP on your network :<br/>
+
 If you are running Linux, you ay find the IP of the PI using this command line:
 
     fping -a -r1 -g 192.168.254.0/24  &> /dev/null arp –n| fgrep " b8:27:eb"
@@ -78,7 +79,8 @@ TAO admin user : pitao/pitao
 System account
 --------------
 
-You may want to tweak the sytem to your own needs, the default account is :\
+You may want to tweak the sytem to your own needs, the default account is :<br/>
+
 Ssh: pi / raspberry
 
 

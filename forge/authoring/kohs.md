@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Jérôme Bogaerts'
 created_at: '2012-03-19 19:45:42'
 updated_at: '2013-03-13 15:19:40'
+authors:
+    - 'Jérôme Bogaerts'
+contributors:
+    - 'Sophie Doublet'
 tags:
     - Authoring
 -->

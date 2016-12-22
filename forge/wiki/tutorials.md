@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Camille Moyon'
 created_at: '2011-09-13 11:22:48'
 updated_at: '2016-05-02 16:13:13'
+authors:
+    - 'Camille Moyon'
 tags:
     - Wiki
 -->

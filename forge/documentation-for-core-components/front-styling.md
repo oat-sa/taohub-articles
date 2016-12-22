@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Bertrand Chevrier'
 created_at: '2014-01-16 11:54:24'
 updated_at: '2014-10-27 08:13:49'
+authors:
+    - 'Bertrand Chevrier'
 tags:
     - 'Documentation for core components'
 -->
@@ -110,7 +110,8 @@ Do not forget to add the path to the bootstrap into your compiler’s options (`
 
 ### Compiling
 
-In order to compile (or watch) your SASS files to the target CSS, you can either use:\
+In order to compile (or watch) your SASS files to the target CSS, you can either use:<br/>
+
  - The grunt task provided with TAO (see [[Front Tools]])\
  - The SASS CLI tool provided by SASS (requires ruby and the sass gem)\
  - Your favorite IDE SASS plugin

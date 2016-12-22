@@ -1,8 +1,11 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2014-01-28 16:39:03'
 updated_at: '2014-02-18 11:35:31'
+authors:
+    - 'Cyril Hazotte'
+contributors:
+    - 'Patrick Plichart'
+    - 'Jérôme Bogaerts'
 -->
 
 
@@ -377,7 +380,8 @@ Our tests used the same redis server for all three, note that you may use differ
 
 ### Storing Results in a Redis server
 
--   Make sure you have installed the packages :\
+-   Make sure you have installed the packages :<br/>
+
     “redis-server” (on the server you want to use for the storage)
     “phpredis” on the tao application server
 
@@ -564,7 +568,8 @@ In case an error occurs, use the following command to get further details:
 
 ### Varnish commands
 
-The main Varnish-related commands are varnishtop and varnishstat:\
+The main Varnish-related commands are varnishtop and varnishstat:<br/>
+
 - varnishtop gives regular feedbacks about backend server status (healthy, sick, back healthy, went sick).<br/>
 
 - varnishstat is a real-time monitoring and statistics tool. The main values to monitor are probably the hitrate and hitrate average values.<br/>
@@ -594,7 +599,8 @@ Constraints
 Benchmarks
 ----------
 
-Our benchmarks were achieved using a topology on our network as such:\
+Our benchmarks were achieved using a topology on our network as such:<br/>
+
 - One load balancer appliance (Varnish)\
 - Two desktop computers acting as application servers with php-fpm (one high end with 8 cores-SSD, one mid end 4 cores)\
 - One redis server . (a low end computer)

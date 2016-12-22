@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2016-08-22 14:28:12'
 updated_at: '2016-08-22 14:51:37'
+authors:
+    - 'Joel Bout'
 -->
 
 Uninstall taoWorkspace

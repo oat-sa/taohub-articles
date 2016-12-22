@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Cyril Hazotte'
 created_at: '2015-06-19 09:23:35'
 updated_at: '2015-08-10 11:03:29'
+authors:
+    - 'Cyril Hazotte'
 tags:
     - 'Data abstractions'
 -->
@@ -167,7 +167,8 @@ Two major implementation of result Storage exist:
 
 The KeyValue Result storage implementation may be installed and configured under the following conditions:
 
--   Make sure you have installed the packages :\
+-   Make sure you have installed the packages :<br/>
+
     “redis-server” (on the server you want to use for the storage)
     “phpredis” on the TAO application server
 

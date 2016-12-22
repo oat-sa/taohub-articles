@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Christophe Garcia'
 created_at: '2016-08-18 14:06:04'
 updated_at: '2016-08-22 15:49:22'
+authors:
+    - 'Christophe Garcia'
 -->
 
 TAO Service injector

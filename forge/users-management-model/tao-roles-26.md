@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2014-02-20 10:20:15'
 updated_at: '2014-02-20 11:06:50'
+authors:
+    - 'Joel Bout'
 tags:
     - 'Users Management Model'
 -->

@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Jean-Sébastien Conan'
 created_at: '2016-09-21 15:35:10'
 updated_at: '2016-09-21 16:01:18'
+authors:
+    - 'Jean-Sébastien Conan'
 tags:
     - Wiki
 -->

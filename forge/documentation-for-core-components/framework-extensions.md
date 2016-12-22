@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2011-03-04 17:31:25'
 updated_at: '2013-03-21 15:18:15'
+authors:
+    - 'Joel Bout'
+contributors:
+    - 'Bertrand Chevrier'
 tags:
     - 'Documentation for core components'
 -->

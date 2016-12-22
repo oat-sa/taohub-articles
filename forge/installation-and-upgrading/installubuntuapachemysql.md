@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Gyula Szucs'
 created_at: '2012-09-27 14:48:30'
 updated_at: '2016-09-19 14:12:48'
+authors:
+    - 'Gyula Szucs'
 tags:
     - 'Installation and Upgrading'
 -->
@@ -268,7 +268,8 @@ To install the latest PHP and modules needed by the TAO platform to run, open up
 
 \> If you want to install a lower version of PHP and you already have a higher version installed on your system, then you can do it on two ways. The first is removing the higher version, the second is installing the other version straightaway so you will have the two version installed together. If you want the last option, skip the following block and start with adding a new PPA.
 
-\> To remove the old php packages installed, use the following commands:\
+\> To remove the old php packages installed, use the following commands:<br/>
+
 \> <pre>\
  \# replace PACKAGE with the proper names of the PHP packages installed, like “php5-cli php5-curl” etc.<br/>
 
@@ -284,7 +285,8 @@ sudo apt-get install -y php5.5 php5.5-gd php5.5-mysql php5.5-tidy php5.5-curl ph
 sudo apt-get install -y php5.6 php5.6-gd php5.6-mysql php5.6-tidy php5.6-curl php5.6-mbstring php5.6-zip php5.6-xml php-xml-parser \#for PHP 5.6
 
 </pre>
-\> If you need **PHP 5.4**, use the these commands:\
+\> If you need **PHP 5.4**, use the these commands:<br/>
+
 \><pre>\
 sudo add-apt-repository ppa:ondrej/php5-oldstable\
 sudo apt-get update\
@@ -292,7 +294,8 @@ sudo apt-get upgrade\
 sudo apt-get install -y php5 php5-gd php5-mysql php5-tidy php5-curl php5-mbstring php5-zip php5-xml php-xml-parser
 
 </pre>
-\> If you’ve selected the second option, you should have two php version installed on your system by now. To switch between the versions, use the following commands:\
+\> If you’ve selected the second option, you should have two php version installed on your system by now. To switch between the versions, use the following commands:<br/>
+
 \> \* Apache <pre>sudo a2dismod php7.0 ; sudo a2enmod php5.6 ; sudo service apache2 restart</pre>\
 \> \* CLI <pre>sudo ln -sfn /usr/bin/php5.6 /etc/alternatives/php</pre>
 
@@ -418,7 +421,8 @@ The following setup operation is optional. If you want to make a secure installa
 
 The *mysql\_secure\_installation* program will simply ask you for a new *root* password.
 
-**Important!** If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:\
+**Important!** If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:<br/>
+
 EXECUTE, SELECT, SHOW DATABASES, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, DELETE, DROP, INDEX, INSERT, UPDATE, RELOAD
 
 If you need more information about database privileges and databases, please visit the [[DatabaseUserPrivileges|page dedicated to this topic]].

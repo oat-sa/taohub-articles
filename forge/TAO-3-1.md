@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Joel Bout'
 created_at: '2015-12-15 17:41:48'
 updated_at: '2015-12-15 17:41:48'
+authors:
+    - 'Joel Bout'
 -->
 
 TAO 3.1

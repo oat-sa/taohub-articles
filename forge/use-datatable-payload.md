@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Aleh Hutnikau'
 created_at: '2016-10-11 17:12:45'
 updated_at: '2016-10-11 17:12:45'
+authors:
+    - 'Aleh Hutnikau'
 -->
 
 Usage of DatatablePayload
@@ -100,7 +100,8 @@ DatatablePayload supports multiple filtering and easy to use.
 Basic usage:
 ------------
 
--   Create concrete class which extends *oat\\tao\\model\\datatable\\AbstractDatatablePayload*:\
+-   Create concrete class which extends *oat\\tao\\model\\datatable\\AbstractDatatablePayload*:<br/>
+
     https://github.com/oat-sa/tao-core/blob/develop/models/classes/datatable/implementation/AbstractDatatablePayload.php
 
 <!-- -->

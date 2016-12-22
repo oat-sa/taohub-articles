@@ -1,8 +1,10 @@
 <!--
-author:
-    - 'Thibaud Latour'
 created_at: '2013-10-17 10:25:44'
 updated_at: '2013-10-17 11:23:41'
+authors:
+    - 'Thibaud Latour'
+contributors:
+    - 'Lionel Lecaque'
 tags:
     - Tutorials
 -->

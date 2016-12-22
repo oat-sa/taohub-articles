@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Christophe Noel'
 created_at: '2016-03-30 14:39:43'
 updated_at: '2016-07-20 10:37:38'
+authors:
+    - 'Christophe Noel'
 -->
 
 Development tips

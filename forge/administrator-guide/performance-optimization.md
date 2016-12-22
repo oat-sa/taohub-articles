@@ -1,8 +1,8 @@
 <!--
-author:
-    - 'Somsack Sipasseuth'
 created_at: '2011-06-22 11:25:02'
 updated_at: '2011-09-28 13:22:25'
+authors:
+    - 'Somsack Sipasseuth'
 tags:
     - 'Administrator Guide'
 -->
@@ -194,12 +194,15 @@ The reverse action is also provided to get the data form optimized (“compiled�
 
 ### 3.1. From CLI
 
-Go to the script path located on *TAO\_ROOT/wfEngine/scripts/* then execute the following command:\
-to compile:\
+Go to the script path located on *TAO\_ROOT/wfEngine/scripts/* then execute the following command:<br/>
+
+to compile:<br/>
+
 `php wfEngineOptimizer.php -c -i`\
 (c for complie, i for indexing)
 
-to decompile:\
+to decompile:<br/>
+
 `php wfEngineOptimizer.php -d`\
 (d for decompile)
 
@@ -207,7 +210,8 @@ Please be patient, it may take a while according to the quantity of data you hav
 
 ### 3.2. From GUI: via tao backoffice
 
-This functionality is also available in the TAO back office, accessible via the “setting” menu from the TAO home as illustrated below:\
+This functionality is also available in the TAO back office, accessible via the “setting” menu from the TAO home as illustrated below:<br/>
+
 ![](../resources/perf_opt_setting.png)
 
 Click on the “optimize” button to start the data compilation.
@@ -251,7 +255,8 @@ The 2 tables below show the average time of execution for each action performed 
 
 The database is filled with **1000 test takers**. A given number of test taker (from 1 to 200) execute each a small test with **4 items**, within a short among of time of **30 seconds**.
 
-The server configuration is as follow (on virtual machine):\
+The server configuration is as follow (on virtual machine):<br/>
+
 processors : 4\
 vendor\_id : GenuineIntel\
 cpu family : 6\
