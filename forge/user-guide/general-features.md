@@ -13,12 +13,12 @@ General features
 1. Home screen
 ------------------
 
-2. [Menus](../general-features/menus)
+2. [Menus](../general-features/menus.md)
 ------------
 
 3. Screen organization
 --------------------------
 
-4. [Library](../general-features/library)
+4. [Library](../general-features/library.md)
 --------------
 

@@ -37,8 +37,8 @@ The main functions of this tab:
 -   Select test takers to be excluded
 -   Delivery properties
 -   Translate in Deliveries|Translate
--   [Compilation](../deliveries/compilation)
--   [History](../deliveries/history)
+-   [Compilation](../deliveries/compilation.md)
+-   [History](../deliveries/history.md)
 -   Search in Deliveries|Search
 -   Move to in Deliveries|Move to
 -   Create table in Deliveries|Create table

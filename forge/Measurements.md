@@ -11,7 +11,7 @@ Measurements
 
 introduced in TAO 2 2|TAO 2.2
 
-Measurements allow us to describe the variables that will be created during the delivery of the item. This functionality allows the extension [TaoCoding](framework-extensions/taocoding) to give additional informations to the graders on how to evaluate the test-takers answers.
+Measurements allow us to describe the variables that will be created during the delivery of the item. This functionality allows the extension [TaoCoding](framework-extensions/taocoding.md) to give additional informations to the graders on how to evaluate the test-takers answers.
 
 Generation
 ----------

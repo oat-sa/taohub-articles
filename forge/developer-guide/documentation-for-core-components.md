@@ -28,15 +28,15 @@ Documentation for TAO core components
 
 ### 2.2. Framework
 
-2.2.1. [Overview](../documentation-for-core-components/overview)<br/>
+2.2.1. [Overview](../documentation-for-core-components/overview.md)<br/>
 
-2.2.2. [Controllers](../documentation-for-core-components/controllers)<br/>
+2.2.2. [Controllers](../documentation-for-core-components/controllers.md)<br/>
 
-2.2.3. [Helpers](../documentation-for-core-components/helpers)<br/>
+2.2.3. [Helpers](../documentation-for-core-components/helpers.md)<br/>
 
-2.2.4. [Models](../documentation-for-core-components/models)<br/>
+2.2.4. [Models](../documentation-for-core-components/models.md)<br/>
 
-2.2.5. [Views](../documentation-for-core-components/views)<br/>
+2.2.5. [Views](../documentation-for-core-components/views.md)<br/>
 
 2.2.6. Internationalization|Internationalization (i18n)<br/>
 
@@ -70,7 +70,7 @@ Documentation for TAO core components
 
 4.6 Tutorials Front End
 
-4.6.1 [Plugin](../documentation-for-core-components/plugin)<br/>
+4.6.1 [Plugin](../documentation-for-core-components/plugin.md)<br/>
 
 4.6.2 Unit tests
 
@@ -101,7 +101,7 @@ Documentation for TAO core components
 
 ### 7.1. Items’ Types
 
-7.1.1. [QTI](../items-types/qti)<br/>
+7.1.1. [QTI](../items-types/qti.md)<br/>
 
 7.1.2. Free Form Items|Open WEB Items<br/>
 
@@ -130,14 +130,14 @@ Documentation for TAO core components
 10. Rest Services Layer
 ---------------------------
 
-11. [Helpers](../documentation-for-core-components/helpers)
+11. [Helpers](../documentation-for-core-components/helpers.md)
 ---------------
 
 ### 11.1. Form<br/>
 
 11.2. Grid<br/>
 
-11.3. [Logger](../documentation-for-core-components/logger)<br/>
+11.3. [Logger](../documentation-for-core-components/logger.md)<br/>
 
 11.4. Translations Helpers|Translations
 

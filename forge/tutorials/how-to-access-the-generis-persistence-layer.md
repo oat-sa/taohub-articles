@@ -15,7 +15,7 @@ Accessing the generis persistence layer
 Requirements
 ------------
 
-In order to follow this How-to you will need to be proficient in PHP and [RDF](../generis-overview/rdf).
+In order to follow this How-to you will need to be proficient in PHP and [RDF](../generis-overview/rdf.md).
 
 Accessing the TAO API
 ---------------------

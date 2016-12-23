@@ -48,12 +48,12 @@ The main functions of this section:
 
 -   Service definition
 -   Formal parameter
--   [Role](../process-authoring/role)
+-   [Role](../process-authoring/role.md)
 -   Process variables
 -   Process diagram
 -   Activity editor
 -   Process properties
--   [Compilation](../deliveries/compilation)
+-   [Compilation](../deliveries/compilation.md)
 
 3. Manage Roles
 -------------------

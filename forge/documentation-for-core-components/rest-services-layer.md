@@ -11,7 +11,7 @@ Rest Services Layer (<br/>
 >= TAO 2.5)
 =================================
 
-A tutorial demonstrating a few examples is available here: (Test takers) [Rest](../rest) and (Results) [RestResults](../rest-services-layer/restresults)
+A tutorial demonstrating a few examples is available here: (Test takers) [Rest](../rest.md) and (Results) [RestResults](../rest-services-layer/restresults.md)
 
 List of available rest controllers
 ----------------------------------

@@ -40,6 +40,6 @@ In order to allow the test and delivery models to be expendable the Tao 2.5 Deli
 Upgrading
 ---------
 
-A new update procedure now allow you to smothly upgrade from 2.4 to 2.5, [Installation and Upgrading](../administrator-guide/installation-and-upgrading)
+A new update procedure now allow you to smothly upgrade from 2.4 to 2.5, [Installation and Upgrading](../administrator-guide/installation-and-upgrading.md)
 
 

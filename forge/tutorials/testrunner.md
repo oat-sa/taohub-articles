@@ -23,8 +23,8 @@ For this tutorial you will need:
 
 You should already be familar with:
 
--   How to create an extension ([Make a new extension](../tutorials/make-a-new-extension))
--   Resource Description Framework ([RDF](../generis-overview/rdf))
+-   How to create an extension ([Make a new extension](../tutorials/make-a-new-extension.md))
+-   Resource Description Framework ([RDF](../generis-overview/rdf.md))
 -   Tao 2.5 Delivery model
 
 The components
@@ -34,7 +34,7 @@ The components
 
 The following three files are required for any extension:
 
--   **manifest.php** describes the extension and is required in order to be able to install it. (see [ExtensionManifestDescription](../framework-extensions/extensionmanifestdescription))
+-   **manifest.php** describes the extension and is required in order to be able to install it. (see [ExtensionManifestDescription](../framework-extensions/extensionmanifestdescription.md))
 -   **.htaccess** uses mod_rewrite to redirects requests to index.php
 -   **index.php** runs the Bootstrap and initialises the system for every request.
 

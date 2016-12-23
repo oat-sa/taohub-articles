@@ -10,7 +10,7 @@ tags:
 Administrator Guide
 ===================
 
-1. [Requirements](../administrator-guide/requirements)
+1. [Requirements](../administrator-guide/requirements.md)
 -------------------
 
 2. Installation and Upgrading
@@ -27,7 +27,7 @@ Administrator Guide
 
 3.3. Site administration setting|Site administration settings<br/>
 
-3.4. [Maintenance](../administrator-guide/maintenance)<br/>
+3.4. [Maintenance](../administrator-guide/maintenance.md)<br/>
 
 3.5. Performance optimization<br/>
 
@@ -45,7 +45,7 @@ Administrator Guide
 5. DatabaseUserPrivileges|RDBMS Specific Configurations
 -----------------------------------------------------------
 
-6. [FAQs](../administrator-guide/faqs)
+6. [FAQs](../administrator-guide/faqs.md)
 -----------
 
 7. See also admin|See also

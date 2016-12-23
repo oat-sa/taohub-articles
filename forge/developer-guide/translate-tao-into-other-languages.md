@@ -113,7 +113,7 @@ There is a also [dedicated section](http://forge.taotesting.com/projects/tao/boa
 Going further
 -------------
 
-If you want to understand how the translations are implemented into the TAO Framework you can have a look at the section dedicated to the [Internationalization](../documentation-for-core-components/internationalization).
+If you want to understand how the translations are implemented into the TAO Framework you can have a look at the section dedicated to the [Internationalization](../documentation-for-core-components/internationalization.md).
 
 See also:
 

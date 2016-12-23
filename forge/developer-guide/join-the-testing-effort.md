@@ -16,7 +16,7 @@ TAO’s Community’s members represent an important part of the creation of TAO
 
 If you are interested in installing TAO for testing purpose in your own environment, you will find more informations in Installation and upgrading guide and if you have any input/feedbacks or comment that can help development team to improve TAO, do not hesitate to sign in the TAO Forge.
 
-As a member of the TAO forge, you will then have access to bug tracking and feature requests systems in order to add issues (See guide How [Issues](../how-tao-development-works/issues) works) or comment on existing issues, you will also be able to participate to team discussion about TAO in the forum.
+As a member of the TAO forge, you will then have access to bug tracking and feature requests systems in order to add issues (See guide How [Issues](../how-tao-development-works/issues.md) works) or comment on existing issues, you will also be able to participate to team discussion about TAO in the forum.
 
 Different versions to test
 ==========================

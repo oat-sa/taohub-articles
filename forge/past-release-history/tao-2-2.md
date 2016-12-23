@@ -17,7 +17,7 @@ Features
 
 see also Plans for the future.
 
--   [Logger](../documentation-for-core-components/logger)
+-   [Logger](../documentation-for-core-components/logger.md)
 -   Generis config file refactoring
 -   Support for several structures per extension
 -   Full support for custom QTI rules
@@ -26,7 +26,7 @@ see also Plans for the future.
 
 ### taoCoding|Human based scoring
 
--   taoItems [Measurements](../measurements)
+-   taoItems [Measurements](../measurements.md)
 -   new Variable storage
 -   Grading
 -   Conciliaton

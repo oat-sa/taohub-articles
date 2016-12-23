@@ -10,7 +10,7 @@ tags:
 Logger Tao 2.2
 ==============
 
-Valid as of TAO_2_2|TAO 2.2 until TAO_2_6|TAO 2.6. Please refer to [Logger](../documentation-for-core-components/logger) for current version.
+Valid as of TAO_2_2|TAO 2.2 until TAO_2_6|TAO 2.6. Please refer to [Logger](../documentation-for-core-components/logger.md) for current version.
 
 
 

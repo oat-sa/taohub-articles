@@ -43,7 +43,7 @@ Supposing that the subject and delivery models have the property â€œdifficultyâ€
     define('PROPERTY_SUBJECT_DIFFULTY', '#propertyDeliveryDifficulty');//i.e. uri of the subject difficulty property here
     define('PROPERTY_DELIVERY_DIFFULTY', '#propertySubjectDifficulty');
 
-You only need to add this function to the delivery server service *taoDelivery_models_classes_DeliveryServerService*, or better, to a class that extends this class, e.g. taoDelivery_models_classes_myDeliveryServerService (following the [Guidelines](../developer-guide/guidelines) for naming conventions)
+You only need to add this function to the delivery server service *taoDelivery_models_classes_DeliveryServerService*, or better, to a class that extends this class, e.g. taoDelivery_models_classes_myDeliveryServerService (following the [Guidelines](../developer-guide/guidelines.md) for naming conventions)
 
 
     //a class created in /taoDelivery/models/classes/class.myDeliveryServerService.php

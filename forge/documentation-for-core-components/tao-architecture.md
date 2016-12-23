@@ -29,7 +29,7 @@ The *Persistence Layer* of TAO relies on Generis. This differs from classical ap
 
 In short, thanks to Generis, users experience a larger degree of freedom at the level of the definition (and management) of the models they create in opposition to classical persistence layer where the model is hard-coded (usually by developers) and not subject to easy structural evolution - especially when it has already been used.
 
-Generis architecture is described here: [Generis Overview](../documentation-for-core-components/generis-overview).
+Generis architecture is described here: [Generis Overview](../documentation-for-core-components/generis-overview.md).
 
 TAO Application Layer
 =====================
@@ -40,14 +40,14 @@ This picture illustrates the different extensions built for TAO and how TAO depe
 
 ![](http://forge.taotesting.com/attachments/395/extensions.png)
 
-More detailed information about extensions’ architecture can be found here: [Framework-Extensions](../documentation-for-core-components/framework-extensions)
+More detailed information about extensions’ architecture can be found here: [Framework-Extensions](../documentation-for-core-components/framework-extensions.md)
 
 TAO Client Side
 ===============
 
 For both back-office operations and for test-taker operations, the TAO client side is written in XHTML, Javascript and CSS.
 
-[Views](../documentation-for-core-components/views)
+[Views](../documentation-for-core-components/views.md)
 
 User interfaces give access to all TAO features.
 
@@ -60,6 +60,6 @@ The complete application layer of TAO has been split into autonomous services th
 
 ![](../resources/workflow.PNG)
 
-The quality Layer is made of a Services/widgets directory, the workflow engine presenting the services to the right connected user and a process designer tool. More information about the workflow engine can be found here: [Workflow Engine](../documentation-for-core-components/workflow-engine)
+The quality Layer is made of a Services/widgets directory, the workflow engine presenting the services to the right connected user and a process designer tool. More information about the workflow engine can be found here: [Workflow Engine](../documentation-for-core-components/workflow-engine.md)
 
 

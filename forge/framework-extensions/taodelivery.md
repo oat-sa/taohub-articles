@@ -12,7 +12,7 @@ tags:
 TaoDelivery
 ===========
 
-The taoDelivery extension manages the [Delivery](../documentation-for-core-components/delivery) of the tests, the delivery campaigns and the result servers.
+The taoDelivery extension manages the [Delivery](../documentation-for-core-components/delivery.md) of the tests, the delivery campaigns and the result servers.
 
 ------------------------------------------------------------------------
 

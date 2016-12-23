@@ -35,7 +35,7 @@ Two differents approaches could be considered :<br/>
 
 - Rights access at knowledge level, considering access control on every knowledge defined (every meta-data)
 
-Rights Management System Prevent users of the back office from accessing data they are not authorized. Design and implement a rights management layer on Generis. See [Generis Overview](documentation-for-core-components/generis-overview)<br/>
+Rights Management System Prevent users of the back office from accessing data they are not authorized. Design and implement a rights management layer on Generis. See [Generis Overview](documentation-for-core-components/generis-overview.md)<br/>
 
 This will alow users to share and restrict access to any resource with other TAO users based on user identification and groups users belong to. This functionality is strongly needed since TAO could be distributed and allows sharing of resources across the web. triple(S,P,O). –<br/>
 > utriple(S,P,O,U).<br/>

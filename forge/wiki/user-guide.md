@@ -25,34 +25,34 @@ Part 1: General presentation of TAO
 
 4.1. Home screen<br/>
 
-4.2. [Menus](../general-features/menus)<br/>
+4.2. [Menus](../general-features/menus.md)<br/>
 
 4.3. Screen organization<br/>
 
-4.4. [Library](../general-features/library)
+4.4. [Library](../general-features/library.md)
 
-### 5. [Actions](../user-guide/actions)
+### 5. [Actions](../user-guide/actions.md)
 
 Part 2: Parts presentation
 --------------------------
 
-### 1. [Items](../user-guide/items)
+### 1. [Items](../user-guide/items.md)
 
-### 2. [Tests](../user-guide/tests)
+### 2. [Tests](../user-guide/tests.md)
 
 ### 3. Test Takers
 
-### 4. [Groups](../user-guide/groups)
+### 4. [Groups](../user-guide/groups.md)
 
-### 5. [Deliveries](../user-guide/deliveries)
+### 5. [Deliveries](../user-guide/deliveries.md)
 
-### 6. [Results](../user-guide/results)
+### 6. [Results](../user-guide/results.md)
 
-### 7. [Processes](../user-guide/processes)
+### 7. [Processes](../user-guide/processes.md)
 
 Part 3: How to do?
 ----------------------
 
-Part 4: [Glossary](../user-guide/glossary)
+Part 4: [Glossary](../user-guide/glossary.md)
 --------------------
 

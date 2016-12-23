@@ -12,7 +12,7 @@ Items’ Types
 
 ------------------------------------------------------------------------
 
-### 1. [QTI](../items-types/qti)<br/>
+### 1. [QTI](../items-types/qti.md)<br/>
 
 2. Free Form Items|Open WEB Items
 

@@ -15,13 +15,13 @@ Developer Guide
 1. How TAO development works
 --------------------------------
 
-2. [Guidelines](../developer-guide/guidelines)
+2. [Guidelines](../developer-guide/guidelines.md)
 -----------------
 
 3. Documentation for core components
 ----------------------------------------
 
-4. [Build](../developer-guide/build)
+4. [Build](../developer-guide/build.md)
 ------------
 
 5. Continous Integration
@@ -43,13 +43,13 @@ Developer Guide
 7. Resources
 ------------
 
-### 7.1. [FAQ](../developer-guide/faq)
+### 7.1. [FAQ](../developer-guide/faq.md)
 
 ### 7.2. Database Schema
 
 ### 7.3. IDEs|Development Tools
 
-### 7.4. [Licenses](../developer-guide/licenses)
+### 7.4. [Licenses](../developer-guide/licenses.md)
 
 ### 7.5. How to activate a new language in Data and Interface
 

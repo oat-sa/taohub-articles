@@ -28,7 +28,7 @@ h3 Installation and usage
 
 [PHPUnit installation Guide and manual](http://phpunit.de/manual/current/en/installation.html)
 
-Class to extends to build your own test case GenerisPhpUnitTestRunner or [TaoPhpUnitTestRunner](../guidelines/taophpunittestrunner) depending where you are
+Class to extends to build your own test case GenerisPhpUnitTestRunner or [TaoPhpUnitTestRunner](../guidelines/taophpunittestrunner.md) depending where you are
 
 A global testsuite is available in the root to launch all tests.
 

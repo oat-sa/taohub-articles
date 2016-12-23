@@ -152,7 +152,7 @@ This build available at https://github.com/oat-sa/package-build-js gather script
 
 -   Download package-tao from github
 -   Retrieve all extensions and dependencies using composer
--   Run compilation of all JS file like explain in [Build](developer-guide/build)
+-   Run compilation of all JS file like explain in [Build](developer-guide/build.md)
 -   Commit and push change into each extension repository
 
 ### Build Repository package

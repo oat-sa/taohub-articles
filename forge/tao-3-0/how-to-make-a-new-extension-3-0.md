@@ -144,7 +144,7 @@ Attribute **url** define path to controller action.<br/>
 
 Attribute **group** tell where action (button) should be placed. In our case it will be places in tree, below list of files.<br/>
 
-Attribute **binding** define handler for this action in front-side application (javascript). How should be organised frontend application see here: [Front js](../documentation-for-core-components/front-js)
+Attribute **binding** define handler for this action in front-side application (javascript). How should be organised frontend application see here: [Front js](../documentation-for-core-components/front-js.md)
 
 \* Add the following code to the controller `Browser.php`
 

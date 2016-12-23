@@ -25,7 +25,7 @@ A very early tentative draft
 
 ### Preparation
 
--   A tutorial on how to create a custom [Testrunner](../tutorials/testrunner).
+-   A tutorial on how to create a custom [Testrunner](../tutorials/testrunner.md).
 -   Create a state-full example of a test runner implementation
 
 ### Definition

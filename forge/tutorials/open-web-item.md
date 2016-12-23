@@ -146,7 +146,7 @@ We are now ready to package and import our item into TAO. A Open WEB Item is pac
 -   Its **entry point is *index.html*** and is **placed at the root** of the Zip archive.
 -   **All files** referenced by XHTML files and CSS stylesheets **must be included in the archive**. In other words, put in the package all files that are needed to execute your item as a *Web application*, including the JavaScript *TAO Runtime Item* and/or *TAO Scoring APIs*.
 
-Once your Open WEB Item is packaged as a Zip archive, you can import it into a TAO Platform instance. If you not have a running assessment platform, please refer to [Requirements](../administrator-guide/requirements) and Installation and Upgrading sections of this Wiki. An other solution is to use the *TAO Demonstration Platform* at <http://demo.tao.lu>.
+Once your Open WEB Item is packaged as a Zip archive, you can import it into a TAO Platform instance. If you not have a running assessment platform, please refer to [Requirements](../administrator-guide/requirements.md) and Installation and Upgrading sections of this Wiki. An other solution is to use the *TAO Demonstration Platform* at <http://demo.tao.lu>.
 
 To import your Open WEB Item into TAO:
 

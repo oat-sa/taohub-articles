@@ -90,7 +90,7 @@ User Interface
 
 In the `structures.xml` file users can define:
 
--   add a new [Entrypoint](../documentation-for-core-components/entrypoint)
+-   add a new [Entrypoint](../documentation-for-core-components/entrypoint.md)
 -   add a new menu entry to the backoffice (next to “Items”, “Tests”… on the top)
 -   add tabs to an existing menu entry
 

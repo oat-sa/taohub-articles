@@ -23,7 +23,7 @@ Generis
 Extensions
 ----------
 
--   Services are no longer instantiated via the *ServiceFactory*, but are instead instantiated by calling the static function *singleton()* on the desired service (see [Models](../documentation-for-core-components/models)).
+-   Services are no longer instantiated via the *ServiceFactory*, but are instead instantiated by calling the static function *singleton()* on the desired service (see [Models](../documentation-for-core-components/models.md)).
 
 Session
 -------

@@ -18,7 +18,7 @@ Developer Guide
 Administrator Guide
 -----------------------
 
--   [Requirements](administrator-guide/requirements)
+-   [Requirements](administrator-guide/requirements.md)
 -   Installation and Upgrading
 -   Enable math|Enable math expression in items
 -   Install PDF.js viewer
@@ -34,7 +34,7 @@ QTI in TAO
 Contribution Focus Groups
 -----------------------------
 
-[Tutorials](wiki/tutorials)
+[Tutorials](wiki/tutorials.md)
 -------------
 
 -   Install_demo_items_model_and_packages|Install demo Items and Tests

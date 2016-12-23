@@ -97,7 +97,7 @@ If you want larger access rights, please let us know !
 
 ### 4.2. Validation
 
-Over time, TAO is getting more and more complex (see TAO Architecture), meanwhile here is a list of TAO team members that can help you for different sections listed below and who will be in charge of validating contributions and assure the overall TAO Product Quality. Please be also sure to follow [Guidelines](../developer-guide/guidelines) and common conventions used by the TAO team.
+Over time, TAO is getting more and more complex (see TAO Architecture), meanwhile here is a list of TAO team members that can help you for different sections listed below and who will be in charge of validating contributions and assure the overall TAO Product Quality. Please be also sure to follow [Guidelines](../developer-guide/guidelines.md) and common conventions used by the TAO team.
 
 **TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
 

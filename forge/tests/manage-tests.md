@@ -92,7 +92,7 @@ Move to box
 -   To move a test, just click on the target class.
 
 User Guide<br/>
->Parts presentation\>[Tests](../user-guide/tests)<br/>
+>Parts presentation\>[Tests](../user-guide/tests.md)<br/>
 >Manage Tests\>Create a list box
 
 Create a list box
@@ -113,7 +113,7 @@ Meta data box
 -   You can edit a comment at the selected test. For that you should click on the Edit icon, write a comment in the box which appears and click on the Save button.
 
 User Guide<br/>
->Parts presentation\>[Tests](../user-guide/tests)<br/>
+>Parts presentation\>[Tests](../user-guide/tests.md)<br/>
 >Manage Tests\>Create a list box
 
 Create table box

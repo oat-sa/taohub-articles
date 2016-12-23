@@ -61,7 +61,7 @@ Select delivery tests box
 -   The Select delivery tests box allows indicating the tests which should be in the selected delivery.
 
 User Guide<br/>
->Parts presentation\>[Deliveries](../user-guide/deliveries)<br/>
+>Parts presentation\>[Deliveries](../user-guide/deliveries.md)<br/>
 >Deliveries library\>Add to group box
 
 Add to group box

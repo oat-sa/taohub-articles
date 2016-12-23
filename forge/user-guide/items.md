@@ -39,7 +39,7 @@ The main functions of this tab are:
 -   Export in Items|Export
 -   Import in Items|Import
 
-2. [Authoring](../items/authoring)
+2. [Authoring](../items/authoring.md)
 ----------------
 
 The Authoring tab allows you to edit the item previously selected in the Manage Items tab. The mode edition entirely depends on the chosen model.
@@ -55,6 +55,6 @@ The Preview tab allows viewing the previously selected item in the Manage items 
 
 The main function of this tab are:
 
--   [Preview](../items/preview)
+-   [Preview](../items/preview.md)
 
 

@@ -14,7 +14,7 @@ tags:
 Installation
 ============
 
-This section describes how to install and upgrade the TAO PHP application on your web server. Before doing so, **please be sure that your Web server meets all the technical [Requirements](../administrator-guide/requirements)**.
+This section describes how to install and upgrade the TAO PHP application on your web server. Before doing so, **please be sure that your Web server meets all the technical [Requirements](../administrator-guide/requirements.md)**.
 
 Install the TAO Platform
 ------------------------

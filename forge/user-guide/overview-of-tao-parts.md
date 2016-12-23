@@ -20,14 +20,14 @@ TAO is structured in independent parts to permit a flexible and versatile use of
 
 ![](../resources/1-1-schema.png)
 
-![](../resources/1-1-items.png) [Items](../user-guide/items)
+![](../resources/1-1-items.png) [Items](../user-guide/items.md)
 ----------------------------
 
 This part manages the creation and design of items and exercises.<br/>
 
 Different design templates are proposed depending on the type of item you want to create.
 
-![](../resources/1-1-tests.png) [Tests](../user-guide/tests)
+![](../resources/1-1-tests.png) [Tests](../user-guide/tests.md)
 ----------------------------
 
 This part manages the test creation. You can create a test by combining a selection of Items into a Test.<br/>
@@ -41,14 +41,14 @@ In this part, you can define who your test taker(s) are and manage their registr
 
 It also allows associating the selected test taker to the relevant group(s).
 
-![](../resources/1-1-groups.png) [Groups](../user-guide/groups)
+![](../resources/1-1-groups.png) [Groups](../user-guide/groups.md)
 ------------------------------
 
 This part manages the groups creation, i.e., grouping test takers according to global features and classifications.<br/>
 
 You can assign the selected groups to the delivery(ies).
 
-![](../resources/1-1-deliveries.png) [Deliveries](../user-guide/deliveries)
+![](../resources/1-1-deliveries.png) [Deliveries](../user-guide/deliveries.md)
 --------------------------------------
 
 This part manages the test deliveries.<br/>
@@ -59,14 +59,14 @@ At this stage, it is possible to exclude test taker(s) from the delivery apart f
 
 You can also edit a set of properties: sequence, maximum number of executions, delivery period, etc., and define a delivery campaign.
 
-![](../resources/1-1-results.png) [Results](../user-guide/results)
+![](../resources/1-1-results.png) [Results](../user-guide/results.md)
 --------------------------------
 
 This part gives results of all delivered tests with their referring Test takers, Groups and Items specific data, as well as the individual data collected during Test execution.<br/>
 
 Here you can create tables to visualize the results and then export them for further data analysis.
 
-![](../resources/1-1-processes.png) [Processes](../user-guide/processes)
+![](../resources/1-1-processes.png) [Processes](../user-guide/processes.md)
 ------------------------------------
 
 This part is optional.<br/>
