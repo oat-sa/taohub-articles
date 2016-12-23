@@ -34,6 +34,6 @@ The advantages of such an architecture are:
 -   The *UserService* is a common service implementation to manage user from the API.
 -   The *GenerisService* is an abstract service. It provides a set of methods shared between the extension’s services that are managing a RDF model.
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Models|Return to Top
+|
 
 

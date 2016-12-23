@@ -290,6 +290,6 @@ The interface below outlines the available methods:
      */
     function initEventServices(source, destination);
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Item_Runtime_API|Return to Top
+|
 
 

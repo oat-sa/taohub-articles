@@ -49,6 +49,6 @@ The most part of the Javascript is set into separated ‘’.js’‘ files. Onl
 
 We use the JQuery UI css selector for the common style and container themes and the usual CSS2 sheet for the layout.
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Views|Return to Top
+|
 
 

@@ -126,6 +126,6 @@ The following schema illustrates the way the action widget works:
 
 ![](http://forge.taotesting.com/attachments/387/actions_widget.png)
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Controllers|Return to Top
+|
 
 

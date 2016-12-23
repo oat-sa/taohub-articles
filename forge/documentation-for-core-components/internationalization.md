@@ -180,6 +180,6 @@ Fill generated po file with your translation.
 /!<br/>
 \ Use -f to reset actual translations po files
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Internationalization|Return to Top
+|
 
 

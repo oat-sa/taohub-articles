@@ -37,6 +37,6 @@ The example below lists the source of the taoItem’s extension bootstrap, locat
     $bootStrap->start();
     $bootStrap->dispatch();
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Overview|Return to Top
+|
 
 

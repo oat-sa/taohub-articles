@@ -60,7 +60,7 @@ The following code sample will display “http://yourdomain.tld/taoItems/Preview
 
 > *In the templates you can use directly the BASE_WWW or ROOT_URL constants for or better code readability*
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Helpers|Return to Top
+|
 
 the Form Generator Engine
 -------------------------
@@ -199,6 +199,6 @@ You can see an example in the listing below:
 
     }
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Helpers|Return to Top
+|
 
 

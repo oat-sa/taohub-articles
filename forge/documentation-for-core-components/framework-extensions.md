@@ -55,7 +55,7 @@ In order to use a layer from the meta-extension, the dependent extension’s cla
     -   the common helpers
     -   the dynamical form engine
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Framework-Extensions|Return to Top
+|
 
 3. Extension’s Structure
 ------------------------
@@ -132,6 +132,6 @@ Inside an extension we have the following folders structure:
 
     The root of the extension contains the front bootstrap *index.php*, the ExtensionManifestDescription|extension description file *manifest.php* and the web server configuration file *.htaccess* (describing the URL rewriting, the redirections and the authentication rules).
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Framework-Extensions|Return to Top
+|
 
 
