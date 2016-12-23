@@ -3,6 +3,9 @@ created_at: '2015-12-09 15:54:05'
 updated_at: '2015-12-15 17:42:13'
 authors:
     - 'Joel Bout'
+tags:
+    - 'TAO 3.0'
+    - 'TAO 3.1'
 -->
 
 
@@ -20,32 +23,79 @@ taoDelivery has been split into two extensions:
 
 ### Controllers
 
-The old taoDelivery controllers *taoDelivery\_actions*\*\_ have been moved from taoDelivery/action to controller of their respective extension:
+The old taoDelivery controllers *taoDelivery_actions*<br/>
+*_ have been moved from taoDelivery/action to controller of their respective extension:
 
--   *taoDelivery\_actions\_DeliveryServer* to *oat\\taoDelivery\\controller\\DeliveryServer*
--   all others to *oat\\taoDeliveryRdf\\controller\\\**
+-   *taoDelivery_actions_DeliveryServer* to *oat\<br/>
+taoDelivery\<br/>
+controller\<br/>
+DeliveryServer*
+-   all others to *oat\<br/>
+taoDeliveryRdf\<br/>
+controller\<br/>
+\**
 
 ### Delivery execution state identifiers
 
-These states were in the past stored as either global constants or using *oat\\taoFrontOffice\\model\\interfaces\\DeliveryExecution*, but will in the future be part of the **oat\\taoDelivery\\model\\execution\\DeliveryExecution** interface.
+These states were in the past stored as either global constants or using *oat\<br/>
+taoFrontOffice\<br/>
+model\<br/>
+interfaces\<br/>
+DeliveryExecution*, but will in the future be part of the **oat\<br/>
+taoDelivery\<br/>
+model\<br/>
+execution\<br/>
+DeliveryExecution** interface.
 
 ### Services
 
-Almost all services (with the exception of *taoDelivery\_models\_classes\_DeliveryServerService* and *taoDelivery\_models\_classes\_execution*\*\_) were part of the delivery management and have therefore been moved to taoDeliveryRdf:
+Almost all services (with the exception of *taoDelivery_models_classes_DeliveryServerService* and *taoDelivery_models_classes_execution*<br/>
+*_) were part of the delivery management and have therefore been moved to taoDeliveryRdf:
 
--   *taoDelivery\_models\_classes\_TrackedStorage* -\> *oat\\taoDeliveryRdf\\model\\TrackedStorage*
--   *taoDelivery\_models\_classes\_SimpleDeliveryFactory* -\> *oat\\taoDeliveryRdf\\model\\SimpleDeliveryFactory*
--   *taoDelivery\_models\_classes\_DeliveryAssemblyService* -\> *oat\\taoDeliveryRdf\\model\\DeliveryAssemblyService*
--   *taoDelivery\_models\_classes\_GuestTestUser* -\> *oat\\taoDeliveryRdf\\model\\guest\\GuestTestUser*
--   *taoDelivery\_models\_classes\_GuestTestTakerSession* -\> *oat\\taoDeliveryRdf\\model\\guest\\GuestTestTakerSession*
+-   *taoDelivery_models_classes_TrackedStorage* -<br/>
+> *oat\<br/>
+taoDeliveryRdf\<br/>
+model\<br/>
+TrackedStorage*
+-   *taoDelivery_models_classes_SimpleDeliveryFactory* -<br/>
+> *oat\<br/>
+taoDeliveryRdf\<br/>
+model\<br/>
+SimpleDeliveryFactory*
+-   *taoDelivery_models_classes_DeliveryAssemblyService* -<br/>
+> *oat\<br/>
+taoDeliveryRdf\<br/>
+model\<br/>
+DeliveryAssemblyService*
+-   *taoDelivery_models_classes_GuestTestUser* -<br/>
+> *oat\<br/>
+taoDeliveryRdf\<br/>
+model\<br/>
+guest\<br/>
+GuestTestUser*
+-   *taoDelivery_models_classes_GuestTestTakerSession* -<br/>
+> *oat\<br/>
+taoDeliveryRdf\<br/>
+model\<br/>
+guest\<br/>
+GuestTestTakerSession*
 
-<!-- -->
 
--   *taoDelivery\_models\_classes\_AssignmentService* has been split into the interface *oat\\taoDelivery\\model\\AssignmentService* and the basic implementation *oat\\taoDeliveryRdf\\model\\GroupAssignment* that allows you to assign test-takers to deliveries using the groups
 
-<!-- -->
+-   *taoDelivery_models_classes_AssignmentService* has been split into the interface *oat\<br/>
+taoDelivery\<br/>
+model\<br/>
+AssignmentService* and the basic implementation *oat\<br/>
+taoDeliveryRdf\<br/>
+model\<br/>
+GroupAssignment* that allows you to assign test-takers to deliveries using the groups
 
--   *taoDelivery\_models\_classes\_DeliveryRdf* has been deprecated in favor of *oat\\taoDelivery\\model\\Assignment* that represents the link between the test-taker and the delivery
+
+
+-   *taoDelivery_models_classes_DeliveryRdf* has been deprecated in favor of *oat\<br/>
+taoDelivery\<br/>
+model\<br/>
+Assignment* that represents the link between the test-taker and the delivery
 
 ### Assets
 
@@ -54,95 +104,23 @@ Templates and JavaScripts have been split between the two extensions according t
 Update scripts
 --------------
 
-In order to ensure partially completed updates get resumed properly, the abstract update script *common\_ext\_ExtensionUpdater* has been enhanced with the functions:
+In order to ensure partially completed updates get resumed properly, the abstract update script *common_ext_ExtensionUpdater* has been enhanced with the functions:
 
--   isVersion(\$nr)
--   setVersion(\$nr)
-
-So instead of:
-
-<code style="php"><pre>\
-if (\$currentVersion == ‘2.7.9’) {\
- // magic happens here\
- \$currentVersion = ‘2.7.10’;\
-}
-
-</pre>
-</code>
-
-please use
-
-<code style="php"><pre>\
-if (\$this-\>isVersion(‘2.7.9’)) {\
- // magic happens here\
- \$this-\>setVersion(‘2.7.10’);\
-}
-
-</pre>
-</code>
-
-and add a **\$this-\>setVersion(\$currentVersion)** in between the old update scripts and the new ones.
-
-
-
-Code Changes from 3.0 to 3.1
-============================
-
-taoDelivery
------------
-
-taoDelivery has been split into two extensions:
-
--   **taoDelivery** for the test-taker experience
--   **taoDeliveryRdf** for the delivery management
-
-### Controllers
-
-The old taoDelivery controllers *taoDelivery\_actions*\*\_ have been moved from taoDelivery/action to controller of their respective extension:
-
--   *taoDelivery\_actions\_DeliveryServer* to *oat\\taoDelivery\\controller\\DeliveryServer*
--   all others to *oat\\taoDeliveryRdf\\controller\\\**
-
-### Delivery execution state identifiers
-
-These states were in the past stored as either global constants or using *oat\\taoFrontOffice\\model\\interfaces\\DeliveryExecution*, but will in the future be part of the **oat\\taoDelivery\\model\\execution\\DeliveryExecution** interface.
-
-### Services
-
-Almost all services (with the exception of *taoDelivery\_models\_classes\_DeliveryServerService* and *taoDelivery\_models\_classes\_execution*\*\_) were part of the delivery management and have therefore been moved to taoDeliveryRdf:
-
--   *taoDelivery\_models\_classes\_TrackedStorage* -\> *oat\\taoDeliveryRdf\\model\\TrackedStorage*
--   *taoDelivery\_models\_classes\_SimpleDeliveryFactory* -\> *oat\\taoDeliveryRdf\\model\\SimpleDeliveryFactory*
--   *taoDelivery\_models\_classes\_DeliveryAssemblyService* -\> *oat\\taoDeliveryRdf\\model\\DeliveryAssemblyService*
--   *taoDelivery\_models\_classes\_GuestTestUser* -\> *oat\\taoDeliveryRdf\\model\\guest\\GuestTestUser*
--   *taoDelivery\_models\_classes\_GuestTestTakerSession* -\> *oat\\taoDeliveryRdf\\model\\guest\\GuestTestTakerSession*
-
-<!-- -->
-
--   *taoDelivery\_models\_classes\_AssignmentService* has been split into the interface *oat\\taoDelivery\\model\\AssignmentService* and the basic implementation *oat\\taoDeliveryRdf\\model\\GroupAssignment* that allows you to assign test-takers to deliveries using the groups
-
-<!-- -->
-
--   *taoDelivery\_models\_classes\_DeliveryRdf* has been deprecated in favor of *oat\\taoDelivery\\model\\Assignment* that represents the link between the test-taker and the delivery
-
-### Assets
-
-Templates and JavaScripts have been split between the two extensions according to split of the controllers.
-
-Update scripts
---------------
-
-In order to ensure partially completed updates get resumed properly, the abstract update script *common\_ext\_ExtensionUpdater* has been enhanced with the functions:
-
--   isVersion(\$nr)
--   setVersion(\$nr)
+-   isVersion(<br/>
+$nr)
+-   setVersion(<br/>
+$nr)
 
 So instead of:
 
-<code style="php"><pre>\
-if (\$currentVersion == ‘2.7.9’) {\
+<code style="php"><pre><br/>
+
+if (<br/>
+$currentVersion == ‘2.7.9’) {<br/>
+
  // magic happens here\
- \$currentVersion = ‘2.7.10’;<br/>
+ <br/>
+$currentVersion = ‘2.7.10’;<br/>
 
 }
 
@@ -151,16 +129,25 @@ if (\$currentVersion == ‘2.7.9’) {\
 
 please use
 
-<code style="php"><pre>\
-if (\$this-\>isVersion(‘2.7.9’)) {\
+<code style="php"><pre><br/>
+
+if (<br/>
+$this-<br/>
+>isVersion(‘2.7.9’)) {<br/>
+
  // magic happens here\
- \$this-\>setVersion(‘2.7.10’);<br/>
+ <br/>
+$this-<br/>
+>setVersion(‘2.7.10’);<br/>
 
 }
 
 </pre>
 </code>
 
-and add a **\$this-\>setVersion(\$currentVersion)** in between the old update scripts and the new ones.
+and add a **<br/>
+$this-<br/>
+>setVersion(<br/>
+$currentVersion)** in between the old update scripts and the new ones.
 
 

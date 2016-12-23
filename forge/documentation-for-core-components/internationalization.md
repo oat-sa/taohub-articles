@@ -21,11 +21,11 @@ In TAO, a *Locale* is the definition of all *messages* to be translated for a gi
 
 ### Locale Structure
 
-An Extension *Locale* is composed of several translation files. For instance, the French *Locale* for the Extension *taoGroups* is located in the */[tao\_installation\_path]/taoGroups/locales/FR* directory and contains the following files:
+An Extension *Locale* is composed of several translation files. For instance, the French *Locale* for the Extension *taoGroups* is located in the */[tao_installation_path]/taoGroups/locales/FR* directory and contains the following files:
 
 -   **messages.po**: contains the translations of the Graphical User Interface. This is the file you must edit if you want to change the translation of a *message* displayed in the *taoGroups* Extension. These files are using the well-known PO [format](http://www.gnu.org/software/hello/manual/gettext/PO-Files.html) of [GNU gettext](http://www.gnu.org/software/gettext/).
 -   **messages.lang.php**: contains a PHP compiled version (as an associative array) of *messages.po* used at runtime on the server-side. It also includes translations of messages contained in extensions on which the extension you translate depends on for better performance. This file must not be edited manually.
--   **messages\_po.js**: contains a JSON (JavaScript Object Natation) compiled version of *messages.po* used at runtime on the client side. As **messages.lang.php** files, it contains the translations of messages contained in extensions on which the translated extension depends on.
+-   **messages_po.js**: contains a JSON (JavaScript Object Natation) compiled version of *messages.po* used at runtime on the client side. As **messages.lang.php** files, it contains the translations of messages contained in extensions on which the translated extension depends on.
 -   **taogroup.rdf**: contains the translations of the Data Model of your extension. It uses the RDF-XML standard to describe the rdfs:labels and rdfs:comment properties values of the resources of a given *Data Model*. In this example, the **taogroup.rdf** file located in */taoGroups/locales/FR* contains references to all rdfs:label and rdfs:comment properties of the *Classes*, *Properties* and *Instances* contained in the *taogroup.rdf* XML-RDF *Data Model* which can be found in the */taoGroups/models/ontology* directory.
 -   **other .rdf files**: translations of various Data Models of your extensions that are not mandatory.
 
@@ -97,174 +97,7 @@ Because PO files are just plain text files, you can use your favorite editor to 
 
 ### PO files Compilation
 
-When *messages* contained in a PO File are updated (e.g. correction of an existing translation) or are simply added, it has to be compiled. Indeed, only compiled translations are available to the end-users for better performance. TAO is packaged with translation tools making you able to compile PO files on your own. To do so, please refer to the [[tao\_scripts\_translate|TAO Translate Script Documentation]].
-
-RDF Translation Models
-----------------------
-
-Because TAO uses Ontologies in the Resource Description Framework (RDF), its *Data Models* are totally translatable. Any *Class*, *Class Property* or *Resource* in TAO has two properties, rdfs:label and rdfs:comments that can be translated for each language your TAO platform supports.
-
-Here is an example of RDF Model Translation (RMT) shipped with the standard Open Source release of TAO, that describes how to translate the *Data Model* of the *taoGroups* extension in the *French* locale, located in */taoGroups/locales/FR/taogroup.rdf*.
-
-
-
-
-      
-        
-        Groupe
-        
-        La Classe Groupe. Un aggrégat de Sujets.
-      
-      ...
-      ...
-     
-
-The most important thing to understand in this RMT is that the label and comments translations are located within the <rdfs:label> and <rdfs:comment> tags. In this example, **<rdfs:label xml:lang="FR"><![CDATA[Groupe]]></rdfs:label>** represents the label of the *Group Class* translated in *French*. On the other hand **<rdfs:comment xml:lang="FR"><![CDATA[La Classe Groupe. Un aggrégat de Sujets.]]></rdfs:comment>** depicts the textual description of the *Group Class*.
-
-Dealing with your own locales
------------------------------
-
-The TAO Platform comes with dedicated tools that help you to create and maintain your own locales. It takes shape as a command line script that can be accessed throuh PHP CLI. These dedicated tools will make you able to create and update your own locales in TAO.
-
-### Create a locale
-
-Create a new locale is easy as a single command line. Open your favourite command line interface and go in the */path\_to\_your\_install/tao/scripts* directory. In the following example, we will create a locale es-MX (Mexican Spanish) for each extension delivered in the Open Source release of TAO.
-
-    cd /path_to_your_install/tao/scripts
-    php taoTranslate.php -v -a create -l es-MX -ll "Mexican Spanish" -e filemanager,tao,taoCoding,taoDelivery,taoGroups,taoItems,taoResults,taoSubjects,taoTests,wfAuthoring,wfEngine
-
-As a result, you will get a new locale directory named *es-MX* for each extension of the Open Source release of TAO. Each locale folder contains PO Files and RTMs ready to be translated.
-
-How to choose your language tag
--------------------------------
-
-TAO uses IETF BCP 47 language codes. If you need to choose a language tag, please refer to:
-
--   http://www.w3.org/International/articles/language-tags
--   http://www.iana.org/assignments/language-subtag-registry
-
-Examples (You are not forced to used region tags. The only requirement is a first region tag, and add least one sub tag after).
-
--   nl-NL -\> nl = Dutch (language-tag), NL = Netherlands (region-tag)
--   fr-BE -\> fr = French (language-tag), BE = Belgium (region-tag)
--   zh-SG -\> zh = Chinese (language-tag), SG = Singapore (region-tag)
--   ar-arb -\> ar = Arabic (language-tag), arb = Standard Arabic (language-tag)
-
-How to update or add translations
----------------------------------
-
-### Scan the source files for **() enclosed strings
-
-    php tao/scripts/taoTranslate.php -v -a=create -e=taoQtiTest -l=fr-FR
-    /** if already exists */
-    php tao/scripts/taoTranslate.php -v -a=update -e=taoQtiTest -l=fr-FR
-
-This will generate a the following file: \$ext/locales/\$lang/messages.po.\
-Fill generated po file with your translation.
-
-### Compile the file into php and javascript
-
-    php tao/scripts/taoTranslate.php -v -a=compile -e=taoDelivery -l=fr-FR
-
-### Update TAO
-
-    php tao/scripts/taoUpdate.php
-
-/!\\ Use -f to reset actual translations po files
-
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Internationalization|Return to Top]]
-
-Internationalization (i18n)
-===========================
-
-
-
-The TAO application comes up with utilities to translate its Graphical User Interface and Models. The application can be translated in any language that can be written using [Unicode](http://www.unicode.org) (with UTF-8 encoding).
-
-Extension Locales
------------------
-
-In TAO, a *Locale* is the definition of all *messages* to be translated for a given TAO Extension. Indeed, the internationalization process applies on each TAO Extension. Any translation description files are located in the */locales* directory of the Extension to be translated. In this */locales* folder you will find a directory dedicated to each language. The directory name for a language contained in the */locales* directory is actually its international code (e.g. *FR* for *French*) and will be used as a unique identifier for this locale across Extensions.
-
-### Locale Structure
-
-An Extension *Locale* is composed of several translation files. For instance, the French *Locale* for the Extension *taoGroups* is located in the */[tao\_installation\_path]/taoGroups/locales/FR* directory and contains the following files:
-
--   **messages.po**: contains the translations of the Graphical User Interface. This is the file you must edit if you want to change the translation of a *message* displayed in the *taoGroups* Extension. These files are using the well-known PO [format](http://www.gnu.org/software/hello/manual/gettext/PO-Files.html) of [GNU gettext](http://www.gnu.org/software/gettext/).
--   **messages.lang.php**: contains a PHP compiled version (as an associative array) of *messages.po* used at runtime on the server-side. It also includes translations of messages contained in extensions on which the extension you translate depends on for better performance. This file must not be edited manually.
--   **messages\_po.js**: contains a JSON (JavaScript Object Natation) compiled version of *messages.po* used at runtime on the client side. As **messages.lang.php** files, it contains the translations of messages contained in extensions on which the translated extension depends on.
--   **taogroup.rdf**: contains the translations of the Data Model of your extension. It uses the RDF-XML standard to describe the rdfs:labels and rdfs:comment properties values of the resources of a given *Data Model*. In this example, the **taogroup.rdf** file located in */taoGroups/locales/FR* contains references to all rdfs:label and rdfs:comment properties of the *Classes*, *Properties* and *Instances* contained in the *taogroup.rdf* XML-RDF *Data Model* which can be found in the */taoGroups/models/ontology* directory.
--   **other .rdf files**: translations of various Data Models of your extensions that are not mandatory.
-
-Please note that an exception arises regarding the *tao* Meta-Extension. Indeed, it contains an additional file named **lang.rdf** wich contains the description of the *locale* to insert in the Database to make it available to end-users.
-
-Internationalized Source Code
------------------------------
-
-To make sure that *messages* contained in the source code will be included in *message.po* files, you can use the **() method. For instance, if you have to display the message “Hello World” in your PHP Source code, simply write:
-
-    echo __('Hello World');
-
-When the *messages.po* will be generated by parsing the source code of TAO, looking up for **() calls, you will see the following message to be be translated appear in it:
-
-    msgid "Hello World"
-    msgstr ""
-
-There is now only to translate “Hello World” in the correct language (French example):
-
-    msgid "Hello World"
-    msgstr "Bonjour le monde"
-
-The same technique to generate *messages* can applies to JavaScript source code as well, still using the **() method.
-
-PO Files
---------
-
-### PO Files Format
-
-TAO implements the [gettext](http://www.gnu.org/software/gettext/) [PO file format](http://www.gnu.org/software/hello/manual/gettext/PO-Files.html) to provide a fast and easy way to translate *messages* in its source code.
-
-Here is a minimal PO file as they are formed in TAO for a *French* *locale*:
-
-    msgid ""
-    msgstr ""
-    "Project-Id-Version: TAO v2.4\n"
-    "PO-Revision-Date: 2012-09-21T15:06:16\n"
-    "Last-Translator: TAO Translation Team \n"
-    "MIME-Version: 1.0\n"
-    "Language: FR\n"
-    "Content-Type: text/plain; charset=utf-8\n"
-    "Content-Transfer-Encoding: 8bit\n"
-
-    msgid "Hello World"
-    msgstr "Bonjour le monde"
-
-In TAO PO files, the first message is always a *meta-message*. Such a message has an empty *msgid* but its *msgstr* contains information about the file. In this sample file, we can find the following information:
-
--   **Project-Id-Version**: The project the PO file belongs to.
--   **PO-Revision-Date**: Corresponds to the last time the file was updated with new messages extracted from the source code.
--   **Last-Translator**: The last translator that translated messages in the file.
--   **MIME-Version**: The PO format version in use.
--   **Language**: The target language of the PO file. In other words, the language in which messages have to be translated.
--   **Content-type**: The type of the content in this file.
--   **Content-Transfer-Encoding**: How the file is encoded during a transfer.
-
-Right after this meta-information comes the first *message* of the file, made up of two components which are *msgid* and *msgstr*.
-
-    msgid "Hello World"
-    msgstr "Bonjour le monde"
-
-The **msgid** component corresponds to the initial message extracted from the source code. The translator will take its value, put between double quotes (") to create its translation. In this example, the value of *msgid* is *Hello World*.
-
-The **msgstr** component contains the translation of *msgid*, that will be displayed to the end user that selects the related locale. When extracted from the source code, the *msgstr* component will appear empty. The translator will have to enter its value.
-
-### How to Edit PO Files
-
-Because PO files are just plain text files, you can use your favorite editor to modify them. In this case, please make sure that the encoding in use is **UTF-8**. On the other and, you can use specialize gettext editor that will display messages to be translated in a more friendly way. We recommend the use of [POEdit](http://www.poedit.net/): a free and multi-platform gettext editor.
-
-### PO files Compilation
-
-When *messages* contained in a PO File are updated (e.g. correction of an existing translation) or are simply added, it has to be compiled. Indeed, only compiled translations are available to the end-users for better performance. TAO is packaged with translation tools making you able to compile PO files on your own. To do so, please refer to the [[tao\_scripts\_translate|TAO Translate Script Documentation]].
+When *messages* contained in a PO File are updated (e.g. correction of an existing translation) or are simply added, it has to be compiled. Indeed, only compiled translations are available to the end-users for better performance. TAO is packaged with translation tools making you able to compile PO files on your own. To do so, please refer to the tao_scripts_translate|TAO Translate Script Documentation.
 
 RDF Translation Models
 ----------------------
@@ -295,7 +128,7 @@ The TAO Platform comes with dedicated tools that help you to create and maintain
 
 ### Create a locale
 
-Create a new locale is easy as a single command line. Open your favourite command line interface and go in the */path\_to\_your\_install/tao/scripts* directory. In the following example, we will create a locale es-MX (Mexican Spanish) for each extension delivered in the Open Source release of TAO.
+Create a new locale is easy as a single command line. Open your favourite command line interface and go in the */path_to_your_install/tao/scripts* directory. In the following example, we will create a locale es-MX (Mexican Spanish) for each extension delivered in the Open Source release of TAO.
 
     cd /path_to_your_install/tao/scripts
     php taoTranslate.php -v -a create -l es-MX -ll "Mexican Spanish" -e filemanager,tao,taoCoding,taoDelivery,taoGroups,taoItems,taoResults,taoSubjects,taoTests,wfAuthoring,wfEngine
@@ -312,10 +145,14 @@ TAO uses IETF BCP 47 language codes. If you need to choose a language tag, pleas
 
 Examples (You are not forced to used region tags. The only requirement is a first region tag, and add least one sub tag after).
 
--   nl-NL -\> nl = Dutch (language-tag), NL = Netherlands (region-tag)
--   fr-BE -\> fr = French (language-tag), BE = Belgium (region-tag)
--   zh-SG -\> zh = Chinese (language-tag), SG = Singapore (region-tag)
--   ar-arb -\> ar = Arabic (language-tag), arb = Standard Arabic (language-tag)
+-   nl-NL -<br/>
+> nl = Dutch (language-tag), NL = Netherlands (region-tag)
+-   fr-BE -<br/>
+> fr = French (language-tag), BE = Belgium (region-tag)
+-   zh-SG -<br/>
+> zh = Chinese (language-tag), SG = Singapore (region-tag)
+-   ar-arb -<br/>
+> ar = Arabic (language-tag), arb = Standard Arabic (language-tag)
 
 How to update or add translations
 ---------------------------------
@@ -326,7 +163,9 @@ How to update or add translations
     /** if already exists */
     php tao/scripts/taoTranslate.php -v -a=update -e=taoQtiTest -l=fr-FR
 
-This will generate a the following file: \$ext/locales/\$lang/messages.po.<br/>
+This will generate a the following file: <br/>
+$ext/locales/<br/>
+$lang/messages.po.<br/>
 
 Fill generated po file with your translation.
 
@@ -341,6 +180,6 @@ Fill generated po file with your translation.
 /!<br/>
 \ Use -f to reset actual translations po files
 
-![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)[[Internationalization|Return to Top]]
+![](http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG)Internationalization|Return to Top
 
 

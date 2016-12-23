@@ -9,6 +9,4 @@ tags:
 
 Search in Result Servers
 ========================
-Search in Result Servers
-========================
 

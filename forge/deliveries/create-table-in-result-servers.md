@@ -9,6 +9,4 @@ tags:
 
 Create table
 ============
-Create table
-============
 

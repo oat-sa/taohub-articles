@@ -9,6 +9,4 @@ tags:
 
 Translate
 =========
-Translate
-=========
 

@@ -15,86 +15,44 @@ User Guide
 Part 1: General presentation of TAO
 -----------------------------------
 
-### 1. [[Overview of TAO parts]]
+### 1. Overview of TAO parts
 
-### 2. [[Navigation progress]]
+### 2. Navigation progress
 
-### 3. [[Steps to create an assessment]]
+### 3. Steps to create an assessment
 
-### 4. [[General features]]
+### 4. General features
 
-4.1. [[Home screen]]\
-4.2. [[Menus]]\
-4.3. [[Screen organization]]\
-4.4. [[Library]]
+4.1. Home screen<br/>
 
-### 5. [[Actions]]
+4.2. [Menus](../general-features/menus)<br/>
 
-Part 2: Parts presentation
---------------------------
+4.3. Screen organization<br/>
 
-### 1. [[Items]]
+4.4. [Library](../general-features/library)
 
-### 2. [[Tests]]
-
-### 3. [[Test Takers]]
-
-### 4. [[Groups]]
-
-### 5. [[Deliveries]]
-
-### 6. [[Results]]
-
-### 7. [[Processes]]
-
-Part 3: [[How to do?]]
-----------------------
-
-Part 4: [[Glossary]]
---------------------
-
-
-User Guide
-==========
-
-Part 1: General presentation of TAO
------------------------------------
-
-### 1. [[Overview of TAO parts]]
-
-### 2. [[Navigation progress]]
-
-### 3. [[Steps to create an assessment]]
-
-### 4. [[General features]]
-
-4.1. [[Home screen]]\
-4.2. [[Menus]]\
-4.3. [[Screen organization]]\
-4.4. [[Library]]
-
-### 5. [[Actions]]
+### 5. [Actions](../user-guide/actions)
 
 Part 2: Parts presentation
 --------------------------
 
-### 1. [[Items]]
+### 1. [Items](../user-guide/items)
 
-### 2. [[Tests]]
+### 2. [Tests](../user-guide/tests)
 
-### 3. [[Test Takers]]
+### 3. Test Takers
 
-### 4. [[Groups]]
+### 4. [Groups](../user-guide/groups)
 
-### 5. [[Deliveries]]
+### 5. [Deliveries](../user-guide/deliveries)
 
-### 6. [[Results]]
+### 6. [Results](../user-guide/results)
 
-### 7. [[Processes]]
+### 7. [Processes](../user-guide/processes)
 
-Part 3: [[How to do?]]
+Part 3: How to do?
 ----------------------
 
-Part 4: [[Glossary]]
+Part 4: [Glossary](../user-guide/glossary)
 --------------------
 

@@ -9,6 +9,4 @@ tags:
 
 How to do search on meta data
 =============================
-How to do search on meta data
-=============================
 

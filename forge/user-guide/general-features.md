@@ -10,29 +10,15 @@ tags:
 General features
 ================
 
-1. [[Home screen]]
+1. Home screen
 ------------------
 
-2. [[Menus]]
+2. [Menus](../general-features/menus)
 ------------
 
-3. [[Screen organization]]
+3. Screen organization
 --------------------------
 
-4. [[Library]]
---------------
-General features
-================
-
-1. [[Home screen]]
-------------------
-
-2. [[Menus]]
-------------
-
-3. [[Screen organization]]
---------------------------
-
-4. [[Library]]
+4. [Library](../general-features/library)
 --------------
 

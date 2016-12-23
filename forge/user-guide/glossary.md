@@ -12,9 +12,4 @@ Glossary
 
 ![](../resources/Glossaire_Tao_Utilisateur_V.02.pdf)
 
-Glossary
-========
-
-![](../resources/Glossaire_Tao_Utilisateur_V.02.pdf)
-
 
