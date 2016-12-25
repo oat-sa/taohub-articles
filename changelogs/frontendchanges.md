@@ -1,17 +1,29 @@
 <!--
+channel: frontendchanges
+release: 'Sprint 41'
 contributors:
-    - 'Dieter Raber'
-    - 'Jean-Sébastien Conan'
-    - 'Sam Sipasseuth'
+    - 'Aleh Hutnikau'
     - 'Alexander Zagovorichev'
     - 'Bertrand Chevrier'
+    - 'Bertrand Chevrier'
     - 'Christophe Noël'
+    - 'Dieter Raber'
     - 'Ivan Klimchuk'
-    - 'Aleh Hutnikau'
-tags: ['Changelog', 'Front-End']
+    - 'Jean-Sébastien Conan'
+    - 'Sam Sipasseuth'
+tags:
+    - Changelog
+    - 'Front End'
 -->
 
 # Changelog Front-end
+
+## Sprint 41
+
+`ui/feedback` is now a proper component. This means you can override the default config and use the component lifecycle (init/render/destroy). This is a first step in the ability to stack the feedbacks and even to keep errors in a notification area, etc.
+
+---
+
 ## Sprint 40
 
 >
