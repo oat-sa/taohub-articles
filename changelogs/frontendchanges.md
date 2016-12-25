@@ -1,6 +1,4 @@
 <!--
-channel: frontendchanges
-release: 'Sprint 41'
 contributors:
     - 'Aleh Hutnikau'
     - 'Alexander Zagovorichev'
