@@ -3,7 +3,6 @@ contributors:
     - 'Aleh Hutnikau'
     - 'Alexander Zagovorichev'
     - 'Bertrand Chevrier'
-    - 'Bertrand Chevrier'
     - 'Christophe Noël'
     - 'Dieter Raber'
     - 'Ivan Klimchuk'
