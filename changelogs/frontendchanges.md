@@ -23,8 +23,6 @@ tags:
 
 ## Sprint 40
 
->
-
 The resource manager is now using `flex` and has some CSS tweaks to improve its responsiveness
 
 Choice interactions now support the elimination of one or more choices
