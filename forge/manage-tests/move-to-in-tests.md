@@ -1,4 +1,5 @@
 <!--
+parent: 'Manage Tests'
 created_at: '2012-04-12 17:17:03'
 updated_at: '2013-03-13 13:38:24'
 authors:

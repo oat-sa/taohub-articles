@@ -1,4 +1,5 @@
 <!--
+parent: 'Search using Solr'
 created_at: '2015-06-10 17:00:53'
 updated_at: '2015-08-18 14:22:29'
 authors:

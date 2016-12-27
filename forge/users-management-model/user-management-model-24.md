@@ -1,4 +1,5 @@
 <!--
+parent: 'Users Management Model'
 created_at: '2013-03-07 09:35:51'
 updated_at: '2013-03-13 12:59:54'
 authors:

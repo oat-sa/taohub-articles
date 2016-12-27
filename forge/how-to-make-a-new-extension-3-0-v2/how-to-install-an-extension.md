@@ -1,4 +1,5 @@
 <!--
+parent: 'How to make a new extension 3 0 v2'
 created_at: '2016-06-17 15:12:14'
 updated_at: '2016-06-17 16:56:02'
 authors:

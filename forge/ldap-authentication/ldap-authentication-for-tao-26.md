@@ -1,4 +1,5 @@
 <!--
+parent: 'LDAP Authentication'
 created_at: '2015-03-30 14:18:33'
 updated_at: '2015-03-30 14:18:33'
 authors:

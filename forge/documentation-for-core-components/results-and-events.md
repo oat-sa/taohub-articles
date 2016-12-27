@@ -1,4 +1,5 @@
 <!--
+parent: 'Documentation for core components'
 created_at: '2011-02-01 11:23:29'
 updated_at: '2013-03-13 13:09:18'
 authors:

@@ -1,4 +1,5 @@
 <!--
+parent: 'Administrator Guide'
 created_at: '2011-02-11 11:00:03'
 updated_at: '2013-03-13 12:38:44'
 authors:
