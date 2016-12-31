@@ -7,7 +7,7 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - '"Legacy User Guide:Tests"'
+    - 'Legacy User Guide:Tests'
     - 'Legacy User Guide'
 -->
 

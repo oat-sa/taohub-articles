@@ -5,9 +5,9 @@ updated_at: '2014-03-11 10:59:37'
 authors:
     - 'Joel Bout'
 tags:
-    - '"Legacy Versions:TAO 2.425"'
-    - '"Legacy Versions:TAO 2.4"'
-    - '"Legacy Versions:TAO 2.5"'
+    - 'Legacy Versions:TAO 2.425'
+    - 'Legacy Versions:TAO 2.4'
+    - 'Legacy Versions:TAO 2.5'
 -->
 
 Migration 2.4 to 2.5

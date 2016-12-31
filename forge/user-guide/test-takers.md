@@ -7,7 +7,7 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - '"Legacy User Guide:Test takers"'
+    - 'Legacy User Guide:Test takers'
     - 'Legacy User Guide'
 -->
 

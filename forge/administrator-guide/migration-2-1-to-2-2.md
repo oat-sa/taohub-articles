@@ -6,9 +6,9 @@ authors:
     - 'Jérôme Bogaerts'
 tags:
     - 'Administrator Guide'
-    - '"Legacy Versions:TAO 2.122"'
-    - '"Legacy Versions:TAO 2.1"'
-    - '"Legacy Versions:TAO 2.2"'
+    - 'Legacy Versions:TAO 2.122'
+    - 'Legacy Versions:TAO 2.1'
+    - 'Legacy Versions:TAO 2.2'
 -->
 
 Migration 2.1 to 2.2

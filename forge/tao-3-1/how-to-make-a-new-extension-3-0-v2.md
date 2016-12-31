@@ -5,7 +5,7 @@ updated_at: '2016-06-20 10:08:45'
 authors:
     - 'Christophe Garcia'
 tags:
-    - '"Legacy Versions:TAO 3.0"'
+    - 'Legacy Versions:TAO 3.0'
 -->
 
 

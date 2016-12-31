@@ -7,7 +7,7 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - '"Legacy User Guide:Groups"'
+    - 'Legacy User Guide:Groups'
     - 'Legacy User Guide'
 -->
 

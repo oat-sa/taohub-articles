@@ -7,7 +7,7 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - '"Legacy User Guide:Actions"'
+    - 'Legacy User Guide:Actions'
     - 'Legacy User Guide'
 -->
 

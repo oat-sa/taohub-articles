@@ -5,9 +5,9 @@ updated_at: '2015-04-13 13:32:00'
 authors:
     - 'Joel Bout'
 tags:
-    - '"Legacy Versions:TAO 2.630"'
-    - '"Legacy Versions:TAO 2.6"'
-    - '"Legacy Versions:TAO 3.0"'
+    - 'Legacy Versions:TAO 2.630'
+    - 'Legacy Versions:TAO 2.6'
+    - 'Legacy Versions:TAO 3.0'
 -->
 
 Updating Extensions from 2.6 to 3.0

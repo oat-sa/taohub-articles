@@ -7,7 +7,7 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - '"Legacy User Guide:Deliveries"'
+    - 'Legacy User Guide:Deliveries'
     - 'Legacy User Guide'
 -->
 

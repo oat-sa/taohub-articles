@@ -7,7 +7,7 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - '"Legacy User Guide:Processes"'
+    - 'Legacy User Guide:Processes'
     - 'Legacy User Guide'
 -->
 

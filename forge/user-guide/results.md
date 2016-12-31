@@ -7,7 +7,7 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - '"Legacy User Guide:Results"'
+    - 'Legacy User Guide:Results'
     - 'Legacy User Guide'
 -->
 
