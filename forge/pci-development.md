@@ -101,7 +101,7 @@ This is a suggestion of checklist for PCI and PIC related PR review:
 -   pciCreator.json and pciCreator.js
 -   type identifier matches in manifest json, creator and local lib in AMD dependencies
 -   markup: properly scoped by a typeIdentifier class on root node
--   runtime: no tao core lib dependencies, no requires plugin usage (css![](resources/, tel), text! etc)
+-   runtime: no tao core lib dependencies, no requires plugin usage (css[, tel](resources/, tel), text! etc)
 -   runtime: shared libs - check extension dependencies
 -   runtime: response format compatible with the pci format and defined responseDeclaration baseType and cardinality
 -   runtime: response processing types (correct, map, custom, custom operator ?)

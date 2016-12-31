@@ -76,6 +76,6 @@ How to configure those options at the level of a particular test ?
 
 You may enable those features at the level of a test by adding the relevant category in the test authoring next to the section level settings pane.
 
-![](../resources/EditingCustomFeaturesusingcategories.png )
+![](../resources/EditingCustomFeaturesusingcategories.png)
 
 

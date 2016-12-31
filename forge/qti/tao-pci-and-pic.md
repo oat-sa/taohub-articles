@@ -248,7 +248,7 @@ pciCreator.js can have dependencies to any libraries available in TAO. They may 
 -   ui libs (ui/modal, ui/form. ui/feedback etc.)
 -   extension specific ones, especially those of taoQtiItem (taoQtiItem/qtiCreator/editor/customInteractionRegistry)
 
-You can use available requiresjs extension such as tpl![](../resources/, css), json! to include template, css or json data files.
+You can use available requiresjs extension such as tpl[, css](../resources/, css), json! to include template, css or json data files.
 
 You can also reference any file relative to your directory in the namespace of your PCI. The namespace is the unique typeIdentifier of your PCI : e.g. when the typeIdentifier of the PCI is likertScaleInteraction, likertScaleInteraction/creator/widget/Widget refer to the file that is located at ./creator/widget/Widget.js
 

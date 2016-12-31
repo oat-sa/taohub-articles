@@ -13,7 +13,7 @@ tags:
 Select related items
 ====================
 
-![](../resources/tests-selectrelateditems.png )
+![](../resources/tests-selectrelateditems.png)
 
 The Select related items pane is displayed when a test is selected in the Tests library.
 

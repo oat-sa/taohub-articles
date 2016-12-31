@@ -48,7 +48,7 @@ In this section you will learn how to create your first Open WEB Item. The follo
 
 The first step of this tutorial consists in download and inspect [an existing Web application](http://forge.taotesting.com/attachments/download/2640/my-first-owi-stub.zip) that we provide you. You can make work this item *out of the box* to get an overview. To do so, unzip the archive on your file system, and double-click the `index.html` file.
 
-![](../resources/1-free_form_item_overview.png )
+![](../resources/1-free_form_item_overview.png)
 
 Your web browser opens up and you should see an item asking the test taker to select the *Largest thing* among a series of concepts, things or beings. The test taker presses the *Next* or *Previous* buttons to change his answer. He finally presses the *Validate* button to validate its answer and continue the current test. If you press the *Validate* button, nothing happens. At this stage, this is absolutely normal. We still have to invoke the relevant methods in the *Item API* to provide the TAO Delivery Engine a *Score*.
 

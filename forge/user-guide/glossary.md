@@ -11,6 +11,6 @@ tags:
 Glossary
 ========
 
-![](../resources/Glossaire_Tao_Utilisateur_V.02.pdf)
+[Glossaire_Tao_Utilisateur_V.02.pdf](../resources/Glossaire_Tao_Utilisateur_V.02.pdf)
 
 
