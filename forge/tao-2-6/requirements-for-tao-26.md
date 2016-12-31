@@ -5,7 +5,7 @@ updated_at: '2014-09-05 12:09:02'
 authors:
     - 'Joel Bout'
 tags:
-    - 'TAO 2.6'
+    - '"Legacy Versions:TAO 2.6"'
 -->
 
 Requirements for Tao 2.6

@@ -4,8 +4,9 @@ updated_at: '2015-12-15 17:42:13'
 authors:
     - 'Joel Bout'
 tags:
-    - 'TAO 3.0'
-    - 'TAO 3.1'
+    - '"Legacy Versions:TAO 3.031"'
+    - '"Legacy Versions:TAO 3.0"'
+    - '"Legacy Versions:TAO 3.1"'
 -->
 
 

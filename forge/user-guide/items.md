@@ -7,7 +7,8 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - 'User Guide'
+    - '"Legacy User Guide:Items"'
+    - 'Legacy User Guide'
 -->
 
 

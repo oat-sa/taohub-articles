@@ -4,7 +4,7 @@ updated_at: '2014-11-05 11:23:34'
 authors:
     - 'Joel Bout'
 tags:
-    - 'TAO 2.6'
+    - '"Legacy Versions:TAO 2.6"'
 -->
 
 

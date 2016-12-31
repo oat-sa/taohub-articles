@@ -7,7 +7,8 @@ authors:
 contributors:
     - 'Sophie Doublet'
 tags:
-    - 'User Guide'
+    - '"Legacy User Guide:Steps to create an assessment"'
+    - 'Legacy User Guide'
 -->
 
 Steps to create an assessment

@@ -6,7 +6,7 @@ authors:
     - 'Joel Bout'
 tags:
     - 'LDAP Authentication'
-    - 'TAO 2.6'
+    - '"Legacy Versions:TAO 2.6"'
 -->
 
 LDAP Authentication for Tao 2.6

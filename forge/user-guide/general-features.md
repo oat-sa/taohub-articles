@@ -5,7 +5,8 @@ updated_at: '2013-03-13 13:14:24'
 authors:
     - 'Jérôme Bogaerts'
 tags:
-    - 'User Guide'
+    - '"Legacy User Guide:General features"'
+    - 'Legacy User Guide'
 -->
 
 General features

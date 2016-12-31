@@ -1,7 +1,6 @@
 <!--
 created_at: '2010-09-28 11:34:07'
 updated_at: '2016-09-21 15:34:15'
-toc: true
 authors:
     - 'Jean-Sébastien Conan'
 tags: {  }

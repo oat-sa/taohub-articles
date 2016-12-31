@@ -5,8 +5,9 @@ updated_at: '2014-05-27 10:11:23'
 authors:
     - 'Joel Bout'
 tags:
-    - 'TAO 2.5'
-    - 'TAO 2.6'
+    - '"Legacy Versions:TAO 2.526"'
+    - '"Legacy Versions:TAO 2.5"'
+    - '"Legacy Versions:TAO 2.6"'
 -->
 
 Code changes 25 to 26

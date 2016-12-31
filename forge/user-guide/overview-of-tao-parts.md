@@ -7,7 +7,8 @@ authors:
 contributors:
     - 'Franck Gismondi'
 tags:
-    - 'User Guide'
+    - '"Legacy User Guide:Overview of TAO parts"'
+    - 'Legacy User Guide'
 -->
 
 Overview of TAO parts

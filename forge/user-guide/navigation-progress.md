@@ -7,7 +7,8 @@ authors:
 contributors:
     - 'Sophie Doublet'
 tags:
-    - 'User Guide'
+    - '"Legacy User Guide:Navigation progress"'
+    - 'Legacy User Guide'
 -->
 
 Navigation progress
