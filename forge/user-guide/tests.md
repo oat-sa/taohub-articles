@@ -1,5 +1,5 @@
 <!--
-parent: 'User Guide'
+parent: 'Legacy User Guide'
 created_at: '2011-03-11 15:24:21'
 updated_at: '2013-03-13 13:35:48'
 authors:
@@ -8,7 +8,6 @@ contributors:
     - 'Franck Gismondi'
 tags:
     - 'Legacy User Guide:Tests'
-    - 'Legacy User Guide'
 -->
 
 

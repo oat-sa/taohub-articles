@@ -1,5 +1,5 @@
 <!--
-parent: 'User Guide'
+parent: 'Legacy User Guide'
 created_at: '2011-03-11 16:09:15'
 updated_at: '2013-03-13 13:56:07'
 authors:
@@ -8,7 +8,6 @@ contributors:
     - 'Franck Gismondi'
 tags:
     - 'Legacy User Guide:Groups'
-    - 'Legacy User Guide'
 -->
 
 Groups

@@ -1,5 +1,5 @@
 <!--
-parent: 'User Guide'
+parent: 'Legacy User Guide'
 created_at: '2011-03-14 10:24:32'
 updated_at: '2013-03-13 14:26:36'
 authors:
@@ -8,7 +8,6 @@ contributors:
     - 'Franck Gismondi'
 tags:
     - 'Legacy User Guide:Processes'
-    - 'Legacy User Guide'
 -->
 
 

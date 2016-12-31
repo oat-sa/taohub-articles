@@ -7,9 +7,10 @@ authors:
 contributors:
     - 'Lionel Lecaque'
 tags:
-    - 'Legacy Versions:TAO 2.324'
     - 'Legacy Versions:TAO 2.3'
+    - 'Version Upgrades:TAO 2.3'
     - 'Legacy Versions:TAO 2.4'
+    - 'Version Upgrades:TAO 2.4'
 -->
 
 Migration 2 3 to 2 4\

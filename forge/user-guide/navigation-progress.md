@@ -1,5 +1,5 @@
 <!--
-parent: 'User Guide'
+parent: 'Legacy User Guide'
 created_at: '2011-10-24 15:11:15'
 updated_at: '2013-03-13 13:13:54'
 authors:
@@ -8,7 +8,6 @@ contributors:
     - 'Sophie Doublet'
 tags:
     - 'Legacy User Guide:Navigation progress'
-    - 'Legacy User Guide'
 -->
 
 Navigation progress

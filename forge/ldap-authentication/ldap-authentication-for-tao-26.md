@@ -7,6 +7,7 @@ authors:
 tags:
     - 'LDAP Authentication'
     - 'Legacy Versions:TAO 2.6'
+    - 'Version Upgrades:TAO 2.6'
 -->
 
 LDAP Authentication for Tao 2.6
