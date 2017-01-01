@@ -6,7 +6,8 @@ authors:
     - 'Cyril Hazotte'
 tags:
     - 'Server Migration'
-    - 'Version Upgrades:TAO 2.5'
+    - 'Legacy Versions:TAO 2.5'
+    - 'Version Changes:TAO 2.5'
 -->
 
 Server Migration TAO 2.5-2.6

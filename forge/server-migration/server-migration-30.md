@@ -6,7 +6,8 @@ authors:
     - 'Cyril Hazotte'
 tags:
     - 'Server Migration'
-    - 'Version Upgrades:TAO 3.0'
+    - 'Legacy Versions:TAO 3.0'
+    - 'Version Changes:TAO 3.0'
 -->
 
 Server Migration TAO 3.0

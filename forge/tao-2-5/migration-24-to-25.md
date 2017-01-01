@@ -6,9 +6,8 @@ authors:
     - 'Joel Bout'
 tags:
     - 'Legacy Versions:TAO 2.4'
-    - 'Version Upgrades:TAO 2.4'
     - 'Legacy Versions:TAO 2.5'
-    - 'Version Upgrades:TAO 2.5'
+    - 'Version Changes:TAO 2.4 to 2.5'
 -->
 
 Migration 2.4 to 2.5

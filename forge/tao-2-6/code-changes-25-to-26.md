@@ -6,9 +6,8 @@ authors:
     - 'Joel Bout'
 tags:
     - 'Legacy Versions:TAO 2.5'
-    - 'Version Upgrades:TAO 2.5'
     - 'Legacy Versions:TAO 2.6'
-    - 'Version Upgrades:TAO 2.6'
+    - 'Version Changes:TAO 2.5 to 2.6'
 -->
 
 Code changes 25 to 26

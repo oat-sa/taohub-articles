@@ -5,9 +5,7 @@ authors:
     - 'Joel Bout'
 tags:
     - 'Legacy Versions:TAO 3.0'
-    - 'Version Upgrades:TAO 3.0'
-    - 'Legacy Versions:TAO 3.1'
-    - 'Version Upgrades:TAO 3.1'
+    - 'Version Changes:TAO 3.0 to 3.1'
 -->
 
 
