@@ -15,6 +15,21 @@ tags:
 
 # Changelog Front-end
 
+## Sprint 42
+
+All related to QTI test authoring:
+`taoQtiTest/controller/creator/helpers/outcome`: manage test outcomes
+`taoQtiTest/controller/creator/helpers/processingRule`: create test outcome processing rules
+`taoQtiTest/controller/creator/helpers/scoring`: manage the score processing in a test model 
+`taoQtiTest/controller/creator/helpers/category`: helper that provide access to all categories defined in a test
+`taoQtiTest/controller/creator/helpers/baseType`: port in JavaScript of QTISM BaseType Enumeration
+`taoQtiTest/controller/creator/helpers/cardinality`: port in JavaScript of QTISM Cardinality Enumeration
+
+Core functionalities
+`util/shortcut/registry`: added support to enable/disable the shortcuts registry (prevent all shortcuts to be triggered while disabled)
+
+---
+
 ## Sprint 41
 
 `ui/feedback` is now a proper component. This means you can override the default config and use the component lifecycle (init/render/destroy). This is a first step in the ability to stack the feedbacks and even to keep errors in a notification area, etc.
