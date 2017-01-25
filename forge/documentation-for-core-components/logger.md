@@ -11,7 +11,7 @@ tags:
 Logger
 ======
 
-Valid as of TAO_3_0|TAO 3.0. For previous versions see Logger_2_2|Logger 2.2
+Valid as of TAO_3_0|TAO 3.0. For previous versions see [Logger 2.2](../logger/logger-2-2.md)
 
 
 
