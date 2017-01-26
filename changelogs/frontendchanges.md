@@ -15,6 +15,14 @@ tags:
 
 # Changelog Front-end
 
+## Sprint 43
+
+QTI Test Authoring:
+`taoQtiTest/controller/creator/helpers/outcomeValidator`: helper that validates outcomes (identifier and type)
+`taoQtiTest/controller/creator/helpers/qtiElement`: helper that creates QTI elements, and provides API to browse by path (ex: `“setOutcomeValue.gte.baseValue”`)
+
+---
+
 ## Sprint 42
 
 All related to QTI test authoring:
