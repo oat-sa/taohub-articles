@@ -6,10 +6,10 @@ authors:
 tags: {  }
 -->
 
-TAO Contuinous Integration
+TAO Continuous Integration
 ==========================
 
-Here are the different steps that are run on daily bases, all source code and config file are available on https://github.com/oat-sa/package-build
+Here are the different steps that are ran on a daily basis, all source code and config file are available on https://github.com/oat-sa/package-build
 
 Build the package
 -----------------
@@ -124,7 +124,7 @@ Howto setup Jenkins
 Reports
 -------
 
-Here some example of reports generated
+Here are some example of generated reports
 
 -   [Main Page](http://docs.taotesting.com/reports/main.pdf)
 -   [PHPLOC](http://docs.taotesting.com/reports/phploc.pdf)
@@ -137,7 +137,7 @@ Additional builds
 
 ### Build Tag
 
-In order to create the stable release version we also have gather different utilities in\
+In order to create the stable release version, we need to gather different utilities using\
 https://github.com/oat-sa/package-build-tag
 
 -   Download package-tao from github
