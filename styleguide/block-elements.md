@@ -217,35 +217,35 @@ I. `upper-roman`
 	</div>   
 ```
 
-א. `hebrew`
+א. `hebrew` (support only for `<ul>` and `<ol>`)
 ```html
 	<ol class="hebrew">
 		<li>Hebrew</li>
-	</ol>  
+	</ol>
 ```
 
-あ、`hiragana`
+あ、`hiragana` (support only for `<ul>` and `<ol>`)
 ```html
 	<ol class="hiragana">
 		<li>Hiragana</li>
 	</ol>  
 ```
 
-い、`hiragana-iroha`
+い、`hiragana-iroha` (support only for `<ul>` and `<ol>`)
 ```html
 	<ol class="hiragana-iroha">
 		<li>Hiragana Iroha</li>
 	</ol>  
 ```
 
-ア、 `katakana`
+ア、 `katakana` (support only for `<ul>` and `<ol>`)
 ```html
 	<ol class="katakana">
 		<li>Katakana</li>
 	</ol>  
 ```
 
-イ、`katakana-iroha`
+イ、`katakana-iroha` (support only for `<ul>` and `<ol>`)
 ```html
 	<ol class="katakana-iroha">
 		<li>Katakana Iroha</li>
