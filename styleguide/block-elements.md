@@ -35,8 +35,9 @@ Regular text
 ```
 ## Lists
 
-There is no guarantee that all the classes work in every browser, use with care! There is also support for list styles on elements other than `<ul>` or `<ol>`, though with all styles. In these cases class names must be prefixed with `list-style-`, the symbols will appear on direct child elements.
+Not all classes work in every browser, see [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#Browser_compatibility) for a comprehensive list.
 
+There is also support for list styles on elements other than `<ul>` or `<ol>`, though not for all styles. To use them prefix the class-name with `list-style-`, the symbols will appear on direct child elements only.
 
 
 `plain` or `none` means no padding, no margin, no bullets
