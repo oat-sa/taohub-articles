@@ -61,7 +61,7 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 		<li>Disc</li>
 	</ol>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-disc">
 		<div>Element with list style</div>
 	</div>
@@ -73,7 +73,7 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 		<li>Circle</li>
 	</ul>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-circle">
 		<div>Element with list style</div>
 	</div>   
@@ -85,7 +85,7 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 		<li>Square</li>
 	</ul>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-square">
 		<div>Element with list style</div>
 	</div>
@@ -100,7 +100,7 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 		<li>Decimal</li>
 	</ul>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-decimal">
 		<div>Element with list style</div>
 	</div>  
@@ -112,7 +112,7 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 		<li>Decimal Leading Zero</li>
 	</ol>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-decimal-leading-zero">
 		<div>Element with list style</div>
 	</div>  
@@ -128,7 +128,7 @@ a. `lower-alpha` or `lower-latin`
 		<li>Lower Latin</li>
 	</ol>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-lower-alpha">
 		<div>Element with list style</div>
 	</div> 
@@ -148,7 +148,7 @@ A. `upper-alpha` or `upper-latin`
 		<li>Upper Alpha</li>
 	</ol> 
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-upper-alpha">
 		<div>Element with list style</div>
 	</div> 
@@ -164,7 +164,7 @@ i. `lower-roman`
 		<li>Lower Roman</li>
 	</ol>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-lower-roman">
 		<div>Element with list style</div>
 	</div>   
@@ -176,7 +176,7 @@ I. `upper-roman`
 		<li>Upper Roman</li>
 	</ol>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-upper-roman">
 		<div>Element with list style</div>
 	</div>   
@@ -188,7 +188,7 @@ I. `upper-roman`
 		<li>Lower Greek</li>
 	</ol>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-lower-greek">
 		<div>Element with list style</div>
 	</div>   
@@ -200,7 +200,7 @@ I. `upper-roman`
 		<li>Armenian</li>
 	</ol>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-armenian">
 		<div>Element with list style</div>
 	</div>   
@@ -212,41 +212,41 @@ I. `upper-roman`
 		<li>Georgian</li>
 	</ol>
 
-	// support for other elements
+	// on other elements
 	<div class="list-style-georgian">
 		<div>Element with list style</div>
 	</div>   
 ```
 
-א. `hebrew` (support only for `<ul>` and `<ol>`)
+א. `hebrew` (`<ul>` and `<ol>` only)
 ```html
 	<ol class="hebrew">
 		<li>Hebrew</li>
 	</ol>
 ```
 
-あ、`hiragana` (support only for `<ul>` and `<ol>`)
+あ、`hiragana` (`<ul>` and `<ol>` only)
 ```html
 	<ol class="hiragana">
 		<li>Hiragana</li>
 	</ol>  
 ```
 
-い、`hiragana-iroha` (support only for `<ul>` and `<ol>`)
+い、`hiragana-iroha` (`<ul>` and `<ol>` only)
 ```html
 	<ol class="hiragana-iroha">
 		<li>Hiragana Iroha</li>
 	</ol>  
 ```
 
-ア、 `katakana` (support only for `<ul>` and `<ol>`)
+ア、 `katakana` (`<ul>` and `<ol>` only)
 ```html
 	<ol class="katakana">
 		<li>Katakana</li>
 	</ol>  
 ```
 
-イ、`katakana-iroha` (support only for `<ul>` and `<ol>`)
+イ、`katakana-iroha` (`<ul>` and `<ol>` only)
 ```html
 	<ol class="katakana-iroha">
 		<li>Katakana Iroha</li>
