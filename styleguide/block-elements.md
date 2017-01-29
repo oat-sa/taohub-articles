@@ -1,5 +1,5 @@
 <!--
-tags: ["Style Guide:Elements"]
+tags: ["Style Guide:Block Elements"]
 -->
 
 # Block Elements
