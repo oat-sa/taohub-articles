@@ -1,7 +1,7 @@
 <!--
 tags: ["Style Guide:Buttons"]
 -->
-
+<link href="https://raw.githubusercontent.com/oat-sa/tao-core/master/views/css/tao-3.css" rel="stylesheet" />
 # Buttons
 
 > Real buttons as well as elements that should look like buttons.
