@@ -55,12 +55,12 @@ On browsers that lack complete support for `<use/>` the content of the symbol wi
         </g>
     </svg>
 ```
-The group with the class *.use* will be added to make writing CSS a bit easier.
+The group with the class `.use` will be added to make writing CSS a bit easier.
 
 CSS for SVG icons
 -----------------
 
-SVG can be used several ways, for instance as source an <code><img /></code> element or as a background image. If you want to use CSS on an SVG you will need to put it in the HTML directly as demonstrated above. CSS is mostly straight forward. Changing the colors though can be a little bit tricky. Firstly color is called **fill** or **stroke** depending on the construction SVG. [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) hosts a tutorial that explains this in great detail.
+SVG can be used several ways, for instance as source an `<img />` element or as a background image. If you want to use CSS on an SVG you will need to put it in the HTML directly as demonstrated above. CSS is mostly straight forward. Changing the colors though can be a little bit tricky. Firstly color is called **fill** or **stroke** depending on the construction SVG. [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) hosts a tutorial that explains this in great detail.
 
 ```css
     use, g.use {
