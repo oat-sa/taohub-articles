@@ -11,7 +11,7 @@ tags:
 Tutorial - SVG Icons
 ====================
 
-As of version 3.0 TAO uses custom icon fonts. With the 3.1 release there will also be support for SVG icons. They are especially interesting for extensions since they don’t require a change of the TAO icon font.
+> As of version 3.0 TAO uses custom icon fonts. With the 3.1 release there will also be support for SVG icons. They are especially interesting for extensions since they don’t require a change of the TAO icon font.
 
 SVG format
 ----------
