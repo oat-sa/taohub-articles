@@ -33,9 +33,9 @@ Extension icons refers to all icons that are set in *structures.xml*. When using
     <icon id="icon-foo"/>
 ```
 
-This is a bit different for svg icons. In this example we expect an SVG in `/[extensionName]/views/img/example.svg` that contains a symbol with the ID `icon-foo`. The `ext` attribute is optional, the default is the structure to which the structure belongs.
+This is a bit different for svg icons. In this example we expect an SVG in `/__extensionName__/views/img/example.svg` that contains a symbol with the ID `icon-foo`. The `ext` attribute is optional, the default is the structure to which the structure belongs.
 ```xml
-    <icon src="example.svg" ext="anotherOne" id="icon-foo"/>
+    <icon src="example.svg" ext="__extensionName__" id="icon-foo"/>
 ```
 
 ## The rendered HTML
