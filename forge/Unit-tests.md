@@ -93,29 +93,32 @@ Create with a subdirectory containing the two following files:
 ### test.html
 
 Use the following template:
-
-
-
-
-
-           XXX TEST TITLE XXX
-
-
-
-
-
-
-               QUnit.config.autostart = false;
-               require(['/tao/ClientConfig/config'], function(){
-                   require(['taoQtiItem/qtiCreator/test/MathEditor/test'], function(){
-                       QUnit.start();
-                   });
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8">
+       <title>XXX TEST TITLE XXX</title>
+       <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+       <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+       <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+       <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit-parameterize.js"></script>
+       <script type="text/javascript" src="/tao/views/js/lib/blanket/blanket.min.js" data-cover-only="/taoQtiItem/views/js/qtiCreator/editor/MathEditor.js"></script>
+       <script  type="text/javascript">
+           QUnit.config.autostart = false;
+           require(['/tao/ClientConfig/config'], function(){
+               require(['taoQtiItem/qtiCreator/test/MathEditor/test'], function(){
+                   QUnit.start();
                });
-
-
-
-
-
+           });
+       </script>
+   </head>
+   <body>
+       <div id="qunit"></div>
+       <div id="qunit-fixture"></div>
+   </body>
+</html>
+```
 
 
 Customise:
@@ -131,7 +134,7 @@ Optionnal dependencies:
 -   parameterize is a QUnit plugin useful for parameterized tests https://github.com/AStepaniuk/qunit-parameterize
 
 ### test.js
-
+```javascript
     define([
         'jquery',
         'your/plugin'
@@ -147,6 +150,7 @@ Optionnal dependencies:
         });
 
     });
+```
 
 -   we need all tests cases to be wrapped under a QUnit.module (for reporting)
 -   for an example of parameterized test, see https://github.com/oat-sa/tao-core/blob/develop/views/js/test/core/encoder/str2array/test.js
