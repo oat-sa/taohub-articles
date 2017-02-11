@@ -1,8 +1,7 @@
 <!--
-parent: 'From meta'
 tags:
   - 'Meta Test'
-  - 'Group Test:Tag Over'
+  - 'Group Test:Tag4'
   - 'Meta New'
 -->
 
