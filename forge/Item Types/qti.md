@@ -5,7 +5,7 @@ updated_at: '2014-10-21 11:25:57'
 authors:
     - 'Somsack Sipasseuth'
 tags:
-    - 'Items'' Types'
+    - 'Item Types'
 -->
 
 
