@@ -15,6 +15,40 @@ tags:
 
 # Changelog Front-end
 
+## Sprint 44
+
+`core/statifier`: makes an object a states handler. Provides API to set and get states. A state is a named boolean flag, the `statifier` handles a list of states.
+
+---
+
+`core/logger` : front end has now a proper logger : 
+```
+var logger = loggerFactory('component');
+ <http://logger.info|logger.info>('Message');
+ logger.debug('Formated %s', 'message');
+ logger.trace({ anotherField : true}, 'hello');
+ logger.error(new Error('Something went wrong');
+
+var childLogger = logger.child({ type : 'sub-component'});
+childLogger.warn('oops');
+```
+
+Only the `console` provider is implemented, but we can easily add and load other providers (websockets, ajax, newrelic, etc.)
+
+`taoQtiTest/runner/proxy/loader` let's you change the implementation of the test runner proxy (the module that serves the data).
+
+`taoQtiTest/runner/proxy/cache/proxy` is a proxy provider that cache items and preload their assets
+
+---
+
+`ui/report` a component to display the exact same report generated everywhere in the backoffice
+Task queue related :
+`core/taskQueue` the client side task queue API to manage tasks, currently only actions get/poll/remove are available
+`ui/taskQueue/status` the component to poll and display the current status and report for one task 
+`ui/taskQueue/table` the component to display and manage a list of tasks, defined by a task queue context which is used as a filter
+
+---
+
 ## Sprint 43
 
 QTI Test Authoring:
