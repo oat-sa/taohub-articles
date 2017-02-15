@@ -37,7 +37,7 @@ You can select more extensions :
 
 click on “install” :
 
-confrim installation :
+confirm installation :
 
 ![](../resources/install_5.png)
 
