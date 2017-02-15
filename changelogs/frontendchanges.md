@@ -35,7 +35,7 @@ childLogger.warn('oops');
 
 Only the `console` provider is implemented, but we can easily add and load other providers (websockets, ajax, newrelic, etc.)
 
-`taoQtiTest/runner/proxy/loader` let's you change the implementation of the test runner proxy (the module that serves the data).
+`taoQtiTest/runner/proxy/loader` lets you change the implementation of the test runner proxy (the module that serves the data).
 
 `taoQtiTest/runner/proxy/cache/proxy` is a proxy provider that cache items and preload their assets
 
