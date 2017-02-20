@@ -244,9 +244,6 @@ request(url, { id : '1234'})
 
 ## Sprint 34
 
->
-
-
 `core/eventifier`:
 - the `before` async queue now support promises instead of the `event.done()` syntax, which is deprecated
 - the events can now use a general namespace to target all namespaced events (see samples below)
@@ -254,40 +251,40 @@ request(url, { id : '1234'})
 - a new method allows to clears all the registered listeners: `removeAllListeners()`
 - examples:
 ```
-emitter.before('foo', function(e) {
-    // name of event
-    console.log(e.name);
+	emitter.before('foo', function(e) {
+	    // name of event
+	    console.log(e.name);
 
-    // namespace of event
-    console.log(e.namespace);
+	    // namespace of event
+	    console.log(e.namespace);
 
-    // async mode using promise
-    return new Promise(resolve, reject) {
-        if (ok) {
-            resolve();
-        } else {
-            reject();
-        }
-    });
-});
+	    // async mode using promise
+	    return new Promise(resolve, reject) {
+		if (ok) {
+		    resolve();
+		} else {
+		    reject();
+		}
+	    });
+	});
 
-// listen to "foo" only
-emitter.on('foo');
+	// listen to "foo" only
+	emitter.on('foo');
 
-// listen to "foo" and "foo.bar"
-emitter.on('foo.bar');
+	// listen to "foo" and "foo.bar"
+	emitter.on('foo.bar');
 
-// listen to all "foo" events
-emitter.on('foo.*');
+	// listen to all "foo" events
+	emitter.on('foo.*');
 
-// notify all "foo" listeners
-emitter.trigger('foo');
+	// notify all "foo" listeners
+	emitter.trigger('foo');
 
-// notify only "foo.bar" and "foo.*"
-emitter.trigger('foo.bar’);
+	// notify only "foo.bar" and "foo.*"
+	emitter.trigger('foo.bar’);
 
-// remove all listeners
-emitter.removeAllListeners();
+	// remove all listeners
+	emitter.removeAllListeners();
 ```
 
 `taoQtiTest/runner/helpers/map`:
@@ -344,27 +341,27 @@ JSHint to ESLint
 
 How it works:
 ```
-# Create new dateRange container
-dateRangeFactory({
-   pickerType: 'datetimepicker',
-   renderTo: $dateRange,
-   pickerConfig: {
-       // configurations from lib/jquery.timePicker.js
-       dateFormat: 'yy-mm-dd',
-       timeFormat: 'HH:mm:ss'
-   }
-});
+	# Create new dateRange container
+	dateRangeFactory({
+	   pickerType: 'datetimepicker',
+	   renderTo: $dateRange,
+	   pickerConfig: {
+	       // configurations from lib/jquery.timePicker.js
+	       dateFormat: 'yy-mm-dd',
+	       timeFormat: 'HH:mm:ss'
+	   }
+	});
 
-# attach to exists form
-&lt;div class="container"&gt;
-  &lt;input type="text" name="from"&gt;
-  &lt;input type="text" name="to"&gt;
-&lt;/div&gt;
+	# attach to exists form
+	&lt;div class="container"&gt;
+	  &lt;input type="text" name="from"&gt;
+	  &lt;input type="text" name="to"&gt;
+	&lt;/div&gt;
 
-dateRange({
-    startInput: $inputFrom,
-    endInput: $inputTo
-}).render($container)
+	dateRange({
+	    startInput: $inputFrom,
+	    endInput: $inputTo
+	}).render($container)
 ```
 
 ## Sprint 30
@@ -474,33 +471,33 @@ Tooltips can be created in two ways:
 1 - Direct call of `qtip()` on element:
 
 ```
-$('.selector').qtip({
-    content: {
-        text: 'I will be added to elements with .selector class'
-    }
-});
+	$('.selector').qtip({
+	    content: {
+		text: 'I will be added to elements with .selector class'
+	    }
+	});
 ```
 
 2 - Use function which returns module 'ui/tooltip':
 
 ```
-define(['ui/tooltip'], function(tooltip) {
-    ...
-    tooltip($('.container-selector'));
-    ...
-});
+	define(['ui/tooltip'], function(tooltip) {
+	    ...
+	    tooltip($('.container-selector'));
+	    ...
+	});
 ```
 
 `tooltip()` function will find all elements inside a container passed as first parameter which has `data-tooltip` attribute and initialize tooltip on them (in the same way it works before with old tooltip library).
 
 ```
-&lt;div class='container-selector'&gt;
-	&lt;span data-tooltip="~ .tooltip-content:first" data-tooltip-theme="info"&gt;I'm tooltipstered element&lt;/span&gt;
-	&lt;div class="tooltip-content"&gt;
-	    &lt;b&gt;Strong text&lt;/b&gt;
-	    &lt;i&gt;Html elemets can be used inside tooltip.&lt;/i&gt;
+	&lt;div class='container-selector'&gt;
+		&lt;span data-tooltip="~ .tooltip-content:first" data-tooltip-theme="info"&gt;I'm tooltipstered element&lt;/span&gt;
+		&lt;div class="tooltip-content"&gt;
+		    &lt;b&gt;Strong text&lt;/b&gt;
+		    &lt;i&gt;Html elemets can be used inside tooltip.&lt;/i&gt;
+		&lt;/div&gt;
 	&lt;/div&gt;
-&lt;/div&gt;
 ```
 
 
