@@ -72,7 +72,7 @@ tags: ["Style Guide:Feedback Messages"]
 
 ### Smaller feedback bars</h2>
 
-Adding the class `.small` will create feedback messages that are less high. For the meaning of the class `.col-3` see the [grids.md](chapter about grids).
+Adding the class `.small` will create feedback messages that are less high. For the meaning of the class `.col-3` see the [chapter about grids](grids.md).
 
 <div class="grid-row" contenteditable="false">
   <div class="feedback-warning small col-3">
