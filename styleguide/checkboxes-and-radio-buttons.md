@@ -10,7 +10,8 @@ tags: ["Style Guide:Checkboxes and Radio buttons"]
 ## Checkboxes
 
 <label>Checkbox right <input type="checkbox">
-<span class="icon-checkbox"> </span></label> 
+<span class="icon-checkbox"> </span></label>
+
 ```html
 	<label>
 		Checkbox right
@@ -21,6 +22,7 @@ tags: ["Style Guide:Checkboxes and Radio buttons"]
 
 <label><input type="checkbox"> <span class="icon-checkbox">
 </span> Checkbox left</label>
+
 ```html
 	<label>
 		<input type="checkbox">
@@ -30,6 +32,7 @@ tags: ["Style Guide:Checkboxes and Radio buttons"]
 ```
 
 <label>Checkbox right (cross as marker) <input type="checkbox"> <span class="icon-checkbox cross"> </span></label> 
+
 ```html
 	<label>
 		Checkbox right (cross as marker)
@@ -41,6 +44,7 @@ tags: ["Style Guide:Checkboxes and Radio buttons"]
 <label><input type="checkbox">
 <span class="icon-checkbox cross"> </span>
 Checkbox left (cross as marker)</label> 
+
 ```html
 	<label>
 		<input type="checkbox">
@@ -53,6 +57,7 @@ Checkbox left (cross as marker)</label>
 
 <label>Radio button right <input name="ra-test" type="radio">
 <span class="icon-radio"> </span></label> 
+
 ```html
 	<label>
 		Radio button right
@@ -63,6 +68,7 @@ Checkbox left (cross as marker)</label>
 
 <label><input name="ra-test" type="radio">
 <span class="icon-radio"> </span> Radio button left</label>
+
 ```html
 	<label>
 		<input name="ra-test" type="radio">
