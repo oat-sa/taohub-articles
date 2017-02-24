@@ -11,6 +11,7 @@ tags: ["Style Guide:Buttons"]
 <button class="btn-neutral" type="button">Neutral button</button>
 <button type="button">Neutral is also the default</button>
 <input class="btn-neutral" value="Same as input element" type="submit">
+
 ```html
 	<button class="btn-neutral" type="button">Neutral button</button>
 	<button type="button">Neutral is also the default</button>
@@ -19,6 +20,7 @@ tags: ["Style Guide:Buttons"]
 
 <button class="btn-info" type="button">Info button</button>
 <input class="btn-info" value="Same as input element" type="submit">
+
 ```html
 	<button class="btn-info" type="button">Info button</button>
 	<input class="btn-info" value="Same as input element" type="submit">
@@ -26,6 +28,7 @@ tags: ["Style Guide:Buttons"]
 
 <button class="btn-success" type="button">Success button</button>
 <input class="btn-success" value="Same as input element" type="reset">
+
 ```html
 	<button class="btn-success" type="button">Success button</button>
 	<input class="btn-success" value="Same as input element" type="reset">
@@ -33,6 +36,7 @@ tags: ["Style Guide:Buttons"]
 
 <button class="btn-warning" type="button">Warning button</button>
 <input class="btn-warning" value="Same as input element" type="submit">
+
 ```html
 	<button class="btn-warning" type="button">Warning button</button>
 	<input class="btn-warning" value="Same as input element" type="submit">
@@ -40,6 +44,7 @@ tags: ["Style Guide:Buttons"]
 
 <button class="btn-error" type="button">Danger button</button>
 <input class="btn-error" value="Same as input element" type="submit">
+
 ```html
 	<button class="btn-error" type="button">Danger button</button>
 	<input class="btn-error" value="Same as input element" type="submit">
@@ -47,6 +52,7 @@ tags: ["Style Guide:Buttons"]
 
 <button class="btn-error" disabled="disabled" type="button">Disabled button</button>
 <input class="btn-error" disabled="disabled" value="Same as input element" type="submit">
+
 ```html
 	<button class="btn-error" disabled="disabled" type="button">Disabled button</button>
 	<input class="btn-error" disabled="disabled" value="Same as input element" type="submit">
@@ -57,21 +63,25 @@ tags: ["Style Guide:Buttons"]
 Adding the class `.small` will create buttons that are less high. This has become the most commonly used way to create buttons within TAO.
 
 <button class="btn-info small" type="button">Button</button>
+
 ```html
 	<button class="btn-info small" type="button">Button</button>
 ```
 
 <input class="btn-success small" value="Input" type="submit">
+
 ```html
 	<input class="btn-success small" value="Input" type="submit">
 ```
 
 <a class="btn-warning small" href="#">Random element</a>
+
 ```html
 	<a class="btn-warning small" href="#">Random element</a>
 ```
 
 <button class="btn-error small" type="button">Icon left</button>
+
 ```html
 	<button class="btn-error small" type="button">Icon left</button>
 ```
