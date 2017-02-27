@@ -104,7 +104,7 @@ Use the following template:
            <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
            <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
            <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit-parameterize.js"></script>
-           <script type="text/javascript" src="/tao/views/js/lib/blanket/blanket.min.js" data-cover-flag="branchTracking" data-cover-only="/taoQtiItem/views/js/qtiCreator/editor/MathEditor.js"></script>
+           <script type="text/javascript" src="/tao/views/js/lib/blanket/blanket.min.js" data-cover-flag="branchTracking" data-cover-only="editor/MathEditor.js"></script>
            <script  type="text/javascript">
                QUnit.config.autostart = false;
                require(['/tao/ClientConfig/config'], function(){
