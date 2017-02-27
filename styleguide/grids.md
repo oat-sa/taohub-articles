@@ -5,7 +5,7 @@ tags: ["Style Guide:Grids"]
 
 # Grids
 
-> The grid is based on a responsive 12-column system. This means that each column has a width between 1/12 and 12/12 of its parent container. You create a column by assigning the `.col-*` to an element where `*` stands for the number of units you wish to use. Grid columns must sit inside grid rows `<div class="grid-row"/>` and the wholes set of rows in `<div class="grid-container"/>`
+> The grid is based on a responsive 12-column system. This means that each column has a width between 1/12 and 12/12 of its parent container. You create a column by assigning the `.col-*` to an element where `*` stands for the number of units you wish to use. Grid columns must sit inside grid rows `<div class="grid-row"/>` and the wholes set of rows in `<div class="grid-container"/>`.
 
 ## Examples with blocks in the same size
   
