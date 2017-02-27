@@ -9,15 +9,15 @@ tags: ["Style Guide:Inline Elements"]
 
 ## Links
   
-<a href="#">Hyperlinks</a> look like this. If they lead to <a href="#" rel="external">external sites <span class="icon-external"></span></a> they should have a `rel="external"` for semantics. The arrow symbol is done with `<span class="icon-external"></span>`.  
+<a href="#">Hyperlinks</a> look like this. If they lead to <a href="#" rel="external"><span class="icon-external"></span> external sites</a> they should have a `rel="external"` for semantics. The arrow symbol is done with `span.icon-external`.  
 
 ## Bold Text</h2>
 
-While sematically **bold text** should be done width `<strong>` elements, the same decoration can be achieved with `<b>` or `class="b` and `class="strong"`.
+While sematically **bold text** should be done width `<strong>` elements, the same decoration can be achieved with `<b>` or `.b` and `.strong`.
   
 ## Italic text</h2>
   
-Obviously *italic text* should be done with an `<em>` element, but again the same decoration can be achieved with `<i>` or `class="i` and `class="em"`. 
+Obviously *italic text* should be done with an `<em>` element, but again the same decoration can be achieved with `<i>` or `.i` and `.em`. 
 
 ## Code
 `Source code` will be written in a monospaced font.
