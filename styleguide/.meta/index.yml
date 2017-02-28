@@ -1,31 +1,20 @@
 meta:
+# no meta data
 
 # equivalent syntax patterns for TOC
-# a.
-#   - { label: 'Some Topic', link: '/some-topic' }
-#   - { label: 'Other Topic', link: '/other-topic' }
-# 
-# b.
-#   -
-#     label: 'Some Topic'
-#     link: '/some-topic'
-#   -
-#     label: 'Other Topic'
-#     link: '/other-topic'
-# 
-# c. Links will be generated from labels
+# toc:
 #   - 'Some Topic'
 #   - 'Other Topic'
 # 
-# d. Links will be generated from labels
+# toc:
 #   ['Some Topic','Other Topic']
 toc:
   - Block Elements
+  - Inline Elements
   - Buttons
   - Checkboxes / Radio buttons
+  - Tables
+  - Grids
   - Colors
   - Feedback Messages
-  - Grids
   - Icons
-  - Inline Elements
-  - Tables
