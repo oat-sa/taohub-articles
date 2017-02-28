@@ -2,7 +2,9 @@
 tags: ["Style Guide:Tables"]
 -->
 
-# Tables							
+# Tables	
+
+> The most common use for tables in TAO is the Match Interaction					
 
 ## Default setup
 
