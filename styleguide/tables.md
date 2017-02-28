@@ -1,5 +1,5 @@
 <!--
-tags: ["Style Guide:Icons"]
+tags: ["Style Guide:Tables"]
 -->
 
 # Tables							
