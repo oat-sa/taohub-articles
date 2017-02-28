@@ -1,5 +1,5 @@
 <!--
-tags: ["Style Guide:Tables"]
+tags: ["Style Guide:Icons"]
 -->
 
 # Tables							
@@ -76,17 +76,17 @@ If your table contains numeric data you might want to align them on the right si
     <tr>
       <th></th>
       <th>Column header</th>
-      <th>`.numeric` column</th>
+      <th>Column with class <i>numeric</i></th>
     </tr>
   </thead>
   <tbody>
     <tr class="numeric">
-      <th>`.numeric` row</th>
+      <th>Row with class <i>numeric</i></th>
       <td>1234</td>
       <td>1234</td>
     </tr>
     <tr>
-      <th>`.numeric` cells</th>
+      <th>Cells with class <i>numeric</i></th>
       <td class="numeric">1234</td>
       <td class="numeric">1234</td>
     </tr>
@@ -94,32 +94,32 @@ If your table contains numeric data you might want to align them on the right si
 </table>
 
 ```html
-    <table class="matrix">
-      <colgroup>
-        <col>
-        <col>
-        <col class="numeric">
-      </colgroup>
-      <thead>
-        <tr>
-          <th></th>
-          <th>Column header</th>
-          <th>`.numeric` column</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="numeric">
-          <th>`.numeric` row</th>
-          <td>1234</td>
-          <td>1234</td>
-        </tr>
-        <tr>
-          <th>`.numeric` cells</th>
-          <td class="numeric">1234</td>
-          <td class="numeric">1234</td>
-        </tr>
-      </tbody>
-    </table>
+	<table class="matrix">
+	  <colgroup>
+	    <col>
+	    <col>
+	    <col class="numeric">
+	  </colgroup>
+	  <thead>
+	    <tr>
+	      <th></th>
+	      <th>Column header</th>
+	      <th>Column with class <i>numeric</i></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr class="numeric">
+	      <th>Row with class <i>numeric</i></th>
+	      <td>1234</td>
+	      <td>1234</td>
+	    </tr>
+	    <tr>
+	      <th>Cells with class <i>numeric</i></th>
+	      <td class="numeric">1234</td>
+	      <td class="numeric">1234</td>
+	    </tr>
+	  </tbody>
+	</table>
 ```
 
 ## No stripes
