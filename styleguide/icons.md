@@ -44,7 +44,7 @@ In this scenario you have a class `.foo` that for some reasons should use the co
 	}
 ```
 
-*Note: Never extend `.icon-bar` (CSS class) directly - always reference the SCSS variable `%icon-bar` instead!*
+*Note: Never extend CSS class `.icon-bar` directly, always reference the SCSS variable `%icon-bar` instead!*
     
 ## List of all existing icons along with their class name
 
