@@ -39,8 +39,9 @@ Not all classes work in every browser, see [MDN](https://developer.mozilla.org/e
 
 There is also support for list styles on elements other than `<ul>` or `<ol>`, though not for all styles. To use them prefix the class-name with `list-style-`, the symbols will appear on direct child elements only.
 
-
+<div>
 `plain` or `none` means no padding, no margin, no bullets
+
 ```html
 	<ul class="plain">
 		<li>No padding, no margin, no bullets</li>
@@ -51,7 +52,10 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 	</ul>  
 ```
 
+</div>
+<div>
 ● `disc` (or no class at all on `<ul>`)
+
 ```html
 	<ul>
 		<li>No class at all</li>
@@ -66,8 +70,11 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 		<div>Element with list style</div>
 	</div>
 ```
-             
+
+</div>
+<div>
 ○ `circle` 
+
 ```html
 	<ul class="circle">
 		<li>Circle</li>
@@ -79,7 +86,10 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 	</div>   
 ```
 
+</div>
+<div>
 ■ `square`
+
 ```html
 	<ul class="square">
 		<li>Square</li>
@@ -91,7 +101,10 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 	</div>
 ```  
 
+</div>
+<div>
 1. `decimal` (or no class at all on `<ol>`)
+
 ```html
 	<ol>
 		<li>No class at all</li>
@@ -106,7 +119,10 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 	</div>  
 ``` 
 
+</div>
+<div>
 01. `decimal-leading-zero`
+
 ```html
 	<ol class="decimal-leading-zero">
 		<li>Decimal Leading Zero</li>
@@ -118,7 +134,10 @@ There is also support for list styles on elements other than `<ul>` or `<ol>`, t
 	</div>  
 ```  
 
+</div>
+<div>
 a. `lower-alpha` or `lower-latin`
+
 ```html
 	<ol class="lower-alpha">
 		<li>Lower Alpha</li>
@@ -138,7 +157,10 @@ a. `lower-alpha` or `lower-latin`
 	</div>  
 ``` 
 
+</div>
+<div>
 A. `upper-alpha` or `upper-latin`
+
 ```html
 	<ol class="upper-alpha">
 		<li>Upper Alpha</li>
@@ -158,7 +180,10 @@ A. `upper-alpha` or `upper-latin`
 	</div>   
 ```
 
+</div>
+<div>
 i. `lower-roman`
+
 ```html
 	<ol class="lower-roman">
 		<li>Lower Roman</li>
@@ -170,7 +195,10 @@ i. `lower-roman`
 	</div>   
 ```
 
+</div>
+<div>
 I. `upper-roman`
+
 ```html
 	<ol class="upper-roman">
 		<li>Upper Roman</li>
@@ -182,7 +210,10 @@ I. `upper-roman`
 	</div>   
 ```
 
+</div>
+<div>
 α. `lower-greek`
+
 ```html
 	<ol class="lower-greek">
 		<li>Lower Greek</li>
@@ -194,7 +225,10 @@ I. `upper-roman`
 	</div>   
 ```
 
+</div>
+<div>
 ա. `armenian`
+
 ```html
 	<ol class="armenian">
 		<li>Armenian</li>
@@ -206,7 +240,10 @@ I. `upper-roman`
 	</div>   
 ```
 
+</div>
+<div>
 ა. `georgian`
+
 ```html
 	<ol class="georgian">
 		<li>Georgian</li>
@@ -218,37 +255,52 @@ I. `upper-roman`
 	</div>   
 ```
 
+</div>
+<div>
 א. `hebrew` (`<ul>` and `<ol>` only)
+
 ```html
 	<ol class="hebrew">
 		<li>Hebrew</li>
 	</ol>
 ```
 
+</div>
+<div>
 あ、`hiragana` (`<ul>` and `<ol>` only)
+
 ```html
 	<ol class="hiragana">
 		<li>Hiragana</li>
 	</ol>  
 ```
 
+</div>
+<div>
 い、`hiragana-iroha` (`<ul>` and `<ol>` only)
+
 ```html
 	<ol class="hiragana-iroha">
 		<li>Hiragana Iroha</li>
 	</ol>  
 ```
 
+</div>
+<div>
 ア、 `katakana` (`<ul>` and `<ol>` only)
+
 ```html
 	<ol class="katakana">
 		<li>Katakana</li>
 	</ol>  
 ```
-
+</div>
+<div>
 イ、`katakana-iroha` (`<ul>` and `<ol>` only)
+
 ```html
 	<ol class="katakana-iroha">
 		<li>Katakana Iroha</li>
 	</ol>  
 ```
+</div>
