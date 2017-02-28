@@ -3,6 +3,7 @@ contributors:
     - 'Aleh Hutnikau'
     - 'Alexander Zagovorichev'
     - 'Bertrand Chevrier'
+    - 'Christophe Noel'
     - 'Christophe Noël'
     - 'Dieter Raber'
     - 'Ivan Klimchuk'
@@ -14,6 +15,23 @@ tags:
 -->
 
 # Changelog Front-end
+
+## Sprint 45
+
+This is a little bit in between Front end and Back end - there is now a more convenient way to register Item Themes using `taoQtiItem/model/themes/ItemThemeInstaller.php`. The class has a pretty complete set of examples.
+
+---
+
+`ui/keyNavigation/navigator` creates a navigator based on compatible navigable elements. Currently two types of navigable elements have been implemented : `ui/keyNavigation/navigableDomElement` represents a dom element and `ui/keyNavigation/navigableGroupElement` represents an navigator itself to allow key navigating between group of elements (these key navigation features are currently only used in a test runner plugin to implement complex key navigation rules requested by a customer)
+
+---
+
+`core/areaBroker`offer now the possibility to attach an arbitrary `ui/component` to an area. This is used by the Qti Test provider, which register a custom component to handle the toolbox rendering : `taoQtiTest/runner/ui/toolbox` 
+This has an impact on how plugin register their button in the toolbox area (and only the toolbox area for now). See any plugin for how to register a button (for example `taoQtiTest/runner/plugins/tools/magnifier`), and `taoQtiTest/runner/plugins/tools/itemThemeSwitcher` for how to register a menu and its entries into the toolbox.
+
+The default rendering of the toolbok component can be overloaded by any client plugin, see `taoAct/runner/plugins/layout/toolbox` for an example
+
+---
 
 ## Sprint 44
 
