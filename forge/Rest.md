@@ -11,13 +11,6 @@ tags: {  }
 Rest Services Layer Tutorial
 ============================
 
-
-
-related pages.
---------------
-
-http://forge.taotesting.com/projects/tao/wiki/Rest_Services_Layer
-
 Introduction
 ------------
 
@@ -29,7 +22,7 @@ Authentication mechanisms built in HTTP : Basic and Digest are being used for us
 
 An exception handler treat the different cases and allows for catching any errors that may be triggered while executing your queries. A content negociation is being implemented and currently supports application/json and application/xml data exchange formats.
 
-![](resources/{width:800px}REST.png)
+![](resources/REST.png)
 
 Tao Rest Documentation
 ----------------------
@@ -79,8 +72,128 @@ Let’s assume you want to retrieve the list of test takers … (for other metho
 
 The outcome according to application/json :
 
+```json
 
-    {"success":true,"data":[{"uri":"http:\/\/tao-dev\/taodev.rdf#i1372425843494221","properties":[{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userFirstName","values":[{"valueType":"literal","value":"Patrick"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userLastName","values":[{"valueType":"literal","value":"Plichart"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#login","values":[{"valueType":"literal","value":"ppl"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#password","values":[{"valueType":"literal","value":"5396681eea50ad639ae3c9f8ca17b7d8"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userMail","values":[{"valueType":"literal","value":"patrick@taotesting.com"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userDefLg","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userUILg","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userRoles","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#DeliveryRole"}]},{"predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#generisRessourceComment"},{"predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type","values":[{"valueType":"resource","value":"http:\/\/www.tao.lu\/Ontologies\/TAOSubject.rdf#Subject"}]},{"predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#value"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#comment"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#label","values":[{"valueType":"literal","value":"Patrick Plichart"}]},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#seeAlso"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#isDefinedBy"},{"predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#member"}]}],"version":"2.5-alpha"}
+    {  
+       "success":true,
+       "data":[  
+          {  
+             "uri":"http:\/\/tao-dev\/taodev.rdf#i1372425843494221",
+             "properties":[  
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userFirstName",
+                   "values":[  
+                      {  
+                         "valueType":"literal",
+                         "value":"Patrick"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userLastName",
+                   "values":[  
+                      {  
+                         "valueType":"literal",
+                         "value":"Plichart"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#login",
+                   "values":[  
+                      {  
+                         "valueType":"literal",
+                         "value":"ppl"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#password",
+                   "values":[  
+                      {  
+                         "valueType":"literal",
+                         "value":"5396681eea50ad639ae3c9f8ca17b7d8"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userMail",
+                   "values":[  
+                      {  
+                         "valueType":"literal",
+                         "value":"patrick@taotesting.com"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userDefLg",
+                   "values":[  
+                      {  
+                         "valueType":"resource",
+                         "value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userUILg",
+                   "values":[  
+                      {  
+                         "valueType":"resource",
+                         "value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#Langen-US"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#userRoles",
+                   "values":[  
+                      {  
+                         "valueType":"resource",
+                         "value":"http:\/\/www.tao.lu\/Ontologies\/TAO.rdf#DeliveryRole"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.tao.lu\/Ontologies\/generis.rdf#generisRessourceComment"
+                },
+                {  
+                   "predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type",
+                   "values":[  
+                      {  
+                         "valueType":"resource",
+                         "value":"http:\/\/www.tao.lu\/Ontologies\/TAOSubject.rdf#Subject"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#value"
+                },
+                {  
+                   "predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#comment"
+                },
+                {  
+                   "predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#label",
+                   "values":[  
+                      {  
+                         "valueType":"literal",
+                         "value":"Patrick Plichart"
+                      }
+                   ]
+                },
+                {  
+                   "predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#seeAlso"
+                },
+                {  
+                   "predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#isDefinedBy"
+                },
+                {  
+                   "predicateUri":"http:\/\/www.w3.org\/2000\/01\/rdf-schema#member"
+                }
+             ]
+          }
+       ],
+       "version":"2.5-alpha"
+    }
+```
 
 The outcome according to application/xml :
 
@@ -676,12 +789,5 @@ How to submit files for creating a new item ?
 For transmitting files, you need to use the File payload part of your HTTP request.
 
 ![](resources/filePayload.png)
-
-Specifying the language to be used for the returned data
---------------------------------------------------------
-
-Accept_language …
-
-Patrick
 
 
