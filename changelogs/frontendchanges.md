@@ -3,7 +3,6 @@ contributors:
     - 'Aleh Hutnikau'
     - 'Alexander Zagovorichev'
     - 'Bertrand Chevrier'
-    - 'Christophe Noel'
     - 'Christophe Noël'
     - 'Dieter Raber'
     - 'Ivan Klimchuk'
@@ -18,17 +17,14 @@ tags:
 
 ## Sprint 46
 
-Now we are able to show loading bar without blocking the GUI:
+We are now able to show the loading bar without blocking the GUI:
 <http://recordit.co/aPP8LcUxUv>
 
-To do that pass `true` to `start()` method:
+To do this pass `false` to the `start()` method:
 
 ```
-loadingBar.start(false);
+    loadingBar.start(false);
 ```
-
-Sorry, pass `false`. `true` is default value (which means that GUI will be blocked).
-
 ---
 
 `ui/dialog` has now flat buttons and benefits from key navigation functionality in the new test runner
@@ -52,9 +48,9 @@ Sorry, pass `false`. `true` is default value (which means that GUI will be block
 
 `core/proxy/ajax`: an AJAX implementation of the CRUD proxy API.
 
-`tao_actions_SinglePageModule` (PHP): an abstract controller that is intended to be a basis for single page apps. It provide mehanism to build pages.
+`tao_actions_SinglePageModule` (PHP): an abstract controller that is intended to be a basis for single page apps. It provides a mechanism to build pages.
 
-`tao_actions_Breadcrumbs` (PHP): a controller that is intended to serve breadcrumbs for a particular route, based on services (you must implement services that will provide the list of breadcrumbs for each controller/actions). Those services should implement the `oat\tao\model\mvc\Breadcrumbs` interface.
+`tao_actions_Breadcrumbs` (PHP): a controller that is intended to serve breadcrumbs for a particular route, based on services (you must implement services that will provide the list of breadcrumbs for each controller/actions). These services should implement the `oat\tao\model\mvc\Breadcrumbs` interface.
 
 ---
 
