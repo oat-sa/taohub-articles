@@ -3,6 +3,7 @@ contributors:
     - 'Aleh Hutnikau'
     - 'Alexander Zagovorichev'
     - 'Bertrand Chevrier'
+    - 'Christophe Noel'
     - 'Christophe Noël'
     - 'Dieter Raber'
     - 'Ivan Klimchuk'
@@ -14,6 +15,48 @@ tags:
 -->
 
 # Changelog Front-end
+
+## Sprint 46
+
+Now we are able to show loading bar without blocking the GUI:
+<http://recordit.co/aPP8LcUxUv>
+
+To do that pass `true` to `start()` method:
+
+```
+loadingBar.start(false);
+```
+
+Sorry, pass `false`. `true` is default value (which means that GUI will be blocked).
+
+---
+
+`ui/dialog` has now flat buttons and benefits from key navigation functionality in the new test runner
+
+`keyNavigation/navigator` now integrates `util/shortcut/registry` to manage the key press mapping. It no longer autofocus but exposes now a focus() method.
+
+---
+
+`ui/stacker`can be used to manage z-index of a group of DOM elements
+`ui/component/stackable` binds the stacker to a component
+
+---
+
+`core/middleware`: manage a list of middlewares to apply on a request response. It acts mainly as the `connect` module from the Express framework, but with promises and on AJAX requests basis.
+
+`controller/app`: a single page application controller. It is an entry point controller that works with the `historyRouter`. It offer API to catch all relevant links in the page that need to be routed through the `historyRouter`. A PHP controller has also been implemented.
+
+`core/historyRouter`: some improvements has been added, especially to provide actions: `forward`, `replace`, `redirect`. The component also works now with promises.
+
+`core/proxy`: a CRUD proxy API, based on the same behavior as the new TR proxy. Some base actions are provided through the API, like `create`, `read`, `write`, `remove`, other actions are possible through a dedicated API (`action`). Security token may also be used. Each proxy can be extended with middlewares.
+
+`core/proxy/ajax`: an AJAX implementation of the CRUD proxy API.
+
+`tao_actions_SinglePageModule` (PHP): an abstract controller that is intended to be a basis for single page apps. It provide mehanism to build pages.
+
+`tao_actions_Breadcrumbs` (PHP): a controller that is intended to serve breadcrumbs for a particular route, based on services (you must implement services that will provide the list of breadcrumbs for each controller/actions). Those services should implement the `oat\tao\model\mvc\Breadcrumbs` interface.
+
+---
 
 ## Sprint 45
 
