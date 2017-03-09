@@ -419,7 +419,7 @@ You probably tried to create a test taker with an already existing login
 
 -   400 Bad Request\
     A mandatory parameter is missing
-    ![](resources/{width:300px}nologin.png)
+    ![](resources/nologin.png)
 
 Creating a test taker with custom properties / type or language
 ---------------------------------------------------------------
