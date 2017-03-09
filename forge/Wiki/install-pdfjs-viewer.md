@@ -11,14 +11,14 @@ tags:
 Install PDFjs viewer
 ====================
 
-![](http://forge.taotesting.com/attachments/download/4125/pdfjs.svg):https://mozilla.github.io/pdf.js/
+![](http://forge.taotesting.com/pdfjs.svg) https://mozilla.github.io/pdf.js/
 
 Install PDF.js library, using the script
 ----------------------------------------
 
 For users with a Unix machine, you can use the following bash script to download and install PDF.js.<br/>
 
-TAO 3.0: [PDFJS_Install_TAO_3x.sh](../resources//attachments/download/4123/PDFJS_Install_TAO_3x.sh)
+TAO 3.0: [PDFJS_Install_TAO_3x.sh](../resources/PDFJS_Install_TAO_3x.sh)
 
 Be sure to have `wget` (or `curl` with 3.0 version), and `unzip` installed and available in your `PATH`. Then just launch it (as a user, not root) from the root of your TAO distribution.
 

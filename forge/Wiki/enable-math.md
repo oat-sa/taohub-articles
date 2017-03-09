@@ -21,13 +21,11 @@ Enable math expression in items
 Install MathJax library, using the script
 -----------------------------------------
 
-For users with a Unix machine, you can use the following bash scripts **<span class="installation TAO your of root the in"></span>** to download and install MathJax.<br/>
+For users with a Unix machine, you can use the following bash scripts to download and install MathJax.
 
-TAO 2.5: [mathjaxdl_tao25.sh](../resources//attachments/download/3154/mathjaxdl_tao25.sh)<br/>
-
-TAO 2.6: [mathjaxdl_tao26.sh](../resources//attachments/download/3215/mathjaxdl_tao26.sh)<br/>
-
-TAO 3.0: [MathJax_Install_TAO_3x.sh](../resources//attachments/download/3964/MathJax_Install_TAO_3x.sh)
+- TAO 2.5: [mathjaxdl_tao25.sh](../resources/mathjaxdl_tao25.sh)
+- TAO 2.6: [mathjaxdl_tao26.sh](../resources/mathjaxdl_tao26.sh)
+- TAO 3.0: [MathJax_Install_TAO_3x.sh](../resources//attachments/download/3964/MathJax_Install_TAO_3x.sh)
 
 Be sure to have `wget` (or `curl` with 3.0 version), `tar` and `gzip` installed and available in your `PATH`. Then just launch it (as a user, not root) from the root of your TAO distribution.
 
@@ -45,15 +43,15 @@ MathJax is a huge lib which weighs above 20MB unzipped. It is recommended to shr
 
 Frist delete the following folders:
 
-    mathjax/docs/
-    mathjax/test/
-    mathjax/unpacked/
-    mathjax/fonts/HTML-CSS/TeX/otf/
-    mathjax/fonts/HTML-CSS/TeX/svg/
+- mathjax/docs/
+- mathjax/test/
+- mathjax/unpacked/
+- mathjax/fonts/HTML-CSS/TeX/otf/
+- mathjax/fonts/HTML-CSS/TeX/svg/
 
 Then in the mathjax/config/ folder, delete all files but TeX-AMS-MML_HTMLorMML-full.js, which is the only config file used in TAO.
 
-An already shrinked Mathjax archive is available [here](http://forge.taotesting.com/attachments/download/2578/mathjax-shrinked.zip).
+An already shrinked Mathjax archive is available [here](../resources/mathjax-shrinked.zip).
 
 Keep MathJax sources untouched
 ------------------------------

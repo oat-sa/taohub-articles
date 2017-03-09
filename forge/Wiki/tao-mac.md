@@ -27,11 +27,7 @@ Let’s:
 Install the web server (MAMP installation)
 ------------------------------------------
 
-Go on the MAMP home page and download the free MAMP version,<br/>
-
-You may notice that MAMP comes bundled with MAMP PRO,<br/>
-
- however we don’t really need this and you may ignore the MAMP PRO and continue with MAMP.
+Go on the MAMP home page and download the free MAMP version. You may notice that MAMP comes bundled with MAMP PRO, however we don’t really need this and you may ignore the MAMP PRO and continue with MAMP.
 
 https://www.mamp.info/en/downloads/
 
@@ -42,17 +38,16 @@ https://www.mamp.info/en/downloads/
 
 ![](../resources/mamp.png)
 
-    # Proceed with the Mamp installation using the default options unless you know what you are doing
-    (So click on "Continue", until you reach the end)
-    # Agree to the license terms
-    # When you are prompted for how to install the software, you may have to confirm by clicking on the "install for all users"
-    # You may also be prompted for a password: this is the password of an administrator account of your Mac
+- Proceed with the Mamp installation using the default options unless you know what you are doing (click on "Continue", until you reach the end)
+- Agree to the license terms
+- When you are prompted for how to install the software, you may have to confirm by clicking on the "install for all users"
+- You may also be prompted for a password: this is the password of an administrator account of your Mac
 
 Congratulations! You have now your MAMP successfully installed, you may now launch it.
 
-    # Double click the MAMP icon from your Applications directory (located at /Applications/MAMP/or from your dock bar)
-    # You may be suggsted by MAMP vendor to switch to a pro version, for the purpose of this tutorial, we recommend you to stick to the normal MAMP version
-    # Click the "Start servers", the boxes near "Apache server" and "MySQL server" in the top right corner should switch to green ones
+- Double click the MAMP icon from your Applications directory (located at /Applications/MAMP/or from your dock bar)
+- You may be suggsted by MAMP vendor to switch to a pro version, for the purpose of this tutorial, we recommend you to stick to the normal MAMP version
+- Click the "Start servers", the boxes near "Apache server" and "MySQL server" in the top right corner should switch to green ones
 
 ![](../resources/StartingMamp.png)
 
@@ -61,12 +56,12 @@ Starting the MAMP installation…
 Install TAO into your MAMP
 --------------------------
 
-You need now to download all tao files and copy it into your MAMP.<br/>
+You need now to download all tao files and copy it into your MAMP.
 
 Please download one of these build packages:
 
--   http://releases.taotesting.com/TAO_3.0.0_build.zip
--   http://releases.taotesting.com/TAO_3.1.0-RC3_build.zip
+- http://releases.taotesting.com/TAO_3.0.0_build.zip
+- http://releases.taotesting.com/TAO_3.1.0-RC3_build.zip
 
 1.  `Extract it and open the extracted folder (by default the directory where it is extracted
     is along your zip file into the Downloads directory)`
@@ -98,25 +93,25 @@ Come back to your web browser that popped up when you started your MAMP server (
 
 ![](../resources/install1.png)
 
-![](../resources/install2.png)<br/>
+![](../resources/install2.png)
 
 Define the hostname, commonly it is http://localhost:8888 but it could be http://localhost depending on the settings set up in your MAMP. If you are not sure check the adress used in your web browser as a reference.
 
 We recommend you to use the pre-load data sample option, this way you will have some basic item examples to start with.
 
-![](../resources/install3.png)<br/>
+![](../resources/install3.png)
 
 Please note that the default login and password to access mysql from MAMP is root/root
 
-![](../resources/install4.png)<br/>
+![](../resources/install4.png)
 
 Choose an admin account for your tao installation, this is the login and password you will have to use on your fresh tao installation.
 
-![](../resources/install5.png)<br/>
+![](../resources/install5.png)
 
 Read and accept to license agreements.
 
-![](../resources/Screenshot%202016-05-27%2010.36.24.png)<br/>
+![](../resources/Screenshot%202016-05-27%2010.36.24.png)
 
 Congratulations!
 
@@ -140,7 +135,7 @@ This way you may launch tao by simply clicking the MAMP icon from your dock bar.
 
 -   Mamp does not start correctly, the Apache Server status does not switch on
 
-You may have already a server running on your local system and conflicting with MAMP. You will have to go into the preferences/ports and choose an alternate port to run your MAMP server/
+You may have already a server running on your local system and conflicting with MAMP. You will have to go into the preferences/ports and choose an alternate port to run your MAMP server
 
 -   I have MAMP running correctly but when I go on http://localhost/tao/install I get a 404 error.
 

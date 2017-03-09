@@ -23,18 +23,18 @@ The TAO platform rely on two different languages configuration that can be confi
 -   The Interface Language configuration handle all messages that came from the platform features.
 -   The Data Language concerns business related data and meta-data.
 
-Here is an example both UI Language and Data Language are in English.<br/>
+Here is an example both UI Language and Data Language are in English.
 
-![](../resources//attachments/download/2593/S%C3%A9lection_053.png)
+![](../resources/2593/S%C3%A9lection_053.png)
 
-Here UI Language have been switched to French\
-![](../resources//attachments/download/2592/S%C3%A9lection_054.png)
+Here UI Language have been switched to French
+![](../resources/S%C3%A9lection_054.png)
 
-Here both UI and Data Language are in French\
-![](../resources//attachments/download/2600/S%C3%A9lection_055.png)
+Here both UI and Data Language are in French
+![](../resources/S%C3%A9lection_055.png)
 
-Here only Data Language is in French\
-![](../resources//attachments/download/2599/S%C3%A9lection_051.png)
+Here only Data Language is in French
+![](../resources/S%C3%A9lection_051.png)
 
 ### User Interface
 
@@ -52,19 +52,12 @@ To translate the string `"Welcome to TAO"` to French (for example), you have to 
 
 This is it!
 
-\> **Be careful**:<br/>
+**Be careful**:
 
-\><br/>
-* If you let a *msgstr* empty, the English identifier will be displayed.<br/>
-
-\><br/>
-* Never change the identifier, neither a space, a dot or a letter. If it’s the case, the translated string will not be displayed.<br/>
-
-\><br/>
-* It’s possible that some strings are not in the software anymore. The translations files are cleaned only once by release.<br/>
-
-\><br/>
-* Save your files using UTF-8 encoding.
+- If you let a *msgstr* empty, the English identifier will be displayed.
+- Never change the identifier, neither a space, a dot or a letter. If it’s the case, the translated string will not be displayed.
+- It’s possible that some strings are not in the software anymore. The translations files are cleaned only once by release.
+- Save your files using UTF-8 encoding.
 
 ### Data
 
