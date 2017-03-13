@@ -97,19 +97,19 @@ Adding the class `.small` will create buttons that are less high. This has becom
 ```
 
 <div>
-<button class="btn-error small" type="button">Icon left</button>
+<button class="btn-error small" type="button"><span class="icon-edit"></span>Icon left</button>
 </div>
 
 ```html
-	<button class="btn-error small" type="button">Icon left</button>
+	<button class="btn-error small" type="button"><span class="icon-edit"></span>Icon left</button>
 ```
 
 <div>
-<p class="btn-error small btn-disabled">Icon right</p>
+<p class="btn-error small btn-disabled">Icon right<span class="icon-edit r"></span></p>
 </div>
 
 ```html
-	<p class="btn-error small btn-disabled">Icon right</p>
+	<p class="btn-error small btn-disabled">Icon right<span class="icon-edit r"></span></p>
 ```
 
 ## Buttons with icons on the left side
