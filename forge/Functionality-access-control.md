@@ -11,7 +11,7 @@ tags: {  }
 Functionality access control
 ============================
 
-This pages describes the implementation of the funcACL in TAO_2_2|TAO 2.2. Changes can be found in FuncACL 2.3.
+>This pages describes the implementation of the funcACL in TAO_2_2|TAO 2.2. Changes can be found in FuncACL 2.3.
 
 
 
