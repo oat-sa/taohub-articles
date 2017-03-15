@@ -173,7 +173,7 @@ sudo service apache2 restart
 
 ### 2.2. PHP Setup
 
-The PHP Setup is quick and simple. Open the PHP configuration file located at */etc/php/7.0/cli/php.ini or something like that if you have a newer version
+The PHP Setup is quick and simple. Open the PHP configuration file located at */etc/php/7.0/cli/php.ini* or *php/7.x* if you have a newer version of PHP.
 
 ```shell
 sudo nano /etc/php/7.0/cli/php.ini
