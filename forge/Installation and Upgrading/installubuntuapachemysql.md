@@ -1,21 +1,18 @@
 <!--
 parent: 'Installation and Upgrading'
 created_at: '2012-09-27 14:48:30'
-updated_at: '2016-09-19 14:12:48'
+updated_at: '2017-03-15 14:45:48'
 authors:
-    - 'Gyula Szucs'
+    - 'Tom Verhoof'
 tags:
     - 'Installation and Upgrading'
 -->
 
-TAO on Debian, Ubuntu with Apache2 & mySQL
-==========================================
-
-
+# TAO on Debian, Ubuntu with Apache2 & mySQL
 
 This installation guide focuses on installing the TAO platform on Ubuntu using Apache2, PHP & mySQL.
 
-1. Apache2, PHP & mySQL Installation
+## 1. Apache2, PHP & mySQL Installation
 ------------------------------------
 
 ### 1.1. Apache2.4 Installation
@@ -60,7 +57,7 @@ sudo apt-get install mysql-server
 
 MySQL server will install and you’re prompt to put a *root* password.
 
-2. Apache2, PHP & mySQL Setup
+## 2. Apache2, PHP & mySQL Setup
 -----------------------------
 
 ### 2.1. Apache2 Setup
@@ -87,7 +84,7 @@ ServerName localhost
 <VirtualHost 127.0.0.1:80>
 	ServerAdmin webmaster@taoplatform
 	ServerName taoplatform
-	DocumentRoot /var/www/taoplatform    
+	DocumentRoot /var/www/taoplatform    
 
 	<Directory /var/www/taoplatform>
 		Options Indexes FollowSymLinks MultiViews
@@ -207,7 +204,7 @@ EXECUTE, SELECT, SHOW DATABASES, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, D
 
 If you need more information about database privileges and databases, please visit the DatabaseUserPrivileges|page dedicated to this topic.
 
-3. TAO Platform Deployment
+## 3. TAO Platform Deployment
 --------------------------
 
 ### 3.1. Download the Latest Version of TAO
