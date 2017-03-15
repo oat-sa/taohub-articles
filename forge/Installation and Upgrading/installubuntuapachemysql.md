@@ -8,10 +8,7 @@ tags:
     - 'Installation and Upgrading'
 -->
 
-TAO on Debian, Ubuntu with Apache2 & mySQL
-==========================================
-
-
+# TAO on Debian, Ubuntu with Apache2 & mySQL
 
 This installation guide focuses on installing the TAO platform on Ubuntu using Apache2, PHP & mySQL.
 
