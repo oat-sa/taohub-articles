@@ -1,94 +1,63 @@
 <!--
 parent: 'Installation and Upgrading'
 created_at: '2012-09-27 14:48:30'
-updated_at: '2016-09-19 14:12:48'
+updated_at: '2017-03-15 14:45:48'
 authors:
-    - 'Gyula Szucs'
+    - 'Tom Verhoof'
 tags:
     - 'Installation and Upgrading'
 -->
 
-TAO on Debian, Ubuntu with Apache2 & mySQL
-==========================================
-
-
+# TAO on Debian, Ubuntu with Apache2 & mySQL
 
 This installation guide focuses on installing the TAO platform on Ubuntu using Apache2, PHP & mySQL.
 
-1. Apache2, PHP & mySQL Installation
+## 1. Apache2, PHP & mySQL Installation
 ------------------------------------
 
 ### 1.1. Apache2.4 Installation
 
 The first step of the installation of our environment is to install the Apache2 web server (recommended version 2.4). To do so, open up a terminal and type the following command lines. The *apt-get update* command aims at updating your system. You can skip this command if you think your system is up to date.
 
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get install apache2
+```shell
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install apache2
+```
 
 ### 1.2. PHP Installation
 
-The supported PHP versions are 5.4, 5.5 and 5.6. Support of PHP7 is on its way and will be released soon.
+The supported PHP version is 7.
 
 To install the latest PHP and modules needed by the TAO platform to run, open up a terminal and enter the following commands.
 
-    sudo apt-get install php5
-    sudo apt-get install php5-gd php5-mysql php5-tidy php5-curl php5-mbstring php5-zip php5-xml php-xml-parser
+```shell
+sudo apt-get install php
+sudo apt-get install php-gd php-mysql php-tidy php-curl php-mbstring php-zip php-xml php-xml-parser
+```
 
-\> If you want to install a lower version of PHP and you already have a higher version installed on your system, then you can do it on two ways. The first is removing the higher version, the second is installing the other version straightaway so you will have the two version installed together. If you want the last option, skip the following block and start with adding a new PPA.
+You'll also need to insert this commands to enable PHP with Apache.
 
-\> To remove the old php packages installed, use the following commands:<br/>
-
-\> <pre><br/>
-
- <br/>
-# replace PACKAGE with the proper names of the PHP packages installed, like “php5-cli php5-curl” etc.<br/>
-
- sudo apt-get remove —purge PACKAGE\
- sudo apt-get update
-
-</pre>
-\> Use the following set of command to add PPA and install **PHP 5.5 or 5.6**<br/>
-
-\><pre><br/>
-
-sudo add-apt-repository ppa:ondrej/php\
-sudo apt-get update\
-sudo apt-get install -y php5.5 php5.5-gd php5.5-mysql php5.5-tidy php5.5-curl php5.5-mbstring php5.5-zip php5.5-xml php-xml-parser <br/>
-#for PHP 5.5\
-sudo apt-get install -y php5.6 php5.6-gd php5.6-mysql php5.6-tidy php5.6-curl php5.6-mbstring php5.6-zip php5.6-xml php-xml-parser <br/>
-#for PHP 5.6
-
-</pre>
-\> If you need **PHP 5.4**, use the these commands:<br/>
-
-\><pre><br/>
-
-sudo add-apt-repository ppa:ondrej/php5-oldstable\
-sudo apt-get update\
-sudo apt-get upgrade\
-sudo apt-get install -y php5 php5-gd php5-mysql php5-tidy php5-curl php5-mbstring php5-zip php5-xml php-xml-parser
-
-</pre>
-\> If you’ve selected the second option, you should have two php version installed on your system by now. To switch between the versions, use the following commands:<br/>
-
-\> <br/>
-* Apache <pre>sudo a2dismod php7.0 ; sudo a2enmod php5.6 ; sudo service apache2 restart</pre><br/>
-
-\> <br/>
-* CLI <pre>sudo ln -sfn /usr/bin/php5.6 /etc/alternatives/php</pre>
+```shell
+sudo apt-get install libapache2-mod-php
+sudo a2dismod worker
+sudo a2enmod php7.0
+sudo /etc/init.d/apache2 restart
+```
 
 PHP and its modules required by TAO are now installed on the computer.
 
-### 1.3. mySQL Installation
+### 1.3. MySQL Installation
 
-The last component to install is mySQL server.
+The last component to install is MySQL server.
 
-    sudo apt-get install mysql-server
+```shell
+sudo apt-get install mysql-server
+```
 
-mySQL serveer will install and you’re prompt to put a *root* password.
+MySQL server will install and you’re prompt to put a *root* password.
 
-2. Apache2, PHP & mySQL Setup
+## 2. Apache2, PHP & mySQL Setup
 -----------------------------
 
 ### 2.1. Apache2 Setup
@@ -101,24 +70,29 @@ We just have to check if Apache2 is correctly running. Simply open up your web b
 
 The TAO platform requires to be run with an *Apache Virtual Host*. We will create such a virtual host in the Apache2 configuration file. Edit the file located at */etc/apache2/sites-available/taoplatform.conf* with your favourite editor. We will use *nano*.
 
-    sudo nano /etc/apache2/sites-available/taoplatform.conf
+```shell
+sudo nano /etc/apache2/sites-available/taoplatform.conf
+```
+
 
 Now, we create a virtual host named *taoplatform*. Its *DocumentRoot* is */var/www/taoplatform*. This is where the TAO source code will be actually deployed. We will create this directory later at deployment-time. Feel free to change its name according to your needs. Insert the following lines at the end of the file we are currently editing.
 
-    NameVirtualHost 127.0.0.1:80
-    ServerName localhost
+```md
+NameVirtualHost 127.0.0.1:80
+ServerName localhost
 
+<VirtualHost 127.0.0.1:80>
+	ServerAdmin webmaster@taoplatform
+	ServerName taoplatform
+	DocumentRoot /var/www/taoplatform    
 
-        ServerAdmin webmaster@taoplatform
-        ServerName taoplatform
-
-        DocumentRoot /var/www/taoplatform
-
-
-            Options Indexes FollowSymLinks MultiViews
-            AllowOverride All
-            Require all granted
-
+	<Directory /var/www/taoplatform>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride All
+		Require all granted
+	</Directory>
+</VirtualHost>
+```
 
 You can save the file now. Some explanations about this Virtual Host configuration:
 
@@ -129,8 +103,10 @@ You can save the file now. Some explanations about this Virtual Host configurati
 
 Then you need to activate the site and reload the apache2 configuration
 
-    sudo a2ensite taoplatform
-    sudo service apache2 reload
+```shell
+sudo a2ensite taoplatform
+sudo service apache2 reload
+```
 
 More information about Apache directives and virtual hosting:
 
@@ -141,62 +117,84 @@ More information about Apache directives and virtual hosting:
 
 The TAO Platform requires the Apache2 module *rewrite_module* to be installed to run perfectly. The Rewrite Module of Apache is most of the time enabled at installation time in major Linux distributions. To check if *rewrite_module* is present and running, type the following command in your terminal.
 
-    sudo apachectl -t -D DUMP_MODULES
+```shell
+sudo apachectl -t -D DUMP_MODULES
+```
 
 You should see the list of running modules and the *rewrite_module (shared)* entry. If you find it, you can skip this and go to the next section of this guide. If you do not see it, you will have to install it.
 
 To install the Apache2 module *rewrite_module* just type following command line
 
-    sudo a2enmod rewrite
+```shell
+sudo a2enmod rewrite
+```
 
 and restart your web server to make the modification effective.
 
-    sudo service apache2 restart
+```shell
+sudo service apache2 restart
+```
 
 #### 2.1.4. Folders, Rights and Host Resolution
 
 We now have to create the *taoplatform* folder in /var/www. To do so, type the following commands.
 
-    cd /var/www
-    sudo mkdir taoplatform
+```shell
+cd /var/www
+sudo mkdir taoplatform
+```
 
 By default, Apache2 runs as the *www-data* user that belongs to the *www-data* group. We then bind the *taoplatform* directory to the *www-data* group.
 
-    sudo chgrp www-data taoplatform
+```shell
+sudo chgrp www-data taoplatform
+```
 
 We will deal with read-write-execute permissions later on. Finally, we add an entry in the *hosts* file of the Operating System to make Apache2 able to resolve *taoplatform*.
 
-    sudo nano /etc/hosts
+```shell
+sudo nano /etc/hosts
+```
 
 Append the following line in the file:
 
-    127.0.0.1   taoplatform
+```shell
+127.0.0.1   taoplatform
+```
 
 Finally, we restart Apache to take this new configuration into account.
 
-    sudo service apache2 restart
+```shell
+sudo service apache2 restart
+```
 
 ### 2.2. PHP Setup
 
-The PHP Setup is quick and simple. Open the PHP configuration file located at */etc/php5/apache2/php.ini*.
+The PHP Setup is quick and simple. Open the PHP configuration file located at */etc/php/7.0/cli/php.ini* or *php/7.x* if you have a newer version of PHP.
 
-    sudo nano /etc/php5/apache2/php.ini
+```shell
+sudo nano /etc/php/7.0/cli/php.ini
+```
 
 Make sure that the following configuration options are correct.
 
-    magic_quotes_gpc = Off (not needed in PHP 5.4)
-    short_open_tag = On
-    register_globals = Off (not needed in PHP 5.4)
+```shell
+short_open_tag = On
+```
 
 In most versions of PHP, they are correctly set. However, if you have to make any change, save the file and restart your Apache2 web server to make this new configuration taken into account.
 
-    sudo service apache2 restart
+```shell
+sudo service apache2 restart
+```
 
 ### 2.3. mySQL Setup
 
 The following setup operation is optional. If you want to make a secure installation of mySQL by changing its *root* password, enter the following command in your terminal.
 
-    mysql_secure_installation
+```shell
+mysql_secure_installation
+```
 
 The *mysql_secure_installation* program will simply ask you for a new *root* password.
 
@@ -206,46 +204,78 @@ EXECUTE, SELECT, SHOW DATABASES, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, D
 
 If you need more information about database privileges and databases, please visit the DatabaseUserPrivileges|page dedicated to this topic.
 
-3. TAO Platform Deployment
+## 3. TAO Platform Deployment
 --------------------------
 
 ### 3.1. Download the Latest Version of TAO
 
-We will now download the latest version of the TAO source code and deploy it on the web server. Go to the official TAO download page and download the last [Stable Release](http://tao-assessment.com/resources/download-tao).
+We will now download the latest version of the TAO source code and deploy it on the web server. Go to the official TAO download page and download the last [Stable Release](https://www.taotesting.com/get-tao/official-tao-packages/).
+Unzip that folder under the /var/www/taoplatform directory. Make sure the files are directly accessible, not through a subdirectory.
 
-    wget http://releases.taotesting.com/TAO_3.1.0-RC3_build.zip
-
-Suppose we saved the TAO source code zip archive in */home/myuser/TAO_3.1.0-RC3_build.zip*. Run the following command lines to extract the content of the archive in the dedicated directory */var/www/taoplatform* we created previously in this guide.
-
-    cd /home/myuser
-    sudo unzip TAO_3.1.0-RC3_build.zip -d /var/www/taoplatform
+```shell
+cd /var/www
+sudo rmdir taoplatform
+sudo wget http://releases.taotesting.com/TAO_3.1.0-RC7_build.zip
+sudo unzip TAO_3.1.0-RC7_build.zip
+sudo mv TAO_3.1.0-RC7_build taoplatform/
+sudo rm TAO_3.1.0-RC7_build.zip 
+```
 
 If you list the content of */var/www/taoplatform*, you should see the following file & directory structure:
 
--   */var/www/taoplatform/crossdomain.xml*
--   */var/www/taoplatform/favicon.ico*
--   */var/www/taoplatform/fdl-1.3.txt*
--   */var/www/taoplatform/filemanager*
--   */var/www/taoplatform/generis*
--   */var/www/taoplatform/gpl-2.0.txt*
--   */var/www/taoplatform/index.php*
--   */var/www/taoplatform/tao*
--   */var/www/taoplatform/taoDelivery*
--   */var/www/taoplatform/taoGroups*
--   */var/www/taoplatform/taoItems*
--   */var/www/taoplatform/taoResults*
--   */var/www/taoplatform/taoSubjects*
--   */var/www/taoplatform/taoTests*
--   */var/www/taoplatform/wfEngine*
+-    */var/www/taoplatform/composer.json*
+-    */var/www/taoplatform/composer.lock*
+-    */var/www/taoplatform/config*
+-    */var/www/taoplatform/data*
+-    */var/www/taoplatform/favicon.ico*
+-    */var/www/taoplatform/fdl-1.3.txt*
+-    */var/www/taoplatform/funcAcl*
+-    */var/www/taoplatform/generis*
+-    */var/www/taoplatform/gpl-2.0.txt*
+-    */var/www/taoplatform/.htaccess*
+-    */var/www/taoplatform/index.php*
+-    */var/www/taoplatform/LICENSE*
+-    */var/www/taoplatform/tiDeliveryProvider*
+-    */var/www/taoplatform/pciSamples*
+-    */var/www/taoplatform/phpunit.xml*
+-    */var/www/taoplatform/qtiItemPci*
+-    */var/www/taoplatform/qtiItemPic*
+-    */var/www/taoplatform/README.md*
+-    */var/www/taoplatform/tao*
+-    */var/www/taoplatform/taoBackOffice*
+-    */var/www/taoplatform/taoCe*
+-    */var/www/taoplatform/taoDacSimple*
+-    */var/www/taoplatform/taoDelivery*
+-    */var/www/taoplatform/taoDeliveryRdf*
+-    */var/www/taoplatform/taoGroups*
+-    */var/www/taoplatform/taoItems*
+-    */var/www/taoplatform/taoLti*
+-    */var/www/taoplatform/taoLtiBasicOutcome*
+-    */var/www/taoplatform/taoMediaManager*
+-    */var/www/taoplatform/taoOpenWebItem*
+-    */var/www/taoplatform/taoOutcomeRds*
+-    */var/www/taoplatform/taoOutcomeUi*
+-    */var/www/taoplatform/taoQtiItem*
+-    */var/www/taoplatform/taoQtiTest*
+-    */var/www/taoplatform/taoResultServer*
+-    */var/www/taoplatform/taoRevision*
+-    */var/www/taoplatform/taoTestLinear*
+-    */var/www/taoplatform/taoTests*
+-    */var/www/taoplatform/taoTestTaker*
+-    */var/www/taoplatform/taoWorkspace*
+-    */var/www/taoplatform/tests*
+-    */var/www/taoplatform/vendor*
 
 ### 3.2. File System Permissions
 
 We now have to make sure that file system permission in the */var/www/taoplatform* directory makes Apache able to read, write, and execute correctly files belonging to the TAO platform. All files must be accessible by the *www-data* user & group.
 
-    cd /var/www
-    sudo chown -R www-data taoplatform
-    sudo chgrp -R www-data taoplatform
-    sudo chmod -R 775 taoplatform
+```shell
+cd /var/www
+sudo chown -R www-data taoplatform
+sudo chgrp -R www-data taoplatform
+sudo chmod -R 775 taoplatform
+```
 
 ### 3.3. TAO Installation Wizard
 
