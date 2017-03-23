@@ -1,4 +1,11 @@
-# How to deliver a test using LTI
+<!--
+ authors:		
+  - 'Joel Bout'		
+ tags:		
+  - Tutorials
+  - LTI
+--->
+ # How to deliver a test using LTI
 
 ## Preparation
 
