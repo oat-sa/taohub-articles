@@ -29,7 +29,7 @@ to Install the required extensions in Tao:
 
 ![LTI Consumer configuration in TAO](../resources/tao_lti_consumer.png)
 
-###in Moodle as administrator
+### in Moodle as administrator
 - Go to *Site administration* and open *Plugins* (under advanced features) -> *Activity modules* -> *Manage activities*
 - Open *Settings* of the *External Tools* and click on *Add external tool configuration*
 - Name your configuration and enter the same Consumer Key and Shared Secret that you used in TAO
