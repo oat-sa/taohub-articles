@@ -4,7 +4,7 @@
 
 - Install TAO 2.4+
 - Install a LTI Consumer (This tutorial uses Moodle 2.4 https://moodle.org/)
-- in TAO: Create a delivery ([[Steps_to_create_an_assessment]])
+- in TAO: Create a delivery (https://userguide.taotesting.com/3.1/deliveries/create-a-new-delivery.html)
 - in Moodle: Create a course (http://docs.moodle.org/24/en/Create_your_own_course)
 
 ## LTI Installation
