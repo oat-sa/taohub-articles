@@ -25,7 +25,7 @@ For users with a Unix machine, you can use the following bash scripts to downloa
 
 - TAO 2.5: [mathjaxdl_tao25.sh](../resources/mathjaxdl_tao25.sh)
 - TAO 2.6: [mathjaxdl_tao26.sh](../resources/mathjaxdl_tao26.sh)
-- TAO 3.0: [MathJax_Install_TAO_3x.sh](../resources//attachments/download/3964/MathJax_Install_TAO_3x.sh)
+- TAO 3.0: [MathJax_Install_TAO_3x.sh](../resources/MathJax_Install_TAO_3x.sh)
 
 Be sure to have `wget` (or `curl` with 3.0 version), `tar` and `gzip` installed and available in your `PATH`. Then just launch it (as a user, not root) from the root of your TAO distribution.
 
