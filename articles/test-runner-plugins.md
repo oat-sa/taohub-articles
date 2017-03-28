@@ -1,9 +1,6 @@
 <!--
 parent: 'Developer Guide'
-toc: true
 skip : true
-authors:
-    - 'Bertrand Chevrier'
 tags:
     - 'Frontend'
     - 'Plugin'
@@ -13,7 +10,7 @@ tags:
 Enhance the user experience with Test Plugins
 =============================================
 
-One of the best option to improve, customize the test taker experience is using _Test Runner Plugins_.
+> One of the best option to improve, customize the test taker experience is using _Test Runner Plugins_.
 A plugin can be anything that hook the test experience : some tools to help the test taker like a calculator, progress information, etc.
 
 The user interface and the user experience of the test runner are made of plugins. Everything you see is a plugin :
