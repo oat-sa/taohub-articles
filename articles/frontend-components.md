@@ -1,6 +1,7 @@
 <!--
 parent: 'Developer Guide'
 toc: true
+skip : true
 authors:
     - 'Bertrand Chevrier'
 tags:
