@@ -2,7 +2,7 @@
 created_at: '2016-03-21 10:13:00'
 authors:
     - 'Christophe Noël'
-tags: 
+tags:
     - JavaScript
     - 'Unit test'
 -->
