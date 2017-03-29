@@ -45,7 +45,7 @@ Frist delete the following folders:
 - mathjax/fonts/HTML-CSS/TeX/otf/
 - mathjax/fonts/HTML-CSS/TeX/svg/
 
-Then in the mathjax/config/ folder, delete all files but `TeX-AMS-MML_HTMLorMML-full.js`, which is the only config file used in TAO.
+Then in the `mathjax/config/` folder, delete all files but `TeX-AMS-MML_HTMLorMML-full.js`, which is the only config file used in TAO.
 
 An already shrinked Mathjax archive is available [here](../resources/mathjax-shrinked.zip).
 
