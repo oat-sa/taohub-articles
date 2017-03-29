@@ -1,8 +1,4 @@
 <!--
-toc: true
-skip : true
-authors:
-    - 'Bertrand Chevrier'
 tags:
     - 'Frontend'
     - 'Plugin'
@@ -12,7 +8,7 @@ tags:
 Enhance the user experience with Test Plugins
 =============================================
 
-One of the best options to improve, customize the test taker experience is using _Test Runner Plugins_.
+> One of the best options to improve, customize the test taker experience is using _Test Runner Plugins_.
 A plugin can be anything that hook in the test experience : like tools to help the test taker (a calculator, a ruler), some additional information (progress bar, custom title), etc.
 
 The user interface and the user experience of the test runner are made of plugins. Everything you see while running a test is a plugin :
@@ -106,14 +102,14 @@ init : function init(){
 }
 ```
 
-Using the `areaBroker`, you can access the following areas (each area is a jQuery element) :
+Using the `areaBroker`, you can access the following areas  (each area is a jQuery element) :
 
- - the whole container : `areaBroker.getContainer()`
- - the content area (where the item is displayed) :  `areaBroker.getContentArea()`
- - the tool bar (but we advise to use `areaBroker.getToolbox().createEntry` to add entries) :  `areaBroker.getToolboxArea()`
- - the navigation  area (where the progress bar is) :  `areaBroker.getNavigationArea()`
- - the control  area (where the _next_ button is) : `areaBroker.getControlArea()`
- - the panel area  :  `areaBroker.getPanelArea()`,
+ - the whole container :  `areaBroker.getContainer()`
+- the content area (where the item is displayed) :  `areaBroker.getContentArea()`
+- the tool bar (but we advise to use `areaBroker.getToolbox().createEntry` to add entries)   :  `areaBroker.getToolboxArea()`
+- the navigation  area (where the progress bar is) :  `areaBroker.getNavigationArea()`
+- the control  area (where the _next_ button is) :  `areaBroker.getControlArea()`
+- the panel area  :  `areaBroker.getPanelArea()`,
  - the header area (where the title is displayed) : `areaBroker.getHeaderArea()`
 
 
