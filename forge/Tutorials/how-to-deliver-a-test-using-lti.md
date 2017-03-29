@@ -1,7 +1,7 @@
 <!--
 authors:		
   - 'Joel Bout'		
-tags:
+tags: 
   - Tutorials
   - LTI
 --->
