@@ -35,7 +35,7 @@ You can download it freely [here](http://docs.mathjax.org/en/latest/installation
 
 ## Shrink MathJax
 
-MathJax is a huge lib which weighs above 20MB unzipped. It is recommended to shrink it so only required files remain to display MathML properly in TAO. Indeed, on compilation, every compiled item containing MathML would have the whole library copied. So using the instruction below can help reducing its size down to 4.2MB. This solution has been tested so math expressions are still correctly rendered on most used browsers: firefox, chrome, safari and ie8.<br/>
+MathJax is a huge lib which weighs above 20MB unzipped. It is recommended to shrink it so only required files remain to display MathML properly in TAO. Indeed, on compilation, every compiled item containing MathML would have the whole library copied. So using the instruction below can help reducing its size down to 4.2MB. This solution has been tested so math expressions are still correctly rendered on most used browsers: Firefox, Chrome, Safari and IE8.
 
 Frist delete the following folders:
 
@@ -45,7 +45,7 @@ Frist delete the following folders:
 - mathjax/fonts/HTML-CSS/TeX/otf/
 - mathjax/fonts/HTML-CSS/TeX/svg/
 
-Then in the mathjax/config/ folder, delete all files but TeX-AMS-MML_HTMLorMML-full.js, which is the only config file used in TAO.
+Then in the mathjax/config/ folder, delete all files but `TeX-AMS-MML_HTMLorMML-full.js`, which is the only config file used in TAO.
 
 An already shrinked Mathjax archive is available [here](../resources/mathjax-shrinked.zip).
 
