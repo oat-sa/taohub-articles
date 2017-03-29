@@ -13,7 +13,7 @@ A plugin can be anything that hook in the test experience : like tools to help t
 
 The user interface and the user experience of the test runner are made of plugins. Everything you see while running a test is a plugin :
 
-![test runner plugins](resources/test-runner-plugins/runner.png)
+![test runner plugins](../resources/test-runner-plugins/runner.png)
 
 In this tutorial we will lead you through the creation of a plugin that hides the item when you click on a button. The goal of this plugin is to prevent cheating, so you can hide your item if your neighbor takes a look at your screen...
 
@@ -140,7 +140,7 @@ To make this configuration sustainable, we advise you to use a [dedicated set up
 
 The plugin's button should display in the test toolbar now :
 
-![plugin disabled](resources/test-runner-plugins/hider-plugin-disabled.png)
+![plugin disabled](../resources/test-runner-plugins/hider-plugin-disabled.png)
 
 But the button starts _disabled_, so we need to ensure the button is enabled when we need it. Plugins can listen test runner events and behave accordingly. We will enable the button only when an item is loaded and disable it otherwise.
 
@@ -222,9 +222,9 @@ For your information, since we can retrieve an instance of the test runner, we h
 
 Let's try now, we have a functional plugin !
 
-![hider plugin](resources/test-runner-plugins/hider-plugin.png)
+![hider plugin](../resources/test-runner-plugins/hider-plugin.png)
 
-![hider plugin](resources/test-runner-plugins/hider-plugin-hidden.png)
+![hider plugin](../resources/test-runner-plugins/hider-plugin-hidden.png)
 
 ### Keep the room clean
 
