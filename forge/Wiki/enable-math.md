@@ -13,13 +13,11 @@ tags:
     - Wiki
 -->
 
-Enable math expression in items
-===============================
+# Enable math expression in items
 
 ![](../resources/badge-square.png)
 
-Install MathJax library, using the script
------------------------------------------
+## Install MathJax library, using the script
 
 For users with a Unix machine, you can use the following bash scripts to download and install MathJax.
 
@@ -29,15 +27,13 @@ For users with a Unix machine, you can use the following bash scripts to downloa
 
 Be sure to have `wget` (or `curl` with 3.0 version), `tar` and `gzip` installed and available in your `PATH`. Then just launch it (as a user, not root) from the root of your TAO distribution.
 
-Install MathJax library manually
---------------------------------
+## Install MathJax library manually
 
 MathML is not rendered natively in all browsers. [Firefox and Safari are among the only one that render it natively](http://caniuse.com/#feat=mathml). To ensure a consistent cross-browser experience in TAO, we rely on a third-party MathML library called [MathJax](http://www.mathjax.org/). Because of license compatibility issue, it cannot be included within the default TAO package. That is why you need to install this library separately to enable math expression in your items.<br/>
 
 You can download it freely [here](http://docs.mathjax.org/en/latest/installation.html#obtaining-mathjax-via-an-archive) and unzip it into the following folder: {YOUR_TAO_ROOT}/taoQtiItem/views/js/mathjax. Your file system should look like the enclosed screenshot below.
 
-Shrink MathJax
---------------
+## Shrink MathJax
 
 MathJax is a huge lib which weighs above 20MB unzipped. It is recommended to shrink it so only required files remain to display MathML properly in TAO. Indeed, on compilation, every compiled item containing MathML would have the whole library copied. So using the instruction below can help reducing its size down to 4.2MB. This solution has been tested so math expressions are still correctly rendered on most used browsers: firefox, chrome, safari and ie8.<br/>
 
@@ -53,9 +49,8 @@ Then in the mathjax/config/ folder, delete all files but TeX-AMS-MML_HTMLorMML-f
 
 An already shrinked Mathjax archive is available [here](../resources/mathjax-shrinked.zip).
 
-Keep MathJax sources untouched
-------------------------------
+## Keep MathJax sources untouched
 
-To keep the full MathJax package, just add the —keep-full option when the script is called.
+To keep the full MathJax package, just add the `—keep-full` option when the script is called.
 
 
