@@ -1,5 +1,4 @@
 <!--
-parent: 'Developer Guide'
 toc: true
 skip : true
 authors:
@@ -13,14 +12,14 @@ tags:
 Enhance the user experience with Test Plugins
 =============================================
 
-One of the best option to improve, customize the test taker experience is using _Test Runner Plugins_.
-A plugin can be anything that hook the test experience : some tools to help the test taker like a calculator, progress information, etc.
+One of the best options to improve, customize the test taker experience is using _Test Runner Plugins_.
+A plugin can be anything that hook in the test experience : like tools to help the test taker (a calculator, a ruler), some additional information (progress bar, custom title), etc.
 
-The user interface and the user experience of the test runner are made of plugins. Everything you see is a plugin :
+The user interface and the user experience of the test runner are made of plugins. Everything you see while running a test is a plugin :
 
 ![test runner plugins](resources/test-runner-plugins/runner.png)
 
-In this tutorial we will lead you through the creation of a plugin, that hides the item when you click on a button, to prevent cheating (the neighbor who takes a look at your screen...).
+In this tutorial we will lead you through the creation of a plugin that hides the item when you click on a button. The goal of this plugin is to prevent cheating, so you can hide your item if your neighbor takes a look at your screen...
 
 ## Set up
 
@@ -32,11 +31,11 @@ sudo -u www-data php index.php 'oat\taoQtiTest\scripts\install\SetNewTestRunner'
 
 ## The plugin base
 
-We will add the given plugin to the `taoQtiTest` extension, but the plugin can be added to any extension.
+We will add the given plugin to the `taoQtiTest` extension, but it can be added to any extension.
 
 ### The JavaScript plugin
 
-Create the following file at `views/js/runner/plugins/tools/hider/hider.js` using the following boilerplate :
+Create the file `taoQtiTest/views/js/runner/plugins/tools/hider/hider.js` using the following boilerplate :
 
 ```js
 define([
@@ -72,11 +71,11 @@ define([
 });
 ```
 
-Each of the plugin method will be called by the test runner during the according step, `init` is called when the runner is initializing, `render` when the DOM is rendered, etc.
+Each of the plugin method will be called by the test runner during the according stage, `init` is called when the runner is initializing, `render` when the DOM is rendered, ans so on.
 
 The next step is to add a button to the toolbar. Plugins, interact with the GUI using the `areaBroker`. The `areaBorker` let's you access areas of the GUI and provides you also some built-in API, like the toolbar.
 
-So in the `init` method of the plugin , we can create our button :
+In the `init` method of the plugin , let's create the button :
 
 ```js
 init : function init(){
@@ -89,7 +88,7 @@ init : function init(){
 }
 ```
 
-  And the `areaBroker` let's you also have access to the item area, so we will hide/show the item area when clicking on this new button.
+The `areaBroker` let's you also have access to the item area, so we will hide/show the item area by clicking on this new button.
 
 ```js
 init : function init(){
@@ -107,20 +106,22 @@ init : function init(){
 }
 ```
 
-Using the `areaBroker`, you can access the following areas  (each area is a jQuery element) :
- - the whole container :  `areaBroker.getContainer()`
-- the content area (where the item is displayed) :  `areaBroker.getContentArea()`
-- the tool bar (but we advise to use `areaBroker.getToolbox().createEntry` to add entries)   :  `areaBroker.getToolboxArea()`
-- the navigation  area (where the progress bar is) :  `areaBroker.getNavigationArea()`
-- the control  area (where the _next_ button is) :  `areaBroker.getControlArea()`
-- the panel area  :  `areaBroker.getPanelArea()`,
-- the header area (where the title is displayed) :   `areaBroker.getHeaderArea()`,
+Using the `areaBroker`, you can access the following areas (each area is a jQuery element) :
+
+ - the whole container : `areaBroker.getContainer()`
+ - the content area (where the item is displayed) :  `areaBroker.getContentArea()`
+ - the tool bar (but we advise to use `areaBroker.getToolbox().createEntry` to add entries) :  `areaBroker.getToolboxArea()`
+ - the navigation  area (where the progress bar is) :  `areaBroker.getNavigationArea()`
+ - the control  area (where the _next_ button is) : `areaBroker.getControlArea()`
+ - the panel area  :  `areaBroker.getPanelArea()`,
+ - the header area (where the title is displayed) : `areaBroker.getHeaderArea()`
+
 
 That's it for the moment. Before adding more features, we need to test our brand new plugin.
 
 ### Register the plugin
 
-  Every plugin needs to be register and activated to be available in the test runner. To test, the plugin the registration can be done by editing the configuration file `config/taoTests/test_runner_plugin_registry.conf.php`  and adding a new entry for our plugin :
+Every plugin needs to be registered and activated to be available in the test runner. For testing purpose, the plugin the registration can be done by editing the configuration file `config/taoTests/test_runner_plugin_registry.conf.php`. We can add a new entry for our plugin : 
 
 ```php
 'taoQtiTest/runner/plugins/tools/hider/hider' =>[
@@ -145,7 +146,7 @@ The plugin's button should display in the test toolbar now :
 
 ![plugin disabled](resources/test-runner-plugins/hider-plugin-disabled.png)
 
-But the button starts _disabled_, so we need to ensure the button is enabled when we need it. Plugins can listen the test runner events and behave accordingly. We will enable the button only when an item is loaded and disable it otherwise.
+But the button starts _disabled_, so we need to ensure the button is enabled when we need it. Plugins can listen test runner events and behave accordingly. We will enable the button only when an item is loaded and disable it otherwise.
 
 Still in the `init` method, we will listen for test runner events, and implement the `enable` and `disable` methods.
 
@@ -233,4 +234,20 @@ Let's try now, we have a functional plugin !
 
 But before leaving, since we are conscientious people, we need to handle the plugin destroy correctly by removing event handlers :
 
-        destroy: function destroy() {},
+```js
+destroy: function destroy() {
+    if(this.button && this.button.length){
+        this.button.off('click');
+    }
+},
+```
+
+### Examples
+
+Please consult [the core plugins](https://github.com/oat-sa/extension-tao-testqti/tree/master/views/js/runner/plugins) to have example of more complex plugins. You'll notice we have built the whole test runner using plugins.
+
+### Pro tips
+
+ - test your plugin using [unit tests](https://github.com/oat-sa/extension-tao-testqti/tree/master/views/js/test/runner/plugins/tools/areaMasking/plugin)
+ - if the plugin uses a component, separate them (the calculator isn't implemented within the plugin, just instantiated)
+ - handle all the possible states (disabled during item transitions, etc.)
