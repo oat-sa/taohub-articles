@@ -125,13 +125,12 @@ Use the following template:
 Customise:
 
 -   the test title
--   the path to the test file, starting with the extension folder and omitting the view/js subdirectories
--   you can put all you want in the <br/>
-#qunit-fixture div, this will be cleaned after each test so you will not have side effect.
+-   the path to the test file, starting with the extension folder and omitting the `view/js` subdirectories
+-   you can put all you want in the `#qunit-fixture` div, this will be cleaned after each test so you will not have side effect.
 
 Optionnal dependencies:
 
--   blanket adds code coverage. Specify the file to cover with the *data-cover-only* attribute.
+-   blanket adds code coverage. Specify the file to cover with the `data-cover-only` attribute.
 -   parameterize is a QUnit plugin useful for parameterized tests https://github.com/AStepaniuk/qunit-parameterize
 
 ### test.js
