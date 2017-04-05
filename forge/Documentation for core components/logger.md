@@ -11,16 +11,14 @@ tags:
 Logger
 ======
 
-Valid as of TAO_3_0|TAO 3.0. For previous versions see [Logger 2.2](../logger/logger-2-2.md)
+Valid as of [TAO 3.0](/articles/tag/tao-30). For previous versions see [Logger 2.2](../logger/logger-2-2.md)
 
 
 
 Objectives
 ----------
 
-The purpose of this logger is to improve the code by documenting errors or irregularities that might have been missed otherwise,<br/>
-
-and by assisting developers in solving problems through offering insight into the events that led\
+The purpose of this logger is to improve the code by documenting errors or irregularities that might have been missed otherwise, and by assisting developers in solving problems through offering insight into the events that led\
 to these errors.
 
 Usage
@@ -58,27 +56,19 @@ The decision which events should be logged will be taken by using either:
 
 ### SingleFileAppender
 
-‘file’ =<br/>
-> the absolute path to the logfile\
-‘format’ =<br/>
-> the format of the log entry\
-‘max_file_size’ =<br/>
-> maximum size a single log file can reach
+‘file’ => the absolute path to the logfile <br/>
+‘format’ => the format of the log entry <br/>
+‘max_file_size’ => maximum size a single log file can reach
 
 upon reaching max_file_size, the first half of the log file will be deleted. Default is 1 MB, an entry of 0 disables this feature.
 
 #### ArchiveFileAppender
 
-‘file’ =<br/>
-> the absolute path to the logfile\
-‘format’ =<br/>
-> the format of the log entry\
-‘max_file_size’ =<br/>
-> maximum size a single logfile can reach\
-‘directory’ =<br/>
-> directory to which logfiles will be archived to, once they reached max_file_size\
-‘compression’ =<br/>
-> the compression algorithm to use for archived files, defaults to ‘zip’ only alternativ at the moment is ‘none’
+‘file’ => the absolute path to the logfile<br/>
+‘format’ => the format of the log entry<br/>
+‘max_file_size’ => maximum size a single logfile can reach<br/>
+‘directory’ => directory to which logfiles will be archived to, once they reached max_file_size<br/>
+‘compression’ => the compression algorithm to use for archived files, defaults to ‘zip’ only alternativ at the moment is ‘none’
 
 upon reaching max_file_size, the log file will be appended the current date and moved to the directory indicated by\
 the configuration parameter ‘directory’ if present or the same directory as the logfile if absent. If this file already exists\
@@ -86,8 +76,7 @@ a serial number will be appended to the filename.
 
 ### XMLAppender
 
-‘file’ =<br/>
-> the absolute path to the logfile
+‘file’ => the absolute path to the logfile
 
 this fileappender has no limit to it’s size and should not yet be used in production
 
@@ -95,10 +84,8 @@ this fileappender has no limit to it’s size and should not yet be used in prod
 
 Warning: *enabling this appender on windows will require uncommenting ’extension=php_sockets.dll’ in the php.ini*
 
-‘host’ =<br/>
-> destination host\
-‘port’ =<br/>
-> destination port
+‘host’ => destination host<br/>
+‘port’ => destination port<br/>
 
 the item is JSON formated and send via udp.
 
@@ -119,9 +106,7 @@ The Fileappenders (SingelFileAppender, ArchiveFileAppender) append a String to t
 -   %u user
 -   (%b backtrace)
 
-The default format is: %d [%s] <br/>
-\‘%m\<br/>
-’ %f %l\
+The default format is: %d [%s] \‘%m\’ %f %l<br/>
 resulting in: DATE [SEVERITY] MESSAGE ERRORFILE ERRORLINE
 
 ### XMLAppender
