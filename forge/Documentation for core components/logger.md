@@ -31,7 +31,7 @@ The function name corresponds to the first letter of the severity letter, which 
 
 The first parameter consists of the error message to be logged, it should never be seen by the end-user and therefore is untranslated.
 
-The second parameter consists of a string or an array of string, that allows us to tag log entries. Example tags are: INSTALL, CLEARFW, GENERIS, TAOITEMS, QTI
+The second parameter consists of a string or an array of string, that allows us to tag log entries. Example tags are: *INSTALL, CLEARFW, GENERIS, TAOITEMS, QTI*
 
 ## Configuration
 
