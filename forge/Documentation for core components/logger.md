@@ -9,14 +9,10 @@ tags:
 
 # Logger
 
-Valid as of [TAO 3.0](/articles/tag/tao-30). For previous versions see [Logger 2.2](../logger/logger-2-2.md)
-
-
-
-## Goals
-
-The purpose of this logger is to improve the code by documenting errors or irregularities that might have been missed otherwise, and by assisting developers in solving problems through offering insight into the events that led
+> The purpose of this logger is to improve the code by documenting errors or irregularities that might have been missed otherwise, and by assisting developers in solving problems through offering insight into the events that led
 to these errors.
+
+Valid as of [TAO 3.0](/articles/tag/tao-30). For previous versions see [Logger 2.2](../logger/logger-2-2.md)
 
 ## Usage
 
@@ -102,7 +98,7 @@ The Fileappenders (`SingelFileAppender`, `ArchiveFileAppender`) append a String 
 - (%b backtrace)
 
 The default format is: `%d [%s] %m %f %l`
-resulting in: DATE [SEVERITY] MESSAGE ERRORFILE ERRORLINE
+resulting in: *DATE [SEVERITY] MESSAGE ERRORFILE ERRORLINE*
 
 ### XMLAppender
 
@@ -110,18 +106,18 @@ The XMLAppender inserts an xml item into the structure that has the following fo
 
 ```xml
 <code class="xml">
-<xs:element name="event">
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element name="description" type="xs:string"/>
-      <xs:element name="file" type="xs:string"/>
-      <xs:element name="line" type="xs:string"/>
-      <xs:element name="datetime" type="xs:string"/>
-      <xs:element name="severity" type="xs:string"/>
-      <xs:element name="user" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
+  <xs:element name="event">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="description" type="xs:string"/>
+        <xs:element name="file" type="xs:string"/>
+        <xs:element name="line" type="xs:string"/>
+        <xs:element name="datetime" type="xs:string"/>
+        <xs:element name="severity" type="xs:string"/>
+        <xs:element name="user" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </code>
 ```
 
