@@ -41,8 +41,7 @@ The decision which events should be logged will be taken by using either:
 
 -   **threshold**: indicates the minimum severity an event has to have in order to be logged using this appender
 -   **mask**: defines a bit mask, allowing a fine grained control over which events are logged, with the least significant
-    bit `(2^0)` corresponding to to the *TRACE severity*, and the most significant bit `(2^5)` corresponding to to the *FATAL severity*.<br>    
-    *Example*: To log everything except *TRACE* and *WARNING*, one would use `110110 = 32+16+4+2 = 54`
+    bit `(2^0)` corresponding to to the *TRACE severity*, and the most significant bit `(2^5)` corresponding to to the *FATAL severity*.<br>*Example*: To log everything except *TRACE* and *WARNING*, one would use `110110 = 32+16+4+2 = 54`
 -   **tag**: an array of tags of which ONE tag must be used in the logitem
 
 ### SingleFileAppender
