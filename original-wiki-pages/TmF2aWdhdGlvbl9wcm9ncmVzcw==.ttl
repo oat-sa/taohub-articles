@@ -1,0 +1,7 @@
+h1. Navigation progress
+
+h2. General schema
+
+Here is a diagram that resumes the general progress in TAO:
+
+!Schema_navigation.png!

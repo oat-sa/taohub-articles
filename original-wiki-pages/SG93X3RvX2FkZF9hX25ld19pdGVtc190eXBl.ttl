@@ -1,0 +1,140 @@
+{{>toc}}
+
+*Page under construction*
+
+h1. How to add a new items type
+
+h2. Models
+
+First you need to add in the ontology your own items type, some example are available in taoItems/models/ontology such as the Surveyitems.
+
+<pre>
+<code class="XML">
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://www.tao.lu/Ontologies/TAOItem.rdf#"
+	xmlns:item="http://www.tao.lu/Ontologies/TAOItem.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#SurveyItem">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels"/>
+    <item:ItemAuthoring xml:lang="EN"><![CDATA[http://qat]]></item:ItemAuthoring>
+    <rdfs:comment xml:lang="EN"><![CDATA[Electronic version of paper based Question's]]></rdfs:comment>
+    <rdfs:label xml:lang="EN"><![CDATA[SurveyItem]]></rdfs:label>
+    <item:DataFileName><![CDATA[itemGroup.xml]]></item:DataFileName>
+    <item:ItemModelStatus rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental"/>
+  </rdf:Description>
+</rdf:RDF>
+</code>
+</pre>
+
+Here a second sample from paperbased.rdf
+
+<pre>
+<code class="XML">
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/TAOItem.rdf#" 
+	xmlns:item="http://www.tao.lu/Ontologies/TAOItem.rdf#" 
+>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#Paperbased">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels"/>
+    <rdf:value xml:lang="EN"/>
+    <rdfs:comment xml:lang="EN"><![CDATA[Paper-based Items model]]></rdfs:comment>
+    <rdfs:label xml:lang="EN"><![CDATA[Paper-based Item]]></rdfs:label>
+    <item:ItemModelStatus rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental"/>
+    <item:ModelTarget rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#PaperbasedTarget"/>
+    <item:DataFileName><![CDATA[data]]></item:DataFileName>
+  </rdf:Description>
+  
+</rdf:RDF>
+</code>
+</pre>
+
+If you look in the quoted samples below the RDF description will gather all additional content we may need to edit,preview and run the new type of Items. 
+
+Here some details about some specific property :
+
+* ItemModelStatus describe the maturity of the Items Type, we currently handle Stable, Experimental, Deprecated
+* ModelTarget will be use to handle different behavior for OnlineTarget or OfflineTarget mainly for Paperbased items.
+* ItemRuntime was used whith legacy items to describe item's runtime link
+* ItemAuthoring is used to describe item's authoring link
+
+Then to add your rdf file in tao just used the following script
+
+<pre>
+
+php tao/scripts/taoRDFImport.php -u taoManagerLogin -p taoManagerPassword -i taoItems/models/ontology/surveyItem.rdf 
+
+</pre>
+
+You may also add your file in the extension manifest to add this new Items type directly during TAO Installation, edit manifest.php, in install, rdf, you may add your own rdf file that will add your Item type during installation. 
+<pre>
+<code class="PHP">
+<?php
+return array(
+	'name' => 'taoItems',
+	'description' => 'the TAO Items extension provides the item creation, authoring and management',
+	'additional' => array(
+	'version' => '2.3',
+	'author' => 'CRP Henri Tudor',
+	'extends' => 'tao',
+	'dependences' => array('tao'),
+	'models' => array(
+		'http://www.tao.lu/Ontologies/TAOItem.rdf',
+		'http://www.tao.lu/Ontologies/taoFuncACL.rdf'
+	),
+	'install' => array(
+		'rdf' => array(
+			dirname(__FILE__). '/models/ontology/taoitem.rdf'
+		),
+	'classLoaderPackages' => array(
+		dirname(__FILE__).'/actions/',
+		dirname(__FILE__).'/helpers/'
+	)
+);
+</code>
+</pre>
+
+h2. ItemsService
+
+h3. TAO 2.3 or earlier
+
+Once your type is added into TAO you may customize the deploy method of taoItems/class.ItemsService.php to add your specific behavior for your new type. For now this service handle  those type of Items.
+<pre>
+<code class="PHP">
+$deployableItems = array(
+	TAO_ITEM_MODEL_KOHS,
+	TAO_ITEM_MODEL_CTEST,
+	TAO_ITEM_MODEL_HAWAI,
+	TAO_ITEM_MODEL_QTI,
+	TAO_ITEM_MODEL_XHTML,
+	TAO_ITEM_MODEL_SURVEY,
+	TAO_ITEM_MODEL_PAPERBASED
+);
+</code>
+</pre>
+
+In most of the case, the ItemsService just call a specific renderer to retrieve the content of the items to display. For instance the ItemsSurvey just rely on those line in the deploy method
+<pre>
+<code class="PHP">
+else if($this->hasItemModel($item, array(TAO_ITEM_MODEL_SURVEY))) {
+	$output = taoItems_models_classes_Survey_Item::renderItem($item);
+}
+</code>
+</pre>
+
+h3. TAO 2.4
+
+Create a new class for your item type that implements the interface *taoItems_models_classes_itemModel*. Optionaly it can also implement the interface *taoItems_models_classes_evaluatableItemModel*
+
+Add the following property to the <rdf:Description> block of the item type.
+<pre>
+<code class="xml">
+    <item:ModelService><![CDATA[YOUREXTENSION_models_classes_YOURCLASS]]></item:ModelService>
+</code>
+</pre>

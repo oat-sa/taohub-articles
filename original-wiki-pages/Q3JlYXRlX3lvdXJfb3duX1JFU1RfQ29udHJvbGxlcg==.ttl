@@ -1,0 +1,72 @@
+h1. Create your own REST Controller
+
+When you are accessing TAO 3.0, you may notice that the REST Controllers have not yet been ported from TAO 2.6 (this may change in succeeding versions).
+
+h2. Step 1: Create a new PHP file such as TestController.php in the actions folder of your MODULE
+
+<pre>
+class TestController extends \tao_actions_CommonRestModule
+{
+	
+	public function __construct(){
+			parent::__construct();
+	}
+	
+	public function index()
+	{
+		$data = "Hello world";
+		$this->returnSuccess($data);
+	}
+	
+}
+</pre>
+
+h2. Step 2: Check you can access the TestController you have created with a URL such as
+
+http://localhost/projects/tao/(YOUR MODULE HERE)/TestController
+
+h2. Step 3: Create a separate PHP file called Test.php (Check you have CURL installed) which will access your new REST Controller
+
+<pre>
+<title> Test </title>
+<h1>Testing</h1>
+<?php
+function curl($url, $method = CURLOPT_HTTPGET, $returnType = "data", $curlopt_httpheaders = array())
+    {
+        $process = curl_init($url);
+        curl_setopt($process, CURLOPT_USERPWD, "(USER ACCOUNT)" . ":" . "(PASSWORD)");
+        curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($process, CURLOPT_SSL_VERIFYPEER, false);
+        
+        $headers = array_merge(array(
+            "Accept: application/json"
+        ), $curlopt_httpheaders);
+        curl_setopt($process, CURLOPT_HTTPHEADER, $headers);
+        if ($method == CURLOPT_POST) {
+            curl_setopt($process, CURLOPT_POSTFIELDS, "");
+        }
+    
+        $data = curl_exec($process);
+		echo $data;
+        if ($returnType != "data") {
+            $data = curl_getinfo($process, $returnType);
+        }
+        curl_close($process);
+        return $data;
+    }
+	
+	$http_status = curl("http://localhost/projects/tao/(YOUR MODULE HERE)/TestController", CURLOPT_POST, CURLINFO_HTTP_CODE, array(
+	"Accept: application/json",
+	"label: Patrick Plichart",
+	"lastname : Plichart",
+	"firstname : Plichart",
+	"login: pplichart",
+	"password: dummy"));
+
+	echo $http_status;
+?>
+</pre>
+
+h2. Step 4: Access Test.php through your Browser
+
+You should see something similar to {"success":true,"data":"Hello world","version":"3.0.0"}200

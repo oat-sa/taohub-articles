@@ -1,0 +1,201 @@
+{{>toc}}
+
+h1. Process Creation with API "Process Authoring Service"
+
+Starting creating a process programmatically can be fast and handy. For instance, we can loop over a list of tens of items to build a sequential test process.
+
+h2. 1. Create a simple sequential process
+
+First, make sure that the class is defined and that you are authenticated against the [[Generis API]]. 
+
+Initialize the authoring service (call the get function of the service factory to get the singleton instance for better performance):
+<pre>
+<code class="php">
+$authoringService = tao_models_classes_ServiceFactory::get('wfEngine_models_classes_ProcessAuthoringService');
+</code>
+</pre>
+
+Create a new process:
+<pre>
+<code class="php">
+$processDefinition = $authoringService->createProcess('ProcessForUnitTest', 'Unit test');
+</code>
+</pre>
+
+Add an activity to the process called 'activity 1':
+<pre>
+<code class="php">
+$activity1 = $authoringService->createActivity($processDefinition, 'activity1');
+</code>
+</pre>
+
+Every process need one activity that is designated as the first one. Set it with the _setFirstActivity()_ method as follows:
+<pre>
+<code class="php">
+$authoringService->setFirstActivity($processDefinition, $activity1);
+</code>
+</pre>
+
+Create a new connector for this activity and set the 'sequence' type by using the defined constant INSTANCE_TYPEOFCONNECTORS_SEQUENCE:
+<pre>
+<code class="php">
+$connector1 = $authoringService->createConnector($activity1);
+$authoringService->setConnectorType($connector1, new core_kernel_classes_Resource(INSTANCE_TYPEOFCONNECTORS_SEQUENCE));
+</code>
+</pre>
+
+Finish the process by connecting the sequential connector to a new activity called “activity2”:
+<pre>
+<code class="php">
+$activity2 = $authoringService->createSequenceActivity($connector1, null, 'activity2');
+</code>
+</pre>
+
+
+h2. 2. Create a simple conditional process
+
+Init the process authoring service and create a process definition resource:
+<pre>
+<code class="php">
+$authoringService = tao_models_classes_ServiceFactory::get('wfEngine_models_classes_ProcessAuthoringService');
+$processDefinition = $authoringService->createProcess('ProcessForUnitTest', 'Unit test');
+</code>
+</pre>
+
+Create a first actvity and define it as the first one:
+<pre>
+<code class="php">
+$activity1 = $authoringService->createActivity($processDefinition, 'myActivity');
+$authoringService->setFirstActivity($processDefinition, $activity1);
+</code>
+</pre>
+
+Create a connector with the type to “conditional” INSTANCE_TYPEOFCONNECTORS_CONDITIONAL
+<pre>
+<code class="php">
+$connector1 = $authoringService->createConnector($activity1);
+$authoringService->setConnectorType($connector1, new core_kernel_classes_Resource(INSTANCE_TYPEOFCONNECTORS_CONDITIONAL));
+
+$then = $authoringService->createSplitActivity($connector1, 'then');//create "Activity_2"
+$else = $authoringService->createSplitActivity($connector1, 'else', null, '', true);//create another connector
+</code>
+</pre>
+
+Create a variable called _'myProcessVarCode1'_, and a transition rule _'^myProcessVarCode1 == 1'_. This transition rule means that the condition is fulfilled if the value of the process variable with the code _myProcessVarCode1_ is equal to '1'. For more information on transition rule syntaxe, see [[transition rule syntaxe]].
+<pre>
+<code class="php">
+$myProcessVar1 = $authoringService->getProcessVariable('myProcessVarCode1', true);
+$authoringService->createTransitionRule($connector1, '^myProcessVarCode1 == 1');
+</code>
+</pre>
+
+Complete the process by connecting the connector 'else' to a new activity labeled 'Activity 3'
+<pre>
+<code class="php">
+$activity3 = $authoringService->createSequenceActivity($else, null, 'Activity 3');
+</code>
+</pre>
+
+h2. 3. Other services to help building a process definition
+
+The wfEngine extension also provides other services and helpers to help building processes. Below is a short introduction to them. For more information, please refer to the "phpDoc":http://forge.tao.lu/docs/phpdoc/index.html *package wfEngine*
+
+h3. 3.1. ProcessUtil helper
+
+This process helper provides convenient methods to check the type of a [[Generis Overview|Generis resource]], in particular if the resource is a connector or an activity. If it is an activity, is it an initial or a final one.
+
+h3. 3.2. Process checker
+
+Building a process could be a complex task. 
+Frequent mistakes are:
+* forgetting to define a process as the first one
+* leaving a connector without a following activity
+* creating a conditional connector without transition rules
+
+It is therefore useful to use a tool to check the validity of a process definition. Hereafter, you'll find the purpose of the process checker.
+
+h4. 3.2.1. Check a process
+
+From a previously created process definition '$processDefinition', load it into the process checker:
+<pre>
+<code class="php">
+$processChecker = new wfEngine_models_classes_ProcessChecker($processDefinition);
+</code>
+</pre>
+
+You can perform individual check with an available method, for instance, checking whether the process has one or several isolated connectors, i.e., without a next activity:
+<pre>
+<code class="php">
+$hasNoIsolatedConnector = $processChecker->checkNoIsolatedConnector();
+</code>
+</pre>
+
+In case of a problem, you can print out the faulty connectors
+<pre>
+<code class="php">
+if($hasNoIsolatedConnector){
+	echo 'process ok';
+}else{
+	echo 'error: the process has isolated connector(s):<br/>';
+	foreach($processChecker->getIsolatedConnectors() as $connector){
+		echo "{$connector->getLabel()}<br/>";
+	}
+}
+</code>
+</pre>
+
+You can also directly validate the connector with a list of available checking methods:
+<pre>
+<code class="php">
+if($processChecker->check()){
+	echo 'process ok';
+}else{
+	echo 'the process is not valid';
+}
+</code>
+</pre>
+
+
+h4. 3.2.2. Add a new verification rule
+
+You may also want to extend the functionalities of the basic _Process Checker_. The ProcessChecker class allows you to easily implement your own checking methods. To add a new check method, you only need to add a function, the name of which starts with "check" (like the _checkMyProcessHasTenActivities()_ method below). The return value of the method must be of boolean type. You can use the class properties "process" to get the loaded process definition and "authoringService" as the singleton of the process authoring service.
+<pre>
+<code class="php">
+class myChecker extends wfEngine_models_classes_ProcessChecker{
+	
+	//check that your process has ten activities
+	public function checkMyProcessHasTenActivities(){
+		$process = $this->process;
+		$activities = $this->authoringService->getActivitiesByProcess($process)
+		return count($activities)==10?true:false;
+	}
+}
+
+$myChecker = new myChecker($processDefinition);
+if($myChecker->check()){
+	echo 'process ok';
+}else{
+	echo 'the process is not valid';
+}
+</code>
+</pre>
+
+h3. 3.3. Process cloner
+
+After building a valid process, a process definition resource can be cloned completely or cloned by segment. Currently, only sequential and conditional processes can be cloned.
+
+Cloning completely a process gives process creators a way to create an entirely new independent process based on an original model. It could be a way to take time to build a complex process then use it as a template to create several others (e.g., keeping the process flow and changing the services only).
+
+The purpose of cloning a process by segment is to allow merging several processes together, by selecting branches of a given process and to “paste” or “insert” it into another one. (Note: the current implementation enables only cloning section from the first to the last activities: further work is required to make the full functionality a reality).
+
+
+h2. 4. More examples
+
+The unit tests dedicated to the Workflow Engine provide other examples of process creation and execution by the workflow related services. They are located on the following path _/wfEngine/test/_:
+
+* ProcessAuthoringServiceTestCase gives examples of the way to use most of the methods of the process authoring service.
+* ProcessClonerTestCase
+* ProcessCheckerTestCase
+* ProcessExecutionTestCase and TokenServiceTestCase offer complete examples of process creation-execution cycle
+
+You can find more details about the workflow services presented in this page in the "phpDoc":http://forge.tao.lu/docs/phpdoc/index.html

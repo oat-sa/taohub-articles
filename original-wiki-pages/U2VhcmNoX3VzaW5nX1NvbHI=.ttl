@@ -1,0 +1,43 @@
+h1. Search using Solr
+
+Tao 3.1 allows different search implementations. By default it uses a slightly modified version of the Zend Lucene engine, but it can also be connected to Solr.
+
+h2. Installing Solr
+
+Download and install Solr from https://lucene.apache.org/solr/
+
+* [[Installation Solr Centos]]
+* [[Installation Solr MacOs]]
+
+h2. Install Solarium library
+
+To add solarium support to Tao you will need to manually add the library to your required packages, this will also install Solarium (http://www.solarium-project.org/)
+<pre>
+"require" : {
+    "oat-sa/lib-tao-solarium" : "dev-master"
+}
+</pre>
+
+h2. Configure Solr
+
+You have to run and create core based on default tao preset
+
+ solr start
+solr create_core -c *CORE_NAME* -d *TAO_ROOT_DIRECTORY*/vendor/oat-sa/lib-tao-solarium/doc/solr/conf
+
+Activation script assumes that 
+
+ CORE_NAME  =  tao 
+
+If different name was used please make sure to change also [PATH] parameter on configuration step to *solr/CORE_NAME*
+ 
+h2. Configure Tao
+
+Modify the configuration to match your Solr server by specifying parameters:
+
+ sudo -u www-data php *TAO_ROOT_DIRECTORY*/vendor/oat-sa/lib-tao-solarium/bin/activateSolarium.php *TAO_ROOT_DIRECTORY [HOST] [PORT] [PATH]*
+
+ 
+It should return "Switched to Solr search using Solarium"
+
+Search engine configuration is stored in  *TAO_ROOT_DIRECTORY/config/tao/search.conf.php*

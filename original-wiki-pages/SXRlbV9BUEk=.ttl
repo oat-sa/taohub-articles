@@ -1,0 +1,179 @@
+{{>toc}}
+
+h1. Item API
+
+*This API is available since _TAO 2.5_. Previous versions are still supported but deprecated.*
+*This API is intended to evolve in a further release.*
+
+h2. Getting Started
+
+Download either a full "HTML5 stub":http://forge.taotesting.com/attachments/download/2633/owi-stub.zip or only the "Item API stub":http://forge.taotesting.com/attachments/download/2637/taoItemApi-stub.js .
+
+The stub or the injected API will look for a global function (in the @window@ scope) named @onItemApiReady@. This function will gives you an instance of the @ItemApi@ implementation you can use to connect your item with TAO:
+
+<pre><code class="javascript">
+window.onItemApiReady = function(itemApi){
+    //itemApi.saveScores({'SCORE' : 200});
+}
+</code></pre>
+
+h2. API Documentation
+
+h3. SaveResponses
+
+<pre><code class="javascript">
+/**
+ * Save test taker's responses
+ * @param {Object} responses - key/value plain object
+ */
+void : ItemApi.saveResponses(responses)
+</code></pre>
+
+Example:
+<pre><code class="javascript">
+window.onItemApiReady = function(itemApi){
+    itemApi.saveResponses({
+        'QUESTION_1' : false,
+        'QUESTION_2' : 'foo'
+    });
+
+    //later
+    itemApi.saveResponses({'QUESTION_3': 'bar'});
+}
+</code></pre>
+
+
+h3. SaveScores
+
+<pre><code class="javascript">
+/**
+ * Save test taker's scores
+ * @param {Object} scores - key/value plain object
+ */
+void : ItemApi.saveScores(scores)
+</code></pre>
+
+Example:
+<pre><code class="javascript">
+window.onItemApiReady = function(itemApi){
+    itemApi.saveScores({
+        'SCORE_1' : 0,
+        'SCORE_2' : 10
+    });
+
+    //later
+    itemApi.saveScores({'FINAL': 6.25});
+}
+</code></pre>
+
+h3. BeforeFinish
+
+<pre><code class="javascript">
+/**
+ * Add a callback to be executed in stack before the finish
+ * @param {Function} callback - with no parameter
+ */
+void : ItemApi.beforeFinish(callback)
+</code></pre>
+
+Example:
+<pre><code class="javascript">
+window.onItemApiReady = function(itemApi){
+
+    itemApi.beforeFinish(function(){
+        alert('3');
+    });
+
+    itemApi.beforeFinish(function(){
+        alert('2');
+    });
+
+    itemApi.beforeFinish(function(){
+        alert('1');
+    });
+
+    itemApi.beforeFinish(function(){
+        alert('Finished);
+    });
+}
+</code></pre>
+
+h3. Finish
+
+<pre><code class="javascript">
+/**
+ * Flag the item as finish 
+ */
+void : ItemApi.finish()
+</code></pre>
+
+Example:
+<pre><code class="javascript">
+window.onItemApiReady = function(itemApi){
+    itemApi.finish();
+    //nothing after
+}
+</code></pre>
+
+h3. SetVariable
+
+<pre><code class="javascript">
+/**
+ * Store variable (not persistant)
+ * @param {string} key
+ * @param {string|number|Object|Array} value
+ */
+void : ItemApi.setVariable(key, value)
+</code></pre>
+
+Example:
+<pre><code class="javascript">
+window.onItemApiReady = function(itemApi){
+    itemApi.setVariable('answer1-time', 15);
+
+    //...
+
+    itemApi.setVariable('answer2-time', 58);
+}
+</code></pre>
+
+h3. GetVariable
+
+<pre><code class="javascript">
+/**
+ * Get a stored variable
+ * @param {string} key
+ * @param {function} callback - as callback(value)
+ */
+void : ItemApi.getVariable (key, callback)
+</code></pre>
+
+Example:
+<pre><code class="javascript">
+window.onItemApiReady = function(itemApi){
+    itemApi.getVariable('answer1-time', function(value){
+        alert('You have spend ' + value + ' seconds in question 1');
+    });
+}
+</code></pre>
+
+h3. TraceEvents
+
+<pre><code class="javascript">
+/**
+ * Log events
+ * @param {Object} events
+ */
+void : ItemApi.traceEvents(events)
+</code></pre>
+
+Example:
+<pre><code class="javascript">
+window.onItemApiReady = function(itemApi){
+    itemApi.traceEvents({
+        'AREA_hover_1': {x: 25, y: 43},
+        'AREA_hover_2' : {x: 26, y: 40},
+        'AREA_hover_3' : {x: 27, y: 38}
+    });
+}
+</code></pre>

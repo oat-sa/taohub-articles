@@ -1,0 +1,72 @@
+h1. User Management
+
+{{>toc}}
+
+h2. Back-office
+
+h3. General information
+
+TAO concerns various type of users for various types of features. One of the main feature we provide is the opportunity for users to build some tests and to manage the whole tests delivery. All these features are gathered in the Back-office of the TAO platform but they may be accessed in 2 different ways, either using the complete Back-office Interface or by running a process monitored by the Workflow Engine providing access to available service from the platform.
+
+
+
+h3. Manage Back-office Users 
+
+The _Tao Manager 1_ User defined in figure 3 is the one created when installing the platform that let you access all features of the TAO platform and should only be accessed by a User having the +TaoManager+ Role which is an instance of the _BackOffice_ Role that controls all accesses to Back-office's Services.
+The _TaoManager_ Role is also a sub-class of User Class in order to inherit specific properties of the User Class such as User's _Login, Password, Last Name, First Name, Languages_.
+
+!http://forge.taotesting.com/attachments/277/role-whtoutInst.png!
+Fig .1
+
+You can add a user thanks to the top bar from the Home, will add a new _TaoManager_.
+
+!http://forge.taotesting.com/attachments/281/CompleteInterface.png!
+!http://forge.taotesting.com/attachments/282/AddUser2.png!
+Fig .2
+
+_New TaoManager_ is also an instance of Role _TaoManager_.
+
+!http://forge.taotesting.com/attachments/284/role-addingNewManager.png!
+Fig .3
+
+h2. Front-office
+
+The TAO platform also concerns Test Takers that will have to authenticate against the platform in order to take tests that are dedicated to them. In order to do that, the _Test Taker_ Class is a sub-class of the _TaoSubjectRole_ which is an instance of the _FrontOffice_ Role. Users having the _TaoSubjectRole_ may access the delivery platform.
+
+!http://forge.taotesting.com/attachments/285/addTestTaker.png!
+Fig .4
+Adding a _Test Taker_ in the Test Taker Extension will create an instance of the class _Test Taker_. (_Jane_ and _John_)
+
+!http://forge.taotesting.com/attachments/286/role-addingNewTestTaker.png!
+Fig .5
+You can also obviously add sub-classes of _Test Taker_ and add new properties to your own class in order to complete the description of your _Test Taker_ that will then instantiate this class. (_1StGrade_ is the class and _Nicolas_ its instance)
+
+!http://forge.taotesting.com/attachments/287/role-addingNewTestTakerClass.png!
+Fig .6
+
+h2. Workflow Engine's Users
+
+As explained before, the TAO platform can be accessed through a work-flow that will drive the different steps needed to build, manage, and validate the process of tests' creation. The creation of such a process will be the focus on another  [[The Processes extension|guide]]. Different steps of this process can be executed by actors having different roles. You can define these specific users and roles in the Process Extension.
+
+!http://forge.taotesting.com/attachments/288/addRole.png!
+Fig .7
+
+The predefined _Role_, _Workflow_ _User Role_ allow Users having this Role to access the Worklow Engine. Adding a _User_ in the Process Extension will add an instance of the _Workflow User Role_(_Chuck_ and _Pedro_ have been created as _Workflow User)_.
+
+!http://forge.taotesting.com/attachments/289/role-addingNewWfUser.png!
+Fig .8
+
+Adding a _Role_ will create an instance of _wfUser_. 
+
+!http://forge.taotesting.com/attachments/290/role-addingNewRole.png!
+Fig .9
+
+Then you can assign any created users to any created role (_Chuck_ will remain_ Workflow User Role_ and _Perdo_ will be both_ Workflow User Role_ and _User Defined Role 1_ ). 
+
+!http://forge.taotesting.com/attachments/291/role-assigningUserRole.png!
+Fig .9
+
+You can also assign any users to any roles (_Tao Manager 1_ will gain _User Defined Role 1_),
+
+!http://forge.taotesting.com/attachments/292/role-assigningManagerToRole.png!
+Fig .10

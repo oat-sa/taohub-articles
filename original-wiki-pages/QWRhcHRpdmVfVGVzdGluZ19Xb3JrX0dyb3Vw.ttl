@@ -1,0 +1,32 @@
+h1. Adaptive Testing Work Group
+
+The goal of this work group is to extend TAO to drive adaptive tests.
+
+h2. Useful informations
+
+* *Coordinator*: Joel Bout: joel@taotesting.com
+* *Mailing list*: adaptive-testing@taotesting.com
+
+h2. Process
+
+A very early tentative draft
+
+h3. Preparation
+
+* A tutorial on how to create a custom [[testrunner]].
+* Create a state-full example of a test runner implementation
+
+h3. Definition
+
+* Create interface for response retrieval
+* Define a common set of properties to be used as [[psychometric item model]]
+* Define interface for CAT algorithms
+
+h3. Implementation
+
+* Create abstract CAT extension
+* Implement individual CAT runners
+
+h3. Harmonisation
+
+* Compare diffrent implementation in order to identify common components

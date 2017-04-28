@@ -1,0 +1,48 @@
+h1. TAO 2.2
+
+Tao 2.2 is currently available.
+
+h2. Features
+
+see also [[Plans for the future]].
+
+* [[Logger]]
+* Generis config file refactoring
+* Support for several structures per extension
+* Full support for custom QTI rules
+* New QTI processing type "Composite" for detailed item scores (by interaction)
+* Paperbased items (not activated by default)
+
+h3. [[taoCoding|Human based scoring]]
+
+* taoItems [[Measurements]]
+* new Variable storage
+* Grading
+* Conciliaton
+
+h3. [[Functionality access control]]
+
+h3. [[Versioned content]]
+
+h3. Internationalization
+
+* Script to support source code translations by extension (Create, Update, Delete)
+* Script to support ontologies translations by extension (Create, Update, Delete)
+* Cross-language items. The same item resource can exist in multiple languages at authoring and delivery time
+
+h3. RDF
+
+* Script to import RDF (RDF-XML) models from the Command Line Interface (CLI)
+* Configurable URI generation strategies
+
+h3. Modeling
+
+* Ordering of properties at the Graphical User Interface (GUI) level
+
+h3. CSV Import
+
+* Default values depending on the targeted property range
+
+h2. Migration
+
+[[Migration 2 1 to 2 2|Migration 2.1 to 2.2]]

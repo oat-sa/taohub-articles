@@ -1,0 +1,9 @@
+h1. Add a User
+
+The big function of this tab:
+
+!addauser-tab.png!
+
+h2. Add a user box
+
+* The Add a user box integrates the properties to be defined to create a new user.

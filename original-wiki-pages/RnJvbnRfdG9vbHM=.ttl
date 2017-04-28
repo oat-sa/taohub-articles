@@ -1,0 +1,46 @@
+h1. Front tools
+
+*These tools +are not required+ to run TAO, but can be helpful for client side development.*
+
+h2. Grunt 
+
+"Grunt":http://gruntjs.com/ helps you to automate tasks like require.js optimization, SASS compiling, test running, code linting, etc. 
+
+Grunt runs on node.js, so you need "node.js":https://nodejs.org/en/download/ installed and running.
+
+- For Linux user, you could install it easily node from a native package using "nodesource":https://github.com/nodesource/distributions
+<pre>
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</pre>
+
+- If you want node only for your user, you can install it using "nvm":https://github.com/creationix/nvm
+<pre>
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
+nvm install v6.2.1
+nvm alias default v6.2.1
+</pre>
+
+- The current SASS scripts used in TAO contains a bug, so we can't use the libsass until it is fixed. You need then to have the sass tool available on your system:
+For Ubuntu/Debian user : 
+<pre>
+sudo apt-get install rubygems
+sudo gem install sass
+</pre>
+For MacOS user, ruby comes installed to your system, you just have to install sass :
+<pre>
+gem install sass
+</pre>
+
+
+- Then to install and set up Grunt :
+<pre>
+npm install -g grunt-cli csso
+cd tao/views/build
+npm install
+</pre>
+
+Then you should be able to see available grunt tasks from the @tao/views/build@ directory:
+<pre>
+grunt --help
+</pre>

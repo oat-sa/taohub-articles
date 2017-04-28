@@ -1,0 +1,97 @@
+{{>toc}}
+
+h1. How TAO development works
+
+h2. 1. Overview 
+
+As an open source project, TAO is open to any contributor who demonstrates commitment to the project. 
+
+h3. 1.1 What can you do?
+
+If you are interested in contributing to TAO, you have various options: 
+* Anyone can express new requirements they are interested in. The more detailed your requirement is, the higher chance this functionality is to be included in the roadmap, and part of the next version. Use the menu *New Issue* and choose the tracker *new feature*
+* Developers can develop new extensions as TAO was built to be completely modular. See Howto [[Make a new extension]]
+* Developers can help us fixing issues/enhancing feature/adding UnitTest. See Howto [[Change core code|Change code]]
+* Anyone can translate TAO in another language. See Howto [[Translate TAO into other languages]]
+* Anyone can help us improve TAO Documentation. See Howto [[Help document TAO]]
+* Anyone can join the testing effort. See Howto [[Join the testing effort]]
+
+h3. 1.2 How can you do it?
+
+In order to contribute to the testing effort or to post new features, you need to use the appropriate tracker for *New Issue*. You will get the opportunity to discuss it with the team into more details and then, we'll decide on which future version it could be made available (roadmap).
+
+For contributions in developments and translations, send us a patch. Patches have to be uploaded on the forge with a description of the improvement. Our TAO Master will evaluate the integration of the patch.
+
+For documentation contributions, you can do this through the use of the wiki.
+
+h2. 2. Releases Cycles.
+
+TAO is periodically released according to an announced schedule: we usually target one major release and two minor releases every year. We usually spend 3-6 months working on a release ([[Past release history]]). 
+
+At the beginning of a new release phase, we first put efforts working on refactoring existing features, fixing bugs and cleaning old issues, update documentation, update build script. We then focus on developing the set of Features according to the  [[Plans_for_the_future|roadmap]].
+
+Occasionally some alpha versions may be released without warranty on the stability. Such versions shouldn't be used for production mode.
+
+We then focus on building a Beta version that usually comes out 4-5 weeks before the announced release day. 
+
+The Beta release is nearly complete and free of major bugs like installation problems, it will work on different Operating Systems (Windows, Linux), users will edit/run items and tests. It is recommended for a larger (but still technically inclined) audience. 
+
+When releasing the beta version, all features (model and database, installation procedures, config files) that may impact externals extensions will be frozen in order to let community work on updating their extension according to the next release. An updating extension procedure will also be published during the following days of the Beta version.
+
+Two weeks before the scheduled release, we publish Release Candidate versions. As the final release approaches, our focus narrows to fixing "showstopper" bugs and performing very thorough validation of key features of the TAO product.
+
+!http://forge.taotesting.com/attachments/789/devCylce.png!
+
+h2. 3. Patch Policy
+
+During the development phase, we keep updating TAO from major issue. SVN-Patches are created and are directly provided to the community in the _comment_ section of the related issue. Patch receives an incremental number and in the following days of the patch creation, the version available on TAO website will be updated and renamed according to the patch number. Patch's Numbers are managed by the target version's Head Developer.
+
+For instance, if the version of TAO available on the TAO website is _TAO 2.1.01_, _2.1_ indicates the version number and _.01_ indicates that the patch _01_ had been applied.
+All available patches for a version may also be found in [[Past_release_history]]
+
+h2. 4. Contribution
+
+TAO is the result of the work of many developers. Here is a "list of TAO's contributors":http://taotesting.com/about-us/contributors . If your name is missing, please let us know.
+
+In order to improve the efficiency of the team's work, we set up some tools within the TAO Forge.
+
+h3. 4.1. TAO Forge
+
+TAO source code is available on the "githhub":https://github.com/oat-sa. 
+
+All feedbacks from the community are also gathered in the "TAO Forge":http://forge.taotesting.com/projects/tao/issues, you can find more detailed information about *[[Issues|issues]]*. 
+
+By default, people enroled in the TAO Forge have a _reporter_ status/role.
+
+The _reporter_ can 
+* create issues
+* add comments on his/her own issues
+* participate to a forum 
+* be assigned to an issue
+* send patches to be tested by _developers_
+* participate to issues by commenting them
+
+TAO Team members are _developers_. A _developer_ can
+* do everything a reporter does
+* modify issues
+* commit developments in subversion
+
+If you want larger access rights, please let us know !
+
+h3. 4.2. Validation
+
+Over time, TAO is getting more and more complex (see [[TAO Architecture]]), meanwhile here is a list of TAO team members that can help you for different sections listed below and who will be in charge of validating contributions and assure the overall TAO Product Quality. Please be also sure to follow [[guidelines]] and common conventions used by the TAO team.
+
+*TAO Product* "Patrick Plichart":http://forge.taotesting.com/users/339, 
+*Generis Core* "Lionel Lecaque":http://forge.taotesting.com/users/305, "Joel Bout":http://forge.taotesting.com/users/692,
+*TAO Core* "Lionel Lecaque":http://forge.taotesting.com/users/305, "Joel Bout":http://forge.taotesting.com/users/692, "Bertrand Chevrier":http://forge.taotesting.com/users/331
+*TAO Delivery* "Joel Bout":http://forge.taotesting.com/users/692,
+*TAO Groups* "Bertrand Chevrier":http://forge.taotesting.com/users/331
+*TAO Items*  "Jérôme Bogaerts":http://forge.taotesting.com/users/306, "Somsack Sipasseuth":http://forge.taotesting.com/users/361
+*TAO Test* "Jérôme Bogaerts":http://forge.taotesting.com/users/306, "Somsack Sipasseuth":http://forge.taotesting.com/users/361, "Bertrand Chevrier":http://forge.taotesting.com/users/331
+*TAO Results* "Patrick Plichart":http://forge.taotesting.com/users/339, 
+*TAO Subjects*  "Bertrand Chevrier":http://forge.taotesting.com/users/331
+*WfEngine* "Somsack Sipasseuth":http://forge.taotesting.com/users/361, "Jérôme Bogaerts":http://forge.taotesting.com/users/306
+*TAO Documentation* "Lionel Lecaque":http://forge.taotesting.com/users/305,
+
+Please feel free to discuss about your input in the "Forum":http://forge.taotesting.com/projects/tao/boards

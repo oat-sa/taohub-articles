@@ -1,0 +1,191 @@
+h1. Helpers
+
+{{>toc}}
+
+h2. Utilities
+
+Helpers contain transverse functionalities of the application or an extension. By definition a _helper_ helps manage non-business operations. It could be used everywhere but shouldn't be defined in one of the MVC layers. A common representation of the helper is the toolbox: each helper is a toolbox providing a set of utilities for a particular domain.
+
+
+h3. TAO helpers overview
+
+You can see in the schema below an overview of some of the TAO meta-extension helpers. These helpers are independent classes, they use mainly static methods and attest to the toolbox concept.
+For instance, the _tao_helpers_File_ helper provides some convenience methods to manipulate files. 
+
+!http://forge.taotesting.com/attachments/391/tao-helpers.png!
+
+
+Unlike the previous helpers, the class diagram below outlines a more complex helper. The purpose of these helpers is the data transfer. They supply you with a generic _Adapter_ that defines a public interface for the data transfer and there is also an implementation for the mail transfer. As you can see, these classes are located in a sub-package. 
+
+!hhttp://forge.taotesting.com/attachments/392/tao-helpers-trsf.png!
+
+*The Uri helper*
+
+This helper deserves your attention because you will need it or see it a lot. It's a toolbox to manage URIs and URLs. 
+We use it to write MVC URLs for you and to encode/decode the RDFS resources URIs. 
+
+* **MVC Urls** : the method _tao_helpers_Uri::url_ (or its convenient short-cut __url_, ) builds the URL for you instead of writing it manually. 
+You can give the action, module and/or extension's name in parameters and then, this method renders the right URL. 
+
+For example, the method @_url('index')@ will return to the index action of the current module.
+The following code sample will display  "http://yourdomain.tld/taoItems/PreviewApi/runner?match=client&context=false"
+<code class="php">
+ echo _url('runner', 'PreviewApi', 'taoItems', array('match' => 'client', 'context' => false));
+</code> 
+ 
+
+bq. Please note that to access web resources you have to use the method _tao_helpers_Uri::getBaseUrl()_ (or _tao_helpers_Uri::getRootUrl()_ if the resource is located in another extension). For example, to access an image source:
+
+<pre><code class="php">
+ $baseUrl = tao_helpers_Uri::getBaseUrl();
+ $imageSource = $baseUrl . 'img/logo.png';
+</code></pre>
+
+bq. _In the templates you can use directly the BASE_WWW or ROOT_URL constants for or better code readability_ 
+
+
+
+!http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG![[Helpers|Return to Top]]
+
+h2.  the Form Generator Engine
+
+One of the helper has grown up and became a complete library. The purpose of this library is to build and manage forms dynamically. It provides a convenient way to manipulate forms as object entities from the server side. It outlines a generic model to represent forms and to build them for a particular rendering. For instance, we have implemented the XHTML rendering mode. In other words, you can instantiate objects from your PHP codes that will generate a full XHTML code.
+The Form Engine is mainly used in TAO as a front-end for the data model through the Generis API. So, it enables us to easily edit a RDF resource: the form is built regarding the resources information. 
+
+bq. A kind of possible contribution would be to extend the engine to render more widgets or to implement other rendering: XUL, JS forms, etc.
+
+
+h3. Form Engine architecture overview
+
+!http://forge.taotesting.com/attachments/389/form-engine-model.png!
+
+
+* The _tao_helpers_form_FormFactory_ class enables you to retrieve initialized instances of _tao_helpers_form_Forms_, _tao_helpers_form_FormElements_ and _tao_helpers_form_Validators_ classes for a defined rendering mode (the XHTML is the default rendering). For example, you can get an instance by using 
+<code class='php'>FormFactory::getForm('formName');</code>
+* The _tao_helpers_form_GenerisFormFactory_ class gives you some utilities to generate forms from an RDFS model using the Generis API. For example, the method _map_ returns the map between the widgets (from the Widget ontology) and the _tao_helpers_form_FormElements_ tied to a widget.
+
+* The _tao_helpers_form_Form_ class is an abstract entity. It represents an entire Form. It contains a list of _tao_helpers_form_FormElement_ classes (the elements can be organized into groups). This class must be extended by a class for a specific render mode. The default inherited class is the _tao_helpers_form_xhtml_Form_ class which provides an implementation of the _tao_helpers_form_Form_ rendered in XHTML. 
+* The _tao_helpers_form_FormElement_ class is also an abstract entity. It represents a form element, a form field. It must be extended by classes for each specific field type (_tao_helpers_form_elements_TextBox_, _tao_helpers_form_elements_ComboBox_, etc.) and a rendering mode (_tao_helpers_form_elements_xhtml_Checkbox_)
+* The _tao_helpers_form_Validator_ class is an abstract class that represents a validation rule. A _tao_helpers_form_FormElement_ instance has the ability to embed a chain of _tao_helpers_form_Validator_. The _tao_helpers_form_FormElement_'s _tao_helpers_form_Validator_ are executed during the form validation step. Each rule can break the chain and return an error message. For example, the _tao_helpers_form_validators_Rexgex_ Validator class will check if the current value of a FormElement matches a regular expression.
+* The _tao_helpers_form_Decorator_ interface provides you with methods to decorate the rendering of the form components (elements, groups, forms and errors). The decorators use a wrapping process to add some decoration elements before and after the component. For instance, in XHTML we use he _tao_helpers_form_xhtml_TagWrapper_ class. It implements the _Decorator_ interface to enclose the rendering of components into an XHTML tag: the _TagWrapper::preRender_ method creates the open tag and the _tao_helpers_form_xhtml_TagWrapper::postRender_ method add the closing tag.
+* The _tao_helpers_form_FormContainer_ is a model of class to embed the form creation. The purpose of this class is to prevent the form creation inside the Controllers or the Models layer. This practice needs a consequent number of code's lines to create a form and it will reduce readability. That's the reason why the _tao_helpers_form_FormContainer_ provides an abstract model to encapsulate the form creation.
+
+
+h3. Form Elements
+
+The Form Elements have been structured hierarchically. The _tao_helpers_form_FormElement_ is the abstract class with methods shared by all the _tao_helpers_form_FormElements_. Then each kind of element will be created into another abstract. And those 2nd abstract classes will be inherited by classes regarding the rendering mode. 
+
+The diagram below outlines this structure. It represents only a part of the _tao_helpers_form_FormElements_. There is more available.
+
+!http://forge.taotesting.com/attachments/388/form-elements.png!
+ 
+
+One of the main methods of implementation is the _rendering_ method. It will produce the output to be displayed. 
+Look at the following piece of code that will render an HTML text field:
+
+<pre><code class="php">
+ $textField = new tao_helpers_form_elements_xhtml_Textbox('firstname');
+ $textField->setDescription('Enter your firstname');
+ echo $textField->render();
+</code>
+HTML Output:
+<code class="html">
+<label for="firstname">Enter your firstname</label>
+<input name="firstname" id="firstname" value="" type="text" />
+</code></pre>
+
+
+
+h3. Tutorial: the Form Container model
+
+The _TAO_helpers_form_Form Container_ provides you with a convenient solution to add forms into your application. This is only a container in which you will put your instructions to create the forms and the form elements. 
+In this tutorial, we will show you how to create a simple form, a login form using the _TAO_helpers_form_Form Container_ architecture.
+
+We assume that you have a valid extension in which you can make your tests. We will refer to this extensions with the name _myExt_ 
+
+ *1. Creation of the container*
+
+# Create a class called _myExt_actions_form_Login_ in the folder _myExt/actions/form_ 
+# This class extends the _tao_helpers_form_FormContainer_ class
+# Override the abstract methods: _initForm_ and _initElements_
+
+!http://forge.taotesting.com/attachments/390/login_formcontainer.png!
+
+* In the _initForm_ method, you need to create and initialize _tao_helpers_form_Form_ object. The _form_ attribute have to refer to it.
+* In the _initElements_ method, you need to create the _tao_helpers_form_FormElement_ objects and bind them to the _form_ attribute.
+* In the listing below, we use the _tao_helpers_form_FormFactory_ for creations. We create a form, with a _Connect_ action and we bind it to 2 fields: a login and a password field:
+
+<pre><code class="php">
+class myExt_actions_form_Login extends tao_helpers_form_FormContainer {
+
+    public function initForm() {
+     $this->form = tao_helpers_form_FormFactory::getForm('login');
+
+     $connectElt = tao_helpers_form_FormFactory::getElement('connect', 'Submit');
+     $connectElt->setValue(__('Connect'));
+     $this->form->setActions(array($connectElt), 'bottom');
+    }
+
+    public function initElements() {
+     $loginElt = tao_helpers_form_FormFactory::getElement('login', 'Textbox');
+     $loginElt->setDescription(__('Login'));
+     $loginElt->addValidator(tao_helpers_form_FormFactory::getValidator('NotEmpty'));
+     $this->form->addElement($loginElt);
+
+     $passElt = tao_helpers_form_FormFactory::getElement('password', 'Hiddenbox');
+     $passElt->setDescription(__('Password'));
+     $passElt->addValidator(
+                tao_helpers_form_FormFactory::getValidator('NotEmpty')
+     );
+     $this->form->addElement($passElt);
+    }
+}
+</code></pre>
+
+The container class is now finished. It contains the reference in our new form.
+
+ *2. Use of the container in a controller's action*
+
+# Create (if it doesn't exist) a module _myExt_actions_Main_ in your extension: _myExt/actions/class.Main.php_ 
+# Create a new action _login_ in the _Main_ module (the URL to call it will be  _/myExt/Main/login_)
+
+bq. One action is sufficient as the form will post on itself.
+
+In the _login_ action:
+* Instantiate your new container
+* Get the form reference thought the @tao_helpers_form_FormContainer::getForm@ method.
+* Display the form: _tao_helpers_form_Form::render_
+* Check if the form has been submitted: _tao_helpers_form_Form::isSubmited_
+* Check if the form is valid: _tao_helpers_form_Form::isValid_
+* Retrieve the posted data: _tao_helpers_form_Form::getValues_ and compare the login and password, then display if they are correct (using a hard coded value, for instance)
+
+You can see an example in the listing below:
+
+<pre><code class="php">
+class myExt_actions_Main extends tao_actions_CommonModule {
+
+    public function login() {
+
+     //instantaite our container
+     $loginContainer = new myExt_actions_form_Login();
+
+     //get the form reference 
+     $loginForm = $loginContainer->getForm();
+
+     if($loginForm->isSubmited() && $loginForm->isValid()){
+       //we compare the values once posted  ( it's only to illustrate, so never do that kind of authentication!)
+       if($loginForm->getValue('login') == 'admin' && md5($loginForm->getValue('password')) == md5('admin')){
+           echo "Correct!";
+       }
+       else{
+           echo "Wrong login pass!";
+       }
+     }
+
+      echo $loginForm->render(); //we don't use templates for the example
+    }
+
+}
+</code></pre>
+
+!http://forge.taotesting.com/attachments/download/215/returnTopArrow.JPG![[Helpers|Return to Top]]

@@ -1,0 +1,126 @@
+h1. Tao 3.0 structures.xml format
+
+TAO 3.0 and on introduces many changes to the structures.xml files, migration from old-style structures.xml is very straightforward.
+
+HERE MIGRATION STEPS
+
+h2. *+Do I have the legacy version of structures.xml:+*
+
+The presence of <icon> child element of both <structure> element and <action> element indicates the new format.
+Where as absence of many url attributes in the <tree> child element of the <trees> signals a legacy version of structures.xml
+
+Check out above changes to see if you have the new format of structures.xml.
+
+h2. *+Example+*
+Here's an example of what a legacy structures.xml file might look like:
+
+<pre>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="items" name="Items" level="0" visible="true">
+		<description>Create and design items and exercises.</description>
+		<sections>
+			<section id="manage_items" name="Manage items" url="/taoItems/Items/index">
+				<trees>
+					<tree name="Items library"
+						className="Item"
+						dataUrl="/taoItems/Items/getOntologyData"
+						editClassUrl="/taoItems/Items/editItemClass"
+						editInstanceUrl="/taoItems/Items/editItem"
+						addInstanceUrl="/taoItems/Items/addInstance"
+						addSubClassUrl="/taoItems/Items/addSubClass"
+						deleteUrl="/taoItems/Items/delete"
+						duplicateUrl="/taoItems/Items/cloneInstance"
+						moveInstanceUrl="/taoItems/Items/moveInstance"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/taoItems/Items/search" context="*" />
+					<action name="new class" js="subClass" url="/taoItems/Items/addSubClass" context="class" />
+					<action name="new item" js="instanciate" url="/taoItems/Items/addInstance" context="class" />
+					<action name="delete" js="removeNode" url="/taoItems/Items/delete" context="resource" />
+					<action name="duplicate" js="duplicateNode" url="/taoItems/Items/cloneInstance" context="instance" />
+					<action name="move" js="moveNode" url="/taoItems/Items/moveInstance" context="instance" />
+					<action name="preview" js="fullScreen" url="/taoItems/Items/fullScreenPreview" context="instance" />
+					<action name="lists"  url="/tao/Lists/index"  context="*" />
+					<action name="meta data" js="loadMetaData" url="/tao/MetaData/getMetaData"  context="resource" />
+					<action name="export" url="/taoItems/ItemExport/index"  context="resource" />
+					<action name="import" url="/taoItems/ItemImport/index"  context="class" />
+				</actions>
+			</section>
+			<section id="items_authoring" name="Authoring" url="/taoItems/Items/authoring" />
+                        <section id="items_preview" name="Preview" url="/taoItems/ItemPreview/index" />
+		</sections>
+	</structure>
+</structures>
+</pre>
+
+The new-style structures.xml might look like what is below.
+<pre>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="items" name="Items" level="0" group="main">
+        <description>Create and design items and exercises.</description>
+        <icon id="icon-item"/>
+        <sections>
+            <section id="manage_items" name="Manage items" url="/taoItems/Items/index">
+                <trees>
+                    <tree name="Items library"
+                          className="Item"
+                          dataUrl="/taoItems/Items/getOntologyData"
+                          selectClass="Edit class"
+                          selectInstance="Edit item"
+                          moveInstance="Move"
+                          delete="Delete" />
+                </trees>
+                <actions>
+                    <action name="Edit class" url="/taoItems/Items/editItemClass" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action name="Edit item"  url="/taoItems/Items/editItem" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action name="Filter" context="*" group="search" binding="filter">
+                        <icon id="icon-filter"/>
+                    </action>
+                    <action name="Search" url="/taoItems/Items/search" context="*" group="search" binding="launchFinder">
+                        <icon id="icon-find"/>
+                    </action>
+                    <action name="New class" url="/taoItems/Items/addSubClass" context="class" group="content" binding="subClass">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action name="New item" url="/taoItems/Items/addInstance" context="class" group="content" binding="instanciate">
+                        <icon id="icon-item"/>
+                    </action>
+                    <action name="Delete" url="/taoItems/Items/delete" context="resource" group="tree" binding="removeNode">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action name="Duplicate" url="/taoItems/Items/cloneInstance" context="instance" group="tree" binding="duplicateNode">
+                        <icon id="icon-copy"/>
+                    </action>
+                    <action name="Move" url="/taoItems/Items/moveInstance" context="instance" group="tree" binding="moveNode">
+                        <icon id="icon-move-item"/>
+                    </action>
+                    <action name="Preview" url="/taoItems/Items/fullScreenPreview" context="instance" group="content" binding="fullScreen">
+                        <icon id="icon-preview"/>
+                    </action>
+                    <action name="Lists" url="/tao/Lists/index" context="*" group="tree">
+                        <icon id="icon-ul"/>
+                    </action>
+                    <action name="Export" url="/taoItems/ItemExport/index" context="resource" group="content">
+                        <icon id="icon-export"/>
+                    </action>
+                    <action name="Import" url="/taoItems/ItemImport/index" context="class" group="content">
+                        <icon id="icon-import"/>
+                    </action>
+                    <action name="Translate" url="/taoItems/Items/translateInstance" context="instance" group="content">
+                        <icon id="icon-translate"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>
+</pre>

@@ -1,0 +1,49 @@
+{{>toc}}
+
+*TODO Content need to be update*
+New UI has been design to support versionning activation
+
+h1. Enable versioning
+
+By default the versioning feature is not enabled when you install TAO. The versioning require a versioning server which is not installed by default on your computer.
+If you have access to a versioning system, you can follow the next points to enable versioning into TAO.
+
+h2. Local working copy
+
+Firstly you need to be sure that you have a local folder where the http user (www-data for apache) can checkout the remote repository.
+By instance be sure that the folder _generis/data/versioning/_ and its subfolders are writable for the http user (www-data for apache).
+
+h2. Update the config file
+
+Secondly an option to configure the versioning is to use the generis config file. _It is not mandatory, but it is practical when you have to reinstall the versioning more than once_
+
+The generis config file is located at _generis/common/conf/versionning.conf.php_. Change also the _generis/common/conf/default/versionning.conf.php_ if you want to make setting persistent.
+
+<pre><code class="PHP">
+define('GENERIS_VERSIONED_REPOSITORY_LOGIN' , 'my_login');
+define('GENERIS_VERSIONED_REPOSITORY_PASSWORD' , 'my_password');
+define('GENERIS_VERSIONED_REPOSITORY_TYPE' , 'svn');
+define('GENERIS_VERSIONED_REPOSITORY_URL' , 'http://url_of_my_repository/svn');
+define('GENERIS_VERSIONED_REPOSITORY_PATH' , GENERIS_FILES_PATH.'/versioning/DEFAULT');
+define('GENERIS_VERSIONED_REPOSITORY_LABEL' , 'Tao default versioned repository');
+define('GENERIS_VERSIONED_REPOSITORY_COMMENT' , 'The default repository used to manage versioned files');
+</code></pre>
+
+
+h2. Enable the versioning
+
+Execute the script _tao/script/taoVersioning.php_.
+
+<pre>
+php taoVersioning.php -e
+</pre>
+
+
+If you did not use the generis config file, you can pass arguments to the script.
+
+<pre>
+php taoVersioning.php -e -type svn -u my_login -p my_password --path /path/to/the/local/working_copy --url http://url_of_the/svn
+</pre>
+
+
+Be sure that the directory you choose as local working copy and its subfolders are writable for the http user (www-data for apache)

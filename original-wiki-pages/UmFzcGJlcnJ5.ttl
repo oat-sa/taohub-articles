@@ -1,0 +1,106 @@
+h1. Tao on a Raspberry
+
+!raspberry-pi-7.jpg!
+So, you want to use raspberry as a tao web server and deliver your tests over a local Wi-Fi ?
+
+
+h2. 1. Download RaspDebian 
+
+It is right here : http://downloads.raspberrypi.org/raspbian_latest
+
+h2. 2. Prepare a SD card 
+
+From Windows : http://sourceforge.net/projects/win32diskimager
+From Mac OS X : http://ivanx.com/raspberrypi
+From Linux : 
+<pre>
+sudo apt-get install ImageWriter
+</pre>
+
+Follow the instructions specific to the tool to deploy the image on the SDcard
+
+Insert the sd card into your raspberry, plug the power.
+
+h2. 3. Plug the ethernet cable into the raspberry
+
+h2. 4. Find the IP of your raspberry
+
+_Scenario 1: You have a screen connected on the raspberry._ 
+ 
+Login as "pi" using password "raspberry"
+Type in the shell
+<pre>
+ ifconfig
+</pre> 
+<pre>
+eth0      Link encap:Ethernet  HWaddr b8:27:eb:c2:ec:3d  
+          inet addr:*192.168.2.74*  Bcast:192.168.2.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:6511 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:298 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:446904 (436.4 KiB)  TX bytes:29571 (28.8 KiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+
+</pre>
+
+
+and take note of the resulting IP adress. 
+
+_Scenario 2: Like us, you couldn't afford buying a screen ..._ 
+
+This one is diffcult, all raspberry have a MAC adress starting with b8:27:eb
+Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters. 
+From a mac you may use conveniently http://ivanx.com/raspberrypi/files/PiFinder.zip
+From Linux :
+<pre>
+#!/bin/bash
+# findPi:
+#       Find all Pi's on the LAN
+
+fping -a -r1 -g 192.168.254.0/24  &> /dev/null
+arp -n | fgrep " b8:27:eb"
+</pre>
+
+From Windows : ???
+
+h2. 5. Connect to your raspberry PI 
+
+ssh pi@THEFOUNDIP 
+using the default password raspberry
+
+h2. 6. Give your Raspberry a fixed IP 
+
+You may follow this guide : https://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address
+This step may become mandatory especially if you don't use vhost. As tao memorizes the root url at installation time, if you use the IP for installing tao (step 8) and that afterwards its ip change, test takers won't be able to connect. We recommend either to use a vhost configuration or to use a fixed IP. 
+
+h2. 7. Change pi password
+
+<pre>
+passwd pi
+</pre>
+
+h2. 8. Start the LAMP stack installation : 
+http://forge.taotesting.com/projects/tao/wiki/InstallUbuntuApacheMySQL
+
+h2. 9. Start TAO installation 
+From any computer on the same network :
+http://yourip/tao/install
+or vhost 
+http://vhost/tao/install
+
+
+
+h2. 10. Optimize your PI .
+
+<pre>
+sudo apt-get install php-apc
+</pre>

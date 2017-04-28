@@ -1,0 +1,42 @@
+{{>toc}}
+
+h1. Developer Guide
+
+h2. 1. [[How TAO development works]]
+
+h2. 2. [[Guidelines]]
+
+h2. 3. [[Documentation for core components]] 
+
+h2. 4. [[Build]] 
+
+h2. 5. [[Continous Integration]] 
+
+
+h2. 6. How to contribute?
+
+h3. 6.1. [[Make a new extension]]
+
+h3. 6.2. [[Change core code|Change code]]
+
+h3. 6.3. [[Translate TAO into other languages]] 
+
+h3. 6.4. [[Help document TAO]] 
+
+h3. 6.5. [[Join the testing effort]] 
+
+h2. 7. Resources
+
+h3. 7.1. [[FAQ]]
+
+h3. 7.2. [[Database Schema]]
+
+h3. 7.3. [[IDEs|Development Tools]]
+
+h3. 7.4. [[Licenses]]
+
+h3. 7.5. [[How to activate a new language in Data and Interface]]
+
+h3. 7.6. [[Exported Files]]
+
+h2. 8. [[See also]]

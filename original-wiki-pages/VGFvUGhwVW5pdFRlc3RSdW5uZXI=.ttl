@@ -1,0 +1,12 @@
+h1. TaoPhpUnitTestRunner
+
+Base TAO PhpUnit test case class extending [[GenerisPhpUnitTestRunner]]. Contains some useful helpers and initialization routines.
+
+h2. initTest
+
+Connects to the API starting TestUser session.
+
+h2. invokeProtectedMethod
+
+Helper for accessing protected/private methods of tested classes. 
+Based on ReflectionClass.

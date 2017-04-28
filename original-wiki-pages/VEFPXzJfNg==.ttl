@@ -1,0 +1,15 @@
+h2. TAO 2.6
+
+[[Requirements for Tao 2.6]]
+
+h3. REST
+
+{{collapse(Details ...)
+Exposes our API thanks to a REST wrapper
+!RestWrapper.png!
+}}
+
+
+h3. Update
+
+Adapting Extensions to [[Code changes 2.5 to 2.6]]

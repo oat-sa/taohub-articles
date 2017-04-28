@@ -1,0 +1,38 @@
+h1. Installing a new extension
+
+Description on how to install extensions that are not part of the default TAO package. Some extensions are deprecated or experimental so please proceed at your own risk.
+
+A list of released extensions can be found here: https://packagist.org/packages/oat-sa/
+
+h2. Download
+
+Depending on your install there are two different way to obtain an extension:
+
+h3. Composer Install
+
+If you installed TAO using composer simply run the following line in the root of TAO:
+
+<pre>composer require PACKAGE_NAME</pre>
+
+h3. Packaged Version
+
+If you installed TAO from a package downloaded at http://www.taotesting.com you will need to:
+
+* Download the extension from Github (https://github.com/oat-sa).
+* Unzip the content and rename it according to the *tao-extension-name* specified in the composer.json. Place this renamed folder in the web root of TAO.
+* Manually modify the composer autoloader.
+
+For example: If the composer.json included
+<pre>"psr-4" : {
+    "oat\\SOMENAME\\" : ""
+}</pre>
+
+the following line would need to be added to _/vendor/composer/autoload_psr4.php_:
+
+<pre><code class="php">'oat\\SOMENAME\\' => array($baseDir . '/SOMENAME'),</code></pre>
+
+h2. Install
+
+* Log into TAO as a System Administrator.
+* Open the Extensions Manager (Under "Settings" in the upper right corner).
+* Select the extension you downloaded and click on install. (If the extension is missing in the list please verify the path and the file permissions).

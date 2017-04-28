@@ -1,0 +1,51 @@
+h1. Javascript libraries
+
+_For TAO version 2.3._
+
+h2. JQuery
+> *Version* : 1.8 (up to date)
+> *URL* : www.jquery.com
+
+h2. JQuery UI
+> *Version* : 1.8.23 (up to date)
+> *URL* : www.jqueryui.com
+
+h2. require
+> *Version* : 2.0.6 (up to date)
+> *URL* : www.requirejs.org
+
+h2. jqGrid
+> *Version* : 4.4.0 (up to date)
+> *URL* : www.trirand.com
+
+h2. jsTree
+> *Version* : 0.0.9a
+> *URL* : www.jstree.com
+
+Do not upgrade ! The newest 1.0 version has no compatibility.
+Need to rewrite all custom parts.
+
+h2. uploadify
+> *Version* : 2.1.4
+> *URL* : www.uploadify.com
+
+Newest version exist (+3.1)
+
+h2. wysiwyg
+> *Version* : 0.93
+> *URL* : https://github.com/akzhan/jwysiwyg
+
+Newest version exist (+0.97)
+
+h2. Raphaël
+> *Version* : 1.5.2
+> *URL* : www.raphaeljs.com
+
+Newest version exist (+2.1.0)
+
+h2. jqPlot
+> *Version* : 1.0.3 (up to date)
+> *URL* : www.jqplot.com
+
+
+see [[PHP libraries]]

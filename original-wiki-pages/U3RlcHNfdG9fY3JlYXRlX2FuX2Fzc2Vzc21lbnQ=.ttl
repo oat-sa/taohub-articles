@@ -1,0 +1,42 @@
+h1. Steps to create an assessment
+
+{{>toc}}
+
+To manage the different steps of the computer based assessment processes, you have to:
+ 
+h2. 1. In Items part, create items 
+
+
+p((((. !Create_Item.png!
+
+
+h2. 2. Then in Tests part, group and order items into tests
+
+
+p((((. !Create_Test.png!
+
+
+h2. 3. In Test takers part, create test takers
+
+
+p((((. !Create_Testtaker.png!
+
+ 
+h2. 4. Then in Groups part, group test takers into groups
+
+
+p((((. !Create_Group.png!
+
+h2. 5.	In Deliveries part, group and order tests into deliveries 
+
+
+p((((. !Create_Delivery.png!
+
+h2. 6.	Also in Deliveries part, assign groups to deliveries
+
+
+p((((. !Create_Delivery2.png!
+
+h2. 7.	And in Results part, access, view and export the collected results
+
+p((((. !View_Result.png!

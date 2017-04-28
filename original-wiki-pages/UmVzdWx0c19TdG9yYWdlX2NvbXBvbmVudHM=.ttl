@@ -1,0 +1,19 @@
+h1. Results Storage components
+
+h2. Relational Database Storage (taoOutcomeRds)
+
+The taoOutcomeRds extension store results in a relational database, it uses 3 tables.
+The first one stores the relation between test taker, delivery and delivery execution. This table is called results_storage.
+|_.result_id |_.test_taker |_.delivery |
+|primary key | | |
+|delivery execution uri |test taker uri |delivery uri |
+
+The second stores the variables (test and item) related to a delivery execution and a call id (the item or test that ask for storage). This table is called variables_storage
+|_.variable_id |_.results_result_id |_.call_id_test |_.call_id_item |_.test |_.item |_.identifier |_.class |
+|primary key |foreign key | | | | | | |
+|int |delivery execution uri | |delivery execution uri + item rank |test uri |item uri |variable identifier |variable class |
+
+The last one stores values of each variable in a key value storage. This table is called results_kv_storage
+|_.variables_variable_id |_.result_key |_.result_value |
+|primary and foreign key |primary key | |
+|variable primari key |variable property key |variable property value |

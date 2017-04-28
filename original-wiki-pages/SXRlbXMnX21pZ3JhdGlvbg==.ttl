@@ -1,0 +1,65 @@
+!http://forge.taotesting.com/attachments/download/760/attention.png!*This page is deprecated and needs to be rewritten*
+
+h1. Items' migration
+
+h2. Why migrate items
+
+Since the version 1.3 of TAO, we focus on new kind of Items and have decided to define the others as deprecated. In order to prevent the lost of your item and to use the new technologies, we provide a tool to migrate your deprecated items into one of the new item type.
+
+|\4=.*Items types state*|
+|_.Type|_.v1.2|_.v1.3|_.v2.0|
+|QCM|=.!http://forge.taotesting.com/attachments/407/normal.png!|=.!http://forge.taotesting.com/attachments/405/deprecated.png!|=.!http://forge.taotesting.com/attachments/405/deprecated.png!|
+|Campus|=.!http://forge.taotesting.com/attachments/407/normal.png!|=.!http://forge.taotesting.com/attachments/405/deprecated.png!|=.!http://forge.taotesting.com/attachments/405/deprecated.png!|
+|Khos|=.!http://forge.taotesting.com/attachments/407/normal.png!|=.!http://forge.taotesting.com/attachments/407/normal.png!|=.!http://forge.taotesting.com/attachments/405/deprecated.png!|
+|CTest|=.!http://forge.taotesting.com/attachments/407/normal.png!|=.!http://forge.taotesting.com/attachments/407/normal.png!|=.!http://forge.taotesting.com/attachments/405/deprecated.png!|
+|HAWAI|=.!http://forge.taotesting.com/attachments/406/experimental.png!|=.!http://forge.taotesting.com/attachments/406/experimental.png!|=.!http://forge.taotesting.com/attachments/407/normal.png!|
+|QTI|=.!http://forge.taotesting.com/attachments/408/not-impl.png!|=.!http://forge.taotesting.com/attachments/407/normal.png!|=.!http://forge.taotesting.com/attachments/407/normal.png!|
+|Open Web Item|=.!http://forge.taotesting.com/attachments/408/not-impl.png!|=.!http://forge.taotesting.com/attachments/407/normal.png!|=.!http://forge.taotesting.com/attachments/407/normal.png!|
+
+|\2=.States|
+|Normal|!http://forge.taotesting.com/attachments/407/normal.png!|
+|Deprecated|!http://forge.taotesting.com/attachments/405/deprecated.png!|
+|Not implemented|!http://forge.taotesting.com/attachments/408/not-impl.png!|
+|Exeperimental|!http://forge.taotesting.com/attachments/406/experimental.png!|
+
+h2. How to migrate items
+
+There is a command line script to run with a few arguments to migrate your items.
+
+The script is located in @taoItems/scripts@ and is called @migrateLegacy.php@
+To run it
+* On a Mac/Unix/Linux System:
+<pre><code>cd taoItems/scripts
+php migrateLegacy.php --arg1=value1 --arg2=value2
+</code></pre> 
+* On a Windows System:
+<pre><code>CD taoItems\scripts
+C:\PHP5\php.exe -f "migrateLegacy.php" -- -arg1=value1 -arg2=value2
+</code></pre>
+
+To get the description of the script options, just launch it with the help argument.
+
+
+Usage:@php migrateLegacy.php [arguments]@
+
+|\5=.*Arguments*|
+|_.Name|_.Shortcut|_.Required|_.Type|_.Description|
+|input|i|=.yes|file|The input file containing the legacy item|
+|output|o| |dir|The output directory to save the new item, by default the same than the input|
+|uri|u|	|string|The uri of an existing resource to bind the item content|
+|addResource|a| |boolean|Create a new resource to bind the item content|
+|class|c| |string|The RDFS class where to add the resource|
+|pack|p| |boolean|Create a package|
+
+
+We can distinguish 3 scenarios:
+# You have a TAO installation of a previous version (1.1 for instance) and you want to migrate all your items.
+# You have some items files that you would like to convert but independently of a TAO installation.
+# You have some items files that you would like to insert in a recent TAO distribution. 
+
+Regarding the scenario that match the best to your needs, you will run the script with a specific combination of arguments.
+For example, for the second scenario, we will use the _input_, _output_ and _pack_ arguments. The command will look like this:
+<pre><code>php migrateLegacy.php --input=path/to/myQCM.xml --output=path/to/newitem/folder/ --pack=true</code></pre>
+_or using the shortcuts syntax_
+<pre><code>php migrateLegacy.php -i path/to/myQCM.xml -o path/to/newitem/folder/ -p true</code></pre>
+

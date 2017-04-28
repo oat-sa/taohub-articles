@@ -1,0 +1,20 @@
+h1. TaoItems
+
+The taoItems extension manages the items.
+
+* [[Items' Types]]
+* [[Items' API]]
+* [[Items' migration]]
+
+------------------------------
+
+h2. Dependencies
+
+none
+
+------------------------------
+
+h2. Ontology model
+
+!http://forge.taotesting.com/attachments/1222/taoItemRDF.png!
+

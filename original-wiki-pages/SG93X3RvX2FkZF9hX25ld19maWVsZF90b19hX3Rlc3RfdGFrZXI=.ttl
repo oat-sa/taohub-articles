@@ -1,0 +1,99 @@
+h1. How to add a new field to a test taker
+
+Models
+
+You will need to edit the core ontology to be able to add a new field to a test taker. Begin by opening the ontology located at /generis/core/ontology/generis.rdf
+
+We can see a sample such as the field userMail.
+<pre>
+<code class="XML">
+<rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#userMail">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User Mail]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Mail]]></rdfs:label>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+</code>
+</pre>
+
+h1. Step 1 - add the following code under #userMail and note that is is a duplicate (with only the about attribute changed)
+
+<pre>
+<code class="XML">
+<rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#company">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Company]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Company]]></rdfs:label>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+</code>
+</pre>
+
+h1. Step 2 - Update the ontologies by running the script taoRDFImport.php, you can use the following command:
+
+php tao/scripts/taoRDFImport.php -u <TAO username> -p <TAO password> -i generis/core/ontology/generis.rdf
+
+NOTE: Please use the your TAO username and Password (not the MySQL ones)
+
+h1. Optional TAO integrations
+
+h2. Option 1: Add a constant to refer to the property URI in generis/common/constants.php
+
+<pre>
+<code class="XML">
+define('PROPERTY_USER_COMPANY' ,				GENERIS_NS . '#company' , true);
+</code>
+</pre>
+
+h2. Option 2: Get all the users that meet the new company parameter
+
+h3. Option 2a: Add a get method in tao/models/classes/class.UserService.php
+<pre>
+<code class="XML">
+/**
+     * Short description of method getAllUsersWithCompany
+     *
+     * @access public
+     * @author Jerome Bogaerts, <jerome.bogaerts@tudor.lu>
+     * @param  array options
+     * @return array
+     */
+    public function getAllUsersWithCompany($company, $options = array())
+    {
+        $returnValue = array();
+
+        $userClass = new core_kernel_classes_Class(CLASS_TAO_USER);
+		$options = array_merge(array('recursive' => true, 'like' => true), $options);
+		$filters = array(PROPERTY_USER_COMPANY => $company);
+		$returnValue = $userClass->searchInstances($filters, $options);
+
+        return (array) $returnValue;
+    }
+</code>
+</pre>
+
+h3. Option 2b: Call the function from your controller (if you create your own extension)
+
+<pre>
+<code class="XML">
+use tao_models_classes_UserService;
+</code>
+</pre>
+
+
+<pre>
+<code class="XML">
+$userService = tao_models_classes_UserService::singleton();
+		$users = $userService->getAllUsersWithCompany($company); 
+		echo ("<br/><u>Users</u> at ".current($company));
+		foreach ($users as $currentUser) {
+			echo ("<br/>".$currentUser);
+		}
+</code>
+</pre>

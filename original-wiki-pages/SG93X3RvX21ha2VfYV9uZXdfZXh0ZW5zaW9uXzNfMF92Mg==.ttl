@@ -1,0 +1,308 @@
+{{>toc}}
+
+h1. How to make a new extension 3 0 v2
+
+h2. Preparation
+
+# Install TAO (3.0) (https://github.com/oat-sa/package-tao)
+# download taoDevTools extension using composer : 
+<code>composer require "oat-sa/extension-tao-devtools" --dev</code>
+# Make sure the extension taoDevTools has been installed ([[How to install an extension]]).
+
+h2. Create the extension
+
+# Log into Tao Back Office with your TaoManager account
+# Go to "Settings"(upper right corner) -> "Extensions Manager"
+# Click on "create new" to create your new extension
+# Fill out the form and call your new extension "taoDocs" ( you can select some Samples to generate extra structure, according to your choice )
+# Return to the extension manager, refresh with F5 , select taoDocs, and install it
+# go to project root directory and verify folder “taoDocs” exists.
+# Go to taoDocs directory, you can see a standard extension structure.
+# Go to controller directory, open TaoDocs.php. This is a simple controller sample.
+# A “taoDocs” section has appear on top main menu. Go to “taoDocs” section and look at your new extension.
+
+h2. Step 1 : “Hello World”
+
+to create your first controller, go to taoDocs/controller directory and  create a file named Hello.php. Create a php class Hello extends tao_actions_CommonModule
+
+<pre><code class="php"><?php
+namespace oat\taoDocs\controller;
+
+class Hello extends \tao_actions_CommonModule {
+
+}</code></pre>
+
+Now, create a simple action using a template file.
+
+<pre><code class="php">
+public function myName() {
+        $this->setData('myName', 'tao');
+        $this->setView('myName.tpl');
+    
+    }</code></pre>
+
+To create your first template: go to directory views/templates and create Hello folder.
+Create myName.tpl file.
+
+<pre>
+<code class='php'>
+<div class="main-container">
+    <h1>Hello my name is <?=(get_data('name'))?></h1>
+</div>
+</code>
+</pre>
+
+* To test this action visit _(URL:/taoDocs/Hello/myName)_
+
+to Add link to hello world on extension menu. Return to controller directory and Open structures.xml.
+In the sections tag, add this section
+<pre>
+<code class='php'>
+<section id="taoDocs_hello" name="hello" url="/taoDocs/Hello/myName"/>
+</code>
+</pre>
+
+go to tools section !tools.png! (right uper side) and click on “empty cache” button.
+
+refresh your page and see :
+
+!tao_extension_1.png!
+
+change extension icon : reopen structures.xml and add <icon id="icon-folder" /> like this :
+
+<pre>
+<code class='php'>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="taoDocs_main" name="taoDocs" level="15" group="main">
+            <icon id="icon-folder" src=""/>
+		<description />
+		<sections>
+			<section id="taoDocs_main" name="taoDocs" url="/taoDocs/TaoDocs/index" />
+			<section id="taoDocs_other" name="Template" url="/taoDocs/TaoDocs/templateExample" />
+                        <section id="taoDocs_hello" name="hello" url="/taoDocs/Hello/myName" />
+		</sections>
+	</structure>
+</structures>
+</code>
+</pre>
+
+!tao_extension_2.png!
+
+Empty cache and refresh. More icons here http://style.taotesting.com/icon-listing/
+
+h2. Step 2 : create complexe structure : 
+
+1. reopen Hello.php and add a new controller method
+
+<pre>
+<code class='php'>
+Public function helloAll() {
+
+}
+
+public function getHelloList() {
+        
+        $dataName = 
+                [
+                    'luke',
+                    'biggs',
+                    'wedge',
+                ];
+        
+        $data = array(
+			'data' 	=> __("Hello"),
+			'attributes' => array(
+					'id' => 1,
+					'class' => 'node-class'
+				),
+			'children' => array()
+			);
+        
+        foreach ($dataName as $index => $name) {
+ $data['children'][] =  array(
+				'data' 	=> 'my name is ' . ucfirst($name),
+				'attributes' => array(
+						'id' => 'name_' . $index,
+						'class' => 'node-instance'
+					)
+			);               
+        }
+        echo json_encode($data);
+    }
+</code>
+</pre>
+
+Add your new section to structures.xml
+
+<pre>
+<code class='php'>
+<section id="taoDocs_helloAll" name="hello All" url="/taoDocs/Hello/helloAll" >
+                            <trees>
+                                <tree name="Hello library" 
+                                dataUrl="/taoDocs/Hello/getHelloList" 
+                                className="Group" 
+                                selectClass="hallo" 
+                                selectInstance="hallo" 
+                                moveInstance="hallo" 
+                                delete="hallo"/>
+                            </trees>
+                            <actions>
+                                <action id="hallo" name="Hello you" url="/taoDocs/Hello/myName" group="content" context="instance">
+                                    <icon id="icon-edit"/>
+                                </action>   
+                            </actions>
+                        </section>
+</code>
+</pre>
+
+empty cache and refresh, you can see a new tab on "taoDocs" menu.
+
+h2. Step 3 : customized actions :
+
+Add some actions on structures.xml : 
+<pre>
+<code>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="taoDocs_main" name="taoDocs" level="15" group="main">
+            <icon id="icon-folder" src=""/>
+		<description />
+		<sections>
+			<section id="taoDocs_main" name="taoDocs" url="/taoDocs/TaoDocs/index" />
+			<section id="taoDocs_other" name="Template" url="/taoDocs/TaoDocs/templateExample" />
+                        <section id="taoDocs_hello" name="hello" url="/taoDocs/Hello/myName" />
+                        <section id="taoDocs_helloAll" name="hello All" url="/taoDocs/Hello/helloAll" >
+                            <trees>
+                                <tree name="Hello library" 
+                                dataUrl="/taoDocs/Hello/getHelloList" 
+                                className="Group" 
+                                selectClass="hallo" 
+                                selectInstance="hallo" 
+                                moveInstance="hallo" 
+                                delete="hallo"/>
+                            </trees>
+                            <actions>
+                                <action id="hallo" name="Hello you" url="/taoDocs/Hello/myName" group="content" context="instance">
+                                    <icon id="icon-edit"/>
+                                </action>
+                                <action id="obiwan" name="obiwan kenobi" url="/taoDocs/Hello/obiwan" group="tree" context="instance">
+                                    <icon id="icon-target"/>
+                                </action>  
+                                <action id="vader" name="Darth Vader" url="/taoDocs/Hello/vader" group="tree" context="instance">
+                                    <icon id="icon-warning"/>
+                                </action>  
+                            </actions>
+                        </section>
+		</sections>
+	</structure>
+</structures>
+</code>
+</pre>
+
+*Add vader and obiwan actions on Hello.php controller :*
+
+<pre>
+<code>
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+namespace oat\taoDocs\controller;
+
+class Hello extends \tao_actions_CommonModule {
+    
+    protected $pilots = [
+                    'red_1' => 'luke',
+                    'red_2' => 'biggs',
+                    'red_5' => 'wedge',
+                    ];
+
+
+    /**
+     * initialize the services
+     */
+    public function __construct(){
+        parent::__construct();
+    }
+    
+    public function myName() {
+        
+        $name = 'tao';
+        
+        if($this->hasRequestParameter('uri')) {
+            $uri = $this->getRequestParameter('uri');
+            if(array_key_exists($uri, $this->pilots)) {
+            $name = $this->pilots[$uri];
+            }
+        }
+        
+        $this->setData('myName', $name);
+        $this->setView('myName.tpl');
+    }
+    
+    public function helloAll() {
+
+    }
+    
+    public function getHelloList() {
+        
+        $data = array(
+			'data' 	=> __("Hello"),
+			'attributes' => array(
+					'id' => 1,
+					'class' => 'node-class'
+				),
+			'children' => array()
+			);
+        
+        foreach ($this->pilots as $index => $name) {
+             $data['children'][] =  array(
+				'data' 	=> 'my name is ' . ucfirst($name),
+				'attributes' => array(
+						'id' => $index,
+                                        
+						'class' => 'node-instance'
+					)
+			);               
+        }
+        echo json_encode($data);
+    }
+    
+    public function vader() {
+        $name = '';
+        if($this->hasRequestParameter('uri')) {
+            $uri = $this->getRequestParameter('uri');
+            if(array_key_exists($uri, $this->pilots)) {
+                $name = $this->pilots[$uri];
+            }
+        }
+        echo ucfirst($name) . ', I\'m your father';
+        
+    }
+    
+    public function obiwan() {
+        $name = '';
+        if($this->hasRequestParameter('uri')) {
+            $uri = $this->getRequestParameter('uri');
+            if(array_key_exists($uri, $this->pilots)) {
+                $name = $this->pilots[$uri];
+            }
+        }
+        echo ucfirst($name) . ', may the force be with you';
+        
+    }
+    
+}
+</code>
+</pre>
+
+*Empty cache and enjoy.*
+
+!tao_extension_3.png!

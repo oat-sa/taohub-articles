@@ -1,0 +1,20 @@
+h1. Migration 2.1 to 2.2
+
+h2. Generis
+
+* config.php file have been split in multiple files. Files that are completed during installation are stored in_ generis/common/conf/sample_ and are then duplicated in _generis/common/conf_. File in _generis/common/conf/default_ are included if no version of the same file is found in _generis/common/conf_, so if you want to customize some behavior just copy and edit the file and put it _generis/common/conf_, this file will not be change by any new installation.
+* a new function createInstanceWithProperties() is available, that can create a new instance and assign several properties with a single call to the database.
+** please use this instead of saveUser() to quickly create a user in testCases
+* New Uri Provider that have been developed to avoid redundant uri in high concurrency usage. You can set up which one you used in generis.db.conf
+
+h2. Extensions
+
+* Services are no longer instantiated via the _ServiceFactory_, but are instead instantiated by calling the static function _singleton()_ on the desired service (see [[Models]]).
+
+h2. Session
+
+* core_kernel_classes_Session now stores the user, his interface language, data language and roles. This object is no longer handled by the front-controller but stores itself in the session.
+
+h2. Access Control
+
+* Every module and actions in any extensions can now be address by a specific Role in order to set up your platform in order to configure the way platform's user access different feature, more information in [[Functionality_access_control|dedicated page]]

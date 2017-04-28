@@ -1,0 +1,65 @@
+{{>toc}}
+
+h1. Code Changes from 3.0 to 3.1
+
+h2. taoDelivery
+
+taoDelivery has been split into two extensions:
+
+* *taoDelivery* for the test-taker experience
+* *taoDeliveryRdf* for the delivery management
+
+h3. Controllers
+
+The old taoDelivery controllers _taoDelivery_actions_*_ have been moved from taoDelivery/action to controller of their respective extension:
+* _taoDelivery_actions_DeliveryServer_ to _oat\taoDelivery\controller\DeliveryServer_
+* all others to _oat\taoDeliveryRdf\controller\*_
+
+h3. Delivery execution state identifiers
+
+These states were in the past stored as either global constants or using _oat\taoFrontOffice\model\interfaces\DeliveryExecution_, but will in the future be part of the *oat\taoDelivery\model\execution\DeliveryExecution* interface.
+
+h3. Services
+
+Almost all services (with the exception of _taoDelivery_models_classes_DeliveryServerService_ and _taoDelivery_models_classes_execution_*_) were part of the delivery management and have therefore been moved to taoDeliveryRdf:
+
+* _taoDelivery_models_classes_TrackedStorage_ -> _oat\taoDeliveryRdf\model\TrackedStorage_
+* _taoDelivery_models_classes_SimpleDeliveryFactory_ -> _oat\taoDeliveryRdf\model\SimpleDeliveryFactory_
+* _taoDelivery_models_classes_DeliveryAssemblyService_ -> _oat\taoDeliveryRdf\model\DeliveryAssemblyService_
+* _taoDelivery_models_classes_GuestTestUser_ -> _oat\taoDeliveryRdf\model\guest\GuestTestUser_
+* _taoDelivery_models_classes_GuestTestTakerSession_ -> _oat\taoDeliveryRdf\model\guest\GuestTestTakerSession_
+
+* _taoDelivery_models_classes_AssignmentService_ has been split into the interface _oat\taoDelivery\model\AssignmentService_ and the basic implementation _oat\taoDeliveryRdf\model\GroupAssignment_ that allows you to assign test-takers to deliveries using the groups
+
+* _taoDelivery_models_classes_DeliveryRdf_ has been deprecated in favor of _oat\taoDelivery\model\Assignment_ that represents the link between the test-taker and the delivery
+
+h3. Assets
+
+Templates and JavaScripts have been split between the two extensions according to split of the controllers.
+
+h2. Update scripts
+
+In order to ensure partially completed updates get resumed properly, the abstract update script _common_ext_ExtensionUpdater_ has been enhanced with the functions:
+
+* isVersion($nr)
+* setVersion($nr)
+
+So instead of:
+
+<code style="php"><pre>
+if ($currentVersion == '2.7.9') {
+    // magic happens here
+    $currentVersion = '2.7.10';
+}
+</pre></code>
+
+please use
+
+<code style="php"><pre>
+if ($this->isVersion('2.7.9')) {
+    // magic happens here
+    $this->setVersion('2.7.10');
+}
+</pre></code>
+
+and add a *$this->setVersion($currentVersion)* in between the old update scripts and the new ones.

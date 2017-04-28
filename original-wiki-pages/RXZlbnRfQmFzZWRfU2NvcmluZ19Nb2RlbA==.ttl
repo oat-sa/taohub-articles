@@ -1,0 +1,31 @@
+{{>toc}}
+
+h1. Event Based Scoring Model
+
+Here is the event model that is used to trace activities of test takers:
+* _Trace_ = seq{ _E1*,E2…En_ } 
+* _Event_ E: set { _VV1,VV2…VVm_}
+* _VV_ : (Variable , Value)
+** Fixed variables, TAO variables (source, time,…)
+** Embedded score variables ( score variables calculated by the item)
+** DataType of variable
+** Possible values of a variable. ( events name, true, false, string…)
+
+Example :
+
+<pre>
+
+<EVENT_ROOT>
+    <TAO_EVENT EVENT_NUMBER="1" EVENT_SYMBOL="Z">
+        <name>stimulus</name>
+        <type>RADIO_BTN</type>
+        <time>1830</time>
+        <id>choice1</id>
+    </TAO_EVENT>
+    <TAO_EVENT EVENT_NUMBER="2" EVENT_SYMBOL="N">
+        <name>stimulus</name>
+        <type>BUTTON</type>
+        <time>1962</time>
+        <id>btn_next</id>
+    </TAO_EVENT>
+</pre>

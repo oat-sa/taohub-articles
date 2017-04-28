@@ -1,0 +1,98 @@
+h1. How to use Lti User API
+
+A REST api to convert the *LTI consumer* user id to the *Tao* user uri. Available since Tao 3.1.
+
+h2. Request to API
+
+The entry point is located in the taoLti extension: 
+<pre>
+http://taoLocation.com/taoLti/RestService/getUserId
+</pre>
+This API is only available with HTTP GET method for the moment.
+
+It requires two parameters, _user_id_ (LTI user id) and _oauth_consumer_key_ (LTI consumer key).
+
+The API works in conjunction with the TAO LTI implementation, which is compliant with IMS LTI v1.1.1 specification (http://www.imsglobal.org/specs/ltiv1p1p1)
+
+h2. Response from API
+
+All responses are REST compliant responses.
+
+* 200 - OK
+# Request was correctly handled, there is an associated user uri.
+
+* 400 - Bad request
+# Error on request sent to API, occurs in case of missing parameter(s) (id  & consumer key mandatories)
+_ErrorMsg: At least one mandatory parameter was required but found missing in your request_
+
+* 401 - Unauthorized
+# Supplied credentials are not valid
+
+* 404 - No found
+# Request was correctly handle, but there are no result for the given consumer key
+_ErrorMsg: No Credentials for consumer key xxxxx_
+# Request was correctly handle, but there are no result for the given user id
+_ErrorMsg: No data found for the given id_
+
+* 500 - Internal error
+# Should never happens!
+
+h2. Sample code
+
+<pre>
+<code class="php">
+// Entry point of Lti delivery api
+$apiUrl = 'http://taoLocation.com/taoLti/RestService/getUserId';
+
+// Parameters required to proceed request, take care to escape uri variable
+$lti_user_id = '12345';
+$lti_consumer_key = '78910';
+
+// Initialize the cURL request
+$process = curl_init($apiUrl . '?user_id=' . $lti_user_id . '&oauth_consumer_key=' . $lti_consumer_key);
+
+// Call api with HTTP GET method
+curl_setopt($process, CURLOPT_HTTPGET, 1);
+
+// Choose your output
+curl_setopt($process, CURLOPT_HTTPHEADER, array("Accept: application/json"));
+        
+// Get response as a string instead of output it directly
+curl_setopt($process, CURLOPT_RETURNTRANSFER , true);
+        
+// Set up your TAO credential
+curl_setopt($process, CURLOPT_USERPWD, "user:password");
+        
+// Proceed the curl request
+$data = curl_exec($process);
+        
+// REST communicate through HTTP code, take care of it
+$httpCode = curl_getinfo($process, CURLINFO_HTTP_CODE);
+       
+ // Close process handling
+curl_close($process);
+</code>
+</pre>
+
+h2. Example of Lti User Api resonse
+
+<pre>
+<code class="javascript">
+ //In case of success, http code = 200
+{
+  "success": true,
+  "data": {
+    "id": "http://tao.local/mytao.rdf#xxxxxxxxxxxxx"
+  },
+  "version": "3.1.0"
+}
+
+//In case of malformed error, http code = 400
+{
+  "success": false,
+  "errorCode": 0,
+  "errorMsg": "At least one mandatory parameter was required but found missing in your request",
+  "version": "3.1.0"
+}
+</code>
+</pre>

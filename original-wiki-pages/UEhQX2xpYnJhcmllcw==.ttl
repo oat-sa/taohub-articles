@@ -1,0 +1,7 @@
+h1. PHP libraries
+
+_For TAO version 2.4._
+
+h2. HTML Purifier
+> *Version* : 4.5.0
+> *URL* : http://htmlpurifier.org

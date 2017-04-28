@@ -1,0 +1,102 @@
+h1. Extension Manifests
+
+Extension Manifests are PHP files that describe TAO Extensions in order to be installed and loaded properly at runtime. On one hand, they essentially contain descriptive contents such as a _name_, _description_, _version_ and _author_. On the other hand, they contains references to the _ontology models_ to load, extensions they _depend on_, _installation files and checks_, ...
+
+From a technical point of view, Extension Manifests are simple PHP files containing an associative array describing the extension. The content of the file is required at runtime and evaluated by PHP at extension loading time.
+
+h2. 1. A Minimal Manifest Example
+
+This manifest file describes a minimal TAO extension. As you can see below, a manifest returns an associative array to describe the extension it belongs to.
+
+<pre>
+<code class="php">
+/**
+ * This lightweight manifest is based on the TAO filemanager one.
+ * 
+ * @author CRP Henri Tudor - TAO Team - {@link http://www.tao.lu}
+ * @license GPLv2  http://www.opensource.org/licenses/gpl-2.0.php
+ */
+
+return array(
+	'name' => 'minimal',
+	'description' => 'a minimal extension',
+	'version' => '1.0',
+	'author' => 'TAO Team',
+	'classLoaderPackages' => array(
+		dirname(__FILE__) . '/actions/'
+	 )
+);
+</code>
+</pre>
+
+h2. 2. A Complete Manifest Example
+
+This manifest file describes a complex extension.
+
+<pre>
+<code class="php">
+/**
+ * @author CRP Henri Tudor - TAO Team - {@link http://www.tao.lu}
+ * @license GPLv2  http://www.opensource.org/licenses/gpl-2.0.php
+ */
+$extpath = dirname(__FILE__).DIRECTORY_SEPARATOR;
+
+return array(
+	'name' => 'myExtension',
+	'description' => 'a more complex extension.',
+	'version' => '2.4',
+	'author' => 'TAO Team',
+	'dependencies' => array('tao'),
+
+	// Model URIs involved in this extension
+	'models' => array(
+		'http://www.tao.lu/Ontologies/TAO.rdf',
+		'http://www.tao.lu/Ontologies/taoFuncACL.rdf'
+	),
+
+	// Installation requirements
+	'install' => array(
+
+		// RDF Files to import at installation time
+		'rdf' => array(
+				dirname(__FILE__). '/models/ontology/myOntology.rdf'
+		),
+		// Requirement checks to perform prior to installation
+		'checks' => array(
+				array('type' => 'CheckPHPRuntime', 'value' => array('min' => '5.3', 'max' => '5.3.18', 'optional' => false))
+		)
+	),
+
+	// Directories where class loaders will crawl for PHP classes and interfaces
+	'classLoaderPackages' => array(
+		dirname(__FILE__).'/vendors/'
+	),
+
+	// Constants that will be either available as PHP constants or through the Extension API.
+	'constants' => array(
+	 	// web services
+		'WS_ENDPOINT_TWITTER' => 'http://twitter.com/statuses/',
+		'WS_ENDPOINT_FACEBOOK' => 'http://api.facebook.com/restserver.php'
+	 )
+);
+</code>
+</pre>
+
+h2. 3. Manifest File Location
+
+The manifest file of an extension must be placed in its root directory. For instance, if you developed an extension in a directory named _documents_, the manifest should be placed at _[TAO_INSTALL_PATH]/documents/manifest.php_.
+
+h2. 4. Manifest Model
+
+* _string_ name
+* _optional_ _string_ description
+* _string_ version
+* _optional_ _string_ author
+* _optional_ _array_ dependencies
+* _optional_ _array_ models
+* _optional_ _array_ install
+** _optional_ _array_ install['php']
+** _optional_ _array_ install['rdf']
+** _optional_ _array_ install['checks']
+* _array_ classLoaderPackages
+* _optional_ constants

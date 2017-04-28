@@ -1,0 +1,48 @@
+{{>toc}}
+
+h1. FAQs
+
+h2. How can I change the software configuration after installation?
+
+The TAO Platform is organized as an aggregate of extensions so that configuration files are distributed among multiple locations on the file system. Each module like Items, Groups or Tests has its own configuration file.
+
+* *TAO Meta-extension*: _path_to_tao/tao/manifest.php_
+* *File Manager*: _path_to_tao/filemanager/manifest.php_
+* *Generis*: _path_to_tao/generis/common/conf/db.conf.php_
+* *Generis*: _path_to_tao/generis/common/conf/generis.conf.php_
+* *Delivery*: _path_to_tao/taoDelivery/manifest.php_
+* *Groups*: _path_to_tao/taoGroups/manifest.php_
+* *Items*: _path_to_tao/taoItems/manifest.php_
+* *Results*: _path_to_tao/taoResults/manifest.php_
+* *Subjects*: _path_to_tao/taoSubjects/manifest.php_
+* *Tests*: _path_to_tao/taoTests/manifest.php_
+* *Workflow Engine*: _path_to_tao/wfEngine/manifest.php_
+* *Workflow Engine Authoring*: _path_to_tao_/wfAuthoring/manifest.php
+
+h2. I cannot see anything in the Item/Test library.
+
+Please make sure that the *JSON* PHP extension is loaded on your web server. You can check if the JSON extension is loaded by using the _phpinfo()_ function. Maybe PHP was compiled with the _--disable-json_ or _--disable-all_ directive. More information about the *JSON* extension "here":http://us.php.net/manual/en/book.json.php.
+
+h2. The error "Fatal error: class 'DomDocument' not found in ..." appears on the screen.
+
+Please make sure that the *DOM* PHP extension is loaded on your web server. This extension may be deactivated if PHP was compiled with the _--disable-dom_ directive. Use the _phpinfo()_ function to get a list of loaded extensions. More information about the *DOM* extension "here":http://us.php.net/manual/en/book.dom.php.
+
+h2. The text "{qti_interaction_new}" appears when I add a new QTI interaction to my item.
+
+This occurs when the PHP *tidy* extension is not loaded. You can check whether or not the extension is loaded with the _phpinfo()_ function. Get more information on how to install the *tidy* extension "here":http://us.php.net/manual/en/book.tidy.php.
+
+!2-faq_tidy.png!
+
+h2. How do I backup my MySQL database ?
+
+<pre>
+mysqldump --user=[username] --password[password] [database_name] > backup.sql
+</pre>
+
+h2. Which privileges does my database user need to properly run TAO?
+
+It depends on the Database Management System you chose to run TAO. Please refer to the [[DatabaseUserPrivileges|Database User Privileges]] page for more information.
+
+h2. Apache mod_rewrite is correctly installed but I still have 404 Page Not Found Errors.
+
+Check if your Apache configuration contains an *AllowOverride* statement set to *None*. It might prevent TAO .htaccess files to be correctly processed.

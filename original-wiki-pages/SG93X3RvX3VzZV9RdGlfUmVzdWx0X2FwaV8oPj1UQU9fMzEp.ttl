@@ -1,0 +1,79 @@
+h1. How to use QTI Result API (>=TAO 3.1)
+
+A REST api to explore TAO results is available. All results follow QTI 2.1 standard describe on _https://www.imsglobal.org/question/index.html#version2.1_
+
+h2. Request to API
+
+The entry point is located on taoResultServer extension: 
+<pre>
+http://taoLocation.com/taoResultServer/QtiRestResults
+</pre>
+This API is only available with HTTP GET method for the moment.
+
+It accepts two scenarios:
+* By testtaker and delivery uri, it requires two parameters, testtaker uri and delivery uri.
+* By deliveryExecution, it requires one parameter, deliveryExecution uri
+
+h2. Response from API
+
+All responses are REST compliant responses.
+
+* 200 - OK
+# Request was correctly handled, there are some results
+
+* 400 - Bad request
+# Error on request sent to API, occurs in case of missing parameter(s) (testtaker and delivery mandatory or deliveryExecution mandatory)
+_Error message: At least one mandatory parameter was required but found missing in your request_ 
+
+* 401 - Unauthorized
+# Supplied credentials are not valid
+
+* 404 - Not Found
+# Request was correctly handled, there are no result
+_Error message: Provided parameters don't match with any delivery execution._ 
+
+* 500 - Internal error
+# Should never happens!
+
+h2. Sample code
+
+<pre>
+<code class="php">
+// Entry point of QTI results api
+$apiUrl = 'http://taoLocation.com/taoResultServer/QtiRestResults';
+
+// Parameters required to proceed request, take care to escape uri variable
+$testtakerUri = urlencode('http://tao.local/mytao.rdf#xxxxxxxxxxxx');
+$deliveryUri = urlencode('http://tao.local/mytao.rdf#xxxxxxxxxxxx');
+$deliveryExecution = urlencode('http://tao.local/mytao.rdf#xxxxxxxxxxxx');
+
+// Initialize the cURL request by testtaker & delivery
+$process = curl_init($apiUrl . '?testtaker=' . $testtakerUri . '&delivery=' . $deliveryUri);
+
+// OR Initialize the cURL request by deliveryExecution
+$process = curl_init($apiUrl . '?deliveryExecution=' . $deliveryExecution);
+
+// Call api with HTTP GET method
+curl_setopt($process, CURLOPT_HTTPGET, 1);
+
+// Choose your output, QTI data is based on XML
+curl_setopt($process, CURLOPT_HTTPHEADER, array("Accept: application/xml"));
+        
+// Get response as a string instead of output it directly
+curl_setopt($process, CURLOPT_RETURNTRANSFER , true);
+        
+// Set up your TAO credential
+curl_setopt($process, CURLOPT_USERPWD, "user:password");
+        
+// Proceed the curl request
+$data = curl_exec($process);
+        
+// REST communicate through HTTP code, take care of it
+$httpCode = curl_getinfo($process, CURLINFO_HTTP_CODE);
+       
+ // Close process handling
+curl_close($process);
+</code>
+</pre>
+
+h2. Example of QTI result

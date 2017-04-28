@@ -1,0 +1,35 @@
+h1. Database User Privileges
+
+This page lists the privileges database users needs to properly access data stored by TAO.
+
+h2. MySQL
+
+This section describes required privileges to access properly data stored by TAO in MySQL:
+
+* EXECUTE
+* SELECT
+* SHOW DATABASES
+* ALTER
+* ALTER ROUTINE
+* CREATE
+* CREATE ROUTINE
+* DELETE
+* DROP
+* INDEX
+* INSERT
+* UPDATE
+* RELOAD
+
+h2. PostgreSQL
+
+This section considers that the reader is familiar with rights management in PostgreSQL. If you are not familiar with this Database Management System, we recommend you to read the "PostgreSQL Documentation":http://www.postgresql.org/docs/.
+
+The following rights are needed to properly access data stored by TAO:
+
+* SELECT, INSERT, UPDATE, DELETE, REFERENCES on all tables in the _public_ schema of the database
+* ALL PRIVILEGES on all SEQUENCES in the _public_ scehma of the database
+* EXECUTE on ALL FUNCTIONS in the _public_ schema of the database
+* CREATE on the database
+* CONNECT on the database
+* TEMPORARY on the database
+* USAGE on the _plpgsql_ language

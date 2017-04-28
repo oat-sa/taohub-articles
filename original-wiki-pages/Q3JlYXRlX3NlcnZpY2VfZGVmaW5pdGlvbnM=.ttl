@@ -1,0 +1,247 @@
+{{>toc}}
+
+h1. Service Creation with API "Process Authoring Service"
+
+The services of an activity define the actual business of the activity.
+
+h2. 1. Preloaded services in TAO
+
+Most of the available actions in the TAO back-office are available as a service.
+The complete list of service is loaded into TAO during the installation process: they are available in the advanced authoring tool.
+
+The complete description of services can be found here : attachment:Services_definition.pdf
+
+h3. 1.2. Groups services
+
+* Group class selection	
+* Group selection	
+* Group add	
+* Group editor	
+* Group full editor	
+* Group class editor	
+* Group translation	
+* Group related subjects	
+* Group related deliveries	
+* Groups searching	
+* Group removing	
+
+h3. 1.3. Items services	
+
+* Item class selection	
+* Item selection	
+* Item add	
+* Item editor	
+* Item full editor	
+* Item class editor	
+* Item preview	
+* Item authoring	
+* Item translation	
+* Items searching	
+* Item removing
+	
+h3. 1.4. Results services
+	
+* Results searching	
+* Result Table	
+
+h3. 1.5.  Subjects services
+	
+* Subject class selection	
+* Subject selection	
+* Subject add	
+* Subject editor	
+* Subject full editor	
+* Subject class editor	
+* Subject translation	
+* Subject's group selection	
+* Subjects searching	
+* Subject removing
+	
+h3. 1.6. Tests services	
+
+* Test class selection	
+* Test selection	
+* Test add	
+* Test editor	
+* Test full editor	
+* Test class editor	
+* Test's items authoring	
+* Test parameters	
+* Test preview	
+* Test translation
+* Test related items
+* Tests searching	
+* Test removing	
+
+h3. 1.7. Delivery services
+
+* Delivery class selection
+* Delivery selection	
+* Deliveries searching	
+* Delivery add	
+* Delivery editor	
+* Delivery full editor	
+* Delivery class editor	
+* Delivery exclude subject	
+* Delivery related campaigns	
+* Delivery removing	
+* Delivery compilation	
+* Campaign class selection	
+* Campaign selection	
+* Campaigns searching	
+* Campaign add	
+* Campaign editor	
+* Campaign full editor
+* Campaign class editor
+* Campaign related delivery
+* Campaign removing	
+* ResultServer class selection	
+* ResultServer selection	
+* ResultServers searching	
+* ResultServer add	
+* ResultServer editor	
+* ResultServer full editor
+* ResultServer class editor
+* ResultServer related delivery	
+* ResultServer removing
+
+For instance, the source of the service to edit an item is in the following file: _yourWebRootPath/taoItems/actions/class.SaSItems.php_
+As previously said in [[Process Definition Model#Service_definition]], a service is defined by its URL. Provided that its url is accesible via URL, it can be a service in TAO. The service _'sasEditInstance'_ below is accessible via the URL _/taoItems/SaSItems/sasEditInstance_ (with URL rewriting engine activated in TAO)
+
+<pre>
+<code class="php">
+class taoItems_actions_SaSItems extends taoItems_actions_Items {
+	[...]
+	public function sasEditInstance(){
+		$clazz = $this->getCurrentClass();
+		$instance = $this->getCurrentInstance();
+		
+		
+		$formContainer = new tao_actions_form_Instance($clazz, $instance);
+		$myForm = $formContainer->getForm();
+		
+		if($myForm->isSubmited()){
+			if($myForm->isValid()){
+				$instance = $this->service->bindProperties($instance, $myForm->getValues());
+				$instance = $this->service->setDefaultItemContent($instance);
+				$this->setData('message', __('Item saved'));
+			}
+		}
+		
+		$this->setData('uri', tao_helpers_Uri::encode($instance->uriResource));
+		$this->setData('classUri', tao_helpers_Uri::encode($clazz->uriResource));
+		$this->setData('formTitle', __('Edit item'));
+		$this->setData('myForm', $myForm->render());
+		$this->setView('form.tpl', true);
+	}
+	[...]
+}
+</code></pre>
+
+h2. 2. Create a service definition accessible via the web
+
+You can use previously listed services of TAO or create your own and import it into TAO.
+
+You may use the _createServiceDefinition()_ method of the process authoring tool to create a service definition in the ontology.
+
+* The first parameter is the label of the service definition (here, _"myServiceDefinition"_).
+* The second is the URL to be called to access the service (here, _"http://www.myWebSite.com/myServiceScript.php"_).
+* The last is an array of _formal parameters_ that will be created (if they do not exist yet) or set (if they already exist) for the service. The associative array follows the format _'parameter name' => 'default value'_. The _parameter name_ is the key to be used to retrieve the parameter value in the service (_$_GET method_). The default value is either a constant or a process variable. The example below has two parameters (_param3_ and _param4_) with default values set to constants (respectively _'myConstantValue'_ and _null_). If you want to define the default value as a process variable like _param1_ or _param2_ below, add a _"^"_ before the code of your process variable, e.g. _^myProcessVarCode2_, where _myProcessVarCode2_ is the _code_ of a process variable (say _"process variable 2"_). If the process variable with the code _myProcessVarCode2_ exists, it will be set. If it does not exist yet, it will be created during the service definition creation. Alternatively, you can also directly give in the array a process variable resource like the _param1_ below.
+
+For more details about the way the complete URL of a service is built at runtime (including the parameters), please refer to [[Execution of a process#From the activity definition to the screen display|the process execution section]].
+
+<pre>
+<code class="php">
+$myProcessVar1 = null;
+$myProcessVar1 = $this->authoringService->getProcessVariable('myProcessVarCode1', true);
+		
+$inputParameters = array(
+	'param1' => $myProcessVar1,
+	'param2' => '^myProcessVarCode2',
+	'param3' => 'myConstantValue',
+	'param4' => null
+);
+
+$serviceUrl = 'http://www.myWebSite.com/myServiceScript.php';
+$serviceDefinition = $authoringService->createServiceDefinition('myServiceDefinition', $serviceUrl, $inputParameters);
+</code></pre>
+
+h2. 3. Create a service following the MVC php framework of TAO
+
+You may want to implement a service directly within your TAO file system, to take advantage of some available functionality:
+
+* direct access to your service in your local file system, to make your service independent from a remote service availability
+* direct access to the [[Generis API]], to manage TAO resources
+* leverage the [[Models|M]][[Views|V]][[Controllers|C]] php [[Framework|framework]] of TAO, as well as the services and helpers already built in TAO.
+
+The short tutorial below shows how to create a basic service that embeds a URL in an iframe, in the taoDelivery extension.
+
+To build a basic service, you need to create a controller in the actions folder of an extension, that extends _CommonModule_. 
+First create a new controller, called _taoDelivery_actions_WebService_ (see: [[Guidelines#Namespace|naming convention in TAO]]) in the actions directory of the taoDelivery extension: _yourWebRootPath/taoDeliveries/actions/class.WebService.php_
+
+<pre>
+<code class="php">
+class taoDelivery_actions_WebService extends tao_actions_CommonModule{
+	public function __construct(){}
+}
+</code></pre>
+
+Next, add a default _“index”_ method, which will be the default action called for this controller:
+
+<pre>
+<code class="php">
+class taoDelivery_actions_WebService extends tao_actions_CommonModule{
+	public function __construct(){}
+	public function index(){
+		$url = urldecode($this->getRequestParameter('url'));
+		echo '<iframe src ="'.$url.'" width="100%" height="100%"/>';
+	}
+}
+</code></pre>
+
+_Note: you can directly reuse the method of the php framwork like _getRequestParameter()_ to get a parameter from the _$_REQUEST_ global array, or use the _$_POST_ or _$_GET_ global arrays instead._
+
+The current service is called by the url _/taoDelivery/WebService/index_ (URL rewriting engine on).
+The _"url"_ parameter for the service needs to be given via the _HTTP method GET_.
+ 
+Such a service definition can be created in TAO with the same previously introduced method _createServiceDefinition()_:
+
+<pre>
+<code class="php">
+$serviceDefinition = $authoringService->createServiceDefinition(
+	'a web service',
+	'/taoDelivery/WebService/index', 
+	array(
+		'url' => ''
+	)
+);
+</code></pre>
+
+You can add more parameters to make your service more customizable:
+
+<pre>
+<code class="php">
+public function index(){
+	$width = $this->hasRequestParameter('width')?$this->getRequestParameter('width'):'100%';
+	$height = $this->hasRequestParameter('height')?$this->getRequestParameter('height'):'100%';
+	$url = urldecode($this->getRequestParameter('url'));
+	echo '<iframe src ="'.$url.'" width="'.$width.'" height="'.$height.'"/>';
+}
+</code></pre>
+
+The snippet to import your service definition becomes:
+
+<pre>
+<code class="php">
+$serviceDefinition = $authoringService->createServiceDefinition(
+	'a web service',
+	'/taoDelivery/WebService/index', 
+	array(
+		'url' => '',
+		'width' => '100%',
+		'height' => '100%'
+	)
+);
+</code></pre>
+
+To build more complicated services to manage your ontology resources, you could follow the examples of the preloaded TAO services.

@@ -1,0 +1,14 @@
+h1. FAQ
+
+h2. QTI
+
+h3. Which QTI Interactions can be shuffled?
+
+Some QTI Interactions can be _shuffled_. As per spec _If the shuffle attribute is true then the delivery engine must randomize the order in which the choices are presented subject to the fixed attribute_. The following QTI interactions have the _shuffle_ attribute and can be shuffled:
+
+* choiceInteraction
+* orderInteraction
+* associateInteraction
+* matchInteraction
+* gapMatchInteraction
+* inlineChoiceInteraction

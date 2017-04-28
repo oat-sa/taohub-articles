@@ -1,0 +1,46 @@
+h1. Code changes 25 to 26
+
+h3. User Service
+
+The functions _tao_models_classes_UserService::addUser()_ and _core_kernel_users_Service::addUser()_ now take the password in clear text instead of md5 encrypted
+
+h3. Item Model
+
+* _taoItems_models_classes_ExportableItemModel_ has been replaced by _tao_models_classes_export_ExportProvider_
+* _taoItems_models_classes_ImportableItemModel_ has been replaced by _tao_models_classes_import_ImportProvider_
+
+h3. User Session
+
+The interface @common_session_Session@ has changed:
+
+* added *getTimeZone()*, expects a php timezone identifier(http://php.net/manual/en/timezones.php). By default use the constant TIME_ZONE
+* changed *getUserRoles()*, now expects an array of strings(the URIs) instead of an array of resources.
+* added *getUserPropertyValues()*, only used in services (might be moved to separate interface)
+
+h3. Access Control
+
+The access control has been replaced by an abstraction that needs to implement the interface @tao_models_classes_accessControl_AccessControl@. 
+To test whenever the user has access to a functionality please use @tao_models_classes_accessControl_AclProxy::hasAccess($action, $controller, $extension, $parameters = array())@
+
+h3. Extension Manifest
+
+New properties *license*, *label*.
+
+The property *dependencies* has been replaced with the property *requires* which is an associative array with the structure (extensionId => versionRequired). While the keyword dependencies is still supported it is deprecated will be removed in the future
+
+h3. Constants
+
+The following constants have been retired:
+* TAOVIEW_PATH
+* TAO_TPL_PATH
+* PROCESS_BASE_WWW
+* WFAUTHORING_CSS_URL
+* WFAUTHORING_SCRIPTS_URL
+* PROCESS_BASE_PATH
+* PROCESS_TPL_PATH
+
+The following constants are deprecates:
+* TAOBASE_WWW
+
+please use the helper @oat\tao\helpers\Template@ instead.
+
