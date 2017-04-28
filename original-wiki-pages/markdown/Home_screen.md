@@ -1,0 +1,11 @@
+Home screen
+===========
+
+On the home screen, you can choose which part you want to access by clicking on the corresponding box,
+
+![](First_screen.png)
+
+or via the menu bar on the top.
+
+![](Menubar_firstscreen.png)
+

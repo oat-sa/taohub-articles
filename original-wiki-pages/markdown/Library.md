@@ -1,0 +1,53 @@
+Library
+=======
+
+Icons
+-----
+
+In the Library panel, you can manage the different element displayed in the tree:
+
+-   **classes** and **sub-classes** represented by a folder: ![](class_icon_library.png)
+
+<!-- -->
+
+-   and the **elements** they contain, which are represented by specific icons:
+
+p((((. ![](Item_icon_library.png) Items
+
+p((((. ![](Test_icon_library.png) Tests
+
+p((((. ![](Testtaker_icon_library.png) Test takers
+
+p((((. ![](Group_icon_library.png) Groups
+
+p((((. ![](Delivery_icon_library.png) Deliveries
+
+p((((. ![](Campaign_icon_library.png) Campaigns
+
+p((((. ![](Resultserver_icon_library.png) Result servers
+
+p((((. ![](Result_icon_library.png) Results
+
+p((((. ![](Process_icon_library.png) Processes
+
+p((((. ![](Role_icon_library.png) Roles
+
+Contextual actions
+------------------
+
+Several actions are directly available on your tree selection by a contextual menu (right-click).
+
+p((((. ![](Edit_icon.png) Edit
+
+p((((. ![](Newclass_icon.png) New class
+
+p((((. ![](Newelement_icon.png) New element
+
+p((((. ![](Move_icon.png) Move
+
+p((((. ![](Duplicate_icon.png) Duplicate
+
+p((((. ![](Delete_icon.png) Delete
+
+All these actions can also be performed via the corresponding icons in the Actions panel.
+
