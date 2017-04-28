@@ -1,28 +1,33 @@
 <!--
 parent: 'Developer Guide'
 created_at: '2016-12-12 13:49:42'
-updated_at: '2016-12-13 08:54:05'
+updated_at: '2017-03-13 08:54:05'
 authors:
     - 'Antoine Robin'
 tags:
     - 'Developer Guide'
+    - 'Installation and Upgrading'
 -->
 
-Install from config file
+Install tao platform from a configuration file
 ========================
+
+This page aims to explain how you can install tao from a predifined configuration file, in order to make your deployments easier.
 
 Since tao v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.<br/>
 
 To call it simply use the command line :
 
-    sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json
+```bash
+sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json
+```
 
 Config file
 -----------
 
-The config file can be wrote either in json or yaml. In order to use a yaml file you have to have the yaml extension for php on your server.<br/>
+The config file can be written either in json or yaml. In order to use a yaml file you have to have the yaml extension for php on your server.<br/>
 
-The file will contain some mandatory and optional properties, they are listed below. You can find a example of this file [here](https://github.com/oat-sa/tao-core/blob/master/scripts/sample/config.json)
+The file will contain some mandatory and optional properties, they are listed below. You can find an example of this file [here](https://github.com/oat-sa/tao-core/blob/master/scripts/sample/config.json)
 
 ### Mandatory properties
 
@@ -30,22 +35,24 @@ The file will contain some mandatory and optional properties, they are listed be
 
 This option is the one that will set your first tao user as a super user. It requires a login and a password. It can contain but not needed a first name, last name and an email.
 
-      "super-user": {
-        "login": "admin",
-        "lastname": "",
-        "firstname": "",
-        "email": "",
-        "password": "admin"
-      }
+```json
+"super-user": {
+  "login": "admin",
+  "lastname": "",
+  "firstname": "",
+  "email": "",
+  "password": "admin"
+}
+```  
 
-#### configuration
+#### Configuration
 
 This section have several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.<br/>
 
 Mandatory configuration :
 
 -   global
--   generies
+-   generis
 
 Optional configuration :
 
@@ -54,55 +61,143 @@ Optional configuration :
 -   awsClient
 -   …
 
-##### global
+##### Global
 
 The global part of the configuration contains all the properties required for the tao installation.
 
--   lang that will set the default language
+-   lang : the default language
 -   mode : debug or production
--   the name of the instance
--   the local namespace
--   the url to access the platform
--   the root path of your tao installation
+-   instance_name : the name of the instance
+-   namespace : the local namespace
+-   url : the url to access the platform
+-   file_path : the root path of your tao installation
 -   session_name : the name of the cookie that will contain the session
 -   timezone
 -   import_data : should be import default data or not
+-   anonymous_lang : the language that will be set for anonymous user (login page)
 
+```json
+"global": {
+  "anonymous_lang": "fr-FR",
+  "lang": "en-US",
+  "mode": "debug",
+  "instance_name": "mytao",
+  "namespace": "http://tao.local/mytao.rdf",
+  "url": "http://tao.dev/",
+  "file_path": "/var/www/package-tao/data/",
+  "root_path": "/var/www/package-tao/",
+  "session_name": "tao_123AbC",
+  "timezone": "Europe/Luxembourg",
+  "import_data": true
+}
+```
 
+##### persistences
 
-    "global": {
-          "lang": "en-US",
-          "mode": "debug",
-          "instance_name": "mytao",
-          "namespace": "http://tao.local/mytao.rdf",
-          "url": "http://tao.dev/",
-          "file_path": "/var/www/package-tao/data/",
-          "root_path": "/var/www/package-tao/",
-          "session_name": "tao_123AbC",
-          "timezone": "Europe/Luxembourg",
-          "import_data": true
-        },
+The persistences configuration is one of the most important because it will let you choose the database type where you want to install tao data.
+It has to be under the generis configuration.
 
-##### generis
+You must have at least the default key in order to set correctly the detabase, then you can choose the driver 'pdo_pgsql', 'pdo_mysql', it is the same structure than in your final config/generis/persistences.conf.php
 
-###### persistences
+You can also if you want set other persistences as the cache one or a redis connection for the delivery execution or the results.
 
-###### log
+```json
+"generis": {
+  "persistences": {
+    "default": {
+      "driver": "pdo_pgsql",
+      "host": "localhost",
+      "dbname": "tao_default",
+      "user": "root",
+      "password": "root"
+    },
+    "cache": {
+      "driver": "phpfile"
+    },
+    "keyValueResult": {
+      "driver": "phpredis",
+      "host": "10.33.33.33",
+      "port": 6379
+    }
+  }
+}
+```
 
 ### Optionnal properties
 
-#### extensions
+#### Extensions
 
 This property allows you to choose which extensions you want to install by default for your instance
 
-      "extensions": [
-        "taoQtiTest",
-        "taoProctoring"
-      ],
+```json
+"extensions": [
+  "taoQtiTest",
+  "taoProctoring"
+]
+```
 
 By default if you let this array empty it will install taoCe.
 
-#### configurable services
+#### Configurable services
+
+Under an extension configuration you can set a configurable service. For example you can set the awsClient configuration.
+Their is three parts in a configurable service configuration. First you have to set the type ie configurableService, in order to make the script able to recognize as a service and not an array based configuration.
+Then you will have to set the class of this service, it has to extend the ConfigurableService class of generis.
+Finally you have to set the options that will be given to the service when instanciate.
+
+This awsClient config will be under the generis configuration but for an other
+
+```json
+"awsClient": {
+  "type": "configurableService",
+  "class": "oat\\awsTools\\AwsClient",
+  "options": {
+    "region": "eu-west-1",
+    "version": "latest",
+    "credentials": {
+      "secret": "Secret",
+      "key": "Key"
+    }
+  }
+}
+```
+
+#### Other configurations
+
+Under each extension as for the configurable services you can add array based configurations.
+In this example we have the log configuration that is an array of array with some properties. You can see them in [this file](https://github.com/oat-sa/generis/blob/master/config/header/log.conf.php)
+
+```json
+"log": [
+  {
+    "class": "UDPAppender",
+    "host": "127.0.0.1",
+    "port": 5775,
+    "threshold": 1
+  },
+  {
+    "class": "SingleFileAppender",
+    "file": "/var/www/package-tao/log/error.txt",
+    "max_file_size": 1048576,
+    "rotation-ratio": 5,
+    "format": "%m",
+    "threshold": 4
+  }
+]
+```
+
 
 #### postInstall
 
+An other key of this configuration file is the postInstall key. It allows you to specify a script to run at the end of the installation process.
+Under the postInstall key put a key that will make sense for you, then you have to specify two keys. The first one is the class, the script that you want to launch. It has to implement the __invoke() method.
+The second parameter is the params that you want to give to the invoke method in order to run you script.
+
+```json
+"testSessionFilesystem": {
+  "class": "oat\\taoQtiTest\\scripts\\install\\CreateTestSessionFilesystem",
+  "params": {
+    }
+  }
+}
+```
