@@ -3,6 +3,7 @@
 # PDFJS_Install_TAO_3x.sh
 # Changes:
 # - creation
+# - update PDFJS version from 1.4.20 to 1.7.225
 
 # Trap ctrl-c and call ctrl_c()
 trap ctrl_c INT
@@ -15,7 +16,7 @@ function ctrl_c() {
 	exit 1
 }
 
-PDFJS_MAJMINVERSION=1.4.20
+PDFJS_MAJMINVERSION=1.7.225
 PDFJS_URL=https://github.com/mozilla/pdf.js/releases/download/v${PDFJS_MAJMINVERSION}/pdfjs-${PDFJS_MAJMINVERSION}-dist.zip
 PDFJS_SOURCES=https://github.com/mozilla/pdf.js/archive/v${PDFJS_MAJMINVERSION}.tar.gz
 FILENAME=pdfjs.tar.gz
