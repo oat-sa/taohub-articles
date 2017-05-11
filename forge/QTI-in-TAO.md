@@ -69,7 +69,7 @@ The item body support images, audio and video. Images are inserted as simple *ht
 
 The supported video formats are mpeg4 (H.264+AAC) and *youtube*. We suggest using mp3 audio format to ensure cross-browser compatibility.
 
-Math expressions are also available. It however requires the [installation of a free third-party library MathJax](https://github.com/oat-sa/taohub-articles/blob/master/articles/Third%20Party%20Tools%20and%20Libraries/enable-math.md).
+Math expressions are also available. It however requires the [installation of a free third-party library MathJax](../../articles/Third%20Party%20Tools%20and%20Libraries/enable-math.md).
 
 As to PDF files, the issue is the same as math expressions and multimedia. There is no way to ensure cross-browser compatibility natively. Currently, pdf files are therefore not fully supported in TAO QTI items. For more information, please see the open issue <br/>
 #2503.
