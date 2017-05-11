@@ -28,7 +28,7 @@ Note: we did not test any OS with this tool.
 
 If you are using Ubuntu you can use these commands:
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install wkhtmltopdf
 ```
@@ -36,7 +36,7 @@ sudo apt-get install wkhtmltopdf
 However, depending of the version of your system, the installed version of `wkhtmltopdf` may not fully comply with the requirements, as there is some issues with QT when trying to render header and footers.
 If you encounter errors when generating the document, you should install the tool using these commands:
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install libxrender1 fontconfig xvfb
 wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz -P /tmp/
