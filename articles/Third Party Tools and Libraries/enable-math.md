@@ -1,7 +1,6 @@
 <!--
-parent: Wiki
 created_at: '2013-09-20 08:16:25'
-updated_at: '2016-11-25 19:49:16'
+updated_at: '2017-05-11 08:30:00'
 authors:
     - 'Vijai Pandey'
 contributors:
@@ -9,21 +8,28 @@ contributors:
     - 'Jérôme Bogaerts'
     - 'Cyril Hazotte'
     - 'Antoine Robin'
+    - 'Jean-Sébastien Conan'
 tags:
-    - Wiki
+    - 'Frontend'
+    - 'Library'
+    - 'JavaScript'
+    - 'Math'
 -->
 
 # Enable math expression in items
 
-![](../resources/badge-square.png)
+![logo](../resources/third-party/badge-square.png)
+
+> MathJAX is a library for rendering Math expressions within a web page.
+> It supports both MathML and LaTex expressions.
 
 ## Install MathJax library, using the script
 
 For users with a Unix machine, you can use the following bash scripts to download and install MathJax.
 
-- TAO 2.5: [mathjaxdl_tao25.sh](../resources/mathjaxdl_tao25.sh)
-- TAO 2.6: [mathjaxdl_tao26.sh](../resources/mathjaxdl_tao26.sh)
-- TAO 3.0: [MathJax_Install_TAO_3x.sh](../resources/MathJax_Install_TAO_3x.sh)
+- TAO 2.5: [mathjaxdl_tao25.sh](../resources/third-party/mathjaxdl_tao25.sh)
+- TAO 2.6: [mathjaxdl_tao26.sh](../resources/third-party/mathjaxdl_tao26.sh)
+- TAO 3.0: [MathJax_Install_TAO_3x.sh](../resources/third-party/MathJax_Install_TAO_3x.sh)
 
 Be sure to have `wget` (or `curl` with 3.0 version), `tar` and `gzip` installed and available in your `PATH`. Then just launch it (as a user, not root) from the root of your TAO distribution.
 
@@ -47,7 +53,7 @@ Frist delete the following folders:
 
 Then in the `mathjax/config/` folder, delete all files but `TeX-AMS-MML_HTMLorMML-full.js`, which is the only config file used in TAO.
 
-An already shrunk Mathjax archive is available [here](../resources/mathjax-shrinked.zip).
+An already shrunk Mathjax archive is available [here](../resources/third-party/mathjax-shrunk.zip).
 
 ## Keep MathJax sources untouched
 

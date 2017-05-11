@@ -3,7 +3,7 @@
 # MathJax_Install_TAO_3x.sh
 # Changes:
 # - Add standard compatibility for OS X (falls back to curl instead of wget).
-# - Switch to non-interactive mode usage. By default, MathJax install in TAO is shrinked. Use flag --keep-full to keep all MathJax archive content extracted.
+# - Switch to non-interactive mode usage. By default, MathJax install in TAO is shrunk. Use flag --keep-full to keep all MathJax archive content extracted.
 # - Don't extract all archive content then eventually remove unused folders; instead, exclude from extraction.
 # - Temp folder is removed, including when execution is interrupted.
 
@@ -14,7 +14,7 @@ function ctrl_c() {
 	rm -rf $TMPDIR
 	echo ""
 	echo "Execution aborted. Temporary download folder removed."
-	
+
 	exit 1
 }
 
