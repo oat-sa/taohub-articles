@@ -1,7 +1,6 @@
 <!--
-parent: articles
 created_at: '2016-09-21 15:35:10'
-updated_at: '2016-09-21 16:01:18'
+updated_at: '2017-05-11 08:30:00'
 authors:
     - 'Jean-Sébastien Conan'
 tags:
@@ -9,10 +8,6 @@ tags:
     - 'Library'
     - 'JavaScript'
     - 'PDF'
-    - 'PDF.js'
-    - 'PDFJS'
-    - 'Viewer'
-    - 'Document'
 -->
 
 Install PDFjs viewer

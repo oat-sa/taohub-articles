@@ -1,19 +1,12 @@
 <!--
-parent: articles
 created_at: '2017-05-09 09:25:30'
-updated_at: '2017-05-09 09:25:30'
+updated_at: '2017-05-11 08:30:00'
 authors:
     - 'Jean-Sébastien Conan'
 tags:
     - 'Backend'
     - 'Tools'
     - 'taoBooklet'
-    - 'PHP'
-    - 'PDF'
-    - 'wkhtmltopdf'
-    - 'wkhtml'
-    - 'Print'
-    - 'Document'
 -->
 
 Install wkHTMLtoPDF

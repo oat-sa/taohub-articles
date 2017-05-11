@@ -1,7 +1,6 @@
 <!--
-parent: articles
 created_at: '2013-09-20 08:16:25'
-updated_at: '2016-11-25 19:49:16'
+updated_at: '2017-05-11 08:30:00'
 authors:
     - 'Vijai Pandey'
 contributors:
@@ -15,10 +14,6 @@ tags:
     - 'Library'
     - 'JavaScript'
     - 'Math'
-    - 'MathJax'
-    - 'MathML'
-    - 'LaTex'
-    - 'ThirdParty'
 -->
 
 # Enable math expression in items
