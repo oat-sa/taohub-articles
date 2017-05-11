@@ -21,6 +21,11 @@ An extension for TAO allow to create test booklets: [taoBooklet](https://github.
 However this extension needs a third-party tool to generate the PDF files.
 So to be able to generate the booklet, you should install `wkhtmltopdf` on your server.
 
+All three major OS brands are supported, and you should find the right binaries in the [download page of the official wkhtmltopdf website](https://wkhtmltopdf.org/downloads.html).
+At least you could also directly compile the source code and build your own platform binaries.
+
+Note: we did not test any OS with this tool.
+
 If you are using Ubuntu you can use these commands:
 
 ```
