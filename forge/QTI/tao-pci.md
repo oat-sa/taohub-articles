@@ -529,7 +529,7 @@ On top of that, authoring tool implementers need a structured way to store inter
 
 In the original recommendation, there is no mention of the XML namespace used by HTML markups in PCI. In the example of the original recommendation:
 
-Table 6. PCI Original Markup Recommendation
+#### Table 6. PCI Original Markup Recommendation
 
 ```xml
 <div id="graph1_box" class="graph" style="width:500px; height:500px;"></div>
@@ -549,9 +549,9 @@ Using QTI-XHTML (as defined in QTI 2.1) may be a first and simple answer because
 
 Using the XHTML subset of QTI as a markup language for Portable Custom Interactions.
 
-##### Table 7. XHTML Subset of QTI as a Markup Language for Portable Custom Interactions
+#### Table 7. XHTML Subset of QTI as a Markup Language for Portable Custom Interactions
 
-
+```xml
 <assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="q01" title="Question 01" timeDependent="false">
   <!-- ... -->
   <pci:markup>
@@ -562,468 +562,378 @@ Using the XHTML subset of QTI as a markup language for Portable Custom Interacti
   </pci:markup>
   <!-- ... -->
 </assessmentItem>
-
-
-
-
-
-
-
-
-
+```
 #### XHTML and XHTML 5
 
-Since the role of PCI recommendation is to propose a way to create item that extends far beyond anything available currently in the QTI standard, it appears that HTML 5 is a good candidate. HTML5 is the growing leading web standard and likely the dominant one in the future. Moreover, its XML serialization format, XHTML 5, enables PCI implementers to take advantage of current technologies. HTML5 indeed standardizes new elements like <video>, <audio>, <canvas> to allow more possibilities in term of item creation. However, XHTML is still perfectly a valid solution but less rich than XHTML5.<br/>
+Since the role of PCI recommendation is to propose a way to create item that extends far beyond anything available currently in the QTI standard, it appears that HTML 5 is a good candidate. HTML5 is the growing leading web standard and likely the dominant one in the future. Moreover, its XML serialization format, XHTML 5, enables PCI implementers to take advantage of current technologies. HTML5 indeed standardizes new elements like `<video>`, `<audio>`, `<canvas>` to allow more possibilities in term of item creation. However, XHTML is still perfectly a valid solution but less rich than XHTML5.
 
-It would also means that an XSD needs to be written if we want to it be possibly validated, which is going to be very difficult. A solution to this validation issue may simply not to validate the content of <pci:markup>.<br/>
+It would also means that an XSD needs to be written if we want to it be possibly validated, which is going to be very difficult. A solution to this validation issue may simply not to validate the content of `<pci:markup>`.
 
 This means placing the responsibility of html markup definition and validation on each individual PCI implementer.
 
-Table 9. XHTML 5 with Namespace as Markup Language
+#### Table 8. XHTML 5 with Namespace as Markup Language
 
+```xml
+<pci:markup>
+  <xhtml5:div id="likert2" class="likert­scale">
+    <xhtml5:div class="prompt"></xhtml5:div>
+    <xhtml5:ul class="likert"></xhtml5:ul>
+  </xhtml5:div>
+</pci:markup>
+```
 
-
-
-
-
-
-
-Libraries Inclusion and AMD
----------------------------
+## Library Inclusion and AMD
 
 The libraries embedded in a custom interaction must be fully AMD compliant and must not write anything in the global scope.
 
-JSON Representation
--------------------
+## JSON Representation
 
 ### JSON Schema Revision
 
-The original JSON Schema (shipped with the previous version of “IMS Portable Custom Interaction Best Practice”), aiming at validating the response returned by custom interactions, unfortunately does not work as expected with JSON Schema Lint.<br/>
+The original JSON Schema (shipped with the previous version of “IMS Portable Custom Interaction Best Practice”), aiming at validating the response returned by custom interactions, unfortunately does not work as expected with JSON Schema Lint. 
 
-Moreover, it does not enable production of embedded NULL values as parts of the response payload. Beyond the use of the QTI Base Types and Multiple, Ordered and Record containers in the context of Portable Custom Interactions, the JSON representation of values suits very well the needs of built-in QTI interactions and efficient data transmission between client and server sides. Because of this but also the existence of the QTI customOperator, we consider important to make possible the use of scalar NULL values and hybrid containers such as [1, 2, NULL, 3] or [“A” =<br/>
-> 1, “B” =<br/>
-> NULL, “C” =<br/>
-> 2].<br/>
+Moreover, it does not enable production of embedded NULL values as parts of the response payload. Beyond the use of the QTI Base Types and Multiple, Ordered and Record containers  in the context of Portable Custom Interactions, the JSON representation of values suits very well the needs of built-in QTI interactions and efficient data transmission between client and server sides. Because of this but also the existence of the QTI customOperator, we consider important to make possible the use of scalar NULL values and hybrid containers such as `[1, 2, NULL, 3]` or `["A" => 1, "B" => NULL, “C” => 2]`.
 
-By rewriting the JSON format using JSON Schema Draft 4, the following changes can be applied:<br/>
+By rewriting the JSON format using JSON Schema Draft 4, the following changes can be applied:
 
- 1. The ‘Point’ base type is modified to contain only two values, instead of 2 or 3 in the previous version. Indeed, the QTI 2.1 specification says about the Point base type that “A point value represents an integer tuple corresponding to a graphic point. The two integers correspond to the horizontal (x-axis) and vertical (y-axis) positions respectively. The up/down and left/right senses of the axes are context dependent”.<br/>
-
- 2. Pair and DirectedPair values must now be composed of Identifier values instead of plain strings.<br/>
-
- 3. The author attribute is removed because it is not a JSON Schema concept. Authors are now referenced in the content of the description attribute.<br/>
-
- 4. Use of JSON Schema’s additionalProperties attribute to prevent the use of other keys than base, list and record but also prevent the use of nonexistent base types.<br/>
-
- 5. Character escaping in duration’s regular expression.<br/>
-
- 6. Make possible the use of NULL for base types, list items, and record values.<br/>
+1. The ‘Point’ base type is modified to contain only two values, instead of 2 or 3 in the previous version. Indeed, the QTI 2.1 specification says about the Point base type that “A point value represents an integer tuple corresponding to a graphic point. The two integers correspond to the horizontal (x-axis) and vertical (y-axis) positions respectively. The up/down and left/right senses of the axes are context dependent”.
+2. Pair and DirectedPair values must now be composed of Identifier values instead of plain strings.
+3. The author attribute is removed because it is not a JSON Schema concept. Authors are now referenced in the content of the description attribute.
+4. Use of JSON Schema’s additionalProperties attribute to prevent the use of other keys than base, list and record but also prevent the use of nonexistent base types.
+5. Character escaping in duration’s regular expression.
+6. Make possible the use of NULL for base types, list items, and record values.
 
 The JSON Schema Proposal implementing the above changes is available in Appendix A – JSON Schema. This proposal aims at being backward compatible with existing JSON Response Data.
 
-JSON Representation Examples Revision
--------------------------------------
+## JSON Representation Examples Revision
 
 Because it is now possible to express the NULL value within this proposal, the JSON examples in the Appendix A of the original version of IMS Portable Custom Interaction Best Practice should be updated.
 
 ### QTI Base Types to JSON Representation
 
-Table A.1. QTI Base Types to JSON Representation\
-QTI Base Type\
- JSON Representation\
- NULL\
- { [base]() null }<br/>
+#### Table A.1. QTI Base Types to JSON Representation
 
- Boolean\
- { [base]() { [boolean]() true } }<br/>
+| QTI Base Type   | JSON Representation                                |
+|-----------------|----------------------------------------------------|
+| NULL            | `{ "base": null }`                                 |
+| Boolean         | `{ "base": { "boolean": true } }`                  |
+| Integer         | `{ "base": { "integer": 123 } }`                   |
+| Float           | `{ "base": { "float": 23.23 } }`                   |
+| String          | `{ "base": { "string": "string" } }`               |
+| Point           | `{ "base": { "point": [10, 20] } }`                |
+| Pair            | `{ "base": { "pair": ["A", "B"] } }`               |
+| Directed Pair   | `{ "base": { "directedPair": ["a", "b"] } }`       |
+| Duration        | `{ "base": { "duration": "P10Y3M20DT4H30M25S" } }` |
+| File            | `{ "base": { "file": { "data": "cGxlYXN1cmUu", "mime": "text/plain", "name": "hello­world.txt" } } }`|
+| URI             | `{ "base": { "uri": "http://www.imsglobal.org" } }`|
+| IntOrIdentifier | `{ "base": { "intOrIdentifier": "_identifier" } }` |
+| Identifier      | `{ "base": { "identifier": "_identifier" } }`      |
 
- Integer\
- { [base]() { [integer]() 123 } }<br/>
-
- Float\
- { [base]() { [float]() 23.23 } }<br/>
-
- String\
- { [base]() { [string]() “string” } }<br/>
-
- Point\
- { [base]() { [point]() [10, 20] } }<br/>
-
- Pair\
- { [base]() { [pair]() [“A”, “B”] } }<br/>
-
- Directed Pair\
- { [base]() { [directedPair]() [“a”, “b”] } }<br/>
-
- Duration\
- { [base]() { [duration]() “P10Y3M20DT4H30M25S” } }<br/>
-
- File\
- { [base]() { [file]() { [data]() “cGxlYXN1cmUu”, [mime]()<br/>
-
- “text/plain”, [name]() “hello­world.txt” } } }<br/>
-
- URI\
- { [base]() { [uri]() “http://www.imsglobal.org” } }<br/>
-
- IntOrIdentifier\
- { [base]() { [intOrIdentifier]() “_identifier” } }<br/>
-
- Identifier\
- { [base]() { [identifier]() “_identifier” } }
-
-The modifications applied on table A.1 are the following:<br/>
-
- 1. Added an example of NULL value.<br/>
-
- 2. The File base type example now emphases the existence of the name attribute.<br/>
-
- 3. The sample Duration changes to match the regular expression of the original JSON schema (ISO 8601 durations).
+The modifications applied on table A.1 are the following:
+1. Added an example of NULL value.
+2. The File base type example now emphases the existence of the name attribute.
+3. The sample Duration changes to match the regular expression of the original JSON schema (ISO 8601 durations).
 
 ### QTI Multiple/Ordered Cardinality to JSON Representation
 
-Table A.2 QTI Multiple/Ordered Cardinality to JSON Representation\
-QTI Base Type\
- JSON Representation\
- Boolean\
- {[list]() { [boolean]() [true, false,true, true]}}<br/>
+#### Table A.2 QTI Multiple/Ordered Cardinality to JSON Representation
 
- Integer\
- { [list]() { [integer]() [2, 3, 5, 7, 11, 13] } }<br/>
-
- Float\
- { [list]() { [float]() [3.1415926, 12.34, 98.76] } }<br/>
-
- String\
- { [list]() { [string]() [“Another”, “And Another”] } }<br/>
-
- Point\
- { [list]() { [point]() [[123, 456], [640, 480]] } }<br/>
-
- Pair\
- { [list]() { [pair]() [[“A”, “B”], [“D”, “C”]] } }<br/>
-
- Directed Pair\
- { [list]() { [directedPair]() [[“A”, “B”], [“C”, “D”]] } }<br/>
-
- Duration\
- { [list]() { [duration]() [“P10Y3M20DT4H30M25S”] } }<br/>
-
- File\
- { [list]() { [file]() [{[data]() “cGx1YXN1cmUu”, [mime]() “text/plain” }] } }<br/>
-
- URI\
- { [list]() { [uri]() [“http://www.imsglobal.org”, “http://www.w3.org”] } }<br/>
-
- IntOrIdentifier\
- { [list]() { [intOrIdentifier]() [2, “_id”] } }<br/>
-
- Identifier\
- { [list]() { [identifier]() [“_id1”, “id2”, “ID3”] } }
+| QTI Base Type   | JSON Representation                                       |
+|-----------------|-----------------------------------------------------------|
+| Boolean         | `{"list": { "boolean": [true, false,true, true]}}`        | 
+| Integer         | `{ "list": { "integer": [2, 3, 5, 7, 11, 13] } }`         |
+| Float           | `{ "list": { "float": [3.1415926, 12.34, 98.76] } }`      |
+| String          | `{ "list": { "string": ["Another", "And Another"] } }`    |
+| Point           | `{ "list": { "point": [[123, 456], [640, 480]] } }`       |
+| Pair            | `{ "list": { "pair": [["A", "B"], ["D", "C"]] } }`        |
+| Directed Pair   | `{ "list": { "directedPair": [["A", "B"], ["C", "D"]] } }`|
+| Duration        | `{ "list": { "duration": ["P10Y3M20DT4H30M25S"] } }`      |
+| File            | `{ "list": { "file": [{"data": "cGx1YXN1cmUu", "mime": "text/plain" }] } }`|
+| URI             | `{ "list": { "uri": ["http://www.imsglobal.org", "http://www.w3.org"] } }`|
+| IntOrIdentifier | `{ "list": { "intOrIdentifier": [2, "_id"] } }`           |
+| Identifier      | `{ "list": { "identifier": ["_id1", "id2", "ID3"] } }`    |
 
 The modifications applied on table A.2 is that the Duration example is modified to match the regular expression of the JSON Schema.
 
 ### QTI Record Cardinality to JSON Representation
 
-Table A.3. QTI Record Cardinality to JSON Representation\
-QTI Base Type\
- JSON Representation\
- Record\
- {<br/>
+#### Table A.3. QTI Record Cardinality to JSON Representation
 
- [record]() [<br/>
+QTI Base Type - JSON Representation
 
- {<br/>
-
- [name]() “rock”,<br/>
-
- [base]() {<br/>
-
- [boolean]() true\
- }<br/>
-
- },<br/>
-
- {<br/>
-
- [name]() “paper”,<br/>
-
- [list]() {<br/>
-
- [string]() [“p”,“a”,“p”,“e”,“r”]<br/>
-
- }<br/>
-
- },<br/>
-
- {<br/>
-
- [name]() “scissors”,<br/>
-
- [list]() {<br/>
-
- [integer]() [1, 2, 3, 4]<br/>
-
- }<br/>
-
- },<br/>
-
- {<br/>
-
- [name]() “empty”<br/>
-
- [base]() null\
- }<br/>
-
- ]<br/>
-
+```json
+	Record
+	{
+    "record": [
+         {
+             "name": "rock",
+             "base": {
+                 "boolean": true
+              }
+         },
+         {
+             "name": "paper",
+             "list": {
+                 "string": ["p","a","p","e","r"]
+             }
+         },
+         {
+             "name": "scissors",
+             "list": {
+                 "integer": [1, 2, 3, 4]
+             }
+         },
+         {
+             "name": "empty"
+             "base": null
+         }
+    ]
 }
+```
 
 The only modification done is that The record entry named “empty” now a NULL “base” instead of being omitted.
 
-Appendix A - JSON Schema
-------------------------
+## Appendix A - JSON Schema
 
-Table A.4. JSON Schema Revision
+#### Table A.4. JSON Schema Revision
 
-
-    {
-        "id": "#",
-        "$schema": "http://json-schema.org/draft-04/schema#",
-        "description": "Portable Custom Interaction Base Types JSON Representation Schema by Michael Aumock (maumock@pacificmetrics.com), Jérôme Bogaerts (jerome@taotesting.com), Somsack Sipasseuth (sam@taotesting.com).",
-        "type": "object",
-
-        "definitions": {
-            "base": {
-                "type": [
-                    "object",
-                    "null"
-                ],
-                "properties": {
-                    "boolean": { "$ref": "#/definitions/boolean" },
-                    "integer": { "$ref": "#/definitions/integer" },
-                    "float": { "$ref": "#/definitions/float" },
-                    "string": { "$ref": "#/definitions/string" },
-                    "uri": { "$ref": "#/definitions/uri" },
-                    "identifier": { "$ref": "#/definitions/identifier"},
-                    "point": { "$ref": "#/definitions/point" },
-                    "pair": { "$ref": "#/definitions/pair"},
-                    "directedPair": { "$ref": "#/definitions/pair" },
-                    "duration": { "$ref": "#/definitions/duration" },
-                    "file": { "$ref": "#/definitions/file" },
-                    "intOrIdentifier": {
+```json
+{
+    "id": "#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Portable Custom Interaction Base Types JSON Representation Schema by Michael Aumock (maumock@pacificmetrics.com), Jérôme Bogaerts (jerome@taotesting.com), Somsack Sipasseuth (sam@taotesting.com).",
+    "type": "object",
+    
+    "definitions": {
+        "base": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "properties": {
+                "boolean": { "$ref": "#/definitions/boolean" },
+                "integer": { "$ref": "#/definitions/integer" },
+                "float": { "$ref": "#/definitions/float" },
+                "string": { "$ref": "#/definitions/string" },
+                "uri": { "$ref": "#/definitions/uri" },
+                "identifier": { "$ref": "#/definitions/identifier"},
+                "point": { "$ref": "#/definitions/point" },
+                "pair": { "$ref": "#/definitions/pair"},
+                "directedPair": { "$ref": "#/definitions/pair" },
+                "duration": { "$ref": "#/definitions/duration" },
+                "file": { "$ref": "#/definitions/file" },
+                "intOrIdentifier": {
+                    "oneOf": [
+                        { "$ref": "#/definitions/integer" },
+                        { "$ref": "#/definitions/identifier" }
+                    ]
+                }
+            },
+            "additionalProperties": false
+        },
+        
+        "list": {
+            "type": "object",
+            "properties": {
+                "boolean": {
+                    "type": "array",
+                    "items": {
                         "oneOf": [
-                            { "$ref": "#/definitions/integer" },
-                            { "$ref": "#/definitions/identifier" }
+                            { "$ref": "#/definitions/boolean" },
+                            { "type": "null" }
                         ]
                     }
                 },
-                "additionalProperties": false
-            },
-
-            "list": {
-                "type": "object",
-                "properties": {
-                    "boolean": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/boolean" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "integer": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/integer" },
-                                { "type": "null" }
-                            ]
-                        }
-
-                    },
-                    "float": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/float" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "string": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/string" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "uri": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/uri" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "identifier": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/identifier" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "point": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/point" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "pair": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/pair" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "directedPair": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/pair" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "duration": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/duration" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "file": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/file" },
-                                { "type": "null" }
-                            ]
-                        }
-                    },
-                    "intOrIdentifier": {
-                        "type": "array",
-                        "items": {
-                            "oneOf": [
-                                { "$ref": "#/definitions/integer" },
-                                { "$ref": "#/definitions/identifier" },
-                                { "type": "null" }
-                            ]
-                        }
+                "integer": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/integer" },
+                            { "type": "null" }
+                        ]
+                    }
+                            
+                },
+                "float": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/float" },
+                            { "type": "null" }
+                        ]
                     }
                 },
-                "additionalProperties": false
-            },
-
-            "record": {
-                "type": "array",
-                "items": { "$ref": "#/definitions/recordRow" }
-            },
-
-            "recordRow": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string"
-                    },
-                    "base": { "$ref": "#/definitions/base" },
-                    "list": { "$ref": "#/definitions/list" }
+                "string": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/string" },
+                            { "type": "null" }
+                        ]
+                    }
                 },
-                "required": [
-                    "name"
-                ],
-                "additionalProperties": false
-            },
-
-            "boolean": {
-                "type": "boolean"
-            },
-            "integer": {
-                "type": "integer",
-                "maximum": 2147483647,
-                "minimum": -2147483647
-            },
-            "float": {
-                "type": "number"
-            },
-            "string": {
-                "type": "string"
-            },
-            "uri": {
-                "type": "string",
-                "format": "uri"
-            },
-            "identifier": {
-                "type": "string",
-                "pattern": "^[_a-zA-Z][\\w-\\.#\\[\\]]*$"
-            },
-            "point": {
-                "type": "array",
-                "maxItems": 2,
-                "minItems": 2,
-                "items": { "$ref": "#/definitions/integer" }
-            },
-            "pair": {
-                "type": "array",
-                "maxItems": 2,
-                "minItems": 2,
-                "items": { "$ref": "#/definitions/identifier" }
-            },
-            "duration": {
-                "type": "string",
-                "pattern": "^P([\\d]+([,\\.][\\d]+)?Y)?([\\d]+([,\\.][\\d]+)?M)?([\\d]+([,\\.][\\d]+)?W)?([\\d]+([,\\.][\\d]+)?D)?(T([\\d]+([,\\.][\\d]+)?H)?([\\d]+([,\\.][\\d]+)?M)?([\\d]+([,\\.][\\d]+)?S)?)?$"
-            },
-            "file": {
-                "properties": {
-                    "data": { "$ref": "#/definitions/base64" },
-                    "mime": { "$ref": "#/definitions/mime" },
-                    "name": { "$ref": "#/definitions/string" }
+                "uri": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/uri" },
+                            { "type": "null" }
+                        ]
+                    }
                 },
-                "required": [
-                    "data",
-                    "mime"
-                ],
-                "additionalProperties": false
+                "identifier": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/identifier" },
+                            { "type": "null" }
+                        ]
+                    }
+                },
+                "point": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/point" },
+                            { "type": "null" }
+                        ]
+                    }
+                },
+                "pair": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/pair" },
+                            { "type": "null" }
+                        ]
+                    }
+                },
+                "directedPair": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/pair" },
+                            { "type": "null" }
+                        ]
+                    }
+                },
+                "duration": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/duration" },
+                            { "type": "null" }
+                        ]
+                    }
+                },
+                "file": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/file" },
+                            { "type": "null" }
+                        ]
+                    }
+                },
+                "intOrIdentifier": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "#/definitions/integer" },
+                            { "$ref": "#/definitions/identifier" },
+                            { "type": "null" }
+                        ]
+                    }
+                }
             },
-            "base64": {
-                "type": "string",
-                "pattern": "^[a-zA-Z0-9\\+/]+(?:[=]{0,2})$"
+            "additionalProperties": false
+        },
+        
+        "record": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/recordRow" }
+        },
+        
+        "recordRow": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "base": { "$ref": "#/definitions/base" },
+                "list": { "$ref": "#/definitions/list" }
             },
-            "mime": {
-                "type": "string",
-                "pattern": "^[a-zA-Z-]+/[-\\w\\+\\.]+$"
-            }
+            "required": [
+                "name"
+            ],
+            "additionalProperties": false 
         },
-
-        "properties": {
-            "base": { "$ref": "#/definitions/base" },
-            "list": { "$ref": "#/definitions/list" },
-            "record": { "$ref": "#/definitions/record" }
+        
+        "boolean": {
+            "type": "boolean"
         },
-        "additionalProperties": false
-    }
-
-
+        "integer": {
+            "type": "integer",
+            "maximum": 2147483647,
+            "minimum": -2147483647
+        },
+        "float": {
+            "type": "number"
+        },
+        "string": {
+            "type": "string"
+        },
+        "uri": {
+            "type": "string",
+            "format": "uri"
+        },
+        "identifier": {
+            "type": "string",
+            "pattern": "^[_a-zA-Z][\\w-\\.#\\[\\]]*$"
+        },
+        "point": {
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 2,
+            "items": { "$ref": "#/definitions/integer" }
+        },
+        "pair": {
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 2,
+            "items": { "$ref": "#/definitions/identifier" }
+        },
+        "duration": {
+            "type": "string",
+            "pattern": "^P([\\d]+([,\\.][\\d]+)?Y)?([\\d]+([,\\.][\\d]+)?M)?([\\d]+([,\\.][\\d]+)?W)?([\\d]+([,\\.][\\d]+)?D)?(T([\\d]+([,\\.][\\d]+)?H)?([\\d]+([,\\.][\\d]+)?M)?([\\d]+([,\\.][\\d]+)?S)?)?$"
+        },
+        "file": {
+            "properties": {
+                "data": { "$ref": "#/definitions/base64" },
+                "mime": { "$ref": "#/definitions/mime" },
+                "name": { "$ref": "#/definitions/string" } 
+            },
+            "required": [
+                "data",
+                "mime"
+            ],
+            "additionalProperties": false
+        },
+        "base64": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9\\+/]+(?:[=]{0,2})$"
+        },
+        "mime": {
+            "type": "string",
+            "pattern": "^[a-zA-Z-]+/[-\\w\\+\\.]+$"
+        }
+    },
+    
+    "properties": {
+        "base": { "$ref": "#/definitions/base" },
+        "list": { "$ref": "#/definitions/list" },
+        "record": { "$ref": "#/definitions/record" }
+    },
+    "additionalProperties": false
+}
+```
