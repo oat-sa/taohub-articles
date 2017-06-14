@@ -22,7 +22,6 @@ To call it simply use the command line :
 sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json
 ```
 
-
 Since tao v10.19.1 we have the possibility to get more detailed logs about the installation.
 
 | short | long        |                 description                |
