@@ -22,6 +22,25 @@ To call it simply use the command line :
 sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json
 ```
 
+Since tao v10.19.1 we have the possibility to get more detailed logs about the installation.
+| short |     long    |                 description                |
+|:-----:|:-----------:|:------------------------------------------:|
+| -v    | --verbose 1 | verbose mode(error level)                  |
+| -vv   | --verbose 2 | verbose mode(error & notice levels)        |
+| -vvv  | --verbose 3 | verbose mode(error & notice & info levels) |
+| -vvvv | --verbose 4 | verbose mode(all levels)                   |
+| -nc   | --no-color  | removing colors from the output            |
+
+Example:
+```bash
+# Normal CLI setup with detailed logs
+sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json -vvv
+
+# Fully detailed logs with no color (recommended for build processes)
+sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json -vvvv -nc
+```
+
+
 Config file
 -----------
 
