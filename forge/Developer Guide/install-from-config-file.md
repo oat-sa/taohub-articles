@@ -5,7 +5,7 @@ tags:
     - 'Installation and Upgrading'
 -->
 
-# Install tao platform from a configuration file
+# Install the TAO platform from a configuration file
 
 > This page aims to explain how you can install tao from a predifined configuration file, in order to make your deployments easier.
 
@@ -17,7 +17,7 @@ To call it simply use the command line :
 sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json
 ```
 
-Since tao v10.19.1 we have the possibility to get more detailed logs about the installation.
+Since TAO v10.19.1 we have the possibility to get more detailed logs about the installation.
 
 | short | long        |                 description                |
 |-------|-------------|--------------------------------------------|
@@ -61,7 +61,7 @@ This option is the one that will set your first tao user as a super user. It req
 
 #### Configuration
 
-This section have several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.<br/>
+This section have several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.
 
 Mandatory configuration :
 
