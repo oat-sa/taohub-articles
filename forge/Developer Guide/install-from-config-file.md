@@ -9,7 +9,7 @@ tags:
 
 > This page aims to explain how you can install tao from a predifined configuration file, in order to make your deployments easier.
 
-Since TAO v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.<br/>
+Since TAO v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.
 
 To call it simply use the command line :
 
@@ -39,13 +39,13 @@ sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.j
 
 ## Config file
 
-The config file can be written either in json or yaml. In order to use a yaml file you have to have the yaml extension for php on your server.<br/>
+The config file can be written either in json or yaml. In order to use a yaml file you have to have the yaml extension for php on your server.
 
 The file will contain some mandatory and optional properties, they are listed below. You can find an example of this file [here](https://github.com/oat-sa/tao-core/blob/master/scripts/sample/config.json)
 
 ### Mandatory properties
 
-#### super-user
+#### Super User
 
 This option is the one that will set your first tao user as a super user. It requires a login and a password. It can contain but not needed a first name, last name and an email.
 
@@ -63,12 +63,12 @@ This option is the one that will set your first tao user as a super user. It req
 
 This section have several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.
 
-Mandatory configuration :
+Mandatory configuration:
 
 -   global
 -   generis
 
-Optional configuration :
+Optional configuration:
 
 -   log
 -   filesystem
@@ -106,12 +106,12 @@ The global part of the configuration contains all the properties required for th
 }
 ```
 
-##### persistences
+##### Persistences
 
 The persistences configuration is one of the most important because it will let you choose the database type where you want to install tao data.
 It has to be under the generis configuration.
 
-You must have at least the default key in order to set correctly the detabase, then you can choose the driver 'pdo_pgsql', 'pdo_mysql', it is the same structure than in your final config/generis/persistences.conf.php
+You must have at least the default key in order to set correctly the detabase, then you can choose the driver `pdo_pgsql`, `pdo_mysql`, it is the same structure than in your final `config/generis/persistences.conf.php`
 
 You can also if you want set other persistences as the cache one or a redis connection for the delivery execution or the results.
 
@@ -204,7 +204,7 @@ In this example we have the log configuration that is an array of array with som
 #### postInstall
 
 An other key of this configuration file is the postInstall key. It allows you to specify a script to run at the end of the installation process.
-Under the postInstall key put a key that will make sense for you, then you have to specify two keys. The first one is the class, the script that you want to launch. It has to implement the __invoke() method.
+Under the postInstall key put a key that will make sense for you, then you have to specify two keys. The first one is the class, the script that you want to launch. It has to implement the `__invoke()` method.
 The second parameter is the params that you want to give to the invoke method in order to run you script.
 
 ```json
