@@ -1,20 +1,15 @@
 <!--
-parent: 'Developer Guide'
 created_at: '2016-12-12 13:49:42'
-updated_at: '2017-03-13 08:54:05'
-authors:
-    - 'Antoine Robin'
 tags:
     - 'Developer Guide'
     - 'Installation and Upgrading'
 -->
 
-Install tao platform from a configuration file
-========================
+# Install tao platform from a configuration file
 
-This page aims to explain how you can install tao from a predifined configuration file, in order to make your deployments easier.
+> This page aims to explain how you can install tao from a predifined configuration file, in order to make your deployments easier.
 
-Since tao v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.<br/>
+Since TAO v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.<br/>
 
 To call it simply use the command line :
 
@@ -42,8 +37,7 @@ sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.j
 ```
 
 
-Config file
------------
+## Config file
 
 The config file can be written either in json or yaml. In order to use a yaml file you have to have the yaml extension for php on your server.<br/>
 
