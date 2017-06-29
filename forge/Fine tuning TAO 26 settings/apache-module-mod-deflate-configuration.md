@@ -7,7 +7,7 @@ authors:
 tags: {  }
 -->
 
-``Apache Module mod_deflate configuration
+Apache Module mod_deflate configuration
 ========================================
 
 A generic sample configuration
