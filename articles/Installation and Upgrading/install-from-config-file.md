@@ -137,6 +137,39 @@ You can also if you want set other persistences as the cache one or a redis conn
 }
 ```
 
+Bellow is an example of setting up a read replica as the default persistence :
+
+```json
+"default": {
+  "driver": "dbal",
+  "connection": {
+    "wrapperClass": "\\Doctrine\\DBAL\\Connections\\MasterSlaveConnection",
+    "driver": "pdo_pgsql",
+    "master":{
+      "host": "localhost",
+      "dbname": "tao_default",
+      "user": "postgres",
+      "password": "postgres"
+    },
+    "slaves": [
+      {
+        "host": "localhost",
+        "dbname": "tao_default",
+        "user": "postgres",
+        "password": "postgres"
+      }
+    ]
+  }
+}
+```
+You can see that we have to set different parameters.
+First the type of connection, here a master slave connection.
+Then the drive to use for your database, we are using a postgresql database so it is `pdo_pgsql`
+Finally we have to configure a bit the connection. Typically the master and the slaves, so host, dbname, user and password. We could add the port if necessary. In this example we have only one slave but we could add more.
+
+
+##### 
+
 ### Optionnal properties
 
 #### Extensions
