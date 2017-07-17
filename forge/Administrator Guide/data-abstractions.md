@@ -102,7 +102,7 @@ Service state storage abstraction
 
 
 
-The service state storage manages the state of any service that has been started. This can include among many the states of items (selected responses), states of the test (current item) and state of the delivery. This is by default stored in the key-value persistence identified by **’serviceState’** (key is defined in *config/generis/stateStorage.conf.php*).
+The service state storage manages the state of any service that has been started. This can include among many the states of items (selected responses), states of the test (current item) and state of the delivery. This is by default stored in the key-value persistence identified by **’serviceState’** (key is defined in *config/tao/stateStorage.conf.php*).
 
 ### Storing service states in the filesystem (default)
 
