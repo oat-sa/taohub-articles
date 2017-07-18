@@ -98,6 +98,9 @@ return new core_kernel_uri_AdvKeyValueUriProvider(
     )
 );
 
+```
+
+```php
     'uriProvider' => array(
         'driver' => 'phpredis',
         'host' => '127.0.0.1',
@@ -233,8 +236,8 @@ The choice of a Result Storage implementation is done by configuring a Result Se
 
 Two major implementations of Result Storage exist:
 
-    1.  taoResults
-    2.  keyValueResultStorage
+1. `taoResults`
+2. `keyValueResultStorage`
 
 The second implementation requires the [taoAltResultStorage](https://github.com/oat-sa/extension-tao-outcomekeyvalue/) extension to be installed. Use composer with extension-tao-outcomekeyvalue as package name or clone the GitHub repository of this extension separately. See Installing a new extension for that purpose.
 
