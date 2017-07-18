@@ -13,13 +13,15 @@ tags:
 
 The key-value storage implementation may be installed and configured under the following conditions:
 
-    -   for Redis: 
-        - **redis-server** on the server you want to use for the storage
-        - **php5-redis** on the TAO application server
-    -   for Couchbase: 
-        - **couchbase-server** on the server you want to use for the storage
-        - **PECL couchbase library** on the TAO application server
--   If you are using Fedora/CentOS/RHEL, make sure you have the following packages installed:
+- for Redis: 
+    - **redis-server** on the server you want to use for the storage
+    - **php5-redis** on the TAO application server
+    
+- for Couchbase: 
+    - **couchbase-server** on the server you want to use for the storage
+    - **PECL couchbase library** on the TAO application server
+    
+- If you are using Fedora/CentOS/RHEL, make sure you have the following packages installed:
     -   for Redis: **php56u-pecl-redis**, **php56w-pecl-redis** or earlier versions of these packages
     -   for Couchbase: install the **rpm package [available at this page](http://docs.couchbase.com/admin/admin/Install/rhel-installing.html)**.
 
