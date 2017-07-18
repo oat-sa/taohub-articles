@@ -14,35 +14,38 @@ tags:
 The key-value storage implementation may be installed and configured under the following conditions:
 
 -   If you are using Ubuntu, make sure you have the following packages installed:
-    -   for Redis:
-        *redis-server* on the server you want to use for the storage
-        *php5-redis* on the TAO application server
-    -   for Couchbase:
-        *couchbase-server* (on the server you want to use for the storage)
-        PECL *couchbase* library on the TAO application server
+    -   for Redis: 
+        - **redis-server** on the server you want to use for the storage
+        - **php5-redis** on the TAO application server
+    -   for Couchbase: 
+        - **couchbase-server** on the server you want to use for the storage
+        - **PECL couchbase library** on the TAO application server
 -   If you are using Fedora/CentOS/RHEL, make sure you have the following packages installed:
-    -   for Redis: *php56u-pecl-redis*, *php56w-pecl-redis* or prior versions of these packages
-    -   for Couchbase: install the rpm package [available at this page](http://docs.couchbase.com/admin/admin/Install/rhel-installing.html).
+    -   for Redis: **php56u-pecl-redis**, **php56w-pecl-redis** or earlier versions of these packages
+    -   for Couchbase: install the **rpm package [available at this page](http://docs.couchbase.com/admin/admin/Install/rhel-installing.html)**.
 
 There are currently 6 distinct storages that are used during the delivery.
 
+## Delivery execution information storage abstraction
 
-## Delivery execution informations storage abstraction
+Delivery execution information covers everything related to  to a what Test-Taker has started/finished which delivery. The choice of the abstraction is done in *config/taoDelivery/execution_service.conf.php*.
 
-Delivery execution information cover everything related to what test taker has started/finished which delivery. The choice of the abstraction is done in *config/taoDelivery/execution_service.conf.php*.
-
-### Storing delivery execution informations in the ontology (default)
+### Storing delivery execution information in the ontology (default)
 
 ```php 
 return new taoDelivery_models_classes_execution_OntologyService();
 ```
 
-### Storing delivery execution informations in a key-value server
+### Storing delivery execution information in a key-value server
 
 To switch to a KeyValue persistence we need to first change the service to `taoDelivery_models_classes_execution_KeyValueService` in *config/taoDelivery/execution_service.conf.php*:
 
 ```php 
-return new taoDelivery_models_classes_execution_KeyValueService(array('persistence' => 'deliveryExecution'));
+return new taoDelivery_models_classes_execution_KeyValueService(
+    array(
+        'persistence' => 'deliveryExecution'
+    )
+);
 ```
 
 Additionally the persistence used by the key value service needs to be defined in *config/generis/persistences.conf.php*.
@@ -68,14 +71,19 @@ If you would like to use Couchbase you would add the following block:
 
 ## URI provider
 
-The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
+The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefor should use a common URI provider.
 
 ### Using the SQL server as URI provider (default)
 
 By default Generis uses the SQL database to generate new URIs:
 
 ```php
-return new core_kernel_uri_DatabaseSerialUriProvider(array('persistence' => 'default','namespace' => LOCAL_NAMESPACE.'#'));
+return new core_kernel_uri_DatabaseSerialUriProvider(
+    array(
+        'persistence' => 'default',
+        'namespace' => LOCAL_NAMESPACE.'#'
+    )
+);
 ```
 
 ### Using the key-value server as URI provider
@@ -83,7 +91,12 @@ return new core_kernel_uri_DatabaseSerialUriProvider(array('persistence' => 'def
 To switch to a the advanced key-value implementation the service in *config/generis/uriProvider.conf.php* needs to be changed to:
 
 ```php
-return new core_kernel_uri_AdvKeyValueUriProvider(array('persistence' => 'uriProvider','namespace' => LOCAL_NAMESPACE.'#'));
+return new core_kernel_uri_AdvKeyValueUriProvider(
+    array(
+        'persistence' => 'uriProvider',
+        'namespace' => LOCAL_NAMESPACE.'#'
+    )
+);
 
     'uriProvider' => array(
         'driver' => 'phpredis',
