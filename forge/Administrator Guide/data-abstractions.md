@@ -13,7 +13,6 @@ tags:
 
 The key-value storage implementation may be installed and configured under the following conditions:
 
--   If you are using Ubuntu, make sure you have the following packages installed:
     -   for Redis: 
         - **redis-server** on the server you want to use for the storage
         - **php5-redis** on the TAO application server
@@ -28,7 +27,7 @@ There are currently 6 distinct storages that are used during the delivery.
 
 ## Delivery execution information storage abstraction
 
-Delivery execution information covers everything related to  to a what Test-Taker has started/finished which delivery. The choice of the abstraction is done in *config/taoDelivery/execution_service.conf.php*.
+Delivery execution information covers everything related to a what Test-Taker has started/finished in which delivery. The choice of the abstraction is done in *config/taoDelivery/execution_service.conf.php*.
 
 ### Storing delivery execution information in the ontology (default)
 
@@ -52,21 +51,21 @@ Additionally the persistence used by the key value service needs to be defined i
 
 If you would like to use Redis you would add the following block:
 ```php
-    'deliveryExecution' => array(
-        'driver' => 'phpredis',
-        'host' => '127.0.0.1',
-        'port' => 6379
-    )
+'deliveryExecution' => array(
+    'driver' => 'phpredis',
+    'host' => '127.0.0.1',
+    'port' => 6379
+)
 ```
 
 If you would like to use Couchbase you would add the following block:
 ```php
-    'deliveryExecution' => array(
-        'driver' => 'couchbase',
-        'cluster' => 'couchbase://localhost',
-        'bucket' => 'your_tao_bucket',
-        'password' => 'your_tao_bucket_password' //optional
-    )
+'deliveryExecution' => array(
+    'driver' => 'couchbase',
+    'cluster' => 'couchbase://localhost',
+    'bucket' => 'your_tao_bucket',
+    'password' => 'your_tao_bucket_password' //optional
+)
 ```
 
 ## URI provider
@@ -101,11 +100,11 @@ return new core_kernel_uri_AdvKeyValueUriProvider(
 ```
 
 ```php
-    'uriProvider' => array(
-        'driver' => 'phpredis',
-        'host' => '127.0.0.1',
-        'port' => 6379
-    )
+'uriProvider' => array(
+    'driver' => 'phpredis',
+    'host' => '127.0.0.1',
+    'port' => 6379
+)
 ```
 
 
@@ -117,9 +116,9 @@ The service state storage manages the state of any service that has been started
 
 The default persistence is defined in *config/generis/persistences.conf.php* and will store the state of the services in the directory *data/generis/serviceState*.
 ```php
-    'serviceState' => array(
-        'driver' => 'phpfile',
-    )
+'serviceState' => array(
+    'driver' => 'phpfile',
+)
 ```
 ### Storing service states in a Redis or Couchbase server
 
@@ -127,21 +126,21 @@ If you prefer to store these states in an alternative storage, edit the file *co
 
 For Redis:
 ```php
-    'serviceState' => array(
-        'driver' => 'phpredis',
-        'host' => '127.0.0.1',
-        'port' => 6379
-    )
+'serviceState' => array(
+    'driver' => 'phpredis',
+    'host' => '127.0.0.1',
+    'port' => 6379
+)
 ```
 
 For Couchbase:
 ```php
-    'serviceState' => array(
-         'driver' => 'couchbase',
-         'cluster' => 'couchbase://localhost',
-         'bucket' => 'your_tao_bucket',
-         'password' => 'your_tao_bucket_password' //optional
-    )
+'serviceState' => array(
+     'driver' => 'couchbase',
+     'cluster' => 'couchbase://localhost',
+     'bucket' => 'your_tao_bucket',
+     'password' => 'your_tao_bucket_password' //optional
+)
 ```
 
 ## PHP session storage abstraction
