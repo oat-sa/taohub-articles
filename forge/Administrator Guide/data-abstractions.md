@@ -158,31 +158,31 @@ By default the PHP environment will handle all session storage and retrieval on 
 To use the key-value storage for the php session change the service used in *config/tao/session.conf.php*:
 
 ```php
-    return new common_session_php_KeyValueSessionHandler(array(
-        common_session_php_KeyValueSessionHandler::OPTION_PERSISTENCE => 'session'
-    ));
+return new common_session_php_KeyValueSessionHandler(array(
+    common_session_php_KeyValueSessionHandler::OPTION_PERSISTENCE => 'session'
+));
 ```
 The persistence used for the session needs to be defined in *config/generis/persistences.conf.php*:
 
 For Redis add the following persistence:
 
 ```php
-    'session' => array(
-        'driver' => 'phpredis',
-        'host' => '127.0.0.1',
-        'port' => 6379
-    )
+'session' => array(
+    'driver' => 'phpredis',
+    'host' => '127.0.0.1',
+    'port' => 6379
+)
 ```
 
 For Couchbase add the following persistence:
 
 ```php
-    'session' => array(
-        'driver' => 'phpredis',
-        'cluster' => 'couchbase://localhost',
-        'bucket' => 'your_tao_bucket',
-        'password' => 'your_tao_bucket_password' //optional
-    )
+'session' => array(
+    'driver' => 'phpredis',
+    'cluster' => 'couchbase://localhost',
+    'bucket' => 'your_tao_bucket',
+    'password' => 'your_tao_bucket_password' //optional
+)
 ```
 
 ## User authentication storage abstraction
@@ -196,15 +196,15 @@ Currently, there are at least two user authentication methods available:
 The default authentication method is the following:
 
 ```php
-    return array(
-        array(
-            'driver' => 'oat\\generis\\model\\user\\AuthAdapter',
-            'hash' => array(
-                'algorithm' => 'sha256',
-                'salt' => 10
-            )
+return array(
+    array(
+        'driver' => 'oat\\generis\\model\\user\\AuthAdapter',
+        'hash' => array(
+            'algorithm' => 'sha256',
+            'salt' => 10
         )
-    );
+    )
+);
 ```
 
 To support key-value authentication, you will need the [generis-auth-keyvalue](https://github.com/oat-sa/generis-auth-keyvalue/) library to be installed. The configuration to apply to broaden user authentication methods to key-value is [detailed here](https://github.com/oat-sa/generis-auth-keyvalue/blob/master/README.md).
@@ -212,18 +212,18 @@ To support key-value authentication, you will need the [generis-auth-keyvalue](h
 With the following configuration, key-value user authentication will come first and default authentication will be kept either as a fallback or for non-test-takers users:
 
 ```php
-    return array(
-        0 => array(
-            'driver' => 'oat\\authKeyValue\\AuthKeyValueAdapter',
+return array(
+    0 => array(
+        'driver' => 'oat\\authKeyValue\\AuthKeyValueAdapter',
+    ),
+    1 => array(
+        'driver' => 'oat\\generis\\model\\user\\AuthAdapter',
+        'hash' => array(
+            'algorithm' => 'sha256',
+            'salt' => 10,
         ),
-        1 => array(
-            'driver' => 'oat\\generis\\model\\user\\AuthAdapter',
-            'hash' => array(
-                'algorithm' => 'sha256',
-                'salt' => 10,
-            ),
-        ),
-    );
+    ),
+);
 ```
 
 Importing test-takers to Redis is achieved through a CSV import script.
@@ -244,20 +244,20 @@ If you have chosen to use a remote Redis server or wanted to have Redis running 
 
 For Redis:
 ```php
-    'keyValueResult' => array(
-            'driver' => 'phpredis',
-            'host' => '127.0.0.1',
-            'port' => 6379
-        )
+'keyValueResult' => array(
+    'driver' => 'phpredis',
+    'host' => '127.0.0.1',
+    'port' => 6379
+)
 ```
 For Couchbase:
 ```php
-    'keyValueResult' => array(
-            'driver' => 'couchbase',
-            'cluster' => 'couchbase://localhost',
-            'bucket' => 'your_tao_bucket',
-            'password' => 'your_tao_bucket_password' //optional
-        )
+'keyValueResult' => array(
+    'driver' => 'couchbase',
+    'cluster' => 'couchbase://localhost',
+    'bucket' => 'your_tao_bucket',
+    'password' => 'your_tao_bucket_password' //optional
+)
 ```
 
 When you configure a delivery, you may now decide to send the results to the Redis server, in that case choose the option *KeyValueResultStorage* in the delivery configuration tool.
