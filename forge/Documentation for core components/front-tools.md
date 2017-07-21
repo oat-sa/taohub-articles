@@ -32,17 +32,6 @@ Grunt runs on node.js, so you need [node.js](https://nodejs.org/en/download/) in
     nvm install v6.2.1
     nvm alias default v6.2.1
 
-- The current SASS scripts used in TAO contains a bug, so we can’t use the libsass until it is fixed. You need then to have the sass tool available on your system:<br/>
-
-For Ubuntu/Debian user :
-
-    sudo apt-get install rubygems
-    sudo gem install sass
-
-For MacOS user, ruby comes installed to your system, you just have to install sass :
-
-    gem install sass
-
 - Then to install and set up Grunt :
 
     cd tao/views/build
