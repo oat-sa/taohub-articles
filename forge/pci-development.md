@@ -86,6 +86,60 @@ How to: get two/multiple version of a PCI run at the same time ?<br/>
 
 The only to do this, is to rename the second PCI type identifier to a new one.
 
+Portable libraries
+------------------
+Portable libraries offer a way to share some commonly used libraries among PCIs developed in TAO (e.g. jquery, raphael, lodash, html formatter).
+
+From taoQtiItem v10.0.0, the support of portable shared libraries has been dropped.
+They have been upgraded to portable “safe” libraries (with minimal dependencies to tao core libraries). They no longer need to be registered as before and are simply part of [the source code](https://github.com/oat-sa/extension-tao-itemqti/tree/develop/views/js/portableLib). They may simply be added as dependencies in the PCI AMD modules.
+
+For such PCIs to still be portable, they are required to be compiled into one single min file.
+Please check the section next section on portable element compilation.
+
+Portable element compilation
+----------------------------
+Compilation of portable element allow minifying all requires AMD modules of a PCI into a single min.js file.
+It brings the benefit of requiring less http requests and it is required when the PCI is making use of "portable libraries".
+
+To compile a portable element, just follow the two following steps:
+
+1 - Add the array of your PCI modules to the “src” entry of your runtime manifest. The first element in the array must be the entrypoint, the module that implements the PCI API. The output will be in the hook file definied in the manifest, in this example in the file “likertScaleInteraction.min.js”.
+
+```
+    "runtime" : {
+        "hook" : "./runtime/likertScaleInteraction.min.js",
+        "libraries" : [
+        ],
+        "stylesheets" : [
+            "./runtime/css/base.css",
+            "./runtime/css/likertScaleInteraction.css"
+        ],
+        "mediaFiles" : [
+            "./runtime/assets/ThumbDown.png",
+            "./runtime/assets/ThumbUp.png",
+            "./runtime/css/img/bg.png"
+        ],
+        "src" : [
+            "./runtime/js/likertScaleInteraction.js",
+            "./runtime/js/renderer.js"
+        ]
+    }
+```
+
+2 - Compile all the portable elements in an extension by calling the grunt task “portableelement” with the parameter “extension”. You can optionally add the param “identifier” to only compile one specific interaction in the extension).
+
+```
+#Usage:
+grunt portableelement --extension=extensionName (--identifier=interactionTypeIdentifier)
+
+#Short params:
+grunt portableelement -e=extensionName (-i=interactionTypeIdentifier)
+
+#Real example:
+cd tao/views/build
+grunt portableelement -e=qtiItemPci -i=likertScaleInteraction
+```
+
 Asset url resolution
 --------------------
 
@@ -113,5 +167,3 @@ This is a suggestion of checklist for PCI and PIC related PR review:
 -   version: has any version upgrade, compliant with semantic versioning
 -   test authoring, preview, delivery
 -   use strict, header and licensing
-
-
