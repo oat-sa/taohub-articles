@@ -181,7 +181,7 @@ Examples (You are not forced to used region tags. The only requirement is a firs
 // Syntax
 // php tao/scripts/taoTranslate.php -v -a=create|update -e=[extension] -l=[locale]
 
-// Example for anew locale
+// Example for a new locale
 php tao/scripts/taoTranslate.php -v -a=create -e=taoQtiTest -l=fr-FR
 
 // Example for an update
@@ -197,13 +197,13 @@ Fill generated po file with your translation.
 ### Compile the file into PHP and JavaScript
 
 ```php
-    php tao/scripts/taoTranslate.php -v -a=compile -e=taoDelivery -l=fr-FR
+php tao/scripts/taoTranslate.php -v -a=compile -e=taoDelivery -l=fr-FR
 ```
 
 ### Update TAO
 
 ```php
-    php tao/scripts/taoUpdate.php
+php tao/scripts/taoUpdate.php
 ```
 
 Hint: Use `-f` to reset actual translations po files
