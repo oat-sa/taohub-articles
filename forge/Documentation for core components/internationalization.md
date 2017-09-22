@@ -109,17 +109,35 @@ Because TAO uses Ontologies in the Resource Description Framework (RDF), its *Da
 
 Here is an example of RDF Model Translation (RMT) shipped with the standard Open Source release of TAO, that describes how to translate the *Data Model* of the *taoGroups* extension in the *French* locale, located in */taoGroups/locales/FR/taogroup.rdf*.
 
-
-
-
-
-
-        Groupe
-
-        La Classe Groupe. Un aggrégat de Sujets.
-
-      ...
-      ...
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage EN
+    @targetLanguage FR
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOGroup.rdf">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOGroup.rdf#Group">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage FR
+    @source Group
+    @subject http://www.tao.lu/Ontologies/TAOGroup.rdf#Group
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="FR"><![CDATA[Groupe]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage FR
+    @source Group
+    @subject http://www.tao.lu/Ontologies/TAOGroup.rdf#Group
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="FR"><![CDATA[La Classe Groupe. Un aggrégat de Sujets.]]></rdfs:comment>
+  </rdf:Description>
+  ...
+  ...
+</rdf:RDF>
+```
 
 
 The most important thing to understand in this RMT is that the label and comments translations are located within the `<rdfs:label>` and `<rdfs:comment>` tags. In this example, `<rdfs:label xml:lang="FR"><![CDATA[Groupe]]></rdfs:label>` represents the label of the *Group Class* translated in *French*. On the other hand `<rdfs:comment xml:lang="FR"><![CDATA[La Classe Groupe. Un aggrégat de Sujets.]]></rdfs:comment>` depicts the textual description of the *Group Class*.
