@@ -155,51 +155,57 @@ Create a new locale is easy as a single command line. Open your favourite comman
 
 As a result, you will get a new locale directory named *es-MX* for each extension of the Open Source release of TAO. Each locale folder contains PO Files and RTMs ready to be translated.
 
-How to choose your language tag
--------------------------------
+## How to choose your language tag
 
 TAO uses IETF BCP 47 language codes. If you need to choose a language tag, please refer to:
 
--   http://www.w3.org/International/articles/language-tags
--   http://www.iana.org/assignments/language-subtag-registry
+- http://www.w3.org/International/articles/language-tags
+- http://www.iana.org/assignments/language-subtag-registry
+
+Other sources include: 
+- https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes for language tags
+- https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for region tags
 
 Examples (You are not forced to used region tags. The only requirement is a first region tag, and add least one sub tag after).
 
--   nl-NL -<br/>
-> nl = Dutch (language-tag), NL = Netherlands (region-tag)
--   fr-BE -<br/>
-> fr = French (language-tag), BE = Belgium (region-tag)
--   zh-SG -<br/>
-> zh = Chinese (language-tag), SG = Singapore (region-tag)
--   ar-arb -<br/>
-> ar = Arabic (language-tag), arb = Standard Arabic (language-tag)
+- **nl-NL** - nl = Dutch (language-tag), NL = Netherlands (region-tag)
+- **fr-BE** - fr = French (language-tag), BE = Belgium (region-tag)
+- **zh-SG** - zh = Chinese (language-tag), SG = Singapore (region-tag)
+- **ar-arb** - ar = Arabic (language-tag), arb = Standard Arabic (language-tag)
 
-How to update or add translations
----------------------------------
+## How to update or add translations
 
 ### Scan the source files for **() enclosed strings
 
-    php tao/scripts/taoTranslate.php -v -a=create -e=taoQtiTest -l=fr-FR
-    /** if already exists */
-    php tao/scripts/taoTranslate.php -v -a=update -e=taoQtiTest -l=fr-FR
+```php
+// Syntax
+// php tao/scripts/taoTranslate.php -v -a=create|update -e=[extension] -l=[locale]
 
-This will generate a the following file: <br/>
-$ext/locales/<br/>
-$lang/messages.po.<br/>
+// Example for anew locale
+php tao/scripts/taoTranslate.php -v -a=create -e=taoQtiTest -l=fr-FR
+
+// Example for an update
+php tao/scripts/taoTranslate.php -v -a=update -e=taoQtiTest -l=fr-FR
+```
+
+This will generate a the following files:
+- *$ext/locales/*
+- $lang/messages.po.*
 
 Fill generated po file with your translation.
 
-### Compile the file into php and javascript
+### Compile the file into PHP and JavaScript
 
+```php
     php tao/scripts/taoTranslate.php -v -a=compile -e=taoDelivery -l=fr-FR
+```
 
 ### Update TAO
 
+```php
     php tao/scripts/taoUpdate.php
+```
 
-/!<br/>
-\ Use -f to reset actual translations po files
-
-|
+Hint: Use `-f` to reset actual translations po files
 
 
