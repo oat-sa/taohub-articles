@@ -49,7 +49,7 @@ msgid "Hello World"
 msgstr "Bonjour le monde"
 ```
 
-The same technique to generate *messages* can be applied to JavaScript source code as well, still using the `__()` method. Within handlebar templates translated code looks like this `{{__ 'Hello World'}}`
+The same technique to generate *messages* can be applied to JavaScript source code as well, still using the `__()` method. Within handlebar templates text to be translated is formatted like this: `{{__ 'Hello World'}}`
 
 ## PO Files
 
@@ -97,7 +97,7 @@ The **msgstr** component contains the translation of *msgid*, that will be displ
 
 ### How to Edit PO Files
 
-Because PO files are just plain text files, you can use your favorite editor to modify them. In this case, please make sure that the encoding in use is **UTF-8**. On the other and, you can use specialize gettext editor that will display messages to be translated in a more friendly way. We recommend the use of [POEdit](http://www.poedit.net/): a free and multi-platform gettext editor.
+Because PO files are just plain text files, you can use your favorite editor to modify them. In this case, please make sure that the encoding in use is **UTF-8**. On the other and, you can use specialize gettext editor that will display messages to be translated in a more friendly way. We recommend the use of [POEdit](http://www.poedit.net/), a free and multi-platform gettext editor.
 
 ### PO files Compilation
 
@@ -150,8 +150,12 @@ The TAO Platform comes with dedicated tools that help you to create and maintain
 
 Create a new locale is easy as a single command line. Open your favourite command line interface and go in the */path_to_your_install/tao/scripts* directory. In the following example, we will create a locale es-MX (Mexican Spanish) for each extension delivered in the Open Source release of TAO.
 
-    cd /path_to_your_install/tao/scripts
-    php taoTranslate.php -v -a create -l es-MX -ll "Mexican Spanish" -e filemanager,tao,taoCoding,taoDelivery,taoGroups,taoItems,taoResults,taoSubjects,taoTests,wfAuthoring,wfEngine
+```bash
+cd /path_to_your_install/tao/scripts ↲
+php taoTranslate.php -v -a create -l es-MX -ll "Mexican Spanish" ↲
+-e filemanager,tao,taoCoding,taoDelivery,taoGroups,taoItems,↲
+taoResults,taoSubjects,taoTests,wfAuthoring,wfEngine
+```
 
 As a result, you will get a new locale directory named *es-MX* for each extension of the Open Source release of TAO. Each locale folder contains PO Files and RTMs ready to be translated.
 
@@ -210,6 +214,6 @@ php tao/scripts/taoTranslate.php -v -a=compile -e=taoDelivery -l=fr-FR
 php tao/scripts/taoUpdate.php
 ```
 
-Hint: Use `-f` to reset actual translations po files
+Hint: Use `-f` to reset actual translations PO files
 
 
