@@ -13,7 +13,7 @@ tags:
 
 ## Extension Locales
 
-In TAO, a *Locale* is the definition of all *messages* to be translated for a given TAO Extension. Indeed, the internationalization process applies to each TAO Extension. Any translation description files are located in the */locales* directory of the Extension to be translated. In this */locales* folder you will find a directory dedicated to each language. The directory name for a language contained in the */locales* directory is actually is a combination of the [two letter language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and a [two letter country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) (e.g. *fr-LU* for *French* as used in *Luxemburg*) and will be used as a unique identifier for this locale across extensions.
+In TAO, a *Locale* is the definition of all *messages* to be translated for a given TAO Extension. Indeed, the internationalization process applies to each TAO Extension. Any translation description files are located in the */locales* directory of the Extension to be translated. In this */locales* folder you will find a directory dedicated to each language. The directory name for a language contained in the */locales* directory is actually is a combination of the [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and a [region code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) (e.g. *fr-LU* for *French* as used in *Luxemburg*) and will be used as a unique identifier for this locale across extensions.
 
 ### Locale Structure
 
@@ -168,10 +168,14 @@ Other sources include:
 
 Examples (You are not forced to used region tags. The only requirement is a first region tag, and add least one sub tag after).
 
-- **nl-NL** - nl = Dutch (language-tag), NL = Netherlands (region-tag)
-- **fr-BE** - fr = French (language-tag), BE = Belgium (region-tag)
-- **zh-SG** - zh = Chinese (language-tag), SG = Singapore (region-tag)
-- **ar-arb** - ar = Arabic (language-tag), arb = Standard Arabic (language-tag)
+
+| Locale | Language Tag | Region or language tag         |
+| -------|--------------| -------------------------------|
+| nl-NL  | nl (Dutch)   | NL (Netherlands, region)       |
+| fr-BE  | fr (French)  | BE (Belgium, region)           |
+| zh-SG  | zh (Chinese) | SG (Singapore, region)         |
+| ar-arb | ar (Arabic)  | arb (Standard Arabic, language)|
+
 
 ## How to update or add translations
 
@@ -189,8 +193,8 @@ php tao/scripts/taoTranslate.php -v -a=update -e=taoQtiTest -l=fr-FR
 ```
 
 This will generate a the following files:
-- *$ext/locales/*
-- $lang/messages.po.*
+- $ext/locales/
+- $lang/messages.po.
 
 Fill generated po file with your translation.
 
