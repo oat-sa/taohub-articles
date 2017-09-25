@@ -35,8 +35,11 @@ Create or open the file:
 and add a reference to the PCI whose assets are to be reloaded:
 
     return [
-        'textReaderPCI' => 'pciSamples/views/js/pciCreator/dev/textReaderInteraction/'
+        //'pciIdentifier' => 'path/to/pci/source/files',
+        'textReaderInteraction' => 'pciSamples/views/js/pciCreator/dev/textReaderInteraction/'
     ];
+
+Please make sure that the array key matches the PCI identifier.
 
 ### 3. Refresh the TAO editor
 
