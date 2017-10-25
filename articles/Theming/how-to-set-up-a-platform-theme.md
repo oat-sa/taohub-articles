@@ -29,16 +29,16 @@ The result should look about like this.
 ![Typical Folder Structure](../resources/theming/platform-theme-folder-structure.png)
 
 ### The Configurable Platform Theme Class
-This class can be used in two different ways, either by passing an array options to the constructor or by calling `ConfigurablePlatformTheme::convertFromLegacyTheme`. An example is illustrated below in the _Updater_ section.
+This class can be used in two different ways, either by passing an array of options to the constructor or by calling `ConfigurablePlatformTheme::convertFromLegacyTheme`. An example for conversion is illustrated in the _Updater_ section below.
 
-The option has two mandatory elements, `label` and `extensionId`. 
+The array of options has two mandatory elements, `label` and `extensionId`. 
 
 ```php
-$config = [
+$options = [
     'label' => 'Default Theme',
     'extensionId' => 'taoSomething'
 ];
-$theme = new \oat\tao\model\theme\ConfigurablePlatformTheme($config);
+$theme = new \oat\tao\model\theme\ConfigurablePlatformTheme($options);
 ```
 
 This will generate a set of default values which are
@@ -52,6 +52,17 @@ $options = [
 ];
 ```
 Your configuration array will be merged over these defaults, so that you can easily overwrite whatever you wish. You can also add custom keys, there is a generic getter function to retrieve these values from the object. Mind you that keys must be in _camelCase_.
+
+```php
+$options = [
+	...
+    'myCustomKey' => 42
+];
+
+// can be retrieved with
+$theme->getMyCustomKey();
+
+```
 
 A fully blown custom configuration example
 ```php
@@ -131,7 +142,7 @@ class SetPlatformThemes extends InstallAction
     }
 }
 ```
-After installing the theme its configuration should be at _/config/tao/theming.conf.php_.
+After installing the theme its configuration will be available at _/config/tao/theming.conf.php_.
 
 ### The updater class
 
