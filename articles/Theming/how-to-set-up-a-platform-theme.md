@@ -20,7 +20,7 @@ For this example we assume the extension is called _taoMyExtension_ and the them
 - Create a path _/taoMyExtension/views/img/themes/platform/my-default-theme_.
 - Create a path _/taoMyExtension/views/templates/themes/platform/my-default-theme_.
 - Create a PHP class _/taoMyExtension/scripts/install/SetPlatformThemes.php_ and add a reference to the section _install/php_ in the manifest.
-- Add a reference to your Theme Toolkit profiles, see the https://github.com/oat-sa/theme-toolkit/blob/master/README.md.
+- Add a reference to your Theme Toolkit profiles, see the [Toolkit Readme](https://github.com/oat-sa/theme-toolkit/blob/master/README.md) for further information.
 - Create your images and templates.
 - Edit and compile your SCSS files.
 
