@@ -146,7 +146,7 @@ After installing the theme its configuration will be available at _/config/tao/t
 
 ### The updater class
 
-If you are using an extension you may have existing themes that can be in a legacy format. If you wish to convert them to instances of `ConfigurablePlatformTheme` you can use the following code.
+You may have existing themes that can be in a legacy format. If you wish to convert them to instances of `ConfigurablePlatformTheme` you can use the following code.
 ```php
 namespace oat\taoPremium\scripts\update;
 
