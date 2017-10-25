@@ -66,7 +66,7 @@ $theme->getMyCustomKey();
 
 A fully blown custom configuration example
 ```php
-$config = [
+$options = [
     'label' => 'Default Theme',
     'extensionId' => 'taoMyExtension',
     'logoUrl' => 'http://example.com/foo.png',
