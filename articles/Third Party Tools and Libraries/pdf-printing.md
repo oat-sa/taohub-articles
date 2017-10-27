@@ -9,7 +9,7 @@ tags:
     - 'taoBooklet'
 -->
 
-# Install wkHTMLtoPDF
+# Installing wkHTMLtoPDF
 
 > wkhtmltopdf is open source (LGPLv3) command line tool to render HTML into PDF using the Qt WebKit rendering engine.
 > This run entirely "headless" and do not require a display or display service.
@@ -18,7 +18,7 @@ tags:
 
 [wkHTMLtoPDF Website](https://wkhtmltopdf.org/)
 
-An extension for TAO allow to create test booklets: [taoBooklet](https://github.com/oat-sa/extension-tao-booklet). However this extension needs a third-party tool to generate the PDF files. To be able to generate a booklet, you need to install `wkhtmltopdf` on your server.
+[taoBooklet](https://github.com/oat-sa/extension-tao-booklet) is a TAO extension that allows to create booklets, which are essentially printable tests. However this extension needs a third-party tool to generate the PDF files. To be able to generate a booklet, you need to install `wkhtmltopdf` on your server.
 
 All three major OS brands are supported, and you should find the right binaries in the [download page of the official wkhtmltopdf website](https://wkhtmltopdf.org/downloads.html). You can also directly compile the source code and build your own platform binaries.
 
@@ -31,7 +31,7 @@ sudo apt-get update
 sudo apt-get install wkhtmltopdf
 ```
 
-However, depending on the version of your system, the installed version of `wkhtmltopdf` may not fully comply with the requirements, as there is some issues with QT when trying to render header and footers. If you encounter errors when generating the document, you should install the tool using these commands:
+However, depending on the version of your system, the installed version of `wkhtmltopdf` may not fully comply with the requirements, as there are some issues with QT when trying to render header and footers. If you encounter errors when generating the document, you should install the tool using these commands:
 
 ```bash
 sudo apt-get update
