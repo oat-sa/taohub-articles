@@ -1,25 +1,25 @@
 <!--
 skip: true
 -->
-# Platform Themes
+# How to handle Platform Themes
 
 > How to set up platform themes. Predominately this article talks about a setup in a custom extension - in a multi tenancy environment this might be different.
 
 ## Definition
 
-A platform theme is a set of stylesheets, templates, images etc. to modify the standard look and feel of the TAO platform, most often to apply a customer's branding. It for now is limited to header, footer, action bars and tabs. Although technically doable changes to the appearance of items are explicitely excluded. For all item related modifications item thems must be used.
+A platform theme is a set of stylesheets, templates, images etc. to modify the standard look and feel of the TAO platform, most often to apply a customer's branding. It for now is limited to header, footer, action bars and tabs. Although technically feasible changes to the appearance of items are explicitely excluded. For all item related modifications item themes must be used.
 
 ## Basic Setup
 
 On a customer platform themes are typically installed in a new extension. 
 
-For this example we assume the extension is called _taoMyExtension_ and the theme _"My default theme"_.
+For this example we assume the extension is called _taoSomething_ and the theme _"Default theme"_.
 
-- Copy the directory _*.scss_ from the Theme Toolkit to _/taoMyExtension/views_.
-- Rename _/taoMyExtension/views/scss/themes/platform/default_ to _/taoMyExtension/views/scss/themes/platform/my-default-theme_.
-- Create a path _/taoMyExtension/views/img/themes/platform/my-default-theme_.
-- Create a path _/taoMyExtension/views/templates/themes/platform/my-default-theme_.
-- Create a PHP class _/taoMyExtension/scripts/install/SetPlatformThemes.php_ and add a reference to the section _install/php_ in the manifest.
+- Copy the directory _*.scss_ from the Theme Toolkit to _/taoSomething/views_.
+- Rename _/taoSomething/views/scss/themes/platform/default_ to _/taoSomething/views/scss/themes/platform/default-theme_.
+- Create a path _/taoSomething/views/img/themes/platform/default-theme_.
+- Create a path _/taoSomething/views/templates/themes/platform/default-theme_.
+- Create a PHP class _/taoSomething/scripts/install/SetPlatformThemes.php_ and add a reference to the section _install/php_ in the manifest.
 - Add a reference to your Theme Toolkit profiles, see the [Toolkit Readme](https://github.com/oat-sa/theme-toolkit/blob/master/README.md) for further information.
 - Create your images and templates.
 - Edit and compile your SCSS files.
@@ -29,7 +29,7 @@ The result should look about like this.
 ![Typical Folder Structure](../resources/theming/platform-theme-folder-structure.png)
 
 ### The Configurable Platform Theme Class
-This class can be used in two different ways, either by passing an array of options to the constructor or by calling `ConfigurablePlatformTheme::convertFromLegacyTheme`. An example for conversion is illustrated in the _Updater_ section below.
+Configurable Platform Themes can be created in two different ways, either by passing an array of options to `ConfigurablePlatformTheme` or by calling `ThemeConverter::convertFromLegacyTheme`. An example for conversion is illustrated in the _Updater_ section below.
 
 The array of options has two mandatory elements, `label` and `extensionId`. 
 
@@ -44,11 +44,11 @@ $theme = new \oat\tao\model\theme\ConfigurablePlatformTheme($options);
 This will generate a set of default values which are
 ```php
 $options = [
-    'logoUrl' => 'http://domain/taoMyExtension/views/img/themes/platform/my-default-theme/logo.png',
-    'label' => 'My Default Theme',
-    'extensionId' => 'taoMyExtension',
-    'stylesheet' => 'http://domain/taoMyExtension/views/css/themes/platform/my-default-theme/theme.css',
-    'id' => 'taoMyExtensionMyDefaultTheme'
+    'logoUrl' => 'http://domain/taoSomething/views/img/themes/platform/default-theme/logo.png',
+    'label' => 'Default Theme',
+    'extensionId' => 'taoSomething',
+    'stylesheet' => 'http://domain/taoSomething/views/css/themes/platform/default-theme/theme.css',
+    'id' => 'taoSomethingDefaultTheme'
 ];
 ```
 Your configuration array will be merged over these defaults, so that you can easily overwrite whatever you wish. You can also add custom keys, there is a generic getter function to retrieve these values from the object. Mind you that keys must be in _camelCase_.
@@ -68,22 +68,30 @@ A fully blown custom configuration example
 ```php
 $options = [
     'label' => 'Default Theme',
-    'extensionId' => 'taoMyExtension',
+    'extensionId' => 'taoSomething',
     'logoUrl' => 'http://example.com/foo.png',
     'link' => 'http://example.com',
     'message' => 'Tao Platform',
+
+    // if stylesheet === ConfigurablePlatformTheme::DEFAULT_PATH
+    'stylesheet' => 'http://domain/taoSomething/views/css/themes/platform/default-theme/theme.css',
+    // when no stylesheet is given:
     'stylesheet' => 'http://example.com/tao/views/css/tao-3.css',
+    // when stylesheet is any other url:
+    'stylesheet' => 'http://example.com/any-other-url.css',
+
     'templates' => [
          'header-logo' => Template::getTemplate('blocks/header-logo.tpl', 'some-extension'),
-         // if the value of the template === ConfigurablePlatformTheme::TEMPLATE_DEFAULT
+
+         // if the value of the template === ConfigurablePlatformTheme::DEFAULT_PATH
          // the default theme path will be used something like:
-         // templates/themes/platform/my-default-theme/login-message.tpl
-         'login-message' => ConfigurablePlatformTheme::TEMPLATE_DEFAULT,
+         // templates/themes/platform/default-theme/login-message.tpl
+         'login-message' => ConfigurablePlatformTheme::DEFAULT_PATH,
     ],
     // array of translatable strings
-    'allTexts' => [
-         'diagBrowserCheckResult' => __('Your browser %CURRENT_BROWSER% is not compatible.'),
-         'diagOsCheckResult'      => __('Your Operating System %CURRENT_OS% is not compatible.')
+    'customTexts' => [
+         'diagBrowserCheckResult' => 'Your browser %CURRENT_BROWSER% is not compatible.',
+         'diagOsCheckResult'      => 'Your Operating System %CURRENT_OS% is not compatible.'
     ],
     'whateverCustomStuff' => 'anything as long as the key is in camelCase'
 ];
@@ -104,29 +112,30 @@ class SetPlatformThemes extends InstallAction
 {
     use LoggerAwareTrait;
 
+    const EXTENSION_ID = 'taoSomething';
 
     public function __invoke($params=array())
     {
         $themeService = $this->getServiceManager()->get(ThemeService::SERVICE_ID);
 
-        $extensionId = 'taoMyExtension';
         $themes = [
-            'my-default-theme' => 'My Default Theme'
+            'default-theme' => 'Default Theme'
         ];
 
-        $defaultTheme = 'my-default-theme';
+        $defaultTheme = 'default-theme';
 
-        // mind you that $key != theme id, this will rather be something like
-        // taoExtensionMyFavoriteTheme
+        // mind you that $key != theme id, the will be registered under the key 
+        // taoSomethingDefaultTheme in this example
         foreach($themes as $key => $label) {
             call_user_func_array(
                 [$themeService, $key === $defaultTheme ? 'setTheme' : 'addTheme'],
                 [
                     new ConfigurablePlatformTheme([
                         ConfigurablePlatformTheme::LABEL => $label,
-                        ConfigurablePlatformTheme::EXTENSION_ID => $extensionId,
+                        ConfigurablePlatformTheme::EXTENSION_ID => static::EXTENSION_ID,
+                        ConfigurablePlatformTheme::STYLESHEET => ConfigurablePlatformTheme::DEFAULT_PATH,
                         ConfigurablePlatformTheme::TEMPLATES => [
-                            'header-logo' => ConfigurablePlatformTheme::TEMPLATE_DEFAULT,
+                            'header-logo' => ConfigurablePlatformTheme::DEFAULT_PATH,
                         ]
                     ]),
                     false
@@ -152,6 +161,7 @@ namespace oat\taoPremium\scripts\update;
 
 use oat\oatbox\log\LoggerAwareTrait;
 use oat\tao\model\theme\ThemeService;
+use oat\tao\model\theme\ThemeConverter;
 use oat\tao\model\theme\ConfigurablePlatformTheme;
 
 class Updater extends \common_ext_ExtensionUpdater
@@ -171,7 +181,7 @@ class Updater extends \common_ext_ExtensionUpdater
             $i = 0;
 
             foreach($themes as $registryKey => $theme) {
-                $newTheme = ConfigurablePlatformTheme::convertFromLegacyTheme($theme);
+                $newTheme = ThemeConverter::convertFromLegacyTheme($theme);
                 $themeService->removeThemeById($registryKey);
                 $themeService->addTheme($newTheme, false); 
                 if($registryKey === $oldDefault) {
@@ -199,17 +209,20 @@ class Updater extends \common_ext_ExtensionUpdater
 
 ### Theme Toolkit profile
 ```json
-"my-theme-platform": {
-    "src": "../myProject/taoMyExtension/views/scss/themes/platform",
-    "dest": "../myProject/taoMyExtension/views/css/themes/platform"
+"my-project-platform": {
+    "src": "../myProject/taoSomething/views/scss/themes/platform",
+    "dest": "../myProject/taoSomething/views/css/themes/platform"
 },
 ```
+While you can use any key you like it makes sense to use the suffix `-platform` resp. `-items` for item themes. You can also create a key without suffix where you omit the last directory in the paths. These three different profiles should keep you pretty flexible.
 
 
 ### Templates
 The theme object is available in the templates and all public getters can be used. 
 ```php
-<img src="<?=get_data('themeObj')->getLogoUrl()?>" alt="Logo" id="tao-main-logo">
+<img src="<?=get_data('themeObj')->getLogoUrl()?>" alt="Logo" id="tao-main-logo" >
+// or
+<any-element attr="<?=get_data('themeObj')->getMyCustomKey()?>"/>
 ```
 
 ### SCSS Code
