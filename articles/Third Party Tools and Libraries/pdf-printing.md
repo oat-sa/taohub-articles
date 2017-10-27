@@ -18,9 +18,9 @@ tags:
 
 [wkHTMLtoPDF Website](https://wkhtmltopdf.org/)
 
-[taoBooklet](https://github.com/oat-sa/extension-tao-booklet) is a TAO extension that allows to create booklets, which are essentially printable tests. However this extension needs a third-party tool to generate the PDF files. To be able to generate a booklet, you need to install `wkhtmltopdf` on your server.
+[taoBooklet](https://github.com/oat-sa/extension-tao-booklet) is a TAO extension that allows to create booklets, which are essentially printable tests. However this extension needs a third-party tool to generate the PDF files - you will need to install `wkhtmltopdf` on your server.
 
-All three major OS brands are supported, and you should find the right binaries in the [download page of the official wkhtmltopdf website](https://wkhtmltopdf.org/downloads.html). You can also directly compile the source code and build your own platform binaries.
+All three major OS brands are supported, and you should find the right binaries at the [download page of the official wkhtmltopdf website](https://wkhtmltopdf.org/downloads.html). You can also directly compile the source code and build your own platform binaries.
 
 Note: We successfully tested `wkhtmltopdf` on MacOS, Linux and Windows 10 machines but won't guarantee that it runs on your system.
 
