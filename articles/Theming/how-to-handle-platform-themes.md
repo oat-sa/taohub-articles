@@ -222,7 +222,7 @@ The theme object is available in the templates and all public getters can be use
 ```php
 <img src="<?=get_data('themeObj')->getLogoUrl()?>" alt="Logo" id="tao-main-logo" >
 // or
-<any-element attr="<?=get_data('themeObj')->getMyCustomKey()?>"/>
+<any-element any-attr="<?=get_data('themeObj')->getMyCustomKey()?>"/>
 ```
 
 ### SCSS Code
