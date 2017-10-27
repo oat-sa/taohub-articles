@@ -1,25 +1,25 @@
 <!--
 skip: true
 -->
-# Platform Themes
+# How to handle Platform Themes
 
 > How to set up platform themes. Predominately this article talks about a setup in a custom extension - in a multi tenancy environment this might be different.
 
 ## Definition
 
-A platform theme is a set of stylesheets, templates, images etc. to modify the standard look and feel of the TAO platform, most often to apply a customer's branding. It for now is limited to header, footer, action bars and tabs. Although technically doable changes to the appearance of items are explicitely excluded. For all item related modifications item thems must be used.
+A platform theme is a set of stylesheets, templates, images etc. to modify the standard look and feel of the TAO platform, most often to apply a customer's branding. It for now is limited to header, footer, action bars and tabs. Although technically feasible changes to the appearance of items are explicitely excluded. For all item related modifications item themes must be used.
 
 ## Basic Setup
 
 On a customer platform themes are typically installed in a new extension. 
 
-For this example we assume the extension is called _taoMyExtension_ and the theme _"My default theme"_.
+For this example we assume the extension is called _taoSomething_ and the theme _"Default theme"_.
 
-- Copy the directory _*.scss_ from the Theme Toolkit to _/taoMyExtension/views_.
-- Rename _/taoMyExtension/views/scss/themes/platform/default_ to _/taoMyExtension/views/scss/themes/platform/my-default-theme_.
-- Create a path _/taoMyExtension/views/img/themes/platform/my-default-theme_.
-- Create a path _/taoMyExtension/views/templates/themes/platform/my-default-theme_.
-- Create a PHP class _/taoMyExtension/scripts/install/SetPlatformThemes.php_ and add a reference to the section _install/php_ in the manifest.
+- Copy the directory _*.scss_ from the Theme Toolkit to _/taoSomething/views_.
+- Rename _/taoSomething/views/scss/themes/platform/default_ to _/taoSomething/views/scss/themes/platform/default-theme_.
+- Create a path _/taoSomething/views/img/themes/platform/default-theme_.
+- Create a path _/taoSomething/views/templates/themes/platform/default-theme_.
+- Create a PHP class _/taoSomething/scripts/install/SetPlatformThemes.php_ and add a reference to the section _install/php_ in the manifest.
 - Add a reference to your Theme Toolkit profiles, see the [Toolkit Readme](https://github.com/oat-sa/theme-toolkit/blob/master/README.md) for further information.
 - Create your images and templates.
 - Edit and compile your SCSS files.
