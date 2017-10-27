@@ -15,6 +15,7 @@ tags:
 > This run entirely "headless" and do not require a display or display service.
 
 ![wkHTMLtoPDF logo](../resources/third-party/wkhtmltopdf.png) 
+
 [wkHTMLtoPDF Website](https://wkhtmltopdf.org/)
 
 An extension for TAO allow to create test booklets: [taoBooklet](https://github.com/oat-sa/extension-tao-booklet). However this extension needs a third-party tool to generate the PDF files. To be able to generate a booklet, you need to install `wkhtmltopdf` on your server.
