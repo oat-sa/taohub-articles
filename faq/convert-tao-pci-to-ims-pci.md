@@ -34,7 +34,7 @@
 		"hook": "imsPciCreator.json",
 
 ## Bundle PCI
-- remove handling of the prompt. This most probably will trigger the removal of `containerEditor` and of the portableLib `OAT\util\html`, but not always
+- remove handling of the prompt (in tpl, runtime, creator states...). This most probably will trigger the removal of `containerEditor` and of the portableLib `OAT\util\html`, but not always
 - replace any reference to shared librairies to their equivalent in `portableLib`
 - require any CSS in the main runtime. Ex:
 
@@ -48,7 +48,8 @@
 - create install registration script and reference it in the extension manifest
 - register PCI in the update script
 - run taoUpdate
-- add the PCI to your `debug_portable_element.conf.php` so the `data` folder gets updated when opening the item authoring (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
+- add the PCI to your `debug_portable_element.conf.php` so the `data` folder gets updated when opening the item authoring (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development)).
+- !!! It looks like for now, bundling is necessary to see changes in authoring
 
 At this stage, you should be able to drag the PCI in the item authoring. It will complain, however, that it lacks the `.getInstance()` method.
 
@@ -58,7 +59,7 @@ At this stage, you should be able to drag the PCI in the item authoring. It will
 
 		php taoTool.php --qti-to-json /tao/tao/parccTei/views/js/test/samples/xxx.xml
 		
-- update unit test. Don't forget to remove now useless requireJs config in `test.html`
+- update unit test. If it's an old test (= PARCC), you'll need to update the test setup with the new portableElement registry. Don't forget to remove now useless requireJs config in `test.html`
 - the main difference is the absence of a `.setState()` function. Set the state during the `.render()` call of the itemRunner
 
 		.render($container, { state: state })
