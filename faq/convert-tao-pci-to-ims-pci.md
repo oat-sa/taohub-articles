@@ -1,14 +1,33 @@
+
 # Convert TAO PCIs to IMS PCIs
-
-A proposed step by step.
-
 ## File structure
 - move all PCI files to `ims` folder (ex: `parccTei/views/js/pciCreator/ims/myPCI`)
 - rename `pciCreator.js` to `imsPciCreator.js`
 - rename `imsPciCreator.json` to `imsPciCreator.json`
 
-## Update manifest content
-- add `"model" : "IMSPCI"`
+## Update manifest (imsPciCreator.json) content
+- add this as the first line
+	"model" : "IMSPCI"
+- adapt the runtime section so it looks like the following (pay close attention to file extensions or the way to set paths)
+	"runtime" : {
+	        "hook" : "runtime/graphLineAndPointInteraction.min.js",
+	        "modules" : {
+	            "graphLineAndPointInteraction/runtime/graphLineAndPointInteraction.min" : [
+	                "runtime/graphLineAndPointInteraction.min.js"
+	            ]
+	        },
+	        "src" : [
+	            "./runtime/graphLineAndPointInteraction.js",
+	            "./runtime/wrappers/lines.js",
+	            "./runtime/wrappers/points.js",
+	            "./runtime/wrappers/segments.js",
+	            "./runtime/wrappers/setOfPoints.js",
+	            "./runtime/wrappers/solutionSet.js"
+	        ]
+	    },
+
+
+
 - runtime section
 specify minified in hook
 create module entry for requiere js resolver
@@ -39,3 +58,19 @@ test in authoring
 test in:
 preview
 delivery (state restoring)
+
+    © 2017 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Help
+
+    Contact GitHub
+    API
+    Training
+    Shop
+    Blog
+    About
+
+
