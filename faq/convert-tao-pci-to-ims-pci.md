@@ -9,7 +9,6 @@
 - add this as the first line
 
 		"model" : "IMSPCI"
-
 - adapt the runtime section so it looks like the following:
 *Pay close attention to file extensions, or lack of sometimes, and to the way path are set. All dependencies should be in the src entry. If you have any CSS, remove it and require it directly from the main interaction runtime (see next section).*
 
@@ -39,17 +38,19 @@
 - replace any reference to shared librairies to their equivalent in `portableLib`
 - require any CSS in the main runtime. Ex:
 
-		    'css!graphLineAndPointInteraction/runtime/css/graphLineAndPointInteraction'
+		'css!graphLineAndPointInteraction/runtime/css/graphLineAndPointInteraction'
 
 - Launch the bundle script (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
 
 		grunt portableelement -e=parccTei -i=xxx
 
 ## Register the PCI
-- create install registration script and reference in the extension manifest
+- create install registration script and reference it in the extension manifest
 - register PCI in the update script
 - run taoUpdate
 - add the PCI to your `debug_portable_element.conf.php` so the `data` folder gets updated when opening the item authoring (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
+
+At this stage, you should be able to drag the PCI in the item authoring. It will complain, however, that it lacks the `.getInstance()` method.
 
 ## Update API
 - adapt PCI runtime API to IMS V1 specifications (see example in [reference implementation](https://github.com/oat-sa/extension-tao-itemqti-pci/blob/7374649fb2f7a4fce5e01850b55713919a120482/views/js/pciCreator/ims/likertCompact/likert/runtime/js/likertInteraction.js))
