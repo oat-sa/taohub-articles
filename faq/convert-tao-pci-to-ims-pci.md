@@ -3,74 +3,69 @@
 ## File structure
 - move all PCI files to `ims` folder (ex: `parccTei/views/js/pciCreator/ims/myPCI`)
 - rename `pciCreator.js` to `imsPciCreator.js`
-- rename `imsPciCreator.json` to `imsPciCreator.json`
+- rename `pciCreator.json` to `imsPciCreator.json`
 
 ## Update manifest (imsPciCreator.json) content
 - add this as the first line
-	"model" : "IMSPCI"
-- adapt the runtime section so it looks like the following (pay close attention to file extensions or the way to set paths)
-	"runtime" : {
-	        "hook" : "runtime/graphLineAndPointInteraction.min.js",
-	        "modules" : {
-	            "graphLineAndPointInteraction/runtime/graphLineAndPointInteraction.min" : [
-	                "runtime/graphLineAndPointInteraction.min.js"
-	            ]
-	        },
-	        "src" : [
-	            "./runtime/graphLineAndPointInteraction.js",
-	            "./runtime/wrappers/lines.js",
-	            "./runtime/wrappers/points.js",
-	            "./runtime/wrappers/segments.js",
-	            "./runtime/wrappers/setOfPoints.js",
-	            "./runtime/wrappers/solutionSet.js"
-	        ]
-	    },
 
+		"model" : "IMSPCI"
 
+- adapt the runtime section so it looks like the following:
+*Pay close attention to file extensions, or lack of sometimes, and to the way path are set. All dependencies should be in the src entry. If you have any CSS, remove it and require it directly from the main interaction runtime (see next section).*
 
-- runtime section
-specify minified in hook
-create module entry for requiere js resolver
-put all source files in “src” with the main runtime first
-creator section
-rename hook to imsPciCreator.json
-Remove prompt, containerEditor and html renderer
-Bundle PCI
-replace shared lib references with portable libs references
-require any CSS directly in the runtime
-launch the bundle script
-grunt portableelement -e=parccTei -i=xxx
-Register the PCI
-registration script 
-manifest update
-update script
-Add PCI to debug_portable element script 
+		"runtime" : {
+		        "hook" : "runtime/graphLineAndPointInteraction.min.js",
+		        "modules" : {
+		            "graphLineAndPointInteraction/runtime/graphLineAndPointInteraction.min" : [
+		                "runtime/graphLineAndPointInteraction.min.js"
+		            ]
+		        },
+		        "src" : [
+		            "./runtime/graphLineAndPointInteraction.js",
+		            "./runtime/wrappers/lines.js",
+		            "./runtime/wrappers/points.js",
+		            "./runtime/wrappers/segments.js",
+		            "./runtime/wrappers/setOfPoints.js",
+		            "./runtime/wrappers/solutionSet.js"
+		        ]
+		    },
 
+- reference the correct creator hook in the Creator section:
 
-Update API
-Adapt runtime to IMS V1 specifications (use model)
-Update unit test
-remove extra require config in test.html
-update test sample with new item XML
-php /tao/package-act/taoTool.php --qti-to-json /tao/tao/parccTei/views/js/test/samples/
+		"hook": "imsPciCreator.json",
 
-test in authoring
-test in:
-preview
-delivery (state restoring)
+## Bundle PCI
+- remove handling of the prompt. This most probably will trigger the removal of `containerEditor` and of the portableLib `OAT\util\html`, but not always
+- replace any reference to shared librairies to their equivalent in `portableLib`
+- require any CSS in the main runtime. Ex:
 
-    © 2017 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Help
+		    'css!graphLineAndPointInteraction/runtime/css/graphLineAndPointInteraction'
 
-    Contact GitHub
-    API
-    Training
-    Shop
-    Blog
-    About
+- Launch the bundle script (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
+
+		grunt portableelement -e=parccTei -i=xxx
+
+## Register the PCI
+- create install registration script and reference in the extension manifest
+- register PCI in the update script
+- run taoUpdate
+- add the PCI to your `debug_portable_element.conf.php` so the `data` folder gets updated when opening the item authoring (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
+
+## Update API
+- adapt PCI runtime API to IMS V1 specifications (see example in [reference implementation](https://github.com/oat-sa/extension-tao-itemqti-pci/blob/7374649fb2f7a4fce5e01850b55713919a120482/views/js/pciCreator/ims/likertCompact/likert/runtime/js/likertInteraction.js))
+- update test sample with new item XML (converted to JSON). You can use [this gist](https://gist.github.com/no-chris/9cb7c67b59ee89e6c95e76f218ccf367) for this purpose:
+
+		php taoTool.php --qti-to-json /tao/tao/parccTei/views/js/test/samples/xxx.xml
+		
+- update unit test. Don't forget to remove now useless requireJs config in `test.html`
+- the main difference is the absence of a `.setState()` function. Set the state during the `.render()` call of the itemRunner
+
+		.render($container, { state: state })
+
+## Test
+The PCI should work in:
+- item authoring
+- item preview
+- delivery (with state restoring)
 
 
