@@ -10,7 +10,7 @@
 
 		"model" : "IMSPCI"
 - adapt the runtime section so it looks like the following:
-*Pay close attention to file extensions, or lack of sometimes, and to the way path are set. All dependencies should be in the src entry. If you have any CSS, remove it and require it directly from the main interaction runtime (see next section).*
+*Pay close attention to file extensions, or lack of sometimes, and to the way path are set. All dependencies should be in the src entry. If you have any CSS, remove it and require it directly from the main interaction runtime (see next section). Other media files like SVG should also be bundled.*
 
 		"runtime" : {
 		        "hook" : "runtime/graphLineAndPointInteraction.min.js",
@@ -39,7 +39,8 @@
 - require any CSS in the main runtime. Ex:
 
 		'css!graphLineAndPointInteraction/runtime/css/graphLineAndPointInteraction'
-
+		
+- figure out a way to deal with other meadia file like `svg`, they can for example be bundled thanks to the requireJS `text!` loader
 - Launch the bundle script (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
 
 		grunt portableelement -e=parccTei -i=xxx
