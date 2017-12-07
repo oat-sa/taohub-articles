@@ -9,24 +9,22 @@
 - add this as the first line
 
 		"model" : "IMSPCI"
-- adapt the runtime section so it looks like the following:
-*Pay close attention to file extensions, or lack of sometimes, and to the way path are set. All dependencies should be in the src entry. If you have any CSS, remove it and require it directly from the main interaction runtime (see next section). Other media files like SVG should also be bundled.*
+- in the **runtime** section
+	- adapt so it looks like the following code sample. We only declare the following elements: *hook*, *modules* (the requireJs configuration) and *src*. The latter contains **only** the PCI entry point (the main runtime) that will be used for PCI bundling.
+	- pay close attention to paths ('./' or nothing) and to file extensions (or lack of)
+	- if the PCI use other JS files, you can remove them as they should already be required by the main runtime (but the path will need to be adapted, see next section)
+	- if you have any other assets (CSS, SVG...), take note of them as they will need to be referenced in the PCI entry point (see next section)
 
 		"runtime" : {
-		        "hook" : "runtime/graphLineAndPointInteraction.min.js",
-		        "modules" : {
-		            "graphLineAndPointInteraction/runtime/graphLineAndPointInteraction.min" : [
-		                "runtime/graphLineAndPointInteraction.min.js"
-		            ]
-		        },
-		        "src" : [
-		            "./runtime/graphLineAndPointInteraction.js",
-		            "./runtime/wrappers/lines.js",
-		            "./runtime/wrappers/points.js",
-		            "./runtime/wrappers/segments.js",
-		            "./runtime/wrappers/setOfPoints.js",
-		            "./runtime/wrappers/solutionSet.js"
-		        ]
+			"hook" : "runtime/graphLineAndPointInteraction.min.js",
+			"modules" : {
+			    "graphLineAndPointInteraction/runtime/graphLineAndPointInteraction.min" : [
+				"runtime/graphLineAndPointInteraction.min.js"
+			    ]
+			},
+			"src" : [
+			    "./runtime/graphLineAndPointInteraction.js"
+			]
 		    },
 
 - reference the correct creator hook in the Creator section:
@@ -36,9 +34,15 @@
 ## Bundle PCI
 - remove handling of the prompt (in tpl, runtime, creator states...). This most probably will trigger the removal of `containerEditor` and of the portableLib `OAT\util\html`, but not always
 - replace any reference to shared librairies to their equivalent in `portableLib`
-- require any CSS in the main runtime. Ex:
+- make sure any JS files that is part of the PCI get a proper requireJS path
 
-		'css!graphLineAndPointInteraction/runtime/css/graphLineAndPointInteraction'
+		'parccTei/pciCreator/ims/graphLineAndPointInteraction/runtime/wrappers/setOfPoints',
+    		'parccTei/pciCreator/ims/graphLineAndPointInteraction/runtime/wrappers/points',
+    
+- require any CSS/SVG/... in the main runtime. Ex:
+
+	    	'text!parccTei/pciCreator/ims/graphNumberLineInteraction/runtime/img/open-arrow.svg',
+		'css!parccTei/pciCreator/ims/graphLineAndPointInteraction/runtime/css/graphLineAndPointInteraction'
 		
 - figure out a way to deal with other meadia file like `svg`, they can for example be bundled thanks to the requireJS `text!` loader
 - Launch the bundle script (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
