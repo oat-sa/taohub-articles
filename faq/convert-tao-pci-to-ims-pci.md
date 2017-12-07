@@ -54,7 +54,6 @@
 - register PCI in the update script
 - run taoUpdate
 - add the PCI to your `debug_portable_element.conf.php` so the `data` folder gets updated when opening the item authoring (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development)).
-- !!! It looks like for now, bundling is necessary to see changes in authoring
 
 At this stage, you should be able to drag the PCI in the item authoring. It will complain, however, that it lacks the `.getInstance()` method.
 
