@@ -44,7 +44,7 @@
 		'text!parccTei/pciCreator/ims/graphNumberLineInteraction/runtime/img/open-arrow.svg',
 		'css!parccTei/pciCreator/ims/graphLineAndPointInteraction/runtime/css/graphLineAndPointInteraction'
 		
-- figure out a way to deal with other meadia file like `svg`, they can for example be bundled thanks to the requireJS `text!` loader
+- figure out a way to deal with other meadia file like `svg`, they can for example be bundled thanks to the requireJS `text!` loader. You'll need to adapt the PCI runtime.
 - Launch the bundle script (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
 
 		grunt portableelement -e=parccTei -i=xxx
