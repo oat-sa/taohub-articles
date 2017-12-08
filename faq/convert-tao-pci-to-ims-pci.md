@@ -59,6 +59,7 @@ At this stage, you should be able to drag the PCI in the item authoring. It will
 
 ## Update API
 - adapt PCI runtime API to IMS V1 specifications (see example in [reference implementation](https://github.com/oat-sa/extension-tao-itemqti-pci/blob/7374649fb2f7a4fce5e01850b55713919a120482/views/js/pciCreator/ims/likertCompact/likert/runtime/js/likertInteraction.js))
+- remove the `id: -1` parameter
 - update test sample with new item XML (converted to JSON). You can use [this gist](https://gist.github.com/no-chris/9cb7c67b59ee89e6c95e76f218ccf367) for this purpose:
 
 		php taoTool.php --qti-to-json /tao/tao/parccTei/views/js/test/samples/xxx.xml
