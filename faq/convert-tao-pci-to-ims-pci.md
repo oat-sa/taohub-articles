@@ -8,7 +8,7 @@
 ## Update manifest (imsPciCreator.json) content
 - add this as the first line
 
-		"model" : "IMSPCI"
+		"model": "IMSPCI",
 - in the **"runtime"** section
 	- adapt so it looks like the following code sample. We only declare the following elements: *hook*, *modules* (the requireJs configuration) and *src*. The latter contains **only** the PCI entry point (the main runtime) that will be used for PCI bundling.
 	- pay close attention to paths ('./' or nothing) and to file extensions (or lack of)
