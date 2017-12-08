@@ -29,7 +29,7 @@
 
 - in the **"creator"** section, reference the correct creator hook
 
-		"hook": "imsPciCreator.js",
+		"hook": "./imsPciCreator.js",
 
 ## Bundle PCI
 - remove handling of the prompt (in tpl, runtime, creator states...). This most probably will trigger the removal of `containerEditor` and of the portableLib `OAT\util\html`, but not always
