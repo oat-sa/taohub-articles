@@ -34,7 +34,7 @@ Delivery execution information covers everything related to a what Test-Taker ha
 ### Storing delivery execution information in the ontology (default)
 
 ```php 
-return new taoDelivery_models_classes_execution_OntologyService();
+return new oat\taoDelivery\model\execution\OntologyService();
 ```
 
 ### Storing delivery execution information in a key-value server
@@ -42,7 +42,7 @@ return new taoDelivery_models_classes_execution_OntologyService();
 To switch to a KeyValue persistence we need to first change the service to `taoDelivery_models_classes_execution_KeyValueService` in *config/taoDelivery/execution_service.conf.php*:
 
 ```php 
-return new taoDelivery_models_classes_execution_KeyValueService(
+return new oat\taoDelivery\model\execution\implementation\KeyValueService(array(
     array(
         'persistence' => 'deliveryExecution'
     )
