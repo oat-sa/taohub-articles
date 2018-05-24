@@ -4,6 +4,7 @@ created_at: '2013-06-21 10:05:44'
 updated_at: '2015-10-13 16:53:52'
 authors:
     - 'Joel Bout'
+    - 'Mikhail Kamarouski'
 tags:
     - 'Administrator Guide'
 -->
@@ -13,6 +14,29 @@ Nginx
 
 Nginx is not officially supported by Tao. The following instructions are for experiments only:
 
+
+Nginx and Tao 3.2
+-----------------
+
+
+    location ~* ^/([^//]*)/views/.* {
+    }
+
+    location /tao/install {
+    }
+
+    location /tao/getFileFlysystem.php {
+        rewrite  ^(.*)$ /tao/getFileFlysystem.php last;
+    }
+
+    location /favicon.ico {
+    }
+
+    location / {
+        rewrite  ^  /index.php;
+    }
+    
+    
 Nginx and Tao 3.1
 -----------------
 
