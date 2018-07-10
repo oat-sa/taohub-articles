@@ -212,25 +212,37 @@ This awsClient config will be under the generis configuration but for an other
 #### Other configurations
 
 Under each extension as for the configurable services you can add array based configurations.
-In this example we have the log configuration that is an array of array with some properties. You can see them in [this file](https://github.com/oat-sa/generis/blob/master/config/header/log.conf.php)
+In this example we have the log configuration (part of the `generis` key) that is an array of array with some properties. You can see them in [this file](https://github.com/oat-sa/generis/blob/master/config/header/log.conf.php)
 
 ```json
-"log": [
-  {
-    "class": "UDPAppender",
-    "host": "127.0.0.1",
-    "port": 5775,
-    "threshold": 1
-  },
-  {
-    "class": "SingleFileAppender",
-    "file": "/var/www/package-tao/log/error.txt",
-    "max_file_size": 1048576,
-    "rotation-ratio": 5,
-    "format": "%m",
-    "threshold": 4
-  }
-]
+"log": {
+        "type": "configurableService",
+        "class": "oat\\oatbox\\log\\LoggerService",
+        "options": {
+          "logger": {
+            "class": "oat\\oatbox\\log\\logger\\TaoLog",
+            "options": {
+              "appenders": [
+                {
+                  "class": "UDPAppender",
+                  "host": "127.0.0.1",
+                  "port": 5775,
+                  "threshold": 1,
+                  "prefix": "caed-test"
+                },
+                {
+                  "class": "SingleFileAppender",
+                  "file": "/path/to/logfile.log",
+                  "max_file_size": 1048576,
+                  "rotation-ratio": 5,
+                  "format": "%m",
+                  "threshold": 4
+                }
+              ]
+            }
+          }
+        }
+      }
 ```
 
 
