@@ -228,7 +228,7 @@ In this example we have the log configuration (part of the `generis` key) that i
                   "host": "127.0.0.1",
                   "port": 5775,
                   "threshold": 1,
-                  "prefix": "caed-test"
+                  "prefix": "tao"
                 },
                 {
                   "class": "SingleFileAppender",
