@@ -24,20 +24,26 @@ Note: this is equivalent to the old ‘debug’ flag in the PCI creator manifest
 
 From the TAO instance root directory, run:
 
+```
     php index.php '\oat\taoQtiItem\scripts\initEventCreatorLoad'
+```
 
 ### 2. Register the PCI to reload
 
 Create or open the file:
 
+```
     /config/taoQtiItem/debug_portable_element.conf.php
+```
 
 and add a reference to the PCI whose assets are to be reloaded:
 
+```
     return [
         //'pciIdentifier' => 'path/to/pci/source/files',
         'textReaderInteraction' => 'pciSamples/views/js/pciCreator/dev/textReaderInteraction/'
     ];
+```
 
 Please make sure that the array key matches the PCI identifier.
 
@@ -76,16 +82,17 @@ PATCH : bug fix, libs may be updated, qti xml does not need to be updated
 
 If is a minor or a patch, the pci just need to be registered with the updated version number in the manifest. In practice, most of the portable elements being implemented for TAO are registered from their source directories, so you only need to:<br/>
 
-increase the version\
-re-register it in the update script\
-make a regular PR\
+- increase the version
+- re-register it in the update script
+- make a regular PR
+
 This actual PR makes a patch to the text reader PCI and simply illustrates this process https://github.com/oat-sa/extension-pcisample/pull/12
 
-If it is a major version, it requires updating the item xml with a php: changing the portable element markup, properties or the item level response declaration or response processing etc. In such a situation, the related updater.php needs to call an item update script like https://github.com/oat-sa/extension-pcisample/blob/master/scripts/tool/FixTextReaderDefaultValue.php to perform the changes : TBD.<br/>
+If it is a major version, it requires updating the item xml with a php: changing the portable element markup, properties or the item level response declaration or response processing etc. In such a situation, the related updater.php needs to call an item update script like https://github.com/oat-sa/extension-pcisample/blob/master/scripts/tool/FixTextReaderDefaultValue.php to perform the changes : TBD.
 
-Important notice: please keep in mind that the existing deliveries need to be recompiled as the old item data is no longer compatible with the new major version of the portable element and any old item package that includes the old major version will be rejected during import for the same reason. Those items need to be upgraded to the same major version before being able to be imported again.<br/>
+Important notice: please keep in mind that the existing deliveries need to be recompiled as the old item data is no longer compatible with the new major version of the portable element and any old item package that includes the old major version will be rejected during import for the same reason. Those items need to be upgraded to the same major version before being able to be imported again.
 
-How to: get two/multiple version of a PCI run at the same time ?<br/>
+How to: get two/multiple version of a PCI run at the same time ?
 
 The only to do this, is to rename the second PCI type identifier to a new one.
 
