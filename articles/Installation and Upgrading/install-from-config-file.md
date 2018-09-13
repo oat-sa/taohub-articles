@@ -12,9 +12,12 @@ tags:
 Since TAO v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.
 
 To call it simply use the command line :
-
 ```bash
+# Linux
 sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json
+
+# Windows
+php tao/scripts/taoSetup.php /path/to/your/configFile.json
 ```
 
 Since TAO v10.19.1 we have the possibility to get more detailed logs about the installation.
@@ -31,9 +34,11 @@ Example:
 ```bash
 # Normal CLI setup with detailed logs
 sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json -vvv
+php tao/scripts/taoSetup.php /path/to/your/configFile.json -vvv
 
 # Fully detailed logs with no color (recommended for build processes)
 sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json -vvvv -nc
+php tao/scripts/taoSetup.php /path/to/your/configFile.json -vvvv -nc
 ```
 
 
@@ -170,7 +175,7 @@ Finally we have to configure a bit the connection. Typically the master and the 
 
 ##### 
 
-### Optionnal properties
+### Optional properties
 
 #### Extensions
 

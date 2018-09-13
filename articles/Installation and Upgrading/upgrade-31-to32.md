@@ -33,7 +33,14 @@ If you had taoWorkspace installed on your installation you should manually add t
 To do so you should first get the latest released version using `composer require "oat-sa/extension-tao-workspace":~1.1` or by downloading the [archive](https://github.com/oat-sa/extension-tao-workspace/releases) and placing files in the correct directory.
 
 ### Update extensions
-On your web server launch the command `sudo -u www-data php tao/scripts/taoUpdate.php`
+On your web server launch the command 
+```
+# Linux
+sudo -u www-data php tao/scripts/taoUpdate.php
+
+# Windows
+php tao/scripts/taoUpdate.php
+```
 
 You should now see something like the following image.
 
