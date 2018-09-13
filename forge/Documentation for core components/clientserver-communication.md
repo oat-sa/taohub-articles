@@ -58,12 +58,12 @@ The behavior of its parent function has been adapted to control every exchanges 
 - to manage under control errors ;|<br/>
 
 |**addSuccessCallback**|(function) **fct** The default success callback to add\
-(string) **position** The position to add the function in the queue of callback success functions (‘begin’, ‘end’, integer to represent the position)|Add a default success callback. This success callback will be called after each successfull ajax requests|<br/>
+(string) **position** The position to add the function in the queue of callback success functions (‘begin’, ‘end’, integer to represent the position)|Add a default success callback. This success callback will be called after each successful ajax requests|<br/>
 
 |**removeSuccessCallback**|(string) **position** The position of the function to remove|Remove a default success callback function|<br/>
 
 |**addErrorCallback**|(function) **fct** The default error callback to add\
-(string) **position** The position to add the function in the queue of callback error functions (‘begin’, ‘end’, integer to represent the position)|Add a default error callback. This success callback will be called after each ajax requests which encoutered a problem|<br/>
+(string) **position** The position to add the function in the queue of callback error functions (‘begin’, ‘end’, integer to represent the position)|Add a default error callback. This success callback will be called after each ajax requests which encountered a problem|<br/>
 
 |**removeErrorCallback**|(string) **position** The position of the function to remove|Remove a default error callback function|
 

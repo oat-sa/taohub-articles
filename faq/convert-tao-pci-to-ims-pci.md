@@ -33,7 +33,7 @@
 
 ## Bundle PCI
 - remove handling of the prompt (in tpl, runtime, creator states...). This most probably will trigger the removal of `containerEditor` and of the portableLib `OAT\util\html`, but not always
-- replace any reference to shared librairies to their equivalent in `portableLib`
+- replace any reference to shared libraries to their equivalent in `portableLib`
 - make sure any JS files that is part of the PCI get a proper requireJS path
 
 		'parccTei/pciCreator/ims/graphLineAndPointInteraction/runtime/wrappers/setOfPoints',
@@ -44,7 +44,7 @@
 		'text!parccTei/pciCreator/ims/graphNumberLineInteraction/runtime/img/open-arrow.svg',
 		'css!parccTei/pciCreator/ims/graphLineAndPointInteraction/runtime/css/graphLineAndPointInteraction'
 		
-- figure out a way to deal with other meadia file like `svg`, they can for example be bundled thanks to the requireJS `text!` loader. You'll need to adapt the PCI runtime.
+- figure out a way to deal with other media file like `svg`, they can for example be bundled thanks to the requireJS `text!` loader. You'll need to adapt the PCI runtime.
 - Launch the bundle script (see [specific documentation](https://hub.taocloud.org/articles/pcipic-development))
 
 		grunt portableelement -e=parccTei -i=xxx

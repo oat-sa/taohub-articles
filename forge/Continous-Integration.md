@@ -32,7 +32,7 @@ Unit Test
 ---------
 
 -   Install the platform with all extensions
--   Run Unit test according to test configration stored in conf/phpunit_mysql.xml
+-   Run Unit test according to test configuration stored in conf/phpunit_mysql.xml
 -   Generate code coverage report
 
 Howto setup Jenkins
@@ -67,7 +67,7 @@ Howto setup Jenkins
         git@github.com:oat-sa/package-build.git
 
 -   Setup phing tasks
--   Setup PMD analisys
+-   Setup PMD analysis
 
 
 

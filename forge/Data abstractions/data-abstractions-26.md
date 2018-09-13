@@ -69,7 +69,7 @@ The default persistence is defined in *generis/common/conf/default/persistences.
 
 ### Storing service states in a Redis server
 
-If you prefer to store these states in an alternativ storage copy the file *generis/common/conf/default/persistences.conf.php* to *generis/common/conf/persistences.conf.phpgeneris.conf.php* and modify the ‘serviceState’ entry to the following:
+If you prefer to store these states in an alternative storage copy the file *generis/common/conf/default/persistences.conf.php* to *generis/common/conf/persistences.conf.phpgeneris.conf.php* and modify the ‘serviceState’ entry to the following:
 
     'serviceState' => array(
         'driver' => 'phpredis',

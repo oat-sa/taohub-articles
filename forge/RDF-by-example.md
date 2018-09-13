@@ -45,7 +45,7 @@ A single line, in this model would be called a ‘statement’
 
 ### Namespace prefix
 
-So if we took all the informations in our traditional table we would receive:
+So if we took all the information in our traditional table we would receive:
 
   Subject                       Predicate                                          Object
   ----------------------------- -------------------------------------------------- --------------------------------
@@ -77,7 +77,7 @@ which allows us to represent the list as following
   ex:p2     ex:class      ex:c102
   ex:p2     rdf:type      ex:pupil
 
-Example 2: how to store friend informations
+Example 2: how to store friend information
 -------------------------------------------
 
 In a traditional database model friendship between pupils would be modelled via an auxiliary table:

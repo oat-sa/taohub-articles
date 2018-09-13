@@ -40,7 +40,7 @@ This section considers that the reader is familiar with rights management in Pos
 The following rights are needed to properly access data stored by TAO:
 
 -   SELECT, INSERT, UPDATE, DELETE, REFERENCES on all tables in the *public* schema of the database
--   ALL PRIVILEGES on all SEQUENCES in the *public* scehma of the database
+-   ALL PRIVILEGES on all SEQUENCES in the *public* schema of the database
 -   EXECUTE on ALL FUNCTIONS in the *public* schema of the database
 -   CREATE on the database
 -   CONNECT on the database
