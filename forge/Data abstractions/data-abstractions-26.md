@@ -77,16 +77,16 @@ If you prefer to store these states in an alternative storage copy the file *gen
         'port' => 6379
     )
 
-Delivery execution informations storage abstraction
+Delivery execution information storage abstraction
 ---------------------------------------------------
 
 Delivery execution information cover everything related to what test taker has started/finished which delivery. The choice of the abstraction is done via the constant *DELIVERY_EXECUTION_HANDLER* in *generis/common/conf/generis.conf.php*.
 
-### Storing delivery execution informations in the ontology (default)
+### Storing delivery execution information in the ontology (default)
 
     define('DELIVERY_EXECUTION_HANDLER', 'taoDelivery_models_classes_execution_OntologyService');
 
-### Storing delivery execution informations in a key-value server
+### Storing delivery execution information in a key-value server
 
 To switch to a KeyValue persistence the constant *DELIVERY_EXECUTION_HANDLER* in *generis.conf.php* needs to be set to *taoDelivery_models_classes_execution_KeyValueService*:
 

@@ -7,7 +7,7 @@ tags:
 
 # Install the TAO platform from a configuration file
 
-> This page aims to explain how you can install tao from a predifined configuration file, in order to make your deployments easier.
+> This page aims to explain how you can install tao from a predefined configuration file, in order to make your deployments easier.
 
 Since TAO v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.
 
@@ -116,7 +116,7 @@ The global part of the configuration contains all the properties required for th
 The persistences configuration is one of the most important because it will let you choose the database type where you want to install tao data.
 It has to be under the generis configuration.
 
-You must have at least the default key in order to set correctly the detabase, then you can choose the driver `pdo_pgsql`, `pdo_mysql`, it is the same structure than in your final `config/generis/persistences.conf.php`
+You must have at least the default key in order to set correctly the database, then you can choose the driver `pdo_pgsql`, `pdo_mysql`, it is the same structure than in your final `config/generis/persistences.conf.php`
 
 You can also if you want set other persistences as the cache one or a redis connection for the delivery execution or the results.
 

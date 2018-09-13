@@ -55,7 +55,7 @@ Here some details about some specific property :
 
 -   ItemModelStatus describe the maturity of the Items Type, we currently handle Stable, Experimental, Deprecated
 -   ModelTarget will be use to handle different behavior for OnlineTarget or OfflineTarget mainly for Paperbased items.
--   ItemRuntime was used whith legacy items to describe item’s runtime link
+-   ItemRuntime was used with legacy items to describe item’s runtime link
 -   ItemAuthoring is used to describe item’s authoring link
 
 Then to add your rdf file in tao just used the following script
@@ -114,7 +114,7 @@ In most of the case, the ItemsService just call a specific renderer to retrieve 
 
 ### TAO 2.4
 
-Create a new class for your item type that implements the interface **taoItems_models_classes_itemModel**. Optionaly it can also implement the interface **taoItems_models_classes_evaluatableItemModel**
+Create a new class for your item type that implements the interface **taoItems_models_classes_itemModel**. Optionally it can also implement the interface **taoItems_models_classes_evaluatableItemModel**
 
 Add the following property to the <rdf:Description> block of the item type.
 

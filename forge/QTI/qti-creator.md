@@ -32,9 +32,9 @@ Any later reference of “qtiCreator/” in this wiki page means `{tao_root}/tao
 -   **qtiCreator/editor** : lib for the main editor view
 -   **qtiCreator/helper** : helper for the main editor view
 -   **qtiCreator/lib** : third party js libraries
--   **qtiCreator/model** : the model of qti element that will be used to reprent a qti item and all its composing element, it extends the qtiItem/core one
+-   **qtiCreator/model** : the model of qti element that will be used to represent a qti item and all its composing element, it extends the qtiItem/core one
 -   **qtiCreator/preview** : code specific for the preview mode
--   **qtiCreator/renderers** : declare the renderer for each individual qti element : the responsibility of the renderer is limited to setting the html template and the proper instanciation of the element creator widget
+-   **qtiCreator/renderers** : declare the renderer for each individual qti element : the responsibility of the renderer is limited to setting the html template and the proper instantiation of the element creator widget
 -   **qtiCreator/test** : all js unit test are located here
 -   **qtiCreator/tpl** : the template directory
 -   **qtiCreator/widgets** : contains the widgets and their states which define all behaviour of the qti element editor
@@ -251,9 +251,9 @@ The widget define the common structure for the qti element that is being edited.
 
 The stack of states will bring and enrich the behaviour as needed.
 
-Instanciation and usage:<br/>
+Instantiation and usage:<br/>
 
-A widget is only instanciated in the qti element renderer (see previous “renderer declaration section”)
+A widget is only instantiated in the qti element renderer (see previous “renderer declaration section”)
 
 Definition
 
@@ -281,7 +281,7 @@ Let’s start with an example:
 
 Here we are creating the choice interaction creator widget by extending the base “qtiCreator/widgets/interactions/Widget” one.<br/>
 
-Upon instanciation, the initCreator() method will be called. Variables and default behaviours can be defined in the initCreator() method. Please note here that the parent Widget.initCreator() is also called and the registerStates(states) is absolutely mendatory. After instanciation, the state of the widget will initially be set to “sleep”.<br/>
+Upon instantiation, the initCreator() method will be called. Variables and default behaviours can be defined in the initCreator() method. Please note here that the parent Widget.initCreator() is also called and the registerStates(states) is absolutely mandatory. After instantiation, the state of the widget will initially be set to “sleep”.<br/>
 
 The call sequence is thus this:
 
@@ -303,7 +303,7 @@ For an interaction where a response declaration is not required (such as mediaIn
 
 State hierarchy :<br/>
 
-The states are hierachical. When you are in the question state, you will also inherit the behaviour of the active state. When you are editing a response in the correct state, you will inherit the behaviour of both the active and answer states. The following diagram illustrates a stack of states when an interaciton or a choice is in the correct state.<br/>
+The states are hierarchical. When you are in the question state, you will also inherit the behaviour of the active state. When you are editing a response in the correct state, you will inherit the behaviour of both the active and answer states. The following diagram illustrates a stack of states when an interaction or a choice is in the correct state.<br/>
 
 ![](../resources/taoQtiCreatorStatesStacks.png)
 
@@ -364,11 +364,11 @@ In the example below, the generic question state of the abstract block interacti
         return ChoiceInteractionStateQuestion;
     });
 
-According to your need (whever you need to define new behaviours from the parent or not), the second or third method should be used. Doing this will ensure an overall consistency accros all widget and states!
+According to your need (whether you need to define new behaviours from the parent or not), the second or third method should be used. Doing this will ensure an overall consistency across all widget and states!
 
 #### variable access in your states
 
-Upon instanciation, a state is given the reference of the widget it represents.<br/>
+Upon instantiation, a state is given the reference of the widget it represents.<br/>
 
 You can access anything you want in the state in this.widget:
 
@@ -432,13 +432,13 @@ After you leave the state, this container will automatically be emptied. You onl
                 identifier:_widget.element.id()
             }));
 
-This exemple comes from /qtiCreator/widgets/choices/simpleChoice/states/Choice.js
+This example comes from /qtiCreator/widgets/choices/simpleChoice/states/Choice.js
 
 #### Init the data binding
 
 You need to use taoQtiItem/qtiCreator/widgets/helpers/formElement to bind modification of any declared element of your form to callback function.<br/>
 
-This callback will only be executed when the input is valid. To set your form element validation, please have a look on the exemple of the “define the template” section
+This callback will only be executed when the input is valid. To set your form element validation, please have a look on the example of the “define the template” section
 
 
             formElement.initDataBinding(this.widget.$form, this.widget.element, {
@@ -483,7 +483,7 @@ The goal is to modify this object : modify attributes, add choice, modify a choi
 
 Every modification brought to the object will be serialized and saved as qti XML to the server via the qtiXmlRenderer.<br/>
 
-Please use the api and not idrect access to object because those methods trigger the right events and following this api will help implementing undo/redo methods.
+Please use the api and not indirect access to object because those methods trigger the right events and following this api will help implementing undo/redo methods.
 
 The main methods you may need are:
 
@@ -607,7 +607,7 @@ There is a simple way to do that via a method of the widget.<br/>
 
 Important notice: by using this method, the event listener will have the same lifespan as the current state. If you bind an event in the *answer* state, it will still be active in a substate like *correct* or *mode*.<br/>
 
-When you leave the answer state (say, you are goind to the *question* mode again), the listener will be automatically remove.
+When you leave the answer state (say, you are going to the *question* mode again), the listener will be automatically remove.
 
 An example can be found in qtiCreator/widgets/interactions/states/Answer.js:
 

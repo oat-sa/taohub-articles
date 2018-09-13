@@ -51,7 +51,7 @@ to compile:<br/>
 
 `php wfEngineOptimizer.php -c -i`<br/>
 
-(c for complie, i for indexing)
+(c for compile, i for indexing)
 
 to decompile:<br/>
 
@@ -96,11 +96,11 @@ Decompile button works the same way: you only need to click on the â€œdecompileâ
 
 ### 4.1. TAO v2.0 vs v2.1
 
-Benchmark has been done with Jmeter to compare the prformance improvement between v2.0 and 2.1 (to see how to banchmark with Jmeter see the related section):
+Benchmark has been done with Jmeter to compare the performance improvement between v2.0 and 2.1 (to see how to benchmark with Jmeter see the related section):
 
 The 2 tables below show the average time of execution for each action performed during a test exection:
 
-1.  authentification (time to authentificate the test taker)
+1.  authentication (time to authentificate the test taker)
 2.  delivery listing (page to display the list of available delivery for the logged test taker)
 3.  process initialization (the time between the click of the test taker on the selected delivery and the moment the first item is displayed to the screen
 4.  get item (the average time to display an item on the screen)
@@ -152,7 +152,7 @@ The benchmark results below show a more realistic scenario, with **10000 test ta
 
   ---------------------------- ------------------------- --------------------
   _=. Action                  _=. Constant delay (s)   _=. Deviation (s)
-  _=. Authentificaiton        =. 0.3                    =. 0.1
+  _=. Authentification        =. 0.3                    =. 0.1
   _=. Delivery Section time   =. 2                      =. 0.6
   _=. Item solving time       =. 10                     =. 5
   ---------------------------- ------------------------- --------------------

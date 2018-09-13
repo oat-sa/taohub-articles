@@ -104,14 +104,14 @@ Warning: *enabling this appender on windows will require uncommenting ’extensi
 ‘port’ =<br/>
 > destination port
 
-the item is JSON formated and send via udp.
+the item is JSON formatted and send via udp.
 
 Formats
 -------
 
 ### FileAppenders
 
-The Fileappenders (SingelFileAppender, ArchiveFileAppender) append a String to the logfile that can contain the following informations:
+The Fileappenders (SingelFileAppender, ArchiveFileAppender) append a String to the logfile that can contain the following information:
 
 -   %d datestring
 -   %m description(message)

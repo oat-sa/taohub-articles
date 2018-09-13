@@ -65,7 +65,7 @@ In the sections tag, add this section
 
 
 
-go to tools section ![](../resources/tools.png) (right uper side) and click on “empty cache” button.
+go to tools section ![](../resources/tools.png) (right upper side) and click on “empty cache” button.
 
 refresh your page and see :
 

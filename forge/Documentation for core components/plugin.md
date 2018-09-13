@@ -15,7 +15,7 @@ You want to develop a Javascript component to use it from several place of you a
 
 First of all you will have to chose between a javascript plugin or a JQuery plugin. Javascript plugin are often a template that you want to have on many page and configure it a little. Jquery plugin are more about modifying or adding some functionality to an existing DOM element.<br/>
 
-Now you have to thing about the purpose of your plugin, feature you want it to have. So you will be able to find an API, a list of method it will expose, and start the development of your pugin.
+Now you have to thing about the purpose of your plugin, feature you want it to have. So you will be able to find an API, a list of method it will expose, and start the development of your plugin.
 
 JQuery Plugin
 -------------
@@ -47,7 +47,7 @@ Pluginifier is a tool that will turn your JQuery script into a plugin. You will 
 Javascript Plugin
 -----------------
 
-We will see how to make a Javascript plugin throught an exemple. Let’s say that you want to display a box with a message on your pages and you have a common template even if the message is different. Then when you click on a button it will call an url and return something.<br/>
+We will see how to make a Javascript plugin throught an example. Let’s say that you want to display a box with a message on your pages and you have a common template even if the message is different. Then when you click on a button it will call an url and return something.<br/>
 
 To do this you will need three variables, the Api that contains all the methods that you will need for your plugin, the factory, that will instanciate a new object and a state that will contains the state of your object and modify this state.
 
@@ -57,7 +57,7 @@ To do this you will need three variables, the Api that contains all the methods 
         }
     }
 
-The API will contains all the core properties and methods of your plugin. In the exemple we will have for exemple a method to create the template in the state we want, with the correct message and the correct options. Another will display this message by putting the content into the right container and bind the click on the button to call the method that we configure on initialization. And surely a last one to close the message and clear the instance.
+The API will contains all the core properties and methods of your plugin. In the example we will have for exemple a method to create the template in the state we want, with the correct message and the correct options. Another will display this message by putting the content into the right container and bind the click on the button to call the method that we configure on initialization. And surely a last one to close the message and clear the instance.
 
     var myState= {
         state : null,
@@ -69,7 +69,7 @@ The API will contains all the core properties and methods of your plugin. In the
         }
     }
 
-Thanks to this object we will be able to set and get the state of the object, for exemple is it opened, displayed or closed ? these information will be helpful to do different actions for different states.
+Thanks to this object we will be able to set and get the state of the object, for example is it opened, displayed or closed ? these information will be helpful to do different actions for different states.
 
     var myFactory = function myFactory(container){
 
@@ -146,7 +146,7 @@ First create a folder named as your plugin that contains a test.html and a test.
 
 
 
-the `<base/>` should refere to the tao/views folder in order to load correct js and css. with this code you will load all librairies that are needed to launch your tests. You can also add blanket `js/lib/blanket/blanket.min.js`.<br/>
+the `<base/>` should refer to the tao/views folder in order to load correct js and css. with this code you will load all libraries that are needed to launch your tests. You can also add blanket `js/lib/blanket/blanket.min.js`.<br/>
 
 You can put all you want in the <br/>
 #qunit-fixture div, this will be cleaned after each test so you will not have side effect.

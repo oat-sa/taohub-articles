@@ -33,12 +33,12 @@ SSL/TLS is the primary method of encrypting client/server communications (ie. �
 \>http://httpd.apache.org/docs/current/ssl/ssl_howto.html\
 \><br/>
 
-\>In addition to the steps in the link above, you will also need to aquire a certificate. A self-signed certificate will generate warnings in users’ browsers. If this is a concern then consider purchasing a certificate from a trusted [certificate authority](http://en.wikipedia.org/wiki/Certificate_Authority)
+\>In addition to the steps in the link above, you will also need to acquire a certificate. A self-signed certificate will generate warnings in users’ browsers. If this is a concern then consider purchasing a certificate from a trusted [certificate authority](http://en.wikipedia.org/wiki/Certificate_Authority)
 
 Hardening PHP and encrypting user session data
 ----------------------------------------------
 
-Depending on what is at stake, you may want to encrypt user data. So any server breakage will just provide the offender with encrypted data. For instance, the [Suhosin](http://www.hardened-php.net/suhosin/) component encrypts the session data on the server side. Unfortunately the Suhosin project has not been updated in a while and thus only PHP versions up to 5.3.9 are supported. Other possibilities are availaable to the experienced administrator willing to harden php ‘manually’ beginning with:
+Depending on what is at stake, you may want to encrypt user data. So any server breakage will just provide the offender with encrypted data. For instance, the [Suhosin](http://www.hardened-php.net/suhosin/) component encrypts the session data on the server side. Unfortunately the Suhosin project has not been updated in a while and thus only PHP versions up to 5.3.9 are supported. Other possibilities are available to the experienced administrator willing to harden php ‘manually’ beginning with:
 
     display_errors = Off
     log_errors = On

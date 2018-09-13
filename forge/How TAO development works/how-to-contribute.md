@@ -77,7 +77,7 @@ TAO source code is available on the [Subversion repository](http://vcs.taotestin
 
 All feedbacks from the community are also gathered in the [TAO Forge](http://forge.taotesting.com/projects/tao/issues), you can find more detailed information about **Issues|issues**.
 
-By default, people enroled in the TAO Forge have a *reporter* status/role.
+By default, people enrolled in the TAO Forge have a *reporter* status/role.
 
 The *reporter* can
 

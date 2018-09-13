@@ -64,7 +64,7 @@ $destination.
 ### getCompiler( core_kernel_classes_Resource <br/>
 $test)
 
-Returns an instance of the abstract class *tao_models_classes_Compiler*, which has been initalised for <br/>
+Returns an instance of the abstract class *tao_models_classes_Compiler*, which has been initialised for <br/>
 $test:
 
 Test compiler
@@ -81,6 +81,6 @@ $destinationDirectory can be used for storage. Typically this will involve compi
     $itemCompiler = taoItems_models_classes_ItemsService::singleton()->getCompiler($item);
     $serviceCall = $compiler->compile($itemCompiler);
 
-This method should return an instance of *tao_models_classes_service_ServiceCall* that points to the testrunner and provides the nescessary parameters to run this test.
+This method should return an instance of *tao_models_classes_service_ServiceCall* that points to the testrunner and provides the necessary parameters to run this test.
 
 

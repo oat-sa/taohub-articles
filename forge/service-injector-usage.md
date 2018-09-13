@@ -23,11 +23,11 @@ As well it’s possible to integrate others libraries.
 Usage :
 -------
 
-Service injector is acccessible form controller using getServiceInjector since tao-core 7.5.0 and generis 3.0.0.
+Service injector is accessible form controller using getServiceInjector since tao-core 7.5.0 and generis 3.0.0.
 
-Sercice injector implement [container interop interface](https://github.com/container-interop/container-interop).
+Service injector implement [container interop interface](https://github.com/container-interop/container-interop).
 
-**example : in your controler action**
+**example : in your controller action**
 
     if($this->getServiceInjector()->has('myService')) {
         $myService = $this->getServiceInjector()->get('myService');

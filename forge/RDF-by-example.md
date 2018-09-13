@@ -58,7 +58,7 @@ So if we took all the information in our traditional table we would receive:
   http://www.example.org/\#p2   http://www.example.org/\#class                     http://www.example.org/\#c102
   http://www.example.org/\#p2   http://www.w3.org/1999/02/22-rdf-syntax-ns\#type   http://www.example.org/\#pupil
 
-In order to make this a litle easier to read we can substituate the namesspaces with a prefix
+In order to make this a little easier to read we can substitute the namespaces with a prefix
 
 -   xmlns:ex=“http://www.example.org/<br/>
 #”
@@ -106,7 +106,7 @@ Please note however that in RDF no two statements may be identical i.e. be compo
 Class definitions:
 ------------------
 
-This generic approach to data modelling allows us to define in a single model not only store several different types of entities, such as pupil, class and teacher, but informations on the data model as well.
+This generic approach to data modelling allows us to define in a single model not only store several different types of entities, such as pupil, class and teacher, but information on the data model as well.
 
 Property definitions:
 ---------------------

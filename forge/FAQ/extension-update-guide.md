@@ -41,7 +41,7 @@ Your modifications should be contained within a branch, with the following namin
 
 **modification_type / jira_ref - short-description**
 
-Exemples:
+Examples:
 
 -   bug/TAO-1756-ipassage-content-height
 -   hotfix/TAO-2323-mathjax-comments

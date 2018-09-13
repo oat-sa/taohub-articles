@@ -11,16 +11,16 @@ tags:
 Upgrade the TAO Platform
 ========================
 
-An extension called taoUpdate is available since TAO 2.5 to allow System adminitrator to update your installation to the last version of TAO and replace preivous way of upgrade your TAO installation. First, we strongly advise any adminitrator to create database backup of their system before launching the update.
+An extension called taoUpdate is available since TAO 2.5 to allow System administrator to update your installation to the last version of TAO and replace previous way of upgrade your TAO installation. First, we strongly advise any administrator to create database backup of their system before launching the update.
 
 1.  Download the attached file [taoUpdate](http://releases.taotesting.com/taoUpdate2.5-2.6.zip) and extracted in content in your root folder.
 2.  Connect to Extension Manager and install the extension taoUpdate\
     ![](http://forge.taotesting.com/attachments/download/2568/S%C3%A9lection_045.png)
 3.  Make sure www-data have permission to write on all folder of your TAO root folder\
     ![](http://forge.taotesting.com/attachments/download/2567/S%C3%A9lection_046.png)
-4.  Lauch the update\
+4.  Launch the update\
     ![](http://forge.taotesting.com/attachments/download/2566/S%C3%A9lection_047.png)
-5.  At this point a private link is provided and will be required to continue the update, from now on any attempt to connect to the platform will result to a redirection to a maintenance page execpt from the link provide that contain a unique key to continue the update process.<br/>
+5.  At this point a private link is provided and will be required to continue the update, from now on any attempt to connect to the platform will result to a redirection to a maintenance page except from the link provide that contain a unique key to continue the update process.<br/>
 
     ![](http://forge.taotesting.com/attachments/download/2570/S%C3%A9lection_048.png)
 6.  If you loose this key, a file with the admin key had been created in a folder called deployNewTao, simply connect to “http://ROOT_URL/deployNewTao/Main/index?key=<br/>

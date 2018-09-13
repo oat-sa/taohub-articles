@@ -51,6 +51,6 @@ The delivery model on the Generis representation below shows the properties of t
 
 ![](../resources/generis_delivery.png)
 
-Please refer the Delivery server|delivery server section to see how this properties apply on delivery executio
+Please refer the Delivery server|delivery server section to see how this properties apply on delivery execution
 
 

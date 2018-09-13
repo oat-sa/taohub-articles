@@ -11,7 +11,7 @@ tags: ["Style Guide:Icons"]
 Adding an icon is as simple as adding the class `.icon-*` to an element where `*` stands for the name of the icon. Usually an extra `span` element is used.
 
 ## Creating icon elements in PHP
-Each time the icon set changes the class `tao_helpers_Icon` is being updated automatically. It provides convenient ways to create icons programatically. 
+Each time the icon set changes the class `tao_helpers_Icon` is being updated automatically. It provides convenient ways to create icons programmatically. 
 
 One way to do this is to use the method `tao_helpers_Icon::iconNameToCamelCase($options=array())`
 ```php

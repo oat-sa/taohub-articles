@@ -41,7 +41,7 @@ to Install the required extensions in Tao:
 - Open *Settings* of the *External Tools* and click on *Add external tool configuration*
 - Name your configuration and enter the same Consumer Key and Shared Secret that you used in TAO
 - The Tool Base URL is TAO_ROOT_URL + *'/ltiDeliveryProvider/DeliveryTool/launch'*.
- (If you don't know the url of your TAO instalation then return to the TAO back office home, look at your url and remove 'tao/Main/index'.
+ (If you don't know the url of your TAO installation then return to the TAO back office home, look at your url and remove 'tao/Main/index'.
  So if your TAO home is 'http://localhost/tao24/tao/Main/index' then your root url would be 'http://localhost/tao24/'.)
 - click on 'save Changes'
 

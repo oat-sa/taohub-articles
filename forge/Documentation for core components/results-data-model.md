@@ -19,7 +19,7 @@ http://www.imsglobal.org/question/qtiv2p1/imsqti_resultv2p1.html
 
 Elements of understanding
 
-An itemResult is identified by the instanciation of the item, in other words if the user revisits the exact same item by going backwards to it, any other data collected during that second visit will be modelled as variables stacked into the same itemresult. Two distinct itemResults will be created if the same item is embbeded twice in the same delivery.
+An itemResult is identified by the instantiation of the item, in other words if the user revisits the exact same item by going backwards to it, any other data collected during that second visit will be modelled as variables stacked into the same itemresult. Two distinct itemResults will be created if the same item is embedded twice in the same delivery.
 
 Internally into TAO, the identifier of the item results is arising from the callId of the item delivery service.
 

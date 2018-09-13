@@ -335,7 +335,7 @@ Sort method is available on QueryBuilder :
 
     $result = $search->getGateway()->search($queryBuilder);
 
-Example for muliple sort :
+Example for multiple sort :
 
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
@@ -386,7 +386,7 @@ get 10 results offset 5 :
 Gateway :
 ---------
 
-gateway is the highter component of complex search.<br/>
+gateway is the higher component of complex search.<br/>
 
 It provide query builder and it execute query using default database driver.
 

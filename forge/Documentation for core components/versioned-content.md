@@ -27,7 +27,7 @@ By default the versioning is not enabled (See Enable versioning).
 Features
 --------
 
-The TAO platform supports almost all the features of the subversion system through two main objects. A *Repository* object to manage repositories and a *File* object to manage files inside repositories. Of course the system has been developped to be extended in the future with other kind of versioning system (GIT, Mercurial …)
+The TAO platform supports almost all the features of the subversion system through two main objects. A *Repository* object to manage repositories and a *File* object to manage files inside repositories. Of course the system has been developed to be extended in the future with other kind of versioning system (GIT, Mercurial …)
 
 The RDF model
 -------------

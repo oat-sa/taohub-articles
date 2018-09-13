@@ -51,7 +51,7 @@ Please make sure that the array key matches the PCI identifier.
 
 Tada!
 
-Versionning
+Versioning
 -----------
 
 ### Principle
@@ -70,9 +70,9 @@ The concept of version does not exist in PCI standard yet. We are planning to pu
 
 PCI that support versioning will have the version set as the property “version”.
 
-### Semantic versionning
+### Semantic versioning
 
-PCI version number follow the semantic versionning: MAJOR.MINOR.PATCH\
+PCI version number follow the semantic versioning: MAJOR.MINOR.PATCH\
 MAJOR : incompatible change, both runtime libs and existing qti xml need to be updated (properties, response declaration, response processing). In this case, a separate update script is required to update the xml (items or/and deliveries) before the existing items can make use of the new major version.<br/>
 
 MINOR : new features, libs are updated, qti xml does not need to be updated\
@@ -113,7 +113,7 @@ It brings the benefit of requiring less http requests and it is required when th
 
 To compile a portable element, just follow the two following steps:
 
-1 - Add the array of your PCI modules to the “src” entry of your runtime manifest. The first element in the array must be the entrypoint, the module that implements the PCI API. The output will be in the hook file definied in the manifest, in this example in the file “likertScaleInteraction.min.js”.
+1 - Add the array of your PCI modules to the “src” entry of your runtime manifest. The first element in the array must be the entrypoint, the module that implements the PCI API. The output will be in the hook file defined in the manifest, in this example in the file “likertScaleInteraction.min.js”.
 
 ```
     "runtime" : {

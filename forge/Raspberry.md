@@ -61,11 +61,11 @@ Type in the shell
               collisions:0 txqueuelen:0
               RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 
-and take note of the resulting IP adress.
+and take note of the resulting IP address.
 
 *Scenario 2: Like us, you couldn’t afford buying a screen …*
 
-This one is diffcult, all raspberry have a MAC adress starting with b8:27:eb\
+This one is difficult, all raspberry have a MAC address starting with b8:27:eb\
 Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.<br/>
 
 From a mac you may use conveniently http://ivanx.com/raspberrypi/files/PiFinder.zip\

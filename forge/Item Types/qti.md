@@ -20,7 +20,7 @@ The QTI standard version 2.0 was first implemented as the main item type in TAO 
 
 From version 2.5, TAO moves from QTI 2.0 to 2.1.<br/>
 
-The implemention of the QTI standard enables TAO to be more open and interoperable with other systems.<br/>
+The implementation of the QTI standard enables TAO to be more open and interoperable with other systems.<br/>
 
 The current available QTI features in TAO are:
 
@@ -82,7 +82,7 @@ You can find the complete source code documentation in the [PHP Doc](http://forg
 
 ### Sample code usage
 
-To create QTI item programatically, you can directly use the QTI model described in the previous section.<br/>
+To create QTI item programmatically, you can directly use the QTI model described in the previous section.<br/>
 
 Here is an example to create an Item with one single Interaction:
 
@@ -167,7 +167,7 @@ Since TAO 3.0, TAO offers complete PCI and PCI hooks to enable developers to ext
 Portable Custom Interaction Best Practice Change Proposal\
 The Change proposal recommendation to implement TAO PCI can be found in TAO PCI
 
-The base proposal from IMS is a draft version subimitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html)
+The base proposal from IMS is a draft version submitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html)
 
 The proposal form Passific Metrics attempts to solve some issues from the original proposal with the introduction of the concept of “shared libraries” and a better structured XML serialization of PCIs. [Proposal from Pacific Metrics](http://www.imsglobal.org/assessment/PCI_Change_Request_v1pd.html)
 

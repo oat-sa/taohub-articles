@@ -88,9 +88,9 @@ For instance, the *TAO meta-extension* which is the main access to the *TAO Back
 
 If these two conditions are met, the user is indeed authenticated against the *TAO Back Office*.
 
-### 3.2. Functonality Access Control
+### 3.2. Functionality Access Control
 
-When your user is authenticated, you might want to know what are the features he can access or not. Our Users Management Model takes this in consideration by extending the concept of Role. For each Role, administrators will be able to define what are the functionalities that can be accesssed.
+When your user is authenticated, you might want to know what are the features he can access or not. Our Users Management Model takes this in consideration by extending the concept of Role. For each Role, administrators will be able to define what are the functionalities that can be accessed.
 
 The **TAO Functionality Access Control** is too much substantial to be entirely covered in this introduction to the Users Management Model of TAO. In a nutshell, Roles can be granted to entire MVC Modules of TAO Extensions (corse-grained control) or to single MVC Actions (fine-grained control).
 

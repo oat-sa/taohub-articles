@@ -154,7 +154,7 @@ return array(<br/>
 * is set it will become mandatory for the operation in <br/>
 $key\
  <br/>
-* Default Parameters Requirents are applied\
+* Default Parameters Requirements are applied\
  <br/>
 * type by default is not required and the root class type is applied\
  <br/>

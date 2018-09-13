@@ -268,7 +268,7 @@ For a particular file
 
 ### Documentation
 
-JavaScript code MUST be documented using the http://usejsdoc.org/ format. Even though no web site documentation is generated, this format is used to have consistent comments accross the source code.
+JavaScript code MUST be documented using the http://usejsdoc.org/ format. Even though no web site documentation is generated, this format is used to have consistent comments across the source code.
 
 You can see below an example of jsdoc documentation.
 

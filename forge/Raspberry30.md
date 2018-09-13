@@ -35,7 +35,7 @@ On your own workstation from which you would like either to create new tests or 
 TAO account
 -----------
 
-TAO is presinstalled and contains already an admin account\
+TAO is pre installed and contains already an admin account\
 Access TAO using your web browser at http://pitao/<br/>
 
 TAO admin user : pitao/pitao
@@ -43,7 +43,7 @@ TAO admin user : pitao/pitao
 System account
 --------------
 
-You may want to tweak the sytem to your own needs, the default account is :<br/>
+You may want to tweak the system to your own needs, the default account is :<br/>
 
 Ssh: pi / raspberry
 

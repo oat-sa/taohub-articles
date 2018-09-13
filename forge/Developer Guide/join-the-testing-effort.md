@@ -11,11 +11,11 @@ tags:
 Join the testing effort
 =======================
 
-Every Computer based assessment projects are different. From an education perspective to a human resources management environment, needs and challenges are different. The tao platforms aims at adressing the whole range of needs that may apply in computer based assessment.<br/>
+Every Computer based assessment projects are different. From an education perspective to a human resources management environment, needs and challenges are different. The tao platforms aims at addressing the whole range of needs that may apply in computer based assessment.<br/>
 
 TAO’s Community’s members represent an important part of the creation of TAO to provide feedback and input on how TAO should evolve.
 
-If you are interested in installing TAO for testing purpose in your own environment, you will find more informations in Installation and upgrading guide and if you have any input/feedbacks or comment that can help development team to improve TAO, do not hesitate to sign in the TAO Forge.
+If you are interested in installing TAO for testing purpose in your own environment, you will find more information in Installation and upgrading guide and if you have any input/feedbacks or comment that can help development team to improve TAO, do not hesitate to sign in the TAO Forge.
 
 As a member of the TAO forge, you will then have access to bug tracking and feature requests systems in order to add issues (See guide How [Issues](../how-tao-development-works/issues.md) works) or comment on existing issues, you will also be able to participate to team discussion about TAO in the forum.
 

@@ -17,7 +17,7 @@ TAO PCI and PIC
 
 Since TAO 3.0, TAO offers complete PCI and PIC hooks to enable developers to extend the functonalities offered by IMS QTI 2.1 standard.
 
-PCI stands for Portable Custom Interaction. QTI offers about 20 types of interactions (questions types). Among them, the special custom interaction gives tool vendors opportunities to implement any type of interaction. This however breaks the interoperability which is supposed to be the strongest benefit adopting the QTI standard. IMS is therfore working on a new specification that enable tool vendors to structure their custom interaciton in an interoperable way. Portable Custom Interaction is the result of this effort. Curently a few vendors are experimenting with this PCI specification and are making new proposal to improve it. OAT, publisher of TAO is very active in defining this PCI specification. As a illustration of the benefit and power of PCI, TAO 3.0 comes up with a full working implementation of PCI.
+PCI stands for Portable Custom Interaction. QTI offers about 20 types of interactions (questions types). Among them, the special custom interaction gives tool vendors opportunities to implement any type of interaction. This however breaks the interoperability which is supposed to be the strongest benefit adopting the QTI standard. IMS is therefore working on a new specification that enable tool vendors to structure their custom interaction in an interoperable way. Portable Custom Interaction is the result of this effort. Currently a few vendors are experimenting with this PCI specification and are making new proposal to improve it. OAT, publisher of TAO is very active in defining this PCI specification. As a illustration of the benefit and power of PCI, TAO 3.0 comes up with a full working implementation of PCI.
 
 PIC stands for portable info control. Info control (add ref.) offers opportunity for tool vendor to add their own custom content to the item body. Implementing completely vendor specific Info Controls leads to the same interoperability issue as basic custom interactions. IMS has so far not publish any recommendation on the way Info Control should be implemented. OAT took the initiative to propose the PIC specification which is strongly influenced by its cousin PCI.
 
@@ -32,7 +32,7 @@ TAO offers an additional hook in its item creator, which enable every item autho
 
 Since PIC is highly inspired by PCI, the following sections will successively introduce how to create PCI for TAO then present the difference for PIC.
 
-The base proposal from IMS is a draft version subimitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html#_Toc353965343)<br/>
+The base proposal from IMS is a draft version submitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html#_Toc353965343)<br/>
 
 The proposal form Passific Metrics attempts to solve some issues from the original proposal with the introduction of the concept of “shared libraries” and a better structured XML serialization of PCIs. [Pacific Metrics proposal](http://www.imsglobal.org/assessment/PCI_Change_Request_v1pd.html)
 
@@ -63,7 +63,7 @@ Because we don’t know which libs and files will be used, all PCI-runtime AMD f
 
 1.  custom events fired in one context, cannot be listened in the other
 2.  data attribute bound with method *<br/>
-$element.data(’my-data’, someValue)* cannot be retrived in another (passing through the dom works though : *<br/>
+$element.data(’my-data’, someValue)* cannot be retrieved in another (passing through the dom works though : *<br/>
 $element.attr(’data-my-data’, someValue)*, here *someValue* must be a string obviously)
 
 Authoring/Creator Hook
@@ -103,7 +103,7 @@ Unless stated otherwise, all fields are required.
 -   css : array of css required on runtime (relative to the root of the package)
 -   entryPoint : the file defined (relative to the root of the package)
 -   tags : array of key words that can be used to organize it.
--   icon : the picture that will be used in the interaciton sidebar when integrated into the creator GUI,
+-   icon : the picture that will be used in the interaction sidebar when integrated into the creator GUI,
 -   response : a json object representing the default response attributes of the interaction
 
 
@@ -141,7 +141,7 @@ The previous statements apply to PIC with the following notable exceptions :<br/
 
 The two required files are respectively called picCreator.json and pciCreator.js (instead of pciCreator.json and picCreator.js)<br/>
 
-icon : this is not currently used but is still required for consistency with the PCI package and keping for future usage (e.g. a more visual PIC selection toolbar)<br/>
+icon : this is not currently used but is still required for consistency with the PCI package and keeping for future usage (e.g. a more visual PIC selection toolbar)<br/>
 
 response : this is not useful for PIC since no response is expected from an info control so should not appear in picCreator.json
 

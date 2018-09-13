@@ -20,7 +20,7 @@ In the following part, we assume that you may want to install TAO 2.6 and TAO 3.
 Step 1: Get TAO ready for installation
 --------------------------------------
 
-Download TAO builds on the document root, extract them and rename extracted folders for conveniency:
+Download TAO builds on the document root, extract them and rename extracted folders at your conveniency:
 
 ```
     cd /opt/bitnami/apache2/htdocs/

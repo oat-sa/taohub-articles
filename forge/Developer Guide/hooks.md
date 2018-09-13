@@ -30,13 +30,13 @@ for the time being
 Runtime data storage services
 -----------------------------
 
-More informations on how to configure them can be found on the Data abstractions page.
+More information on how to configure them can be found on the Data abstractions page.
 
 ### Uri Provider
 
 `common_uri_AbstractUriProvider`
 
-### Delivery execution informations
+### Delivery execution information
 
 `taoDelivery_models_classes_execution_Service`
 

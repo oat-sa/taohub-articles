@@ -22,7 +22,7 @@ Let’s:
 
 1.  Install MAMP
 2.  Copy the TAO Files in the appropriate folder
-3.  Configure/Install TAO itselfs
+3.  Configure/Install TAO itself
 
 Install the web server (MAMP installation)
 ------------------------------------------
@@ -46,7 +46,7 @@ https://www.mamp.info/en/downloads/
 Congratulations! You have now your MAMP successfully installed, you may now launch it.
 
 - Double click the MAMP icon from your Applications directory (located at /Applications/MAMP/or from your dock bar)
-- You may be suggsted by MAMP vendor to switch to a pro version, for the purpose of this tutorial, we recommend you to stick to the normal MAMP version
+- You may be suggested by MAMP vendor to switch to a pro version, for the purpose of this tutorial, we recommend you to stick to the normal MAMP version
 - Click the "Start servers", the boxes near "Apache server" and "MySQL server" in the top right corner should switch to green ones
 
 ![](../resources/StartingMamp.png)
@@ -81,10 +81,10 @@ Please download one of these build packages:
 
 ![](../resources/copyfiles.png)
 
-Install TAO itselfs
+Install TAO itself
 -------------------
 
-Come back to your web browser that popped up when you started your MAMP server (you may also launch another web browser and type in the adress to tao)
+Come back to your web browser that popped up when you started your MAMP server (you may also launch another web browser and type in the address to tao)
 
     # Connect at this adress http://localhost:8888/tao/install
     (please note that the server port may change depending on your settings into the MAMP preferences for ports
@@ -95,7 +95,7 @@ Come back to your web browser that popped up when you started your MAMP server (
 
 ![](../resources/install2.png)
 
-Define the hostname, commonly it is http://localhost:8888 but it could be http://localhost depending on the settings set up in your MAMP. If you are not sure check the adress used in your web browser as a reference.
+Define the hostname, commonly it is http://localhost:8888 but it could be http://localhost depending on the settings set up in your MAMP. If you are not sure check the address used in your web browser as a reference.
 
 We recommend you to use the pre-load data sample option, this way you will have some basic item examples to start with.
 
@@ -117,11 +117,11 @@ Congratulations!
 
 ### Start up TAO
 
-In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the locahost:8888 url.<br/>
+In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the localhost:8888 url.<br/>
 
 You may ease this work by fine tuning your MAMP.
 
-Optionnaly, we recommend you to do the following configuration :
+Optionally, we recommend you to do the following configuration :
 
 1.  We recommend you to click the preferences button into MAMP.
 2.  Switch to the start/stop tab.

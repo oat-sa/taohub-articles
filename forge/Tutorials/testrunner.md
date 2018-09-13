@@ -97,7 +97,7 @@ service calls we can create the following structure:
 
 We have one entry per item with:
 
--   ‘runtime’ the php serialized ServiceCall object, that we can unserialize during runtime
+-   ‘runtime’ the php serialized ServiceCall object, that we can deserialize during runtime
 -   ‘label’ stores the value of the property label during compilation. This is currently unused in the runner,<br/>
 
     but we could store several other properties values that could influence the item choice in the test-runner.

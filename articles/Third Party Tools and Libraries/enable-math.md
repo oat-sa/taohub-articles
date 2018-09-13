@@ -43,7 +43,7 @@ You can download it freely [here](http://docs.mathjax.org/en/latest/installation
 
 MathJax is a huge lib which weighs above 20MB unzipped. It is recommended to shrink it so only required files remain to display MathML properly in TAO. Indeed, on compilation, every compiled item containing MathML would have the whole library copied. So using the instruction below can help reducing its size down to 4.2MB. This solution has been tested so math expressions are still correctly rendered on most used browsers: Firefox, Chrome, Safari and IE8.
 
-Frist delete the following folders:
+First delete the following folders:
 
 - mathjax/docs/
 - mathjax/test/

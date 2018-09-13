@@ -37,7 +37,7 @@ Since the version 1.3 of TAO, we focus on new kind of Items and have decided to 
   Normal
   Deprecated
   Not implemented
-  Exeperimental
+  Experimental
   ----------------- -------------------------------------------------------------------
 
 How to migrate items

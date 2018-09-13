@@ -55,7 +55,7 @@ Planned for TAO 2.6:
 
 ### Feedback
 
-Only modal feebacks are available for now. It enables you to define a message to be displayed to the test taker after the item completion. You can select simple rules based on the score value or the correct response.<br/>
+Only modal feedbacks are available for now. It enables you to define a message to be displayed to the test taker after the item completion. You can select simple rules based on the score value or the correct response.<br/>
 
 No adaptative item feature as defined by QTI is planned so far.
 
@@ -76,7 +76,7 @@ As to PDF files, the issue is the same as math expressions and multimedia. There
 
 ### Item appearance
 
-Standard QTI 2.1 allows a subset of xhtml that can help you define the structure of text contents within your item. For example, you can create paragraph, align left, align right or justify your texts. You have also some other common format options like blod, italic etc.<br/>
+Standard QTI 2.1 allows a subset of xhtml that can help you define the structure of text contents within your item. For example, you can create paragraph, align left, align right or justify your texts. You have also some other common format options like bold, italic etc.<br/>
 
 Finally, you can upload your own css to customize the appearance of your item.
 

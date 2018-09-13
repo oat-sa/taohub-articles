@@ -14,13 +14,13 @@ Rest Services Layer Tutorial
 Introduction
 ------------
 
-Starting from **TAO 2.5**, a [Representationnal State Transfer (REST)](http://en.wikipedia.org/wiki/Representational_state_transfer) layer allows you to manipulate data in TAO from any location and technology through simple HTTP requests. **This may not work in TAO 3.x as of yet.**
+Starting from **TAO 2.5**, a [Representational State Transfer (REST)](http://en.wikipedia.org/wiki/Representational_state_transfer) layer allows you to manipulate data in TAO from any location and technology through simple HTTP requests. **This may not work in TAO 3.x as of yet.**
 
 The four basic methods from [HTTP](https://en.wikipedia.org/wiki/Http) : GET / POST / PUT / DELETE allows you to fetch / create /modify or delete the different resources like test takers or items from any TAO node.
 
 Authentication mechanisms built in HTTP : Basic and Digest are being used for user identification and further restrictions are applied according to the functionality rights access settings as they are setup in the tao node you want to access.
 
-An exception handler treat the different cases and allows for catching any errors that may be triggered while executing your queries. A content negociation is being implemented and currently supports application/json and application/xml data exchange formats.
+An exception handler treat the different cases and allows for catching any errors that may be triggered while executing your queries. A content negotiation is being implemented and currently supports application/json and application/xml data exchange formats.
 
 ![](resources/REST.png)
 
@@ -334,7 +334,7 @@ You will have to provide some mandatory parameters (in this case the login and t
 
 For some parameters (Type, language) default values are applied, but you may explicit a different type or language.
 
-In general, you need to identify the parameters using URIs, for your convenience aliases for the default parameters were added. You may defines any other inforamtions according to the properties defined along your test takers.
+In general, you need to identify the parameters using URIs, for your convenience aliases for the default parameters were added. You may defines any other information according to the properties defined along your test takers.
 
 The list of aliases is the following, (and if it is mandatory bit) :
 

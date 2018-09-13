@@ -113,7 +113,7 @@ define([], function(){
      */
      register : function(customInteractionHook){
        // register the Custom Interaction Hook for future
-       // instanciation/cloning...
+       // instantiation/cloning...
      },
 
     /**
@@ -206,7 +206,7 @@ define(['qtiCustomInteractionContext',
 
      /**
       * - Custom Interaction Hook API: id
-      * The unique identifier provided at instanciation time, identifying the
+      * The unique identifier provided at instantiation time, identifying the
       * Custom Interaction Hook Instance at runtime.
       */
      id : -1,
@@ -260,7 +260,7 @@ define(['qtiCustomInteractionContext',
       *
       * This method can be called multiple times, once, or not at all.
       * The response data must correspond with the baseType and cardinality
-      * of the respponse declaration referenced by the
+      * of the response declaration referenced by the
       * qti:customInteraction->responseIdentifier attribute.
       *
       * @returns {Object} A response object in the PCI JSON format.
