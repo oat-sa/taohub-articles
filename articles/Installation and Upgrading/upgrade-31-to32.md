@@ -9,7 +9,7 @@ tags:
 
 > This page aims to explain how you can upgrade tao from the version 3.1 to version 3.2
 
-## Pre requests
+## Prerequisite
 
 To start this tutorial be sure to have the version 3.1 of the tao platform.
 You can see your version at bottom left of the screen
