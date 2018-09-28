@@ -37,8 +37,67 @@ This will create a subfolder named as 'xx-XX-tao32' in the TAO root directory.
 3. Run this script to drop every .po file from the source folder to the different locale folders of each TAO extension.
 	`sudo ./pootle_export_to_tao.sh tao32 xx-XX .`
 
+Here is the script pootle_export_to_tao.sh:
+```#!/bin/bash
+if [ -z "$3" ]; then
+        echo Usage: $0 project_code locale TAO_root
+        exit
+fi
+POOTLE_PROJECT_CODE=$1
+locale=$2
+TAO_ROOT=$3
+extensions=("tao" "ltiDeliveryProvider" "taoGroups" "taoMediaManager" "taoTests" "taoCe" "taoItems" "taoOutcomeUi" "taoTestTaker" "taoDelivery" "taoQtiItem" "taoDeliveryRdf" "taoLti" "taoQtiTest" "taoClientDiagnostic" "funcAcl" "taoDacSimple" "taoResultServer" "pciSamples" "taoRevision" "qtiItemPci" "taoOpenWebItem" "taoTestLinear" "qtiItemPic" "taoEventLog" "taoBackOffice" "taoProctoring")
+
+echo Copy .po translation files from a Pootle export to a local TAO
+for i in ${!extensions[*]}; do
+#	creation mode:
+#	mkdir -p ${TAO_ROOT}/${extensions[$i]}/locales/$locale
+	if [ -d "${TAO_ROOT}/${extensions[$i]}/locales/${locale}/" ]; then
+		cp ${locale}-${POOTLE_PROJECT_CODE}/$locale/${POOTLE_PROJECT_CODE}/${extensions[$i]}/*.po ${TAO_ROOT}/${extensions[$i]}/locales/${locale}/ -v
+	else
+		echo Extension ${extensions[$i]} missing in the target folder, thus translation files for that extension won\'t be copied!
+	fi
+done
+
+echo Done!
+```
+
 4. If you aim to report all translations from your contribution while keeping all new source strings or removing old ones, you will need to merge the recent changes coming from your TAO version against the copied translation files. The second part will trigger recompilation in order to merge the latest translations into TAO.
 	`sudo ./merge_all_translations.sh xx-XX`
+
+Here is the script merge_all_translations.sh:
+```#!/bin/bash
+if [ -z "$1" ]; then
+        echo Usage: $0 locale
+        exit
+fi
+locale=$1
+extensions=("tao" "ltiDeliveryProvider" "taoGroups" "taoMediaManager" "taoTests" "taoCe" "taoItems" "taoOutcomeUi" "taoTestTaker" "taoDelivery" "taoQtiItem" "taoDeliveryRdf" "taoLti" "taoQtiTest" "taoClientDiagnostic" "funcAcl" "taoDacSimple" "taoResultServer" "pciSamples" "taoRevision" "qtiItemPci" "taoDeliveryRdf" "taoOpenWebItem" "taoTestLinear" "qtiItemPic" "taoEventLog" "taoOutcomeUi" "taoBackOffice" "taoProctoring")
+
+echo Step 1/3 -- Update of all TAO extensions with the latest source strings
+for i in ${!extensions[*]}; do
+	if [ -d "${extensions[$i]}/locales/${locale}/" ]; then
+        echo Update \'${extensions[$i]}\' extension with the latest source strings:
+        sudo -u www-data php tao/scripts/taoTranslate.php -e ${extensions[$i]} -a update -l $locale
+    else
+		echo Skipped update for extension \'${extensions[$i]}\', as the locale folder is missing.
+    fi
+done
+
+echo Step 2/3 -- Compilation of all TAO extensions
+for i in ${!extensions[*]}; do
+	if [ -d "${extensions[$i]}/locales/${locale}/" ]; then
+        echo Compile .po files for \'${extensions[$i]}\' extension:
+        sudo -u www-data php tao/scripts/taoTranslate.php -e ${extensions[$i]} -a compile -l $locale
+    else
+		echo Skipped compilation for extension \'${extensions[$i]}\', as the locale folder is missing.
+    fi
+done
+echo Step 3/3 -- TAO updated to refresh all client side translations
+sudo -u www-data php tao/scripts/taoUpdate.php
+
+exit 0
+```
 
    _Notes:_
    - In case some translations need reworking, you may edit the translation files manually in the folder tree 'xx-XX-tao32/xx-XX/tao32/' then replay step 3 as many times as required.
