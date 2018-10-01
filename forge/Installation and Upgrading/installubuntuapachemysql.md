@@ -81,7 +81,7 @@ Now, we create a virtual host named *taoplatform*. Its *DocumentRoot* is */var/w
 NameVirtualHost 127.0.0.1:80
 ServerName localhost
 
-<VirtualHost 127.0.0.1:80>
+<VirtualHost *:80>
 	ServerAdmin webmaster@taoplatform
 	ServerName taoplatform
 	DocumentRoot /var/www/taoplatform    
