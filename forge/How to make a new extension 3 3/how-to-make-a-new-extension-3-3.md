@@ -1,7 +1,7 @@
 <!--
 parent: 'TAO 3 1'
 created_at: '2015-06-18 13:17:42'
-updated_at: '2018-10-03 11:59:13'
+updated_at: '2018-10-10 08:48:53'
 authors:
     - 'Christophe Garcia'
     - 'Martin Nicholson'
@@ -23,21 +23,21 @@ tags:
 1. Log into TAO BackOffice with your admin account.
 2. Go to "Settings" (upper right corner) > "Extensions Manager".
 3. Click on "create new" to create your new extension.
-4. Fill out the form and call your new extension `taoDocs`.
+4. Fill out the form and call your new extension `taoExample`.
    (If you wish, you can select some Samples to generate extra structure).
-5. Return to the Extensions Manager, refresh the page, select the checkbox for `taoDocs`, and install it.
-6. In your IDE, go to your tao project root folder and verify the folder `taoDocs` now exists.
-7. Go into the `taoDocs` folder, you will see a standard extension structure.
-8. Go into the `controller` folder, open `TaoDocs.php`. This is a simple controller example.
+5. Return to the Extensions Manager, refresh the page, select the checkbox for `taoExample`, and install it.
+6. In your IDE, go to your tao project root folder and verify the folder `taoExample` now exists.
+7. Go into the `taoExample` folder, you will see a standard extension structure.
+8. Go into the `controller` folder, open `TaoExample.php`. This is a simple controller example.
 
 ## Import the extension
 
 Before the extension can be imported, composer needs to know where to find it. One way we can achieve this is by placing the code in a git repo. It will be easiest if we push this repo to GitHub and then tell composer the address of that repo.
 
-1. Create a new repo in your GitHub account with a sensible name, e.g. `taoDocs`.
-2. In your local `taoDocs` folder, run `git init` to start a new repo just for this extension.
-3. Edit `composer.json` in the root of your extension. Change the name field from `oat/taoDocs` to `yourgithubusername/taoDocs`.
-4. Add the GitHub repo as a remote to your local repo. For example, `git remote add origin https://github.com/yourgithubusername/taoDocs.git`.
+1. Create a new repo in your GitHub account with a sensible name, e.g. `taoExample`.
+2. In your local `taoExample` folder, run `git init` to start a new repo just for this extension.
+3. Edit `composer.json` in the root of your extension. Change the name field from `oat/taoExample` to `yourgithubusername/taoExample`.
+4. Add the GitHub repo as a remote to your local repo. For example, `git remote add origin https://github.com/yourgithubusername/taoExample.git`.
 5. Run `git add .` and `git commit` in your local repo.
 6. Push the commit to GitHub e.g. `git push -u origin master`.
 7. Edit the other `composer.json` at the root level of your TAO installation.
@@ -48,7 +48,7 @@ Before the extension can be imported, composer needs to know where to find it. O
         "repositories": [
             {
                 "type": "git",
-                "url": "https://github.com/yourgithubusername/taoDocs.git"
+                "url": "https://github.com/yourgithubusername/taoExample.git"
             }
         ],
     ```
@@ -58,13 +58,13 @@ Before the extension can be imported, composer needs to know where to find it. O
     ```json
         "require" : {
             // long list of other repos,
-            "yourgithubusername/taoDocs" : "dev-master"
+            "yourgithubusername/taoExample" : "dev-master"
         }
     ```
 8. You are now finally ready to run `composer update` which should find your package on Github and pull it in.
 9. Refresh your open instance of TAO.
 
-A `taoDocs` section should have appeared in the top main menu. Click on it and look at your new empty extension.
+A `taoExample` section should have appeared in the top main menu. Click on it and look at your new empty extension.
 
 ![basic extension](resources/tao_extension_0.png)
 
@@ -72,12 +72,12 @@ A `taoDocs` section should have appeared in the top main menu. Click on it and l
 
 ### Step 1: “Hello World” from a template
 
-To create your first controller, go into the `taoDocs/controller` folder and create a file named `Greeter.php`. Create a class like so:
+To create your first controller, go into the `taoExample/controller` folder and create a file named `Greeter.php`. Create a class like so:
 
 ```php
 <?php
 
-namespace oat\taoDocs\controller;
+namespace oat\taoExample\controller;
 
 class Greeter extends \tao_actions_commonModule {
     /**
@@ -108,7 +108,7 @@ Create the template file `myName.tpl` with the following content:
 </div>
 ```
 
-To test this action visit `/taoDocs/Greeter/myName`.
+To test this action visit `/taoExample/Greeter/myName`.
 
 #### Adding a link to a section on the extension's horizontal menu
 
@@ -117,7 +117,7 @@ Return to the `controller` folder and open `structures.xml`. This important file
 Inside the `<sections>` tag, add this new section:
 
 ```xml
-    <section id="taoDocs_template" name="Hello from .tpl" url="/taoDocs/Greeter/myName" />
+    <section id="taoExample_template" name="Hello from .tpl" url="/taoExample/Greeter/myName" />
 ```
 
 And save.
@@ -135,7 +135,7 @@ Refresh your page and you should see:
 Reopen `structures.xml` and add the line `<icon id="icon-folder" />` after the `<description>` tag, like this:
 
 ```xml
-    <structure id="taoDocs_main" name="taoDocs" level="15" group="main">
+    <structure id="taoExample_main" name="taoExample" level="15" group="main">
         <description />
         <icon id="icon-folder"/>
         <sections>
@@ -197,11 +197,11 @@ Empty cache and refresh. More icons to choose from here: http://style.taotesting
 ```xml
     <sections>
         ...
-        <section id="taoDocs_pilots" name="Hello Pilots" url="/taoDocs/Greeter/getPilotsList" />
+        <section id="taoExample_pilots" name="Hello Pilots" url="/taoExample/Greeter/getPilotsList" />
     </sections>
 ```
 
-Empty cache and refresh; you should see a new tab in the `taoDocs` menu.
+Empty cache and refresh; you should see a new tab in the `taoExample` menu.
 
 ![json output](resources/tao_extension_2b.png)
 
@@ -214,12 +214,12 @@ The `getPilotsList` JSON-outputting action we created in the controller will be 
 Open `structures.xml` again and add a `<trees>` tag inside your final `<section>` tag:
 
 ```xml
-    <section id="taoDocs_pilots" name="Hello Pilots" url="/taoDocs/Greeter/getPilotsList">
+    <section id="taoExample_pilots" name="Hello Pilots" url="/taoExample/Greeter/getPilotsList">
         <trees>
             <tree name="Pilots"
                 className="Pilots"
                 rootNode="http://www.tao.lu/Ontologies/TAOGroup.rdf#Group"
-                dataUrl="/taoDocs/Greeter/getPilotsList"
+                dataUrl="/taoExample/Greeter/getPilotsList"
             />
         </trees>
     </section>
@@ -265,15 +265,15 @@ We are going to add action buttons to the left hand pane, which can launch actio
 2. Next, add the corresponding actions to `structures.xml`:
 
 ```xml
-    <section id="taoDocs_pilots" name="Hello Pilots" url="/taoDocs/Greeter/getPilotsList">
+    <section id="taoExample_pilots" name="Hello Pilots" url="/taoExample/Greeter/getPilotsList">
         <trees>
             ...
         </trees>
         <actions>
-            <action id="vader" name="Vader" url="/taoDocs/Greeter/vader" group="tree" context="resource">
+            <action id="vader" name="Vader" url="/taoExample/Greeter/vader" group="tree" context="resource">
                 <icon id="icon-user"/>
             </action>
-            <action id="obiwan" name="Obi-wan" url="/taoDocs/Greeter/obiwan" group="tree" context="resource">
+            <action id="obiwan" name="Obi-wan" url="/taoExample/Greeter/obiwan" group="tree" context="resource">
                 <icon id="icon-user"/>
             </action>
         </actions>
