@@ -66,7 +66,7 @@ Before the extension can be imported, composer needs to know where to find it. O
 
 A `taoExample` section should have appeared in the top main menu. Click on it and look at your new empty extension.
 
-![basic extension](resources/tao_extension_0.png)
+![basic extension](resources/taoExample_step0.png)
 
 ## Begin editing your extension
 
@@ -124,11 +124,11 @@ And save.
 
 #### Viewing your work so far
 
-In TAO, go to Tools ![empty cache](../resources/tools.png) > Scripts, and click on "Empty cache".
+In TAO, go to Tools ![empty cache](resources/tools.png) > Scripts, and click on "Empty cache".
 
 Refresh your page and you should see:
 
-![hello from a template](resources/tao_extension_1.png)
+![hello from a template](resources/taoExample_step1.png)
 
 #### Changing the extension's icon
 
@@ -144,7 +144,7 @@ Reopen `structures.xml` and add the line `<icon id="icon-folder" />` after the `
     </structure>
 ```
 
-![extension with custom icon](resources/tao_extension_icon.png)
+![extension with custom icon](resources/taoExample_icon.png)
 
 Empty cache and refresh. More icons to choose from here: http://style.taotesting.com/icon-listing/
 
@@ -203,7 +203,7 @@ Empty cache and refresh. More icons to choose from here: http://style.taotesting
 
 Empty cache and refresh; you should see a new tab in the `taoExample` menu.
 
-![json output](resources/tao_extension_2b.png)
+![json output](resources/taoExample_step2b.png)
 
 For the moment, this section only outputs the JSON string we created. We'll turn that into something nicer in the next step.
 
@@ -227,7 +227,7 @@ Open `structures.xml` again and add a `<trees>` tag inside your final `<section>
 
 Empty cache, refresh TAO, and you should see the following:
 
-![node tree in tao](resources/tao_extension_3a.png)
+![node tree in tao](resources/taoExample_step3a.png)
 
  If you inspect the `<li>` elements in your browser you will see that they possess the id and class we specified in our `getPilotsList` action, and the text content is what we built there.
 
@@ -282,4 +282,4 @@ We are going to add action buttons to the left hand pane, which can launch actio
 
 3. Empty cache, refresh, and enjoy playing with your completed extension!
 
-![final output](resources/tao_extension_3b.png)
+![final output](resources/taoExample_step3b.png)
