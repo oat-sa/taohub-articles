@@ -40,4 +40,4 @@ Test variables have a call_id_test value, a null call_id_item and a null item.
 Item variables have a call_id_item value and a null call_id_test. The item column contains the item uri so you can then retrieve items information from the statements table. The test columns contains the item compiled directory.
 
 The value column contains the php serialized variable. So you will retrieve some information about the item like the number of attempt, the response given by the test taker and the score.
-These value are base64 encoded in the php serialiwed variable.
+These value are base64 encoded in the php serialised variable.

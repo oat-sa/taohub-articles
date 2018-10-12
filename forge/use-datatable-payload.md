@@ -16,11 +16,7 @@ DatatablePayload supports multiple filtering and easy to use.
 Basic usage:
 ------------
 
--   Create concrete class which extends *oat\<br/>
-tao\<br/>
-model\<br/>
-datatable\<br/>
-AbstractDatatablePayload*:<br/>
+-   Create concrete class which extends *oat\tao\model\datatable\AbstractDatatablePayload*:
 
     https://github.com/oat-sa/tao-core/blob/develop/models/classes/datatable/implementation/AbstractDatatablePayload.php
 
@@ -28,7 +24,7 @@ AbstractDatatablePayload*:<br/>
 
 -   Two abstract methods should be implemented:
 
-1\. *AbstractDatatablePayload::getPropertiesMap()* - list of properties and their aliases (practically this is the list of columns represented in datatable).<br/>
+1\. *AbstractDatatablePayload::getPropertiesMap()* - list of properties and their aliases (practically this is the list of columns represented in datatable).
 
 Example:
 
@@ -41,7 +37,7 @@ Example:
         ];
     }
 
-2\. *AbstractDatatablePayload::getType()* - Class uri to search.<br/>
+2\. *AbstractDatatablePayload::getType()* - Class uri to search.
 
 Example:
 

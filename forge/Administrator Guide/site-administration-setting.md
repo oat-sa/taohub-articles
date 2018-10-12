@@ -11,7 +11,7 @@ tags:
 Site Administration Settings
 ============================
 
-The purpose of this section is to describe the settings needed to integrate the TAO instance in your infrastructure.
+This section describes the settings needed to integrate the TAO instance in your infrastructure.
 
 Most of these settings can be set into the main configuration file located at:
 
@@ -40,7 +40,7 @@ or at
 
 #### HTTP Authentication
 
-You can add an HTTP Authentication to protect your TAO instance.<br/>
+You can add an HTTP Authentication to protect your TAO instance.
 
 **The following example outlines how to establish a Basic HTTP Authentication to protect all the TAO instances with one account.**
 
@@ -53,10 +53,10 @@ You can add an HTTP Authentication to protect your TAO instance.<br/>
     AuthUserFile "/var/opt/.htpassword"
     Require valid-user
 
-\# Create the password file using the command listed below. You can create it in the directory you want but consider these 2 security restrictions:<br/>
+\# Create the password file using the command listed below. You can create it in the directory you want but consider these 2 security restrictions:
 
-• the directoy (here /var/opt) must not be accessible via HTTP\
-• the apache user (usualy www-data) can read it, bot the other cannot
+• the directory (here /var/opt) must not be accessible via HTTP\
+• the apache user (usually www-data) can read it, bot the other cannot
 
     htpasswd -c login password
 

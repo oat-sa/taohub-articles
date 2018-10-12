@@ -5,7 +5,7 @@ tags: ["Style Guide:Inline Elements"]
 
 # Inline Elements
 
-> Element occupiying only the space bounded by the tags that define this element
+> Element occupying only the space bounded by the tags that define this element
 
 ## Links
   
@@ -13,7 +13,7 @@ tags: ["Style Guide:Inline Elements"]
 
 ## Bold Text</h2>
 
-While sematically **bold text** should be done width `<strong>` elements, the same decoration can be achieved with `<b>` or `.b` and `.strong`.
+While semantically **bold text** should be done width `<strong>` elements, the same decoration can be achieved with `<b>` or `.b` and `.strong`.
   
 ## Italic text</h2>
   

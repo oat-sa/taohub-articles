@@ -39,8 +39,8 @@ For instance, if you want the *taoCoding* Extension to be shown in the TAO GUI, 
 Some information about this command:
 
 -   **-v** is the verbose mode *<span class="boolean"></span>*
--   **-u** is the TAO backoffice user who will connect to the TAO API to acquire Database access *<span class="string"></span>*
--   **-p** is the TAO backoffice password *<span class="string"></span>*
+-   **-u** is the TAO Back Office user who will connect to the TAO API to acquire Database access *<span class="string"></span>*
+-   **-p** is the TAO Back Office password *<span class="string"></span>*
 -   **-a** is the action to perform. In this case, set a configuration parameter to a given value *<span class="string"></span>*
 -   **-cP** is the configuration parameter to change *<span class="string"></span>*
 -   **-cV** is the configuration value *<span class="boolean"></span>*
@@ -64,8 +64,8 @@ You now have to invoke the *install* action of the *TAOExtensions* script to act
 where:
 
 -   **-v** is the verbose mode *<span class="boolean"></span>*
--   **-u** is the TAO backoffice user who will connect to the TAO API to acquire Database access *<span class="string"></span>*
--   **-p** is the TAO backoffice password *<span class="string"></span>*
+-   **-u** is the TAO Back Office user who will connect to the TAO API to acquire Database access *<span class="string"></span>*
+-   **-p** is the TAO Back Office password *<span class="string"></span>*
 -   **-a** is the action to perform. In this situation, install an extension *<span class="string"></span>*
 -   **-e** is the identifier of the extension to install *<span class="string"></span>*
 

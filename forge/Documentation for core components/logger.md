@@ -41,7 +41,8 @@ The decision which events should be logged will be taken by using either:
 
 -   **threshold**: indicates the minimum severity an event has to have in order to be logged using this appender
 -   **mask**: defines a bit mask, allowing a fine grained control over which events are logged, with the least significant
-    bit `(2^0)` corresponding to to the *TRACE severity*, and the most significant bit `(2^5)` corresponding to to the *FATAL severity*.<br>*Example*: To log everything except *TRACE* and *WARNING*, one would use `110110 = 32+16+4+2 = 54`
+    bit `(2^0)` corresponding to to the *TRACE severity*, and the most significant bit `(2^5)` corresponding to to the *FATAL severity*.
+    *Example*: To log everything except *TRACE* and *WARNING*, one would use `110110 = 32+16+4+2 = 54`
 -   **tag**: an array of tags of which ONE tag must be used in the logitem
 
 ### SingleFileAppender
@@ -58,7 +59,7 @@ Upon reaching `max_file_size`, the first half of the log file will be deleted. D
 - `format` - the format of the log entry
 - `max_file_size` - maximum size a single logfile can reach
 - `directory` - directory to which logfiles will be archived to, once they reached max_file_size
-- `compression` - the compression algorithm to use for archived files, defaults to `zip` only alternativ at the moment is `none`
+- `compression` - the compression algorithm to use for archived files, defaults to `zip` only alternative at the moment is `none`
 
 Upon reaching `max_file_size`, the log file will be appended the current date and moved to the directory indicated by
 the configuration parameter `directory` if present or the same directory as the logfile if absent. If this file already exists

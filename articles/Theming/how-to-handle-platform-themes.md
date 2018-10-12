@@ -7,7 +7,7 @@ skip: true
 
 ## Definition
 
-A platform theme is a set of stylesheets, templates, images etc. to modify the standard look and feel of the TAO platform, most often to apply a customer's branding. It for now is limited to header, footer, action bars and tabs. Although technically feasible changes to the appearance of items are explicitely excluded. For all item related modifications item themes must be used.
+A platform theme is a set of stylesheets, templates, images etc. to modify the standard look and feel of the TAO platform, most often to apply a customer's branding. It for now is limited to header, footer, action bars and tabs. Although technically feasible changes to the appearance of items are explicitly excluded. For all item related modifications item themes must be used.
 
 ## Basic Setup
 
@@ -71,7 +71,7 @@ $options = [
     'extensionId' => 'taoSomething',
     'logoUrl' => 'http://example.com/foo.png',
     'link' => 'http://example.com',
-    'message' => 'Tao Platform',
+    'message' => 'TAO Platform',
 
     // if stylesheet === ConfigurablePlatformTheme::DEFAULT_PATH
     'stylesheet' => 'http://domain/taoSomething/views/css/themes/platform/default-theme/theme.css',

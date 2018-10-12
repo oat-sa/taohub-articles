@@ -38,11 +38,11 @@ These roles are abstract and should never be assigned directly to an user, they 
 
 
 
--   **Back Office**: This is the base role for all roles that generate or manage the content. Grants access to the back office menu.
+-   **Back Office**: This is the base role for all roles that generate or manage the content. Grants access to the Back Office menu.
 
 
 
--   **Front Office**: This is the base role for all roles that interact with content that was prepared in the back office
+-   **Front Office**: This is the base role for all roles that interact with content that was prepared in the Back Office.
 
 Front Office
 ------------
@@ -60,7 +60,7 @@ Back Office
 
 ![](../resources/back_office_roles.png)
 
--   **<EXTENSION> Manager** Every extension has by default its own manager that gives full access to this extension. This includes the meta-extension Tao.
+-   **<EXTENSION> Manager** Every extension has by default its own manager that gives full access to this extension. This includes the meta-extension TAO.
 
 
 

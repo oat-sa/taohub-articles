@@ -27,17 +27,17 @@ Step-2: Create locale folder and Necessary files for ‘tao’ extension (which 
 
 Create similar folder and files for all other extensions (not all extensions are listed here)
 
-php taoTranslate.php -v -a=create -e=filemanager -l=hi-IN -ll=“Hindi”<br/>
+php taoTranslate.php -v -a=create -e=filemanager -l=hi-IN -ll=“Hindi”
 
-php taoTranslate.php -v -a=create -e=ltiDeliveryProvider -l=hi-IN -ll=“Hindi”<br/>
+php taoTranslate.php -v -a=create -e=ltiDeliveryProvider -l=hi-IN -ll=“Hindi”
 
-php taoTranslate.php -v -a=create -e=taoItems -l=hi-IN -ll=“Hindi”<br/>
+php taoTranslate.php -v -a=create -e=taoItems -l=hi-IN -ll=“Hindi”
 
-php taoTranslate.php -v -a=create -e=taoQtiItem -l=hi-IN -ll=“Hindi”<br/>
+php taoTranslate.php -v -a=create -e=taoQtiItem -l=hi-IN -ll=“Hindi”
 
-php taoTranslate.php -v -a=create -e=taoQtiTest -l=hi-IN -ll=“Hindi”<br/>
+php taoTranslate.php -v -a=create -e=taoQtiTest -l=hi-IN -ll=“Hindi”
 
-php taoTranslate.php -v -a=create -e=taoQtiCommon -l=hi-IN -ll=“Hindi”<br/>
+php taoTranslate.php -v -a=create -e=taoQtiCommon -l=hi-IN -ll=“Hindi”
 
 php taoTranslate.php -v -a=create -e=taoTests -l=hi-IN -ll=“Hindi”
 

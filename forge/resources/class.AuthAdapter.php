@@ -1,33 +1,33 @@
 <?php
-/**  
+/**
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; under version 2
  * of the License (non-upgradable).
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- * 
+ *
  * Copyright (c) 2013 (original work) Open Assessment Technologies SA (under the project TAO-PRODUCT);
- *               
- * 
+ *
+ *
  */
 
 use oat\authLdap\model\LdapAdapter;
 
 /**
- * Authentication adapter interface to be implemented by authentication methodes
+ * Authentication adapter interface to be implemented by authentication methods
  *
  * @access public
  * @author Joel Bout, <joel@taotesting.com>
  * @package generis
- 
+
  */
 class core_kernel_users_AuthAdapter
     extends LdapAdapter
@@ -38,7 +38,7 @@ class core_kernel_users_AuthAdapter
 
     /**
      * Returns the hashing algorithm defined in generis configuration
-     * 
+     *
      * @return helpers_PasswordHash
      */
     public static function getPasswordHash() {
@@ -46,10 +46,10 @@ class core_kernel_users_AuthAdapter
             defined('PASSWORD_HASH_ALGORITHM') ? PASSWORD_HASH_ALGORITHM : self::LEGACY_ALGORITHM,
             defined('PASSWORD_HASH_SALT_LENGTH') ? PASSWORD_HASH_SALT_LENGTH : self::LEGACY_SALT_LENGTH
         );
-    }    
-	
+    }
+
 	/**
-	 * 
+	 *
 	 * @param string $username
 	 * @param string $password
 	 */

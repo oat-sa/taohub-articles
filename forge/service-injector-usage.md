@@ -12,22 +12,22 @@ TAO Service injector
 About
 -----
 
-TAO Service Injector is th way to integrate any dependencies container.<br/>
+TAO Service Injector is th way to integrate any dependencies container.
 
-It must implement Container interop interface.<br/>
+It must implement Container interop interface.
 
-TAO provide configuration for generis Service Manager and Zend Framework Service Locator.<br/>
+TAO provide configuration for generis Service Manager and Zend Framework Service Locator.
 
 As well it’s possible to integrate others libraries.
 
 Usage :
 -------
 
-Service injector is acccessible form controller using getServiceInjector since tao-core 7.5.0 and generis 3.0.0.
+Service injector is accessible form controller using getServiceInjector since tao-core 7.5.0 and generis 3.0.0.
 
-Sercice injector implement [container interop interface](https://github.com/container-interop/container-interop).
+Service injector implement [container interop interface](https://github.com/container-interop/container-interop).
 
-**example : in your controler action**
+**example : in your controller action**
 
     if($this->getServiceInjector()->has('myService')) {
         $myService = $this->getServiceInjector()->get('myService');
@@ -35,22 +35,14 @@ Sercice injector implement [container interop interface](https://github.com/cont
 
 ### get service injector in your objects :
 
-you must implement <br/>
-\oat\<br/>
-oatbox\<br/>
-service\<br/>
-ServiceInjectorAwareInterface and use <br/>
-\oat\<br/>
-oatbox\<br/>
-service\<br/>
-ServiceInjectorAwareTrait (or implement interface methods) AND instanciate by the service injector.
+you must implement \oat\oatbox\service\ServiceInjectorAwareInterface and use \oat\oatbox\service\ServiceInjectorAwareTrait (or implement interface methods) AND instanciate by the service injector.
 
 Add your own dependencies using Zend ServiceLocator :
 -----------------------------------------------------
 
 ### for a new extension :
 
-An helper is available to overload tao configuration :
+An helper is available to overload TAO configuration :
 
 **1 . Create your install script :**
 
@@ -124,9 +116,8 @@ see [Service Locator Usage](https://framework.zend.com/manual/2.4/en/modules/zen
 
 **reminder :** your container must implement [container interop interface](https://github.com/container-interop/container-interop).
 
-\#<br/>
-#<br/>
-# Update an existing extension :
+
+### Update an existing extension :
 
 In your update class :
 

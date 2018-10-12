@@ -28,8 +28,7 @@ We can see a sample such as the field userMail.
 
 
 
-Step 1 - add the following code under <br/>
-#userMail and note that is is a duplicate (with only the about attribute changed)
+Step 1 - add the following code under #userMail and note that is is a duplicate (with only the about attribute changed)
 ========================================================================================================================
 
 

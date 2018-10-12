@@ -23,7 +23,7 @@ Lexicon
 Files structure
 ---------------
 
-The source of the Qti Creator is located in `{tao_root}/taoQtiItem/views/js/qtiCreator/test/renderer/`.<br/>
+The source of the Qti Creator is located in `{tao_root}/taoQtiItem/views/js/qtiCreator/test/renderer/`.
 
 Any later reference of “qtiCreator/” in this wiki page means `{tao_root}/taoQtiItem/views/js/qtiCreator/`.
 
@@ -32,9 +32,9 @@ Any later reference of “qtiCreator/” in this wiki page means `{tao_root}/tao
 -   **qtiCreator/editor** : lib for the main editor view
 -   **qtiCreator/helper** : helper for the main editor view
 -   **qtiCreator/lib** : third party js libraries
--   **qtiCreator/model** : the model of qti element that will be used to reprent a qti item and all its composing element, it extends the qtiItem/core one
+-   **qtiCreator/model** : the model of qti element that will be used to represent a qti item and all its composing element, it extends the qtiItem/core one
 -   **qtiCreator/preview** : code specific for the preview mode
--   **qtiCreator/renderers** : declare the renderer for each individual qti element : the responsibility of the renderer is limited to setting the html template and the proper instanciation of the element creator widget
+-   **qtiCreator/renderers** : declare the renderer for each individual qti element : the responsibility of the renderer is limited to setting the html template and the proper instantiation of the element creator widget
 -   **qtiCreator/test** : all js unit test are located here
 -   **qtiCreator/tpl** : the template directory
 -   **qtiCreator/widgets** : contains the widgets and their states which define all behaviour of the qti element editor
@@ -44,7 +44,7 @@ Tutorial : implement a new qti item creator widget
 
 ### step 0: define the behaviour you want to implement
 
-First, please have a look to the existing implementations so you can have a better feel of expecting behaviour.<br/>
+First, please have a look to the existing implementations so you can have a better feel of expecting behaviour.
 
 The test can be found here: `{tao_root}/taoQtiItem/views/js/qtiCreator/test/renderer/`
 
@@ -67,31 +67,31 @@ In the answer state:
 
 After integration, your interaction widget (and form) will look like this:
 
-Sleep state:<br/>
+Sleep state:
 
 ![](../resources/item-creator-1-main.png)
 
-Question state:<br/>
+Question state:
 
 ![](../resources/item-creator-2-question-mode.png)
 
-Choice state:<br/>
+Choice state:
 
 ![](../resources/item-creator-3-choice-mode.png)
 
-Answer state:<br/>
+Answer state:
 
 ![](../resources/item-creator-4-answer-mode.png)
 
 The template will be available in the style-guide.
 
-Once the behaviour clrealy defined, we can get started !
+Once the behaviour clearly defined, we can get started !
 
 ### step 1: extending the qti item model for authoring
 
 **Location** : `{tao_root}/taoQtiItem/views/js/qtiCreator/model`
 
-It defines the qti element classes for authoring by extending the base qti item classes from `{tao_root}/taoQtiItem/views/js/qtiItem/core`.<br/>
+It defines the qti element classes for authoring by extending the base qti item classes from `{tao_root}/taoQtiItem/views/js/qtiItem/core`.
 
 It adds some additional methods for authoring purpose (createChoice, createElements, etc) and set reasonable default attributes values.
 
@@ -204,7 +204,7 @@ The goal is to reuse what has been done for the commonRenderer, so for the choic
         return CreatorChoiceInteraction;
     });
 
-It basically uses everything defined in the commonRenderer but overwrite the render method.<br/>
+It basically uses everything defined in the commonRenderer but overwrite the render method.
 
 The render method here just builds the choice interaction widget. Presentation of qti creator widgets will be detailed in a later section.
 
@@ -239,21 +239,21 @@ For a creator choice renderer, we are doing the same : loading its commonRendere
 
 ### step 3 : define the widget and its states
 
-**location** : `taoQtiItem/views/js/qtiCreator/renderers`<br/>
+**location** : `taoQtiItem/views/js/qtiCreator/renderers`
 
-Because of the complexity of the authoring widgets, it would be difficult to manage everything in a single render file like we are doing in the CommonRenderers. Instead everything is managed by qti creator Widgets. The behaviour of every widgets change according to their states. All interactions and choices share the same set of states.<br/>
+Because of the complexity of the authoring widgets, it would be difficult to manage everything in a single render file like we are doing in the CommonRenderers. Instead everything is managed by qti creator Widgets. The behaviour of every widgets change according to their states. All interactions and choices share the same set of states.
 
 This is to ensure behaviour consistency across all interactions and other qti elements implementations and decrease overall complexity.
 
 #### widget
 
-The widget define the common structure for the qti element that is being edited.<br/>
+The widget define the common structure for the qti element that is being edited.
 
 The stack of states will bring and enrich the behaviour as needed.
 
-Instanciation and usage:<br/>
+Instantiation and usage:
 
-A widget is only instanciated in the qti element renderer (see previous “renderer declaration section”)
+A widget is only instantiated in the qti element renderer (see previous “renderer declaration section”)
 
 Definition
 
@@ -279,9 +279,9 @@ Let’s start with an example:
         return ChoiceInteractionWidget;
     });
 
-Here we are creating the choice interaction creator widget by extending the base “qtiCreator/widgets/interactions/Widget” one.<br/>
+Here we are creating the choice interaction creator widget by extending the base “qtiCreator/widgets/interactions/Widget” one.
 
-Upon instanciation, the initCreator() method will be called. Variables and default behaviours can be defined in the initCreator() method. Please note here that the parent Widget.initCreator() is also called and the registerStates(states) is absolutely mendatory. After instanciation, the state of the widget will initially be set to “sleep”.<br/>
+Upon instantiation, the initCreator() method will be called. Variables and default behaviours can be defined in the initCreator() method. Please note here that the parent Widget.initCreator() is also called and the registerStates(states) is absolutely mandatory. After instantiation, the state of the widget will initially be set to “sleep”.
 
 The call sequence is thus this:
 
@@ -291,19 +291,19 @@ From here, all behaviour will be managed by the different states that have been 
 
 #### states
 
-The states are defined as follow.<br/>
+The states are defined as follow.
 
 ![](../resources/taoQtiCreatorStates.png)
 
-Developer note : some states are common to all widgets (sleep, deleting, active, moving). They are marked in blue-gray in the diagram above. You usually don’t need to change anything in those states.<br/>
+Developer note : some states are common to all widgets (sleep, deleting, active, moving). They are marked in blue-gray in the diagram above. You usually don’t need to change anything in those states.
 
-However, for every interaction widget, you have to implement the question at least, plus the states choice, answer, correct and map states if applicable (they are marked in orange-yellow in the diagram). Please refer to an existing implementation as an example to implement this.<br/>
+However, for every interaction widget, you have to implement the question at least, plus the states choice, answer, correct and map states if applicable (they are marked in orange-yellow in the diagram). Please refer to an existing implementation as an example to implement this.
 
 For an interaction where a response declaration is not required (such as mediaInteraction or uploadInteraction), there is no need to define an answer state.
 
-State hierarchy :<br/>
+State hierarchy :
 
-The states are hierachical. When you are in the question state, you will also inherit the behaviour of the active state. When you are editing a response in the correct state, you will inherit the behaviour of both the active and answer states. The following diagram illustrates a stack of states when an interaciton or a choice is in the correct state.<br/>
+The states are hierarchical. When you are in the question state, you will also inherit the behaviour of the active state. When you are editing a response in the correct state, you will inherit the behaviour of both the active and answer states. The following diagram illustrates a stack of states when an interaction or a choice is in the correct state.
 
 ![](../resources/taoQtiCreatorStatesStacks.png)
 
@@ -322,7 +322,7 @@ There are 3 ways to define a state for a qti creator widget. All of them must be
         });
     });
 
-2\. Define a state from another state, without extending it. Useful when you want to reuse everything defined in the parent state but just need to overwrite a few methods.<br/>
+2\. Define a state from another state, without extending it. Useful when you want to reuse everything defined in the parent state but just need to overwrite a few methods.
 
 In the example below, the generic question state of the abstract block interaction is being extended to create the question state of the choice interaction. Only the initForm() method has overwritten.
 
@@ -364,11 +364,11 @@ In the example below, the generic question state of the abstract block interacti
         return ChoiceInteractionStateQuestion;
     });
 
-According to your need (whever you need to define new behaviours from the parent or not), the second or third method should be used. Doing this will ensure an overall consistency accros all widget and states!
+According to your need (whether you need to define new behaviours from the parent or not), the second or third method should be used. Doing this will ensure an overall consistency across all widget and states!
 
 #### variable access in your states
 
-Upon instanciation, a state is given the reference of the widget it represents.<br/>
+Upon instantiation, a state is given the reference of the widget it represents.
 
 You can access anything you want in the state in this.widget:
 
@@ -394,7 +394,7 @@ You can access anything you want in the state in this.widget:
 
 ### step 4 : create the option forms
 
-The widgets in the center panel of the item creator allow editing the item, interaction and choice contents. Some properties can also be edited (pin/shuffle).<br/>
+The widgets in the center panel of the item creator allow editing the item, interaction and choice contents. Some properties can also be edited (pin/shuffle).
 
 However, most of the meta, options are to be positioned in the right side bar in an appropriate form.
 
@@ -404,9 +404,9 @@ However, most of the meta, options are to be positioned in the right side bar in
 
 #### define the template
 
-Using the qti 2.1 standard, please make note of all properties required for the qti element you are working on.<br/>
+Using the qti 2.1 standard, please make note of all properties required for the qti element you are working on.
 
-Then use either the style guide or an existing example to create your html template. Location: qtiCreator/tpl/forms/<br/>
+Then use either the style guide or an existing example to create your html template. Location: qtiCreator/tpl/forms/
 
 You may note the use of specific validator to easily control the input value : in the following example, the identifier must not be empty (meaning it is required), and must also be a string that match the qti identifier format and must also not be already used.
 
@@ -420,9 +420,9 @@ You may note the use of specific validator to easily control the input value : i
 
 #### Append the form to the DOM
 
-Within a state, you have access to the <br/>
-$form by this.widget.<br/>
-$form property, which is the container of the form.<br/>
+Within a state, you have access to the 
+$form by this.widget.
+$form property, which is the container of the form.
 
 After you leave the state, this container will automatically be emptied. You only have to worry about its initialization as in the example below:
 
@@ -432,22 +432,22 @@ After you leave the state, this container will automatically be emptied. You onl
                 identifier:_widget.element.id()
             }));
 
-This exemple comes from /qtiCreator/widgets/choices/simpleChoice/states/Choice.js
+This example comes from /qtiCreator/widgets/choices/simpleChoice/states/Choice.js
 
 #### Init the data binding
 
-You need to use taoQtiItem/qtiCreator/widgets/helpers/formElement to bind modification of any declared element of your form to callback function.<br/>
+You need to use taoQtiItem/qtiCreator/widgets/helpers/formElement to bind modification of any declared element of your form to callback function.
 
-This callback will only be executed when the input is valid. To set your form element validation, please have a look on the exemple of the “define the template” section
+This callback will only be executed when the input is valid. To set your form element validation, please have a look on the example of the “define the template” section
 
 
             formElement.initDataBinding(this.widget.$form, this.widget.element, {
                 identifier : identifierHelper.updateChoiceIdentifier
             });
 
-Here, we want the callback identifierHelper.updateChoiceIdentifier to be executed when the form element with [name=identifier] changes and the value of which is valid.<br/>
+Here, we want the callback identifierHelper.updateChoiceIdentifier to be executed when the form element with [name=identifier] changes and the value of which is valid.
 
-You may want to reuse this callback whenever a choice identifier is being edited to sync its values with response declarations.<br/>
+You may want to reuse this callback whenever a choice identifier is being edited to sync its values with response declarations.
 
 But in practice you can define any callback you want to save the property value, like in this simple example below:
 
@@ -477,13 +477,13 @@ We are using the model we defined in the step 1 of the tutorial.
 
 ### Editing API
 
-When you are inside a widget or a state, you have access to the element you are currently working on.<br/>
+When you are inside a widget or a state, you have access to the element you are currently working on.
 
-The goal is to modify this object : modify attributes, add choice, modify a choice content, modify the body (if applicable), etc.<br/>
+The goal is to modify this object : modify attributes, add choice, modify a choice content, modify the body (if applicable), etc.
 
-Every modification brought to the object will be serialized and saved as qti XML to the server via the qtiXmlRenderer.<br/>
+Every modification brought to the object will be serialized and saved as qti XML to the server via the qtiXmlRenderer.
 
-Please use the api and not idrect access to object because those methods trigger the right events and following this api will help implementing undo/redo methods.
+Please use the api and not indirect access to object because those methods trigger the right events and following this api will help implementing undo/redo methods.
 
 The main methods you may need are:
 
@@ -535,79 +535,79 @@ They all are triggered in the same namespace “.qti-widget”
 
 ##### attributeChange
 
-Triggered by `element.attr(name, value)`<br/>
+Triggered by `element.attr(name, value)`
 
 see any interactions in qtiCreator/model/mixin/editable.js
 
 ##### deleted
 
-Triggered by `element.remove()`<br/>
+Triggered by `element.remove()`
 
 see any interactions in qtiCreator/model/mixin/editable.js
 
 ##### choiceCreated
 
-Triggered by `interaction.createChoice()`<br/>
+Triggered by `interaction.createChoice()`
 
 see any interactions in qtiCreator/model/interactions/
 
 ##### containerBodyChange
 
-Triggered by `interaction.body()`<br/>
+Triggered by `interaction.body()`
 
 see any interactions in qtiItem/core/Container.js
 
 ##### choiceTextChange
 
-Triggered by `interaction.createChoice()`<br/>
+Triggered by `interaction.createChoice()`
 
 see any interactions in qtiCreator/model/choices/TextVariableChoice.js
 
 ##### responseTemplateChange
 
-Triggered by `responseDeclaration.setTemplate()`<br/>
+Triggered by `responseDeclaration.setTemplate()`
 
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### correctResponseChange
 
-Triggered by `responseDeclaration.setCorrect()`<br/>
+Triggered by `responseDeclaration.setCorrect()`
 
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### mapEntryChange
 
-Triggered by `responseDeclaration.setMapEntry()`<br/>
+Triggered by `responseDeclaration.setMapEntry()`
 
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### mapEntryRemove
 
-Triggered by `responseDeclaration.removeMapEntry()`<br/>
+Triggered by `responseDeclaration.removeMapEntry()`
 
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### mappingAttributeChange
 
-Triggered by `responseDeclaration.setMappingAttribute()`<br/>
+Triggered by `responseDeclaration.setMappingAttribute()`
 
 See qtiCreator/model/variables/ResponseDeclaration.js
 
 ##### metaChange
 
-Triggered by `editable.data(key, value)`<br/>
+Triggered by `editable.data(key, value)`
 
 See qtiCreator/model/mixin/editable.js
 
 #### listen to those events
 
-You may want to listen to any modification mode to the qti element.<br/>
+You may want to listen to any modification mode to the qti element.
 
-There is a simple way to do that via a method of the widget.<br/>
+There is a simple way to do that via a method of the widget.
 
-Important notice: by using this method, the event listener will have the same lifespan as the current state. If you bind an event in the *answer* state, it will still be active in a substate like *correct* or *mode*.<br/>
+Important notice: by using this method, the event listener will have the same lifespan as the current state. If you bind an event in the *answer* state, it will still be active in a substate like *correct* or *mode*.
 
-When you leave the answer state (say, you are goind to the *question* mode again), the listener will be automatically remove.
+When you leave the answer state (say, you are going to the *question* mode again), the listener will be automatically remove.
 
 An example can be found in qtiCreator/widgets/interactions/states/Answer.js:
 

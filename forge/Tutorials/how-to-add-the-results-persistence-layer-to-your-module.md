@@ -16,9 +16,7 @@ The Results persistence layer is called ResultsService.php but is fairly tricky 
 Step 1: Create a constants.php file and add it to your module
 -------------------------------------------------------------
 
-You need to create a constants.php file and make sure it is placed in the following location <YOUR MODULE><br/>
-\includes\<br/>
-constants.php
+You need to create a constants.php file and make sure it is placed in the following location <YOUR MODULE>\includes\constants.php
 
 Add the following includes to your constants.php file
 

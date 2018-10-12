@@ -7,6 +7,6 @@ created_at: 2016-03-03
 
 Unit tests are managed with [phpunit](https://phpunit.de/)
 
-You need to launch the unit tests from the root folder of tao, for example: 
+You need to launch the unit tests from the root folder of TAO, for example: 
 
 `sudo -u www-data phpunit taoTestTaker/test/TestTakerTest`

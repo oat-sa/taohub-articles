@@ -19,9 +19,8 @@ tags:
 
 ## Create the extension
 
-1.  Log into Tao Back Office with your TaoManager account
-2.  Go to “Settings”(upper right corner) -<br/>
-> “Extensions Manager”
+1.  Log into TAO Back Office with your TaoManager account
+2.  Go to “Settings”(upper right corner) -> “Extensions Manager”
 3.  Click on “create new” to create your new extension
 4.  Fill out the form and call your new extension “taoDocs” ( you can select some *Samples* to generate extra structure, according to your choice )
 5.  Return to the extension manager, select taoDocs, and install it
@@ -48,7 +47,7 @@ class TestController extends \tao_actions_CommonModule
 }
 ```
 
--   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in tao as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
+-   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in TAO as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
 
 ### Hello Template
 
@@ -101,7 +100,7 @@ public function sayHello()
 
 - In the `structures.xml` add the tag
 
--   Since Tao 2.6 the structures are cached, so you will need to empty your cache (by default situated in *data/generis/cache*. Also you can use taoDevTools scripts)
+-   Since TAO 2.6 the structures are cached, so you will need to empty your cache (by default situated in *data/generis/cache*. Also you can use taoDevTools scripts)
 
 -   When refreshing the TAO home screen, the new extension should be visible
 
@@ -133,13 +132,13 @@ Our documents will be placed on `taoDocs/views/docs/` folder. Also you need crea
 
 Add the tag into `actions` in the `structures.xml` file
 
-Attribute **id** link this actions with tree. So for Delete button we need define id as “delete”, as in tree.<br/>
+Attribute **id** link this actions with tree. So for Delete button we need define id as “delete”, as in tree.
 
-Attribute **name** define text on button.<br/>
+Attribute **name** define text on button.
 
-Attribute **url** define path to controller action.<br/>
+Attribute **url** define path to controller action.
 
-Attribute **group** tell where action (button) should be placed. In our case it will be places in tree, below list of files.<br/>
+Attribute **group** tell where action (button) should be placed. In our case it will be places in tree, below list of files.
 
 Attribute **binding** define handler for this action in front-side application (javascript). How should be organised frontend application see here: [Front js](../documentation-for-core-components/front-js.md)
 

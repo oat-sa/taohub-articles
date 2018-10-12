@@ -5,18 +5,18 @@ tags:
     - 'Installation and Upgrading'
 -->
 
-# Upgrade the tao platform from 3.1 to 3.2
+# Upgrade the TAO platform from 3.1 to 3.2
 
-> This page aims to explain how you can upgrade tao from the version 3.1 to version 3.2
+> This page aims to explain how you can upgrade TAO from the version 3.1 to version 3.2
 
-## Pre requis
+## Prerequisite
 
-To start this tutorial be sure to have the version 3.1 of the tao platform.
+To start this tutorial be sure to have the version 3.1 of the TAO platform.
 You can see your version at bottom left of the screen
 
 ![release 3.1 footer](../resources/release3.2/release3-1.png)
 
-If you don't have a tao platform version 3.1 running please have a look to [installation guide](../../forge/Installation and Upgrading/installubuntuapachemysql.md)
+If you don't have a TAO platform version 3.1 running please have a look to [installation guide](../../forge/Installation and Upgrading/installubuntuapachemysql.md)
 
 
 Download the release 3.2 [here](https://www.taotesting.com/get-tao/official-tao-packages) and unzip it
@@ -30,10 +30,17 @@ Make sure that the user that will access the directories (www-data) have the rig
 ### Fix taoWorkspace
 
 If you had taoWorkspace installed on your installation you should manually add this extension.
-To do so you should first get the latest released version using `composer require "oat-sa/extension-tao-workspace":~1.1` or by downloading the [archive](https://github.com/oat-sa/extension-tao-workspace/releases) and placing files in the correct directory.
+To do so you should first get the latest release using `composer require "oat-sa/extension-tao-workspace":~1.1` or by downloading the [archive](https://github.com/oat-sa/extension-tao-workspace/releases) and placing files in the correct directory.
 
 ### Update extensions
-On your web server launch the command `sudo -u www-data php tao/scripts/taoUpdate.php`
+On your web server launch the command 
+```
+# Linux
+sudo -u www-data php tao/scripts/taoUpdate.php
+
+# Windows
+php tao/scripts/taoUpdate.php
+```
 
 You should now see something like the following image.
 

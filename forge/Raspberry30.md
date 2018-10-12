@@ -18,11 +18,11 @@ As soon as it is powered and plugged into your network, you may start creating y
 Getting started
 ---------------
 
-- plug a usb cable to power it on, all the software will automatically boot an start serving tao on your network
+- plug a usb cable to power it on, all the software will automatically boot an start serving TAO on your network
 
 - The only tweaking consists in identifying the raspberry PI on your network and find out the right URL to be typed in into your favorite web browser.
 
-Plug it on your network ! Find its IP on your network :<br/>
+Plug it on your network ! Find its IP on your network :
 
 If you are running Linux, you ay find the IP of the PI using this command line:
 
@@ -35,15 +35,15 @@ On your own workstation from which you would like either to create new tests or 
 TAO account
 -----------
 
-TAO is presinstalled and contains already an admin account\
-Access TAO using your web browser at http://pitao/<br/>
+TAO is pre installed and contains already an admin account\
+Access TAO using your web browser at http://pitao/
 
 TAO admin user : pitao/pitao
 
 System account
 --------------
 
-You may want to tweak the sytem to your own needs, the default account is :<br/>
+You may want to tweak the system to your own needs, the default account is :
 
 Ssh: pi / raspberry
 

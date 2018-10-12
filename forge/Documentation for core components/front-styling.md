@@ -14,7 +14,7 @@ Styling
 Using the theme defined into the Style guide
 ------------------------------------------------
 
-The theme defined into the style guide is included into the back office. It comes from tao/views/css/tao-main-style.css
+The theme defined into the style guide is included into the Back Office. It comes from tao/views/css/tao-main-style.css
 
 To prevent conflicts with current style, the style applies only to elements of a container with the class `tao-scope`. For example, to use buttons, you need to wrap them into a container with this class:
 
@@ -34,7 +34,7 @@ The folder `tao/views/scss/` contains the main theme (`tao-main-style.scss`) as 
 
 #### Extension’s custom styles
 
-You can create your own style sheets into a specific extension. You need to create a structure according to the hierarchy described into Front Structure.<br/>
+You can create your own style sheets into a specific extension. You need to create a structure according to the hierarchy described into Front Structure.
 
 In extension’s SCSS files, include the bootstrap.
 
@@ -46,11 +46,11 @@ Do not forget to add the path to the bootstrap into your compiler’s options (`
 
 ### Compiling
 
-In order to compile (or watch) your SASS files to the target CSS, you can either use:<br/>
+In order to compile (or watch) your SASS files to the target CSS, you can either use:
 
- - The grunt task provided with TAO (see Front Tools)<br/>
+ - The grunt task provided with TAO (see Front Tools)
 
- - The SASS CLI tool provided by SASS (requires ruby and the sass gem)<br/>
+ - The SASS CLI tool provided by SASS (requires ruby and the sass gem)
 
  - Your favorite IDE SASS plugin
 
@@ -58,7 +58,7 @@ In order to compile (or watch) your SASS files to the target CSS, you can either
 
 To compile the main theme, you need the Front Tools up and running. Then open a terminal into `tao/views/build`.
 
-For example to compile CSS files for the tao extension :
+For example to compile CSS files for the TAO extension :
 
     grunt taosass
 

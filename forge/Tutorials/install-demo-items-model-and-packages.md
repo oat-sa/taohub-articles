@@ -13,7 +13,7 @@ tags:
 Install demo items model and packages
 =====================================
 
-This files contained in this archive will be used during the IAEA 2013 conference in Tel Aviv. Please simply download the archives on your machine prior to the workshop.<br/>
+This files contained in this archive will be used during the IAEA 2013 conference in Tel Aviv. Please simply download the archives on your machine prior to the workshop.
 
 The files to download are:
 

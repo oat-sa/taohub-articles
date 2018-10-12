@@ -25,14 +25,14 @@ TAO v2.0 achieved a functional maturity that covers large possibilities of compu
 2. TAO optimisation = data compilation, how it works
 ----------------------------------------------------
 
-The issue in previous version of TAO was due to one single sql table containing all the rdf triples. This enables TAO to be highly flexible regarding the data model it can support. However, on production time, as flexible as this knowledge base can be, it faces difficulty to cope with a large concurrent access to this single table, the more so as the size of the table goes bigger and bigger. (since every data (knowledge) is saved into that table, from the login credentials of all test takers to the final test results).<br/>
+The issue in previous version of TAO was due to one single sql table containing all the rdf triples. This enables TAO to be highly flexible regarding the data model it can support. However, on production time, as flexible as this knowledge base can be, it faces difficulty to cope with a large concurrent access to this single table, the more so as the size of the table goes bigger and bigger. (since every data (knowledge) is saved into that table, from the login credentials of all test takers to the final test results).
 
 The idea is thus simple:
 
 1.  to ease the database from concurrent access (have users read, write on several tables at a time)
 2.  to group actual related data together, which means separate non related data (separate results data from user information or system configuration for instance)
 
-The solution is to move the data from the rdf statements table to common relational tables, to make the most of widely used and known relational database optimization techniques. Since the flexibility must remain one main characteristic of TAO, only the required performance critic resources are moved to such relational tables, while the models remain in the statements table, which keeps its main role as flexible model store.<br/>
+The solution is to move the data from the rdf statements table to common relational tables, to make the most of widely used and known relational database optimization techniques. Since the flexibility must remain one main characteristic of TAO, only the required performance critic resources are moved to such relational tables, while the models remain in the statements table, which keeps its main role as flexible model store.
 
 The performance on test deliveries depends on a set of specific resources. Those resources have been identified, and their relation to one another optimized (indexed columns in mysql table).
 
@@ -45,25 +45,22 @@ The reverse action is also provided to get the data form optimized (“compiled�
 
 ### 3.1. From CLI
 
-Go to the script path located on *TAO_ROOT/wfEngine/scripts/* then execute the following command:<br/>
+Go to the script path located on *TAO_ROOT/wfEngine/scripts/* then execute the following command:
 
-to compile:<br/>
+to compile:
 
-`php wfEngineOptimizer.php -c -i`<br/>
+`php wfEngineOptimizer.php -c -i` (c for compile, i for indexing)
 
-(c for complie, i for indexing)
+to decompile:
 
-to decompile:<br/>
-
-`php wfEngineOptimizer.php -d`<br/>
-
+`php wfEngineOptimizer.php -d`
 (d for decompile)
 
 Please be patient, it may take a while according to the quantity of data you have.
 
-### 3.2. From GUI: via tao backoffice
+### 3.2. From GUI: via TAO Back Office
 
-This functionality is also available in the TAO back office, accessible via the “setting” menu from the TAO home as illustrated below:<br/>
+This functionality is also available in the TAO Back Office, accessible via the “setting” menu from the TAO home as illustrated below:
 
 ![](../resources/perf_opt_setting.png)
 
@@ -81,7 +78,7 @@ During the data compilation, you can see the dependent resources that are compil
 
 ![](../resources/perf_opt_compiling_related.png)
 
-When the compilation is completed, you can have a look at the results.<br/>
+When the compilation is completed, you can have a look at the results.
 
 Right to the compiled field, you can see the number of compiled resources: instances show the number of resources moved to relational databases, by type (i.e. class)
 
@@ -96,11 +93,11 @@ Decompile button works the same way: you only need to click on the “decompile�
 
 ### 4.1. TAO v2.0 vs v2.1
 
-Benchmark has been done with Jmeter to compare the prformance improvement between v2.0 and 2.1 (to see how to banchmark with Jmeter see the related section):
+Benchmark has been done with Jmeter to compare the performance improvement between v2.0 and 2.1 (to see how to benchmark with Jmeter see the related section):
 
 The 2 tables below show the average time of execution for each action performed during a test exection:
 
-1.  authentification (time to authentificate the test taker)
+1.  authentication (time to authentificate the test taker)
 2.  delivery listing (page to display the list of available delivery for the logged test taker)
 3.  process initialization (the time between the click of the test taker on the selected delivery and the moment the first item is displayed to the screen
 4.  get item (the average time to display an item on the screen)
@@ -108,7 +105,7 @@ The 2 tables below show the average time of execution for each action performed 
 
 The database is filled with **1000 test takers**. A given number of test taker (from 1 to 200) execute each a small test with **4 items**, within a short among of time of **30 seconds**.
 
-The server configuration is as follow (on virtual machine):<br/>
+The server configuration is as follow (on virtual machine):
 
 processors : 4\
 vendor_id : GenuineIntel\
@@ -152,7 +149,7 @@ The benchmark results below show a more realistic scenario, with **10000 test ta
 
   ---------------------------- ------------------------- --------------------
   _=. Action                  _=. Constant delay (s)   _=. Deviation (s)
-  _=. Authentificaiton        =. 0.3                    =. 0.1
+  _=. Authentification        =. 0.3                    =. 0.1
   _=. Delivery Section time   =. 2                      =. 0.6
   _=. Item solving time       =. 10                     =. 5
   ---------------------------- ------------------------- --------------------

@@ -122,7 +122,7 @@ In order to delete a resource a simple call to **delete** of this resource suffi
 
 This will delete all statements having as subject this resource.
 
-If you want to delete all the statements referencing the instance accross the database as well, set the parameter `$deleteReference` to true:
+If you want to delete all the statements referencing the instance across the database as well, set the parameter `$deleteReference` to true:
 
     $success = $resource->delete(true);
 

@@ -8,10 +8,10 @@ tags:
     - 'Installation and Upgrading'
 -->
 
-Install a Tao instance
+Install a TAO instance
 ======================
 
-This shell script can be useful to quickly install a new tao instance into a separate folder. It takes care of running the necessary commands. It even creates a new Apache2 Vhost file and adds the domain to the hosts file.
+This shell script can be useful to quickly install a new TAO instance into a separate folder. It takes care of running the necessary commands. It even creates a new Apache2 Vhost file and adds the domain to the hosts file.
 
 It requires three arguments:
 
@@ -26,7 +26,7 @@ Usages:
      ./installTaoInstance.sh act https://raw.githubusercontent.com/oat-sa/deploy-test-package/nightly/act/composer.json?token=xxx taoAct
 
 \>h2. Warning\
-\><br/>
+\>
 
 \>**Only use it in development environment!**
 

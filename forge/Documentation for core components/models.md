@@ -18,7 +18,7 @@ Models
 Service Oriented Models
 -----------------------
 
-In order to access the model data, we use services as a unique entry point. The services are designed to manage the data from the different data sources. The TAO meta-extension contains the main service structure, the service utilities and abstract class to enable the other extensions to extend.<br/>
+In order to access the model data, we use services as a unique entry point. The services are designed to manage the data from the different data sources. The TAO meta-extension contains the main service structure, the service utilities and abstract class to enable the other extensions to extend.
 
 The advantages of such an architecture are:
 

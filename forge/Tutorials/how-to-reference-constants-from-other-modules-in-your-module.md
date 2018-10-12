@@ -21,9 +21,7 @@ As explained, navigate to your module and create a folder called includes
 Step 2 - Create a file in the includes folder called constants.php
 ------------------------------------------------------------------
 
-You should now be able to see a file called <YOUR MODULE NAME><br/>
-\includes\<br/>
-constants.php
+You should now be able to see a file called <YOUR MODULE NAME>\includes\constants.php
 
 Step 3 - Add the following code
 -------------------------------

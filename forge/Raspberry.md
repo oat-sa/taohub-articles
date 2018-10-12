@@ -6,12 +6,12 @@ authors:
 tags: {  }
 -->
 
-Tao on a Raspberry
+TAO on a Raspberry
 ==================
 
-![](resources/raspberry-pi-7.jpg)<br/>
+![](resources/raspberry-pi-7.jpg)
 
-So, you want to use raspberry as a tao web server and deliver your tests over a local Wi-Fi ?
+So, you want to use raspberry as a TAO web server and deliver your tests over a local Wi-Fi?
 
 1. Download RaspDebian
 ----------------------
@@ -39,7 +39,7 @@ Insert the sd card into your raspberry, plug the power.
 
 *Scenario 1: You have a screen connected on the raspberry.*
 
-Login as “pi” using password “raspberry”<br/>
+Login as “pi” using password “raspberry”
 
 Type in the shell
 
@@ -61,12 +61,12 @@ Type in the shell
               collisions:0 txqueuelen:0
               RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 
-and take note of the resulting IP adress.
+and take note of the resulting IP address.
 
-*Scenario 2: Like us, you couldn’t afford buying a screen …*
+*Scenario 2: Like us, you couldn't afford buying a screen …*
 
-This one is diffcult, all raspberry have a MAC adress starting with b8:27:eb\
-Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.<br/>
+This one is difficult, all raspberry have a MAC address starting with b8:27:eb\
+Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.
 
 From a mac you may use conveniently http://ivanx.com/raspberrypi/files/PiFinder.zip\
 From Linux :
@@ -90,20 +90,20 @@ using the default password raspberry
 ---------------------------------
 
 You may follow this guide : https://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address\
-This step may become mandatory especially if you don’t use vhost. As tao memorizes the root url at installation time, if you use the IP for installing tao (step 8) and that afterwards its ip change, test takers won’t be able to connect. We recommend either to use a vhost configuration or to use a fixed IP.
+This step may become mandatory especially if you don’t use vhost. As TAO memorizes the root url at installation time, if you use the IP for installing tao (step 8) and that afterwards its ip change, test takers won’t be able to connect. We recommend either to use a vhost configuration or to use a fixed IP.
 
 7. Change pi password
 ---------------------
 
     passwd pi
 
-8. Start the LAMP stack installation :<br/>
+8. Start the LAMP stack installation :
 
 http://forge.taotesting.com/projects/tao/wiki/InstallUbuntuApacheMySQL
 ----------------------------------------------------------------------
 
 9. Start TAO installation\
-From any computer on the same network :<br/>
+From any computer on the same network :
 
 http://yourip/tao/install\
 or vhost\

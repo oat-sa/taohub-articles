@@ -8,12 +8,12 @@ tags:
     - 'LDAP Authentication'
 -->
 
-LDAP Authentication for Tao 2.6
+LDAP Authentication for TAO 2.6
 ===============================
 
-This library is intended to connect Tao to an existing user directory and was designed for Tao 3.0.
+This library is intended to connect TAO to an existing user directory and was designed for Tao 3.0.
 
-This pages describes how to use it with **Tao 2.6**. To use it with Tao 3.0 please follow LDAP Authentication.
+This pages describes how to use it with **TAO 2.6**. To use it with TAO 3.0 please follow LDAP Authentication.
 
 The Library can be found on github:
 
@@ -26,9 +26,9 @@ Installation
 
 -   Ensure the PHP LDAP module is installed, and enabled for your apache config.
 -   Ensure composer is installed (https://getcomposer.org/download/)
--   Install Tao as you would normally
+-   Install TAO as you would normally
 
-Tao 2.6 does not yet use composer for the entire project, but it is used in generis. So in order to add a library:
+TAO 2.6 does not yet use composer for the entire project, but it is used in generis. So in order to add a library:
 
 \* place the attached [composer.json](../resources/composer.json) in /generis
 
@@ -43,7 +43,7 @@ Tao 2.6 does not yet use composer for the entire project, but it is used in gene
 Configuration
 -------------
 
-Tao 2.6 does not support any Authentication configuration, so the only way to use the LDAP Adapter is to replace the Tao AuthAdapter:
+TAO 2.6 does not support any Authentication configuration, so the only way to use the LDAP Adapter is to replace the TAO AuthAdapter:
 
 -   replace the file /generis/core/kernel/users/class.AuthAdapter.php with the attached [class.AuthAdapter.php](../resources/class.AuthAdapter.php)
 -   modify the configuration in class.AuthAdapter.php to your server
@@ -51,12 +51,12 @@ Tao 2.6 does not support any Authentication configuration, so the only way to us
 Usage
 -----
 
-You should now be able to use the credentials defined in you LDAP server to login to Tao.
+You should now be able to use the credentials defined in you LDAP server to login to TAO.
 
 Limitations
 -----------
 
--   LDAP authentication in Tao 2.6 will replace the Tao user authentication, so you will not be able to use your Tao login anymore
--   LDAP authentication in Tao 2.6. only works for test-takers
+-   LDAP authentication in TAO 2.6 will replace the Tao user authentication, so you will not be able to use your TAO login anymore
+-   LDAP authentication in TAO 2.6. only works for test-takers
 
 

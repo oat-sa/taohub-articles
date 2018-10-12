@@ -33,8 +33,7 @@ The platform requires multiple PHP extensions to be loaded to run correctly on y
 -   php_mysql
 -   php_curl
 -   php_gd2
--   php_zip (php_zip is included in PHP version <br/>
-> 5.3.10)
+-   php_zip (php_zip is included in PHP version > 5.3.10)
 -   php_tidy
 -   php_mbstring
 
@@ -48,7 +47,7 @@ Your next task is to open the PHP configuration file (php.ini) and changes 3 dir
 
 ### 1.2.2. MySQL Setup
 
-If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:<br/>
+If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:
 
 EXECUTE, SELECT, SHOW DATABASES, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, DELETE, DROP, INDEX, INSERT, UPDATE, RELOAD
 
@@ -67,36 +66,18 @@ You are now ready to deploy the TAO platform.
 
 We will now download the latest version of the TAO source code and deploy it on the web server. Go to the official TAO [download page](http://taotesting.com/resources/download-tao) and download the latest stable release.
 
-Create a folder named **taoplatform** in the root directory of your web server. Depending on your installation settings, it should be located at **C:\\wamp\<br/>
-www\<br/>
-**. You can now unzip the TAO source code previously downloaded in the **taoplatform** folder. You should now have the following directory structure on your file system:
+Create a folder named **taoplatform** in the root directory of your web server. Depending on your installation settings, it should be located at **C:\\wamp\www\**. You can now unzip the TAO source code previously downloaded in the **taoplatform** folder. You should now have the following directory structure on your file system:
 
--   C:\\wamp\<br/>
-www\<br/>
-taoplatform\<br/>
-filemanager
--   C:\\wamp\<br/>
-www\<br/>
-taoplatform\<br/>
-generis
--   C:\\wamp\<br/>
-www\<br/>
-taoplatform\<br/>
-taoDelivery
--   C:\\wamp\<br/>
-www\<br/>
-taoplatform\<br/>
-taoGroups
+-   C:\\wamp\www\taoplatform\filemanager
+-   C:\\wamp\www\taoplatform\generis
+-   C:\\wamp\www\taoplatform\taoDelivery
+-   C:\\wamp\www\taoplatform\taoGroups
 -   …
 
 ### 2.2. Creation of a Virtual Host
 
-The TAO platform needs to be run on an Apache Virtual Host to run correctly. We will create a new **Virtual Host** named **taoplatform** by editing the virtual host configuration file of Apache. Depending on your installation settings, it should be located at **C:\\wamp\<br/>
-bin\<br/>
-apache\<br/>
-Apache2.x\<br/>
-conf\<br/>
-extra-httpd-vhosts.conf**. Open this file with your favourite text editor and add the following lines at its end.
+The TAO platform needs to be run on an Apache Virtual Host to run correctly. We will create a new **Virtual Host** named **taoplatform** by editing the virtual host configuration file of Apache. Depending on your installation settings, it should be located at 
+**C:\\wamp\bin\apache\Apache2.x\conf\extra-httpd-vhosts.conf**. Open this file with your favourite text editor and add the following lines at its end.
 
 
         ServerAdmin webmaster@taoplatform
@@ -111,28 +92,22 @@ extra-httpd-vhosts.conf**. Open this file with your favourite text editor and ad
             allow from all
 
 
-Open the main Apache2 configuration file located at **C:\\wamp\<br/>
-bin\<br/>
-apache\<br/>
-Apache2.x\<br/>
-conf\<br/>
-httpd.conf** and uncomment the following line by removing the leading **<br/>
-#** character. This will integrate your virtual host configuration in the main Apache2 configuration file.
+Open the main Apache2 configuration file located at **C:\\wamp\bin\apache\Apache2.x\conf\httpd.conf** and uncomment the following line by removing 
+the leading **#** character. This will integrate your virtual host configuration in the main Apache2 configuration file.
 
     Include conf/extra/httpd-vhosts.conf
 
-Do not forget to make the host resolvable by editing your **hosts** file. Open notepad in **administrator mode** and open your hosts file located at **C:\\Windows\<br/>
-System32\<br/>
-drivers\<br/>
-etc\<br/>
-hosts**. Add the following instructions at the end of the file.
+Do not forget to make the host resolvable by editing your **hosts** file. Open notepad in **administrator mode** and open your hosts file located at 
+**C:\\Windows\System32\drivers\etc\hosts**. Add the following instructions at the end of the file.
 
     127.0.0.1   taoplatform
 
-You can now restart your web server to take the new configuration settings into account. To do so, click on the WampServer icon in the system tray and click the **Restart All Services** button.
+You can now restart your web server to take the new configuration settings into account. To do so, click on the WampServer icon in the system tray and 
+click the **Restart All Services** button.
 
 ### 2.3. TAO Installation Wizard
 
-For this last step of the installation process, open up your favourite web browser at http://taoplatform/tao/install. The installation wizard appears. Follow the instructions to finalize your TAO Platform installation.
+For this last step of the installation process, open up your favourite web browser at http://taoplatform/tao/install. The installation wizard appears. 
+Follow the instructions to finalize your TAO Platform installation.
 
 
