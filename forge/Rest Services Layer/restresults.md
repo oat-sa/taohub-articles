@@ -23,11 +23,11 @@ There are two endpoints one for TAO 2.6 version and the other since TAO 3.0.<br/
 
 If you are using TAO 2.6 use the following URL :
 
-    http://[Your tao 2.6 Host name]/taoResults/RestResults
+    http://[Your TAO 2.6 Host name]/taoResults/RestResults
 
 else for TAO 3.0 and above use the URL below :
 
-    http://[Your tao 3.0 Host name]/taoResultServer/RestResults
+    http://[Your TAO 3.0 Host name]/taoResultServer/RestResults
 
 Encoding
 --------

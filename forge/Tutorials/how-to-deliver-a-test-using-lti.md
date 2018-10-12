@@ -16,7 +16,7 @@ tags:
 
 ## LTI Installation
 
-to Install the required extensions in Tao:
+to Install the required extensions in TAO:
 
 - go to Settings (Upper right corner)
 - open the tab *Extensions manager*

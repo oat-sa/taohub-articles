@@ -11,7 +11,7 @@ tags:
 Search using Solr
 =================
 
-Tao 3.1 allows different search implementations. By default it uses a slightly modified version of the Zend Lucene engine, but it can also be connected to Solr.
+TAO 3.1 allows different search implementations. By default it uses a slightly modified version of the Zend Lucene engine, but it can also be connected to Solr.
 
 Installing Solr
 ---------------
@@ -24,7 +24,7 @@ Download and install Solr from https://lucene.apache.org/solr/
 Install Solarium library
 ------------------------
 
-To add solarium support to Tao you will need to manually add the library to your required packages, this will also install Solarium (http://www.solarium-project.org/)
+To add solarium support to TAO you will need to manually add the library to your required packages, this will also install Solarium (http://www.solarium-project.org/)
 
     "require" : {
         "oat-sa/lib-tao-solarium" : "dev-master"
@@ -33,7 +33,7 @@ To add solarium support to Tao you will need to manually add the library to your
 Configure Solr
 --------------
 
-You have to run and create core based on default tao preset
+You have to run and create core based on default TAO preset
 
 solr start\
 solr create_core -c **CORE_NAME** -d <br/>
@@ -45,7 +45,7 @@ CORE_NAME = tao
 
 If different name was used please make sure to change also [PATH] parameter on configuration step to **solr/CORE_NAME**
 
-Configure Tao
+Configure TAO
 -------------
 
 Modify the configuration to match your Solr server by specifying parameters:

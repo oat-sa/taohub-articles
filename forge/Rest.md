@@ -18,13 +18,13 @@ Starting from **TAO 2.5**, a [Representational State Transfer (REST)](http://en.
 
 The four basic methods from [HTTP](https://en.wikipedia.org/wiki/Http) : GET / POST / PUT / DELETE allows you to fetch / create /modify or delete the different resources like test takers or items from any TAO node.
 
-Authentication mechanisms built in HTTP : Basic and Digest are being used for user identification and further restrictions are applied according to the functionality rights access settings as they are setup in the tao node you want to access.
+Authentication mechanisms built in HTTP : Basic and Digest are being used for user identification and further restrictions are applied according to the functionality rights access settings as they are setup in the TAO node you want to access.
 
 An exception handler treat the different cases and allows for catching any errors that may be triggered while executing your queries. A content negotiation is being implemented and currently supports application/json and application/xml data exchange formats.
 
 ![](resources/REST.png)
 
-Tao Rest Documentation
+TAO Rest Documentation
 ----------------------
 
 -   Rest Services Layer
@@ -463,7 +463,7 @@ Creating a test taker with custom properties / type or language
 
     curl_close($process);
 
-If you don’t know the URIs of properties or classes, you may use the ontoBrowser extension of TAO, it is available from the default package of tao and needs to be installed using the settings pane in the backoffice.
+If you don’t know the URIs of properties or classes, you may use the ontoBrowser extension of TAO, it is available from the default package of TAO and needs to be installed using the settings pane in the backoffice.
 
 Update an existing test taker
 -----------------------------
@@ -684,7 +684,7 @@ $uri) methods.<br/>
 
     Difficulty: easy
 
-How to add rest services on top of my custom tao extension I wrote ?
+How to add rest services on top of my custom TAO extension I wrote ?
 --------------------------------------------------------------------
 
 You will need to add a rest controller extending the rest convenience built in TAO and to implement the four commands from REST.<br/>

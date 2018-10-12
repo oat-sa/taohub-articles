@@ -58,7 +58,7 @@ In order to compile (or watch) your SASS files to the target CSS, you can either
 
 To compile the main theme, you need the Front Tools up and running. Then open a terminal into `tao/views/build`.
 
-For example to compile CSS files for the tao extension :
+For example to compile CSS files for the TAO extension :
 
     grunt taosass
 

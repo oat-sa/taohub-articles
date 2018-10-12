@@ -17,7 +17,7 @@ Preparation
 
 1.  Install TAO (2.6)
 2.  Download [taoDocs_26_tutorial.zip](resources/taoDocs_26_tutorial.zip)
-3.  Unzip it in your tao root folder
+3.  Unzip it in your TAO root folder
 4.  Make sure your webserver has read/write access to taoDocs
 
 ### Install the extension
@@ -46,7 +46,7 @@ Simple Examples
 
 
 
--   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in tao as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
+-   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in TAO as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
 
 ### Hello Template
 
@@ -100,7 +100,7 @@ Integration with TAO
 
 
 
--   Since Tao 2.6 the structures are cached, so you will need to empty your cache (by default situated in generis/data/generis/cache)
+-   Since TAO 2.6 the structures are cached, so you will need to empty your cache (by default situated in generis/data/generis/cache)
 -   When refreshing the TAO home screen, the new extension should be visible
 
 ### Adding a tree

@@ -13,7 +13,7 @@ Entry-point
 
 Entry-points are pages to which the user gets redirected after login. If multiple entry-points are available for the users role the user can select which entry-point he wants to navigate to.
 
-There are currently three entry-points in Tao:
+There are currently three entry-points in TAO:
 
 Backoffice
 ----------

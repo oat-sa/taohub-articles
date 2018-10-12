@@ -34,7 +34,7 @@ Then run:
 
     php tao/scripts/installExtension.php xmlEditQtiDebugger
 
-Redirect tao output to the console
+Redirect TAO output to the console
 ----------------------------------
 
 - install TaoDevTools extension\

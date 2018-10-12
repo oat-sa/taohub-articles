@@ -53,7 +53,7 @@ An interface exist to give access for entire module or specific action in the us
 
 ![](http://forge.taotesting.com/attachments/1680/manager_roles_rights.png)
 
-It’s hidden ! To activate it, in the structures.xml of tao add this line
+It’s hidden ! To activate it, in the structures.xml of TAO add this line
 
 <section id="manage_rolesrights" name="Manages Roles Rights" url="/tao/Roles/index" />
 The interface show the roles, select one to display modules by extension, showing directly what’s selected, partialy selected or not selected. Click on a module to display the actions, showing what’s selected or not and at the bottome of this list, a way to select all (access by module) even if the module is modified (new action or less).

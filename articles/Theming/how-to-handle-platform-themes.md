@@ -71,7 +71,7 @@ $options = [
     'extensionId' => 'taoSomething',
     'logoUrl' => 'http://example.com/foo.png',
     'link' => 'http://example.com',
-    'message' => 'Tao Platform',
+    'message' => 'TAO Platform',
 
     // if stylesheet === ConfigurablePlatformTheme::DEFAULT_PATH
     'stylesheet' => 'http://domain/taoSomething/views/css/themes/platform/default-theme/theme.css',

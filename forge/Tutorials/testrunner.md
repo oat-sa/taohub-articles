@@ -20,13 +20,13 @@ Requirements
 
 For this tutorial you will need:
 
--   a working Tao 2.5 instalation
+-   a working TAO 2.5 instalation
 
 You should already be familar with:
 
 -   How to create an extension ([Make a new extension](../tutorials/make-a-new-extension.md))
 -   Resource Description Framework ([RDF](../generis-overview/rdf.md))
--   Tao 2.5 Delivery model
+-   TAO 2.5 Delivery model
 
 The components
 --------------
@@ -44,7 +44,7 @@ The following three files are required for any extension:
 A test model is a class implementing the interface *taoTests_models_classes_TestModel*. See Testmodel 2.5
 
 -   ./models/classes/ **class.TestModel.php** contains the class that represents our new test model.
--   ./models/ontology/ **testModel.rdf** registers the class randomTest_models_classes_TestModel into Tao.
+-   ./models/ontology/ **testModel.rdf** registers the class randomTest_models_classes_TestModel into TAO.
 
 These allow us to create a test with this model.
 
@@ -108,7 +108,7 @@ This service call is then stored in the compiled delivery and will be called dur
 
 ### Test runner implementation
 
-Because in Tao the items as well as the deliveries can have several different implementation the test runner must be independent from\
+Because in TAO the items as well as the deliveries can have several different implementation the test runner must be independent from\
 these. The interface between the item runner and the delivery runner are service calls.
 
 The execution of a delivery containing our random test would run through the following steps:

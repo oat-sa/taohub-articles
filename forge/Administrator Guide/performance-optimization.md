@@ -61,7 +61,7 @@ to decompile:<br/>
 
 Please be patient, it may take a while according to the quantity of data you have.
 
-### 3.2. From GUI: via tao backoffice
+### 3.2. From GUI: via TAO backoffice
 
 This functionality is also available in the TAO back office, accessible via the “setting” menu from the TAO home as illustrated below:<br/>
 

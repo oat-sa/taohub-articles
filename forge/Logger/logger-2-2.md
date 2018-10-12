@@ -8,7 +8,7 @@ tags:
     - Logger
 -->
 
-Logger Tao 2.2
+Logger TAO 2.2
 ==============
 
 Valid as of TAO_2_2|TAO 2.2 until TAO_2_6|TAO 2.6. Please refer to [Logger](../documentation-for-core-components/logger.md) for current version.
@@ -56,7 +56,7 @@ The decision which events should be logged will be taken by using either:
     bit(2\^0) corresponding to to the TRACE severity, and the most significant bit(2\^5) corresponding to to the FATAL severity.
     *Example*: To log everything except TRACE and WARNING, one would use 110110 = 32+16+4+2 = 54
 
-In addition as of Tao 2 3|Tao 2.3 items can also be filtered by tag with the following option:
+In addition as of TAO 2 3|TAO 2.3 items can also be filtered by tag with the following option:
 
 -   **tag**: an array of tags of which ONE tag must be used in the logitem
 

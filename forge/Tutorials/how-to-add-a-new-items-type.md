@@ -58,7 +58,7 @@ Here some details about some specific property :
 -   ItemRuntime was used with legacy items to describe item’s runtime link
 -   ItemAuthoring is used to describe item’s authoring link
 
-Then to add your rdf file in tao just used the following script
+Then to add your rdf file in TAO just used the following script
 
 
     php tao/scripts/taoRDFImport.php -u taoManagerLogin -p taoManagerPassword -i taoItems/models/ontology/surveyItem.rdf

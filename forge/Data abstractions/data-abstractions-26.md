@@ -11,7 +11,7 @@ tags:
 Data abstractions 2.6
 =====================
 
-This document describes abstractions available for Tao 2.6. Please see Data abstractions for the current version of Tao.
+This document describes abstractions available for TAO 2.6. Please see Data abstractions for the current version of Tao.
 
 
 
@@ -129,7 +129,7 @@ The persistence used for the session is defined in *persistences.conf.php* and s
 URI provider
 ------------
 
-The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
+The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in TAO these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
 
 ### Using the SQL server as URI provider (default)
 

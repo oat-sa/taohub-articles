@@ -72,7 +72,7 @@ If you would like to use Couchbase you would add the following block:
 
 ## URI provider
 
-The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefor should use a common URI provider.
+The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in TAO these application servers need to ensure that they don’t generate conflicting URIs and therefor should use a common URI provider.
 
 ### Using the SQL server as URI provider (default)
 

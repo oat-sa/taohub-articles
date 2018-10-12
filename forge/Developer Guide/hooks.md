@@ -12,10 +12,10 @@ The following document is work in progress
 
 
 
-Hooks in Tao 2.6
+Hooks in TAO 2.6
 ================
 
-Tao provides several ways to alter or extend its functionalities.
+TAO provides several ways to alter or extend its functionalities.
 
 PHP session
 -----------
@@ -68,7 +68,7 @@ Developers can provide a custom `common_user_auth_Adapter` that can return a cus
 Based on this user a normal session can be initialized, or alternatively a custom session can be created that implements\
 either `common_session_StatefulSession` or `common_session_StatelessSession`
 
-For custom authentication adapters a custom entry point needs to be defined as the Tao login form will always\
+For custom authentication adapters a custom entry point needs to be defined as the TAO login form will always\
 use the default `core_kernel_users_AuthAdapter` and the default `common_session_DefaultSession`.
 
 Access Control

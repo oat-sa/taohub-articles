@@ -15,7 +15,7 @@ Controllers
 
 
 
-![](http://forge.taotesting.com/attachments/download/760/attention.png) The information on these page relates to Tao 2.5 or earlier and might not reflect the current version.
+![](http://forge.taotesting.com/attachments/download/760/attention.png) The information on these page relates to TAO 2.5 or earlier and might not reflect the current version.
 
 As explained previously, in the ClearFw, a MVC **controller** is called a **module**. We will be referring to *module classes* in this context.
 

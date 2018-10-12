@@ -60,7 +60,7 @@ Back Office
 
 ![](../resources/back_office_roles.png)
 
--   **<EXTENSION> Manager** Every extension has by default its own manager that gives full access to this extension. This includes the meta-extension Tao.
+-   **<EXTENSION> Manager** Every extension has by default its own manager that gives full access to this extension. This includes the meta-extension TAO.
 
 
 

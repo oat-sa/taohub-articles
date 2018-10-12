@@ -18,7 +18,7 @@ As soon as it is powered and plugged into your network, you may start creating y
 Getting started
 ---------------
 
-- plug a usb cable to power it on, all the software will automatically boot an start serving tao on your network
+- plug a usb cable to power it on, all the software will automatically boot an start serving TAO on your network
 
 - The only tweaking consists in identifying the raspberry PI on your network and find out the right URL to be typed in into your favorite web browser.
 

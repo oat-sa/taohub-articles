@@ -412,7 +412,7 @@ a result set is returned by gateWay search method’s.<br/>
 
 It’s an arrayIterator adding total method which return full number for your query .
 
-Each entry of result set is a tao resource Object.
+Each entry of result set is a TAO resource Object.
 
 ### basic usage :
 

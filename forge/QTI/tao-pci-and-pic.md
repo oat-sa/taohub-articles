@@ -228,7 +228,7 @@ It is an AMD module that returns an object that exposes the following functions 
             }
         };
 
-        //since we assume we are in a tao context, there is no use to expose the a global object for lib registration
+        //since we assume we are in a TAO context, there is no use to expose the a global object for lib registration
         //all libs should be declared here
         return likertScaleInteractionCreator;
     });

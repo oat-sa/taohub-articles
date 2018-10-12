@@ -11,7 +11,7 @@ tags:
 Join the testing effort
 =======================
 
-Every Computer based assessment projects are different. From an education perspective to a human resources management environment, needs and challenges are different. The tao platforms aims at addressing the whole range of needs that may apply in computer based assessment.<br/>
+Every Computer based assessment projects are different. From an education perspective to a human resources management environment, needs and challenges are different. The TAO platforms aims at addressing the whole range of needs that may apply in computer based assessment.<br/>
 
 TAO’s Community’s members represent an important part of the creation of TAO to provide feedback and input on how TAO should evolve.
 

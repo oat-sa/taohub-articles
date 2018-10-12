@@ -25,7 +25,7 @@ Preparation
 Create the extension
 --------------------
 
-1.  Log into Tao Back Office with your TaoManager account
+1.  Log into TAO Back Office with your TaoManager account
 2.  Go to “Settings”(upper right corner) -<br/>
 > “Extensions Manager”
 3.  Click on “create new” to create your new extension

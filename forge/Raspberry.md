@@ -6,12 +6,12 @@ authors:
 tags: {  }
 -->
 
-Tao on a Raspberry
+TAO on a Raspberry
 ==================
 
 ![](resources/raspberry-pi-7.jpg)<br/>
 
-So, you want to use raspberry as a tao web server and deliver your tests over a local Wi-Fi ?
+So, you want to use raspberry as a TAO web server and deliver your tests over a local Wi-Fi ?
 
 1. Download RaspDebian
 ----------------------
@@ -90,7 +90,7 @@ using the default password raspberry
 ---------------------------------
 
 You may follow this guide : https://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address\
-This step may become mandatory especially if you don’t use vhost. As tao memorizes the root url at installation time, if you use the IP for installing tao (step 8) and that afterwards its ip change, test takers won’t be able to connect. We recommend either to use a vhost configuration or to use a fixed IP.
+This step may become mandatory especially if you don’t use vhost. As TAO memorizes the root url at installation time, if you use the IP for installing tao (step 8) and that afterwards its ip change, test takers won’t be able to connect. We recommend either to use a vhost configuration or to use a fixed IP.
 
 7. Change pi password
 ---------------------

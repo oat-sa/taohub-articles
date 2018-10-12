@@ -19,7 +19,7 @@ tags:
 
 ## Create the extension
 
-1.  Log into Tao Back Office with your TaoManager account
+1.  Log into TAO Back Office with your TaoManager account
 2.  Go to “Settings”(upper right corner) -<br/>
 > “Extensions Manager”
 3.  Click on “create new” to create your new extension
@@ -48,7 +48,7 @@ class TestController extends \tao_actions_CommonModule
 }
 ```
 
--   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in tao as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
+-   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in TAO as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
 
 ### Hello Template
 
@@ -101,7 +101,7 @@ public function sayHello()
 
 - In the `structures.xml` add the tag
 
--   Since Tao 2.6 the structures are cached, so you will need to empty your cache (by default situated in *data/generis/cache*. Also you can use taoDevTools scripts)
+-   Since TAO 2.6 the structures are cached, so you will need to empty your cache (by default situated in *data/generis/cache*. Also you can use taoDevTools scripts)
 
 -   When refreshing the TAO home screen, the new extension should be visible
 

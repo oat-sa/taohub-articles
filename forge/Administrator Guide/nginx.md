@@ -12,10 +12,10 @@ tags:
 Nginx
 =====
 
-Nginx is not officially supported by Tao. The following instructions are for experiments only:
+Nginx is not officially supported by TAO. The following instructions are for experiments only:
 
 
-Nginx and Tao 3.2
+Nginx and TAO 3.2
 -----------------
 
 
@@ -37,10 +37,10 @@ Nginx and Tao 3.2
     }
     
     
-Nginx and Tao 3.1
+Nginx and TAO 3.1
 -----------------
 
-Tao now supports a single entry point simplifying the config even further:
+TAO now supports a single entry point simplifying the config even further:
 
     location ~* ^/([^//]*)/views/.* {
     }
@@ -63,7 +63,7 @@ Tao now supports a single entry point simplifying the config even further:
 
 -   max upload filesize is not detected correctly from nginx client_max_body_size configuration
 
-Nginx and Tao 3.0
+Nginx and TAO 3.0
 -----------------
 
     location ~* ^/([^//]*)/(views|locales)/.* {
@@ -85,20 +85,20 @@ Nginx and Tao 3.0
 -   max upload filesize is not detected correctly from nginx client_max_body_size configuration
 -   HTTP basic authentication not working for REST api
 
-Nginx and Tao 2.6
+Nginx and TAO 2.6
 -----------------
 
 Uses the same configuration as 3.0
 
 ### Known issues
 
--   item preview requires Tao <br/>
+-   item preview requires TAO <br/>
 >= 2.6.7 to work
 
-Nginx and Tao 2.4
+Nginx and TAO 2.4
 -----------------
 
-If you try to get Tao 2.4 to work with Nginx, you might want to:
+If you try to get TAO 2.4 to work with Nginx, you might want to:
 
 \* removed the installation check: tao_install_checks_ModRewrite
 

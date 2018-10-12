@@ -56,7 +56,7 @@ Starting the MAMP installation…
 Install TAO into your MAMP
 --------------------------
 
-You need now to download all tao files and copy it into your MAMP.
+You need now to download all TAO files and copy it into your MAMP.
 
 Please download one of these build packages:
 
@@ -89,7 +89,7 @@ Come back to your web browser that popped up when you started your MAMP server (
     # Connect at this adress http://localhost:8888/tao/install
     (please note that the server port may change depending on your settings into the MAMP preferences for ports
      example : http://localhost/tao/install)
-    # Complete the tao installation procedure (standard procedure)
+    # Complete the TAO installation procedure (standard procedure)
 
 ![](../resources/install1.png)
 
@@ -105,7 +105,7 @@ Please note that the default login and password to access mysql from MAMP is roo
 
 ![](../resources/install4.png)
 
-Choose an admin account for your tao installation, this is the login and password you will have to use on your fresh tao installation.
+Choose an admin account for your TAO installation, this is the login and password you will have to use on your fresh tao installation.
 
 ![](../resources/install5.png)
 
@@ -129,7 +129,7 @@ Optionally, we recommend you to do the following configuration :
 4.  Replace within the launch page url field with “/” instead of “/MAMP/”
 5.  Drag an drop the MAMP executable into your dock back
 
-This way you may launch tao by simply clicking the MAMP icon from your dock bar.
+This way you may launch TAO by simply clicking the MAMP icon from your dock bar.
 
 ### Troubleshooting
 
@@ -139,7 +139,7 @@ You may have already a server running on your local system and conflicting with 
 
 -   I have MAMP running correctly but when I go on http://localhost/tao/install I get a 404 error.
 
-You may have incorrectly copied the files into your htdocs directory after you have extracted the tao zip file. Make sure you extract it correctly with all the directory structure and directly under the /Applications/MAMP/htdocs folder
+You may have incorrectly copied the files into your htdocs directory after you have extracted the TAO zip file. Make sure you extract it correctly with all the directory structure and directly under the /Applications/MAMP/htdocs folder
 
 -   I copied pasted some content found on the web into the QTI authoring tool and the item looks weird or I have some errors.
 

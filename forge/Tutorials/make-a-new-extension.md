@@ -13,21 +13,21 @@ tags:
 Make a new extension 2.4 - 2.5
 ==============================
 
-For TAO_2_6|Tao 2.6 see How to make a new extension 2 6<br/>
+For TAO_2_6|TAO 2.6 see How to make a new extension 2 6<br/>
 
-For TAO_3_0|Tao 3.0 see How to make a new extension 3 0
+For TAO_3_0|TAO 3.0 see How to make a new extension 3 0
 
 Preparation
 -----------
 
 1.  Install TAO (2.4+)
 2.  Get the [zipped extension](http://forge.taotesting.com/attachments/download/2374/taoDocs_24_tutorial.zip)
-3.  Unzip it in your tao root folder
+3.  Unzip it in your TAO root folder
 4.  Make sure your webserver has read/write access to taoDocs
 
 ### Install the extension
 
-1.  Log into Tao Back Office with your TaoManager account
+1.  Log into TAO Back Office with your TaoManager account
 2.  Go to “Settings”(upper right corner) -<br/>
 > “Extensions Manager”
 3.  Select taoDocs, and install it
@@ -51,7 +51,7 @@ Simple Examples
 
 
 
--   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in tao as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
+-   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in TAO as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
 
 ### Hello Template
 

@@ -50,7 +50,7 @@ Add your own dependencies using Zend ServiceLocator :
 
 ### for a new extension :
 
-An helper is available to overload tao configuration :
+An helper is available to overload TAO configuration :
 
 **1 . Create your install script :**
 

@@ -8,10 +8,10 @@ tags:
     - Testrunner
 -->
 
-Testmodel Tao 2.5
+Testmodel TAO 2.5
 =================
 
-The test model in Tao 2.5 is defined by the interface *taoTests_models_classes_TestModel*
+The test model in TAO 2.5 is defined by the interface *taoTests_models_classes_TestModel*
 
 TestModel
 ---------

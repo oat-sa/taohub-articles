@@ -101,7 +101,7 @@ Portable libraries
 Portable libraries offer a way to share some commonly used libraries among PCIs developed in TAO (e.g. jquery, raphael, lodash, html formatter).
 
 From taoQtiItem v10.0.0, the support of portable shared libraries has been dropped.
-They have been upgraded to portable “safe” libraries (with minimal dependencies to tao core libraries). They no longer need to be registered as before and are simply part of [the source code](https://github.com/oat-sa/extension-tao-itemqti/tree/develop/views/js/portableLib). They may simply be added as dependencies in the PCI AMD modules.
+They have been upgraded to portable “safe” libraries (with minimal dependencies to TAO core libraries). They no longer need to be registered as before and are simply part of [the source code](https://github.com/oat-sa/extension-tao-itemqti/tree/develop/views/js/portableLib). They may simply be added as dependencies in the PCI AMD modules.
 
 For such PCIs to still be portable, they are required to be compiled into one single min file.
 Please check the section next section on portable element compilation.
@@ -165,12 +165,12 @@ This is a suggestion of checklist for PCI and PIC related PR review:
 -   pciCreator.json and pciCreator.js
 -   type identifier matches in manifest json, creator and local lib in AMD dependencies
 -   markup: properly scoped by a typeIdentifier class on root node
--   runtime: no tao core lib dependencies, no requires plugin usage (css[, tel](resources/, tel), text! etc)
+-   runtime: no TAO core lib dependencies, no requires plugin usage (css[, tel](resources/, tel), text! etc)
 -   runtime: shared libs - check extension dependencies
 -   runtime: response format compatible with the pci format and defined responseDeclaration baseType and cardinality
 -   runtime: response processing types (correct, map, custom, custom operator ?)
 -   runtime: allow multi instance of pci on a single item (no scope polluting)
--   creator: if any tao core libs are being used, check extension version dependencies
+-   creator: if any TAO core libs are being used, check extension version dependencies
 -   css: properly scoped in both runtime and creator
 -   css: how the style is compatible with the existing client’s theme ? transparency, etc.
 -   unit test: rendering, get/set response and serializedState

@@ -7,7 +7,7 @@ authors:
 tags: {  }
 -->
 
-Tao 3.0 structures.xml format
+TAO 3.0 structures.xml format
 =============================
 
 TAO 3.0 and on introduces many changes to the structures.xml files, migration from old-style structures.xml is very straightforward.

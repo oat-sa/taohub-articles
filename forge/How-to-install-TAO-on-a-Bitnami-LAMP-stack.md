@@ -13,7 +13,7 @@ How to install TAO on a Bitnami LAMP stack / Bitnami on Amazon Web Services
 
 Here is a short tutorial to get a Bitnami LAMP stack ready for TAO 2.6 and TAO 3.0. You may install any of these versions or both as it was done below.
 
-**Note:** It is good practice (and let’s say mandatory for a production stack) to change all default passwords in such stacks and especially in this case the MySQL root and tao users. The MySQL root user already exists (default password is ‘bitnami’, the local ‘tao’ user is created at step 2 (at the same time as when privileges are granted for the database used for TAO).
+**Note:** It is good practice (and let’s say mandatory for a production stack) to change all default passwords in such stacks and especially in this case the MySQL root and TAO users. The MySQL root user already exists (default password is ‘bitnami’, the local ‘tao’ user is created at step 2 (at the same time as when privileges are granted for the database used for TAO).
 
 In the following part, we assume that you may want to install TAO 2.6 and TAO 3.0 in two separate folders. Furthermore, no specific virtual host needs to be created, as TAO can be installed safely on any subfolder.
 
