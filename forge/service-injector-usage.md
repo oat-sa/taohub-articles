@@ -12,11 +12,11 @@ TAO Service injector
 About
 -----
 
-TAO Service Injector is th way to integrate any dependencies container.<br/>
+TAO Service Injector is th way to integrate any dependencies container.
 
-It must implement Container interop interface.<br/>
+It must implement Container interop interface.
 
-TAO provide configuration for generis Service Manager and Zend Framework Service Locator.<br/>
+TAO provide configuration for generis Service Manager and Zend Framework Service Locator.
 
 As well it’s possible to integrate others libraries.
 
@@ -35,15 +35,7 @@ Service injector implement [container interop interface](https://github.com/cont
 
 ### get service injector in your objects :
 
-you must implement <br/>
-\oat\<br/>
-oatbox\<br/>
-service\<br/>
-ServiceInjectorAwareInterface and use <br/>
-\oat\<br/>
-oatbox\<br/>
-service\<br/>
-ServiceInjectorAwareTrait (or implement interface methods) AND instanciate by the service injector.
+you must implement \oat\oatbox\service\ServiceInjectorAwareInterface and use \oat\oatbox\service\ServiceInjectorAwareTrait (or implement interface methods) AND instanciate by the service injector.
 
 Add your own dependencies using Zend ServiceLocator :
 -----------------------------------------------------
@@ -124,9 +116,8 @@ see [Service Locator Usage](https://framework.zend.com/manual/2.4/en/modules/zen
 
 **reminder :** your container must implement [container interop interface](https://github.com/container-interop/container-interop).
 
-\#<br/>
-#<br/>
-# Update an existing extension :
+
+### Update an existing extension :
 
 In your update class :
 

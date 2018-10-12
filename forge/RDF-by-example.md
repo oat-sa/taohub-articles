@@ -60,7 +60,7 @@ So if we took all the information in our traditional table we would receive:
 
 In order to make this a little easier to read we can substitute the namespaces with a prefix
 
--   xmlns:ex=“http://www.example.org/<br/>
+-   xmlns:ex=“http://www.example.org/
 #”
 -   xmlns:rdf=“http://www.w3.org/1999/02/22-rdf-syntax-ns\#type”
 

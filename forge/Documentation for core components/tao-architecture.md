@@ -17,9 +17,9 @@ From a global perspective, the TAO architecture does not fundamentally differ fr
 
 On the server side, a database management system stores data - this function is achieved by the Generis platform through the use of dedicated API. This layer is called *Persistence Layer*. On top of this first layer, an *Application Layer* written in PHP implements all the functions specific to eTesting. This Application Layer complies with the Model-View-Controller framework and thus, it builds the views that are delivered to the web browser on the client side. On the client side, Javascript scripts interact with the Application Layer (located on the server side), update the views if needed (or request new ones from the server), and generally operate the client-side business logic (e.g. simple validation of input data). The communication between client- and server-side relies on AJAX mechanism; thus, by reducing the need for complete page reload, it clearly adds comfort in the user’s experience. The jQuery library is used to ease this ajax-based communication.
 
-![](../resources/taoarchi.PNG)<br/>
+![](../resources/taoarchi.PNG)
 
-![](../resources/archi.png)<br/>
+![](../resources/archi.png)
 
 ![](../resources/archiExt.png)
 
@@ -57,7 +57,7 @@ TAO WorkFlow Engine
 
 An extra layer on top of TAO allows the definition of restricted user interfaces giving access to some particular features of the TAO platform based on roles of user connected. This is the purpose of the workflow engine described here:
 
-The complete application layer of TAO has been split into autonomous services that the user can access independently (Preview of an item, authoring tool, translation tool, etc.). An extension of TAO called “Process” allows assessment responsible to design organizational processes where users are assigned some specific activities and some particular tools expected to be used. This extension of TAO is then able to drive this process and gives the right tool to the right TAO user at the right time. For instance, this allows to standardize the way test items can be created or item translation can be performed.<br/>
+The complete application layer of TAO has been split into autonomous services that the user can access independently (Preview of an item, authoring tool, translation tool, etc.). An extension of TAO called “Process” allows assessment responsible to design organizational processes where users are assigned some specific activities and some particular tools expected to be used. This extension of TAO is then able to drive this process and gives the right tool to the right TAO user at the right time. For instance, this allows to standardize the way test items can be created or item translation can be performed.
 
 ![](../resources/workflow.PNG)
 

@@ -34,9 +34,9 @@ Then run
 
     $> npm run build
 
-The first command `npm install` will install/update the node.js packages required to bundle the sources and initialize the build tasks.<br/>
+The first command `npm install` will install/update the node.js packages required to bundle the sources and initialize the build tasks.
 
-The 2nd command `npm run build` will create bundles, minimify the content, inline some assets and compile the SASS files to CSS.<br/>
+The 2nd command `npm run build` will create bundles, minimify the content, inline some assets and compile the SASS files to CSS.
 
 These commands may take some time according to your CPU power.
 

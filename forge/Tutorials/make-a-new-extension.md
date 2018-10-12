@@ -13,7 +13,7 @@ tags:
 Make a new extension 2.4 - 2.5
 ==============================
 
-For TAO_2_6|TAO 2.6 see How to make a new extension 2 6<br/>
+For TAO_2_6|TAO 2.6 see How to make a new extension 2 6
 
 For TAO_3_0|TAO 3.0 see How to make a new extension 3 0
 
@@ -28,8 +28,7 @@ Preparation
 ### Install the extension
 
 1.  Log into TAO Back Office with your TaoManager account
-2.  Go to “Settings”(upper right corner) -<br/>
-> “Extensions Manager”
+2.  Go to “Settings”(upper right corner) -> “Extensions Manager”
 3.  Select taoDocs, and install it
 
 Simple Examples

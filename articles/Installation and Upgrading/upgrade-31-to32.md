@@ -30,7 +30,7 @@ Make sure that the user that will access the directories (www-data) have the rig
 ### Fix taoWorkspace
 
 If you had taoWorkspace installed on your installation you should manually add this extension.
-To do so you should first get the latest released version using `composer require "oat-sa/extension-tao-workspace":~1.1` or by downloading the [archive](https://github.com/oat-sa/extension-tao-workspace/releases) and placing files in the correct directory.
+To do so you should first get the latest release using `composer require "oat-sa/extension-tao-workspace":~1.1` or by downloading the [archive](https://github.com/oat-sa/extension-tao-workspace/releases) and placing files in the correct directory.
 
 ### Update extensions
 On your web server launch the command 

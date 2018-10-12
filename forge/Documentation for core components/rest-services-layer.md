@@ -8,8 +8,7 @@ tags:
     - 'Documentation for core components'
 -->
 
-Rest Services Layer (<br/>
->= TAO 2.5)
+Rest Services Layer (>= TAO 2.5)
 =================================
 
 A tutorial demonstrating a few examples is available here: (Test takers) [Rest](../rest.md) and (Results) [RestResults](../rest-services-layer/restresults.md)
@@ -56,7 +55,7 @@ Generic headers aliases:
 -   type
 
 Generic headers\
-By default you may refer to any attribute of the target resource type using header with the uri reference :<br/>
+By default you may refer to any attribute of the target resource type using header with the uri reference :
 
 “http://tao-dev/taodev.rdf\#i1372429454323825” : “35”
 
@@ -85,9 +84,9 @@ Depending on the type of operation and the type of target resource types, some r
 Returned types and exception handling
 -------------------------------------
 
-Depending on the type of operation and the type of target resource types,<br/>
+Depending on the type of operation and the type of target resource types,
 
-a message is always returned using the requested encoding with a status information and a message :<br/>
+a message is always returned using the requested encoding with a status information and a message :
 
 example in XML :
 
@@ -130,7 +129,7 @@ Building your own controller for your own extension
 
 You may extend the tao_actions_CommonRestModule and override
 
--   getParametersAliases()<br/>
+-   getParametersAliases()
 
     example : return array_merge(parent::getParametersAliases(), array(
      “login”=\> PROPERTY_USER_LOGIN,
@@ -143,27 +142,26 @@ You may extend the tao_actions_CommonRestModule and override
      ));
 -   getParametersRequirements()
 
-example :<br/>
+example :
 
-return array(<br/>
+return array(
 
- /<br/>
-*<br/>
+ /
+*
 * you may use either the alias or the uri, if the parameter identifier\
- <br/>
-* is set it will become mandatory for the operation in <br/>
+ 
+* is set it will become mandatory for the operation in 
 $key\
- <br/>
+ 
 * Default Parameters Requirements are applied\
- <br/>
+ 
 * type by default is not required and the root class type is applied\
- <br/>
-*/<br/>
+ 
+*/
 
- “post”=<br/>
-> array(“login”, “password”)<br/>
+ “post”=> array(“login”, “password”)
 
- );<br/>
+ );
 
 This abstract controller will handle for you
 

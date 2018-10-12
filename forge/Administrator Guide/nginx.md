@@ -92,8 +92,7 @@ Uses the same configuration as 3.0
 
 ### Known issues
 
--   item preview requires TAO <br/>
->= 2.6.7 to work
+-   item preview requires TAO >= 2.6.7 to work
 
 Nginx and TAO 2.4
 -----------------

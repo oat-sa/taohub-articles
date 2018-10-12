@@ -17,7 +17,7 @@ Preparation
 -----------
 
 1.  Install TAO (3.0) (https://github.com/oat-sa/package-tao)
-2.  download taoDevTools extension using composer :<br/>
+2.  download taoDevTools extension using composer :
 
     <code>composer require “oat-sa/extension-tao-devtools” —dev</code>
 3.  Make sure the extension taoDevTools has been installed (How to install an extension).
@@ -26,8 +26,7 @@ Create the extension
 --------------------
 
 1.  Log into TAO Back Office with your TaoManager account
-2.  Go to “Settings”(upper right corner) -<br/>
-> “Extensions Manager”
+2.  Go to “Settings”(upper right corner) -> “Extensions Manager”
 3.  Click on “create new” to create your new extension
 4.  Fill out the form and call your new extension “taoDocs” ( you can select some Samples to generate extra structure, according to your choice )
 5.  Return to the extension manager, refresh with F5 , select taoDocs, and install it
@@ -49,7 +48,7 @@ Now, create a simple action using a template file.
 
         }
 
-To create your first template: go to directory views/templates and create Hello folder.<br/>
+To create your first template: go to directory views/templates and create Hello folder.
 
 Create myName.tpl file.
 
@@ -59,7 +58,7 @@ Create myName.tpl file.
 
 -   To test this action visit *<span class="URL:/taoDocs/Hello/myName"></span>*
 
-to Add link to hello world on extension menu. Return to controller directory and Open structures.xml.<br/>
+to Add link to hello world on extension menu. Return to controller directory and Open structures.xml.
 
 In the sections tag, add this section
 

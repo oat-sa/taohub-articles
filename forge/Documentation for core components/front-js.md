@@ -14,7 +14,7 @@ JavaScript Guidelines
 Require.js
 ----------
 
-[Require.js](http://requirejs.org/) is the framework used by TAO to structure client side code.<br/>
+[Require.js](http://requirejs.org/) is the framework used by TAO to structure client side code.
 
 The JavaScript code is split into web modules using the [AMD](http://en.wikipedia.org/wiki/Asynchronous_module_definition) (Asynchronous module definition) standard.
 
@@ -22,7 +22,7 @@ The JavaScript code is split into web modules using the [AMD](http://en.wikipedi
 
 ### Controllers and routing
 
-In order to load code regarding the MVC routing used in TAO server side code, a routing strategy has been implemented on the client side.<br/>
+In order to load code regarding the MVC routing used in TAO server side code, a routing strategy has been implemented on the client side.
 
 The strategy works for any Ajax request made inside the TAO backend that display HTML (using the mime-type set in the response headers).
 
@@ -60,27 +60,27 @@ The structure of the routes object is the following, contained into : `$extensio
             }
     }
 
--   <br/>
-$extensionName : the name of the extension where the `routes.js` file is located, this file is evaluated when the first token of the request match /<br/>
-$extensionName/<br/>
-$ModuleName/<br/>
+-   
+$extensionName : the name of the extension where the `routes.js` file is located, this file is evaluated when the first token of the request match /
+$extensionName/
+$ModuleName/
 $actionName
--   <br/>
-$moduleName : the name of the module given by the request /<br/>
-$extensionName/<br/>
-$moduleName/<br/>
+-   
+$moduleName : the name of the module given by the request /
+$extensionName/
+$moduleName/
 $actionName is used as the 1st level key
--   ‘deps’ : contains either the scripts to load or an array of scripts to load. They will be loaded for all requests that match /<br/>
-$extensionName/<br/>
+-   ‘deps’ : contains either the scripts to load or an array of scripts to load. They will be loaded for all requests that match /
+$extensionName/
 $moduleName
 -   ‘deps’ : list the scripts to load by action
--   ’<br/>
-$actionName : the scripts to load or an array of scripts to load. They will be loaded for all requests that match /<br/>
-$extensionName/<br/>
-$ModuleName/<br/>
+-   ’
+$actionName : the scripts to load or an array of scripts to load. They will be loaded for all requests that match /
+$extensionName/
+$ModuleName/
 $actionName
 
-The loaded scripts are considered as controller, it means : if the script expose of function `start`, this function will be executed after load.<br/>
+The loaded scripts are considered as controller, it means : if the script expose of function `start`, this function will be executed after load.
 
 In the preview example, the controller `controller/preview/itemRunner` will look like:
 
@@ -184,8 +184,7 @@ Some libraries can change your life, some of them are available:
   Select2       Styled select boxes                          3.4.5                  http://ivaynberg.github.io/select2/      [GPLv2](http://opensource.org/licenses/GPL-2.0)
   Tooltipster   Hipe tooltips                                3.1.4                  http://iamceege.github.io/tooltipster/   [MIT](http://opensource.org/licenses/MIT)
 
-(<br/>
-*) Check the code, as it is difficult to maintain without a dependency manager like [Bower](http://bower.io)
+(*) Check the code, as it is difficult to maintain without a dependency manager like [Bower](http://bower.io)
 
 ### Optimizations
 

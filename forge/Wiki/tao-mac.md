@@ -117,7 +117,7 @@ Congratulations!
 
 ### Start up TAO
 
-In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the localhost:8888 url.<br/>
+In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the localhost:8888 url.
 
 You may ease this work by fine tuning your MAMP.
 

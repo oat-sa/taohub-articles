@@ -23,8 +23,7 @@ Preparation
 ### Install the extension
 
 1.  Log into Tao Back Office with your TaoManager account
-2.  Go to “Settings”(upper right corner) -<br/>
-> “Extensions Manager”
+2.  Go to “Settings”(upper right corner) -> “Extensions Manager”
 3.  Select taoDocs, and install it
 
 Simple Examples
@@ -40,7 +39,7 @@ Simple Examples
               echo 'Hello World';
          }
 
--   Before you can test it, you will need to run the script **funcAcl/scripts/taoPreparePublicActions.php** (in a shell using php). This will grant you access to the newly created action.<br/>
+-   Before you can test it, you will need to run the script **funcAcl/scripts/taoPreparePublicActions.php** (in a shell using php). This will grant you access to the newly created action.
 
      For example:<pre>sudo -u www-data php funcAcl/scripts/taoPreparePublicActions.php</pre>
 

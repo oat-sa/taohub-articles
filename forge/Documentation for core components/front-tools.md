@@ -18,8 +18,7 @@ Grunt
 
 [Grunt](http://gruntjs.com/) helps you to automate tasks like require.js optimization, SASS compiling, test running, code linting, etc.
 
-Grunt runs on node.js, so you need [node.js](https://nodejs.org/en/download/) installed (node <br/>
->= 4.0.0) and running.
+Grunt runs on node.js, so you need [node.js](https://nodejs.org/en/download/) installed (node >= 4.0.0) and running.
 
 - For Linux user, you could install it easily node from a native package using [nodesource](https://github.com/nodesource/distributions)
 

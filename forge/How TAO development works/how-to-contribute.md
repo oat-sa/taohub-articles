@@ -60,7 +60,7 @@ One week before the scheduled release, we publish Release Candidate versions. As
 
 During the development phase, we keep updating TAO from major issue. SVN-Patches are created and are directly provided to the community in the *comment* section of the related issue. Patch receives an incremental number and in the following days of the patch creation, the version available on TAO website will be updated and renamed according to the patch number. Patch’s Numbers are managed by the target version’s Head Developer.
 
-For instance, if the version of TAO available on the TAO website is *TAO 2.1.01*, *2.1* indicates the version number and *.01* indicates that the patch *01* had been applied.<br/>
+For instance, if the version of TAO available on the TAO website is *TAO 2.1.01*, *2.1* indicates the version number and *.01* indicates that the patch *01* had been applied.
 
 All available patches for a version may also be found in the [SVN](http://forge.taotesting.com/projects/tao/repository/show/patchs)
 
@@ -100,23 +100,23 @@ If you want larger access rights, please let us know !
 
 Over time, TAO is getting more and more complex (see TAO Architecture), meanwhile here is a list of TAO team members that can help you for different sections listed below and who will be in charge of validating contributions and assure the overall TAO Product Quality. Please be also sure to follow [Guidelines](../developer-guide/guidelines.md) and common conventions used by the TAO team.
 
-**TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339), [Raynald Jadoul](http://forge.taotesting.com/users/630)
 
-**Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Patrick Plichart](http://forge.taotesting.com/users/339)<br/>
+**Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Patrick Plichart](http://forge.taotesting.com/users/339)
 
-**TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)
 
-**TAO Delivery** [Somsack Sipasseuth](http://forge.taotesting.com/users/361)<br/>
+**TAO Delivery** [Somsack Sipasseuth](http://forge.taotesting.com/users/361)
 
-**TAO Groups** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Groups** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)
 
-**TAO Items** [Raynald Jadoul](http://forge.taotesting.com/users/630), [Cedric Alfonsi](http://forge.taotesting.com/users/352), [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)<br/>
+**TAO Items** [Raynald Jadoul](http://forge.taotesting.com/users/630), [Cedric Alfonsi](http://forge.taotesting.com/users/352), [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)
 
-**TAO Results** [Younes Djaghloul](http://forge.taotesting.com/users/347)<br/>
+**TAO Results** [Younes Djaghloul](http://forge.taotesting.com/users/347)
 
-**TAO Subjects** [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Subjects** [Raynald Jadoul](http://forge.taotesting.com/users/630)
 
-**WfEngine** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)<br/>
+**WfEngine** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)
 
 **TAO Documentation** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Laure Conde](http://forge.taotesting.com/users/503)
 

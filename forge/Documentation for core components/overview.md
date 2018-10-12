@@ -25,7 +25,7 @@ In order to understand how to use or extend the TAO Framework, you should have a
 The Bootstrap
 -------------
 
-The bootstrap is a class that helps you start the application. To begin with, the bootstrap’s job is to start the transverse functionalities: session, i18n, configuration, the connection to the API (and so on to the database). If you create a tool, a service or a function that would perform an operation for each request, you should add it to the *Bootstrap::start* method, even though it’s not common to do so.<br/>
+The bootstrap is a class that helps you start the application. To begin with, the bootstrap’s job is to start the transverse functionalities: session, i18n, configuration, the connection to the API (and so on to the database). If you create a tool, a service or a function that would perform an operation for each request, you should add it to the *Bootstrap::start* method, even though it’s not common to do so.
 
 Then, the bootstrap can start the MVC loop, where the URL is resolved, the controller called, etc. We will see how this loop works later. Now, you’re aware that it is started by the Bootstrap. For the command line scripts, the unit tests, or any no-MVC related services, this second step can be skipped.
 

@@ -22,7 +22,7 @@ Getting started
 
 - The only tweaking consists in identifying the raspberry PI on your network and find out the right URL to be typed in into your favorite web browser.
 
-Plug it on your network ! Find its IP on your network :<br/>
+Plug it on your network ! Find its IP on your network :
 
 If you are running Linux, you ay find the IP of the PI using this command line:
 
@@ -36,14 +36,14 @@ TAO account
 -----------
 
 TAO is pre installed and contains already an admin account\
-Access TAO using your web browser at http://pitao/<br/>
+Access TAO using your web browser at http://pitao/
 
 TAO admin user : pitao/pitao
 
 System account
 --------------
 
-You may want to tweak the system to your own needs, the default account is :<br/>
+You may want to tweak the system to your own needs, the default account is :
 
 Ssh: pi / raspberry
 

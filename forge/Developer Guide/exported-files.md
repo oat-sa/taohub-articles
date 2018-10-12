@@ -13,7 +13,7 @@ tags:
 Exported Files
 ==============
 
-This article will show and explain exported files that you can get from TAO.<br/>
+This article will show and explain exported files that you can get from TAO.
 
 These files are csv file so they will be displayed as table when opened with a spreadsheet software, in reality every column are separated by commas and the text is in quotes. There are samples of each exported files at the end of this page.
 

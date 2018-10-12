@@ -198,7 +198,7 @@ mysql_secure_installation
 
 The *mysql_secure_installation* program will simply ask you for a new *root* password.
 
-**Important!** If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:<br/>
+**Important!** If you plan to access MySQL using a specific database user (not root), make sure it has the following privileges:
 
 EXECUTE, SELECT, SHOW DATABASES, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, DELETE, DROP, INDEX, INSERT, UPDATE, RELOAD
 

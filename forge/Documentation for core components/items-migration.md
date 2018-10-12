@@ -45,7 +45,7 @@ How to migrate items
 
 There is a command line script to run with a few arguments to migrate your items.
 
-The script is located in `taoItems/scripts` and is called `migrateLegacy.php`<br/>
+The script is located in `taoItems/scripts` and is called `migrateLegacy.php`
 
 To run it
 
@@ -80,7 +80,7 @@ We can distinguish 3 scenarios:
 2.  You have some items files that you would like to convert but independently of a TAO installation.
 3.  You have some items files that you would like to insert in a recent TAO distribution.
 
-Regarding the scenario that match the best to your needs, you will run the script with a specific combination of arguments.<br/>
+Regarding the scenario that match the best to your needs, you will run the script with a specific combination of arguments.
 
 For example, for the second scenario, we will use the *input*, *output* and *pack* arguments. The command will look like this:
 

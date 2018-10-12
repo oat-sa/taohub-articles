@@ -17,8 +17,8 @@ brew install solr
 
 To have launchd start solr at login:
 
-ln -sfv /usr/local/opt/solr/<br/>
-*.plist <br/>
+ln -sfv /usr/local/opt/solr/
+*.plist 
 ~/Library/LaunchAgents
 
 

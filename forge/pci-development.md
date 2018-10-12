@@ -56,31 +56,31 @@ Versioning
 
 ### Principle
 
-Currently the portable element registry is able to register multiple versions of a single portable element. However on runtime, only the last version (with the highest version number) is automatically loaded. It means that registering any newer version with automatically impact all items that includes the updated portable element. The changes will reflect directly in preview, authoring and compiled delivery.<br/>
+Currently the portable element registry is able to register multiple versions of a single portable element. However on runtime, only the last version (with the highest version number) is automatically loaded. It means that registering any newer version with automatically impact all items that includes the updated portable element. The changes will reflect directly in preview, authoring and compiled delivery.
 
 Similarly unregistering a portable element will also impact all existing items that is making use of it and therefore prevent its rendering completely. Since it is a dangerous action, it is no longer exposed to end users. The api in php is nevertheless available to developers.
 
-Only one version can be used at once. Because javascript AMD dependencies reference fixed module names.<br/>
+Only one version can be used at once. Because javascript AMD dependencies reference fixed module names.
 
 If we want multiple version to be supported at once, the other version PCI “customInteractionTypeIdentifier” should be renamed. We are assuming here that two versions may potentially have different behaviours.
 
 ### Versioning in PCI standard
 
-The concept of version does not exist in PCI standard yet. We are planning to push this modification to improve the standard. Meanwhile TAO needs to support the import of PCI that has no defined version number. If the version is missing the arbitrary version number 0.0.0 is set.<br/>
+The concept of version does not exist in PCI standard yet. We are planning to push this modification to improve the standard. Meanwhile TAO needs to support the import of PCI that has no defined version number. If the version is missing the arbitrary version number 0.0.0 is set.
 
 PCI that support versioning will have the version set as the property “version”.
 
 ### Semantic versioning
 
 PCI version number follow the semantic versioning: MAJOR.MINOR.PATCH\
-MAJOR : incompatible change, both runtime libs and existing qti xml need to be updated (properties, response declaration, response processing). In this case, a separate update script is required to update the xml (items or/and deliveries) before the existing items can make use of the new major version.<br/>
+MAJOR : incompatible change, both runtime libs and existing qti xml need to be updated (properties, response declaration, response processing). In this case, a separate update script is required to update the xml (items or/and deliveries) before the existing items can make use of the new major version.
 
 MINOR : new features, libs are updated, qti xml does not need to be updated\
 PATCH : bug fix, libs may be updated, qti xml does not need to be updated
 
 ### How to: update my PCI in TAO
 
-If is a minor or a patch, the pci just need to be registered with the updated version number in the manifest. In practice, most of the portable elements being implemented for TAO are registered from their source directories, so you only need to:<br/>
+If is a minor or a patch, the pci just need to be registered with the updated version number in the manifest. In practice, most of the portable elements being implemented for TAO are registered from their source directories, so you only need to:
 
 - increase the version
 - re-register it in the update script

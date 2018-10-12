@@ -43,7 +43,7 @@ The control is made by the helper tao/helpers/funcacl/class.funcACL.php :: hasAc
 Optimisation
 ------------
 
-For optimizing the access to the database (processing <br/>
+For optimizing the access to the database (processing
 ~+5000 records), it create a file (tao/data/cache/RolesByActions) structured for giving a fast answer to the “hasAccess” request.
 
 Managing

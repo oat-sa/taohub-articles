@@ -36,8 +36,7 @@ TAO is a web application and needs to be hosted on a web server to be reachable 
 TAO needs Apache to be loaded with a specific module which is [mod_rewrite](http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html). It enables TAO to rewrite requested URLs on the fly. To check if mod_rewrite is up and running on your Apache instance, launch the following command in a console: *httpd -l*. This command lists all Apache modules running. You should see mod_rewrite.c in the output list. If not please make sure that:
 
 -   the */modules* directory of your Apache folder contains *mod_rewrite.so* file.
--   the *LoadModule rewrite_module modules/mod_rewrite.so* directive exists in your httpd.conf configuration file. Remove any comment sign (‘<br/>
-#’) if it is the first character of the related line.
+-   the *LoadModule rewrite_module modules/mod_rewrite.so* directive exists in your httpd.conf configuration file. Remove any comment sign (‘#’) if it is the first character of the related line.
 
 Please also check that the *AllowOverride All* directive is set for your DocumentRoot. You can find it in httpd.conf as\
 in the following example:
@@ -91,7 +90,7 @@ TAO requires either
 Next step
 ---------
 
-You now have to configure TAO itself. For this purpose, the Installation and Upgrading section is at your disposal.<br/>
+You now have to configure TAO itself. For this purpose, the Installation and Upgrading section is at your disposal.
 
 You will learn how to set up the MySQL connection, create the knowledge base and the very first administrator user.
 

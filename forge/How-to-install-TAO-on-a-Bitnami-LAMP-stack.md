@@ -30,7 +30,7 @@ Download TAO builds on the document root, extract them and rename extracted fold
     unzip TAO_3.0.0_build.zip && mv TAO_3.0.0_build tao3
 ```
 
-The TAO 2.6.7 installer gives such outcome:<br/>
+The TAO 2.6.7 installer gives such outcome:
 
 ![](resources/bitnami_lamp_stack_tao267_requirements_check_1.png)
 
@@ -55,7 +55,7 @@ The TAO 2.6.7 installer gives now such outcome:
 
 ![](resources/bitnami_lamp_stack_tao267_requirements_check_2.png)
 
-Same goes for the TAO 3.0 installer:<br/>
+Same goes for the TAO 3.0 installer:
 
 ![](resources/bitnami_lamp_stack_tao3_requirements_check.png)
 

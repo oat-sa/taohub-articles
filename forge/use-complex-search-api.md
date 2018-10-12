@@ -268,10 +268,7 @@ supported operators :
   CONTAIN                ‘contains’     LIKE ‘value’
   BEGIN_BY              ‘begin’        LIKE ‘value%’
 
-use oat\<br/>
-search\<br/>
-helper\<br/>
-SupportedOperatorHelper to see all supported operators
+use oat\search\helper\SupportedOperatorHelper to see all supported operators
 
 ### usage examples :
 
@@ -386,7 +383,7 @@ get 10 results offset 5 :
 Gateway :
 ---------
 
-gateway is the higher component of complex search.<br/>
+gateway is the higher component of complex search.
 
 It provide query builder and it execute query using default database driver.
 
@@ -408,7 +405,7 @@ to debug query use printQuery method :
 Result Set :
 ------------
 
-a result set is returned by gateWay search method’s.<br/>
+a result set is returned by gateWay search method’s.
 
 It’s an arrayIterator adding total method which return full number for your query .
 

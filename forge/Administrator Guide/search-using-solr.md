@@ -36,7 +36,7 @@ Configure Solr
 You have to run and create core based on default TAO preset
 
 solr start\
-solr create_core -c **CORE_NAME** -d <br/>
+solr create_core -c **CORE_NAME** -d 
 *TAO_ROOT_DIRECTORY\*/vendor/oat-sa/lib-tao-solarium/doc/solr/conf
 
 Activation script assumes that
@@ -50,7 +50,7 @@ Configure TAO
 
 Modify the configuration to match your Solr server by specifying parameters:
 
-sudo -u www-data php <br/>
+sudo -u www-data php 
 *TAO_ROOT_DIRECTORY\*/vendor/oat-sa/lib-tao-solarium/bin/activateSolarium.php **TAO_ROOT_DIRECTORY [HOST] [PORT] [PATH]**
 
 It should return “Switched to Solr search using Solarium”

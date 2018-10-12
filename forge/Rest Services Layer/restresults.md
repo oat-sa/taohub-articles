@@ -19,7 +19,7 @@ Available since TAO 2.6
 Endpoint
 --------
 
-There are two endpoints one for TAO 2.6 version and the other since TAO 3.0.<br/>
+There are two endpoints one for TAO 2.6 version and the other since TAO 3.0.
 
 If you are using TAO 2.6 use the following URL :
 

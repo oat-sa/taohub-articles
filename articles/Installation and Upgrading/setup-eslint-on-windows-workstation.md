@@ -5,7 +5,7 @@ To install ESLint plugin on PHP Storm go to: File > Settings > Plugins > Browse 
 
 Install Node.js and install ESLint globally with command `npm i -g eslint`.
 
-Configuration file is located at: `package-tao\tao\views\build\.eslintrc.json`
+Configuration file is located at: `tao\views\build\.eslintrc.json`
 
 ## 2. Setup end of line characters on Windows / PHPStorm
 

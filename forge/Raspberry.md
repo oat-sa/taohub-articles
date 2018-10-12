@@ -9,7 +9,7 @@ tags: {  }
 TAO on a Raspberry
 ==================
 
-![](resources/raspberry-pi-7.jpg)<br/>
+![](resources/raspberry-pi-7.jpg)
 
 So, you want to use raspberry as a TAO web server and deliver your tests over a local Wi-Fi ?
 
@@ -39,7 +39,7 @@ Insert the sd card into your raspberry, plug the power.
 
 *Scenario 1: You have a screen connected on the raspberry.*
 
-Login as “pi” using password “raspberry”<br/>
+Login as “pi” using password “raspberry”
 
 Type in the shell
 
@@ -66,7 +66,7 @@ and take note of the resulting IP address.
 *Scenario 2: Like us, you couldn’t afford buying a screen …*
 
 This one is difficult, all raspberry have a MAC address starting with b8:27:eb\
-Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.<br/>
+Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.
 
 From a mac you may use conveniently http://ivanx.com/raspberrypi/files/PiFinder.zip\
 From Linux :
@@ -97,13 +97,13 @@ This step may become mandatory especially if you don’t use vhost. As TAO memor
 
     passwd pi
 
-8. Start the LAMP stack installation :<br/>
+8. Start the LAMP stack installation :
 
 http://forge.taotesting.com/projects/tao/wiki/InstallUbuntuApacheMySQL
 ----------------------------------------------------------------------
 
 9. Start TAO installation\
-From any computer on the same network :<br/>
+From any computer on the same network :
 
 http://yourip/tao/install\
 or vhost\

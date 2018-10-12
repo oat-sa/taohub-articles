@@ -21,7 +21,7 @@ Install PDFjs viewer
 Install PDF.js library, using the script
 ----------------------------------------
 
-For users with a Unix machine, you can use the following bash script to download and install PDF.js.<br/>
+For users with a Unix machine, you can use the following bash script to download and install PDF.js.
 
 TAO 3.0: [PDFJS_Install_TAO_3x.sh](../resources/third-party/PDFJS_Install_TAO_3x.sh)
 

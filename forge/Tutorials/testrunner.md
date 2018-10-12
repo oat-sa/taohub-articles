@@ -68,7 +68,7 @@ Explications
 
 This is one of the simplest test models that can be implemented:
 
-During the execution of a random test one item will be chosen by random from the pool of available items (at the time of compilation)<br/>
+During the execution of a random test one item will be chosen by random from the pool of available items (at the time of compilation)
 
 and after the test-taker has responded to this item the test will terminate.
 
@@ -98,7 +98,7 @@ service calls we can create the following structure:
 We have one entry per item with:
 
 -   ‘runtime’ the php serialized ServiceCall object, that we can deserialize during runtime
--   ‘label’ stores the value of the property label during compilation. This is currently unused in the runner,<br/>
+-   ‘label’ stores the value of the property label during compilation. This is currently unused in the runner,
 
     but we could store several other properties values that could influence the item choice in the test-runner.
 

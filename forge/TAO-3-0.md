@@ -16,7 +16,7 @@ Features
 
 "The QTI™ (Question and Test Interoperability™) and APIP™ (Accessible Portable Item Protocol™) workgroups have defined a standard way for technology enhanced items (TEIs) or Custom Interaction types to be represented as part of the QTI specification.
 
-This best practice document outlines a method that allows an author to define an almost unlimited variety of custom interaction types, while still keeping the item portable between different systems. This is achieved by making use of common web technologies combined with an agreement about how to communicate the results of a learner’s interaction to a QTI/APIP rendering engine. By following the best practice documented here, most TEIs and assessment components can increase their value by supporting interoperability."<br/>
+This best practice document outlines a method that allows an author to define an almost unlimited variety of custom interaction types, while still keeping the item portable between different systems. This is achieved by making use of common web technologies combined with an agreement about how to communicate the results of a learner’s interaction to a QTI/APIP rendering engine. By following the best practice documented here, most TEIs and assessment components can increase their value by supporting interoperability."
 
 src: http://www.imsglobal.org/assessment/interactions.html
 
@@ -26,21 +26,19 @@ TAO 2.6 exposed a brand new WYSIWYG editor with a modern flat design. TAO 3.0 en
 
 ### Data Rights Access Management
 
-\
+
 Computer based assessment project involve several stakeholders, the resources, items, tests are designed and authored sometimes collaboratively. In addition to the authentication system, a fine grained control access should be added so that resources or information access (read, write, delete, create) may be set considering specific groups of users or roles.
 
-Two different approaches could be considered :<br/>
+Two different approaches could be considered :
 
-- Rights access at resource level, considering access control on an item globally for instance.<br/>
+- Rights access at resource level, considering access control on an item globally for instance.
 
 - Rights access at knowledge level, considering access control on every knowledge defined (every meta-data)
 
-Rights Management System Prevent users of the back office from accessing data they are not authorized. Design and implement a rights management layer on Generis. See [Generis Overview](documentation-for-core-components/generis-overview.md)<br/>
+Rights Management System Prevent users of the back office from accessing data they are not authorized. Design and implement a rights management layer on Generis. See [Generis Overview](documentation-for-core-components/generis-overview.md)
 
-This will allow users to share and restrict access to any resource with other TAO users based on user identification and groups users belong to. This functionality is strongly needed since TAO could be distributed and allows sharing of resources across the web. triple(S,P,O). –<br/>
-> utriple(S,P,O,U).<br/>
+This will allow users to share and restrict access to any resource with other TAO users based on user identification and groups users belong to. This functionality is strongly needed since TAO could be distributed and allows sharing of resources across the web. triple(S,P,O). –> utriple(S,P,O,U).
 
-}}
 
 Migration Guidelines
 --------------------

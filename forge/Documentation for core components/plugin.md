@@ -11,9 +11,9 @@ tags:
 How to develop a Javascript Component
 =====================================
 
-You want to develop a Javascript component to use it from several place of you application. Before starting the development there are some things you have to know and some questions you have to think about.<br/>
+You want to develop a Javascript component to use it from several place of you application. Before starting the development there are some things you have to know and some questions you have to think about.
 
-First of all you will have to chose between a javascript plugin or a JQuery plugin. Javascript plugin are often a template that you want to have on many page and configure it a little. Jquery plugin are more about modifying or adding some functionality to an existing DOM element.<br/>
+First of all you will have to chose between a javascript plugin or a JQuery plugin. Javascript plugin are often a template that you want to have on many page and configure it a little. Jquery plugin are more about modifying or adding some functionality to an existing DOM element.
 
 Now you have to thing about the purpose of your plugin, feature you want it to have. So you will be able to find an API, a list of method it will expose, and start the development of your plugin.
 
@@ -47,7 +47,7 @@ Pluginifier is a tool that will turn your JQuery script into a plugin. You will 
 Javascript Plugin
 -----------------
 
-We will see how to make a Javascript plugin throught an example. Let’s say that you want to display a box with a message on your pages and you have a common template even if the message is different. Then when you click on a button it will call an url and return something.<br/>
+We will see how to make a Javascript plugin throught an example. Let’s say that you want to display a box with a message on your pages and you have a common template even if the message is different. Then when you click on a button it will call an url and return something.
 
 To do this you will need three variables, the Api that contains all the methods that you will need for your plugin, the factory, that will instanciate a new object and a state that will contains the state of your object and modify this state.
 
@@ -107,7 +107,7 @@ In your template you can display the different parameters with the `{{arg1}}` st
 Unit Test
 ---------
 
-Unit tests should be mostly write before the plugin code but you can execute them only when the plugin is finalize.<br/>
+Unit tests should be mostly write before the plugin code but you can execute them only when the plugin is finalize.
 
 First create a folder named as your plugin that contains a test.html and a test.js
 
@@ -146,10 +146,9 @@ First create a folder named as your plugin that contains a test.html and a test.
 
 
 
-the `<base/>` should refer to the tao/views folder in order to load correct js and css. with this code you will load all libraries that are needed to launch your tests. You can also add blanket `js/lib/blanket/blanket.min.js`.<br/>
+the `<base/>` should refer to the tao/views folder in order to load correct js and css. with this code you will load all libraries that are needed to launch your tests. You can also add blanket `js/lib/blanket/blanket.min.js`.
 
-You can put all you want in the <br/>
-#qunit-fixture div, this will be cleaned after each test so you will not have side effect.
+You can put all you want in the #qunit-fixture div, this will be cleaned after each test so you will not have side effect.
 
     define(['jquery', 'your/plugin'], function($, plugin){
         'use strict';

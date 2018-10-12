@@ -39,7 +39,7 @@ The following describes how to call remotely services from TAO. They are illustr
 Connection and Identification (Basic)
 -------------------------------------
 
-Under PHP, you may use [cURL](http://php.net/manual/fr/book.curl.php)<br/>
+Under PHP, you may use [cURL](http://php.net/manual/fr/book.curl.php)
 
 As per the Basic HTTP authentication, you will need to send the credentials over each request.
 
@@ -330,7 +330,7 @@ The outcome according to application/xml :
 Create a new Test taker
 -----------------------
 
-You will have to provide some mandatory parameters (in this case the login and the password).<br/>
+You will have to provide some mandatory parameters (in this case the login and the password).
 
 For some parameters (Type, language) default values are applied, but you may explicit a different type or language.
 
@@ -338,20 +338,13 @@ In general, you need to identify the parameters using URIs, for your convenience
 
 The list of aliases is the following, (and if it is mandatory bit) :
 
--   “login”=<br/>
-> PROPERTY_USER_LOGIN,true
--   “password” =<br/>
-> PROPERTY_USER_PASSWORD,true
--   “guiLg” =<br/>
-> PROPERTY_USER_UILG, false
--   “dataLg” =<br/>
-> PROPERTY_USER_DEFLG, false
--   “firstName”=<br/>
-> PROPERTY_USER_LASTNAME,false
--   “mail”=<br/>
-> PROPERTY_USER_MAIL,false
--   “type”=<br/>
-> RDF_TYPE,false
+-   “login”=> PROPERTY_USER_LOGIN,true
+-   “password” => PROPERTY_USER_PASSWORD,true
+-   “guiLg” => PROPERTY_USER_UILG, false
+-   “dataLg” => PROPERTY_USER_DEFLG, false
+-   “firstName”=> PROPERTY_USER_LASTNAME,false
+-   “mail”=> PROPERTY_USER_MAIL,false
+-   “type”=> RDF_TYPE,false
 
 
 
@@ -667,7 +660,7 @@ Delete a test taker.
 Identification using Digest
 ---------------------------
 
-The Digest protocol is not yet implemented. Steps left for implementing it :<br/>
+The Digest protocol is not yet implemented. Steps left for implementing it :
 
 - Store along user definition their hash upon user creation and update\
 - Retreeve this hash and combine it within RestCommonModule.php
@@ -675,19 +668,15 @@ The Digest protocol is not yet implemented. Steps left for implementing it :<br/
 How to contribute here ?
 ------------------------
 
--   A library for php to connect on our REST layer would probably help programmers, this library would expose get(<br/>
-$uri=null), post(<br/>
-$parameters), put(<br/>
-$uri, <br/>
-$parameters), delete(<br/>
-$uri) methods.<br/>
+-   A library for php to connect on our REST layer would probably help programmers, this library would expose 
+get($uri=null), post($parameters), put($uri, $parameters), delete($uri) methods.
 
     Difficulty: easy
 
 How to add rest services on top of my custom TAO extension I wrote ?
 --------------------------------------------------------------------
 
-You will need to add a rest controller extending the rest convenience built in TAO and to implement the four commands from REST.<br/>
+You will need to add a rest controller extending the rest convenience built in TAO and to implement the four commands from REST.
 
 Example taken from test takers :
 

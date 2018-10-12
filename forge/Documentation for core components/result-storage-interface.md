@@ -37,7 +37,7 @@ Concepts
 
 *deliveryResultIdentifier*
 
-Used to identify the set of information collected for the instantiation of a test delivery by a test taker. This identifier is used for further calls to the implementation in order to stack extra information as the data gets collected by the driver. The implementation should rely strictly on this to store the data adequately. The implementation can’t rely on any other “state” information like a session(the test session may be interrupted, etc.)<br/>
+Used to identify the set of information collected for the instantiation of a test delivery by a test taker. This identifier is used for further calls to the implementation in order to stack extra information as the data gets collected by the driver. The implementation should rely strictly on this to store the data adequately. The implementation can’t rely on any other “state” information like a session(the test session may be interrupted, etc.)
 
 The spawn function to be implemented should return a valid unique new identifier (string).
 
