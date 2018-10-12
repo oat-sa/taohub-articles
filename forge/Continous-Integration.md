@@ -35,7 +35,7 @@ Unit Test
 -   Run Unit test according to test configuration stored in conf/phpunit_mysql.xml
 -   Generate code coverage report
 
-Howto setup Jenkins
+How to setup Jenkins
 -------------------
 
 -   Create your jenkins project

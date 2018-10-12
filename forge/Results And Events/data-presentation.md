@@ -55,7 +55,7 @@ In this section, we present the architecture of the UTR extension by providing t
 The extension contains 4 classes
 
 1.  **RegCommon**: provides the main and the common methods to build the table of result.
-    1.  Get clases according to instances
+    1.  Get classes according to instances
     2.  Filter the properties to provide to hide RDF ones.
     3.  Get the classes that are range of the selected classes.
     4.  Get the value of column according to the its description, specially the path value
@@ -68,7 +68,7 @@ The extension contains 4 classes
     5.  Export to CSV and native excel
 
 3.  **UtrStatistic** in this version, it gives a percentage of no null value for rows and column
-4.  **UtrFilter**: addes filter feature to the table according to a complex filter criteria.
+4.  **UtrFilter**: adds filter feature to the table according to a complex filter criteria.
 
 ### Structure of the table
 

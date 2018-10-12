@@ -20,7 +20,7 @@ Requirements
 
 For this tutorial you will need:
 
--   a working TAO 2.5 instalation
+-   a working TAO 2.5 installation
 
 You should already be familar with:
 

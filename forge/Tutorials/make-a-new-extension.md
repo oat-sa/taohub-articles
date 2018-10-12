@@ -23,7 +23,7 @@ Preparation
 1.  Install TAO (2.4+)
 2.  Get the [zipped extension](http://forge.taotesting.com/attachments/download/2374/taoDocs_24_tutorial.zip)
 3.  Unzip it in your TAO root folder
-4.  Make sure your webserver has read/write access to taoDocs
+4.  Make sure your web server has read/write access to taoDocs
 
 ### Install the extension
 

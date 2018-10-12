@@ -18,7 +18,7 @@ Preparation
 1.  Install TAO (2.6)
 2.  Download [taoDocs_26_tutorial.zip](resources/taoDocs_26_tutorial.zip)
 3.  Unzip it in your TAO root folder
-4.  Make sure your webserver has read/write access to taoDocs
+4.  Make sure your web server has read/write access to taoDocs
 
 ### Install the extension
 

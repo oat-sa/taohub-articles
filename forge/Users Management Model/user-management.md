@@ -74,7 +74,7 @@ As explained before, the TAO platform can be accessed through a work-flow that w
 
 Fig .7
 
-The predefined *Role*, *Workflow* *User Role* allow Users having this Role to access the Worklow Engine. Adding a *User* in the Process Extension will add an instance of the *Workflow User Role*(*Chuck* and *Pedro* have been created as *Workflow User)*.
+The predefined *Role*, *Workflow* *User Role* allow Users having this Role to access the Workflow Engine. Adding a *User* in the Process Extension will add an instance of the *Workflow User Role*(*Chuck* and *Pedro* have been created as *Workflow User)*.
 
 ![](http://forge.taotesting.com/attachments/289/role-addingNewWfUser.png)
 

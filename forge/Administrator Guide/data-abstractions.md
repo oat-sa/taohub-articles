@@ -233,7 +233,7 @@ Importing test-takers to Redis is achieved through a CSV import script.
 
 ## Result storage abstraction
 
-The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server. This happens in the back office user interface respectively in *Result Servers Management* and *Delivery* tabs.
+The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server. This happens in the Back Office user interface respectively in *Result Servers Management* and *Delivery* tabs.
 
 Two major implementations of Result Storage exist:
 

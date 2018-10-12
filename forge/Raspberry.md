@@ -63,7 +63,7 @@ Type in the shell
 
 and take note of the resulting IP address.
 
-*Scenario 2: Like us, you couldn’t afford buying a screen …*
+*Scenario 2: Like us, you couldn't afford buying a screen …*
 
 This one is difficult, all raspberry have a MAC address starting with b8:27:eb\
 Ping all the IP addresses, and check the MAC addresses for the first 6 hex characters.

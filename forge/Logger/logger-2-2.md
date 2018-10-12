@@ -74,7 +74,7 @@ upon reaching max_file_size, the first half of the log file will be deleted. Def
 ‘format’ => the format of the log entry\
 ‘max_file_size’ => maximum size a single logfile can reach\
 ‘directory’ => directory to which logfiles will be archived to, once they reached max_file_size\
-‘compression’ => the compression algorithm to use for archived files, defaults to ‘zip’ only alternativ at the moment is ‘none’
+‘compression’ => the compression algorithm to use for archived files, defaults to ‘zip’ only alternative at the moment is ‘none’
 
 upon reaching max_file_size, the log file will be appended the current date and moved to the directory indicated by\
 the configuration parameter ‘directory’ if present or the same directory as the logfile if absent. If this file already exists\

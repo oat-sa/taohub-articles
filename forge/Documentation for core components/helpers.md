@@ -18,7 +18,7 @@ Helpers
 Utilities
 ---------
 
-Helpers contain transverse functionalities of the application or an extension. By definition a *helper* helps manage non-business operations. It could be used everywhere but shouldn’t be defined in one of the MVC layers. A common representation of the helper is the toolbox: each helper is a toolbox providing a set of utilities for a particular domain.
+Helpers contain transverse functionalities of the application or an extension. By definition a *helper* helps manage non-business operations. It could be used everywhere but shouldn't be defined in one of the MVC layers. A common representation of the helper is the toolbox: each helper is a toolbox providing a set of utilities for a particular domain.
 
 ### TAO helpers overview
 
@@ -157,7 +157,7 @@ The container class is now finished. It contains the reference in our new form.
 
 **2. Use of the container in a controller’s action**
 
-1.  Create (if it doesn’t exist) a module *myExt_actions_Main* in your extension: *myExt/actions/class.Main.php*
+1.  Create (if it doesn't exist) a module *myExt_actions_Main* in your extension: *myExt/actions/class.Main.php*
 2.  Create a new action *login* in the *Main* module (the URL to call it will be */myExt/Main/login*)
 
 > One action is sufficient as the form will post on itself.

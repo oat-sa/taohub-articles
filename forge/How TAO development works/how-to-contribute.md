@@ -22,11 +22,11 @@ As an open source project, TAO is open to any contributor who demonstrates commi
 If you are interested in contributing to TAO, you have various options:
 
 -   Anyone can express new requirements they are interested in. The more detailed your requirement is, the higher chance this functionality is to be included in the roadmap, and part of the next version. Use the menu **New Issue** and choose the tracker **new feature**
--   Developers can develop new extensions as TAO was built to be completely modular. See Howto Make a new extension
--   Developers can help us fixing issues/enhancing feature/adding UnitTest. See Howto Change core code|Change code
--   Anyone can translate TAO in another language. See Howto Translate TAO into other languages
--   Anyone can help us improve TAO Documentation. See Howto Help document TAO
--   Anyone can join the testing effort. See Howto Join the testing effort
+-   Developers can develop new extensions as TAO was built to be completely modular. See How to Make a new extension
+-   Developers can help us fixing issues/enhancing feature/adding UnitTest. See How to Change core code|Change code
+-   Anyone can translate TAO in another language. See How to Translate TAO into other languages
+-   Anyone can help us improve TAO Documentation. See How to Help document TAO
+-   Anyone can join the testing effort. See How to Join the testing effort
 
 ### 1.2 How can you do it?
 
@@ -43,7 +43,7 @@ TAO is periodically released according to an announced schedule: we usually targ
 
 At the beginning of a new release phase, we first put efforts working on refactoring existing features, fixing bugs and cleaning old issues, update documentation, update build script. We then focus on developing the set of Features according to the Plans_for_the_future|roadmap.
 
-Occasionally some alpha versions may be released without warranty on the stability. Such versions shouldn’t be used for production mode.
+Occasionally some alpha versions may be released without warranty on the stability. Such versions shouldn't be used for production mode.
 
 We then focus on building a Beta version that usually comes out 3-4 weeks before the announced release day.
 

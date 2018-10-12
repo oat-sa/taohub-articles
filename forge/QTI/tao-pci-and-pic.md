@@ -15,7 +15,7 @@ TAO PCI and PIC
 
 ﻿h1. PCI and PIC specifications
 
-Since TAO 3.0, TAO offers complete PCI and PIC hooks to enable developers to extend the functonalities offered by IMS QTI 2.1 standard.
+Since TAO 3.0, TAO offers complete PCI and PIC hooks to enable developers to extend the functionalities offered by IMS QTI 2.1 standard.
 
 PCI stands for Portable Custom Interaction. QTI offers about 20 types of interactions (questions types). Among them, the special custom interaction gives tool vendors opportunities to implement any type of interaction. This however breaks the interoperability which is supposed to be the strongest benefit adopting the QTI standard. IMS is therefore working on a new specification that enable tool vendors to structure their custom interaction in an interoperable way. Portable Custom Interaction is the result of this effort. Currently a few vendors are experimenting with this PCI specification and are making new proposal to improve it. OAT, publisher of TAO is very active in defining this PCI specification. As a illustration of the benefit and power of PCI, TAO 3.0 comes up with a full working implementation of PCI.
 

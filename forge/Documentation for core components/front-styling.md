@@ -14,7 +14,7 @@ Styling
 Using the theme defined into the Style guide
 ------------------------------------------------
 
-The theme defined into the style guide is included into the back office. It comes from tao/views/css/tao-main-style.css
+The theme defined into the style guide is included into the Back Office. It comes from tao/views/css/tao-main-style.css
 
 To prevent conflicts with current style, the style applies only to elements of a container with the class `tao-scope`. For example, to use buttons, you need to wrap them into a container with this class:
 

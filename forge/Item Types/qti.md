@@ -162,7 +162,7 @@ If you are using the [QTI Authoring tool](http://forge.taotesting.com/projects/t
 Portable Custom Interaction
 ---------------------------
 
-Since TAO 3.0, TAO offers complete PCI and PCI hooks to enable developers to extend the functonalities offered by IMS QTI 2.1 standard.
+Since TAO 3.0, TAO offers complete PCI and PCI hooks to enable developers to extend the functionalities offered by IMS QTI 2.1 standard.
 
 Portable Custom Interaction Best Practice Change Proposal\
 The Change proposal recommendation to implement TAO PCI can be found in TAO PCI

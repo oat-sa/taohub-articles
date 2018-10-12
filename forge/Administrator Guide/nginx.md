@@ -61,7 +61,7 @@ TAO now supports a single entry point simplifying the config even further:
 
 ### Known issues
 
--   max upload filesize is not detected correctly from nginx client_max_body_size configuration
+-   max upload file size is not detected correctly from nginx client_max_body_size configuration
 
 Nginx and TAO 3.0
 -----------------
@@ -82,7 +82,7 @@ Nginx and TAO 3.0
 
 ### Known issues
 
--   max upload filesize is not detected correctly from nginx client_max_body_size configuration
+-   max upload file size is not detected correctly from nginx client_max_body_size configuration
 -   HTTP basic authentication not working for REST api
 
 Nginx and TAO 2.6

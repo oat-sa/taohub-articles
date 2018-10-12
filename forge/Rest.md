@@ -456,7 +456,7 @@ Creating a test taker with custom properties / type or language
 
     curl_close($process);
 
-If you don’t know the URIs of properties or classes, you may use the ontoBrowser extension of TAO, it is available from the default package of TAO and needs to be installed using the settings pane in the backoffice.
+If you don’t know the URIs of properties or classes, you may use the ontoBrowser extension of TAO, it is available from the default package of TAO and needs to be installed using the settings pane in the Back Office.
 
 Update an existing test taker
 -----------------------------
@@ -663,7 +663,7 @@ Identification using Digest
 The Digest protocol is not yet implemented. Steps left for implementing it :
 
 - Store along user definition their hash upon user creation and update\
-- Retreeve this hash and combine it within RestCommonModule.php
+- Retrieve this hash and combine it within RestCommonModule.php
 
 How to contribute here ?
 ------------------------
@@ -716,7 +716,7 @@ Example taken from test takers :
     }
     ?>
 
-then implement your own service laye exposing get/put/delete for that particular type of resources
+then implement your own service layer exposing get/put/delete for that particular type of resources
 
 
     class taoSubjects_models_classes_CrudSubjectsService

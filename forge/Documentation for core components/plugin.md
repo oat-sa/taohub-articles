@@ -47,7 +47,7 @@ Pluginifier is a tool that will turn your JQuery script into a plugin. You will 
 Javascript Plugin
 -----------------
 
-We will see how to make a Javascript plugin throught an example. Let’s say that you want to display a box with a message on your pages and you have a common template even if the message is different. Then when you click on a button it will call an url and return something.
+We will see how to make a Javascript plugin through an example. Let’s say that you want to display a box with a message on your pages and you have a common template even if the message is different. Then when you click on a button it will call an url and return something.
 
 To do this you will need three variables, the Api that contains all the methods that you will need for your plugin, the factory, that will instanciate a new object and a state that will contains the state of your object and modify this state.
 
@@ -57,7 +57,7 @@ To do this you will need three variables, the Api that contains all the methods 
         }
     }
 
-The API will contains all the core properties and methods of your plugin. In the example we will have for exemple a method to create the template in the state we want, with the correct message and the correct options. Another will display this message by putting the content into the right container and bind the click on the button to call the method that we configure on initialization. And surely a last one to close the message and clear the instance.
+The API will contains all the core properties and methods of your plugin. In the example we will have for example a method to create the template in the state we want, with the correct message and the correct options. Another will display this message by putting the content into the right container and bind the click on the button to call the method that we configure on initialization. And surely a last one to close the message and clear the instance.
 
     var myState= {
         state : null,

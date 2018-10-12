@@ -85,7 +85,7 @@ Answer state:
 
 The template will be available in the style-guide.
 
-Once the behaviour clrealy defined, we can get started !
+Once the behaviour clearly defined, we can get started !
 
 ### step 1: extending the qti item model for authoring
 

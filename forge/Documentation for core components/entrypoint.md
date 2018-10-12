@@ -15,7 +15,7 @@ Entry-points are pages to which the user gets redirected after login. If multipl
 
 There are currently three entry-points in TAO:
 
-Backoffice
+Back office
 ----------
 
 Accessible to users with the role “Back Office”

@@ -22,7 +22,7 @@ Result storage abstraction
 
 The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server.
 
-This happens in the back office user interface respectively into the “Result Servers Management” and “Delivery” tabs.
+This happens in the Back Office user interface respectively into the “Result Servers Management” and “Delivery” tabs.
 
 Two major implementation of result Storage exist:
 

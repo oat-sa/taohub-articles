@@ -97,7 +97,7 @@ Only the `console` provider is implemented, but we can easily add and load other
 
 ---
 
-`ui/report` a component to display the exact same report generated everywhere in the backoffice
+`ui/report` a component to display the exact same report generated everywhere in the Back Office
 Task queue related :
 `core/taskQueue` the client side task queue API to manage tasks, currently only actions get/poll/remove are available
 `ui/taskQueue/status` the component to poll and display the current status and report for one task 

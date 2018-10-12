@@ -5,7 +5,7 @@ namespace oat\taoDocs\helpers;
 class FileUtils
 {
     /**
-     * @example use me to parse the data foldeer
+     * @example use me to parse the data folder
      *
      * parse a folder and get it's files
      *

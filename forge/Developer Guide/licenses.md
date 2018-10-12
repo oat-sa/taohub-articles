@@ -66,7 +66,7 @@ You do not have right to use TAO Trademark (i.e., the name of TAO to distribute 
 6. See also
 -----------
 
-More infos on TAO website :
+More info on TAO website :
 
 [Legal notice](http://taotesting.com/resources/legal-notice)
 

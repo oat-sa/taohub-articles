@@ -61,7 +61,7 @@ This is it!
 
 ### Data
 
-Data are stored in the knowledge base and could be translate for content created by the user tranks to the translate button feature that create an alternate value in a different language, that why in that previous example “Elections in the United States” have been translated into “Elections américaines”.
+Data are stored in the knowledge base and could be translated for content created by the user thanks to the translate button feature that create an alternate value in a different language, that why in that previous example “Elections in the United States” have been translated into “Elections américaines”.
 
 For build-in content, those translation are store in the knowledge base during the installation. We use RDF file to store in each extensions folder all content that require translation. For instance the following example is extracted from taoItems/locales/fr-FR/taoItem.rdf and deals with the property Item Content Label and Comment that in previous example had been translated into “Contenu de l’item” in French.
 
@@ -78,7 +78,7 @@ All RDF files in any locales folder of any TAO extension respect this format and
 The translation process
 -----------------------
 
-You can contribute to the translation effort of TAO in the dedicated platform http://translate.taotesting.com . We choose to use the open source toolkit [Pootle](http://translate.sourceforge.net/wiki/). Pootle user howto is available [here](http://translate.sourceforge.net/wiki/users/howto) .
+You can contribute to the translation effort of TAO in the dedicated platform http://translate.taotesting.com . We choose to use the open source toolkit [Pootle](http://translate.sourceforge.net/wiki/). Pootle user how to is available [here](http://translate.sourceforge.net/wiki/users/howto) .
 
 ![](../resources//attachments/download/2596/S%C3%A9lection_057.png):http://translate.taotesting.com/
 
