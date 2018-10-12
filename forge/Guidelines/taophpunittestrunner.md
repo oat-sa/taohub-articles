@@ -21,7 +21,7 @@ Connects to the API starting TestUser session.
 invokeProtectedMethod
 ---------------------
 
-Helper for accessing protected/private methods of tested classes.<br/>
+Helper for accessing protected/private methods of tested classes.
 
 Based on ReflectionClass.
 

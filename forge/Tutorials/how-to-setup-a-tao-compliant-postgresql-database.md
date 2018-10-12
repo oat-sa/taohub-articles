@@ -25,7 +25,7 @@ This tutorial was created with PostgreSQL 9.2.
 2. Database, Roles and Users
 ----------------------------
 
-Launch SQL Shell (psql) and connect as your *root* PostgreSQL. It is usually the *postgres* user account. We will know create the database iself, and the users and roles that will be authorized to use it.
+Launch SQL Shell (psql) and connect as your *root* PostgreSQL. It is usually the *postgres* user account. We will know create the database itself, and the users and roles that will be authorized to use it.
 
 In psql, enter the following statements:
 

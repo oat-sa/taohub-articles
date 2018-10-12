@@ -55,7 +55,7 @@ In this section, we present the architecture of the UTR extension by providing t
 The extension contains 4 classes
 
 1.  **RegCommon**: provides the main and the common methods to build the table of result.
-    1.  Get clases according to instances
+    1.  Get classes according to instances
     2.  Filter the properties to provide to hide RDF ones.
     3.  Get the classes that are range of the selected classes.
     4.  Get the value of column according to the its description, specially the path value
@@ -68,7 +68,7 @@ The extension contains 4 classes
     5.  Export to CSV and native excel
 
 3.  **UtrStatistic** in this version, it gives a percentage of no null value for rows and column
-4.  **UtrFilter**: addes filter feature to the table according to a complex filter criteria.
+4.  **UtrFilter**: adds filter feature to the table according to a complex filter criteria.
 
 ### Structure of the table
 
@@ -84,10 +84,10 @@ The extension contains 4 classes
 -   *Label* : is the label of the column.
 -   *Path* : is a complex structure.
 
-***Path* := *PU*[{ *Sep* } *PU* ]**<br/>
+***Path* := *PU*[{ *Sep* } *PU* ]**
 *
 
-*PU* : Property URI is the URI of a property of the ranged class.<br/>
+*PU* : Property URI is the URI of a property of the ranged class.
 
 *Sep* : is a separator. In the current version Sep = ‘**’
 
@@ -96,7 +96,7 @@ The extension contains 4 classes
 The path constitutes an important notion in the description of a column. The path permits to establish a relation with instances of other classes.
 
 -   To get the accurate instances between classes, we use the concept of path query; each path query is a sequence of property URI, which will be used to do model exploitation. After that, for each instance, on uses the trGetBridgePropertyValues() to get exactly the appropriate set of instance corresponding to the initial instance and based on the path.
--   The path is created based on a other sub function : get the range of the class, get the description of the properties …See php Doc.<br/>
+-   The path is created based on a other sub function : get the range of the class, get the description of the properties …See php Doc.
 
     On can put only the information related to the test it self, or on can also put other information from other class that are in relation with result classes. This is an interesting feature to use.
 

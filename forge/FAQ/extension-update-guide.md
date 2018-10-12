@@ -29,8 +29,7 @@ Excerpts from the documentation (https://getcomposer.org/doc/):
 
 ### versions references in composer.json
 
-tilde (<br/>
-~):
+tilde (~):
 
     The ~ operator is best explained by example: ~1.2 is equivalent to >=1.2 <2.0.0, while ~1.2.3 is equivalent to >=1.2.3 <1.3.0
 
@@ -41,7 +40,7 @@ Your modifications should be contained within a branch, with the following namin
 
 **modification_type / jira_ref - short-description**
 
-Exemples:
+Examples:
 
 -   bug/TAO-1756-ipassage-content-height
 -   hotfix/TAO-2323-mathjax-comments

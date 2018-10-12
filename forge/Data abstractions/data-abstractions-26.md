@@ -11,7 +11,7 @@ tags:
 Data abstractions 2.6
 =====================
 
-This document describes abstractions available for Tao 2.6. Please see Data abstractions for the current version of Tao.
+This document describes abstractions available for TAO 2.6. Please see Data abstractions for the current version of Tao.
 
 
 
@@ -20,9 +20,9 @@ There are currently 5 distinct storages that are used during the delivery:
 Result storage abstraction
 --------------------------
 
-The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server.<br/>
+The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server.
 
-This happens in the back office user interface respectively into the “Result Servers Management” and “Delivery” tabs.
+This happens in the Back Office user interface respectively into the “Result Servers Management” and “Delivery” tabs.
 
 Two major implementation of result Storage exist:
 
@@ -31,7 +31,7 @@ Two major implementation of result Storage exist:
 
 The KeyValue Result storage implementation may be installed and configured under the following conditions:
 
--   Make sure you have installed the packages :<br/>
+-   Make sure you have installed the packages :
 
     “redis-server” (on the server you want to use for the storage)
     “phpredis” on the TAO application server
@@ -69,7 +69,7 @@ The default persistence is defined in *generis/common/conf/default/persistences.
 
 ### Storing service states in a Redis server
 
-If you prefer to store these states in an alternativ storage copy the file *generis/common/conf/default/persistences.conf.php* to *generis/common/conf/persistences.conf.phpgeneris.conf.php* and modify the ‘serviceState’ entry to the following:
+If you prefer to store these states in an alternative storage copy the file *generis/common/conf/default/persistences.conf.php* to *generis/common/conf/persistences.conf.phpgeneris.conf.php* and modify the ‘serviceState’ entry to the following:
 
     'serviceState' => array(
         'driver' => 'phpredis',
@@ -77,16 +77,16 @@ If you prefer to store these states in an alternativ storage copy the file *gene
         'port' => 6379
     )
 
-Delivery execution informations storage abstraction
+Delivery execution information storage abstraction
 ---------------------------------------------------
 
 Delivery execution information cover everything related to what test taker has started/finished which delivery. The choice of the abstraction is done via the constant *DELIVERY_EXECUTION_HANDLER* in *generis/common/conf/generis.conf.php*.
 
-### Storing delivery execution informations in the ontology (default)
+### Storing delivery execution information in the ontology (default)
 
     define('DELIVERY_EXECUTION_HANDLER', 'taoDelivery_models_classes_execution_OntologyService');
 
-### Storing delivery execution informations in a key-value server
+### Storing delivery execution information in a key-value server
 
 To switch to a KeyValue persistence the constant *DELIVERY_EXECUTION_HANDLER* in *generis.conf.php* needs to be set to *taoDelivery_models_classes_execution_KeyValueService*:
 
@@ -103,7 +103,7 @@ Additionally the persistence used by the key value service needs to be defined i
 PHP session storage abstraction
 -------------------------------
 
-This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.<br/>
+This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.
 
 See also: http://php.net/manual/en/function.session-set-save-handler.php
 
@@ -129,7 +129,7 @@ The persistence used for the session is defined in *persistences.conf.php* and s
 URI provider
 ------------
 
-The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
+The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in TAO these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
 
 ### Using the SQL server as URI provider (default)
 

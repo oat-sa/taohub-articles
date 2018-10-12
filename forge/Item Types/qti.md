@@ -16,32 +16,32 @@ QTI
 A standard
 ----------
 
-The QTI standard version 2.0 was first implemented as the main item type in TAO version 1.3.<br/>
+The QTI standard version 2.0 was first implemented as the main item type in TAO version 1.3.
 
-From version 2.5, TAO moves from QTI 2.0 to 2.1.<br/>
+From version 2.5, TAO moves from QTI 2.0 to 2.1.
 
-The implemention of the QTI standard enables TAO to be more open and interoperable with other systems.<br/>
+The implementation of the QTI standard enables TAO to be more open and interoperable with other systems.
 
 The current available QTI features in TAO are:
 
-\* Import QTI Item (XML files compatible with [QTI 2.0](http://www.imsglobal.org/question/qti_v2p0/imsqti_infov2p0.html) or [QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))<br/>
+\* Import QTI Item (XML files compatible with [QTI 2.0](http://www.imsglobal.org/question/qti_v2p0/imsqti_infov2p0.html) or [QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))
 
- <br/>
-* Import QTI Package (ZIP files compatible with [IMS Content Packaging v1.1.4](http://www.imsglobal.org/content/packaging/cpv1p1p4/imscp_infov1p1p4.html))<br/>
+ 
+* Import QTI Package (ZIP files compatible with [IMS Content Packaging v1.1.4](http://www.imsglobal.org/content/packaging/cpv1p1p4/imscp_infov1p1p4.html))
 
- <br/>
-* Save the item content in the QTI format (XML)<br/>
+ 
+* Save the item content in the QTI format (XML)
 
- <br/>
-* Create or edit a QTI Item ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))<br/>
+ 
+* Create or edit a QTI Item ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))
 
- <br/>
-* Export item to XML file ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))<br/>
+ 
+* Export item to XML file ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))
 
- <br/>
-* Export one or more items to zip package ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))<br/>
+ 
+* Export one or more items to zip package ([QTI 2.1](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html))
 
- <br/>
+ 
 * Render QTI item in XHTML, CSS, Javascript
 
 For additional information regarding the QTI standard, please refer to the IMS Consortium web site:
@@ -53,18 +53,18 @@ For additional information regarding the QTI standard, please refer to the IMS C
 PHP Modelling
 -------------
 
-We use a PHP Object oriented model to represent a QTI item and enable you to manage it.<br/>
+We use a PHP Object oriented model to represent a QTI item and enable you to manage it.
 
-This model is the core of the development. The main idea is to import xml documents in the QTI format, in order to parse it and instantiate PHP objects.<br/>
+This model is the core of the development. The main idea is to import xml documents in the QTI format, in order to parse it and instantiate PHP objects.
 
-Then with the PHP object, you can update the item - add an interaction, change the properties, update the response model, etc.<br/>
+Then with the PHP object, you can update the item - add an interaction, change the properties, update the response model, etc.
 
 Once you are finished working on your model, you can save it, render it, etc :
 
 \* QTI XML format to save and export your item\
- <br/>
+ 
 * XHTML to preview and deliver the item\
- <br/>
+ 
 * PHP Array for other format transformation, e.g. json
 
 The QTI PHP model is outlined by the UML model below. Not all properties and methods are displayed, only the most significant ones.
@@ -82,7 +82,7 @@ You can find the complete source code documentation in the [PHP Doc](http://forg
 
 ### Sample code usage
 
-To create QTI item programatically, you can directly use the QTI model described in the previous section.<br/>
+To create QTI item programmatically, you can directly use the QTI model described in the previous section.
 
 Here is an example to create an Item with one single Interaction:
 
@@ -146,9 +146,9 @@ The QtiRunner.js is called to:
 -   collect and sent responses to the result server
 -   display feedback
 
-The QtiRunner lib also contains the programmatic interface of QTI renderers. The goal of a QTI renderer is to transform a QTI Item Javascript object into a user-friendly HTML, CSS and JS widgets.<br/>
+The QtiRunner lib also contains the programmatic interface of QTI renderers. The goal of a QTI renderer is to transform a QTI Item Javascript object into a user-friendly HTML, CSS and JS widgets.
 
-This interface is first introduced in TAO 2.5 and has currently only one implementation: the QTI DefaultRenderer (hence the +1).<br/>
+This interface is first introduced in TAO 2.5 and has currently only one implementation: the QTI DefaultRenderer (hence the +1).
 
 Though not mature yet, this interface is designed to welcome anyone to implement its own qti renderer in the future. This page will be updated in due time.
 
@@ -162,12 +162,12 @@ If you are using the [QTI Authoring tool](http://forge.taotesting.com/projects/t
 Portable Custom Interaction
 ---------------------------
 
-Since TAO 3.0, TAO offers complete PCI and PCI hooks to enable developers to extend the functonalities offered by IMS QTI 2.1 standard.
+Since TAO 3.0, TAO offers complete PCI and PCI hooks to enable developers to extend the functionalities offered by IMS QTI 2.1 standard.
 
 Portable Custom Interaction Best Practice Change Proposal\
 The Change proposal recommendation to implement TAO PCI can be found in TAO PCI
 
-The base proposal from IMS is a draft version subimitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html)
+The base proposal from IMS is a draft version submitted to IMS members for review. [IMS initial PCI proposal](http://www.imsglobal.org/assessment/pciv1p0cf/imsPCIv1p0cf.html)
 
 The proposal form Passific Metrics attempts to solve some issues from the original proposal with the introduction of the concept of “shared libraries” and a better structured XML serialization of PCIs. [Proposal from Pacific Metrics](http://www.imsglobal.org/assessment/PCI_Change_Request_v1pd.html)
 

@@ -51,40 +51,25 @@ You are now ready to deploy the TAO platform.
 
 We will now download the latest version of the TAO source code and deploy it on the web server. Go to the official TAO [download page](http://taotesting.com/get-tao/official-tao-packages/) and download the latest manual install release. You may also download the latest nightly build.
 
-Create a folder named **tao** in the root directory of your web server. Depending on your installation settings, it should be located at **C:\\MAMP\<br/>
-htdocs\<br/>
-tao\<br/>
-**. You can now unzip the TAO source code previously downloaded in the **tao** folder.
+Create a folder named **tao** in the root directory of your web server. Depending on your installation settings, it should be located at **C:\\MAMP\htdocs\tao\**. 
+You can now unzip the TAO source code previously downloaded in the **tao** folder.
 
 {{thumbnail(Extract TAO to htdocs folder.png,size=800,title=Extract TAO package)}}
 
 You should now have the following folders:
 
--   tao (full path: C:\\MAMP\<br/>
-htdocs\<br/>
-tao\<br/>
-tao\<br/>
-)
--   taoItems (full path: C:\\MAMP\<br/>
-htdocs\<br/>
-tao\<br/>
-taoItems\<br/>
-)
--   taoDelivery (full path: C:\\MAMP\<br/>
-htdocs\<br/>
-tao\<br/>
-taoDelivery\<br/>
-)
+-   tao (full path: C:\\MAMP\htdocs\tao\tao\)
+-   taoItems (full path: C:\\MAMP\htdocs\tao\taoItems\)
+-   taoDelivery (full path: C:\\MAMP\htdocs\tao\taoDelivery\)
 -   etc.
 
 ### 2.2. (Optional) Creation of a Virtual Host for TAO
 
-The TAO platform may be run using an Apache2 virtual host instead of a subfolder installation. We will create a new **virtual host** named **taoplatform** by editing the virtual host configuration file of Apache2. Depending on your installation settings, it should be located at **C:\\MAMP\<br/>
-bin\<br/>
-apache\<br/>
-conf\<br/>
-extra\<br/>
-**. Create a new configuration file httpd-taoplatform.conf with your favorite text editor (we recommend Notepad++) and edit it accordingly:
+The TAO platform may be run using an Apache2 virtual host instead of a subfolder installation. 
+We will create a new **virtual host** named **taoplatform** by editing the virtual host configuration file of Apache2. 
+Depending on your installation settings, it should be located at **C:\\MAMP\bin\apache\conf\extra\**. 
+Create a new configuration file httpd-taoplatform.conf with your favorite text editor (we recommend Notepad++) 
+and edit it accordingly:
 
 
         ServerAdmin webmaster@taoplatform
@@ -102,11 +87,8 @@ extra\<br/>
         ErrorLog C:\MAMP\logs\tao-error.log
         CustomLog C:\MAMP\logs\tao-access.log combined
 
-Open the main Apache2 configuration file located at **C:\\MAMP\<br/>
-bin\<br/>
-apache\<br/>
-conf\<br/>
-httpd.conf** and add the following line below the commented one:
+Open the main Apache2 configuration file located at **C:\\MAMP\bin\apache\conf\httpd.conf** and add the following 
+line below the commented one:
 
     # Various default settings
     #Include conf/extra/httpd-default.conf
@@ -116,11 +98,9 @@ httpd.conf** and add the following line below the commented one:
 
 This will integrate your virtual host configuration in the main Apache2 configuration file.
 
-Do not forget to make the hostname reachable by editing your system **hosts** file. Open Notepad++ in **administrator mode** and open your hosts file located at **C:\\Windows\<br/>
-System32\<br/>
-drivers\<br/>
-etc\<br/>
-hosts**. Add the following instructions at the end of the file:
+Do not forget to make the hostname reachable by editing your system **hosts** file. 
+Open Notepad++ in **administrator mode** and open your hosts file located at 
+**C:\\Windows\System32\drivers\etc\hosts**. Add the following instructions at the end of the file:
 
     127.0.0.1   taoplatform
 
@@ -138,7 +118,7 @@ Follow the instructions to finalize your TAO installation.
 
 ### 3. (Optional) Fine tuning
 
-To improve performance, you are strongly advised to enable in MAMP a PHP opcode caching such as OPCache:<br/>
+To improve performance, you are strongly advised to enable in MAMP a PHP opcode caching such as OPCache:
 
 {{thumbnail(PHP opcode cache.png,size=800,title=OPCache)}}
 

@@ -14,17 +14,17 @@ Rest Services Layer Tutorial
 Introduction
 ------------
 
-Starting from **TAO 2.5**, a [Representationnal State Transfer (REST)](http://en.wikipedia.org/wiki/Representational_state_transfer) layer allows you to manipulate data in TAO from any location and technology through simple HTTP requests. **This may not work in TAO 3.x as of yet.**
+Starting from **TAO 2.5**, a [Representational State Transfer (REST)](http://en.wikipedia.org/wiki/Representational_state_transfer) layer allows you to manipulate data in TAO from any location and technology through simple HTTP requests. **This may not work in TAO 3.x as of yet.**
 
 The four basic methods from [HTTP](https://en.wikipedia.org/wiki/Http) : GET / POST / PUT / DELETE allows you to fetch / create /modify or delete the different resources like test takers or items from any TAO node.
 
-Authentication mechanisms built in HTTP : Basic and Digest are being used for user identification and further restrictions are applied according to the functionality rights access settings as they are setup in the tao node you want to access.
+Authentication mechanisms built in HTTP: Basic and Digest are being used for user identification and further restrictions are applied according to the functionality rights access settings as they are setup in the TAO node you want to access.
 
-An exception handler treat the different cases and allows for catching any errors that may be triggered while executing your queries. A content negociation is being implemented and currently supports application/json and application/xml data exchange formats.
+An exception handler treats the different cases and allows for catching any errors that may be triggered while executing your queries. A content negotiation is being implemented and supports application/json and application/xml data exchange formats.
 
 ![](resources/REST.png)
 
-Tao Rest Documentation
+TAO Rest Documentation
 ----------------------
 
 -   Rest Services Layer
@@ -39,7 +39,7 @@ The following describes how to call remotely services from TAO. They are illustr
 Connection and Identification (Basic)
 -------------------------------------
 
-Under PHP, you may use [cURL](http://php.net/manual/fr/book.curl.php)<br/>
+Under PHP, you may use [cURL](http://php.net/manual/fr/book.curl.php)
 
 As per the Basic HTTP authentication, you will need to send the credentials over each request.
 
@@ -330,28 +330,21 @@ The outcome according to application/xml :
 Create a new Test taker
 -----------------------
 
-You will have to provide some mandatory parameters (in this case the login and the password).<br/>
+You will have to provide some mandatory parameters (in this case the login and the password).
 
 For some parameters (Type, language) default values are applied, but you may explicit a different type or language.
 
-In general, you need to identify the parameters using URIs, for your convenience aliases for the default parameters were added. You may defines any other inforamtions according to the properties defined along your test takers.
+In general, you need to identify the parameters using URIs, for your convenience aliases for the default parameters were added. You may define any other information according to the properties defined along with your test takers.
 
-The list of aliases is the following, (and if it is mandatory bit) :
+The list of aliases is the following, (and if it is mandatory bit):
 
--   “login”=<br/>
-> PROPERTY_USER_LOGIN,true
--   “password” =<br/>
-> PROPERTY_USER_PASSWORD,true
--   “guiLg” =<br/>
-> PROPERTY_USER_UILG, false
--   “dataLg” =<br/>
-> PROPERTY_USER_DEFLG, false
--   “firstName”=<br/>
-> PROPERTY_USER_LASTNAME,false
--   “mail”=<br/>
-> PROPERTY_USER_MAIL,false
--   “type”=<br/>
-> RDF_TYPE,false
+-   “login”=> PROPERTY_USER_LOGIN,true
+-   “password” => PROPERTY_USER_PASSWORD,true
+-   “guiLg” => PROPERTY_USER_UILG, false
+-   “dataLg” => PROPERTY_USER_DEFLG, false
+-   “firstName”=> PROPERTY_USER_LASTNAME,false
+-   “mail”=> PROPERTY_USER_MAIL,false
+-   “type”=> RDF_TYPE,false
 
 
 
@@ -388,7 +381,7 @@ The list of aliases is the following, (and if it is mandatory bit) :
 
     curl_close($process);
 
-If your request is successful you will receive the URI of the newly created resource.
+If your request is successful, you will receive the URI of the newly created resource.
 
 
 
@@ -463,12 +456,12 @@ Creating a test taker with custom properties / type or language
 
     curl_close($process);
 
-If you don’t know the URIs of properties or classes, you may use the ontoBrowser extension of TAO, it is available from the default package of tao and needs to be installed using the settings pane in the backoffice.
+If you don’t know the URIs of properties or classes, you may use the ontoBrowser extension of TAO, it is available from the default package of TAO and needs to be installed using the settings pane in the Back Office.
 
 Update an existing test taker
 -----------------------------
 
-In the case of an update, you have to specify only the values which you would like to update. You can’t update the login (in this case, you will have to remove the test taker account an create a new one).
+In the case of an update, you have to specify only the values which you would like to update. You can’t update the login (in this case, you will have to remove the test taker account and create a new one).
 
 You may re-assign a new type to the test taker.
 
@@ -667,29 +660,25 @@ Delete a test taker.
 Identification using Digest
 ---------------------------
 
-The Digest protocol is not yet implemented. Steps left for implementing it :<br/>
+The Digest protocol is not yet implemented. Steps left for implementing it:
 
 - Store along user definition their hash upon user creation and update\
-- Retreeve this hash and combine it within RestCommonModule.php
+- Retrieve this hash and combine it within RestCommonModule.php
 
 How to contribute here ?
 ------------------------
 
--   A library for php to connect on our REST layer would probably help programmers, this library would expose get(<br/>
-$uri=null), post(<br/>
-$parameters), put(<br/>
-$uri, <br/>
-$parameters), delete(<br/>
-$uri) methods.<br/>
+-   A library for php to connect on our REST layer would probably help programmers, this library would expose 
+get($uri=null), post($parameters), put($uri, $parameters), delete($uri) methods.
 
     Difficulty: easy
 
-How to add rest services on top of my custom tao extension I wrote ?
+How to add rest services on top of my custom TAO extension I wrote ?
 --------------------------------------------------------------------
 
-You will need to add a rest controller extending the rest convenience built in TAO and to implement the four commands from REST.<br/>
+You will need to add a rest controller extending the rest convenience built in TAO and to implement the four commands from REST.
 
-Example taken from test takers :
+Example taken from test takers:
 
 
     service = taoSubjects_models_classes_CrudSubjectsService::singleton();
@@ -727,7 +716,7 @@ Example taken from test takers :
     }
     ?>
 
-then implement your own service laye exposing get/put/delete for that particular type of resources
+then implement your own service layer exposing get/put/delete for that particular type of resources
 
 
     class taoSubjects_models_classes_CrudSubjectsService

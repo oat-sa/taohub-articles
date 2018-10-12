@@ -17,14 +17,13 @@ Preparation
 
 1.  Install TAO (2.6)
 2.  Download [taoDocs_26_tutorial.zip](resources/taoDocs_26_tutorial.zip)
-3.  Unzip it in your tao root folder
-4.  Make sure your webserver has read/write access to taoDocs
+3.  Unzip it in your TAO root folder
+4.  Make sure your web server has read/write access to taoDocs
 
 ### Install the extension
 
 1.  Log into Tao Back Office with your TaoManager account
-2.  Go to “Settings”(upper right corner) -<br/>
-> “Extensions Manager”
+2.  Go to “Settings”(upper right corner) -> “Extensions Manager”
 3.  Select taoDocs, and install it
 
 Simple Examples
@@ -40,13 +39,13 @@ Simple Examples
               echo 'Hello World';
          }
 
--   Before you can test it, you will need to run the script **funcAcl/scripts/taoPreparePublicActions.php** (in a shell using php). This will grant you access to the newly created action.<br/>
+-   Before you can test it, you will need to run the script **funcAcl/scripts/taoPreparePublicActions.php** (in a shell using php). This will grant you access to the newly created action.
 
      For example:<pre>sudo -u www-data php funcAcl/scripts/taoPreparePublicActions.php</pre>
 
 
 
--   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in tao as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
+-   To run the action visit *ROOT_URL/taoDocs/TestController/sayHello* (if your TAO Home is http://localhost/myinstall/tao/Main/index this would translate to http://localhost/myinstall/taoDocs/TestController/sayHello). If you get an “Access Denied” instead of the expected Hello world message, make sure you properly set up the extension in TAO as described in the preparation step of this tutorial here above. Make sure, www-data may fully access the files on the file system of your extension.
 
 ### Hello Template
 
@@ -100,7 +99,7 @@ Integration with TAO
 
 
 
--   Since Tao 2.6 the structures are cached, so you will need to empty your cache (by default situated in generis/data/generis/cache)
+-   Since TAO 2.6 the structures are cached, so you will need to empty your cache (by default situated in generis/data/generis/cache)
 -   When refreshing the TAO home screen, the new extension should be visible
 
 ### Adding a tree
@@ -129,6 +128,6 @@ Integration with TAO
 
 
 
--   If you wish you can now try to add your own actions, like duplicating a file, or creating a form to upload new files
+-   If you wish you can now try to add your own actions, like duplicating a file or creating a form to upload new files
 
 

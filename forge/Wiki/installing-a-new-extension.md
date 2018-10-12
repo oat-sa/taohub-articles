@@ -11,18 +11,18 @@ tags:
 Installing a new extension
 ==========================
 
-Description on how to install extensions that are not part of the default TAO package. Some extensions are deprecated or experimental so please proceed at your own risk.
+Description of how to install extensions that are not part of the default TAO package. Some extensions are deprecated or experimental so please proceed at your own risk.
 
 A list of released extensions can be found [here](https://packagist.org/packages/oat-sa/).
 
 Download
 --------
 
-Depending on your install there are two different ways to obtain an extension:
+Depending on your install there are two different ways to get an extension:
 
 ### Composer Install
 
-If you installed TAO using composer simply run the following line in the root of TAO:
+If you installed TAO using composer, simply run the following line in the root of TAO:
 
     composer require PACKAGE_NAME
 
@@ -30,7 +30,7 @@ If you installed TAO using composer simply run the following line in the root of
 
 If you installed TAO from a package downloaded at http://www.taotesting.com you will need to:
 
--   Download the extension from Github (https://github.com/oat-sa).
+-   Download the extension from GitHub (https://github.com/oat-sa).
 -   Unzip the content and rename it according to the **tao-extension-name** specified in the composer.json. Place this renamed folder in the web root of TAO.
 -   Manually modify the composer autoloader.
 

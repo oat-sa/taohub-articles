@@ -16,18 +16,18 @@ tags:
 Install TAO on your Mac tutorial
 ================================
 
-Let’s install TAO on your Mac, we don’t provide yet a self-installable package for Mac but do not panic, it is easy !
+Let’s install TAO on your Mac, we don’t provide yet a self-installable package for Mac but do not panic; it is easy!
 
 Let’s:
 
 1.  Install MAMP
 2.  Copy the TAO Files in the appropriate folder
-3.  Configure/Install TAO itselfs
+3.  Configure/Install TAO itself
 
 Install the web server (MAMP installation)
 ------------------------------------------
 
-Go on the MAMP home page and download the free MAMP version. You may notice that MAMP comes bundled with MAMP PRO, however we don’t really need this and you may ignore the MAMP PRO and continue with MAMP.
+Go on the MAMP homepage and download the free MAMP version. You may notice that MAMP comes bundled with MAMP PRO, however, we don’t really need this and you may ignore the MAMP PRO and continue with MAMP.
 
 https://www.mamp.info/en/downloads/
 
@@ -38,7 +38,7 @@ https://www.mamp.info/en/downloads/
 
 ![](../resources/mamp.png)
 
-- Proceed with the Mamp installation using the default options unless you know what you are doing (click on "Continue", until you reach the end)
+- Proceed with the MAMP installation using the default options unless you know what you are doing (click on "Continue", until you reach the end)
 - Agree to the license terms
 - When you are prompted for how to install the software, you may have to confirm by clicking on the "install for all users"
 - You may also be prompted for a password: this is the password of an administrator account of your Mac
@@ -46,7 +46,7 @@ https://www.mamp.info/en/downloads/
 Congratulations! You have now your MAMP successfully installed, you may now launch it.
 
 - Double click the MAMP icon from your Applications directory (located at /Applications/MAMP/or from your dock bar)
-- You may be suggsted by MAMP vendor to switch to a pro version, for the purpose of this tutorial, we recommend you to stick to the normal MAMP version
+- You may be suggested by MAMP vendor to switch to a pro version, for this tutorial, we recommend you to stick to the normal MAMP version
 - Click the "Start servers", the boxes near "Apache server" and "MySQL server" in the top right corner should switch to green ones
 
 ![](../resources/StartingMamp.png)
@@ -56,7 +56,7 @@ Starting the MAMP installation…
 Install TAO into your MAMP
 --------------------------
 
-You need now to download all tao files and copy it into your MAMP.
+You need now to download all TAO files and copy it into your MAMP.
 
 Please download one of these build packages:
 
@@ -81,21 +81,21 @@ Please download one of these build packages:
 
 ![](../resources/copyfiles.png)
 
-Install TAO itselfs
+Install TAO itself
 -------------------
 
-Come back to your web browser that popped up when you started your MAMP server (you may also launch another web browser and type in the adress to tao)
+Come back to your web browser that popped up when you started your MAMP server (you may also launch another web browser and type in the address to tao)
 
     # Connect at this adress http://localhost:8888/tao/install
     (please note that the server port may change depending on your settings into the MAMP preferences for ports
      example : http://localhost/tao/install)
-    # Complete the tao installation procedure (standard procedure)
+    # Complete the TAO installation procedure (standard procedure)
 
 ![](../resources/install1.png)
 
 ![](../resources/install2.png)
 
-Define the hostname, commonly it is http://localhost:8888 but it could be http://localhost depending on the settings set up in your MAMP. If you are not sure check the adress used in your web browser as a reference.
+Define the hostname, commonly it is http://localhost:8888 but it could be http://localhost depending on the settings set up in your MAMP. If you are not sure check the address used in your web browser as a reference.
 
 We recommend you to use the pre-load data sample option, this way you will have some basic item examples to start with.
 
@@ -105,7 +105,7 @@ Please note that the default login and password to access mysql from MAMP is roo
 
 ![](../resources/install4.png)
 
-Choose an admin account for your tao installation, this is the login and password you will have to use on your fresh tao installation.
+Choose an admin account for your TAO installation, this is the login and password you will have to use on your fresh tao installation.
 
 ![](../resources/install5.png)
 
@@ -117,11 +117,11 @@ Congratulations!
 
 ### Start up TAO
 
-In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the locahost:8888 url.<br/>
+In order to Launch TAO, you need to have MAMP started, the servers started and a web browser opened to the localhost:8888 url.
 
 You may ease this work by fine tuning your MAMP.
 
-Optionnaly, we recommend you to do the following configuration :
+Optionally, we recommend you to do the following configuration :
 
 1.  We recommend you to click the preferences button into MAMP.
 2.  Switch to the start/stop tab.
@@ -129,7 +129,7 @@ Optionnaly, we recommend you to do the following configuration :
 4.  Replace within the launch page url field with “/” instead of “/MAMP/”
 5.  Drag an drop the MAMP executable into your dock back
 
-This way you may launch tao by simply clicking the MAMP icon from your dock bar.
+This way you may launch TAO by simply clicking the MAMP icon from your dock bar.
 
 ### Troubleshooting
 
@@ -139,7 +139,7 @@ You may have already a server running on your local system and conflicting with 
 
 -   I have MAMP running correctly but when I go on http://localhost/tao/install I get a 404 error.
 
-You may have incorrectly copied the files into your htdocs directory after you have extracted the tao zip file. Make sure you extract it correctly with all the directory structure and directly under the /Applications/MAMP/htdocs folder
+You may have incorrectly copied the files into your htdocs directory after you have extracted the TAO zip file. Make sure you extract it correctly with all the directory structure and directly under the /Applications/MAMP/htdocs folder
 
 -   I copied pasted some content found on the web into the QTI authoring tool and the item looks weird or I have some errors.
 

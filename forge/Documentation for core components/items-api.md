@@ -13,7 +13,7 @@ Items’ API
 
 ------------------------------------------------------------------------
 
-### 1. Item Scoring API<br/>
+### 1. Item Scoring API
 
 2. Item Runtime API
 

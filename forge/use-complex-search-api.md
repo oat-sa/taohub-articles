@@ -268,10 +268,7 @@ supported operators :
   CONTAIN                ‘contains’     LIKE ‘value’
   BEGIN_BY              ‘begin’        LIKE ‘value%’
 
-use oat\<br/>
-search\<br/>
-helper\<br/>
-SupportedOperatorHelper to see all supported operators
+use oat\search\helper\SupportedOperatorHelper to see all supported operators
 
 ### usage examples :
 
@@ -335,7 +332,7 @@ Sort method is available on QueryBuilder :
 
     $result = $search->getGateway()->search($queryBuilder);
 
-Example for muliple sort :
+Example for multiple sort :
 
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
@@ -386,7 +383,7 @@ get 10 results offset 5 :
 Gateway :
 ---------
 
-gateway is the highter component of complex search.<br/>
+gateway is the higher component of complex search.
 
 It provide query builder and it execute query using default database driver.
 
@@ -408,11 +405,11 @@ to debug query use printQuery method :
 Result Set :
 ------------
 
-a result set is returned by gateWay search method’s.<br/>
+a result set is returned by gateWay search method’s.
 
 It’s an arrayIterator adding total method which return full number for your query .
 
-Each entry of result set is a tao resource Object.
+Each entry of result set is a TAO resource Object.
 
 ### basic usage :
 

@@ -9,7 +9,7 @@ tags: {  }
 TAO Continuous Integration
 ==========================
 
-Here are the different steps that are ran on a daily basis, all source code and config file are available on https://github.com/oat-sa/package-build
+Here are the different steps that run on a daily basis, all source code and config file are available on https://github.com/oat-sa/package-build
 
 Build the package
 -----------------
@@ -32,10 +32,10 @@ Unit Test
 ---------
 
 -   Install the platform with all extensions
--   Run Unit test according to test configration stored in conf/phpunit_mysql.xml
+-   Run Unit test according to test configuration stored in conf/phpunit_mysql.xml
 -   Generate code coverage report
 
-Howto setup Jenkins
+How to setup Jenkins
 -------------------
 
 -   Create your jenkins project
@@ -67,7 +67,7 @@ Howto setup Jenkins
         git@github.com:oat-sa/package-build.git
 
 -   Setup phing tasks
--   Setup PMD analisys
+-   Setup PMD analysis
 
 
 

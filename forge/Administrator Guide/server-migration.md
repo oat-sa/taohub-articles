@@ -23,9 +23,7 @@ Requirements
 
 -   (Optional) Please upgrade to the latest version of TAO first (Installation and Upgrading).
 -   This guide assumes you have not heavily modified your configuration. If you are using alternative storage implementations (such as NoSql), the migration might be more complex.
--   This guide assumes that the technology stack did not change. There might be additional issues if you would like to migrate between different Operating Systems (Windows-<br/>
->Linux) or Databases (MySql =<br/>
-> Postgres)
+-   This guide assumes that the technology stack did not change. There might be additional issues if you would like to migrate between different Operating Systems (Windows->Linux) or Databases (MySql => Postgres)
 
 Old Server
 ----------
@@ -95,8 +93,7 @@ New Server
 
 ### Finally
 
--   (Mandatory) Clear the cache of the file sources by emptying the folder **NEW_FILES_PATH/data/generis/cache/**. This can be achieved using the following command: rm -rf NEW_FILES_PATH/data/generis/cache/<br/>
-*.
+-   (Mandatory) Clear the cache of the file sources by emptying the folder **NEW_FILES_PATH/data/generis/cache/**. This can be achieved using the following command: rm -rf NEW_FILES_PATH/data/generis/cache/*.
 -   (Optional) Execute **NEW_FILES_PATH/tao/scripts/taoUpdate.php** to ensure all extensions are up to date and to regenerate the translation files
 
 

@@ -72,7 +72,7 @@ If you would like to use Couchbase you would add the following block:
 
 ## URI provider
 
-The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in Tao these application servers need to ensure that they don’t generate conflicting URIs and therefor should use a common URI provider.
+The URI provider is used to generate new URIs for newly created resources. If multiple application servers are used for delivering tests in TAO, these application servers need to ensure that they don’t generate conflicting URIs and therefore should use a common URI provider.
 
 ### Using the SQL server as URI provider (default)
 
@@ -147,7 +147,7 @@ For Couchbase:
 
 ## PHP session storage abstraction
 
-This abstraction allows to use user-level session storage, for storing and retrieving data associated with a session.
+This abstraction allows using user-level session storage, for storing and retrieving data associated with a session.
 
 See also: http://php.net/manual/en/function.session-set-save-handler.php
 
@@ -189,7 +189,7 @@ For Couchbase add the following persistence:
 
 ## User authentication storage abstraction
 
-Currently, there are at least two user authentication methods available:
+There are at least two user authentication methods available:
     - using the Generis model user adapter (default method)
     - using the key-value user adapter
 
@@ -233,7 +233,7 @@ Importing test-takers to Redis is achieved through a CSV import script.
 
 ## Result storage abstraction
 
-The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server. This happens in the back office user interface respectively in *Result Servers Management* and *Delivery* tabs.
+The choice of a Result Storage implementation is done by configuring a Result Server. Each delivery is configured with one result server. This happens in the Back Office user interface respectively in *Result Servers Management* and *Delivery* tabs.
 
 Two major implementations of Result Storage exist:
 

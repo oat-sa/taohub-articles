@@ -21,7 +21,7 @@ Steps required:
 
 
 
--   Update the structures.xml file from the 2.6 to the Tao 3.0 structures.xml format
+-   Update the structures.xml file from the 2.6 to the TAO 3.0 structures.xml format
 
 
 

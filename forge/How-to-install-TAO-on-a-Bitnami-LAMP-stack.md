@@ -13,14 +13,14 @@ How to install TAO on a Bitnami LAMP stack / Bitnami on Amazon Web Services
 
 Here is a short tutorial to get a Bitnami LAMP stack ready for TAO 2.6 and TAO 3.0. You may install any of these versions or both as it was done below.
 
-**Note:** It is good practice (and let’s say mandatory for a production stack) to change all default passwords in such stacks and especially in this case the MySQL root and tao users. The MySQL root user already exists (default password is ‘bitnami’, the local ‘tao’ user is created at step 2 (at the same time as when privileges are granted for the database used for TAO).
+**Note:** It is good practice (and let’s say mandatory for a production stack) to change all default passwords in such stacks and especially, in this case, the MySQL root and TAO users. The MySQL root user already exists (default password is ‘bitnami’, the local ‘tao’ user is created at step 2 (at the same time as when privileges are granted for the database used for TAO).
 
 In the following part, we assume that you may want to install TAO 2.6 and TAO 3.0 in two separate folders. Furthermore, no specific virtual host needs to be created, as TAO can be installed safely on any subfolder.
 
 Step 1: Get TAO ready for installation
 --------------------------------------
 
-Download TAO builds on the document root, extract them and rename extracted folders for conveniency:
+Download TAO builds on the document root, extract them and rename extracted folders at your conveniency:
 
 ```
     cd /opt/bitnami/apache2/htdocs/
@@ -30,7 +30,7 @@ Download TAO builds on the document root, extract them and rename extracted fold
     unzip TAO_3.0.0_build.zip && mv TAO_3.0.0_build tao3
 ```
 
-The TAO 2.6.7 installer gives such outcome:<br/>
+The TAO 2.6.7 installer gives such outcome:
 
 ![](resources/bitnami_lamp_stack_tao267_requirements_check_1.png)
 
@@ -55,7 +55,7 @@ The TAO 2.6.7 installer gives now such outcome:
 
 ![](resources/bitnami_lamp_stack_tao267_requirements_check_2.png)
 
-Same goes for the TAO 3.0 installer:<br/>
+Same goes for the TAO 3.0 installer:
 
 ![](resources/bitnami_lamp_stack_tao3_requirements_check.png)
 

@@ -27,7 +27,7 @@ Using the RDF model we would store the same information using only 3 fields:
 -   Predicate (what property aspect of the specified subject are we talking about: name, birthday,class)
 -   Object (what is the value for this subject, predicate: “Abraham Antler”, “1.1.1980”, Class 1)
 
-So to represent the information we know about “Abraham Antler” we would store:
+So representing the information we know about “Abraham Antler” we would store:
 
   Subject                       Predicate                           Object
   ----------------------------- ----------------------------------- -------------------------------
@@ -45,7 +45,7 @@ A single line, in this model would be called a ‘statement’
 
 ### Namespace prefix
 
-So if we took all the informations in our traditional table we would receive:
+So if we took all the information in our traditional table we would receive:
 
   Subject                       Predicate                                          Object
   ----------------------------- -------------------------------------------------- --------------------------------
@@ -58,9 +58,9 @@ So if we took all the informations in our traditional table we would receive:
   http://www.example.org/\#p2   http://www.example.org/\#class                     http://www.example.org/\#c102
   http://www.example.org/\#p2   http://www.w3.org/1999/02/22-rdf-syntax-ns\#type   http://www.example.org/\#pupil
 
-In order to make this a litle easier to read we can substituate the namesspaces with a prefix
+In order to make this a little easier to read we can substitute the namespaces with a prefix
 
--   xmlns:ex=“http://www.example.org/<br/>
+-   xmlns:ex=“http://www.example.org/
 #”
 -   xmlns:rdf=“http://www.w3.org/1999/02/22-rdf-syntax-ns\#type”
 
@@ -77,7 +77,7 @@ which allows us to represent the list as following
   ex:p2     ex:class      ex:c102
   ex:p2     rdf:type      ex:pupil
 
-Example 2: how to store friend informations
+Example 2: how to store friend information
 -------------------------------------------
 
 In a traditional database model friendship between pupils would be modelled via an auxiliary table:
@@ -89,7 +89,7 @@ In a traditional database model friendship between pupils would be modelled via 
   3               1              3
   --------------- -------------- ----------------
 
-Since RDF does not define cardinalities, we can simple add a property ‘friendOf’ which will result in multiple lines, that share the same subject and predicate:
+Since RDF does not define cardinalities, we can simply add a property ‘friendOf’ which will result in multiple lines, that share the same subject and predicate:
 
   Subject   Predicate     Object
   --------- ------------- ----------------
@@ -106,7 +106,7 @@ Please note however that in RDF no two statements may be identical i.e. be compo
 Class definitions:
 ------------------
 
-This generic approach to data modelling allows us to define in a single model not only store several different types of entities, such as pupil, class and teacher, but informations on the data model as well.
+This generic approach to data modeling allows us to define in a single model not only store several types of entities, such as pupil, class, and teacher, but information on the data model as well.
 
 Property definitions:
 ---------------------

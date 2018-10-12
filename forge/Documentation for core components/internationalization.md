@@ -13,7 +13,7 @@ tags:
 
 ## Extension Locales
 
-In TAO, a *Locale* is the definition of all *messages* to be translated for a given TAO Extension. Indeed, the internationalization process applies to each TAO Extension. Any translation description files are located in the */locales* directory of the Extension to be translated. In this */locales* folder you will find a directory dedicated to each language. The directory name for a language contained in the */locales* directory is actually is a combination of the [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and a [region code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) (e.g. *fr-LU* for *French* as used in *Luxemburg*) and will be used as a unique identifier for this locale across extensions.
+In TAO, a *Locale* is the definition of all *messages* to be translated for a given TAO Extension. Indeed, the internationalization process applies to each TAO Extension. Any translation description files are located in the */locales* directory of the Extension to be translated. In this */locales* folder you will find a directory dedicated to each language. The directory name for a language contained in the */locales* directory is actually is a combination of the [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) and a [region code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) (e.g. *fr-LU* for *French* as used in *Luxembourg*) and will be used as a unique identifier for this locale across extensions.
 
 ### Locale Structure
 
@@ -144,7 +144,7 @@ The most important thing to understand in this RMT is that the label and comment
 
 ## Dealing with your own locales
 
-The TAO Platform comes with dedicated tools that help you to create and maintain your own locales. It takes shape as a command line script that can be accessed throuh PHP CLI. These dedicated tools will make you able to create and update your own locales in TAO.
+The TAO Platform comes with dedicated tools that help you to create and maintain your own locales. It takes shape as a command line script that can be accessed through PHP CLI. These dedicated tools will make you able to create and update your own locales in TAO.
 
 ### Create a locale
 

@@ -35,7 +35,7 @@ Be sure to have `wget` (or `curl` with 3.0 version), `tar` and `gzip` installed 
 
 ## Install MathJax library manually
 
-MathML is not rendered natively in all browsers. [Firefox and Safari are among the only one that render it natively](http://caniuse.com/#feat=mathml). To ensure a consistent cross-browser experience in TAO, we rely on a third-party MathML library called [MathJax](http://www.mathjax.org/). Because of license compatibility issue, it cannot be included within the default TAO package. That is why you need to install this library separately to enable math expression in your items.<br/>
+MathML is not rendered natively in all browsers. [Firefox and Safari are among the only one that render it natively](http://caniuse.com/#feat=mathml). To ensure a consistent cross-browser experience in TAO, we rely on a third-party MathML library called [MathJax](http://www.mathjax.org/). Because of license compatibility issue, it cannot be included within the default TAO package. That is why you need to install this library separately to enable math expression in your items.
 
 You can download it freely [here](http://docs.mathjax.org/en/latest/installation.html#obtaining-mathjax-via-an-archive) and unzip it into the following folder: `{YOUR_TAO_ROOT}/taoQtiItem/views/js/mathjax`. Your file system should look like the enclosed screenshot below.
 
@@ -43,7 +43,7 @@ You can download it freely [here](http://docs.mathjax.org/en/latest/installation
 
 MathJax is a huge lib which weighs above 20MB unzipped. It is recommended to shrink it so only required files remain to display MathML properly in TAO. Indeed, on compilation, every compiled item containing MathML would have the whole library copied. So using the instruction below can help reducing its size down to 4.2MB. This solution has been tested so math expressions are still correctly rendered on most used browsers: Firefox, Chrome, Safari and IE8.
 
-Frist delete the following folders:
+First delete the following folders:
 
 - mathjax/docs/
 - mathjax/test/

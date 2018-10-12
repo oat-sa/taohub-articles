@@ -61,7 +61,7 @@ This is it!
 
 ### Data
 
-Data are stored in the knowledge base and could be translate for content created by the user tranks to the translate button feature that create an alternate value in a different language, that why in that previous example “Elections in the United States” have been translated into “Elections américaines”.
+Data are stored in the knowledge base and could be translated for content created by the user thanks to the translate button feature that create an alternate value in a different language, that why in that previous example “Elections in the United States” have been translated into “Elections américaines”.
 
 For build-in content, those translation are store in the knowledge base during the installation. We use RDF file to store in each extensions folder all content that require translation. For instance the following example is extracted from taoItems/locales/fr-FR/taoItem.rdf and deals with the property Item Content Label and Comment that in previous example had been translated into “Contenu de l’item” in French.
 
@@ -78,7 +78,7 @@ All RDF files in any locales folder of any TAO extension respect this format and
 The translation process
 -----------------------
 
-You can contribute to the translation effort of TAO in the dedicated platform http://translate.taotesting.com . We choose to use the open source toolkit [Pootle](http://translate.sourceforge.net/wiki/). Pootle user howto is available [here](http://translate.sourceforge.net/wiki/users/howto) .
+You can contribute to the translation effort of TAO in the dedicated platform http://translate.taotesting.com . We choose to use the open source toolkit [Pootle](http://translate.sourceforge.net/wiki/). Pootle user how to is available [here](http://translate.sourceforge.net/wiki/users/howto) .
 
 ![](../resources//attachments/download/2596/S%C3%A9lection_057.png):http://translate.taotesting.com/
 
@@ -98,16 +98,16 @@ You can then help us provide translation in
 12. Danish
 13. Hungarian
 
-Just choose your language and then you can suggest translation. We strongly recommend you to register to Pootle in order to gain access to more advanced feature.
+Just choose your language and then you can suggest translation. We strongly recommend you to register to Pootle to gain access to more advanced feature.
 
-When a translation in new language is good enough, we also start the translation of data into this language as explain before but for now we have not any collaborative tools to handle RDF translation. So, you may simply edit with a text editor rdf file and send us back, we will review them and integrate them into TAO.
+When a translation in the new language is good enough, we also start the translation of data into this language as explain before but for now, we have no collaborative tools to handle RDF translation. So, you may edit with a text editor RDF file and send us back, we will review them and integrate them into TAO.
 
 There is a also [dedicated section](http://forge.taotesting.com/projects/tao/boards/3) of the forum to speak about translation, if you have any questions or feedback or if you want to take the lead on a new language translation. Do not hesitate to contact us. You may also contact us to start a translation in a new language. We will then generate the new translation file and make them available in Pootle.
 
 Going further
 -------------
 
-If you want to understand how the translations are implemented into the TAO Framework you can have a look at the section dedicated to the [Internationalization](../documentation-for-core-components/internationalization.md).
+If you want to understand how the translations are implemented into the TAO Framework, you can have a look at the section dedicated to the [Internationalization](../documentation-for-core-components/internationalization.md).
 
 See also:
 

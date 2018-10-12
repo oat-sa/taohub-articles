@@ -11,7 +11,7 @@ tags:
 Maintenance
 ===========
 
-The TAO Platform provides a *Maintenance Mode* aiming at helping administrators to shut down the system while maintaining it. To do so you need to change a *PHP constant* in the Generis configuration file. It is located at */generis/common/config.php*.
+The TAO Platform provides a *Maintenance Mode* aiming at helping administrators to shut down the system while maintaining it. To do so, you need to change a *PHP constant* in the Generis configuration file. It is located at */generis/common/config.php*.
 
 To set the system in *Maintenance Mode*, find the following constant and set it to *false*.
 

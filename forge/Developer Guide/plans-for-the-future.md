@@ -13,7 +13,7 @@ tags:
 Introduction
 ============
 
-This roadmap aims at presenting short-term and long-term goals with TAO to help meet those goals. It helps forecasting technology developments and providing a framework to help plan and coordinate technology developments. If you are willing to contribute and help us on either implementing the roadmap or defining it please contact us through the forum.
+This roadmap aims at presenting short-term and long-term goals with TAO to help meet those goals. It helps to forecast technology developments and providing a framework to help plan and coordinate technology developments. If you are willing to contribute and help us with either implementing the roadmap or defining it, please contact us through the forum.
 
 Roadmap
 =======

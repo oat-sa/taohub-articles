@@ -24,7 +24,7 @@ You need to use SVG that contains symbols which looks like this
             </symbol>
 ```
 
-If your SVG doesn’t use symbols an easy way to create them is to use [icomoon](https://icomoon.io/app/). Create a new collection, import one or more SVG files, click on **Generate SVG and more**. In the resulting zip file **symbol-defs.svg** is your converted SVG file containing all symbols.
+If your SVG doesn't use symbols an easy way to create them is to use [icomoon](https://icomoon.io/app/). Create a new collection, import one or more SVG files, click on **Generate SVG and more**. In the resulting zip file **symbol-defs.svg** is your converted SVG file containing all symbols.
 
 ## Prerequisites in an extension context
 

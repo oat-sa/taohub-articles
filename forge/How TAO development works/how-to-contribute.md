@@ -22,11 +22,11 @@ As an open source project, TAO is open to any contributor who demonstrates commi
 If you are interested in contributing to TAO, you have various options:
 
 -   Anyone can express new requirements they are interested in. The more detailed your requirement is, the higher chance this functionality is to be included in the roadmap, and part of the next version. Use the menu **New Issue** and choose the tracker **new feature**
--   Developers can develop new extensions as TAO was built to be completely modular. See Howto Make a new extension
--   Developers can help us fixing issues/enhancing feature/adding UnitTest. See Howto Change core code|Change code
--   Anyone can translate TAO in another language. See Howto Translate TAO into other languages
--   Anyone can help us improve TAO Documentation. See Howto Help document TAO
--   Anyone can join the testing effort. See Howto Join the testing effort
+-   Developers can develop new extensions as TAO was built to be completely modular. See How to Make a new extension
+-   Developers can help us fixing issues/enhancing feature/adding UnitTest. See How to Change core code|Change code
+-   Anyone can translate TAO in another language. See How to Translate TAO into other languages
+-   Anyone can help us improve TAO Documentation. See How to Help document TAO
+-   Anyone can join the testing effort. See How to Join the testing effort
 
 ### 1.2 How can you do it?
 
@@ -43,7 +43,7 @@ TAO is periodically released according to an announced schedule: we usually targ
 
 At the beginning of a new release phase, we first put efforts working on refactoring existing features, fixing bugs and cleaning old issues, update documentation, update build script. We then focus on developing the set of Features according to the Plans_for_the_future|roadmap.
 
-Occasionally some alpha versions may be released without warranty on the stability. Such versions shouldn’t be used for production mode.
+Occasionally some alpha versions may be released without warranty on the stability. Such versions shouldn't be used for production mode.
 
 We then focus on building a Beta version that usually comes out 3-4 weeks before the announced release day.
 
@@ -60,7 +60,7 @@ One week before the scheduled release, we publish Release Candidate versions. As
 
 During the development phase, we keep updating TAO from major issue. SVN-Patches are created and are directly provided to the community in the *comment* section of the related issue. Patch receives an incremental number and in the following days of the patch creation, the version available on TAO website will be updated and renamed according to the patch number. Patch’s Numbers are managed by the target version’s Head Developer.
 
-For instance, if the version of TAO available on the TAO website is *TAO 2.1.01*, *2.1* indicates the version number and *.01* indicates that the patch *01* had been applied.<br/>
+For instance, if the version of TAO available on the TAO website is *TAO 2.1.01*, *2.1* indicates the version number and *.01* indicates that the patch *01* had been applied.
 
 All available patches for a version may also be found in the [SVN](http://forge.taotesting.com/projects/tao/repository/show/patchs)
 
@@ -77,7 +77,7 @@ TAO source code is available on the [Subversion repository](http://vcs.taotestin
 
 All feedbacks from the community are also gathered in the [TAO Forge](http://forge.taotesting.com/projects/tao/issues), you can find more detailed information about **Issues|issues**.
 
-By default, people enroled in the TAO Forge have a *reporter* status/role.
+By default, people enrolled in the TAO Forge have a *reporter* status/role.
 
 The *reporter* can
 
@@ -100,23 +100,23 @@ If you want larger access rights, please let us know !
 
 Over time, TAO is getting more and more complex (see TAO Architecture), meanwhile here is a list of TAO team members that can help you for different sections listed below and who will be in charge of validating contributions and assure the overall TAO Product Quality. Please be also sure to follow [Guidelines](../developer-guide/guidelines.md) and common conventions used by the TAO team.
 
-**TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Product** [Patrick Plichart](http://forge.taotesting.com/users/339), [Raynald Jadoul](http://forge.taotesting.com/users/630)
 
-**Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Patrick Plichart](http://forge.taotesting.com/users/339)<br/>
+**Generis Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Patrick Plichart](http://forge.taotesting.com/users/339)
 
-**TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Core** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)
 
-**TAO Delivery** [Somsack Sipasseuth](http://forge.taotesting.com/users/361)<br/>
+**TAO Delivery** [Somsack Sipasseuth](http://forge.taotesting.com/users/361)
 
-**TAO Groups** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Groups** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Raynald Jadoul](http://forge.taotesting.com/users/630)
 
-**TAO Items** [Raynald Jadoul](http://forge.taotesting.com/users/630), [Cedric Alfonsi](http://forge.taotesting.com/users/352), [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)<br/>
+**TAO Items** [Raynald Jadoul](http://forge.taotesting.com/users/630), [Cedric Alfonsi](http://forge.taotesting.com/users/352), [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Somsack Sipasseuth](http://forge.taotesting.com/users/361)
 
-**TAO Results** [Younes Djaghloul](http://forge.taotesting.com/users/347)<br/>
+**TAO Results** [Younes Djaghloul](http://forge.taotesting.com/users/347)
 
-**TAO Subjects** [Raynald Jadoul](http://forge.taotesting.com/users/630)<br/>
+**TAO Subjects** [Raynald Jadoul](http://forge.taotesting.com/users/630)
 
-**WfEngine** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)<br/>
+**WfEngine** [Lionel Lecaque](http://forge.taotesting.com/users/305), [Somsack Sipasseuth](http://forge.taotesting.com/users/361), [Jérôme Bogaerts](http://forge.taotesting.com/users/306)
 
 **TAO Documentation** [Jérôme Bogaerts](http://forge.taotesting.com/users/306), [Laure Conde](http://forge.taotesting.com/users/503)
 

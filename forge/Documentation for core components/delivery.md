@@ -17,9 +17,9 @@ Delivery
 
 ------------------------------------------------------------------------
 
-### 1. Create and author a delivery|Create and Author a delivery<br/>
+### 1. Create and author a delivery|Create and Author a delivery
 
-2. Compile a delivery<br/>
+2. Compile a delivery
 
 3. Delivery server|Execute a delivery
 
@@ -30,7 +30,7 @@ Overview
 
 ### 1. The content
 
-A delivery defines a sequence of tests to be delivered, the same way as a test contains a number of items.<br/>
+A delivery defines a sequence of tests to be delivered, the same way as a test contains a number of items.
 
 The diagram below sums up the relationship between deliveries, tests and items.
 
@@ -38,7 +38,7 @@ The diagram below sums up the relationship between deliveries, tests and items.
 
 ### 2. The context
 
-On top of that, it allows defining the conditions and the context of tests delivery.<br/>
+On top of that, it allows defining the conditions and the context of tests delivery.
 
 The following issues are addressed:
 
@@ -51,6 +51,6 @@ The delivery model on the Generis representation below shows the properties of t
 
 ![](../resources/generis_delivery.png)
 
-Please refer the Delivery server|delivery server section to see how this properties apply on delivery executio
+Please refer the Delivery server|delivery server section to see how this properties apply on delivery execution
 
 

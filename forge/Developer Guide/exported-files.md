@@ -13,9 +13,9 @@ tags:
 Exported Files
 ==============
 
-This article will show and explain exported files that you can get from TAO.<br/>
+This article will show and explain exported files that you can get from TAO.
 
-These files are csv file so they will be displayed as table when opened with a spreadsheet software, in reality every column are separated by commas and the text is in quotes. There are samples of each exported files at the end of this page.
+These files are CSV file so they will be displayed as a table when opened with a spreadsheet software, in reality, every column is separated by commas and the text is in quotes. There are samples of each exported files at the end of this page.
 
 Results Files
 =============
@@ -25,7 +25,7 @@ This part will be about the possible files you can get from TAO concerning the r
 Complete export
 ---------------
 
-First you can have a complete export of the results. This will gather all results to all items of every delivery executions. This file should look like the following example :
+First, you can have a complete export of the results. This will gather all results to all items of every delivery executions. This file should look like the following example:
 
   item           identifier             value                                                                                                                                                                                                                                                                                                              test_taker
   -------------- ---------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ --------------
@@ -42,10 +42,10 @@ First you can have a complete export of the results. This will gather all result
   Item 2 Label   RESPONSE_identifier   O:47:\\[taoResultServer_models_classes_ResponseVariable\\](../resources/6:{s:15:\"correctResponse\";b:0;s:17:\"candidateResponse\";s:4:\"MA==\";s:10:\"identifier\";s:19:\"RESPONSE_identifier\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:7:\"integer\";s:5:\"epoch\";s:21:\"0.36770800) 1459336118\\";}       Test taker 2
   Item 2 Label   SCORE                  O:46:\\[taoResultServer_models_classes_OutcomeVariable\\](../resources/7:{s:13:\"normalMaximum\";s:0:\"\";s:13:\"normalMinimum\";s:0:\"\";s:5:\"value\";s:4:\"MA==\";s:10:\"identifier\";s:5:\"SCORE\";s:11:\"cardinality\";s:6:\"single\";s:8:\"baseType\";s:5:\"float\";s:5:\"epoch\";s:21:\"0.76872100) 1459336098\\";}   Test taker 2
 
-Here you can see that the file is divided into 4 parts :
+Here you can see that the file is divided into 4 parts:
 
 -   The first column will show you the item label so you will know to which item the test taker was answering.
--   The second part is the identifier of the variable. This part will make your search clearer and simpler if you want for instance only score variable
+-   The second part is the identifier of the variable. For instance, this part will make your search clearer and simpler if you want only score variable
 
 \* The third column is the most tricky one. It contains the php serialized variable, it can be a response, an outcome or a trace variable. Letters followed by colons and numbers correspond to the type of the following variable (O= Object, s = string, i = integer …) the number corresponds to the length of the variable. For each variable you will have first the variable class (taoResultServer_models_classes_ResponseVariable, taoResultServer_models_classes_OutcomeVariable or taoResultServer_models_classes_TraceVariable) then between curly braces you will have multiple couples of property name and value. For example :
 
@@ -82,13 +82,13 @@ Monitoring Files
 Delivery execution monitoring
 -----------------------------
 
-This file allow you to have an overview of the delivery executions of you instance. This file is divided into 4 column.
+This file allows you to have an overview of the delivery executions of your instance. This file is divided into 4 column.
 
   test_taker   nb_item   nb_executions   nb_finished
   ------------- ---------- ---------------- --------------
   test          18         2                2
   taker1        20         3                2
 
-The first column is the test taker login, the second one is the number of item answered by this test taker. Then we have the number of executions started by this test taker, finally we have the number of test the test taker has finished.
+The first column is the test taker login, the second one is the number of items answered by this test taker. Then we have the number of executions started by this test taker. Finally, we have the number of tests the test taker has finished.
 
 

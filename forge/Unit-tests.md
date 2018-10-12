@@ -45,10 +45,10 @@ Failing tests
 
 In case you have failing tests:
 
--   make sure that you have the latest version of all tao extensions
+-   make sure that you have the latest version of all TAO extensions
 -   make sure that you have the latest npm dependencies (like PhantomJS) with npm update (or remove node_modules directory, then run npm install again)
 
-In case of an obscure error message (`PhantomJS timed out` for example), you may get more detailed informations using the the `--debug` or `--verbose` flags
+In case of an obscure error message (`PhantomJS timed out` for example), you may get more detailed information using the the `--debug` or `--verbose` flags
 
     grunt connect:test qunit:single --test=/taoQtiTest/views/js/test/runner/helpers/map/test.html --debug
     grunt connect:test qunit:single --test=/taoQtiTest/views/js/test/runner/helpers/map/test.html --verbose

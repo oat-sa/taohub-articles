@@ -12,7 +12,7 @@ Development tips
 Install XMLEditQtiDebugger Extension
 ------------------------------------
 
-This extension adds a XML button to the authoring screen, which display the current content of the QTI Item XML.<br/>
+This extension adds a XML button to the authoring screen, which display the current content of the QTI Item XML.
 
 To install, add the following to composer.json:
 
@@ -34,7 +34,7 @@ Then run:
 
     php tao/scripts/installExtension.php xmlEditQtiDebugger
 
-Redirect tao output to the console
+Redirect TAO output to the console
 ----------------------------------
 
 - install TaoDevTools extension\

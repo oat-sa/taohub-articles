@@ -12,10 +12,10 @@ The following document is work in progress
 
 
 
-Hooks in Tao 2.6
+Hooks in TAO 2.6
 ================
 
-Tao provides several ways to alter or extend its functionalities.
+TAO provides several ways to alter or extend its functionalities.
 
 PHP session
 -----------
@@ -30,13 +30,13 @@ for the time being
 Runtime data storage services
 -----------------------------
 
-More informations on how to configure them can be found on the Data abstractions page.
+More information on how to configure them can be found on the Data abstractions page.
 
 ### Uri Provider
 
 `common_uri_AbstractUriProvider`
 
-### Delivery execution informations
+### Delivery execution information
 
 `taoDelivery_models_classes_execution_Service`
 
@@ -68,7 +68,7 @@ Developers can provide a custom `common_user_auth_Adapter` that can return a cus
 Based on this user a normal session can be initialized, or alternatively a custom session can be created that implements\
 either `common_session_StatefulSession` or `common_session_StatelessSession`
 
-For custom authentication adapters a custom entry point needs to be defined as the Tao login form will always\
+For custom authentication adapters a custom entry point needs to be defined as the TAO login form will always\
 use the default `core_kernel_users_AuthAdapter` and the default `common_session_DefaultSession`.
 
 Access Control
@@ -92,7 +92,7 @@ User Interface
 In the `structures.xml` file users can define:
 
 -   add a new [Entrypoint](../documentation-for-core-components/entrypoint.md)
--   add a new menu entry to the backoffice (next to “Items”, “Tests”… on the top)
+-   add a new menu entry to the Back Office (next to “Items”, “Tests”… on the top)
 -   add tabs to an existing menu entry
 
 

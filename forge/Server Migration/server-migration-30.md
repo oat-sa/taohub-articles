@@ -35,7 +35,7 @@ New Server
 
 \* Replace the config and data directory and to set the correct file owner/rights.
 
-\* Modify **config/generis.conf.php** to reflect your new domain and directories.<br/>
+\* Modify **config/generis.conf.php** to reflect your new domain and directories.
 
 *Note: Do NOT change GENERIS_INSTANCE_NAME or LOCAL_NAMESPACE and watch out for the trailing slashes when writing paths!*
 
@@ -83,7 +83,7 @@ An example, assuming your old data was stored in **/var/www/tao/data/** and your
 
 ### Finally
 
--   (Mandatory) Clear the cache of the file sources by emptying the folder **NEW_FILES_PATH/data/generis/cache/**. This can be achieved using the following command: rm -rf NEW_FILES_PATH/data/generis/cache/<br/>
+-   (Mandatory) Clear the cache of the file sources by emptying the folder **NEW_FILES_PATH/data/generis/cache/**. This can be achieved using the following command: rm -rf NEW_FILES_PATH/data/generis/cache/
 *.
 -   (Optional) Execute **NEW_FILES_PATH/tao/scripts/taoUpdate.php** to ensure all extensions are up to date and to regenerate the translation files
 

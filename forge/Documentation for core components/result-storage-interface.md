@@ -37,7 +37,7 @@ Concepts
 
 *deliveryResultIdentifier*
 
-Used to identify the set of information collected for the instanciation of a test delivery by a test taker. This identifier is used for further calls to the implementation in order to stack extra information as the data gets collected by the driver. The implementation should rely strictly on this to store the data adequately. The implementation can’t rely on any other “state” information like a session(the test session may be interrupted, etc.)<br/>
+Used to identify the set of information collected for the instantiation of a test delivery by a test taker. This identifier is used for further calls to the implementation in order to stack extra information as the data gets collected by the driver. The implementation should rely strictly on this to store the data adequately. The implementation can’t rely on any other “state” information like a session(the test session may be interrupted, etc.)
 
 The spawn function to be implemented should return a valid unique new identifier (string).
 
@@ -47,7 +47,7 @@ For every single execution of the same test delivery by the same test taker a sp
 
 CallIDs are sent to the implementation in order to distinguish ambiguous cases.
 
-Typically, the implementation could receive the same item identifier with the same type of variable (same identifier member) collected but with a different callID. This means that the same item was used several times during the test but are different instances of the same item. The implementation shall record this differently from the case where the same callID has been sent. For the later, this will happen if the test takers came back on the same item, changed his mind and for taht case the implementation is expected then to **stack** another observation of the variable .
+Typically, the implementation could receive the same item identifier with the same type of variable (same identifier member) collected but with a different callID. This means that the same item was used several times during the test but are different instances of the same item. The implementation shall record this differently from the case where the same callID has been sent. For the later, this will happen if the test takers came back on the same item, changed his mind and for that case the implementation is expected then to **stack** another observation of the variable .
 
 *Variables*
 

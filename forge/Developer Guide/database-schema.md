@@ -15,7 +15,7 @@ Database Schema
 
 TAO and Generis need to use a storage engine even though it’s transparent. By default, the storage back-end is [Mysql](http://www.mysql.com/), but it could be used over any relational database engine (eg. [Postgresql](http://www.postgresql.org/))
 
-As you can see in the schema below, there are few tables only.<br/>
+As you can see in the schema below, there are a few tables only.
 
 Only these three are important:
 

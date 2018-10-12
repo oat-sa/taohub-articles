@@ -8,7 +8,7 @@ tags:
     - 'Installation and Upgrading'
 -->
 
-InstallUnbuntuApacheMySQLComposer
+InstallUbuntuApacheMySQLComposer
 =================================
 
 

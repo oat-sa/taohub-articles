@@ -7,12 +7,11 @@ tags:
 
 # Install the TAO platform from a configuration file
 
-> This page aims to explain how you can install tao from a predifined configuration file, in order to make your deployments easier.
+> This page aims to explain how you can install TAO from a predefined configuration file, in order to make your deployments easier.
 
-Since TAO v7.36.2 we have a new way to install the tao platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.
+Since TAO v7.36.2 we have a new way to install the TAO platform. You can use a new script that is called taoSetup.php, it requires a config file as parameter.
 
 To call it simply use the command line :
-
 ```bash
 sudo -u www-data php tao/scripts/taoSetup.php /var/www/path/to/your/configFile.json
 ```
@@ -47,7 +46,7 @@ The file will contain some mandatory and optional properties, they are listed be
 
 #### Super User
 
-This option is the one that will set your first tao user as a super user. It requires a login and a password. It can contain but not needed a first name, last name and an email.
+This option is the one that will set your first TAO user as a super user. It requires a login and a password. It can contain but not needed a first name, last name and an email.
 
 ```json
 "super-user": {
@@ -77,14 +76,14 @@ Optional configuration:
 
 ##### Global
 
-The global part of the configuration contains all the properties required for the tao installation.
+The global part of the configuration contains all the properties required for the TAO installation.
 
 -   lang : the default language
 -   mode : debug or production
 -   instance_name : the name of the instance
 -   namespace : the local namespace
 -   url : the url to access the platform
--   file_path : the root path of your tao installation
+-   file_path : the root path of your TAO installation
 -   session_name : the name of the cookie that will contain the session
 -   timezone
 -   import_data : should be import default data or not
@@ -108,10 +107,10 @@ The global part of the configuration contains all the properties required for th
 
 ##### Persistences
 
-The persistences configuration is one of the most important because it will let you choose the database type where you want to install tao data.
+The persistences configuration is one of the most important because it will let you choose the database type where you want to install TAO data.
 It has to be under the generis configuration.
 
-You must have at least the default key in order to set correctly the detabase, then you can choose the driver `pdo_pgsql`, `pdo_mysql`, it is the same structure than in your final `config/generis/persistences.conf.php`
+You must have at least the default key in order to set correctly the database, then you can choose the driver `pdo_pgsql`, `pdo_mysql`, it is the same structure than in your final `config/generis/persistences.conf.php`
 
 You can also if you want set other persistences as the cache one or a redis connection for the delivery execution or the results.
 
@@ -170,7 +169,7 @@ Finally we have to configure a bit the connection. Typically the master and the 
 
 ##### 
 
-### Optionnal properties
+### Optional properties
 
 #### Extensions
 

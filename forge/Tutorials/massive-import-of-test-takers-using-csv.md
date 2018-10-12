@@ -18,7 +18,7 @@ The TAO Platform provides everything you need to insert Test Takers into the dat
 
 ## Prepare your CSV file
 
-TAO supports the import of multiple formats CSV (Comma Separated Values) and RDF-XML (Resource Description Framework XML). In this tutorial, we will use the CSV format because it is widely adopted and can be easily edited with popular softwares such as Microsoft Exell or LibreOffice.
+TAO supports the import of multiple formats CSV (Comma Separated Values) and RDF-XML (Resource Description Framework XML). In this tutorial, we will use the CSV format because it is widely adopted and can be easily edited with popular software such as Microsoft Exell or LibreOffice.
 
 We will now use a sample CSV file to analyse how the Test Takers data must be formatted to be recognized by the platform and finally inserted in the database. Before continuing the tutorial, please download and open the following CSV file with your favorite spreadsheet software.
 
@@ -48,7 +48,7 @@ Each row of the file is related to a Test Taker to import in the database. Each 
 
 ## Import the file in TAO
 
-Open up your favorite web browser and go to the TAO backoffice at http://www.mydomain.com/tao. www.mydomain.com is of course the domain name addressing the web server where your TAO instance is deployed.
+Open up your favorite web browser and go to the TAO back office at http://www.mydomain.com/tao. www.mydomain.com is of course the domain name addressing the web server where your TAO instance is deployed.
 
 1. Click on the Test Takers extension link at the top of the screen.
 2. Click on the Test Taker class in the Test Takers Library panel.

@@ -54,13 +54,13 @@ Figure 2: A QTI assessmentItem containing 3 Portable Custom Interaction instance
 
 ### Clarification about Concepts
 
-The initial IMS Portable Custom Interaction (PCI) specification introduces the notion of Communication Bridge. In the documentation however, it is difficult to concretely grasp what this bridge actually is and does. There indeed seems to be a confusion between the Rendering Engine and the Communication Bridge itself. From our understanding, the bridge should be the global qtiCustomInteractionContext object and the Rendering Engine is therefore something totally different, out of the scope of this document. In this proposal, Open Assessment Technologies considers the Rendering Engine as the hosting platform, and the Communication Bridge as the global qtiCustomInteractionContext. This improves the understandability of the specification, and reduces its learning curve. Finnaly, it makes tangible the initial Interaction Rendering Conceptual Diagram.<br/>
+The initial IMS Portable Custom Interaction (PCI) specification introduces the notion of Communication Bridge. In the documentation however, it is difficult to concretely grasp what this bridge actually is and does. There indeed seems to be a confusion between the Rendering Engine and the Communication Bridge itself. From our understanding, the bridge should be the global qtiCustomInteractionContext object and the Rendering Engine is therefore something totally different, out of the scope of this document. In this proposal, Open Assessment Technologies considers the Rendering Engine as the hosting platform, and the Communication Bridge as the global qtiCustomInteractionContext. This improves the understandability of the specification, and reduces its learning curve. Finnaly, it makes tangible the initial Interaction Rendering Conceptual Diagram.
 
-Figure 3: The initial Interaction Rendering Conceptual Diagram.<br/>
+Figure 3: The initial Interaction Rendering Conceptual Diagram.
 
 ![](http://forge.taotesting.com/attachments/download/3450/renderingConcept.png)
 
-Before going further, let’s first redefine in depth the role and responsibility of each component involved in interaction rendering process for a better understanding of this proposal.<br/>
+Before going further, let’s first redefine in depth the role and responsibility of each component involved in interaction rendering process for a better understanding of this proposal.
 
 1. The Custom Interaction Hook component brings all the code required to identify, render and execute a Custom Interaction instance. All required methods must be implemented. A custom interaction is first registered in the Communication Bridge as a Custom Interaction Hook. It represents the prototype of future Custom Interaction Instances. This hook is uniquely identified by its typeIdentifier. A Custom Interaction Hook is to be cloned to produce a Custom Interaction Instance each time it has to be rendered. It is useful to make the distinction between the Custom Interaction Hook (or prototype) from its instances because there may be more than one occurrence of such custom interaction within a single QTI assessmentItem. In this document, a Custom Interaction Hook refers to the prototype whilst Custom Interaction instances refer to its clone (which is intended to be initialized and executed at rendering time). The Custom Interaction Hook, is the former Custom Interaction in Figure 3.
 
@@ -113,7 +113,7 @@ define([], function(){
      */
      register : function(customInteractionHook){
        // register the Custom Interaction Hook for future
-       // instanciation/cloning...
+       // instantiation/cloning...
      },
 
     /**
@@ -206,7 +206,7 @@ define(['qtiCustomInteractionContext',
 
      /**
       * - Custom Interaction Hook API: id
-      * The unique identifier provided at instanciation time, identifying the
+      * The unique identifier provided at instantiation time, identifying the
       * Custom Interaction Hook Instance at runtime.
       */
      id : -1,
@@ -260,7 +260,7 @@ define(['qtiCustomInteractionContext',
       *
       * This method can be called multiple times, once, or not at all.
       * The response data must correspond with the baseType and cardinality
-      * of the respponse declaration referenced by the
+      * of the response declaration referenced by the
       * qti:customInteraction->responseIdentifier attribute.
       *
       * @returns {Object} A response object in the PCI JSON format.
@@ -506,7 +506,7 @@ What about custom-interaction-specific CSS : a PCI provider might want to propos
 
 ### PCI Configuration - Properties
 
-We agree with Pacific Metrics about the need for more a structured way to store configuration parameter in the XML and have implemented as such. All the values in the <entry> will be passed to the PCI initialize function as strings. It will be up to the PCI implementer to check their validity or re-interpret the value if necessary.<br/>
+We agree with Pacific Metrics about the need for more a structured way to store configuration parameter in the XML and have implemented as such. All the values in the <entry> will be passed to the PCI initialize function as strings. It will be up to the PCI implementer to check their validity or re-interpret the value if necessary.
 
 #### Table 5. XML PCI Properties
 
