@@ -11,7 +11,7 @@ TAO on a Raspberry
 
 ![](resources/raspberry-pi-7.jpg)
 
-So, you want to use raspberry as a TAO web server and deliver your tests over a local Wi-Fi ?
+So, you want to use raspberry as a TAO web server and deliver your tests over a local Wi-Fi?
 
 1. Download RaspDebian
 ----------------------

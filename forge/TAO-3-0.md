@@ -27,9 +27,9 @@ TAO 2.6 exposed a brand new WYSIWYG editor with a modern flat design. TAO 3.0 en
 ### Data Rights Access Management
 
 
-Computer based assessment project involve several stakeholders, the resources, items, tests are designed and authored sometimes collaboratively. In addition to the authentication system, a fine grained control access should be added so that resources or information access (read, write, delete, create) may be set considering specific groups of users or roles.
+Computer-based assessment project involves several stakeholders, the resources, items, tests are designed and authored sometimes collaboratively. Besides the authentication system, a fine-grained control access should be added so that resources or information access (read, write, delete, create) may be set considering specific groups of users or roles.
 
-Two different approaches could be considered :
+Two different approaches could be considered:
 
 - Rights access at resource level, considering access control on an item globally for instance.
 

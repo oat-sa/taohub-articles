@@ -34,9 +34,9 @@ The manifest of each extension introduce the funacl.rdf file and install it. It�
 Control
 -------
 
-Once installed, it’s start in tao/include/class.AccessControlFC.php called by the bootstrap checking your access to the uri targeted. Extension, module and action is checked.
+Once installed, it starts in tao/include/class.AccessControlFC.php called by the bootstrap checking your access to the uri targeted. Extension, module and action is checked.
 
-The control is made by the helper tao/helpers/funcacl/class.funcACL.php :: hasAccess method. It retrieves the roles of the current user and add, even if not logged in, a base access control role (CLASS_ROLE_BASEACCESS) giving the access for logging and basic access like that. This is valid for all 3 kind of login
+The control is made by the helper tao/helpers/funcacl/class.funcACL.php :: hasAccess method. It retrieves the roles of the current user and adds, even if not logged in, a base access control role (CLASS_ROLE_BASEACCESS) giving the access for logging and basic access like that. This is valid for all 3 kinds of login
 
 ![](http://forge.taotesting.com/attachments/1669/taofuncacl.png)
 
@@ -49,16 +49,16 @@ For optimizing the access to the database (processing
 Managing
 --------
 
-An interface exist to give access for entire module or specific action in the user management. It’s more for developer than user by the way it shows methods and classes (actions/modules).
+An interface exists to give access for the entire module or a specific action in the user management. It’s more for a developer than user by the way it shows methods and classes (actions/modules).
 
 ![](http://forge.taotesting.com/attachments/1680/manager_roles_rights.png)
 
-It’s hidden ! To activate it, in the structures.xml of TAO add this line
+It’s hidden! To activate it, in the structures.xml of TAO add this line
 
 <section id="manage_rolesrights" name="Manages Roles Rights" url="/tao/Roles/index" />
-The interface show the roles, select one to display modules by extension, showing directly what’s selected, partialy selected or not selected. Click on a module to display the actions, showing what’s selected or not and at the bottome of this list, a way to select all (access by module) even if the module is modified (new action or less).
+The interface shows the roles, select one to display modules by extension, showing directly what’s selected, partly selected or not selected. Click on a module to display the actions, showing what’s selected or not and at the bottom of this list, a way to select all (access by module) even if the module is modified (new action or less).
 
-Edit a user to attach role.
+Edit a user to attach a role.
 
 ![](http://forge.taotesting.com/attachments/1681/edit_user_roles.png)
 

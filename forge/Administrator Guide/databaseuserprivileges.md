@@ -16,7 +16,7 @@ This page lists the privileges database users needs to properly access data stor
 MySQL
 -----
 
-This section describes required privileges to access properly data stored by TAO in MySQL:
+This section describes the required privileges to access properly data stored by TAO in MySQL:
 
 -   EXECUTE
 -   SELECT

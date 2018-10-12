@@ -11,7 +11,7 @@ tags:
 Search using Solr
 =================
 
-TAO 3.1 allows different search implementations. By default it uses a slightly modified version of the Zend Lucene engine, but it can also be connected to Solr.
+TAO 3.1 allows different search implementations. By default, it uses a slightly modified version of the Zend Lucene engine, but it can also be connected to Solr.
 
 Installing Solr
 ---------------

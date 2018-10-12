@@ -25,7 +25,7 @@ Trust is built on facts and clear *rules*.
 2. GNU GPL v2
 -------------
 
-Our software is released under the *GNU GPL v2* (non upgradable). Our trademarks are licensed under a specific license. Although our code is free, it is very important that we strictly enforce our trademark rights, in order to keep them valid. Our trademarks include, among other things, the logos of TAO® and Generis4®.
+Our software is released under the *GNU GPL v2* (non-upgradable). Our trademarks are licensed under a specific license. Although our code is free, it is very important that we strictly enforce our trademark rights, in order to keep them valid. Our trademarks include, among other things, the logos of TAO® and Generis4®.
 
 [GPL v2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) license…
 
@@ -50,7 +50,7 @@ In order to ensure *legal security* to the benefit of the community and the proj
 
 *Contributor license agreement (CLA)* is required for every submitted contribution.
 
-CLA allows to grant the TAO project a license on all necessary intellectual property (IP) rights for each contribution.
+CLA allows granting the TAO project a license on all necessary intellectual property (IP) rights for each contribution.
 
 All IP rights belong to the contributor.
 
@@ -61,7 +61,7 @@ All IP rights belong to the contributor.
 
 However derivative works based on TAO should change their name. Services and commercial exploitation of TAO should not confuse customers.
 
-You do not have right to use TAO Trademark (i.e., the name of TAO to distribute a modified software based on TAO.
+You do not have the right to use TAO Trademark (i.e., the name of TAO to distribute a modified software based on TAO.
 
 6. See also
 -----------

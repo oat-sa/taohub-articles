@@ -48,7 +48,7 @@ The HTML looks roughly like this:
 
 ## CSS
 
-Don't get tempted to write your CSS by hand - always generate it from SCSS. The preferred way is to keep base and editor specific code in separate files. Always look at the code of existing interactions to see if there is already a similar implementation. PCI interactions are meant to be standalone - whether or not your SCSS can extend existing TAO code is debatable and we haven't decided yet what we consider being best practice.
+Don't get tempted to write your CSS by hand - always generate it from SCSS. The preferred way is to keep base and editor specific code in separate files. Always look at the code of existing interactions to see if there is already a similar implementation. PCI interactions are meant to be standalone - whether your SCSS can extend existing TAO code is debatable and we haven't decided yet what we consider being best practice.
 
 The base SCSS file structure could look like this for instance:
 ```sass

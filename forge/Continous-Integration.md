@@ -9,7 +9,7 @@ tags: {  }
 TAO Continuous Integration
 ==========================
 
-Here are the different steps that are ran on a daily basis, all source code and config file are available on https://github.com/oat-sa/package-build
+Here are the different steps that run on a daily basis, all source code and config file are available on https://github.com/oat-sa/package-build
 
 Build the package
 -----------------

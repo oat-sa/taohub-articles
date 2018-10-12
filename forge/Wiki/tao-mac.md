@@ -16,7 +16,7 @@ tags:
 Install TAO on your Mac tutorial
 ================================
 
-Let’s install TAO on your Mac, we don’t provide yet a self-installable package for Mac but do not panic, it is easy !
+Let’s install TAO on your Mac, we don’t provide yet a self-installable package for Mac but do not panic; it is easy!
 
 Let’s:
 
@@ -27,7 +27,7 @@ Let’s:
 Install the web server (MAMP installation)
 ------------------------------------------
 
-Go on the MAMP home page and download the free MAMP version. You may notice that MAMP comes bundled with MAMP PRO, however we don’t really need this and you may ignore the MAMP PRO and continue with MAMP.
+Go on the MAMP homepage and download the free MAMP version. You may notice that MAMP comes bundled with MAMP PRO, however, we don’t really need this and you may ignore the MAMP PRO and continue with MAMP.
 
 https://www.mamp.info/en/downloads/
 
@@ -38,7 +38,7 @@ https://www.mamp.info/en/downloads/
 
 ![](../resources/mamp.png)
 
-- Proceed with the Mamp installation using the default options unless you know what you are doing (click on "Continue", until you reach the end)
+- Proceed with the MAMP installation using the default options unless you know what you are doing (click on "Continue", until you reach the end)
 - Agree to the license terms
 - When you are prompted for how to install the software, you may have to confirm by clicking on the "install for all users"
 - You may also be prompted for a password: this is the password of an administrator account of your Mac
@@ -46,7 +46,7 @@ https://www.mamp.info/en/downloads/
 Congratulations! You have now your MAMP successfully installed, you may now launch it.
 
 - Double click the MAMP icon from your Applications directory (located at /Applications/MAMP/or from your dock bar)
-- You may be suggested by MAMP vendor to switch to a pro version, for the purpose of this tutorial, we recommend you to stick to the normal MAMP version
+- You may be suggested by MAMP vendor to switch to a pro version, for this tutorial, we recommend you to stick to the normal MAMP version
 - Click the "Start servers", the boxes near "Apache server" and "MySQL server" in the top right corner should switch to green ones
 
 ![](../resources/StartingMamp.png)

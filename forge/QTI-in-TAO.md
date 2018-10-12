@@ -76,9 +76,9 @@ As to PDF files, the issue is the same as math expressions and multimedia. There
 
 ### Item appearance
 
-Standard QTI 2.1 allows a subset of xhtml that can help you define the structure of text contents within your item. For example, you can create paragraph, align left, align right or justify your texts. You have also some other common format options like bold, italic etc.
+Standard QTI 2.1 allows a subset of XHTML that can help you define the structure of text contents within your item. For example, you can create a paragraph, align left, align right or justify your texts. You have also some other common format options like bold, italic, etc.
 
-Finally, you can upload your own css to customize the appearance of your item.
+Finally, you can upload your own CSS to customize the appearance of your item.
 
 ### Response processing
 
@@ -86,6 +86,6 @@ TAO uses the [3 standard response templates](http://www.imsglobal.org/question/q
 
 Composite items created with the item authoring tool - the QTI Creator - generate [generalized response processing](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#section10085) rules based on the standard templates. Basically, generalized response processing rules are all response rules applied to response processing that are not the 3 standard response templates. A generalized response processing rule is made of response conditions (if, then, else) and [expressions](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10569).
 
-Although the QTI Creator does not currently allow generalized response rule definition, the QTI Player can process any response processing rule and expression. This means that you can import QTI 2.1 items with any qti valid response rules you want into TAO and run them in TAO.
+Although the QTI Creator does not allow generalized response rule definition, the QTI Player can process any response processing rule and expression. This means you can import QTI 2.1 items with any QTI valid response rules you want into TAO and run them in TAO.
 
 

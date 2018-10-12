@@ -11,7 +11,7 @@ tags:
 Join the testing effort
 =======================
 
-Every Computer based assessment projects are different. From an education perspective to a human resources management environment, needs and challenges are different. The TAO platforms aims at addressing the whole range of needs that may apply in computer based assessment.
+Every Computer-based assessment projects are different. From an education perspective to a human resources management environment, needs and challenges are different. The TAO platforms aim at addressing the whole range of needs that may apply in computer-based assessment.
 
 TAO’s Community’s members represent an important part of the creation of TAO to provide feedback and input on how TAO should evolve.
 
@@ -30,7 +30,7 @@ login : alpha\
 password : alpha\
 **All data on this instance are removed regularly.**
 
-Here we host the very latest version of TAO, this version gathers the very last features that have been developed and which have not been tested yet. It is updated from Subversion and reinstalled regularly, many work in progress may break some features.
+Here we host the latest version of TAO, this version gathers the last features that have been developed and which have not been tested yet. It is updated from Subversion and reinstalled regularly, many works in progress may break some features.
 
 beta
 ----

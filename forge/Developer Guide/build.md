@@ -11,12 +11,12 @@ tags:
 Build Client Side resource
 ==========================
 
-This page describes how to build TAO in order to release it. Some of the actions may be relevant if you have modified the source code of TAO and want to deploy your modified version.
+This page describes how to build TAO to release it. Some actions may be relevant if you have modified the source code of TAO and want to deploy your modified version.
 
 Compile client side resources
 -----------------------------
 
-The SASS files needs to be compiled to CSS as well as the JavaScript modules that needs to be bundled. This step is required when you install TAO in production mode and ensure you better performances than the development mode.
+The SASS files need to be compiled to CSS and the JavaScript modules that need to be bundled. This step is required when you install TAO in production mode and ensure you better performances than the development mode.
 
 ### Dependencies
 

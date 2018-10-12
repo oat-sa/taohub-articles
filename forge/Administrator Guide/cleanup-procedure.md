@@ -13,7 +13,7 @@ tags:
 Cleanup Procedure for TAO 3.x
 =============================
 
-This part will explain you how to clean you TAO instance. At a certain point you may will to remove all data linked to deliveries.
+This part will explain to you how to clean you TAO instance. At a certain point, you may remove all data linked to deliveries.
 
 You can download [here](http://forge.taotesting.com/attachments/download/3868/tabula_rasa.php) a script that will do this cleanup for you. This script will remove all compilations, executions, states and results related to every delivery of you instance. It will keep all others data such as items, tests, test-takers …
 

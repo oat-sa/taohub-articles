@@ -44,7 +44,7 @@ Please make sure that the **DOM** PHP extension is loaded on your web server. Th
 The text “{qti_interaction_new}” appears when I add a new QTI interaction to my item.
 ---------------------------------------------------------------------------------------
 
-This occurs when the PHP **tidy** extension is not loaded. You can check whether or not the extension is loaded with the *phpinfo()* function. Get more information on how to install the **tidy** extension [here](http://us.php.net/manual/en/book.tidy.php).
+This occurs when the PHP **tidy** extension is not loaded. You can check whether the extension is loaded with the *phpinfo()* function. Get more information on how to install the **tidy** extension [here](http://us.php.net/manual/en/book.tidy.php).
 
 ![](../resources/2-faq_tidy.png)
 

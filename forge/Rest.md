@@ -18,9 +18,9 @@ Starting from **TAO 2.5**, a [Representational State Transfer (REST)](http://en.
 
 The four basic methods from [HTTP](https://en.wikipedia.org/wiki/Http) : GET / POST / PUT / DELETE allows you to fetch / create /modify or delete the different resources like test takers or items from any TAO node.
 
-Authentication mechanisms built in HTTP : Basic and Digest are being used for user identification and further restrictions are applied according to the functionality rights access settings as they are setup in the TAO node you want to access.
+Authentication mechanisms built in HTTP: Basic and Digest are being used for user identification and further restrictions are applied according to the functionality rights access settings as they are setup in the TAO node you want to access.
 
-An exception handler treat the different cases and allows for catching any errors that may be triggered while executing your queries. A content negotiation is being implemented and currently supports application/json and application/xml data exchange formats.
+An exception handler treats the different cases and allows for catching any errors that may be triggered while executing your queries. A content negotiation is being implemented and supports application/json and application/xml data exchange formats.
 
 ![](resources/REST.png)
 
@@ -334,9 +334,9 @@ You will have to provide some mandatory parameters (in this case the login and t
 
 For some parameters (Type, language) default values are applied, but you may explicit a different type or language.
 
-In general, you need to identify the parameters using URIs, for your convenience aliases for the default parameters were added. You may defines any other information according to the properties defined along your test takers.
+In general, you need to identify the parameters using URIs, for your convenience aliases for the default parameters were added. You may define any other information according to the properties defined along with your test takers.
 
-The list of aliases is the following, (and if it is mandatory bit) :
+The list of aliases is the following, (and if it is mandatory bit):
 
 -   “login”=> PROPERTY_USER_LOGIN,true
 -   “password” => PROPERTY_USER_PASSWORD,true
@@ -381,7 +381,7 @@ The list of aliases is the following, (and if it is mandatory bit) :
 
     curl_close($process);
 
-If your request is successful you will receive the URI of the newly created resource.
+If your request is successful, you will receive the URI of the newly created resource.
 
 
 
@@ -461,7 +461,7 @@ If you don’t know the URIs of properties or classes, you may use the ontoBrows
 Update an existing test taker
 -----------------------------
 
-In the case of an update, you have to specify only the values which you would like to update. You can’t update the login (in this case, you will have to remove the test taker account an create a new one).
+In the case of an update, you have to specify only the values which you would like to update. You can’t update the login (in this case, you will have to remove the test taker account and create a new one).
 
 You may re-assign a new type to the test taker.
 
@@ -660,7 +660,7 @@ Delete a test taker.
 Identification using Digest
 ---------------------------
 
-The Digest protocol is not yet implemented. Steps left for implementing it :
+The Digest protocol is not yet implemented. Steps left for implementing it:
 
 - Store along user definition their hash upon user creation and update\
 - Retrieve this hash and combine it within RestCommonModule.php
@@ -678,7 +678,7 @@ How to add rest services on top of my custom TAO extension I wrote ?
 
 You will need to add a rest controller extending the rest convenience built in TAO and to implement the four commands from REST.
 
-Example taken from test takers :
+Example taken from test takers:
 
 
     service = taoSubjects_models_classes_CrudSubjectsService::singleton();

@@ -11,7 +11,7 @@ tags:
 Security and Performance
 ========================
 
-For primary security purposes TAO can be considered to be a php website with DB storage. This page covers the basics and some TAO specific items; dependent on the security requirements further reading may be necessary. Fortunately, there is a wealth of data available around the web about securing php sites.
+For primary security purposes, TAO can be considered being a PHP website with DB storage. This page covers the basics and some TAO specific items; dependent on the security requirements further reading may be necessary. Fortunately, there is a wealth of data available around the web about securing PHP sites.
 
 Encrypting connections between client and server
 ------------------------------------------------
@@ -51,16 +51,16 @@ Depending on what is at stake, you may want to encrypt user data. So any server 
 Backups
 -------
 
-TAO stores user information in database. As a typical web application, you can split TAO in four major parts:
+TAO stores user information in the database. As a typical web application, you can split TAO into four major parts:
 
--   the source code, that does not contain any data,
+-   the source code, that contains none data,
 -   the configuration files, generated during the installation,
 -   the generated local files, available for local work,
--   the generated user content (tests as well as results) in database.
+-   the generated user content (tests and results) in the database.
 
 Confidentiality and privacy
 ---------------------------
 
-In many jurisdictions you are required to provide a statement regarding user data. In any case, it is a good idea to inform users of where and how you store their data. If deploying TAO with user information or data from outside sources it is important to secure agreements with both data owners and data keepers.
+In many jurisdictions, you are required to provide a statement regarding user data. In any case, it is a good idea to inform users of where and how you store their data. If deploying TAO with user information or data from outside sources, it is important to secure agreements with both data owners and data keepers.
 
 

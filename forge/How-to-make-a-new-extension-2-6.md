@@ -128,6 +128,6 @@ Integration with TAO
 
 
 
--   If you wish you can now try to add your own actions, like duplicating a file, or creating a form to upload new files
+-   If you wish you can now try to add your own actions, like duplicating a file or creating a form to upload new files
 
 

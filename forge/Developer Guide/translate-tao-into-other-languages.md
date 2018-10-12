@@ -98,16 +98,16 @@ You can then help us provide translation in
 12. Danish
 13. Hungarian
 
-Just choose your language and then you can suggest translation. We strongly recommend you to register to Pootle in order to gain access to more advanced feature.
+Just choose your language and then you can suggest translation. We strongly recommend you to register to Pootle to gain access to more advanced feature.
 
-When a translation in new language is good enough, we also start the translation of data into this language as explain before but for now we have not any collaborative tools to handle RDF translation. So, you may simply edit with a text editor rdf file and send us back, we will review them and integrate them into TAO.
+When a translation in the new language is good enough, we also start the translation of data into this language as explain before but for now, we have no collaborative tools to handle RDF translation. So, you may edit with a text editor RDF file and send us back, we will review them and integrate them into TAO.
 
 There is a also [dedicated section](http://forge.taotesting.com/projects/tao/boards/3) of the forum to speak about translation, if you have any questions or feedback or if you want to take the lead on a new language translation. Do not hesitate to contact us. You may also contact us to start a translation in a new language. We will then generate the new translation file and make them available in Pootle.
 
 Going further
 -------------
 
-If you want to understand how the translations are implemented into the TAO Framework you can have a look at the section dedicated to the [Internationalization](../documentation-for-core-components/internationalization.md).
+If you want to understand how the translations are implemented into the TAO Framework, you can have a look at the section dedicated to the [Internationalization](../documentation-for-core-components/internationalization.md).
 
 See also:
 

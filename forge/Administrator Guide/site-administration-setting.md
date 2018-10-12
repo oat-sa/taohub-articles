@@ -11,7 +11,7 @@ tags:
 Site Administration Settings
 ============================
 
-The purpose of this section is to describe the settings needed to integrate the TAO instance in your infrastructure.
+This section describes the settings needed to integrate the TAO instance in your infrastructure.
 
 Most of these settings can be set into the main configuration file located at:
 
