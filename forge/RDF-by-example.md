@@ -6,34 +6,31 @@ authors:
 tags: {  }
 -->
 
-RDF by example
-==============
+# RDF by example
 
 
-
-Example 1: how to store the **name**, **birthday** and **class** of the pupils of a school.
--------------------------------------------------------------------------------------------
+## Example 1: how to store the _name_, _birthday_ and _class_ of the pupils of a school.
 
 In a traditional database, we would probably create a simple table to achieve this:
 
-  PupilID   Name             Birthday   Class
-  --------- ---------------- ---------- -------
-  1         Abraham Antler   1.1.1980   101
-  2         Bart Bond        2.2.1981   102
+|PupilID|Name          |Birthday|Class|
+|------:|--------------|--------|----:|
+|      1|Abraham Antler|1.1.1980|  101|
+|      2|Bart Bond     |2.2.1981|  202|
 
 Using the RDF model we would store the same information using only 3 fields:
 
--   Subject (what are we talking about: pupil1, pupil2…)
--   Predicate (what property aspect of the specified subject are we talking about: name, birthday,class)
--   Object (what is the value for this subject, predicate: “Abraham Antler”, “1.1.1980”, Class 1)
+- Subject (what are we talking about: pupil1, pupil2…)
+- Predicate (what property aspect of the specified subject are we talking about: name, birthday,class)
+- Object (what is the value for this subject, predicate: “Abraham Antler”, “1.1.1980”, Class 1)
 
 So representing the information we know about “Abraham Antler” we would store:
 
-  Subject                       Predicate                           Object
-  ----------------------------- ----------------------------------- -------------------------------
-  http://www.example.org/\#p1   http://www.example.org/\#name       Abraham Antler
-  http://www.example.org/\#p1   http://www.example.org/\#birthday   1.1.1980
-  http://www.example.org/\#p1   http://www.example.org/\#class      http://www.example.org/\#c101
+|Subject                    |Predicate                        |Object                       |
+|---------------------------|---------------------------------|-----------------------------|
+|http://www.example.org/\#p1|http://www.example.org/\#name    |Abraham Antler               |
+|http://www.example.org/\#p1|http://www.example.org/\#birthday|                     1.1.1980|
+|http://www.example.org/\#p1|http://www.example.org/\#class   |http://www.example.org/\#c101|
 
 Plus one information which was implicit in our traditional database, the information that he is a pupil:
 
