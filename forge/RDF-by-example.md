@@ -9,7 +9,9 @@ tags: {  }
 # RDF by example
 
 
-## Example 1: how to store the _name_, _birthday_ and _class_ of the pupils of a school.
+## Example 1
+
+### How to store the _name_, _birthday_ and _class_ of the pupils of a school.
 
 In a traditional database, we would probably create a simple table to achieve this:
 
@@ -34,48 +36,49 @@ So representing the information we know about “Abraham Antler” we would stor
 
 Plus one information which was implicit in our traditional database, the information that he is a pupil:
 
-  Subject                       Predicate                                          Object
-  ----------------------------- -------------------------------------------------- --------------------------------
-  http://www.example.org/\#p1   http://www.w3.org/1999/02/22-rdf-syntax-ns\#type   http://www.example.org/\#pupil
+|Subject                    |Predicate                                       |Object                        |
+|---------------------------| -----------------------------------------------|------------------------------|
+|http://www.example.org/\#p1|http://www.w3.org/1999/02/22-rdf-syntax-ns\#type|http://www.example.org/\#pupil|
 
-A single line, in this model would be called a ‘statement’
+A single line, in this model would be called a _statement_
 
-### Namespace prefix
+#### Namespace prefix
 
 So if we took all the information in our traditional table we would receive:
 
-  Subject                       Predicate                                          Object
-  ----------------------------- -------------------------------------------------- --------------------------------
-  http://www.example.org/\#p1   http://www.example.org/\#name                      Abraham Antler
-  http://www.example.org/\#p1   http://www.example.org/\#birthday                  1.1.1980
-  http://www.example.org/\#p1   http://www.example.org/\#class                     http://www.example.org/\#c101
-  http://www.example.org/\#p1   http://www.w3.org/1999/02/22-rdf-syntax-ns\#type   http://www.example.org/\#pupil
-  http://www.example.org/\#p2   http://www.example.org/\#name                      Bart Bond
-  http://www.example.org/\#p2   http://www.example.org/\#birthday                  2.2.1981
-  http://www.example.org/\#p2   http://www.example.org/\#class                     http://www.example.org/\#c102
-  http://www.example.org/\#p2   http://www.w3.org/1999/02/22-rdf-syntax-ns\#type   http://www.example.org/\#pupil
+|Subject                    |Predicate                                        |Object                        |
+|---------------------------|-------------------------------------------------|------------------------------|
+|http://www.example.org/\#p1|http://www.example.org/\#name                    |Abraham Antler                |
+|http://www.example.org/\#p1|http://www.example.org/\#birthday                |1.1.1980                      |
+|http://www.example.org/\#p1|http://www.example.org/\#class                   |http://www.example.org/\#c101 |
+|http://www.example.org/\#p1|http://www.w3.org/1999/02/22-rdf-syntax-ns\#type |http://www.example.org/\#pupil|
+|http://www.example.org/\#p2|http://www.example.org/\#name                    |Bart Bond                     |
+|http://www.example.org/\#p2|http://www.example.org/\#birthday                |2.2.1981                      |
+|http://www.example.org/\#p2|http://www.example.org/\#class                   |http://www.example.org/\#c102 |
+|http://www.example.org/\#p2|http://www.w3.org/1999/02/22-rdf-syntax-ns\#type |http://www.example.org/\#pupil|
 
 In order to make this a little easier to read we can substitute the namespaces with a prefix
 
--   xmlns:ex=“http://www.example.org/
-#”
--   xmlns:rdf=“http://www.w3.org/1999/02/22-rdf-syntax-ns\#type”
+```xml
+<xmlns:ex="http://www.example.org/#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns\#type">
+```
 
 which allows us to represent the list as following
 
-  Subject   Predicate     Object
-  --------- ------------- ----------------
-  ex:p1     ex:name       Abraham Antler
-  ex:p1     ex:birthday   1.1.1980
-  ex:p1     ex:class      ex:c101
-  ex:p1     rdf:type      ex:pupil
-  ex:p2     ex:name       Bart Bond
-  ex:p2     ex:birthday   2.2.1981
-  ex:p2     ex:class      ex:c102
-  ex:p2     rdf:type      ex:pupil
+|Subject|Predicate  |Object         |
+|-------|-----------|---------------|
+|ex:p1  |ex:name    |Abraham Antler |
+|ex:p1  |ex:birthday|1.1.1980       |
+|ex:p1  |ex:class   |ex:c101        |
+|ex:p1  |rdf:type   |ex:pupil       |
+|ex:p2  |ex:name    |Bart Bond      |
+|ex:p2  |ex:birthday|2.2.1981       |
+|ex:p2  |ex:class   |ex:c102        |
+|ex:p2  |rdf:type   |ex:pupil       |
 
-Example 2: how to store friend information
--------------------------------------------
+## Example 2
+### How to store friend information
 
 In a traditional database model friendship between pupils would be modelled via an auxiliary table:
 
