@@ -61,7 +61,7 @@ In order to make this a little easier to read we can substitute the namespaces w
 
 ```xml
 <xmlns:ex="http://www.example.org/#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns\#type">
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
 ```
 
 which allows us to represent the list as following
@@ -82,14 +82,13 @@ which allows us to represent the list as following
 
 In a traditional database model friendship between pupils would be modelled via an auxiliary table:
 
-  --------------- -------------- ----------------
-  .FriendshipId   _.PupilLeft   _.Pupilrigtht
-  1               1              2
-  2               1              7
-  3               1              3
-  --------------- -------------- ----------------
+|FriendshipId|PupilLeft|Pupilrigtht|
+|-----------:|--------:|----------:|
+|           1|        1|          2|
+|           2|        1|          7|
+|           3|        1|          3|
 
-Since RDF does not define cardinalities, we can simply add a property ‘friendOf’ which will result in multiple lines, that share the same subject and predicate:
+Since RDF does not define cardinalities, we can simply add a property _friendOf_ which will result in multiple lines, that share the same subject and predicate:
 
 |Subject|Predicate  |Object        |
 |-------|-----------|--------------|
@@ -109,10 +108,9 @@ This generic approach to data modeling allows us to define in a single model not
 
 ## Property definitions 
 
-RDF features:
--------------
+## RDF features
 
--   multiple inheritance
--   multi-type
+- multiple inheritance
+- multi-type
 
 
