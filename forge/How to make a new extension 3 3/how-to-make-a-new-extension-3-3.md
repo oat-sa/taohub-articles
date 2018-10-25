@@ -79,7 +79,7 @@ To create your first controller, go into the `taoExample/controller` folder and 
 
 namespace oat\taoExample\controller;
 
-class Greeter extends \tao_actions_commonModule {
+class Greeter extends \tao_actions_CommonModule {
     /**
      * initialize the services
      */
