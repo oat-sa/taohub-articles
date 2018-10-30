@@ -8,12 +8,12 @@ tags:
     - Tutorials
 -->
 
-How to add a new field to a test taker
+How to add a new field to a test-taker
 ======================================
 
 Models
 
-You will need to edit the core ontology to be able to add a new field to a test taker. Begin by opening the ontology located at /generis/core/ontology/generis.rdf
+You will need to edit the core ontology to be able to add a new field to a test-taker. Begin by opening the ontology located at /generis/core/ontology/generis.rdf
 
 We can see a sample such as the field userMail.
 
@@ -28,7 +28,7 @@ We can see a sample such as the field userMail.
 
 
 
-Step 1 - add the following code under #userMail and note that is is a duplicate (with only the about attribute changed)
+Step 1 - add the following code under #userMail and note that is a duplicate (with only the about attribute changed)
 ========================================================================================================================
 
 

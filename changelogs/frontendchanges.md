@@ -208,7 +208,7 @@ This is useful when custom filters generate internal inputs (like select2) but w
 ---
 
 `core/highlighter` wraps the text nodes found within a selection range with a configurable class. Also provide helpers to save and restore the highlights on an content-identical, but different, DOM tree (useful if the markup is destroyed then re-created)
-`taoQtiTest/runner/plugins/tools/highlighter`make use of the highlighter component to provide the test taker with a highlighter tool
+`taoQtiTest/runner/plugins/tools/highlighter`make use of the highlighter component to provide the test-taker with a highlighter tool
 
 ## Sprint 37
 
@@ -681,7 +681,7 @@ adding `transform: translateZ(0);` on the loading bar to move the animation proc
 
 ## Sprint 21
 
-Sprint 21 / tech changes is opened
+Sprint 21 / tech changes are opened
 
 `ui/hider` : *hide/show/toggle* using a css class to prevent issues on display when using jQuery's `show/hide`
 

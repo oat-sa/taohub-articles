@@ -293,7 +293,7 @@ creator Widget : the one returned by pciCreator.getWidget(), e.g. [a sample impl
 
 commonRender : [qtiCommonRenderer/renderers/interactions/PortableCustomInteraction.js](https://github.com/oat-sa/extension-tao-itemqti/blob/develop/views/js/qtiCommonRenderer/renderers/interactions/PortableCustomInteraction.js)
 
-The commonRenderer will basically call the the runtime code, which is initialized by the call to the method initialize() of the object registered in manifest.entryPoint.
+The commonRenderer will basically call the runtime code, which is initialized by the call to the method initialize() of the object registered in manifest.entryPoint.
 
 ![](http://forge.taotesting.com/attachments/download/3430/pciCreatorSequence.png)
 

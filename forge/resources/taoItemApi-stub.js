@@ -1,21 +1,21 @@
-/*  
+/*
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
  * as published by the Free Software Foundation; under version 2
  * of the License (non-upgradable).
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- * 
+ *
  * Copyright (c) 2009-2012 (original work) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
  *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
- * 
+ *
  */
 
 /**
@@ -46,7 +46,7 @@ ConsoleItemApi.prototype.connect = function(){
 };
 
 /**
- * Save test taker's responses
+ * Save test-taker's responses
  * @param {Object} responses
  */
 ConsoleItemApi.prototype.saveResponses = function(responses){
@@ -76,7 +76,7 @@ ConsoleItemApi.prototype.beforeFinish = function(callback){
 };
 
 /**
- * Save test taker's scores
+ * Save test-taker's scores
  * @param {Object} scores
  */
 ConsoleItemApi.prototype.saveScores = function(scores){
@@ -107,7 +107,7 @@ ConsoleItemApi.prototype.getVariable = function(key, callback){
 };
 
 /**
- * Flag the item as finish 
+ * Flag the item as finish
  */
 ConsoleItemApi.prototype.finish = function(){
     this.before.forEach(function(callback){

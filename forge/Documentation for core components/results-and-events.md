@@ -36,6 +36,6 @@ Results and Events
 Overview
 --------
 
-The main purpose of the Result Module is to gather all results from tests done by test takers in order to provide clear presentation and organization of these results. In the following one presents the most important features of this module. One fosters on three mains aspects which are, the Result Data model, Result Interception and Table Creation.
+The main purpose of the Result Module is to gather all results from tests done by test-takers in order to provide clear presentation and organization of these results. In the following one presents the most important features of this module. One fosters on three mains aspects which are, the Result Data model, Result Interception and Table Creation.
 
 

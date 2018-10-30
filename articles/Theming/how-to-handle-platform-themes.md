@@ -7,7 +7,7 @@ skip: true
 
 ## Definition
 
-A platform theme is a set of stylesheets, templates, images etc. to modify the standard look and feel of the TAO platform, most often to apply a customer's branding. It for now is limited to header, footer, action bars and tabs. Although technically feasible changes to the appearance of items are explicitly excluded. For all item related modifications item themes must be used.
+A platform theme is a set of style sheets, templates, images etc. to modify the standard look and feel of the TAO platform, most often to apply a customer's branding. It for now is limited to header, footer, action bars and tabs. Although technically workable changes to the appearance of items are explicitly excluded. For all item related modifications item themes must be used.
 
 ## Basic Setup
 
@@ -51,7 +51,7 @@ $options = [
     'id' => 'taoSomethingDefaultTheme'
 ];
 ```
-Your configuration array will be merged over these defaults, so that you can easily overwrite whatever you wish. You can also add custom keys, there is a generic getter function to retrieve these values from the object. Mind you that keys must be in _camelCase_.
+Your configuration array will be merged over these defaults so that you can easily overwrite whatever you wish. You can also add custom keys, there is a generic getter function to retrieve these values from the object. Mind you, that keys must be in _camelCase_.
 
 ```php
 $options = [
@@ -226,6 +226,6 @@ The theme object is available in the templates and all public getters can be use
 ```
 
 ### SCSS Code
-There are two directories called /_common/, the one on the top level contains code that is shared between item and platform themes. The second one is in the platform directory and contains code that is shared between all your platform themes. There is possibly a third one in items which is irrelevant for this article. If you plan to create just one theme or multiple very similar themes you should work in the _/platform/_common_ directory, otherwise in _/platform/my-theme_.
+There are two directories called `/_common/`, the one on the top level contains code that is shared between item and platform themes. The second one is in the platform directory and contains code that is shared between all your platform themes. There is possibly a third one in items which is irrelevant for this article. If you plan to create just one theme or multiple very similar themes, you should work in the `/platform/_common` directory, otherwise in `/platform/my-theme`.
 
-Fire up the the Toolkit compiler. The best starting point for platform themes is _platform/_common/inc/colors/_base.scss. Changes the colors to ones from the new color scheme, the compiler should then do most of the work for you.
+Fire up the Toolkit compiler. The best starting point for platform themes is `_platform/_common/inc/colors/_base.scss`. Changes the colors to ones from the new color scheme, the compiler should then do most of the work for you.

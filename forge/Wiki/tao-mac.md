@@ -75,7 +75,7 @@ Please download one of these build packages:
 
     For example, you should have a file called ".htaccess" in the root folder.
 
-    Make sure you either extract the original files using an apporiate zip extracting utility with the htdocs destination or that you have turned on the the mode from MAC for hidden file so that your selection covering all the files.
+    Make sure you either extract the original files using an apporiate zip extracting utility with the htdocs destination or that you have turned on the mode from MAC for hidden file so that your selection covering all the files.
 
     If you meet this issue, we recommend using an appropriate zip extraction utility such as http://www.izip.com/ and ensure you extract the downloaded zip files directly into your /Applications/MAMP/htdocs folder
 

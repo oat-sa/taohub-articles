@@ -16,7 +16,7 @@ When we retrieve Delivery Results from TAOTesting - the ideal way to retrieve ob
 Step 1 - Add a new function
 ---------------------------
 
-Add a new function to RdsResultStorage.php - this is a sample function that will retrieve all the Delivery Results for a group of Test Takers
+Add a new function to RdsResultStorage.php - this is a sample function that will retrieve all the Delivery Results for a group of Test-Takers
 
     public function getAllDeliveryIdsByTesttaker($testTakersUri = array())
         {
@@ -48,7 +48,7 @@ Step 3 - Call the function from your controller
 Call the function from your controller
 
     $testTakers = array();
-    //This is a hard coded URI of a test taker (just to test)
+    //This is a hard coded URI of a test-taker (just to test)
     array_push($testTakers, 'http://localhost/projects/taotesting/john.rdf#i1441541566133340');
     $rdsResultsStorage = new RdsResultStorage();
     $deliveryIDs = $rdsResultsStorage->getAllDeliveryIdsByTesttaker($testTakers);

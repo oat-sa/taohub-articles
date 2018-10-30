@@ -75,7 +75,7 @@ search every items with label equal to ‘foo’.
 
 ### search by type :
 
-search every test takers.
+search every test-takers.
 
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
@@ -203,17 +203,17 @@ with different operator :
 
 Criteria are grouped by AND operator :
 
-to search test takers which label begin by ‘a’ or begin by ‘z’ :
+to search test-takers which label begin by ‘a’ or begin by ‘z’ :
 
 
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
 
     /**
-    * a test taker with label begins by 'a'
+    * a test-taker with label begins by 'a'
     *
     * or
     *
-    * a test taker with comment begins by 'b'
+    * a test-taker with comment begins by 'b'
     **/
 
     $queryBuilder = $search->query();
@@ -235,7 +235,7 @@ to search test takers which label begin by ‘a’ or begin by ‘z’ :
     $search = $this->getServiceManager()->get(\oat\oatbox\search\ComplexSearchService::SERVICE_ID);
 
     /**
-    * a test taker with label begin by 'a' or label begin by 'b'
+    * a test-taker with label begin by 'a' or label begin by 'b'
     **/
 
     $queryBuilder = $search->query();

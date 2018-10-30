@@ -11,7 +11,7 @@ tags:
 Rest Services Layer (>= TAO 2.5)
 =================================
 
-A tutorial demonstrating a few examples is available here: (Test takers) [Rest](../rest.md) and (Results) [RestResults](../rest-services-layer/restresults.md)
+A tutorial demonstrating a few examples is available here: (Test-takers) [Rest](../rest.md) and (Results) [RestResults](../rest-services-layer/restresults.md)
 
 List of available rest controllers
 ----------------------------------

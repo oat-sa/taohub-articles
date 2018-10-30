@@ -18,7 +18,7 @@ They should expose an object with an exec() method that will be called by the lo
 
 User scripts are a different - and older - implementation of the same concept. They are only implemented in the old item runner. Thus, you most probably want to create a user module rather than a user script.
 
-They are 2 ways of registering user modules. Pick up one or another depending on the test runner used but do not mix them. If you have user modules registered for the old test runner and want them in the new one, please unregister them first with
+There are 2 ways of registering user modules. Pick up one or another depending on the test runner used but do not mix them. If you have user modules registered for the old test runner and want them in the new one, please unregister them first with
 
     $registry->remove('taoQtiItem/runtime/qtiBootstrap');
     $registry->remove('taoQtiItem/runtime/qtiBootstrap.min');

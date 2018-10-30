@@ -80,7 +80,7 @@ If you prefer to store these states in an alternative storage copy the file *gen
 Delivery execution information storage abstraction
 ---------------------------------------------------
 
-Delivery execution information cover everything related to what test taker has started/finished which delivery. The choice of the abstraction is done via the constant *DELIVERY_EXECUTION_HANDLER* in *generis/common/conf/generis.conf.php*.
+Delivery execution information cover everything related to what test-taker has started/finished which delivery. The choice of the abstraction is done via the constant *DELIVERY_EXECUTION_HANDLER* in *generis/common/conf/generis.conf.php*.
 
 ### Storing delivery execution information in the ontology (default)
 

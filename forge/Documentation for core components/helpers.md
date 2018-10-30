@@ -122,7 +122,7 @@ We assume that you have a valid extension in which you can make your tests. We w
 
 ![](http://forge.taotesting.com/attachments/390/login_formcontainer.png)
 
--   In the *initForm* method, you need to create and initialize *tao_helpers_form_Form* object. The *form* attribute have to refer to it.
+-   In the *initForm* method, you need to create and initialize *tao_helpers_form_Form* object. The *form* attribute has to refer to it.
 -   In the *initElements* method, you need to create the *tao_helpers_form_FormElement* objects and bind them to the *form* attribute.
 -   In the listing below, we use the *tao_helpers_form_FormFactory* for creations. We create a form, with a *Connect* action and we bind it to 2 fields: a login and a password field:
 

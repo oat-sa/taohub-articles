@@ -97,7 +97,7 @@ GET result
                    "values":[
                       {
                          "valueType":"literal",
-                         "value":"A label for this data set arising from the execution of a test by a test taker"
+                         "value":"A label for this data set arising from the execution of a test by a test-taker"
                       }
                    ]
                 }

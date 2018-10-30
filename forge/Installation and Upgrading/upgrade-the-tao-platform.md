@@ -16,7 +16,7 @@ An extension called taoUpdate is available since TAO 2.5 to allow System adminis
 1.  Download the attached file [taoUpdate](http://releases.taotesting.com/taoUpdate2.5-2.6.zip) and extracted in content in your root folder.
 2.  Connect to Extension Manager and install the extension taoUpdate\
     ![](http://forge.taotesting.com/attachments/download/2568/S%C3%A9lection_045.png)
-3.  Make sure www-data have permission to write on all folder of your TAO root folder\
+3.  Make sure www-data has permission to write on all folder of your TAO root folder\
     ![](http://forge.taotesting.com/attachments/download/2567/S%C3%A9lection_046.png)
 4.  Launch the update\
     ![](http://forge.taotesting.com/attachments/download/2566/S%C3%A9lection_047.png)

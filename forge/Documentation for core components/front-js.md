@@ -192,7 +192,7 @@ In production mode, TAO will not load each separate JavaScript files but bundles
 
   Path                                          Description
   --------------------------------------------- --------------------------------------------------------------------------
-  tao/views/js/main.min.js                      Contains external and local libraries as well as the core components
+  tao/views/js/main.min.js                      Contains external and local libraries and the core components
   {extension}/views/js/controllers.min.js       The controllers by extension
   taoQTI/views/js/runtime/qtiLoader.min.js      The QTI loader distributed into the items that loads scripts dynamically
   taoQTI/views/js/runtime/qtiBootstrap.min.js   The QTI Item Runtime

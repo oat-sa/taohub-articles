@@ -4,7 +4,7 @@ tags: ["Style Guide:Buttons"]
 
 # Buttons
 
-> Real buttons as well as elements that should look like buttons.
+> Real buttons and elements that should look like buttons.
 
 ## Regular Buttons
 <div>

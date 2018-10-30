@@ -30,7 +30,7 @@ Be sure to have `wget` (or `curl` with 3.0 version), and `unzip` installed and a
 Install PDF.js library manually
 -------------------------------
 
-Even if all major browser are able to render PDF files, the way they render them is not consistent across all brands and OS. So a unified viewer is better to ensure a consistent user experience. To do so TAO relies on a third-party library called [PDF.js](https://mozilla.github.io/pdf.js/) and released by the Mozilla Foundation under the Apache 2.0 license.
+Even if all major browsers are able to render PDF files, the way they render them is not consistent across all brands and OS. So a unified viewer is better to ensure a consistent user experience. To do so TAO relies on a third-party library called [PDF.js](https://mozilla.github.io/pdf.js/) and released by the Mozilla Foundation under the Apache 2.0 license.
 
 Because of license compatibility issue, it cannot be included within the default TAO package. That is why you need to install this library separately to use a consistent pdf viewer.
 

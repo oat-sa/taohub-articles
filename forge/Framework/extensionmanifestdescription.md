@@ -11,7 +11,7 @@ tags:
 Extension Manifests
 ===================
 
-Extension Manifests are PHP files that describe TAO Extensions in order to be installed and loaded properly at runtime. On one hand, they essentially contain descriptive contents such as a *name*, *description*, *version* and *author*. On the other hand, they contains references to the *ontology models* to load, extensions they *depend on*, *installation files and checks*, …
+Extension Manifests are PHP files that describe TAO Extensions in order to be installed and loaded properly at runtime. On one hand, they essentially contain descriptive contents such as a *name*, *description*, *version* and *author*. On the other hand, they contain references to the *ontology models* to load, extensions they *depend on*, *installation files and checks*, …
 
 From a technical point of view, Extension Manifests are simple PHP files containing an associative array describing the extension. The content of the file is required at runtime and evaluated by PHP at extension loading time.
 

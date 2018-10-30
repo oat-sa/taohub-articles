@@ -20,7 +20,7 @@ Back office
 
 Accessible to users with the role “Back Office”
 
-Used to create items, manage item and test banks, organize cohorts and deliveries, prepare reports, set up workflows.
+Used to create items, manage item and test banks, organize groups of students and deliveries, prepare reports, set up workflows.
 
 Delivery server
 ---------------

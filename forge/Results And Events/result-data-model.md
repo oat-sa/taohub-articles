@@ -18,7 +18,7 @@ Result Data Model
 1. Objective
 ------------
 
-The Result Data Model (RDM) constitutes the data level of this module. RDM allows saving the result of tests according to a special structure in order to be used by the other levels of the module. Since we are in ontology context, the RDM have to follow this notion and it is considered as sub-ontology of TAO ontology with the appropriate relations to other ones.
+The Result Data Model (RDM) constitutes the data level of this module. RDM allows saving the result of tests according to a special structure in order to be used by the other levels of the module. Since we are in ontology context, the RDM has to follow this notion and it is considered as sub-ontology of TAO ontology with the appropriate relations to other ones.
 
 2. Structure and Classes
 ------------------------
@@ -28,7 +28,7 @@ Initially three classes are proposed for the RDM, the RUSULT class, TAO_ITEM_RES
 ![](http://forge.taotesting.com/attachments/download/475/RM_RDM_Classes.jpg)
 
 -   In **RDM** the **Rresult class** is just used to indicate that all other classes that heritage it is considered as a result class. So, Result class has a very restricted structure.
--   **TAO_ITEM_RESULTS**. Instance of this class correspond to a variable value of an item in a test passed by a test taker. Each item has a set of standards variables (SCORE, Endorsement…) or unknown variables that can be added by the designer of the item. For that the structure of this class has to manage this special case. The proposed structure is based on (Variable,Value) tuple. This efficient structure permits to save variable value that can be unknown before the creation of the model. The property TAO_ITEM_VARIABLE_ID contains the ID of the variable, the property TAO_ITEM_VARIABLE_VALUE contains its value. The other five properties are used as key to identify exactly the value of the variable for the item of the test passed by a test take. The following figure presents all properties of this class.
+-   **TAO_ITEM_RESULTS**. Instance of this class correspond to a variable value of an item in a test passed by a test-taker. Each item has a set of standards variables (SCORE, Endorsement…) or unknown variables that can be added by the designer of the item. For that the structure of this class has to manage this special case. The proposed structure is based on (Variable,Value) tuple. This efficient structure permits to save variable value that can be unknown before the creation of the model. The property TAO_ITEM_VARIABLE_ID contains the ID of the variable, the property TAO_ITEM_VARIABLE_VALUE contains its value. The other five properties are used as key to identify exactly the value of the variable for the item of the test passed by a test take. The following figure presents all properties of this class.
 
 ![](http://forge.taotesting.com/attachments/download/314/RM_TAO_ITEM_RESULTS.jpg)
 

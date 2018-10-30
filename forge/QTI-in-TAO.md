@@ -26,7 +26,7 @@ Subset of QTI 2.1 features available in TAO 2.5
 
 An interaction represents a question.
 
-TAO supports composite items (item with more than one interaction) as well as single-interaction item.
+TAO supports composite items (item with more than one interaction) and single-interaction item.
 
 In a composite item, when every interaction uses one of the [3 standard response templates](http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#section10084), the final score is calculated by adding the score of each individual interaction. For more information on response processing, see the Response processing section below.
 
@@ -55,7 +55,7 @@ Planned for TAO 2.6:
 
 ### Feedback
 
-Only modal feedbacks are available for now. It enables you to define a message to be displayed to the test taker after the item completion. You can select simple rules based on the score value or the correct response.
+Only modal feedbacks are available for now. It enables you to define a message to be displayed to the test-taker after the item completion. You can select simple rules based on the score value or the correct response.
 
 No adaptative item feature as defined by QTI is planned so far.
 

@@ -29,7 +29,7 @@ Make sure that the user that will access the directories (www-data) have the rig
 
 ### Fix taoWorkspace
 
-If you had taoWorkspace installed on your installation you should manually add this extension.
+If you had taoWorkspace installed on your installation, you should manually add this extension.
 To do so you should first get the latest release using `composer require "oat-sa/extension-tao-workspace":~1.1` or by downloading the [archive](https://github.com/oat-sa/extension-tao-workspace/releases) and placing files in the correct directory.
 
 ### Update extensions
@@ -69,4 +69,4 @@ Add `testData` and the end of the root so you will end up with :
 ```
 
 ### Update server
-It is highly recommended to update PHP from 5.6 to 7.0 after TAO is upgraded to TAO 3.2. Unlike TAO 3.2, TAO 3.1 is not fully compatible with PHP 7.0 so please update the TAO software prior to updating PHP.
+It is highly recommended to update PHP from 5.6 to 7.0 after TAO is upgraded to TAO 3.2. Unlike TAO 3.2, TAO 3.1 is not fully compatible with PHP 7.0 so please update the TAO software before updating PHP.

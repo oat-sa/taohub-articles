@@ -60,7 +60,7 @@ This option is the one that will set your first TAO user as a super user. It req
 
 #### Configuration
 
-This section have several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.
+This section has several properties, each property match a specific config in your final installation. Some of them are mandatory, some others are optional.
 
 Mandatory configuration:
 

@@ -8,14 +8,14 @@ tags:
 Enhance the user experience with Test Plugins
 =============================================
 
-> One of the best options to improve, customize the test taker experience is using _Test Runner Plugins_.
-A plugin can be anything that hook in the test experience : like tools to help the test taker (a calculator, a ruler), some additional information (progress bar, custom title), etc.
+> One of the best options to improve, customize the test-taker experience is using _Test Runner Plugins_.
+A plugin can be anything that hook in the test experience : like tools to help the test-taker (a calculator, a ruler), some additional information (progress bar, custom title), etc.
 
 The user interface and the user experience of the test runner are made of plugins. Everything you see while running a test is a plugin :
 
 ![test runner plugins](../resources/test-runner-plugins/runner.png)
 
-In this tutorial we will lead you through the creation of a plugin that hides the item when you click on a button. The goal of this plugin is to prevent cheating, so you can hide your item if your neighbor takes a look at your screen...
+In this tutorial we will lead you through the creation of a plugin that hides the item when you click on a button. The goal of this plugin is to prevent cheating, so you can hide your item if your neighbor looks at your screen...
 
 ## Set up
 
@@ -202,13 +202,13 @@ define([
 });
 ```
 We have implemented the `enable` and `disable` method, retrieved the current test runner instance using `this.getTestRunner()` and listen some events triggered by the test runner :
- - `renderitem` when an item is rendered to the test taker
+ - `renderitem` when an item is rendered to the test-taker
  - `unloaditem` when an item is removed from the screen
  - `enabletools` and `disabletools` are used to control whether all tools should be available, for example, when displaying a modal popup the tools should be _disabled_.
 
  The test runner provides much more useful events for the plugins, like
  - `loaditem` when the item data is retrieved (but the item isn't yet displayed)
- - `move`  or `skip` , so you know when the test taker move forward, or backward.
+ - `move`  or `skip` , so you know when the test-taker move forward, or backward.
  - `exit` or  `timeout` also pretty useful
 
 The complete list of events is available in the [test runner documentation](https://hub.taocloud.org/techdocs/tao-testqti/test-runner#events).

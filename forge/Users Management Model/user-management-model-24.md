@@ -125,7 +125,7 @@ Actually, when a TAO extension is installed, a dedicated **Extension Management 
 6. TAO Open Source Distribution Users Management Model
 ------------------------------------------------------
 
-Now that you are familiar with Users and Roles in TAO, we will now describe the Users Management Model as it comes with a fresh TAO Open Source distribution. This particular TAO distribution is composed of multiple extensions that enables end users to manage a complete Assessment Cycle, from Test Takers creation to Test Delivery.
+Now that you are familiar with Users and Roles in TAO, we will now describe the Users Management Model as it comes with a fresh TAO Open Source distribution. This particular TAO distribution is composed of multiple extensions that enables end users to manage a complete Assessment Cycle, from Test-Takers creation to Test Delivery.
 
 {{thumbnail(newmodel-2013.png, size=700, title=TAO Open Source Distribution Management Model)}}
 

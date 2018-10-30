@@ -49,17 +49,17 @@ Fig .3
 Front-office
 ------------
 
-The TAO platform also concerns Test Takers that will have to authenticate against the platform in order to take tests that are dedicated to them. In order to do that, the *Test Taker* Class is a sub-class of the *TaoSubjectRole* which is an instance of the *FrontOffice* Role. Users having the *TaoSubjectRole* may access the delivery platform.
+The TAO platform also concerns Test-Takers that will have to authenticate against the platform in order to take tests that are dedicated to them. In order to do that, the *Test-Taker* Class is a sub-class of the *TaoSubjectRole* which is an instance of the *FrontOffice* Role. Users having the *TaoSubjectRole* may access the delivery platform.
 
 ![](http://forge.taotesting.com/attachments/285/addTestTaker.png)
 
 Fig .4\
-Adding a *Test Taker* in the Test Taker Extension will create an instance of the class *Test Taker*. (*Jane* and *John*)
+Adding a *Test-Taker* in the Test-Taker Extension will create an instance of the class *Test-Taker*. (*Jane* and *John*)
 
 ![](http://forge.taotesting.com/attachments/286/role-addingNewTestTaker.png)
 
 Fig .5\
-You can also obviously add sub-classes of *Test Taker* and add new properties to your own class in order to complete the description of your *Test Taker* that will then instantiate this class. (*1StGrade* is the class and *Nicolas* its instance)
+You can also obviously add sub-classes of *Test-Taker* and add new properties to your own class in order to complete the description of your *Test-Taker* that will then instantiate this class. (*1StGrade* is the class and *Nicolas* its instance)
 
 ![](http://forge.taotesting.com/attachments/287/role-addingNewTestTakerClass.png)
 

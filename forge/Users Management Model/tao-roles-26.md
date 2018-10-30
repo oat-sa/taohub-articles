@@ -49,11 +49,11 @@ Front Office
 
 ![](../resources/front_office_roles.png)
 
--   **Test Taker**: Role of the Test takers, grants access to the Deliver Server, the test/item runners as well as the results interface to submit responses.
+-   **Test-Taker**: Role of the Test-takers, grants access to the Deliver Server, the test/item runners and the results interface to submit responses.
 
 
 
--   **Workflow Participant**: This grants access to the workflow server/runner as well as the services accessible by the workflow.
+-   **Workflow Participant**: This grants access to the workflow server/runner and the services accessible by the workflow.
 
 Back Office
 -----------
@@ -72,7 +72,7 @@ Back Office
 
 ### Exceptions
 
--   “taoDelivery Manager” does NOT grant access to the delivery server, to prevent non test takers from taking tests
+-   “taoDelivery Manager” does NOT grant access to the delivery server, to prevent non test-takers from taking tests
 
 
 

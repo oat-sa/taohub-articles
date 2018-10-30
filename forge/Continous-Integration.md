@@ -124,7 +124,7 @@ How to setup Jenkins
 Reports
 -------
 
-Here are some example of generated reports
+Here are some examples of generated reports
 
 -   [Main Page](http://docs.taotesting.com/reports/main.pdf)
 -   [PHPLOC](http://docs.taotesting.com/reports/phploc.pdf)

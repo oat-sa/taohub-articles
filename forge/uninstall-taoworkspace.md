@@ -12,7 +12,7 @@ Uninstall taoWorkspace
 Preparing the uninstall
 -----------------------
 
--   Before attempting an uninstall, please backup your database, as well as the directories data and config.
+-   Before attempting an uninstall, please backup your database, the directories data and config.
 -   **Warning** All work in progress that users have not checked in will be lost.
 
 Unregister the extension

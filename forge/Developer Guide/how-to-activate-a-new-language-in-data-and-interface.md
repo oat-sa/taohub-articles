@@ -41,7 +41,7 @@ php taoTranslate.php -v -a=create -e=taoQtiCommon -l=hi-IN -ll=“Hindi”
 
 php taoTranslate.php -v -a=create -e=taoTests -l=hi-IN -ll=“Hindi”
 
-take the .po files from the local/{your language} folder within these extensions. Translate them and and replace the translated files with old files.
+take the .po files from the local/{your language} folder within these extensions. Translate them and replace the translated files with old files.
 
 Step-3: Run the compile command to compile all files for each extension..
 -------------------------------------------------------------------------

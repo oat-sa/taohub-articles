@@ -52,7 +52,7 @@ These allow us to create a test with this model.
 
 In order to be able to execute our test, we need to implement a test runner.
 
--   ./actions/ **class.TestRunner.php** contains the controller which is called by the test taker to run the test.
+-   ./actions/ **class.TestRunner.php** contains the controller which is called by the test-taker to run the test.
 -   ./models/ontology/ **testRunner.rdf** describes the service which is made up by the called action and the required parameters.
 -   ./includes/ **constants.php** assigns constants to the service and the parameter for a cleaner code.
 -   ./views/templates/ **testrunner.tpl** contains the view of the test-runner
@@ -108,7 +108,7 @@ This service call is then stored in the compiled delivery and will be called dur
 
 ### Test runner implementation
 
-Because in TAO the items as well as the deliveries can have several different implementation the test runner must be independent from\
+Because in TAO the items and the deliveries can have several different implementation the test runner must be independent from\
 these. The interface between the item runner and the delivery runner are service calls.
 
 The execution of a delivery containing our random test would run through the following steps:

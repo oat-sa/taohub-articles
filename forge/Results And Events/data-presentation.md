@@ -25,7 +25,7 @@ Before explaining the functionalities of UTR, we propose brief theoretical infor
 
 ### Theoretical Background
 
-All information are stored following the RDF h model, this model allows a high flexibility to describe the structure of resources and relations between them. In our case, the main purpose resource is the instance of classes. Each class has a set of instances that represent a specific resource with a set of property values. So, in order to exploit these resources, on should get the structure of its class and get all the property values that are defined within the class description.
+All information is stored following the RDF h model, this model allows a high flexibility to describe the structure of resources and relations between them. In our case, the main purpose resource is the instance of classes. Each class has a set of instances that represent a specific resource with a set of property values. So, in order to exploit these resources, one should get the structure of its class and get all the property values that are defined within the class description.
 
 ![]({width:100px}http://forge.taotesting.com/attachments/download/204/classdescription2.gif)
 
@@ -36,7 +36,7 @@ To do that the RDF model provides a specific type of relations (predicate) to en
 -   http://www.w3.org/2000/01/rdf-schema\#range
 -   …
 
-In addition of the class structure, there is an important relation between class that is the *Range* http:www.w3.org/2000/01/rdf-schema\#range. With the range, on can establish a specific relation between class and use it as junction (as in SQL) to get the appropriate instance of class base on instance of other one.
+In addition, of the class structure, there is an important relation between class that is the *Range* http://www.w3.org/2000/01/rdf-schema\#range. With the range, one can establish a specific relation between class and use it as junction (as in SQL) to get the appropriate instance of class base on instance of other one.
 
 ![](http://forge.taotesting.com/attachments/download/205/rangeclass.gif)
 
@@ -76,7 +76,7 @@ The extension contains 4 classes
 
 ***T*:= (*Instances, Columns* )**
 
--   *Instances*: list of instances, in the case of the *Result Module* instances are the results of tests passed by test takers.
+-   *Instances*: list of instances, in the case of the *Result Module* instances are the results of tests passed by test-takers.
 -   *Columns*: set of column.
 
 ***Column*:= (*Label, Path* )**

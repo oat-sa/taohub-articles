@@ -30,7 +30,7 @@ TAO uses [SASS](http://sass-lang.com/) to create the TAO main theme.
 
 #### Main and bootstrap
 
-The folder `tao/views/scss/` contains the main theme (`tao-main-style.scss`) as well as a bootstrap (`inc/bootstrap.scss`) that provides variables, functions and mixins you can reuse into your own SASS files.
+The folder `tao/views/scss/` contains the main theme (`tao-main-style.scss`) and a bootstrap (`inc/bootstrap.scss`) that provides variables, functions and mixins you can reuse into your own SASS files.
 
 #### Extension’s custom styles
 

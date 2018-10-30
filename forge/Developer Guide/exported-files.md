@@ -15,7 +15,7 @@ Exported Files
 
 This article will show and explain exported files that you can get from TAO.
 
-These files are CSV file so they will be displayed as a table when opened with a spreadsheet software, in reality, every column is separated by commas and the text is in quotes. There are samples of each exported files at the end of this page.
+These files are CSV files so they will be displayed as a table when opened with a spreadsheet software, in reality, every column is separated by commas and the text is in quotes. There are samples of each exported files at the end of this page.
 
 Results Files
 =============
@@ -44,16 +44,16 @@ First, you can have a complete export of the results. This will gather all resul
 
 Here you can see that the file is divided into 4 parts:
 
--   The first column will show you the item label so you will know to which item the test taker was answering.
+-   The first column will show you the item label so you will know to which item the test-taker was answering.
 -   The second part is the identifier of the variable. For instance, this part will make your search clearer and simpler if you want only score variable
 
 \* The third column is the most tricky one. It contains the php serialized variable, it can be a response, an outcome or a trace variable. Letters followed by colons and numbers correspond to the type of the following variable (O= Object, s = string, i = integer …) the number corresponds to the length of the variable. For each variable you will have first the variable class (taoResultServer_models_classes_ResponseVariable, taoResultServer_models_classes_OutcomeVariable or taoResultServer_models_classes_TraceVariable) then between curly braces you will have multiple couples of property name and value. For example :
 
     s:17:\"candidateResponse\";s:4:\"MQ==\";
 
-says that the property candidateResponse (which is a string of length 17) has for value MQ== (a string of length 4). This leads us to the last point, some of the value are base64 encoded. This is true for the candidateResponse of a ResponseVariable and the value of an OutcomeVariable. So you will have to decode them in order to get a human readable value.
+says that the property candidateResponse (which is a string of length 17) has for value MQ== (a string of length 4). This leads us to the last point, some of the values are base64 encoded. This is true for the candidateResponse of a ResponseVariable and the value of an OutcomeVariable. So you will have to decode them in order to get a human readable value.
 
--   The last one is the login of the test taker that gives these answers.
+-   The last one is the login of the test-taker that gives these answers.
 
 Filtered export
 ---------------
@@ -73,8 +73,8 @@ This file is simple, you have 6 columns.
 -   Response identifier
 -   Correctness of the answer. This column is a boolean to say if the response is true or false
 -   Candidate response (base 64 encoded)
--   The time when the test taker respond to the item
--   Test taker login
+-   The time when the test-taker respond to the item
+-   Test-taker login
 
 Monitoring Files
 ================
@@ -89,6 +89,6 @@ This file allows you to have an overview of the delivery executions of your inst
   test          18         2                2
   taker1        20         3                2
 
-The first column is the test taker login, the second one is the number of items answered by this test taker. Then we have the number of executions started by this test taker. Finally, we have the number of tests the test taker has finished.
+The first column is the test-taker login, the second one is the number of items answered by this test-taker. Then we have the number of executions started by this test-taker. Finally, we have the number of tests the test-taker has finished.
 
 

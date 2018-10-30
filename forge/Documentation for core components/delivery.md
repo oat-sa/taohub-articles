@@ -44,7 +44,7 @@ The following issues are addressed:
 
 -   When can it be delivered?
 -   Who can execute it?
--   How many times can it be executed by allowed test takers?
+-   How many times can it be executed by allowed test-takers?
 -   Where are the results uploaded?
 
 The delivery model on the Generis representation below shows the properties of the delivery resource class:
