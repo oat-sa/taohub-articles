@@ -187,7 +187,7 @@ By default if you let this array empty it will install taoCe.
 #### Configurable services
 
 Under an extension configuration you can set a configurable service. For example you can set the awsClient configuration.
-Their is three parts in a configurable service configuration. First you have to set the type ie configurableService, in order to make the script able to recognize as a service and not an array based configuration.
+There are three parts in a configurable service configuration. First you have to set the type i.e. configurableService, in order to make the script able to recognize as a service and not an array based configuration.
 Then you will have to set the class of this service, it has to extend the ConfigurableService class of generis.
 Finally you have to set the options that will be given to the service when instanciate.
 
