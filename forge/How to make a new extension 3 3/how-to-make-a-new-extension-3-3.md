@@ -16,7 +16,7 @@ tags:
 1. Install TAO (3.x) (https://github.com/oat-sa/package-tao)
 2. Download `taoDevTools` extension using composer:
     `composer require "oat-sa/extension-tao-devtools" —dev`
-3. Make sure the extension has been installed (See [this article](https://github.com/oat-sa/taohub-articles/blob/master/forge/Wiki/installing-a-new-extension.md).)
+3. Make sure the extension has been installed (See https://github.com/oat-sa/taohub-articles/blob/master/forge/Wiki/installing-a-new-extension.md)
 
 ## Create the extension
 
@@ -79,7 +79,7 @@ To create your first controller, go into the `taoExample/controller` folder and 
 
 namespace oat\taoExample\controller;
 
-class Greeter extends \tao_actions_commonModule {
+class Greeter extends \tao_actions_CommonModule {
     /**
      * initialize the services
      */
