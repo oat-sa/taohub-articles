@@ -15,7 +15,7 @@ tags:
 
 1. Install TAO (3.x) (https://github.com/oat-sa/package-tao)
 2. Download `taoDevTools` extension using composer:
-    `composer require "oat-sa/extension-tao-devtools" —dev`
+    `composer require "oat-sa/extension-tao-devtools" --dev`
 3. Make sure the extension has been installed (See https://github.com/oat-sa/taohub-articles/blob/master/forge/Wiki/installing-a-new-extension.md)
 
 ## Create the extension
