@@ -91,79 +91,7 @@ views
 > This structure is unfortunately only theoretical. A huge refactoring would be great. 
 
 
-## AMD & Require.js
 
-All JavaScript files are AMD modules. 
-TAO is using AMD to define import and export, but also for dependency injection.
-
-All modules have the same form : 
-
-```js 
-define([
-    'lodash',
-    'taoQtiItem/component/foo'
-], function(_, fooComponent){
-    'use strict';
-    
-    return {
-        bar : true
-    }
-});
-```
-
-Even without dependencies, a module needs to be wrapped into the `define` statement. 
-
-### Module paths
-
-The dependencies are declared using a module name, which is not necessarily a path. By default you can make the reference to a module by using the following pattern:  `${extensionName}/${pathInViews}/${moduleName}`.
-For example to access `taoQtiTest/views/js/runner/plugins/control/timers/timer.js` you'll use `taoQtiTest/runner/plugins/control/timers/timer`.
-You'll notice the `views/js` disappear as well as the file extension.
-
-The base URL is always for JavaScript resources `tao/views/js` so for modules into the tao extension you don't need to prefix them with `tao`. For example to access `tao/views/js/core/eventifier.js`, `core/eventifier` should  be used.
-
-and those who have an alias defined in the configuration can be called using the alias `lodash`, `jquery`, `moment`, `i18n`, etc.
-
-### Named modules
-
-Named modules are prohibited. 
-```js
-define(
-    'bar', 
-[
-    'lodash',
-    'taoQtiItem/component/foo'
-], function(_, fooComponent){
-    'use strict';
-    
-    return {
-        bar : true
-    }
-});
-```
-**They won't work once optimized**
-
-Some libraries still uses named modules, to support this heresy we have to define an alias in the configuration.
-
-### Dependency injection
-
-The content of the callback function is executed this first time it is required by another module and the main scope lifecycle will remain until the page refresh.
-
-Let's define a module : 
-
-```js
-define([], function(){
-	'use strict';
-
-       var foo = 0;
-       return {
-            getFoo: function getFoo(){
-                   return ++foo;
-            }
-       };
- });
-````
-
-If you require this module in a module A, and call `getFoo` then after in another module B, you also call `getFoo`, you'll get the value `2`, etc.
 
 
 ## Documentation
@@ -209,22 +137,166 @@ The documentation doesn't target a tool, it target humans, other developers to b
 
 For example : 
 
-	/**
-	 * A fooBar provides you the foo.
-	 * @type {fooBar} 
-	 */
-	return {
-	
-	  /**
-	   * This is how you get foo
-	   * @param {String[]} ids - the foo identifiers
-	   * @param {Object} [options]
-	   * @param {Boolean} [options.force = false] - force the foo
-	   * @returns {Promise<Number>} resolves with the number of updated foos
-	   * @fires fooBar#foo once the foo has foo
-	   * @throws {TypeError} if the parameters are invalid
-	   */
-	  foo : fuction foo(ids, options){
-	 	//...
-	  }
-	};
+```js
+/**
+ * A fooBar provides you the foo.
+ * @type {fooBar} 
+ */
+return {
+
+  /**
+   * This is how you get foo
+   * @param {String[]} ids - the foo identifiers
+   * @param {Object} [options]
+   * @param {Boolean} [options.force = false] - force the foo
+   * @returns {Promise<Number>} resolves with the number of updated foos
+   * @fires fooBar#foo once the foo has foo
+   * @throws {TypeError} if the parameters are invalid
+   */
+  foo : fuction foo(ids, options){
+    //...
+  }
+};
+```
+
+## Coding style
+
+### Format and linting
+
+Please configure your IDE or development editor to support :
+ - JavaScript ES5 and ES2015+ style 
+ - [EsLint](https://eslint.org), the configuration is available in [Github](https://github.com/oat-sa/tao-core/blob/master/views/build/.eslintrc.json) or under the folder `tao/views/build`
+ - [EditorConfig](https://editorconfig.org/), the configuration is also available in [Github](https://gist.github.com/krampstudio/7fea73321d21865a2826583cf7997827) 
+ 
+### ES5 style
+
+Most of the TAO JavaScript code is written in ES5 for obvious and historical reasons. We will be able to migrate to ES2015+ code style, extension by extension using Babel. But if an extension or a project uses ES5 code, you should comply with it.
+
+Some of the code style rules : 
+ - prefer factories and closures over prototypes 
+ - always in strict mode
+ - named function expressions for methods  ` { method : function method() }`
+
+
+### ES2015+ style
+
+> We will migrate everything to ES2015 and beyond code style. Some extensions and projects may already use them.
+
+Some of the code style rules : 
+ - Do not use `class`, always prefer composition over inheritance. However there are a few use cases `class` would be allowed, for example to extend DOM prototypes, like `Error` to create new error types.
+ - Try to use `const` everywhere
+ - be careful with destructuring, this can  create code difficult to read
+
+## TAO Framework
+
+### AMD & Require.js
+
+All JavaScript files are AMD modules. 
+TAO is using AMD to define import and export, but also for dependency injection.
+
+All modules have the same form : 
+
+```js 
+define([
+    'lodash',
+    'taoQtiItem/component/foo'
+], function(_, fooComponent){
+    'use strict';
+    
+    return {
+        bar : true
+    }
+});
+```
+
+Even without dependencies, a module needs to be wrapped into the `define` statement. 
+
+#### Module paths
+
+The dependencies are declared using a module name, which is not necessarily a path. By default you can make the reference to a module by using the following pattern:  `${extensionName}/${pathInViews}/${moduleName}`.
+For example to access `taoQtiTest/views/js/runner/plugins/control/timers/timer.js` you'll use `taoQtiTest/runner/plugins/control/timers/timer`.
+You'll notice the `views/js` disappear as well as the file extension.
+
+The base URL is always for JavaScript resources `tao/views/js` so for modules into the tao extension you don't need to prefix them with `tao`. For example to access `tao/views/js/core/eventifier.js`, `core/eventifier` should  be used.
+
+and those who have an alias defined in the configuration can be called using the alias `lodash`, `jquery`, `moment`, `i18n`, etc.
+
+#### Named modules
+
+Named modules are prohibited. 
+```js
+define(
+    'bar', 
+[
+    'lodash',
+    'taoQtiItem/component/foo'
+], function(_, fooComponent){
+    'use strict';
+    
+    return {
+        bar : true
+    }
+});
+```
+**They won't work once optimized**
+
+Some libraries still uses named modules, to support this heresy we have to define an alias in the configuration.
+
+#### Dependency injection
+
+The content of the callback function is executed this first time it is required by another module and the main scope lifecycle will remain until the page refresh.
+
+Let's define a module : 
+
+```js
+define([], function(){
+	'use strict';
+
+       var foo = 0;
+       return {
+            getFoo: function getFoo(){
+                   return ++foo;
+            }
+       };
+ });
+````
+
+If you require this module in a module A, and call `getFoo` then after in another module B, you also call `getFoo`, you'll get the value `2`, etc.
+
+#### Build
+
+### Core components
+
+ - eventifier
+ - plugins
+ - area broker
+ - 
+
+### Services
+
+- data provider
+
+### Routing and controllers
+
+### Components
+
+ - SASS scopes to component
+
+### Tests
+
+
+## CSS and SASS
+
+
+
+## Pull requests
+
+Each pull request must follow these rules : 
+ 
+ - the branch should be named using the pattern `type/JIRA-ID/description` where type is either fix, feature, breaking or backport
+ - the pull request contains minimal instructions : what has changed, how to reproduce and how to test. Any dependency is clearly set. 
+ - the version number should be increased according to semver (install and update)
+ - the code style rules is valid (no ESLint warning)
+ - the code is covered by tests (there are a few exceptions)
+ - the code is documented 
+ - the code should be clear and the variable names should reveal the intents 
