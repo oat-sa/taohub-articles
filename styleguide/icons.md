@@ -36,7 +36,7 @@ Another possibility is to use the class constant `tao_helpers_Icon::CLASS_ICON_N
 ## How to add a new icon to the TAO font
 
 1.  Check out the latest `develop` branch of [`extension-tao-devtools`](https://github.com/oat-sa/extension-tao-devtools) and install it in a fresh instance of TAO.
-2.  Go to the [Icomoon web app](icomoon.io/app).
+2.  Go to the [Icomoon web app](https://icomoon.io/app).
 3.  Click 'Import icons'. The file you need to upload here, containing all the TAO icon definitions, is `taoDevTools/fontConversion/assets/selection.json`. Once uploaded, you should see over 200 icons appear on screen in the Icomoon web app.
 4.  Now you can look for the new icon you want to add to this selection. You can search on Icomoon for something free or open-source (Font Awesome is preferred), or even upload your own SVG icon.
 ![tao icons](resources/icomoon-tao-icons-plus1.png)
