@@ -408,7 +408,7 @@ On of the main difference between those two modes is the client side source code
 
 The bundler is available as a Grunt task in the repository [oat-sa/grunt-tao-bundle](https://github.com/oat-sa/grunt-tao-bundle).
 
-![extension model](./resources/extension.png)
+![bundler](./resources/tao-bundler.png)
 
  - The bundler create bundles per extension and per target (backoffice, frontoffice, separate entry point, etc.)
  - Libraries and the core framework is in a `vendor` bundle
@@ -418,7 +418,7 @@ The bundler is available as a Grunt task in the repository [oat-sa/grunt-tao-bun
 
 For example :
 
-```
+```js
 module.exports = function(grunt) {      //it's a Grunt configuration so we're in a node.js process
     'use strict';
 
