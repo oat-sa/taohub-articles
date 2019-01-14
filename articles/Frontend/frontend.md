@@ -1,6 +1,7 @@
 # TAO Frontend
 
-This document describes how the TAO frontend architecture.
+This document describes the TAO frontend architecture.
+
 
 ## Continuous improvement
 
@@ -18,9 +19,10 @@ And the software has also crossed the years by evolving, step by step. Some piec
 
 Keeping this in mind, you'll always see exceptions to the rules described in this document. So takes those rules as guidelines, as a goal to reach. When doing something new, please follow them strictly, but when fixing a bug, sometimes it's worth refactoring, sometimes it isn't.
 
+
 ## The extension model
 
-TAO use and "extension" model. This means the software is composed of many extensions using a hierarchical model : each extension can depend on another extension.
+TAO uses an "extension" model as a basement for his architecture. It means the software is composed by many extensions using a hierarchical model : each extension can depend on another extension.
 
 ![extension model](./resources/extension.png)
 
@@ -57,11 +59,12 @@ return array(
 
 ### In which extension should I write my code ?
 
- - if the code is considered as framework code, generic library or general enough it belongs to the TAO extension
- - otherwise to should be placed in the correct extension, based on the task
+ - if the code is considered as framework code, generic library or general enough it belongs to the `tao` extension
+ - otherwise it should be placed in the correct extension, based on the task, the purpose.
 
 **Don't Repeat Yourself**
-If a module, a function or a block is used across multiple extensions, you'll need to find the common ancestor extension, and define it there. It's one of the reason some GUI components are in the `tao-core` extension.
+
+If a module, a function or a block is used across multiple extensions, you'll need to find the common ancestor extension, and define it there. It's one of the reason some GUI components are in the `tao` extension.
 
 > In the near future we will try to push generalized code into `npm` libraries to prevent having too much code into the `tao-core` extension.
 
@@ -89,8 +92,6 @@ views
 ```
 
 > This structure is unfortunately only theoretical. A huge refactoring would be great.
-
-
 
 
 
@@ -150,11 +151,11 @@ return {
    * @param {Object} [options]
    * @param {Boolean} [options.force = false] - force the foo
    * @returns {Promise<Number>} resolves with the number of updated foos
-   * @fires fooBar#foo once the foo has foo
+   * @fires fooBar#foo once the foo has foo the foo event is triggered
    * @throws {TypeError} if the parameters are invalid
    */
   foo : fuction foo(ids, options){
-    //...
+     //...
   }
 };
 ```
@@ -164,19 +165,26 @@ return {
 ### Format and linting
 
 Please configure your IDE or development editor to support :
- - JavaScript ES5 and ES2015+ style
- - [EsLint](https://eslint.org), the configuration is available in [Github](https://github.com/oat-sa/tao-core/blob/master/views/build/.eslintrc.json) or under the folder `tao/views/build`
- - [EditorConfig](https://editorconfig.org/), the configuration is also available in [Github](https://gist.github.com/krampstudio/7fea73321d21865a2826583cf7997827)
+
+ 1. JavaScript ES5 and ES2015+ style
+ 2. CSS, SASS, HTML, Handlebars templates, etc.
+ 3. [EsLint](https://eslint.org), the configuration is available in [Github](https://github.com/oat-sa/tao-core/blob/master/views/build/.eslintrc.json) or under the folder `tao/views/build`
+ 4. [EditorConfig](https://editorconfig.org/), the configuration is also available in [Github](https://gist.github.com/krampstudio/7fea73321d21865a2826583cf7997827)
+
+
+> The EsLint configuration is open to suggestion! Feel free to suggest updates.
 
 ### ES5 style
 
 Most of the TAO JavaScript code is written in ES5 for obvious and historical reasons. We will be able to migrate to ES2015+ code style, extension by extension using Babel. But if an extension or a project uses ES5 code, you should comply with it.
 
 Some of the code style rules :
- - prefer factories and closures over prototypes
- - always in strict mode
- - named function expressions for methods  `{ method : function method() }`
-
+ - always in strict mode : `'use strict';` in the upper scope
+ - named function expressions for methods :  `{ method : function method() }`
+ - name callbacks for easier debugging : `on('click', function buttonOkClickHandler(e){`
+ - references to the lexical scope are made using the `self` variable name
+ - hoisting should be reflected by variable declaration, ie. `var` on top.
+ - `Promise` is available to manage asynchronous flow.
 
 ### ES2015+ style
 
@@ -184,8 +192,36 @@ Some of the code style rules :
 
 Some of the code style rules :
  - Do not use `class`, always prefer composition over inheritance. However there are a few use cases `class` would be allowed, for example to extend DOM prototypes, like `Error` to create new error types.
- - Try to use `const` everywhere
- - be careful with destructuring, this can  create code difficult to read
+ - Try to use `const` everywhere.
+ - be careful with destructuring, this can  create code difficult to read.
+ - use arrow functions for lambda to avoid unecessary lexical scopes.
+ - use template literals instead of string concats.
+ - shortand object notation is allowed `{ method(){ } }`
+ - use destructuring and default parameters for method's `options` parameter : `function({label = "", num =0} = {}) { } `
+
+### Static analysis
+
+You can verify (and we do it automatically) the style and formatting using the Grunt task.
+
+First move to the build folder :
+
+```sh
+cd tao/views/build
+```
+
+To verify a file :
+
+```sh
+npx grunt eslint:file --file=${PATH_TO_FILE}
+```
+
+To verify a complete extension :
+
+```sh
+npx grunt eslint:extension --extension=${EXTENSION_NAME}
+```
+
+
 
 ## TAO Framework
 
@@ -408,7 +444,7 @@ Per extension you can generate the bundle using the following command, the task 
 
 ![bundle taoce](./resources/bundle-taoce.png)
 
-### Libraries 
+### Libraries
 
 #### require.js
 
@@ -417,6 +453,8 @@ Per extension you can generate the bundle using the following command, the task 
 #### Lodash
 
 #### Handlebars
+
+#### Grunt
 
 #### Moment
 
@@ -444,24 +482,95 @@ deprecated
 
 #### Composition over inheriance
 
+Joe Armstrong, creator of Erlang, about the classical inheritance :
+> "You wanted a banana but what you got was a gorilla holding the banana and the entire jungle".
+
+To avoid strong coupling due to inheritance, we favor in TAO composition over classical inheritance.
+
+Composition can have multiple form, based on the use case :
+
+1. Agreggation
+
+2. Delegation
+
+3. Forwarding
+
+
 #### Factories
+
+When a module needs to keep a state and hide some implementation details, the factory pattern will be selected.
+
+```js
+var countDownFactory = function countDownFactory(config){
+    var currentValue = config.value || 0;   //private but accessible through the API
+    var interval = null;                    //kept private
+
+    return {
+        getValue : function getValue(){
+            //expose some internal va
+            return currentValue;
+        },
+        start: function start(){
+            interval = setInterval(function(){
+                currentValue--;
+            }, config.delay);
+        },
+        stop : function stop(){
+            clearInterval(interval);
+        },
+        reset : function reset(){
+
+        }
+    };
+};
+```
 
 #### Observable
 
+TAO encourage the usage of the Observable pattern using it's `core/eventifier` object (see [it's documentation](#eventifier)).
+
 #### Provider
 
-#### Service
+When multiples implementation of a given API can be defined, or dynamically defined, the provider pattern is used.
 
 #### Components
 
+In TAO we render and manipualte DOM using "components". A component is a chunk of the graphical user interface. 
+A component can be atomic (a button) or a larger part of the GUI (a dashboard) that uses other components.
+The atomicity level is up to use cases and usually defined by the way the component will be used.
+The purpose of a component is to render a DOM from a given set of data, react to the time and user events, and change  based on a given state.
 
+The `ui/component` [documentation](#component) describes how to create a component.
+
+> The way to do components in TAO has evolved a lot and only stabilized a few years ago, but expect the way to build component to be changed again soon. Remember if the way change the concept remains the same.
+
+#### KISS
+
+John Carmack, game developer :
+> "Sometimes, the elegant implementation is just a function.  Not a method.  Not a class.  Not a framework. Just a function."
+
+If your module needs to expose a function, then your module can expose only  a function, especially when there's no state, no side effect!
+
+If multiple functions serve the same purpose they can be groupped into an object serving multiple and independant static methods :
+
+```js
+//a case module util
+return {
+    capitalize : function capitalize(inputString){
+
+    },
+    camelToSnake : function camelToSnake(inputString){
+
+    }
+}
+```
 
 ### Core components
 
- - eventifier
- - plugins
- - area broker
- - store
+#### Eventifier
+#### Plugins
+#### Area broker
+#### Store
 
 ### Services
 
@@ -472,6 +581,10 @@ deprecated
 ### Components
 
  - SASS scopes to component
+ - lifecycle
+ - API and events
+ - DOM and Template
+ - State 
 
 ### Tests
 
@@ -484,7 +597,7 @@ deprecated
 
 ### Conventions
 
-### Recommendations 
+### Recommendations
 
 ## Pull requests
 
