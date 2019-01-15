@@ -117,7 +117,7 @@ Return to the `controller` folder and open `structures.xml`. This important file
 Inside the `<sections>` tag, add this new section:
 
 ```xml
-    <section id="taoExample_template" name="Hello from .tpl" url="/taoExample/Greeter/myName" />
+    <section id="taoExample_template" name="Hello from .tpl" url="/taoExample/Greeter/helloFromTemplate" />
 ```
 
 And save.
