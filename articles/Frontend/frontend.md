@@ -535,7 +535,7 @@ When multiples implementation of a given API can be defined, or dynamically defi
 
 #### Components
 
-In TAO we render and manipualte DOM using "components". A component is a chunk of the graphical user interface. 
+In TAO we render and manipualte DOM using "components". A component is a chunk of the graphical user interface.
 A component can be atomic (a button) or a larger part of the GUI (a dashboard) that uses other components.
 The atomicity level is up to use cases and usually defined by the way the component will be used.
 The purpose of a component is to render a DOM from a given set of data, react to the time and user events, and change  based on a given state.
@@ -584,7 +584,7 @@ return {
  - lifecycle
  - API and events
  - DOM and Template
- - State 
+ - State
 
 ### Tests
 
@@ -593,11 +593,9 @@ return {
 
 ## Coding in TAO
 
-### Best Practices
 
-### Conventions
+ - do not assign a value to the `arguments` special object
 
-### Recommendations
 
 ## Pull requests
 
