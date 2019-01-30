@@ -444,6 +444,48 @@ Per extension you can generate the bundle using the following command, the task 
 
 ![bundle taoce](./resources/bundle-taoce.png)
 
+
+### Routing
+
+#### The AMD loader
+
+The TAO application can be seen has multiple Single Page Application (because of the transition of multiple pages to SPA).
+Each page, which is the result of a navigation or a dedicated entrypoint contains the _loader_.
+
+The _loader_ can take two appearances : 
+
+1. In _development_ (or `DEBUG_MODE`) : 
+
+The loader loader `require.js`, a bootstrap that will load the config and the given controller (based on the values from the `data-attr`). 
+Each module is loaded separately (the source files are loaded one by one) and when they're requested only.
+
+```
+<script 
+    id="amd-loader" 
+    data-config="https://taoce.taocloud.org/tao/ClientConfig/config?extension=tao&amp;module=Main&amp;action=login" 
+    src="https://taoce.taocloud.org/tao/views/js/lib/require.js?buster=3.3.0-sprint93" 
+    data-main="https://taoce.taocloud.org/tao/views/js/loader/bootstrap.js?buster=3.3.0-sprint93" 
+    data-controller="controller/login"
+></script>
+```
+
+2. In _production_ : 
+
+A vendor bundle that contains shared libraries and SDK is first loaded, then the AMD loader loads the bundles for the entrypoint. 
+The bundle contains the bootstrap that will load the config and the controller
+
+```
+<script src="https://taoce.taocloud.org/tao/views/js/loader/vendor.min.js?buster=3.3.0-sprint93"></script>
+<script id="amd-loader" 
+    data-config="https://taoce.taocloud.org/tao/ClientConfig/config?extension=tao&amp;module=Main&amp;action=login" 
+    src="https://taoce.taocloud.org/tao/views/js/loader/login.min.js?buster=3.3.0-sprint93" 
+    data-controller="controller/login"
+></script>
+```
+
+
+![frontend initilization](./resources/loader-init.png)
+
 ### Libraries
 
 #### require.js
@@ -485,15 +527,52 @@ deprecated
 Joe Armstrong, creator of Erlang, about the classical inheritance :
 > "You wanted a banana but what you got was a gorilla holding the banana and the entire jungle".
 
-To avoid strong coupling due to inheritance, we favor in TAO composition over classical inheritance.
+To avoid strong coupling due to inheritance, we favor in TAO composition over classical inheritance. The main goal remains to separate the behavior from the implementation, in order to divide the responsibilities.
 
 Composition can have multiple form, based on the use case :
 
-1. Agreggation
+1. Aggregation
 
-2. Delegation
+This simple pattern consists in using another component/
 
-3. Forwarding
+2. Mixin
+
+This pattern consists in assigning the method of an object to another in order to aggregate them into one object, or give the feature of an object to another.
+For example,
+
+```js
+//the mixin, a separate behavior you'll add on multiple objects
+const assignee = {
+    getAssignments(){
+        return this.assignments;
+    },
+    setAssignments(deliveries){
+        this.assignments = assignments;
+    }
+};
+const aUser = {
+    firstName : 'john',
+    lastName  : 'snow',
+    getName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+};
+
+const testTaker = Object.assign(aUser, assignee);
+```
+
+The particularity of this pattern is the scope is shared between the target and the mixin : `this` will be shared.
+There are multiple ways to achieve this pattern, including using prototypes.
+
+##### When to use it ?
+
+When mixins are pure methods or stateless by preference. There shouldn't be any strong coupling between the target and the mixin (for example the mixin expects a property to be available in the target).
+
+3. Delegation
+
+The delegation is a form of composition, when
+
+4. Forwarding
 
 
 #### Factories
@@ -525,9 +604,62 @@ var countDownFactory = function countDownFactory(config){
 };
 ```
 
-#### Observable
+#### Event Emitter
 
-TAO encourage the usage of the Observable pattern using it's `core/eventifier` object (see [it's documentation](#eventifier)).
+The goal of this pattern is to listen some events from a source and attach a behavior when they're triggered.
+
+This is the pattern used by the DOM to react on user's interactions, like a `click` (see [DOM Events](https://developer.mozilla.org/en-US/docs/Web/API/Event). The node.js [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter) is also a popular implementation of this pattern.
+
+For example ,
+
+```js
+const countdown = eventifier({
+    start(counter){
+        if(!this.started){
+            this.value = counter;
+
+            this.interval = setInterval( () => {
+                this.value--;
+
+                this.trigger('update', value));
+
+                if(this.value <= 0){
+                    this.stop();
+                }
+            });
+
+            this.trigger('start');
+
+            this.started = true;
+        }
+    },
+    stop(){
+        if(this.started){
+
+            clearInterval(this.interval);
+
+            this.trigger('stop');
+
+            this.started = false
+        }
+    }
+});
+
+countdown
+    .on('update', value => console.log(`Please wait ${value}seconds.`))
+    .on('stop',  () => console.log('Please enter'))
+    .start();
+
+```
+
+TAO provides an implementation, the `core/eventifier` module ti has the following features : 
+ - contextualized to an object
+ - support AOP style listening (`before` -> `on` -> `after`)
+ - support namespaces
+ - support `Promise` (asynchronous handlers)
+ - supports context spreading
+
+Please check out the [eventifier documentation](#eventifier).
 
 #### Provider
 
@@ -576,7 +708,7 @@ return {
 
 - data provider
 
-### Routing and controllers
+
 
 ### Components
 
@@ -608,4 +740,6 @@ Code modification is done through pull requests. They have to follow some simple
  - the code style rules is valid (no ESLint warning)
  - the code is covered by tests (there are a few exceptions)
  - the code is documented
+ - the pull request doesn't contain the bundles (bundles are created during the release)
+ - the commits that compose a pull requests have meaningful comments
  - the code follows conventions, best practices and recommendations
