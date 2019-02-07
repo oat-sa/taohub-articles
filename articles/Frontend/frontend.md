@@ -296,9 +296,67 @@ define([], function(){
             }
        };
  });
-````
+```
 
 If you require this module in a module A, and call `getFoo` then after in another module B, you also call `getFoo`, you'll get the value `2`, etc.
+
+#### Configuring a module (based on server data)
+
+Sometimes you may want to use some configuration values or other data in your module, which is coming from a PHP script on the server. One way of getting this data into the scope of your module at runtime is to pass it via the Client Config.
+
+Whenever a page is loaded, a side request will be made to the endpoint `/tao/ClientConfig/config`. This calls the `config` action of `/tao/actions/class.ClientConfig.php`, where you can prepare your data to be written to a template.
+
+This handlebars template is located at `/tao/views/templates/client_config.tpl`, and contains general parameters which need to end up on the front end, as well as some module-specific params.
+
+The template's contents are used within your AMD module by requiring the special `module` module (see example below).
+
+##### Example
+
+As an example, let's configure the module `tao/ui/dateRange` to receive as configuration a basic timestamp from the server:
+
+*class.ClientConfig.php*:
+
+```php
+public function config() {
+    // ...
+    $this->setData('timestamp', time());
+    $this->setView('client_config.tpl');
+}
+```
+
+*client_config.tpl*:
+
+```
+require.config({
+    // ...
+    config : {
+        // ...
+        'ui/dateRange' : <?=get_data('timestamp')?>
+    },
+    // ...
+});
+```
+
+*/tao/views/js/ui/dateRange.js*:
+
+```javascript
+define([
+    'jquery',
+    'lodash',
+    'module', // this dependency is a requirejs special keyword
+    'ui/component',
+    'tpl!ui/dateRange/tpl/select',
+    'jquery.timePicker'
+], function ($, _, module, component, formTpl) {
+    'use strict';
+    var serverTime = module.config(); // will contain server time in ms
+    // ...
+});
+```
+
+If you wish to pass multiple values via `module.config()` you will have to format them into an object and wrap them in PHP's `json_encode()` in `class.ClientConfig.php`.
+
+More information on this topic can be found at https://requirejs.org/docs/api.html#config-moduleconfig.
 
 #### Loading Templates
 
