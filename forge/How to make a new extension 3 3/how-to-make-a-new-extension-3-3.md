@@ -68,6 +68,26 @@ A `taoExample` section should have appeared in the top main menu. Click on it an
 
 ![basic extension](resources/taoExample_step0.png)
 
+### Your extension is not visible?
+
+Run script with desired action located in `tao/scripts/`
+
+#### Update extensions
+
+This will update all extensions available in your platform
+
+```
+php ./tao/scripts/taoUpdate.php
+```
+
+#### Install extension
+
+This will install an extension, going through on the install scripts, which is located in the proper section of `<extension name>/manifest.php`
+
+```
+php tao/scripts/installExtension.php <extension ID>
+```
+
 ## Begin editing your extension
 
 ### Step 1: “Hello World” from a template
