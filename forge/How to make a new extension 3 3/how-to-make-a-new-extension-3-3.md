@@ -5,8 +5,11 @@ updated_at: '2018-10-10 08:48:53'
 authors:
     - 'Christophe Garcia'
     - 'Martin Nicholson'
+contributors:
+    - 'Bartlomiej Marszal'
 tags:
-    - 'Legacy Versions:TAO 3.0'
+    - 'Extension Development'
+    - 'Onboarding'
 -->
 
 # How to make a new extension in TAO 3.3

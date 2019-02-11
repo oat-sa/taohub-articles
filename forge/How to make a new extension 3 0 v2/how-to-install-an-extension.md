@@ -7,7 +7,7 @@ authors:
 contributors:
     - 'Christophe Garcia'
 tags:
-    - 'How to make a new extension 3 0 v2'
+    - 'Extension Development'
 -->
 
 How to install an extension
