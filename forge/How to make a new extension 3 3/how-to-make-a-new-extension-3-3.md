@@ -10,6 +10,7 @@ contributors:
 tags:
     - 'Extension Development'
     - 'Onboarding'
+    - 'Tutorials'
 -->
 
 # How to make a new extension in TAO 3.3
