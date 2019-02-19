@@ -188,16 +188,16 @@ Some of the code style rules :
 
 ### ES2015+ style
 
-> We will migrate everything to ES2015 and beyond code style. Some extensions and projects may already use them.
+> We will migrate everything to ES2015 and beyond code style. Some extensions and projects may already use them. The goal is to support the EcmaScript features available in last version of Chrome and Firefox and transpile using babel for the other browsers.
 
 Some of the code style rules :
  - Do not use `class`, always prefer composition over inheritance. However there are a few use cases `class` would be allowed, for example to extend DOM prototypes, like `Error` to create new error types.
  - Try to use `const` everywhere.
  - be careful with destructuring, this can  create code difficult to read.
- - use arrow functions for lambda to avoid unecessary lexical scopes.
- - use template literals instead of string concats.
+ - use arrow functions for lambda to avoid unnecessary lexical scopes.
+ - use template literals instead of string concatenation.
  - shortand object notation is allowed `{ method(){ } }`
- - use destructuring and default parameters for method's `options` parameter : `function({label = "", num =0} = {}) { } `
+ - use destructuring and default parameters for method's `options` parameter : `function({label = "", num =0} = {}) { } 
 
 ### Static analysis
 
@@ -306,7 +306,7 @@ Sometimes you may want to use some configuration values or other data in your mo
 
 Whenever a page is loaded, a side request will be made to the endpoint `/tao/ClientConfig/config`. This calls the `config` action of `/tao/actions/class.ClientConfig.php`, where you can prepare your data to be written to a template.
 
-This handlebars template is located at `/tao/views/templates/client_config.tpl`, and contains general parameters which need to end up on the front end, as well as some module-specific params.
+This template is located at `/tao/views/templates/client_config.tpl`, and contains general parameters which need to end up on the front end, as well as some module-specific params.
 
 The template's contents are used within your AMD module by requiring the special `module` module (see example below).
 
@@ -356,6 +356,7 @@ define([
 
 If you wish to pass multiple values via `module.config()` you will have to format them into an object and wrap them in PHP's `json_encode()` in `class.ClientConfig.php`.
 
+
 More information on this topic can be found at https://requirejs.org/docs/api.html#config-moduleconfig.
 
 #### Loading Templates
@@ -364,7 +365,7 @@ TAO supports loading templates as AMD dependencies.
 
  - Templates are formatted using the Handlebars syntax (see https://handlebarsjs.com)
  - The template file extension is `.tpl`
- - They must be loaded through AMD, using `'tpl!path/to/module' (without the `.tpl` extension, since a template is considered as a JavaScript file)
+ - They must be loaded through AMD, using `'tpl!path/to/module'` (without the `.tpl` extension, since a template is considered as a JavaScript file)
  - Templates are compiled into JavaScript function during the build
  - The exported value is a function
 
@@ -401,7 +402,7 @@ define([
 
 #### Loading JSON data
 
-TAO supports loading JSON files as AMD dependencies,  using `'json!path/to/module.json' (with the `.json` extension). The result is directly parsed to a JavaScript Object
+TAO supports loading JSON files as AMD dependencies,  using `'json!path/to/module.json'` (with the `.json` extension). The result is directly parsed to a JavaScript Object
 
 For example, consider the file `tao/views/js/core/mimetype/categories.json` :
 
@@ -435,9 +436,9 @@ define([
 
 #### Loading stylesheets
 
-TAO supports loading CSS files as AMD dependencies,  using `'css!path/to/module.json' (with the `.css` extension).
- - The stylesheet are loaded when the module is loaded for the first time.
- - Stylesheets doesn't export something, so by convention, add them at the end of your dependencies
+TAO supports loading CSS files as AMD dependencies,  using `'css!path/to/module.json'` (with the `.css` extension).
+ - The stylesheet is loaded when the module is loaded for the first time.
+ - Stylesheets doesn't export anything, so by convention, add them at the end of your dependencies
 
 For example, consider the file `tao/views/js/ui/switch/css/switch.css`, to include in a JavaScript module :
 
@@ -546,34 +547,141 @@ The bundle contains the bootstrap that will load the config and the controller
 
 ### Libraries
 
-#### require.js
+The following libraries are used into TAO : 
 
-#### jQuery
+##### require.js
 
-#### Lodash
+Version : 2.3.6
+License : MIT
+Website : https://requirejs.org/
+Used for :
+- Module loading
+- Dependency injection
+- Side assets loading 
+- Module configuration
+- Bundling
+Status : Require.js is used extensively. We would love to replace it by webpack, rollup or browserify with standard module `import/export`...
 
-#### Handlebars
+##### jQuery
+Version : 1.9.1
+License : MIT
+Website : https://jquery.com
+Used for :
+- DOM Manipulation
+- Ajax requests
+Status : Even if it is used everywhere, we are considering using native DOM API (with polyfills if needed) and start lowering our dependency to jQuery.
 
-#### Grunt
+##### Interact
+Version : 1.2.8
+License : MIT
+Website : http://interactjs.io/
+Used for :
+- Drag and Drop
+- Gestures
+- Resizing
+Status : Very useful, but buggy (need updates or a replacement ?)
 
-#### Moment
+##### Popper
+Version : 1.14.5
+License : MIT
+Website : https://popper.js.org/
+Used for :
+- Tooltip
+- Poppers
+- Relative positioning 
 
-#### D3/C3
+##### Lodash
+Version : 2.4.1
+License : MIT
+Website : https://lodash.com
+Used for :
+- Data manipulation
+Status : Like jQuery with the new feature available in EcmaScript we will start lowering our dependency to Lodash and use the native methods when available.
 
-#### CKEDitor
+##### Handlebars
+Version : 1.3.1
+License : MIT
+Website : https://handlebarsjs.com/
+Used for :
+- Templating and data binding 
 
-#### MathJax
+##### QUnit 
+Version : 2.9.1
+License : MIT
+Website : https://qunitjs.com/
+Used for :
+-  Testing
 
-#### Raphael
+##### Grunt
+Version : 1.0.0
+License : MIT
+Website : https://gruntjs.com/
+Used for :
+- Task runner
 
-deprecated
+##### Moment
+Version : 2.11.1
+License : MIT
+Website : https://momentjs.com
+Used for :
+- Date Time manipulation
+- Duration manipulation
+- Timezone and date localization (moment-timezone)
 
-#### Interact
+##### D3/C3
+Version : 3.5.16 / 0.4.23
+License : MIT
+Website : https://d3js.org / https://c3js.org
+Used for :
+- Data visualization
+- Chart/Plot 
 
-#### Async
+##### CKEDitor
 
-deprecated
+Version : 4.4.8 TAO-1 (OAT Fork, upstream 4.4.8)
+License : GPL
+Website : https://ckeditor.com/
+Used for :
+- Item Creator 
+- WYSIWYG / HTML editor
+Status : one of the most hated library at OAT...
 
+##### MathJax
+Version : 2.6.1
+License : Apache 2
+Website : https://www.mathjax.org/
+Used for :
+- Rendering Math Expressions
+Status: Too huge library but not that much alternatives. It need to be installed separately due to licensing issues.
+
+##### Raphael
+Version : 2.1.2
+License : MIT
+Website : http://raphaeljs.com
+Used for :
+- Vector Graphic Manipulation (SVG)
+- Graphic Interaction 
+Status: *DEPRECATED*
+
+##### Async
+
+Version : 1.5.0 ?
+License : MIT
+Website : https://github.com/caolan/async
+Used for :
+- Async flow
+Status: *DEPRECATED*  use Promises instead
+
+#### New libraries
+
+> If you add a library, please remove one...
+
+If none of the libraries available in TAO help you to solve a problem, it's possible to add a new one, after some evaluation, based on the following criteria :
+- Size matter : the smallest possible.
+- No or few dependency : no we won't include a framework to run only a part of it.
+- License : it should be compatible with GPLv2
+- Living : the library should be still maintain and active (in some situation we can think taking the ownership if the library is vital for our business)
+ 
 
 ### Patterns
 
@@ -622,8 +730,7 @@ const testTaker = Object.assign(aUser, assignee);
 The particularity of this pattern is the scope is shared between the target and the mixin : `this` will be shared.
 There are multiple ways to achieve this pattern, including using prototypes.
 
-##### When to use it ?
-
+*When to use it ?*
 When mixins are pure methods or stateless by preference. There shouldn't be any strong coupling between the target and the mixin (for example the mixin expects a property to be available in the target).
 
 3. Delegation
@@ -725,7 +832,7 @@ When multiples implementation of a given API can be defined, or dynamically defi
 
 #### Components
 
-In TAO we render and manipualte DOM using "components". A component is a chunk of the graphical user interface.
+In TAO we render and manipulate DOM using "components". A component is a chunk of the graphical user interface.
 A component can be atomic (a button) or a larger part of the GUI (a dashboard) that uses other components.
 The atomicity level is up to use cases and usually defined by the way the component will be used.
 The purpose of a component is to render a DOM from a given set of data, react to the time and user events, and change  based on a given state.
