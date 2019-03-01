@@ -10,18 +10,14 @@ contributors:
     - 'Antoine Robin'
     - 'Jean-Sébastien Conan'
 tags:
-    - 'Frontend'
-    - 'Library'
-    - 'JavaScript'
-    - 'Math'
+    - 'Frontend:MathJax'
 -->
 
 # Enable math expression in items
 
-![logo](../resources/third-party/badge-square.png)
+> MathJAX is a library for rendering Math expressions within a web page. It supports both MathML and LaTex expressions.
 
-> MathJAX is a library for rendering Math expressions within a web page.
-> It supports both MathML and LaTex expressions.
+![logo](../resources/third-party/badge-square.png)
 
 ## Install MathJax library, using the script
 
