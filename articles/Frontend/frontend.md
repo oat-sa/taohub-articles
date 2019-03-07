@@ -657,7 +657,7 @@ Status: Too huge library but not that much alternatives. It need to be installed
 ##### Raphael
 Version : 2.1.2
 License : MIT
-Website : http://raphaeljs.com
+Website : http://dmitrybaranovskiy.github.io/raphael/
 Used for :
 - Vector Graphic Manipulation (SVG)
 - Graphic Interaction 
