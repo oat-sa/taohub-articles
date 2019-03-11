@@ -40,6 +40,7 @@ To use the component abstraction, simply import the module `ui/component`:
 
 ```javascript
 define(['ui/component'], function (componentFactory) {
+    'use strict';
 
     // ...
 

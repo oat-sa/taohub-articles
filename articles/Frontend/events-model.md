@@ -36,6 +36,7 @@ To use the `eventifier`, simply import the module `core/eventifier`:
 
 ```javascript
 define(['core/eventifier'], function (eventifier) {
+    'use strict';
 
     // ...
 
