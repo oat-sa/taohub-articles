@@ -212,7 +212,7 @@ Shows the component related to this plugin.
 
 > Always returns a `Promise`.
 
-> Emits the `plugin-show.<plu.ginName>` event
+> Emits the `plugin-show.<pluginName>` event
 
 > Sets the `"visible"` state.
 

@@ -9,7 +9,7 @@ they can be a good support for an extensive API, asynchronous by design.
 
 Each event can be seen as a channel, being processed as a pipeline, containing
 three steps: **before**, **main**, **after**. By design, the `main` step is the
-one that is targeted by the default event listener API, the two others allowing
+one that is targeted by the default event listener API, the two others allow
 to prepend or append actions on the same event. In each step, as many as needed
 listeners can be added, they will be called in serie. From each step, a listener
 may interrupt the pipeline and prevents the remaining steps to be processed.
@@ -192,7 +192,7 @@ emitter.trigger('foo', param1, param2);
 Attaches a listener to an event. Calling `on` with the same event's name
 multiple times add callbacks: they will all be executed. The event's name may be
 namespaced, to ease the later management. It could also be a list of events,
-separated by spaces, so the listener will called if any of the listed event is
+separated by spaces, so the listener will be called if any of the listed event is
 emitted. A `Promise` can be returned, and then the listeners registered on the
 `after` step will be delayed until the promise is resolved.
 

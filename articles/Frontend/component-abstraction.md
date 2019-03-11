@@ -15,7 +15,7 @@ Basically, the way the component abstraction is working is as following:
 
 It is worth to mention that the specifications object is not directly merged
 into the component object, but a delegation call is made instead. That means
-every functions exposed by the object are linked to the component through
+all functions exposed by the object are linked to the component through
 delegated calls, so the target function remains inside the specification object,
 and the lexical scope is set inside the component.
 
@@ -32,7 +32,7 @@ Due to that particularity, the following effects must be mentioned:
 accessed through the exposed API, even if it is referenced from the
 specifications object. However, the properties **defined inside** the component
 are accessible through the lexical scope.
-- The implementation of each functions inside the specifications object can be
+- The implementation of each function inside the specifications object can be
 changed at any time, without having to rebuild the component. This allows 
 dynamic implementation, although this is rarely used.
 
@@ -234,7 +234,7 @@ component.setTemplate(myTemplate);
 **Note**: Every UI composition should pass through a template, manually
 building HTML breaks the MVC pattern. 
 
-## component API
+## Component API
 The component abstraction exposes a basic API, described here.
 
 ### `init(config)`

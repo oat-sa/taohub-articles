@@ -1,5 +1,9 @@
 # Calculator component overview
 
+TAO already provides a basic 4-functions [calculator implementation](https://github.com/oat-sa/tao-core/blob/master/views/js/ui/calculator.js).
+However, this is a simple implementation that immediately computes the operation,
+without taking care of the precedence of operators.
+ 
 In order to properly support the [mathematical order of operations](https://en.wikipedia.org/wiki/BODMAS)
 we designed another calculator component, able to work on expressions instead of
 applying instantaneously on the current value and immediately compute the
@@ -126,7 +130,7 @@ implementing some missing functions.
 
 The module exposes a factory function, that returns a configured copy of the
 `evaluate` function. Obviously this module is not restricted to the calculator,
-and be used outside, this is a *standalone feature*.
+and can be used outside, this is a *standalone feature*.
 
 The available config entries mostly concern the number representation engine:
 - `precision`: The maximum number of significant digits of the result of an
@@ -832,7 +836,7 @@ retrieve the former value, said 2. However, if you take the displayed value and
 elevate it to the power of 2, the result will be different, and could be
 considered wrong if you expected to retrieve the former value.
 
-### losss of precision in some irrational numbers
+### Loss of precision in some irrational numbers
 Mathematically, it is impossible to have a bijective computation with the
 inverse of 3: `1/3` gives `0.3333333333333`, and we can continue indefinitely
 with the `3` after the decimal point. Now if you multiply this value by 3, no
