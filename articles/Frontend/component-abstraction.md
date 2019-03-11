@@ -143,7 +143,7 @@ component abstraction factory is as follow: `component(specs, defaults)`;
 component instance
 - `defaults`: some default config entries
 
-### Component built-in events
+## Component built-in events
 The life-cycle related methods are not meant to be replaced. That means a
 component cannot implement its own version of the `init` method for instance.
 This is the same for any other built-in life-cycle methods. Otherwise, the
@@ -181,7 +181,7 @@ To summarize: the component abstraction already implements the life-cycle
 functions, and therefore a component implementation should not redefine them.
 The only way to add behavior is to listen to life-cycle events.
 
-### States handling
+## States handling
 The component abstraction comes with a particular mechanism called `states handling`.
 This is a set of `states`, that can be seen as boolean flags. The particularity
 is those flags are synchronized with the rendered HTML, and are reflected as CSS
@@ -216,7 +216,7 @@ The downside is obviously the component has to be rendered to be able to reflect
 the state in HTML. If a state is set before the component is rendered, it won't
 be reflected as CSS class.
 
-### Template
+## Template
 The component abstraction is relying on MVC pattern, using 
 [Handlebars](https://handlebarsjs.com/) as template engine.
 A default template is provided, exposing a very simple HTML markup.
@@ -234,10 +234,10 @@ component.setTemplate(myTemplate);
 **Note**: Every UI composition should pass through a template, manually
 building HTML breaks the MVC pattern. 
 
-### component API
+## component API
 The component abstraction exposes a basic API, described here.
 
-#### `init(config)`
+### `init(config)`
 The component initialization method. Depending on the component implementation,
 it should not be called directly from the outside, as it is for internal purpose
 only. The component factory should call it while building the instance. The
@@ -251,14 +251,14 @@ A config option allows to auto render the component just after the initializatio
 > Emits the `init` event, once config initialized, but before any rendering
 process.
 
-#### `destroy()`
+### `destroy()`
 The usual way to dispose a component. Should be called when the component has to
 be removed and its resources disposed. 
 
 > Emits the `destroy` event, before actually removing the DOM and freeing the
 internal state.
 
-#### `render(container)`
+### `render(container)`
 Renders the component in the provided container. The component can automatically
 call this method, during the instance building. So depending on the
 implementation it should not be called directly.
@@ -281,7 +281,7 @@ time. The *update* of the component have to be managed by the component itself.
 
 > Sets the `"rendered"` state.
 
-#### `setSize(width, height)`
+### `setSize(width, height)`
 Sets the component's size, as the name says. The size is given in pixels, but
 the string `"auto"` is supported too in order to use the container's size.
 
@@ -290,48 +290,48 @@ be used at rendering time.
 
 > Emits the `setsize` event.
 
-#### `getSize()`
+### `getSize()`
 Get the component's size, as an object containing the properties `width` and
 `height`. The values are given in pixels. 
 
 **Note**: the size is only available after the component has been rendered.
 
-#### `getOuterSize(includeMargin)`
+### `getOuterSize(includeMargin)`
 Get the component rendered size, with or without taking care of the margins.
 The result is an object containing the properties `width` and `height`. The
 values are given in pixels.
 
 **Note**: the size is only available after the component has been rendered.
 
-#### `show()`
+### `show()`
 Shows the component, by removing the `hidden` CSS class.
 
 > Emits the event `show`.
 
 > Clears the state `"hidden"`.
 
-#### `hide()`
+### `hide()`
 Hides the component, by using the `hidden` CSS class.
 
 > Emits the event `hide`.
 
 > Sets the state `"hidden"`.
 
-#### `enable()`
+### `enable()`
 Enables the component, by removing the `disabled` CSS class.
 
 > Emits the event `enable`.
 
 > Clears the state `"disabled"`.
 
-#### `disable()`
+### `disable()`
 Disables the component, by using the `disabled` CSS class.
 
 > Emits the event `disable`.
 
 > Sets the state `"disabled"`.
 
-#### `setState(state, flag)`
+### `setState(state, flag)`
 Sets the component to a particular state. A state is a boolean flag,
 represented by a string. If the component is rendered, the state is reflected
 as a CSS class, added to the component's DOM element. When the state is set to
@@ -340,28 +340,28 @@ removed.
 
 > Emits the `state` event, with the state and its value as parameters.
 
-#### `is(state)`
+### `is(state)`
 Checks if the component has a particular state.
 
-#### `getContainer()`
+### `getContainer()`
 Gets the underlying DOM element's container. Obviously the method won't return
 anything if the component is not rendered.
 
 **Note**: the container is internally wrapped by a `jQuery` selection, so the
 returned value is a `jQuery` object.
 
-#### `getElement()`
+### `getElement()`
 Gets the underlying DOM element. Obviously the method won't return anything if
 the component is not rendered.
 
 **Note**: the element is internally wrapped by a `jQuery` selection, so the
 returned value is a `jQuery` object.
 
-#### `getTemplate()`
+### `getTemplate()`
 Gets the template used to render this component. Usually this a compiled
 [Handlebars](https://handlebarsjs.com/) template.
 
-#### `setTemplate(template)`
+### `setTemplate(template)`
 Sets the template used to render this component. Usually this a compiled
 [Handlebars](https://handlebarsjs.com/) template.
 
@@ -370,5 +370,5 @@ component is already rendered, so it should be called before `render()`.
 
 > Emits the `template` event, with the new template as parameter.
 
-#### `getConfig()`
+### `getConfig()`
 Gets the component's configuration.
