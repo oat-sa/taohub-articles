@@ -780,4 +780,64 @@ invoked.
 Not all situations can be elligible to a sign change, and for that reason a set
 of strategies is applied.
 
+This plugin is quite complex, so here is a summarize of what it is doing.
+
+When the `sign` command is invoked, the expression is tokenized, and then the
+following strategies are applies:
+- if the expression simply contains `0`, nothing is made
+- if the expression simply contains the last result variable, its value is
+inlined before applying the sign change
+- based on what is under the cursor:
+    - numeric value:
+        - the operand is the first of the expression, so the sign is implicit +,
+        simply negate the value
+        - the operand is preceded by something else, apply a sign change on the
+        previous token
+    - operator:
+        - the operator is -, simply replace it by +
+        - the operator is +, simply replace it by -
+        - the operator is !, need to identify the operand, and then apply the
+        full strategies on it
+    - identifier (function, variable, constant):
+        - the token is the first of the expression, so the sign is implicit +,
+        simply negate the value
+        - the token is preceded by something else, apply a sign change on the
+        previous token
+    - sub-expression:
+        - the token is the first of the expression, so the sign is implicit +,
+        simply negate the value
+        - the token is preceded by something else, apply a sign change on the
+        previous token
+- when a sign change need to be applied:
+    - if an operator precedes the operand:
+        - the operator is -, simply replace it by +
+        - the operator is +, simply replace it by -
+        - the operator is not + or -, simply negate the value
+    - if a function or a left parenthesis precedes the operand, simply negate
+    the operand
+
+Then the current expression is replaced the sign changed one.
+
 ## Known issues and drawbacks
+Thanks to the numbers representation engine, the calculator is able to give a
+good computation precision. However, due to the nature of computation, some known
+issues are still there, and cannot be simply addressed.
+
+### Loss of precision of inlined variables
+Internally, the computed value have hundreds of decimal digits, and only a few is
+displayed. So, if a variable is inlined, i.e. its displayed value is used instead
+of the variable itself, the result won't be accurate. For instance, compute the
+square root of 2. If you immediately elevate it at a power of 2, you will
+retrieve the former value, said 2. However, if you take the displayed value and
+elevate it to the power of 2, the result will be different, and could be
+considered wrong if you expected to retrieve the former value.
+
+### losss of precision in some irrational numbers
+Mathematically, it is impossible to have a bijective computation with the
+inverse of 3: `1/3` gives `0.3333333333333`, and we can continue indefinitely
+with the `3` after the decimal point. Now if you multiply this value by 3, no
+matter the amount of `3` you will add after the decimal point, you will never
+retrieve `1`, but `0.9999999999` instead. A mathematicall trick is to add a `4`
+as a last digit, but unfortunately this won't work with the calculator's engine.
+In fact, it can only works by doing: `0.333333333 + 0.333333333 + 0.333333334`.
+Which is not the same.
