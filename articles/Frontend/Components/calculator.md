@@ -21,8 +21,8 @@ However, some precision issues may still occur, especially when dealing with
 irrational values.
 
 ## Computation engine
-The computation engine is lead by two third-party components: the parser and the
-numbers representation engine. Another library is also in use to tokenize the
+The computation engine is lead by several third-party components: a parser, a
+numbers representation engine, and a lexer that will be used to tokenize the
 expressions. The choice of those third-party libraries was made regarding the 
 following concerns:
 - license compatibility (TAO is released with GPLv2 license)
