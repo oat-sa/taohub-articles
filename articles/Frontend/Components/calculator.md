@@ -822,6 +822,26 @@ inlined before applying the sign change
 
 Then the current expression is replaced the sign changed one.
 
+#### pow10
+Plugin that multiplies the current operand by `10^x`.
+
+It exposes the command `pow10`, that will insert the expression `10^` at the
+current position when invoked. The insertion context is taken into account, and
+depending on what is present at the target position, the expression to insert
+will be adapted.
+
+Basically, 3 solutions are possible:
+- simply replace the current expression with `10^`
+- insert the shorter version at the current position: `10^`
+- insert the longer version at the current position: `*10^`
+
+The choice of the solution is based on the context:
+- empty expression or `0`, should be replaced by the shorter version
+- the current position already contains operator or this is the start of a
+sub-expression, insert the shorter version
+- the current position requires an operator to properly link to the added
+expression, insert the longer version
+
 ## Known issues and drawbacks
 Thanks to the numbers representation engine, the calculator is able to give a
 good computation precision. However, due to the nature of computation, some known
