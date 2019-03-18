@@ -83,7 +83,7 @@ meaning.
 act as separators.
 - Functions and constants are supported: `cos PI`.
 - Variables are supported, but require to be defined: `3 * x`.
-- Any functions can be turned into a binary operator by simply prefixing them
+- Any functions can be turned into a binary operator by prefixing them
 with a `@`: `4 @nthrt 16` is equivalent to `nthrt(4, 16)`. Obviously, only 
 functions that accept two parameters can work properly with this trick.
 
@@ -303,10 +303,9 @@ will be emitted when a client will try to use them.
 
 Commands are the recommended way to add behavior on the calculator, as they
 provide a particular meaning. Each plugins can then expose their particular
-commands, or simply link to existing ones. The calculator `board` is also
-defining standard commands, like the general purpose cleaning commands or the
-execute computation one. The list of known commands will be detailed later in
-this doc.  
+commands, or link to existing ones. The calculator `board` is also defining
+standard commands, like the general purpose cleaning commands or the execute
+computation one. The list of known commands will be detailed later in this doc.  
 
 ### API
 The calculator `board` is the main component, exposing the essential API to
@@ -525,7 +524,7 @@ added to the event parameters.
 
 ###### `replace(newExpression, newPosition)`
 Replaces the expression and set the position of the cursor. If the position is
-not provided, simply move the cursor at the end.
+not provided, just move the cursor at the end.
 
 > Emits the `replace` event, with the old expression and position as parameters.
 
@@ -781,7 +780,7 @@ Here is a layout sample:
 ```
 
 ### Behavior plugins
-The calculator main component simply exposes an engine, but does not implement
+The calculator main component only exposes an engine, and does not implement
 complex behaviors. This can be done thanks to the plugin's system and the events
 model.
 
@@ -798,36 +797,36 @@ This plugin is quite complex, so here is a summarize of what it is doing.
 
 When the `sign` command is invoked, the expression is tokenized, and then the
 following strategies are applies:
-- if the expression simply contains `0`, nothing is made
-- if the expression simply contains the last result variable, its value is
+- if the expression only contains `0`, nothing is made
+- if the expression only contains the last result variable, its value is
 inlined before applying the sign change
 - based on what is under the cursor:
     - numeric value:
         - the operand is the first of the expression, so the sign is implicit +,
-        simply negate the value
+        negate the value
         - the operand is preceded by something else, apply a sign change on the
         previous token
     - operator:
-        - the operator is -, simply replace it by +
-        - the operator is +, simply replace it by -
+        - the operator is -, replace it by +
+        - the operator is +, replace it by -
         - the operator is !, need to identify the operand, and then apply the
         full strategies on it
     - identifier (function, variable, constant):
         - the token is the first of the expression, so the sign is implicit +,
-        simply negate the value
+        negate the value
         - the token is preceded by something else, apply a sign change on the
         previous token
     - sub-expression:
         - the token is the first of the expression, so the sign is implicit +,
-        simply negate the value
+        negate the value
         - the token is preceded by something else, apply a sign change on the
         previous token
 - when a sign change need to be applied:
     - if an operator precedes the operand:
-        - the operator is -, simply replace it by +
-        - the operator is +, simply replace it by -
-        - the operator is not + or -, simply negate the value
-    - if a function or a left parenthesis precedes the operand, simply negate
+        - the operator is -, replace it by +
+        - the operator is +, replace it by -
+        - the operator is not + or -, negate the value
+    - if a function or a left parenthesis precedes the operand, negate
     the operand
 
 Then the current expression is replaced the sign changed one.
@@ -841,7 +840,7 @@ depending on what is present at the target position, the expression to insert
 will be adapted.
 
 Basically, 3 solutions are possible:
-- simply replace the current expression with `10^`
+- just replace the current expression with `10^`
 - insert the shorter version at the current position: `10^`
 - insert the longer version at the current position: `*10^`
 
