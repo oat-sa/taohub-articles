@@ -1,6 +1,16 @@
 # Plugins model
+
+<!-- 
+tags:
+    JavaScript Components:
+        - "Plugins model"
+-->
+
+> A plugin abstraction is part of the TAO core library.
+> This article explains how it works.
+
 Sometimes a component needs to be augmented with new features, but not
-necessarily as default features for every instances. This can be done using
+necessarily as default features for every instance. This can be done using
 config entries, but that might quickly turn into a config mess, especially
 with complex features.
 
@@ -20,7 +30,7 @@ immediately after creation of the plugin instance, as soon as the plugin is
 linked to its host.
 - `init`: This step is very important for plugins, as it is the main place where
 the plugin's behavior can be initialized. The related method is mandatory, and
-must be implemented by every plugins.
+must be implemented by every plugin.
 - `render`: This is the step where the UI is built, so the plugin can add its
 own UI if any.
 - `interact`: This is the step where the plugin is spending most of its life.
@@ -34,9 +44,9 @@ The plugin abstraction is represented by a factory function, that accepts a
 plugin definition, represented by an object, and a default config that will be
 used to prepare the config provided to the plugin instance.
 
-To use the plugin factory, simply import the module `core/plugin`. Usually, to
-better use the plugin factory, a wrapper is created, giving a proper alias to
-the host object.
+To use the plugin factory you need to import the module `core/plugin`. Usually,
+to better use the plugin factory, a wrapper is created, giving a proper alias
+to the host object.
 
 ```javascript
 define(['lodash', 'core/plugin'], function(_, pluginFactory){
@@ -64,7 +74,7 @@ other plugins.
 - `init(content)`: the initialization method, that will be called to initialize
 the plugin at a proper time.
 
-The default config can also contains a particular entry: `hostName`. This entry
+The default config can also contain a particular entry: `hostName`. This entry
 should contain the name of the host, that will be used to alias the `getHost()`
 method to `get<HostName>()`.
 
@@ -78,7 +88,7 @@ broker and eventually some config.
 var plugin = pluginCreator(host, areaBroker, config);
 ```
 
-A valid host is an [*eventified* object](events-model.md), or at least an object
+A valid host is an *[eventified object](events-model.md)*, or at least an object
 exposing a basic `eventifier`: the methods `on()` and `trigger()` should be
 implemented.
 
@@ -105,7 +115,7 @@ accessed through the exposed API, even if it referenced from the specifications
 object. However, properties defined inside the plugin are accessible.
 - The implementation of each functions inside the specifications object can be
 changed at any time, without having to rebuild the plugin. This allows dynamic
-implementation, although this is rarely used.
+implementation.
 
 Even if the life-cycle of the host is reflected by the plugin, this is not the
 only way to interact with the host. The events model brings a better layer for
@@ -249,10 +259,10 @@ Disables the plugin.
 
 > Clears the `"enabled"` state.
 
-## Plugins manager
-For now there is no plugins manager abstraction, and this management must be
+## Plugin manager
+For now there is no plugin manager abstraction, and this management must be
 performed specifically on each host that accept plugins. However, here is a
-snippet for a basic plugins manager:
+snippet for a basic plugin manager:
 
 ```javascript
 /**
