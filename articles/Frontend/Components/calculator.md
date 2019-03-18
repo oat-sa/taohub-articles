@@ -359,8 +359,8 @@ Renders the component in the provided container. The calculator `board` is
 automatically calling this method, so it should not be called directly. The
 `board` component also initializes plugins a this stage.
 
-**Note**: this is a life cycle method, and should not be called more than one
-time. The *update* of the component have to be managed by the component itself.
+**Note**: this is a life cycle method, and must not be called more than one
+time. The *update* of the component has to be managed by the component itself.
 The `board` component is taking care of this.
 
 > Emits the `render` event, as well as the `ready` event when all plugins are in
