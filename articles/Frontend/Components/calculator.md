@@ -1,34 +1,43 @@
 # Calculator component overview
 
+<!-- 
+tags:
+    JavaScript Components:
+        - "Calculator component overview"
+    Calculator:
+        - "Component overview"
+-->
+
+> A calculator component is provided by TAO. This article explains how it works.
+
 TAO already provides a basic 4-functions [calculator implementation](https://github.com/oat-sa/tao-core/blob/master/views/js/ui/calculator.js).
 However, this is a simple implementation that immediately computes the operation,
-without taking care of the precedence of operators.
+without taking in account the precedence of operators.
  
 In order to properly support the [mathematical order of operations](https://en.wikipedia.org/wiki/BODMAS)
-we designed another calculator component, able to work on expressions instead of
-applying instantaneously on the current value and immediately compute the
-operation. This way the user is able to build a complex expression before to
-decide to execute it and get the result. The mathematical order is respected,
-for instance `*` and `/` are computed before `+` and `-`, and parenthesis are
-available to change priorities. 
+we designed another calculator component. Instead of immediately computing the
+new value it uses expressions. This way the user is able to build a complex
+operation before executing it. The mathematical order is respected, for instance
+`*` and `/` are computed before `+` and `-`, and parenthesis are available to
+change priorities: `3*(2+1)` will not give the same result as `3*2+1`. 
 
 To process the expression a parser is bundled with the calculator component.
-The mathematical precision is brought by an
+Mathematical precision is handled by an
 [arbitrary precision](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic)
-library, in order to counter the well known
+library which avoid the well known
 [round-off issue](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 However, some precision issues may still occur, especially when dealing with
 irrational values.
 
 ## Computation engine
-The computation engine is lead by several third-party components: a parser, a
-numbers representation engine, and a lexer that will be used to tokenize the
-expressions. The choice of those third-party libraries was made regarding the 
-following concerns:
-- license compatibility (TAO is released with GPLv2 license)
+The computation engine relies on several third-party components: a parser, a
+number representation engine, and a lexer is used to tokenize the expression.
+The choice of those third-party libraries was made with the following concerns
+in mind:
+- license compatibility (TAO is released under the terms of the GPLv2 license)
 - support and maintainability
-- ability and ease of extend
-- well covered features
+- ability and ease of extension
+- well covered feature set and quality of implementation
 
 As the parser allows to redefine the implementation of the operators and other
 mathematical functions, a wrapper is responsible of mixing the parser and the
@@ -81,30 +90,29 @@ functions that accept two parameters can work properly with this trick.
 #### Numbers
 The number representation library is using
 [arbitrary precision](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic)
-to store and manipulate the numbers. The chosen one is
-[Decimal.js](https://github.com/MikeMcl/decimal.js/), which a good compromise
+to store and manipulate the numbers. We chose
+[Decimal.js](https://github.com/MikeMcl/decimal.js/), which is a good compromise
 regarding precision and performances. It exposes a comprehensive API to
 manipulate and compute decimal numbers.
 
 As the parser in use is not resilient against the round-off issue, every
-built-in operations are replaced by the equivalent provided by `Decimal.js`.
-That allows to support a better numerical precision, but that also means the
+built-in operation is replaced by the equivalent provided by `Decimal.js`.
+This allows to support a better numerical precision, but it also means the
 result of the parser is now a `Decimal` object.
 
 To ensure the parser is still working well after having replaced its built-in
-computation functions, some wrappers have been added, to convert on the fly the
-data type when needed. The benefit is we can feed the parser with native types,
-and then the wrappers will do the magic to ensure all values are represented
-with a compatible format.
+computation functions, some wrappers have been added. They convert the data type
+on the fly if required. The benefit is that we can feed the parser with native
+types and rely on the wrappers to always ensure a compatible format.
 
 #### Lexer
 Manipulating the expression requires to be able to recognize its elements, and
 to do so the calculator component is relying on a lexer, that is able to cut the
-expression into atomic and clearly identified parts.
+expression into atomic and clearly identifiable parts.
 
-The chosen library is [moo](https://github.com/no-context/moo) which is a well
-supported and optimized tokenizer. It accepts rational expressions to define the
-patterns to recognize.
+Our implementation uses the [moo](https://github.com/no-context/moo) library,
+which is a well supported and offers an optimized tokenizer. It accepts rational
+expressions to define the patterns it is meant to recognize.
 
 It is worth to mention this tokenizer is not utilized by the parser to recognize
 the expression, as the parser is bringing its own way to do that. The purpose of
@@ -118,11 +126,11 @@ symbols or special tokens)
 current operand, or recognize exponents)  
 
 ### mathsEvaluator
-The `mathsEvaluator` is a master piece inside the calculator, as it processes
+The `mathsEvaluator` is a central piece inside the calculator, as it processes
 the computation of the expressions and returns the result. Internally it relies
 on the third-party parser and the number representation engine presented above.
 
-Basically, this module is mixin in the parser and the number representation
+Basically, this module is mixing in the parser and the number representation
 engine, ensuring the link between them is made seamlessly and the data are
 represented using a compatible format. Also, as not all required functions are
 brought by the parser or the number representation engine, this module is also
@@ -207,14 +215,14 @@ composed of several pieces, some of them, the visual ones, are actually UI
 components, while some others are not.
 
 UI components are built on top of a [component abstraction](../component-abstraction.md),
-leads by a core module exposing a factory function. This abstraction relies on a
+controlled by a core module exposing a factory function. This abstraction relies on
 delegation pattern, augmenting the default API by linking a specifications object
 to the created instance. It also integrates the `eventifier` API, giving to any
 components the ability to communicate through events.
 
 ## Plugins model
 The calculator main component is only exposing the engine. Most of its features
-are brought by sub-components, presented by plugins.
+are supplied by sub-components, presented by plugins.
 
 A detailed explanation on how plugins model is implemented can be found in the
 [Plugins model](../plugins-model.md) page.
@@ -253,8 +261,8 @@ display layout. However, the layout is empty by design, and it is only a
 group of placeholders where the UI plugins will place their visual components.
 In other words, the `board` can be seen as an abstract component.
 
-Here is a short description of each core modules composing the calculator main 
-component:
+Here is a short description of each core module that is part of the calculator
+main component:
 - `board`: This is the main component, initializing the involved libraries,
 exposing the API and managing the plugins.
 - `mathsEvaluator`: This is the computation engine, that wraps and use the
@@ -278,8 +286,8 @@ tokenizer's engine and also to get the meaning of each token.
 - `labels`: The labels corresponding to the terms used in expressions, and the
 labels usable for the display. There are directly linked by the list of terms,
 as well as by the keyboard layouts.
-- `areaBroker`: The component responsible to manage the display layout, giving
-access to the placeholders.
+- `areaBroker`: The component responsible for the management of the layout
+display, giving access to the placeholders.
 - `plugin`: The plugins abstraction on which each calculator plugin should rely
 to be compatible with the calculator.
 
@@ -316,7 +324,8 @@ of the component.
 will be rendered. This is mandatory since the area broker component requires
 access to the rendered layout, and the plugins system do need a valid area 
 broker. So the component is immediately rendered during the initialization
-process.
+process. `$` indicates `jQuery`, it should therefore be represented by a
+`jQuery` Object.
 - `plugins`: The second parameter is a collection of plugins factories. It could
 be empty, but the MVP is lead by plugins, so the `board` component won't
 directly bring user interactions without them.
@@ -332,7 +341,7 @@ Since the calculator `board` is a UI component, it inherits from the standard
 component API. And as any components is also an event emitter, hence it inherits
 from the `eventifier` mixin.
 
-The `board` component is bringing its own business API, and also produces some
+The `board` component supplies its own business API, and also produces some
 changes on the default component behavior. Among other appended API, some
 noteworthy differences from the default implementation are listed here. 
 
@@ -465,9 +474,9 @@ should be a `term` descriptor, say an object containing at least the following
 properties: `type`, `value`, `label`. This method takes care of the meaning of
 the added term, ensuring it does not break the expression by wrapping with
 spaces if needed. It also apply some business logic regarding the existing 
-expression, it will replace it if: it is a 0, and the term to add is not an
-operator nor a dot, or it is the last result, and the term to add is not an
-operator.
+expression, it will replace it if:
+- it is a 0, and the term to add is not an operator nor a dot
+- it is the last result, and the term to add is not an operator.
 
 > Emits the `termerror` event if the term to add is invalid.
 
@@ -528,12 +537,12 @@ Inserts a sub-expression in the current expression and move the cursor.
 > Emits the `insert` event, with the old expression and position as parameters.
 
 ###### `clear()`
-Clears the expression, and reset the position.
+Clears the expression, and resets the position.
 
 > Emits the `clear` event.
 
 ###### `evaluate()`
-Evaluates the current expression, and return a `mathsExpression` descriptor.
+Evaluates the current expression, and returns a `mathsExpression` descriptor.
 
 > Emits the `syntaxerror` event if the expression contains an error.
 
@@ -553,7 +562,8 @@ Gets a plugin by its name.
 Gets access to the areaBroker.
 
 ###### `setupMathsEvaluator()`
-Setups the maths evaluator with the last set config.
+Sets the maths evaluator up with the configuration that has been set as the most
+recent one
 
 ###### `getMathsEvaluator()`
 Gets access to the `mathsEvaluator` function.
@@ -563,7 +573,7 @@ To have a clearer view, here is a summary of the standard events emitted by the
 calculator `board` component.
 
 #### Life-cycle events
-Those events are related to the component's life cycle.
+These events are related to the component's life cycle.
 
 - `init`: Emitted while the component is initializing. The config should be set
 at this time, but initialization is still running.
@@ -861,7 +871,7 @@ Mathematically, it is impossible to have a bijective computation with the
 inverse of 3: `1/3` gives `0.3333333333333`, and we can continue indefinitely
 with the `3` after the decimal point. Now if you multiply this value by 3, no
 matter the amount of `3` you will add after the decimal point, you will never
-retrieve `1`, but `0.9999999999` instead. A mathematicall trick is to add a `4`
+retrieve `1`, but `0.9999999999` instead. A mathematical trick is to add a `4`
 as a last digit, but unfortunately this won't work with the calculator's engine.
 In fact, it can only works by doing: `0.333333333 + 0.333333333 + 0.333333334`.
 Which is not the same.
