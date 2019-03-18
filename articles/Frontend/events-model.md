@@ -1,4 +1,14 @@
 # Events model
+
+<!-- 
+tags:
+    JavaScript Components:
+        - "Events model"
+-->
+
+> An events model mixin is part of the TAO core library.
+> This article explains how it works.
+
 The events model is a powerful and straightforward way to communicate between
 and inside components. This article will describe how the events model works on
 our frontend application level implementation.
@@ -20,7 +30,7 @@ listener is called before or after another one.
 
 ![events model](resources/events-model.png)
 
-Events does not have to be registered prior being able to use them: an
+Events don't have to be registered prior being able to use them: an
 *eventified* object can trigger any events, even if no *listener* is bound to
 it, and a client can listen to any events, even if the listened to event is
 never triggered. This way it is possible to extend the API without having to
@@ -32,7 +42,7 @@ The events manager engine is provided by a core module, called `eventifier`.
 This is a mixin that will augment any target object with a set of API bringing
 the ability to manage events.
 
-To use the `eventifier`, simply import the module `core/eventifier`: 
+To use the `eventifier` you need to import the module `core/eventifier`: 
 
 ```javascript
 define(['core/eventifier'], function (eventifier) {
@@ -43,7 +53,7 @@ define(['core/eventifier'], function (eventifier) {
 });
 ```
 
-To turn a given object into an event manager, simply apply the `eventifier`
+To turn a given object into an event manager you need to apply the `eventifier`
 factory on it:
 
 ```javascript
