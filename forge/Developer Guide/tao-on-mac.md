@@ -5,15 +5,17 @@ updated_at: '2010-02-12 11:00:00'
 authors:
     - 'Bartlomiej Marszal'
 tags:
-    - 'Onboarding'
+    - 'Developer Enviroment'
     - 'Developer Guide'
 -->
 
 # Installation TAO Platform on MacOs
 
+This document explains how to install and configure your local machine to run and develop TAO Platform on MacOS environments.
+
 [Requirements](../Administrator%20Guide/requirements.md)
 
-This instructions are base on online tutorials available 
+This instructions are base on following tutorials:
 
 [Apache, PHP Instructions](https://getgrav.org/blog/macos-mojave-apache-multiple-php-versions)
 
@@ -21,13 +23,13 @@ This instructions are base on online tutorials available
 
 ## Instructions
 
-### Brew installation
+### Homebrew installation
 
-PLease visit [brew website](https://brew.sh) for most actual instructions.
+PLease visit [Homebrew website](https://brew.sh) for most actual instructions.
 
 `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-Now you can easily install missing packages such as wget or git using followed command:
+Now you can easily install missing packages such as `wget` or `git` using followed command:
 
 `$ brew install wget`
 
@@ -37,33 +39,33 @@ Run in command line:
 
 `$ brew install git`
 
-You can now add your ssh key to GitHub account. [Here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/) are instructions
+You can now add your ssh key to your GitHub account, [these are instructions in the Github help section](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
-You can now clone repository to your desired location on your mac 
+You can now clone your repository to the desired location on your mac 
 
 `git clone https://github.com/oat-sa/package-tao package-tao-local`
 
 ### Apache Installation
 
-First ensure if you do not have apache installed on your device. 
+First ensure if you do not have [Apache HTTP Server](https://httpd.apache.org/) installed on your device. 
 
-This command will stop your apache service:
+This command will stop your Apache service:
 
 `$ sudo apachectl stop`
 
-This command will remove apache service from auto-loaded services
+This command will remove Apache `httpd service` from auto-loaded services (services that are loaded on your computer startup )
 
 `$ sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null`
 
-Now install brew apache:
+Now install Apache web server using Homebrew:
 
 `$ brew install httpd`
 
-Add your newly installed service to brew autoload services:
+Add your newly installed service to Homebrew autoload services:
 
 `$ sudo brew services start httpd`
 
-You can alway check your running brew services by command:
+You can always check your running Homebrew services by command:
 
 `$ brew services list`
 
@@ -81,11 +83,9 @@ Your configuration file should be located here:
 
 `/usr/local/etc/httpd/httpd.conf`
 
-If you installed newest PhpStorm version you may use it to edit configuration files
+Edit configuration files using your favorite text editor
 
 `$ pstorm /usr/local/etc/httpd/httpd.conf`
-
-Or you may use any other editor such as Vim, Nano or Sublime.
 
 Find line:
 
@@ -97,7 +97,7 @@ and change it to:
 
 ##### Document root
 
-if you already clone your repository copy full path and insert in line with:
+If you already clone your repository, copy its full path and insert it in line with:
 
 `DocumentRoot "/usr/local/var/www"`
 
@@ -107,7 +107,7 @@ So it will looks like that:
 
 ###### Directory tag
 
-To change Directory tag reference:
+Change Directory tag reference to point at your project path:
 
 `<Directory>`
 
@@ -170,6 +170,8 @@ To make that work you have to add entry in /etc/hosts
 
 Restart webserver
 
+`brew services restart httpd`
+
 ### Multiple PHP installation
 
 Please consider to follow tutorial from [beginning](https://getgrav.org/blog/macos-mojave-apache-multiple-php-versions) of this document.
@@ -229,13 +231,13 @@ and replace by:
 </FilesMatch>
 ```
 
-restart your apache service:
+restart your Apache service:
 
 `brew services restart httpd`
 
 ### Composer installation
 
-You can either install it using brew:
+You can either install it using Homebrew:
 
 `$ brew install composer`
 
@@ -250,14 +252,14 @@ php -r "unlink('composer-setup.php');"
 
 ### Mariadb installation
 
-You may consider installing Oracle MySql instance or open source mariadb 
+You may consider installing [Oracle MySql](https://www.oracle.com/mysql/) instance or open source [Mariadb](https://mariadb.org) 
 
-Below are infraction for mariadb
+Below are instructions for Mariadb installation: 
 
 `$ brew install mariadb`
 
 `$ brew services start mariadb`
 
-To change ceredentials to your local database use command:
+To change credentials to your local database use command:
 
 `$ /usr/local/bin/mysql_secure_installation`
