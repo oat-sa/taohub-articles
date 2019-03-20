@@ -106,8 +106,8 @@ Use the following template:
            <meta charset="utf-8">
            <title>XXX TEST TITLE XXX</title>
            <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
-           <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
            <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+           <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
            <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit-parameterize.js"></script>
            <script type="text/javascript" src="/tao/views/js/lib/blanket/blanket.min.js" data-cover-flag="branchTracking" data-cover-only="editor/MathEditor.js"></script>
            <script  type="text/javascript">
@@ -149,7 +149,7 @@ Optionnal dependencies:
         QUnit.module('plugin');
 
         QUnit.test('module', function(assert){
-            QUnit.expect(1);
+            assert.expect(1);
 
             assert.ok(typeof plugin === 'function', 'The module expose a function');
         });
@@ -159,5 +159,7 @@ Optionnal dependencies:
 
 -   we need all tests cases to be wrapped under a QUnit.module (for reporting)
 -   for an example of parameterized test, see https://github.com/oat-sa/tao-core/blob/develop/views/js/test/core/encoder/str2array/test.js
+
+More details you can find in official documentation for QUnit unit test framework - https://api.qunitjs.com/
 
 
