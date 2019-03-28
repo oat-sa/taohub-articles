@@ -12,7 +12,7 @@ tags:
 
 TAO already provides a basic 4-functions [calculator implementation](https://github.com/oat-sa/tao-core/blob/master/views/js/ui/calculator.js).
 However, this is a simple implementation that immediately computes the operation,
-without taking in account the precedence of operators.
+without taking into account the precedence of operators.
  
 In order to properly support the [mathematical order of operations](https://en.wikipedia.org/wiki/BODMAS)
 we designed another calculator component. Instead of immediately computing the

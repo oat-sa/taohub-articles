@@ -153,6 +153,182 @@ component abstraction factory is as follows: `component(specs, defaults)`;
 component instance
 - `defaults`: some default config entries
 
+## Component factory
+Almost every component in TAO that is using the `component` abstraction is
+wrapping it inside a factory function that create the final component instance.
+
+Basically you will see something like:
+
+```javascript
+define([
+    'lodash',
+    'ui/component',
+    'tpl!my/component/template'
+], function (_, componentFactory, componentTpl) {
+    'use strict';
+
+    /**
+     * Some default config
+     * @type {Object}
+     */
+    var defaults = {
+        // ...
+    };
+
+    /**
+     * Builds a component
+     *
+     * @param {Object} config
+     * @returns {component}
+     * @fires ready - When the component is ready to work
+     */
+    function myComponentFactory(config) {
+        var api = {
+            // defines some additional API
+            foo: function foo() {
+                // ...
+            }
+        };
+        var component = componentFactory(api, defaults)
+            // set the component's layout
+            .setTemplate(componentTpl)
+
+            // renders the component
+            .on('render', function () {
+                // do something
+                
+                /**
+                 * @event ready
+                 */
+                this.trigger('ready');
+            });
+        
+        // initialize the component with the provided config
+        // defer the call to allow to listen to the init event
+        _.defer(function() {
+            component.init(config);        
+        });
+        
+        return component;
+    }
+
+    return myComponentFactory;
+});
+```
+
+However, this implementation still requires to actually render the component
+by either directly calling the `render()` method, or by providing the
+reference of the container in the config. And this approach leads to the
+following design flaws:
+- nothing will happen upon actual call to `render`, so the component won't be
+ready for use easily
+- if the reference to the container is provided through the config, that could
+lead to memory leak as a DOM element will persist in memory where it should
+not be.
+
+For these reasons, it is a good practice to expect the reference to the
+container as a separated parameter, and then auto render the component from
+the factory.
+
+```javascript
+define([
+    'lodash',
+    'ui/component',
+    'tpl!my/component/template'
+], function (_, componentFactory, componentTpl) {
+    'use strict';
+
+    /**
+     * Some default config
+     * @type {Object}
+     */
+    var defaults = {
+        // ...
+    };
+
+    /**
+     * Builds a component
+     *
+     * @param {HTMLElement|String} container
+     * @param {Object} config
+     * @returns {component}
+     * @fires ready - When the component is ready to work
+     */
+    function myComponentFactory(container, config) {
+        var api = {
+            // defines some additional API
+            foo: function foo() {
+                // ...
+            }
+        };
+        var component = componentFactory(api, defaults)
+            // set the component's layout
+            .setTemplate(componentTpl)
+            
+            // auto render on init
+            .on('init', function(){
+                this.render(container);
+            })
+
+            // renders the component
+            .on('render', function () {
+                // do something
+                
+                /**
+                 * @event ready
+                 */
+                this.trigger('ready');
+            });
+        
+        // initialize the component with the provided config
+        // defer the call to allow to listen to the init event
+        _.defer(function() {
+            component.init(config);        
+        });
+        
+        return component;
+    }
+
+    return myComponentFactory;
+});
+```
+
+Please note the additional parameter `container`, that ensures the component
+will be rendered as expected when initialized.
+
+## Good practices
+To summarize good practices regarding the component factories:
+- defer the initialization to allow to listen to the `init` event
+```javascript
+_.defer(function() {
+    component.init(config);        
+});
+```
+- use a separated parameter to get the container in which render te component
+```javascript
+function myComponentFactory(container, config) {
+    // ...`
+        // auto render on init
+        .on('init', function(){
+            this.render(container);
+        })
+    // ...
+}
+```
+- rely on events to communicate inside or outside
+```javascript
+var component = componentFactory(api, defaults)
+    .on('init', function(){
+    })
+    .on('render', function () {
+        this.trigger('ready')
+    });
+
+component.on('ready', function() {});
+
+component.trigger('foo');
+```
+
 ## Component built-in events
 The life-cycle related methods are not meant to be replaced. This means a
 component cannot implement its own version of the `init` method for instance.
