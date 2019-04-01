@@ -304,7 +304,7 @@ _.defer(function() {
     component.init(config);        
 });
 ```
-- use a separated parameter to get the container in which render te component
+- use a separated parameter to get the container in which render the component
 ```javascript
 function myComponentFactory(container, config) {
     // ...`
@@ -370,7 +370,7 @@ The correct way to add behavior is to listen to life-cycle events.
 ## State handling
 The component abstraction comes with a particular mechanism called `state handling`.
 This is a set of `states`, which can be seen as boolean flags. The particularity
-is tat those flags are synchronized with the rendered HTML and the associated
+is that those flags are synchronized with the rendered HTML and the associated
 CSS classes on the component's markup. This is useful to quickly adapt the
 displayed content by adding a state and reacting to it by applying CSS rules.
 
