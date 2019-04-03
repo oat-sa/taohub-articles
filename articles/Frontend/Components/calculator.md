@@ -275,12 +275,15 @@ loaded by `mathsEvaluator` and then linked to the parser.
 - `tokenizer`: A wrapper factory that initializes and gives access to the lexer
 used to tokenize the expressions. This tokenizer is used to manipulate the
 expression and properly display it.
-- `moo`: The third-party tokenizer that is reponsible to split the expression
+- `moo`: The third-party tokenizer that is responsible to split the expression
 into atomic elements. It is not directly used by the calculator, as it is
 wrapped by the `tokenizer` wrapper factory. 
-- `tokens`: A helper module that ease the processing of tokens (atomic elements)
+- `tokens`: A helper module that eases the processing of tokens (atomic elements)
 extracted from expressions. It provides functions to qualify tokens by
-categories, transform them into string values, or render them in HTML. 
+categories, or transform them into string values. 
+- `expression`: A helper module that eases the processing of expressions. It
+provides functions to check presence of error, or to properly render the
+expression in HTML.
 - `terms`: The list of terms an expression can use. This is used to feed the
 tokenizer's engine and also to get the meaning of each token. 
 - `labels`: The labels corresponding to the terms used in expressions, and the
@@ -673,14 +676,16 @@ It sets the states `degree` and `radian` according to the invoked command.
 
 #### history
 Plugin that manages an history of evaluated expressions in the calculator.
+The related variables are also stored each expression, and restored when
+the expression is reminded.
 
 It exposes the commands:
 - `historyClear`: Clears the history.
 - `historyGet`: Gets the history list, by emitting the event `history`.
 - `historyUp`: Remind the previous expression in the history, replacing the
-displayed expression by the reminded one.
+displayed expression by the reminded one. Related variables are also restored.
 - `historyDown`: Remind the next expression in the history, replacing the
-displayed expression by the reminded one.
+displayed expression by the reminded one. Related variables are also restored.
 
 #### remind
 Plugin that manages a simple value reminder in the calculator. It keeps track of
@@ -798,8 +803,6 @@ This plugin is quite complex, so here is a summarize of what it is doing.
 When the `sign` command is invoked, the expression is tokenized, and then the
 following strategies are applies:
 - if the expression only contains `0`, nothing is made
-- if the expression only contains the last result variable, its value is
-inlined before applying the sign change
 - based on what is under the cursor:
     - numeric value:
         - the operand is the first of the expression, so the sign is implicit +,
