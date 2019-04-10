@@ -4,8 +4,9 @@ created_at: '2019-04-03 16:28:43'
 authors:
     - 'Martin Nicholson'
 tags:
-    test-runner:
-        - 'Plugins'
+    - 'Frontend'
+    - 'Test Runner'
+    - 'Plugin'
 -->
 
 # Test Runner plugins
