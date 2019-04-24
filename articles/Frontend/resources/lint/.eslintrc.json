@@ -64,7 +64,7 @@
     "no-useless-computed-key" :     ["error"],
     "no-useless-rename" :           ["error"],
     "prefer-rest-params" :          ["error"],
-    "prefer-rest-spread" :          ["error"],
+    "prefer-spread" :               ["error"],
     "prefer-template" :             ["error"],
     "semi" :                        ["error", "always"],
     "strict" :                      ["error", "function"],
