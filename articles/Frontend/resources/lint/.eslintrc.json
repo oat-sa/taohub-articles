@@ -59,6 +59,7 @@
     "prefer-rest-spread" :          ["error"],
     "prefer-template" :             ["error"],
     "semi" :                        ["error", "always"],
+    "strict" :                      ["error", "function"],
     "vars-on-top" :                 ["error"]
   }
 }

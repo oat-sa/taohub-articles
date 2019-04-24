@@ -1,0 +1,89 @@
+{
+  "options" : {},
+  "rules" : {
+    "brace-style" : [
+      1, {
+        "allow-single-line" : false
+      }
+    ],
+    "class-name-format" : [
+      2, {
+        "allow-leading-underscore" : false,
+        "convention-explanation" : "Class name must contain only lowercase letters and hyphens"
+      }
+    ],
+    "declarations-before-nesting" : 1,
+    "extends-before-mixins" : 2,
+    "extends-before-declarations" : 2,
+    "function-name-format" : [
+      2, {
+        "allow-leading-underscore" : false,
+        "convention-explanation" : "Function name must contain only lowercase letters and hyphens"
+      }
+    ],
+    "indentation" : [
+      2, {
+        "size" : "tab"
+      }
+    ],
+    "mixin-name-format" : [
+      2, {
+        "allow-leading-underscore" : false,
+        "convention-explanation" : "Mixin name must contain only lowercase letters and hyphens"
+      }
+    ],
+    "mixins-before-declarations" : [
+      2, {
+        "exclude" : [
+          "breakpoint",
+          "mq"
+        ]
+      }
+    ],
+    "no-color-hex" : 2,
+    "no-color-keywords" : 2,
+    "no-warn" : 2,
+    "no-debug" : 2,
+    "no-duplicate-properties" : 2,
+    "no-empty-rulesets" : 2,
+    "no-ids" : 2,
+    "no-important" : 2,
+    "no-invalid-hex" : 2,
+    "no-misspelled-properties" : 2,
+    "no-trailing-zero" : 1,
+    "no-universal-selectors" : 2,
+    "one-declaration-per-line" : 1,
+    "placeholder-in-extend" : 2,
+    "property-sort-order" : 0,
+    "pseudo-element" : 2,
+    "quotes" : [
+      2, {
+        "style" : "single"
+      }
+    ],
+    "single-line-per-selector" : 1,
+    "space-before-colon" : [
+      2, {
+        "include" : true
+      }
+    ],
+    "trailing-semicolon" : 1,
+    "variable-for-property" : [
+      0, {
+        "allow-map-get" : true
+      }
+    ],
+    "variable-name-format" : [
+      2, {
+        "allow-leading-underscore" : false,
+        "convention" : "camelcase",
+        "convention-explanation" : "variable name must be in camelCase."
+      }
+    ],
+    "zero-unit" : [
+      2, {
+        "include" : false
+      }
+    ]
+  }
+}
