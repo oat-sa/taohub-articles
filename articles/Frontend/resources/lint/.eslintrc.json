@@ -9,7 +9,7 @@
   "globals" : {
     "ENVIRONMENT" : true
   },
-  "plugins" : ["es"],
+  "plugins" : ["es", "jsdoc"],
   "parserOptions" : {
     "sourceType" : "module",
     "ecmaVersion" : 2015
