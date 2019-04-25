@@ -139,7 +139,6 @@ If an extension or a project doesn't yet support ES2015+, the following rules ap
 
 ### ES2015+ style
 
-
 Allowed features from the [ES2015 specification](http://www.ecma-international.org/ecma-262/6.0/index.html) :
 
  - All features from previous specifications (ES3, ES5)
@@ -168,7 +167,7 @@ The following coding rules apply on ES2015 code :
  - Be careful with destructuring, this can  create code difficult to read. A reviewer can ask to rewrite a destructred assignment if the produced code is cryptic.
  - Use arrow functions for lambda to avoid unnecessary lexical scopes, but avoid them for top-level factories or pure function definitions.
  - Use template literals instead of string concatenation.
- - Use destructuring and default parameters for method's `options` parameter : `function({label = "", num =0} = {}) { }
+ - Use destructuring and default parameters for method's `options` parameter : `function({label = "", num =0} = {}) { }`
 
 ### SASS/CSS
 
@@ -182,7 +181,7 @@ The following coding rules apply on ES2015 code :
  - Keep classes lowercase and use hyphens (not underscores or camelCase). Dashes serve as natural breaks in related class.
  - class names should reflect a classification : use names that describe the semantic purpose of the element, rather than the presentation of the element
  - Every selector needs to be scoped, as much as possible, for example for a component, all style must be scoped within the element root selector
- - Do not** use IDs and tag selectors to write style rules. This has bad side effects, affects optimal rendering and makes code less reusable.
+ - Do not use IDs and tag selectors to write style rules. This has bad side effects, affects optimal rendering and makes code less reusable.
  - Selection must be done by following the semantic of the DOM ie. `.actions > button` or `.actions > [role=button]` instead of `.actions > .btn`)
  - Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document.
  - Don't write vendor prefixes (configure autoprefixer instead).
@@ -190,41 +189,19 @@ The following coding rules apply on ES2015 code :
  - Mixins and functions should be as simple as possbile, serve only one purpose and be documented.
 
 
-### Static analysis
-
-You can verify (and we do it automatically) the style and formatting using the Grunt task.
-
-First move to the build folder :
-
-```sh
-cd tao/views/build
-```
-
-To verify a file :
-
-```sh
-npx grunt eslint:file --file=${PATH_TO_FILE}
-```
-
-To verify a complete extension :
-
-```sh
-npx grunt eslint:extension --extension=${EXTENSION_NAME}
-```
-
-### Best practice & Patterns
+## Best practice & Patterns
 
  JavaScript is an open language, that let's you write code in very different ways, even in different paradigms, from prototypal object oriented to functional programming. In TAO we've selected some programming paradigms and patterns over others. The goal is to bing some consistency accross the platform.
 
 
-#### Don't repeat Yourself
+### Don't repeat Yourself
 
 Andy Hunt, The Pragmatic Programmer
 > "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"
 
 The simple principle will lead to code easier to maintain.
 
-#### KISS
+### KISS
 
 John Carmack, game developer :
 > "Sometimes, the elegant implementation is just a function. Not a method. Not a class. Not a framework. Just a function."
@@ -245,7 +222,7 @@ return {
 }
 ```
 
-#### API first
+### API first
 
 Martin Fowler,
 > "Any fool can write code that a computer can understand. Good programmers write code that humans can understand"
@@ -301,9 +278,11 @@ When mixins are pure methods or stateless by preference. There shouldn't be any 
 
 3. Delegation
 
-The delegation is a form of composition, when
+_TBD_
 
 4. Forwarding
+
+_TBD_
 
 
 #### Factories
