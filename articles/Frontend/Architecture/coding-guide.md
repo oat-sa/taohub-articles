@@ -68,7 +68,7 @@ Mostly we document :
  - events
  - callbacks/lambda
 
-The documentation doesn't target a tool, it target humans, other developers to be able to call your API.
+The documentation doesn't target a tool, it targets humans, other developers to be able to call your API.
 
 For example :
 
@@ -96,6 +96,8 @@ return {
 
 ## Coding style
 
+> The golden rule is the consistency
+
 ### Format and linting
 
 Please configure your IDE or development editor to support :
@@ -106,52 +108,87 @@ Please configure your IDE or development editor to support :
  3. [SassLint](https://github.com/sasstools/sass-lint), using this [configuration](../resources/lint/.sasslintrc) or under the folder `tao/views/build`
  4. [EditorConfig](https://editorconfig.org/), using this [configuration](../resources/lint/.editorconfig)
 
+### General rules
 
-
-> Every project should 
+ - Code should be consistent and easy to understand and self descriptive.
+ - Writing comments when it is necessary is highly appreciated. Comments shouldn't be redundant with the code itself and provide additional and useful information.
+ - Variables, function, methods names should reflect the intent in a clear way.
+ - Variable definition should be separated always by new lines to help readability.
+ - Each variable must be declared on a single line, and be declared using it's own statement (no comma after the declaration)
+ - Use 4 spaces for indents
+ - No more than one blank line
+ - No ASCII art within the source code
+ - Use single quotes for string literals (or template literals if supported)
+ - Brace style  [1TBS](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_)
+ - Try to avoid using ternary operator in complex cases (or don't use at all?)
+ - Always use `===` instead of `==`
+ - Variable names for jQuery elements have to start with `$`
+ - No underscore to private variables functions
 
 ### ES5 style
 
-Most of the TAO JavaScript code is written in ES5 for obvious and historical reasons. We will be able to migrate to ES2015+ code style, extension by extension using Babel. But if an extension or a project uses ES5 code, you should comply with it.
+If an extension or a project doesn't yet support ES2015+, the following rules apply :
 
-Some of the code style rules :
- - always in strict mode : `'use strict';` in the upper scope
+ - always in strict mode : `'use strict';` in the highest scope
+ - ensure to always code in a non global lexical scope (it's the case for AMD or CommonJS, otherwise use IIFE)
  - named function expressions for methods :  `{ method : function method() }`
- - name callbacks for easier debugging : `on('click', function buttonOkClickHandler(e){`
- - references to the lexical scope are made using the `self` variable name
+ - named callbacks for easier debugging : `on('click', function buttonOkClickHandler(e){`
+ - references to the lexical scope are made using the `self` variable name (for consistency)
  - hoisting should be reflected by variable declaration, ie. `var` on top.
  - `Promise` is available to manage asynchronous flow.
 
 ### ES2015+ style
 
-> We will migrate everything to ES2015 and beyond code style. Some extensions and projects may already use them. The goal is to support the EcmaScript features available in last version of Chrome and Firefox and transpile using babel for the other browsers.
 
-Allowed features :
- - `const` and `let`
- - `Object` and `Array` new built-in (`Objet.assign`, `Array.from`, `Array.of`)
+Allowed features from the [ES2015 specification](http://www.ecma-international.org/ecma-262/6.0/index.html) :
+
+ - All features from previous specifications (ES3, ES5)
+ - `const` and `let`.
+ - `Object` and `Array` new built-in (`Objet.assign`, `Array.from`, `Array.of`, etc.)
  - `String` new built-in (`String.includes`, `String.startWith`, etc.)
  - `Promise`
- - `Map`, `Set` (including `WeakMap` and `WeakSet`) as well as typed arrays
- - [default function paramters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+ - `Map`, `Set` (including `WeakMap` and `WeakSet`)
+ - [Typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)
+ - [default function parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
  - [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
- - [spead syntax on objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+ - [spread syntax on objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
  - [shorthand object notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#New_notations_in_ECMAScript_2015)
  - [for ... of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
- - [template litterals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+ - [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
  - [destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
  - [arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+ - [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)/[export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) only when the bundler supports it (library, side projects)
 
- - `import/export` only when the bundler supports it (library, side projects)
- - Everything from ES5
- - No `use strict` anymore
- - Named function expressions can be replaced by the shortand object notation `{ method(){ } }`
+The following coding rules apply on ES2015 code :
+
+ - no `use strict`  anymore in modules, but it needs to be kept outside ES2015 modules.
+ - Named function expressions can be replaced by the shorthand object notation `{ method(){ } }`
  - Do not use `class`, always prefer composition over inheritance. However there are a few use cases `class` would be allowed, for example to extend DOM prototypes, like `Error` to create new error types.
  - Try to use `const` by default (immutable) and `let` only for mutable variables (counters).
- - Bhe careful with destructuring, this can  create code difficult to read. A reviewer can ask to rewrite a destructred assignment if the produced code is cryptic.
- - Use arrow functions for lambda to avoid unnecessary lexical scopes, but avoid them for top-level factories or pure function definitions. 
+ - Be careful with destructuring, this can  create code difficult to read. A reviewer can ask to rewrite a destructred assignment if the produced code is cryptic.
+ - Use arrow functions for lambda to avoid unnecessary lexical scopes, but avoid them for top-level factories or pure function definitions.
  - Use template literals instead of string concatenation.
- - shortand object notation is allowed `{ method(){ } }`
  - Use destructuring and default parameters for method's `options` parameter : `function({label = "", num =0} = {}) { }
+
+### SASS/CSS
+
+ - Do not use `!important`, never.
+ - Do not use inline style, ie `style="font-size:16px"`.
+ - When grouping selectors, keep individual selectors on a single line.
+ - Include one space before the opening brace of declaration blocks for legibility.
+ - Each declaration should appear on its own line for more accurate error reporting.
+ - End all declarations with a semi-colon.
+ - Avoid specifying units for zero values, it has no meaning and makes code less readible.
+ - Keep classes lowercase and use hyphens (not underscores or camelCase). Dashes serve as natural breaks in related class.
+ - class names should reflect a classification : use names that describe the semantic purpose of the element, rather than the presentation of the element
+ - Every selector needs to be scoped, as much as possible, for example for a component, all style must be scoped within the element root selector
+ - Do not** use IDs and tag selectors to write style rules. This has bad side effects, affects optimal rendering and makes code less reusable.
+ - Selection must be done by following the semantic of the DOM ie. `.actions > button` or `.actions > [role=button]` instead of `.actions > .btn`)
+ - Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document.
+ - Don't write vendor prefixes (configure autoprefixer instead).
+ - Avoid unnecessary nesting and too many nesting levels.
+ - Mixins and functions should be as simple as possbile, serve only one purpose and be documented.
+
 
 ### Static analysis
 
@@ -175,15 +212,49 @@ To verify a complete extension :
 npx grunt eslint:extension --extension=${EXTENSION_NAME}
 ```
 
-
-
-
-### Patterns
+### Best practice & Patterns
 
  JavaScript is an open language, that let's you write code in very different ways, even in different paradigms, from prototypal object oriented to functional programming. In TAO we've selected some programming paradigms and patterns over others. The goal is to bing some consistency accross the platform.
 
 
-#### Composition over inheriance
+#### Don't repeat Yourself
+
+Andy Hunt, The Pragmatic Programmer
+> "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"
+
+The simple principle will lead to code easier to maintain.
+
+#### KISS
+
+John Carmack, game developer :
+> "Sometimes, the elegant implementation is just a function. Not a method. Not a class. Not a framework. Just a function."
+
+If your module needs to expose a function, then your module can expose only  a function, especially when there's no state, no side effect!
+
+If multiple functions serve the same purpose they can be groupped into an object serving multiple and independant static methods :
+
+```js
+//a case module util
+return {
+    capitalize : function capitalize(inputString){
+
+    },
+    camelToSnake : function camelToSnake(inputString){
+
+    }
+}
+```
+
+#### API first
+
+Martin Fowler,
+> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand"
+
+When writting your module think about it as API, following the open/close principle, think about input and output. Try to avoid side effect and try to think as the developer that will use the API you are building : "how ideally would you like to call this API".
+
+Using TDD can help in having clear APIs.
+
+#### Composition over inheritance
 
 Joe Armstrong, creator of Erlang, about the classical inheritance :
 > "You wanted a banana but what you got was a gorilla holding the banana and the entire jungle".
@@ -336,70 +407,5 @@ The `ui/component` [documentation](#component) describes how to create a compone
 
 > The way to do components in TAO has evolved a lot and only stabilized a few years ago, but expect the way to build component to be changed again soon. Remember if the way change the concept remains the same.
 
-#### KISS
-
-John Carmack, game developer :
-> "Sometimes, the elegant implementation is just a function.  Not a method.  Not a class.  Not a framework. Just a function."
-
-If your module needs to expose a function, then your module can expose only  a function, especially when there's no state, no side effect!
-
-If multiple functions serve the same purpose they can be groupped into an object serving multiple and independant static methods :
-
-```js
-//a case module util
-return {
-    capitalize : function capitalize(inputString){
-
-    },
-    camelToSnake : function camelToSnake(inputString){
-
-    }
-}
-```
-
-### Core components
-
-#### Eventifier
-#### Plugins
-#### Area broker
-#### Store
-
-### Services
-
-- data provider
 
 
-
-### Components
-
- - SASS scopes to component
- - lifecycle
- - API and events
- - DOM and Template
- - State
-
-### Tests
-
-
-## CSS and SASS
-
-## Coding in TAO
-
-
- - do not assign a value to the `arguments` special object
-
-
-## Pull requests
-
-Code modification is done through pull requests. They have to follow some simple rules :
-
- - the branch should be named using the pattern `type/JIRA-ID/description` where type is either `fix`, `feature`, `breaking` (or `backport/`), according to semver (if the contribution is an open contribution, please set `OSS` as `JIRA-ID`)
- - the pull request is created against the `develop` branch.
- - the pull request contains minimal instructions : what has changed, how to reproduce and how to test. - any dependency is clearly set, if the pull request rely on another pull request it should be described.
- - the version number of the current extension should be increased according to semver (install and update)
- - the code style rules is valid (no ESLint warning)
- - the code is covered by tests (there are a few exceptions)
- - the code is documented
- - the pull request doesn't contain the bundles (bundles are created during the release)
- - the commits that compose a pull requests have meaningful comments
- - the code follows conventions, best practices and recommendations
