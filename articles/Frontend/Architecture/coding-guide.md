@@ -8,8 +8,7 @@ tags:
 
 # TAO Frontend Coding guide
 
-This document describes the TAO frontend architecture.
-
+> This document describes the frontend coding guidelines
 
 ## Continuous improvement
 
@@ -52,7 +51,7 @@ Here is the default open source header :
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
- * Copyright (c) 2018 Open Assessment Technologies SA;
+ * Copyright (c) 2019 Open Assessment Technologies SA;
  */
 
 ```
@@ -60,15 +59,16 @@ Here is the default open source header :
 ### JavaScript
 
 We use a **subset** of the [jsdoc](http://usejsdoc.org/) format for the JavaScript code documentation.
+
 Mostly we document :
  - functions and method parameters
  - complex types
  - return values
  - thrown errors
- - events
+ - fired events
  - callbacks/lambda
 
-The documentation doesn't target a tool, it targets humans, other developers to be able to call your API.
+**The documentation doesn't target tools, it targets humans**. It is important to clearly and precisely document APIs, but it's even more important to communicate the intents.
 
 For example :
 
@@ -111,14 +111,15 @@ Please configure your IDE or development editor to support :
 ### General rules
 
  - Code should be consistent and easy to understand and self descriptive.
- - Writing comments when it is necessary is highly appreciated. Comments shouldn't be redundant with the code itself and provide additional and useful information.
- - Variables, function, methods names should reflect the intent in a clear way.
- - Variable definition should be separated always by new lines to help readability.
- - Each variable must be declared on a single line, and be declared using it's own statement (no comma after the declaration)
+ - Writing comments when it is necessary is highly appreciated. Comments shouldn't be redundant with the code itself (clear code document itself) but provide additional and useful information.
+ - Variable, function, method names should reflect the intent in a clear way.
+ - Variable definitions should be separated always by new lines to help readability.
+ - Variable should be defined using it's own statement (no comma after the declaration)
  - Use 4 spaces for indents
  - No more than one blank line
  - No ASCII art within the source code
- - Use single quotes for string literals (or template literals if supported)
+ - Use single quotes for string literals 
+ - Use template literals instead of concatenation with variables or for multi line strings
  - Brace style  [1TBS](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_)
  - Try to avoid using ternary operator in complex cases (or don't use at all?)
  - Always use `===` instead of `==`
@@ -130,7 +131,7 @@ Please configure your IDE or development editor to support :
 If an extension or a project doesn't yet support ES2015+, the following rules apply :
 
  - always in strict mode : `'use strict';` in the highest scope
- - ensure to always code in a non global lexical scope (it's the case for AMD or CommonJS, otherwise use IIFE)
+ - ensure to always code in a non global lexical scope (it's the case for AMD or CommonJS, otherwise use [IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE))
  - named function expressions for methods :  `{ method : function method() }`
  - named callbacks for easier debugging : `on('click', function buttonOkClickHandler(e){`
  - references to the lexical scope are made using the `self` variable name (for consistency)
@@ -172,43 +173,43 @@ The following coding rules apply on ES2015 code :
 ### SASS/CSS
 
  - Do not use `!important`, never.
- - Do not use inline style, ie `style="font-size:16px"`.
+ - Do not use inline style, ie `style="font-size:16px"`, never.
  - When grouping selectors, keep individual selectors on a single line.
  - Include one space before the opening brace of declaration blocks for legibility.
  - Each declaration should appear on its own line for more accurate error reporting.
  - End all declarations with a semi-colon.
- - Avoid specifying units for zero values, it has no meaning and makes code less readible.
+ - Avoid specifying units for zero values.
  - Keep classes lowercase and use hyphens (not underscores or camelCase). Dashes serve as natural breaks in related class.
- - class names should reflect a classification : use names that describe the semantic purpose of the element, rather than the presentation of the element
- - Every selector needs to be scoped, as much as possible, for example for a component, all style must be scoped within the element root selector
- - Do not use IDs and tag selectors to write style rules. This has bad side effects, affects optimal rendering and makes code less reusable.
- - Selection must be done by following the semantic of the DOM ie. `.actions > button` or `.actions > [role=button]` instead of `.actions > .btn`)
+ - Use class names that describe the purpose of the element, rather than the presentation of the element : do not use classes like `.center` or `.column` nor `.button` but instead `.user-profile`, `.highlighted-stimulus` or `notification-area`.
+ - Except for base styles (reset, normalize, base and font) every rule must be scoped, by the class name of the component or a root component.
+ - Try to avoid IDs in selector as much as possible and global tag selectors. Instead try to always scope the selection.
+ - Selection must be done by following the semantic of the DOM ie. `.actions > button` or `.actions > [role=button]` instead of `.actions > .btn`
  - Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document.
- - Don't write vendor prefixes (configure autoprefixer instead).
+ - Don't write vendor prefixes (configure *autoprefixer* instead).
  - Avoid unnecessary nesting and too many nesting levels.
- - Mixins and functions should be as simple as possbile, serve only one purpose and be documented.
-
+ - Mixins and functions should be as simple as possible, serve only one purpose and be documented
+ - Use variables for colors, and units that are used in multiple locations
 
 ## Best practice & Patterns
 
- JavaScript is an open language, that let's you write code in very different ways, even in different paradigms, from prototypal object oriented to functional programming. In TAO we've selected some programming paradigms and patterns over others. The goal is to bing some consistency accross the platform.
+ JavaScript is an open language, that let's you write code in very different ways, even in different paradigms, from prototypal object oriented to functional programming. In TAO we've selected some programming paradigms and patterns over others. The goal is to bring some consistency and shared practices across the platform.
 
 
 ### Don't repeat Yourself
 
-Andy Hunt, The Pragmatic Programmer
-> "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system"
+> "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system."
+*Andy Hunt, The Pragmatic Programmer*
 
-The simple principle will lead to code easier to maintain.
+The simple principle will lead to code easier to maintain. So if you write the same code multiple time, think about abstractions. Abstractions doesn't need to be too high level.
 
 ### KISS
 
-John Carmack, game developer :
 > "Sometimes, the elegant implementation is just a function. Not a method. Not a class. Not a framework. Just a function."
+*John Carmack, game developer*
 
-If your module needs to expose a function, then your module can expose only  a function, especially when there's no state, no side effect!
+If your module needs to expose a function, then your module can expose only a function, especially when there's no state, no side effect!
 
-If multiple functions serve the same purpose they can be groupped into an object serving multiple and independant static methods :
+If multiple functions serve the same purpose they can be grouped into an object serving multiple and independent *static like* methods :
 
 ```js
 //a case module util
@@ -224,17 +225,17 @@ return {
 
 ### API first
 
-Martin Fowler,
 > "Any fool can write code that a computer can understand. Good programmers write code that humans can understand"
+*Martin Fowler*
 
-When writting your module think about it as API, following the open/close principle, think about input and output. Try to avoid side effect and try to think as the developer that will use the API you are building : "how ideally would you like to call this API".
+When writing your module think about it as an API, following the open/close principle, think about input and output. Try to avoid side effect and try to think as the developer that will use this API : "how ideally would you like to call this API".
 
-Using TDD can help in having clear APIs.
+Using [TDD](https://en.wikipedia.org/wiki/Test-driven_development) can help in having clear APIs, testing first the API usually lead to clear APIs.
 
-#### Composition over inheritance
+### Composition over inheritance
 
-Joe Armstrong, creator of Erlang, about the classical inheritance :
 > "You wanted a banana but what you got was a gorilla holding the banana and the entire jungle".
+*Joe Armstrong, creator of Erlang, about the classical inheritance*
 
 To avoid strong coupling due to inheritance, we favor in TAO composition over classical inheritance. The main goal remains to separate the behavior from the implementation, in order to divide the responsibilities.
 
@@ -285,7 +286,10 @@ _TBD_
 _TBD_
 
 
-#### Factories
+### Factories
+
+> "The best thing about JavaScript is its implementation of functions. It got almost everything right. But, as you should expect with JavaScript, it didn't get everything right."
+*Douglas Crockford, JavaScript: The Good Parts*
 
 When a module needs to keep a state and hide some implementation details, the factory pattern will be selected.
 
@@ -314,7 +318,10 @@ var countDownFactory = function countDownFactory(config){
 };
 ```
 
-#### Event Emitter
+### Event Emitter
+
+> "JavaScript is especially suited for event-driven programming, because of the callback pattern, which enables your programs to work asynchronously, in other words, out of order."
+*Stoyan Stefanov, JavaScript Patterns*
 
 The goal of this pattern is to listen some events from a source and attach a behavior when they're triggered.
 
@@ -362,20 +369,22 @@ countdown
 
 ```
 
-TAO provides an implementation, the `core/eventifier` module ti has the following features :
- - contextualized to an object
- - support AOP style listening (`before` -> `on` -> `after`)
+TAO provides an implementation, the `core/eventifier` module, it has the following features :
+ - contextualized to an object (events are scoped)
+ - support [AOP](https://en.wikipedia.org/wiki/Aspect-oriented_programming) style listening (`before` -> `on` -> `after`)
  - support namespaces
  - support `Promise` (asynchronous handlers)
  - supports context spreading
 
 Please check out the [eventifier documentation](#eventifier).
 
-#### Provider
+### Provider
 
 When multiples implementation of a given API can be defined, or dynamically defined, the provider pattern is used.
 
-#### Components
+_TBD_
+
+### Components
 
 In TAO we render and manipulate DOM using "components". A component is a chunk of the graphical user interface.
 A component can be atomic (a button) or a larger part of the GUI (a dashboard) that uses other components.
@@ -386,5 +395,8 @@ The `ui/component` [documentation](#component) describes how to create a compone
 
 > The way to do components in TAO has evolved a lot and only stabilized a few years ago, but expect the way to build component to be changed again soon. Remember if the way change the concept remains the same.
 
+_TBD_
 
+### Plugins
 
+_TBD_

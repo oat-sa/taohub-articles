@@ -8,6 +8,8 @@ tags:
 
 # Frontend file structure
 
+> Extension based architecture and file structure
+
 ## The extension model
 
 TAO uses an "extension" model as a basement for his architecture. It means the software is composed by many extensions using a hierarchical model : each extension can depend on another extension.
@@ -18,14 +20,16 @@ This dependency model is defined at the level of the business logic but also at 
 
 **The code inside an extension can be dependent on the code inside another extension only if the dependency to the extension exists too**
 
-For example, in the source code of `taoQtiItem` you can use code from `taoItems`. Given a file `taoQtiItem/views/js/controller/Main/index.js` :
+For example, in the source code of `taoQtiItem` you can use code from `taoItems`. 
+
+Given a file `taoQtiItem/views/js/controller/Main/index.js` :
 
 ```js
 define([
     'taoItems/service/assets'
 ], function(assets){
 
-})
+});
 ```
 
 The dependency in the `define` is allowed only because `taoQtiItem` depends on `taoItems`. To ensure a dependency exists, please check the extension `manifest.php` file :
@@ -84,7 +88,8 @@ views
 
 ## Multi-format structure
 
-*Files that serve the same purpose must live together.*
+> Files that serve the same purpose must live together.
+
 It means if a module requires a template, some JSON data or a CSS file, they'll have to live in the same folder.
 
 For example, a component must have the following structure:

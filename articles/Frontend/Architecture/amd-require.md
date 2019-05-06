@@ -10,7 +10,11 @@ tags:
 > How to deal with require.js and AMD into TAO.
 
 For historical reasons, JavaScript files in TAO are AMD modules.
-TAO is using AMD to define import and export, but also for dependency injection.
+TAO uses [AMD](https://en.wikipedia.org/wiki/Asynchronous_module_definition) and [require.js](https://requirejs.org/) :
+ - to define import and export, and declare dependencies
+ - as a dependency injection library
+ - as a dynamic loader
+ - dependency resolver (for bundling)
 
 All modules have the same form :
 
@@ -35,7 +39,7 @@ The dependencies are declared using a module name, which is not necessarily a pa
 For example to access `taoQtiTest/views/js/runner/plugins/control/timers/timer.js` you'll use `taoQtiTest/runner/plugins/control/timers/timer`.
 You'll notice the `views/js` disappear as well as the file extension.
 
-The base URL is always for JavaScript resources `tao/views/js` so for modules into the tao extension you don't need to prefix them with `tao`. For example to access `tao/views/js/core/eventifier.js`, `core/eventifier` should  be used.
+The base URL is always for JavaScript resources `tao/views/js` so for modules into the `tao` extension you don't need to prefix them with `tao`. For example to access `tao/views/js/core/eventifier.js`, `core/eventifier` should  be used.
 
 Modules with an alias defined in the configuration can be called using this alias `lodash`, `jquery`, `moment`, `i18n`, etc. Since alias create some coupling between the source code and the configuration, we try to reduce their usage as much as possible.
 
@@ -143,6 +147,7 @@ There are multiple ways to get data from the server :
 In order to get data from the server, you will use the configuration only for system configuration and HTTP requests for anything else.
 
 All other ways should be avoided as much as possible. You will see in the source code, dynamic reconfiguration of modules. This is an anti-pattern and should be removed.
+
 ```
 <script>
     require.config({
@@ -160,7 +165,7 @@ TAO supports loading templates as AMD dependencies.
 
  - Templates are formatted using the Handlebars syntax (see https://handlebarsjs.com)
  - The template file extension is `.tpl`
- - They must be loaded through AMD, using `'tpl!path/to/module'` (without the `.tpl` extension, since a template is considered as a JavaScript file)
+ - They must be loaded through AMD, using `'tpl!path/to/module'` (*WITHOUT* the `.tpl` extension, since a template is considered as a JavaScript file)
  - Templates are compiled into JavaScript function during the build
  - The exported value is a function
 
@@ -176,7 +181,7 @@ For example, consider the file `tao/views/js/ui/switch/tpl/switch.tpl` :
 </div>
 ```
 
-and loading it in a JavaScript module :
+Then you can load it in a module using the `tpl!` loader (you'll notice the file extension `.tpl` is missing) : 
 
 ```js
 define([
@@ -197,11 +202,11 @@ define([
 
 ### Loading JSON data
 
-TAO supports loading JSON files as AMD dependencies,  using `'json!path/to/module.json'` (with the `.json` extension). The result is directly parsed to a JavaScript Object
+TAO supports loading JSON files as AMD dependencies,  using `'json!path/to/module.json'` (*WITH* the `.json` extension). The result is directly parsed to a JavaScript Object
 
 For example, consider the file `tao/views/js/core/mimetype/categories.json` :
 
-```
+```json
 {
     "video" : {
        "category" : "media",
@@ -217,7 +222,7 @@ For example, consider the file `tao/views/js/core/mimetype/categories.json` :
 }
 ```
 
-and loading it in a JavaScript module :
+Then you can load it into a module using the `json!` loader (you'll notice the file extension is there) :
 
 ```js
 define([
@@ -231,7 +236,7 @@ define([
 
 ### Loading stylesheets
 
-TAO supports loading CSS files as AMD dependencies,  using `'css!path/to/module.json'` (with the `.css` extension).
+TAO supports loading CSS files as AMD dependencies,  using `'css!path/to/module.json'` (*WITH* the `.css` extension).
  - The stylesheet is loaded when the module is loaded for the first time.
  - Stylesheets doesn't export anything, so by convention, add them at the end of your dependencies
 
@@ -253,20 +258,20 @@ define([
 
 There are two distinct modes into TAO :
 
-1. `DEBUG` mode (akka Development mode)
-2. `PRODUCTION` mode (akka Bundle mode)
+1. `DEBUG` mode (_aka_ Development mode)
+2. `PRODUCTION` mode (_aka_ Bundle mode)
 
 You can change the mode by switching the value of the constant `DEBUG_MODE` into `config/generis.conf.php`
 
-On of the main difference between those two modes is the client side source code is optimized. Per extension, the source code is aggregated into bundles, transformed and optimized :
+The main difference between those two modes is the client side source code is optimized. Per extension, the source code is aggregated into bundles, transformed and optimized :
 
 The bundler is available as a Grunt task in the repository [oat-sa/grunt-tao-bundle](https://github.com/oat-sa/grunt-tao-bundle).
 
 ![bundler](../resources/tao-bundler.png)
 
  - The bundler create bundles per extension and per target (backoffice, frontoffice, separate entry point, etc.)
- - Libraries and the core framework is in a `vendor` bundle
- - The optimizer supports UglifyJs and Babbel.
+ - Libraries and the core framework are in a `vendor` bundle
+ - The optimizer supports [UglifyJs](https://github.com/mishoo/UglifyJS) and [Babel](https://babeljs.io/)
  - Each extension needs to configure its bundles into the files `views/build/grunt/bundle.js`
  - Bundling is done during the release of an extension, not during it's development.
 
@@ -284,7 +289,8 @@ module.exports = function(grunt) {      //it's a Grunt configuration so we're in
                     outputDir : 'loader',
                     bundles : [{
                         name : 'taoCe',
-                        default : true
+                        default : true,
+                        babel : true    //babel is used to transpile the code
                     }]
                 }
             }
@@ -294,24 +300,22 @@ module.exports = function(grunt) {      //it's a Grunt configuration so we're in
 };
 ```
 
-Per extension you can generate the bundle using the following command, the task name is `${extensionNameLowerCase}bundle`, so to bundle the extension `taoCe` you'll have :
+Per extension you can generate the bundle using the following command, the task name is `${extensionNameLowerCase}bundle`, so to bundle the extension `taoCe` you'll run :
 
 ![bundle taoce](../resources/bundle-taoce.png)
 
 
-## Routing
-
-### The AMD loader
+## The AMD loader
 
 The TAO application can be seen has multiple Single Page Application (because of the transition of multiple pages to SPA).
-Each page, which is the result of a navigation or a dedicated entrypoint contains the _loader_.
+Each page, which is the result of a navigation or a dedicated entry point contains the _loader_.
 
 The _loader_ can take two appearances :
 
 1. In _development_ (or `DEBUG_MODE`) :
 
 The loader loader `require.js`, a bootstrap that will load the config and the given controller (based on the values from the `data-attr`).
-Each module is loaded separately (the source files are loaded one by one) and when they're requested only.
+Each module is loaded separately (the source files are loaded one by one) and only when requested.
 
 ```
 <script
@@ -325,7 +329,7 @@ Each module is loaded separately (the source files are loaded one by one) and wh
 
 2. In _production_ :
 
-A vendor bundle that contains shared libraries and SDK is first loaded, then the AMD loader loads the bundles for the entrypoint.
+A vendor bundle containing shared libraries and SDK is first loaded, then the AMD loader loads the bundles for the entrypoint.
 The bundle contains the bootstrap that will load the config and the controller
 
 ```

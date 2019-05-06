@@ -6,13 +6,15 @@ tags:
         - "Frontend Architecture"
 -->
 
+> List main libraries used into TAO and the rules to evaluate new libraries.
+
 # Libraries
 
 The following libraries are used into TAO : 
 
 | Library  | Version | License | Used for |  Could be replaces by | 
 | -------- | ------- | ------- | -------- |---------------------- |
-| [require.js](https://requirejs.org)  | 2.3.6  | MIT | Module and asset loading, dependency injection, configuration and bundling | `import` / `export`, webpack, etc.|
+| [require.js](https://requirejs.org)  | 2.3.6  | MIT | Module and asset loading, dependency injection, configuration and bundling | `import` / `export`, browserify, rollup, SystemJs, webpack, etc.|
 | [jQuery](https://jquery.com)  | 1.9.1  | MIT | DOM Manipulation, Ajax Requests | Native APIs |
 | [jQueryUi](https://jqueryui.com)  | 1.9.2  | MIT |  _DEPRECATED_ TAO installer and item creator drag and drop | Integrated componentsi, interact |
 | [interact](https://interactjs.io)  | 1.2.8  | MIT | Drag and Drop, Gestures and resizing|  |
@@ -37,9 +39,10 @@ The following libraries are used into TAO :
 > If you add a library, please remove one...
 
 If none of the libraries available in TAO help you to solve a problem, it's possible to add a new one, after some evaluation, based on the following criteria :
-- Size matter : the smallest possible.
-- No or few dependency : no we won't include a framework to run only a part of it.
-- License : it should be compatible with GPLv2
-- Living : the library should be still maintain and active (in some situation we can think taking the ownership if the library is vital for our business)
+- *Size matter* : the smallest possible
+- *No or few dependency* : no we won't include a framework to run only a part of it.
+- *License* : it should be compatible with GPLv2 (Apache licenses aren't compatible for example)
+- *Alive* : the library should be still maintain and active (in some situation we can think taking the ownership if the library is vital for our business)
+- *Clean API* : the library should expose a clean API that won't constrain us in using it
  
 
