@@ -1,3 +1,14 @@
+<!--
+parent: 'Documentation for core components'
+created_at: '2019-04-12 16:36:27'
+updated_at: '2019-05-12 22:20:01'
+authors:
+    - 'Martin Nicholson'
+    - 'Martijn Swinkels'
+tags:
+    - 'Documentation for core components'
+-->
+
 # Requests Tokenisation (CSRF-protection)
 
 > Certain endpoints in the TAO backend are risks for Cross-Site Request Forgery attacks. In order to protect those endpoints, requests should each be sent with a unique, single-use token which is generated on the backend and validated there on its receipt.
@@ -121,7 +132,7 @@ The tokens in the backend pool are provided to the frontend via the call to `/ta
 
 ### Token pool generation
 
-During a request the `\tao_actions_ClientConfig::config()` method is called. In this method we generate a token pool using the TokenService. This pool get's picked up and stored by front-end.
+During a request the `\tao_actions_ClientConfig::config()` method is called. In this method we generate a token pool using the TokenService. This pool gets picked up and stored by the frontend.
 
 ### Token Model
 
@@ -136,8 +147,8 @@ Alternatively data can be passed to the Token class to initialize a predefined t
 
 ```php
 $existingToken = [
-     Token::TOKEN_KEY => 'exampletoken',
-     Token::TIMESTAMP_KEY => 1556111298.3326
+    Token::TOKEN_KEY => 'exampletoken',
+    Token::TIMESTAMP_KEY => 1556111298.3326
 ];
 
 $token = new Token($existingToken);
@@ -149,18 +160,18 @@ In the token service we handle the generation of the token pool, additionally th
 
 ### Protecting a request
 
-In order to protect a request, we add a call to the `\tao_actions_CommonModule::validateCsrf()` method. This method check if the token header is sent with the request, and if the token that was provided in this header is valid.
+In order to protect a request, we add a call to the `\tao_actions_CommonModule::validateCsrf()` method. This method checks if the token header is sent with the request, and if the token that was provided in this header is valid.
 
 #### Validation failure
 
-If a protected request did not receive the token header, or if the provided token is not valid a `\common_exception_Unauthorized()` exception is thrown. This exception should be caught, and an appropriate response should be shown to the user.
+If a protected request did not receive the token header, or if the provided token is not valid, a `\common_exception_Unauthorized()` exception is thrown. This exception should be caught, and an appropriate response should be shown to the user.
 Currently this is done using the following control structure:
 
 ```php
 try {
     $this->validateCsrf();
 } catch (common_exception_Unauthorized $e) {
-    $this->response = $this->getPsrResponse()->withStatus('412', __('Unable to process your request'));
+    $this->response = $this->getPsrResponse()->withStatus(403, __('Unable to process your request'));
     return;
 }
 ```
@@ -177,4 +188,4 @@ $formFactory = new tao_actions_form_CspHeader(
 );
 ```
 
-By providing this option, a `\oat\tao\helpers\form\elements\xhtml\CsrfToken` element get's added to the form. This handles the validation of the posted CSRF token, meaning the form will be invalidated if the CSRF validation fails.
+By providing this option, a `\oat\tao\helpers\form\elements\xhtml\CsrfToken` element gets added to the form. This handles the validation of the posted CSRF token, meaning the form will be invalidated if the CSRF validation fails.
