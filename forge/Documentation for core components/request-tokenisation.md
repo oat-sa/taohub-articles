@@ -39,7 +39,7 @@ Furthermore, a REST endpoint for such requests is expected to match the followin
 
 How are the different components of this system related?
 
-![frontend](Requests.png)
+![frontend](../resources/Requests.png)
 
 ### core/request module
 
