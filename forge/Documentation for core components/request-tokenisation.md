@@ -109,6 +109,19 @@ tokenHandler.getToken().then(function(token) {
 });
 ```
 
+Configuration:
+
+The default options of the tokenHandler are short and sweet; and they can also be overridden by properties added to the platform configuration for the module `core/tokenHandler`:
+
+```javascript
+const defaults = {
+    maxSize: 6,
+    tokenTimeLimit: 1000 * 60 * 24
+};
+```
+
+> It is recommended to match the platform configuration for the tokenTimeLimit to the session lifetime of your PHP instance.
+
 ### tokenStore
 
 The tokenStore is an interface for the `core/store` browser-based storage component. It has been decided to create the tokenStore using the `memory` store implementation, for maximum security. The alternative `indexeddb` implementation could also be used instead, for example if it is necessary for the tokens to be shared between multiple open tabs of TAO.
