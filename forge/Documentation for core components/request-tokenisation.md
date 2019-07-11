@@ -86,6 +86,8 @@ request({
 })
 ```
 
+By default, tokens are always used on `core/request` requests. However, they can be turned off (on the frontend side) by passing a `noToken: true` parameter, or also by setting `noToken: true` in the platform config for the `core/request` module. There is not currently a way to turn the token requirement off on the backend side - most of the endpoints are protected for a good reason.
+
 ### tokenHandler
 
 The tokenHandler is the middle-man between the `core/request` module and the `core/tokenStore`. It is not normally accessed directly, except in special cases (e.g. unit tests).
@@ -110,6 +112,9 @@ tokenHandler.getToken().then(function(token) {
 ### tokenStore
 
 The tokenStore is an interface for the `core/store` browser-based storage component. It has been decided to create the tokenStore using the `memory` store implementation, for maximum security. The alternative `indexeddb` implementation could also be used instead, for example if it is necessary for the tokens to be shared between multiple open tabs of TAO.
+
+> In the case where the browser is offline (internet connection loss), failed requests which consume a token will result in that token being recycled back into the tokenStore, to prevent "running dry".
+
 
 ### Token format
 
