@@ -1,8 +1,8 @@
 # Plugins model
 
-<!-- 
+<!--
 tags:
-   - "Frontend Architecture":
+    Frontend Architecture:
         - "Plugins model"
 -->
 
@@ -100,7 +100,7 @@ API the host should implement.
 
 Basically, the way the plugin abstraction is working is as following:
 
-![plugin abstraction](resources/plugin-abstraction.png) 
+![plugin abstraction](resources/plugin-abstraction.png)
 
 - the API is exposed as a plain object.
 - the calls to the API are delegated to the defined plugin, no matter whether
@@ -271,7 +271,7 @@ snippet for a basic plugin manager:
 var plugins = {};
 
 /**
- * Creates and install plugins 
+ * Creates and install plugins
  * @param {Object} host
  * @param {Object} areaBroker
  * @param {Function[]} pluginFactories
@@ -287,7 +287,7 @@ function initPlugins(host, areaBroker, pluginFactories, pluginsConfig) {
         }
         plugins[plugin.getName()] = plugin;
     });
-    
+
     return runPlugins('install');
 }
 

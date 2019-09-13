@@ -2,8 +2,8 @@
 authors:
     - "Bertrand Chevrier"
 tags:
-   - "Frontend":
-        - "Frontend Architecture"
+    Frontend Architecture:
+        - "Libraries"
 -->
 
 > List main libraries used into TAO and the rules to evaluate new libraries.

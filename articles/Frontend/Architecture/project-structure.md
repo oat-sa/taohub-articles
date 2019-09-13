@@ -2,8 +2,8 @@
 authors:
     - "Bertrand Chevrier"
 tags:
-   - "Frontend":
-        - "Frontend Architecture"
+    Frontend Architecture:
+        - "Project structure"
 -->
 
 # Frontend file structure

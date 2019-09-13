@@ -2,8 +2,8 @@
 authors:
     - "Bertrand Chevrier"
 tags:
-   - "Frontend":
-        - "Frontend Architecture"
+    Frontend Architecture:
+        - "Routing"
 -->
 # Routing
 

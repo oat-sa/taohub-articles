@@ -2,7 +2,7 @@
 authors:
     - "Bertrand Chevrier"
 tags:
-   - "Frontend Architecture":
+    Frontend Architecture:
         - "Build"
 -->
 

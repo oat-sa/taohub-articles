@@ -2,7 +2,7 @@
 
 <!--
 tags:
-   - "Frontend Architecture":
+    Frontend Architecture:
         - "Component abstraction"
 -->
 
