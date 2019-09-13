@@ -2,8 +2,8 @@
 authors:
     - "Bertrand Chevrier"
 tags:
-   - "Frontend":
-        - "Frontend Architecture"
+    - "Frontend Architecture":
+        - "Coding guide"
 -->
 
 # TAO Frontend Coding guide
@@ -119,7 +119,6 @@ Please configure your IDE or development editor to support :
  - No more than one blank line
  - No ASCII art within the source code
  - Use single quotes for string literals 
- - Use template literals instead of concatenation with variables or for multi line strings
  - Brace style  [1TBS](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_)
  - Try to avoid using ternary operator in complex cases (or don't use at all?)
  - Always use `===` instead of `==`
@@ -243,7 +242,18 @@ Composition can have multiple form, based on the use case :
 
 1. Aggregation
 
-This simple pattern consists in using another component/
+This simple pattern consists in using another module.
+
+```js
+
+import jwtSignatureFactory from 'jwtSignatureFactory.js'
+
+module.exports function jwtHandler(){
+
+    //we use another module in the current module
+    const jwtSignatureVerifier = jwtSignatureFactory('HMAC', 'SHA256');
+}
+```
 
 2. Mixin
 
@@ -391,12 +401,11 @@ A component can be atomic (a button) or a larger part of the GUI (a dashboard) t
 The atomicity level is up to use cases and usually defined by the way the component will be used.
 The purpose of a component is to render a DOM from a given set of data, react to the time and user events, and change  based on a given state.
 
-The `ui/component` [documentation](#component) describes how to create a component.
+An article is dedicated to [components](./component-abstraction).
 
 > The way to do components in TAO has evolved a lot and only stabilized a few years ago, but expect the way to build component to be changed again soon. Remember if the way change the concept remains the same.
 
-_TBD_
 
 ### Plugins
 
-_TBD_
+An article is dedicated to [plugins](./plugins-model).

@@ -2,19 +2,19 @@
 authors:
     - "Bertrand Chevrier"
 tags:
-   - "Frontend":
-        - "Frontend Architecture"
+   - "Frontend Architecture":
+        - "AMD & Require.js"
 -->
 # AMD & Require.js
 
 > How to deal with require.js and AMD into TAO.
 
-For historical reasons, JavaScript files in TAO are AMD modules.
+For historical reasons, JavaScript files are AMD modules in TAO.
 TAO uses [AMD](https://en.wikipedia.org/wiki/Asynchronous_module_definition) and [require.js](https://requirejs.org/) :
  - to define import and export, and declare dependencies
  - as a dependency injection library
  - as a dynamic loader
- - dependency resolver (for bundling)
+ - as a dependency resolver (for bundling)
 
 All modules have the same form :
 
@@ -41,7 +41,7 @@ You'll notice the `views/js` disappear as well as the file extension.
 
 The base URL is always for JavaScript resources `tao/views/js` so for modules into the `tao` extension you don't need to prefix them with `tao`. For example to access `tao/views/js/core/eventifier.js`, `core/eventifier` should  be used.
 
-Modules with an alias defined in the configuration can be called using this alias `lodash`, `jquery`, `moment`, `i18n`, etc. Since alias create some coupling between the source code and the configuration, we try to reduce their usage as much as possible.
+Modules with an alias defined in the configuration can be called using this defined alias such as `lodash`, `jquery`, `moment`, `i18n`, etc. Since alias create some coupling between the source code and the configuration, we try to reduce their usage as much as possible.
 
 ## Named modules
 
@@ -63,11 +63,11 @@ define(
 ```
 **They won't work once optimized**
 
-Some libraries still uses named modules, to support this heresy we have to define an alias in the configuration.
+Some libraries still use named modules, to support this heresy we have to define an alias in the configuration.
 
 ## Dependency injection
 
-The content of the callback function is executed this first time it is required by another module and the main scope lifecycle will remain until the page refresh.
+The content of the callback function is executed the first time it is required by another module and the main scope lifecycle will remain until the page refresh.
 
 Let's define a module :
 
@@ -98,7 +98,7 @@ The configuration options can be modified through the template and the controlle
 ### Test and build configuration
 
 A static and lighter version of the configuration is located at `tao/views/build/config/requirejs.build.json`.
-
+*It needs to be updated manually.*
 
 ### Module configuration
 

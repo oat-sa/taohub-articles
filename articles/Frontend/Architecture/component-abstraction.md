@@ -1,8 +1,8 @@
 # Component abstraction
 
-<!-- 
+<!--
 tags:
-    JavaScript Components:
+   - "Frontend Architecture":
         - "Component abstraction"
 -->
 
@@ -17,7 +17,7 @@ giving to any component the ability to communicate through events.
 
 Basically, the way the component abstraction is working is as following:
 
-![component abstraction](resources/component-abstraction.png) 
+![component abstraction](resources/component-abstraction.png)
 
 - a core API is exposed as a plain object
 - the [`eventifier`](events-model.md) mixin is applied
@@ -43,10 +43,10 @@ accessed through the exposed API, even if it is referenced from the
 definition object. However, the properties **defined inside** the component
 are accessible through the lexical scope.
 - The implementation of each function inside the definition object can be
-changed at any time, without having to rebuild the component. This allows 
+changed at any time, without having to rebuild the component. This allows
 dynamic implementation.
 
-To use the component abstraction you need to import the module `ui/component`: 
+To use the component abstraction you need to import the module `ui/component`:
 
 ```javascript
 define(['ui/component'], function (componentFactory) {
@@ -129,7 +129,7 @@ available immediately, and in this case it is mandatory to rely only on events.
 function myComponentFactory(config) {
     var component = componentFactory();
     _.defer(function() {
-        component.init(config);        
+        component.init(config);
     });
     return component;
 }
@@ -196,19 +196,19 @@ define([
             // renders the component
             .on('render', function () {
                 // do something
-                
+
                 /**
                  * @event ready
                  */
                 this.trigger('ready');
             });
-        
+
         // initialize the component with the provided config
         // defer the call to allow to listen to the init event
         _.defer(function() {
-            component.init(config);        
+            component.init(config);
         });
-        
+
         return component;
     }
 
@@ -264,7 +264,7 @@ define([
         var component = componentFactory(api, defaults)
             // set the component's layout
             .setTemplate(componentTpl)
-            
+
             // auto render on init
             .on('init', function(){
                 this.render(container);
@@ -273,19 +273,19 @@ define([
             // renders the component
             .on('render', function () {
                 // do something
-                
+
                 /**
                  * @event ready
                  */
                 this.trigger('ready');
             });
-        
+
         // initialize the component with the provided config
         // defer the call to allow to listen to the init event
         _.defer(function() {
-            component.init(config);        
+            component.init(config);
         });
-        
+
         return component;
     }
 
@@ -301,7 +301,7 @@ To summarize good practices regarding the component factories:
 - defer the initialization to allow to listen to the `init` event
 ```javascript
 _.defer(function() {
-    component.init(config);        
+    component.init(config);
 });
 ```
 - use a separated parameter to get the container in which render the component
@@ -354,10 +354,10 @@ In order to execute code during initialization and rendering:
 ```javascript
 componentFactory()
     .on('init', function() {
-        // do some extra initialization tricks  
+        // do some extra initialization tricks
     })
     .on('render', function() {
-        // access the rendered content and apply some change  
+        // access the rendered content and apply some change
     })
     .init(config)
     .render(where);
@@ -403,15 +403,15 @@ modify the HTML. If a state is set before the component is rendered, it won't
 be reflected as CSS class.
 
 To summarize: the name of the state is also used as a CSS class on the
-component's markup, as long as it is already rendered. 
+component's markup, as long as it is already rendered.
 
 ## Template
-The component abstraction is relying on the MVC pattern, using 
+The component abstraction is relying on the MVC pattern, using
 [Handlebars](https://handlebarsjs.com/) as template engine.
 A default template is provided, exposing a very simple HTML markup.
 ```HTML
 <div class="component"></div>
-``` 
+```
 
 A dedicated API is available to change the template. However, this has to be
 done before the component is rendered, as the template cannot be changed after.
@@ -421,7 +421,7 @@ component.setTemplate(myTemplate);
 ```
 
 **Note**: Every UI composition should pass through a template, manually
-building HTML breaks the MVC pattern. 
+building HTML breaks the MVC pattern.
 
 ## Component API
 The component abstraction exposes a basic API, described here.
@@ -442,7 +442,7 @@ process.
 
 ### `destroy()`
 The usual way to dispose a component. Should be called when the component has to
-be removed and its resources disposed. 
+be removed and its resources disposed.
 
 > Emits the `destroy` event, before actually removing the DOM and freeing the
 internal state.
@@ -482,7 +482,7 @@ be used at rendering time.
 
 ### `getSize()`
 Get the component's size, as an object containing the properties `width` and
-`height`. The values are given in pixels. 
+`height`. The values are given in pixels.
 
 **Note**: the size is only available after the component has been rendered.
 
@@ -555,7 +555,7 @@ Gets the template used to render this component. Usually this is a compiled
 Sets the template used to render this component. Usually this is a compiled
 [Handlebars](https://handlebarsjs.com/) template.
 
-**Note**: this won't change the display, the layout won't change if the 
+**Note**: this won't change the display, the layout won't change if the
 component is already rendered, so it needs be called before `render()`.
 
 > Emits the `template` event, with the new template as parameter.

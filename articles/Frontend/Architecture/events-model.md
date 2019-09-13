@@ -2,7 +2,7 @@
 
 <!-- 
 tags:
-    JavaScript Components:
+   - "Frontend Architecture":
         - "Events model"
 -->
 
