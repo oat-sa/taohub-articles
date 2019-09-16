@@ -25,7 +25,7 @@ The main difference between those two modes is the client side source code is op
 
 The bundler is available as a Grunt task in the repository [oat-sa/grunt-tao-bundle](https://github.com/oat-sa/grunt-tao-bundle).
 
-![bundler](../resources/tao-bundler.png)
+![bundler](../../resources/frontend/tao-bundler.png)
 
  - The bundler create bundles per extension and per target (backoffice, frontoffice, separate entry point, etc.)
  - Libraries and the core framework are in a `vendor` bundle
@@ -60,6 +60,6 @@ module.exports = function(grunt) {      //it's a Grunt configuration so we're in
 
 Per extension you can generate the bundle using the following command, the task name is `${extensionNameLowerCase}bundle`, so to bundle the extension `taoCe` you'll run :
 
-![bundle taoce](../resources/bundle-taoce.png)
+![bundle taoce](../../resources/frontend/bundle-taoce.png)
 
 

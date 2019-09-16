@@ -1,10 +1,11 @@
-# Plugins model
-
 <!--
+authors:
+    - "Jean-Sébastien"
 tags:
-    Frontend Architecture:
+    JavaScript Components:
         - "Plugins model"
 -->
+# Plugins model
 
 > A plugin abstraction is part of the TAO core library.
 > This article explains how it works.
@@ -22,7 +23,7 @@ time, hence several features can be added in parallel.
 A plugin must comply to a particular scheme, mostly regarding the life-cycle
 methods. Compared to components, plugins get an additional life-cycle step.
 
-![Plugin life-cycle](resources/plugin-life-cycle.png)
+![Plugin life-cycle](../../resources/frontend/plugin-life-cycle.png)
 
 - `install`: Allows the plugin to perform some install related actions. This is
 an extra step regarding the component's life-cycle. It should be invoked

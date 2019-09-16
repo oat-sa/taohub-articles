@@ -5,10 +5,9 @@ tags:
     Frontend Architecture:
         - "Libraries"
 -->
+# Libraries
 
 > List main libraries used into TAO and the rules to evaluate new libraries.
-
-# Libraries
 
 The following libraries are used into TAO : 
 
