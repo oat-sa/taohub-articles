@@ -1,10 +1,11 @@
-# Events model
-
-<!-- 
+<!--
+authors:
+    - "Jean-Sébastien"
 tags:
     Frontend Architecture:
         - "Events model"
 -->
+# Events model
 
 > An events model mixin is part of the TAO core library.
 > This article explains how it works.
@@ -28,7 +29,7 @@ nor a particular listener can be called before another particular one. Only the
 remaining steps can be prevented, and the steps are the only way to ensure a
 listener is called before or after another one. 
 
-![events model](resources/events-model.png)
+![events model](../../resources/frontend/events-model.png)
 
 Events don't have to be registered prior being able to use them: an
 *eventified* object can trigger any events, even if no *listener* is bound to

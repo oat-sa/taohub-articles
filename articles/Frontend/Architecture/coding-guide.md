@@ -104,9 +104,9 @@ Please configure your IDE or development editor to support :
 
  1. JavaScript ES5 and ES2015+ style
  2. CSS, SASS, HTML, JSON and Handlebars templates, etc.
- 3. [ESLint](https://eslint.org), using this [configuration](../resources/lint/.eslintrc.json) or under the folder `tao/views/build`
- 3. [SassLint](https://github.com/sasstools/sass-lint), using this [configuration](../resources/lint/.sasslintrc) or under the folder `tao/views/build`
- 4. [EditorConfig](https://editorconfig.org/), using this [configuration](../resources/lint/.editorconfig)
+ 3. [ESLint](https://eslint.org), using this [configuration](../../resources/frontend/lint/.eslintrc.json) or under the folder `tao/views/build`
+ 3. [SassLint](https://github.com/sasstools/sass-lint), using this [configuration](../../resources/frontend/lint/.sasslintrc) or under the folder `tao/views/build`
+ 4. [EditorConfig](https://editorconfig.org/), using this [configuration](../../resources/frontend/lint/.editorconfig)
 
 ### General rules
 

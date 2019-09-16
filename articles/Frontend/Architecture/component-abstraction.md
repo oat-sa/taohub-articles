@@ -1,10 +1,11 @@
-# Component abstraction
-
 <!--
+authors:
+    - "Jean-Sébastien"
 tags:
     Frontend Architecture:
         - "Component abstraction"
 -->
+# Component abstraction
 
 > A component abstraction is part of the TAO core library.
 > This article explains how it works.
@@ -17,7 +18,7 @@ giving to any component the ability to communicate through events.
 
 Basically, the way the component abstraction is working is as following:
 
-![component abstraction](resources/component-abstraction.png)
+![component abstraction](../../resources/frontend/component-abstraction.png)
 
 - a core API is exposed as a plain object
 - the [`eventifier`](events-model.md) mixin is applied
@@ -86,7 +87,7 @@ var p = component.update(3, 4).pythagoras();
 Usually a component needs to be initialized before it can be used.
 Its abstraction creates and manages the life cycle.
 
-![component life-cycle](resources/component-life-cycle.png)
+![component life-cycle](../../resources/frontend/component-life-cycle.png)
 
 - `init`: This is the step where the component is initialized. Usually, this is
 done immediately after the component is created.

@@ -14,7 +14,7 @@ tags:
 
 TAO uses an "extension" model as a basement for his architecture. It means the software is composed by many extensions using a hierarchical model : each extension can depend on another extension.
 
-![extension model](../resources/extension.png)
+![extension model](../../resources/frontend/extension.png)
 
 This dependency model is defined at the level of the business logic but also at the level of the code.
 

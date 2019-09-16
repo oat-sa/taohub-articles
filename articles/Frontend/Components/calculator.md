@@ -1,12 +1,11 @@
-# Calculator component overview
-
 <!-- 
+authors:
+    - "Jean-Sébastien"
 tags:
     JavaScript Components:
         - "Calculator component overview"
-    Calculator:
-        - "Component overview"
 -->
+# Calculator component overview
 
 > A calculator component is provided by TAO. This article explains how it works.
 
@@ -239,7 +238,7 @@ calculator. Three main areas are identified here:
 - the plugins area, that contains the modules that implement or extend the
 features of the calculator
 
-![global overview](../resources/calculator-overview.png)
+![global overview](../../resources/frontend/calculator-overview.png)
 
 While the internal mechanisms are built inside the core engine, the visual
 features are provided by plugins and top level components. Those points will be
@@ -252,7 +251,7 @@ modules, mostly related to the expressions handling. A plugins system is also
 applied to allow to extend the features easily, this is also the chosen way to
 bring the UI on top of the calculator.
 
-![core overview](../resources/calculator-core-overview.png)
+![core overview](../../resources/frontend/calculator-core-overview.png)
 
 The main component, the calculator `board`, is gathering the computation engine
 and a system of plugins, exposing an API to access and manipulate the
@@ -631,7 +630,7 @@ The main calculator's component, `board`, is only exposing the engine. In a
 rough state it cannot directly interact with the user. Other components are
 required to bring this ability.
 
-![components overview](../resources/calculator-components-overview.png)
+![components overview](../../resources/frontend/calculator-components-overview.png)
 
 The `board` component is an abstract component. With the addition of some
 plugins it can be able to perform satisfying UI. However, it does not bring any
@@ -639,7 +638,7 @@ frameset. For that purpose, another abstract component is added: the
 `calculatorComponent` wraps the `board` into a movable panel, and loads core
 plugins, but still without any usable UI.
 
-![components relationship](../resources/calculator-component-relationship.png)
+![components relationship](../../resources/frontend/calculator-component-relationship.png)
 
 The `calculatorComponent` is loaded by another module, a factory function that
 will load UI plugins, with default display: the `defaultCalculator`.
@@ -659,7 +658,7 @@ features.
 The main calculator component only exposes an engine, but it supports a plugin's
 system to augment its abilities. Hence several features are brought by plugins.
 
-![plugins overview](../resources/calculator-plugins-overview.png)
+![plugins overview](../../resources/frontend/calculator-plugins-overview.png)
 
 ### Core plugins
 A subset of plugins is part of the core implementation, and therefore are loaded
