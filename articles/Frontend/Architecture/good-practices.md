@@ -100,7 +100,8 @@ exposed code.
  */
 
 /**
- * Do an action immediately or on a regular interval.
+ * Implement an action manager that will do an action immediately 
+ * or on a regular interval.
  *
  * @example
  *  // do a single action
@@ -128,6 +129,9 @@ exposed code.
  *                                      given in milliseconds. O will disable the feature.
  * @param {Boolean} [config.autoStart=false] - Start the action upon creating the instance.
  * @returns {doItAll}
+ * @fires action each time the action is processed
+ * @fires start when the action manager has been started
+ * @fires stop when the action manager has been stopped
  */
 function doItAllFactory(config = {}) {
     // keep track of the interval timer
@@ -187,6 +191,7 @@ function doItAllFactory(config = {}) {
         pollingTimer = null;
     };
 
+    // reflect the starting state of the action manager
     doItAll.on('start', () => {
         stopIt();
         if (config.polling) {
@@ -196,9 +201,10 @@ function doItAllFactory(config = {}) {
         }
     });
 
+    // reflect the stopped state of the action manager
     doItAll.on('stop', () => stopIt());
 
-
+    // if the option has been set, auto start the manager
     if (config.autoStart) {
         doItAll.start();
     }
@@ -674,7 +680,7 @@ tabs2.activateTabByName('t3');
 ```
 
 This kind of bad design should be prevented by proper unit tests, as different 
-tests should conflicts, or might work and fail time to time. Unstable and 
+tests might conflict, or might work and fail time to time. Unstable and 
 inconsistent unit test executions are often the symptom of memory access 
 conflict within factories.
 
