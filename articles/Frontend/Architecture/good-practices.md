@@ -571,17 +571,167 @@ export function removeResizeElement(id) {
 #### References
 
 ### Module scope vs factory scope
+A module is loaded along with the page, or later in case of lazy loading. 
+In all cases it will remain available till the page is closed. And each
+function within the module will have access to the module scope. To the same 
+set of variables. They won't get duplicated. That means module variables will 
+be share across every module functions, and even if you create instances from
+these functions, they will still access to the same unique dataset. If one is 
+modifying the shared data, all others will benefit or suffer of that.
+
+Modules must only contain static content, and the module scope variables must 
+be immutable. Created instances must not alter the shared content. Some 
+exceptions are allowed though, like for registry managers or system services,
+but these cases are not frequent and must be considered as specific cases.
 
 #### Example
 
 ##### Bad
-```javascript
+If the following example a module variable is used to store a list of tabs. 
+Then a factory is creating instances that will manage these tabs.
 
+```javascript
+import component from 'ui/component';
+import tabsTpl from 'tpl/tabs';
+let tabs = [];
+const tabsApi = {
+    setTabs(newTabs) {
+        tabs = [...newTabs];
+        return this;
+    },
+    getTabs() {
+        return tabs;
+    },
+    activateTabByName(name) {
+        const index = tabs.findIndex(t => t.name === name);
+        return this.activateTabByIndex(index);
+    },
+    activateTabByIndex(index) {
+        if (tabs[index]) {
+            const name = tabs[index].name;
+            tabs.forEach(tab => tab.active = false);
+            tabs[index].active = true;
+            this.getElement()
+                .find('.active')
+                .removeClass('active')
+                .filter(`[data-id="${name}"]`)
+                .addClass('active');
+            this.trigger('tabactivate', index, name);
+        }
+        return this;
+    }
+};
+export function tabsFactory(container, config) {
+    return component(tabsApi)
+        .setTemplate(tabsTpl)
+        .on('init', function() {
+            if (container) {
+                this.render(container);
+            }
+        })
+        .on('render', function() {
+            if (this.getConfig().tabs) {
+                this.setTabs(this.getConfig().tabs);
+            }
+            this.trigger('ready');
+        })
+        .init(config);
+}
 ```
 
-##### Good
+Now please consider the following usages:
 ```javascript
+import tabsFactory from 'ui/tabs';
 
+const tabs1 = tabsFactory('.container1', {
+    tabs: [
+        {name: 't1', label: 'Tab1'}, 
+        {name: 't2', label: 'Tab2'}
+    ]
+});
+
+const tabs2 = tabsFactory('.container2', {
+    tabs: [
+        {name: 't3', label: 'Tab3'}, 
+        {name: 't4', label: 'Tab4'}
+    ]
+});
+
+// this will fail because the tab `t1` does not exist anymore
+// the shared tabs array has been overwritten by another dataset 
+tabs1.activateTabByName('t1');
+
+// this might work, but the emitted name will be wrong: `t4` instead of `t2` 
+tabs1.activateTabByIndex(1);
+
+// this will work however, since the list of tabs has been replaces by the
+// set of the second instance. But the select DOM element will have the id `t1`
+tabs1.activateTabByName('t3');
+
+// and obviously the following line will work as expected since the instance is
+// the most recent one and is working with the last dataset 
+tabs2.activateTabByName('t3');
+```
+
+This kind of bad design should be prevented by proper unit tests, as different 
+tests should conflicts, or might work and fail time to time. Unstable and 
+inconsistent unit test executions are often the symptom of memory access 
+conflict within factories.
+
+##### Good
+Respecting the concept of immutable module variables, the following 
+implementation will offer a better solution.
+
+The instances created by the factory will all get a dedicated context to store
+the related data, without polluting possible other instances.
+
+```javascript
+import component from 'ui/component';
+import tabsTpl from 'tpl/tabs';
+export function tabsFactory(config) {
+    let tabs = [];
+    const tabsApi = {
+        setTabs(newTabs) {
+            tabs = [...newTabs];
+            return this;
+        },
+        getTabs() {
+            return tabs;
+        },
+        activateTabByName(name) {
+            const index = tabs.findIndex(t => t.name === name);
+            return this.activateTabByIndex(index);
+        },
+        activateTabByIndex(index) {
+            if (tabs[index]) {
+                const name = tabs[index].name;
+                tabs.forEach(tab => tab.active = false);
+                tabs[index].active = true;
+                this.getElement()
+                    .find('.active')
+                    .removeClass('active')
+                    .filter(`[data-id="${name}"]`)
+                    .addClass('active');
+                this.trigger('tabactivate', index, name);
+            }
+            return this;
+        }
+    };
+    return component(tabsApi)
+        .setTemplate(tabsTpl)
+        .on('init', function() {
+            if (container) {
+                this.render(container);
+            }
+        })
+        .on('render', function() {
+            if (this.getConfig().tabs) {
+                this.setTabs(this.getConfig().tabs);
+            }
+            this.trigger('ready');
+        })
+        .init(config);
+}
 ```
 
 #### References
@@ -661,6 +811,22 @@ However, this introduces several issues:
 
 #### References
 - [Design by Coding - YouTube video](https://www.youtube.com/watch?v=d5Y1B1cmaGQ)
+
+### Properly scope test fixtures
+
+#### Example
+
+##### Bad
+```javascript
+
+```
+
+##### Good
+```javascript
+
+```
+
+#### References
 
 ### Add visual playground for UI parts
 
