@@ -744,6 +744,22 @@ export function tabsFactory(config) {
 
 ## Components
 
+### Respect the atomicity principle
+
+#### Example
+
+##### Bad
+```javascript
+
+```
+
+##### Good
+```javascript
+
+```
+
+#### References
+
 ### Prefer events to callbacks
 
 #### Example
