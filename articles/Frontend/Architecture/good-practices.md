@@ -425,38 +425,199 @@ one that is over namespaced, as it will never match the namespace, by design.
 ## Modules
 
 ### Be careful with module scope
-Usually a module is loaded along with the page. And it will remain available till the page is closed.
-That means every code that is contained at the root of the module will be executed upon loading.
-For that reason code defined in the module must be static, and should not launch nor trigger any behavior, 
-unless this is the bootstrap of the application.
+Usually a module is loaded along with the page. Or later in case of lazy
+loading. In all cases it will remain available till the page is closed. That 
+means every code that is contained at the root of the module will be executed 
+upon loading. For that reason code defined in the module must be static, and 
+should not launch nor trigger any behavior, unless this is the bootstrap of 
+the application, or unless this is a worker.
 
-Keep in mind that what is inside a module will be executed immediately, even if it is not needed.
-And it will be executed only once for the whole application. Of course, the code inside the functions won't be
-executed if the function is not invoked, but it will if the function is invoked from the root of the module.
+Keep in mind that what is inside a module will be executed immediately, even if
+it is not needed. And it will be executed only once for the whole application. 
+Of course, the code inside the functions won't be executed without an explicit
+call to them. But this will be the case if the function is invoked, and that
+is exactly the case if the function is attached to an event.
 
-That being said, we should consider the following:
-- never trigger a process from the root of a module, since this process will start immediately, and will 
+Code executed in modules will slow down the loading process. And started 
+processes will remain in memory till they are stopped and garbage collected.
+Attaching an event listener upon loading, because it might serve a part of the 
+application, is not a good habit as it will unnecessarily consume resources.
+Especially if the launched process is only used by a component that could not
+be enabled or activated. Or if the consumer will only be activated time to
+time. In that case it is far better to start and stop the process when needed.  
+
+That being said, we must generally consider the following:
+- Avoid to directly execute code from a module, unless this is needed to build 
+some structure and the code is fast enough to not have negative impact on the 
+page bootstrap.
+- Avoid to register events from the module, prefer to implement an API to start
+and stop the event listening when needed.
+- For workers or bootstrap modules, having auto executed is legit.
+- Registering adapters is also ok since the purpose is to load not to execute.  
 
 #### Example
+
 ##### Bad
+In the following snippet, one is registering a listener on the resize event to 
+take care of size concerned elements, and an API to add elements to resize is
+offered. Beside the bad practice of registering a global event, the first issue 
+is the event listener is not throttled, and therefore will have a huge impact 
+on the performances since the `resize` event might be emitted thousands of 
+times per minutes. The second issue is the event listener is registered even
+if no consumer require it. And the third issue is the global event itself.
+We must avoid to rely on global as must as possible, since they impact the
+whole application. At least, when using them, the code must respect the life
+cycle, and must offer way to activate/deactivate, especially when disposing
+the consumer. 
+
+```javascript
+const elements = new Map();
+window.addEventListener('resize', e => {
+    elements.forEach(element => {
+        // do something
+    });
+});
+export function addResizeElement(element, id = null) {
+    if (element instanceof Element) {
+        elements.set(id || element.id, element);
+    }
+} 
+```
+
 ##### Good
+Having considered the need to rely on the `resize` event, a better approach
+would be as exposed in the following snippet. Of course this is not the only
+way to address the concern, especially as we did not motivate the need to
+rely on the global event, and a better approach might be to not rely on it but
+implement the feature using a proper pattern. The example is only there to 
+illustrate the concept.
+
+In this example one is exposing a factory to wrap the resize feature. Once
+again, don't take as a final solution, but as an illustration.
+
+Beside the fact a factory is responsible to manage the access and the life 
+cycle of the event listener, some high level API is also offered to work
+directly with the default event context.
+
+The important concept to remind here is the life cycle management. The global
+event is not immediately installed. The manager waits for an actual consumer
+to require the service before registering the event. And it will also free
+the resources if no more consumer is requiring the service.
+
+The same for the default context manager served by the high level API.
+
+Please also note the use of `lodash` to throttle the event, in order to
+reduce the possible impact on performances. 
+
+```javascript
+export function resizeObserverFactory({context=window, throttle=50} = {}) {
+    const elements = new Map();
+    const observer = _.throttle(e => {
+        elements.forEach(element => {
+            // do something
+        });
+    }, throttle);
+    let started = false;
+    return {
+        start() {
+            if (!started) {
+                context.addEventListener('resize', observer);
+                started = true;   
+            }
+            return this;
+        },
+        stop() {
+            if (started) {
+                context.removeEventListener('resize', observer);
+                started = stop;    
+            }
+            return this;
+        },
+        register(element, id) {
+            if (element instanceof Element) {
+                elements.set(id || element.id, element);
+    
+                // make sure the listener is activated
+                this.start();
+            }
+            return this;
+        },
+        unregister(id) {
+            elements.delete(id);
+
+            // dispose the event if no consumer is needing it
+            if (!elements.size) {
+                this.stop();
+            }
+            return this;
+        }
+    };
+}
+let resizeObserver = null;
+export function getResizeObserver() {
+    if (!resizeObserver) {
+        resizeObserver = resizeObserverFactory();
+    }
+    return resizeObserver;   
+} 
+export function addResizeElement(element, id = null) {
+    getResizeObserver().register(element, id);
+}
+export function removeResizeElement(id) {
+    getResizeObserver().unregister(id);
+}
+```
+
+#### References
 
 ### Module scope vs factory scope
+
 #### Example
+
 ##### Bad
+```javascript
+
+```
+
 ##### Good
+```javascript
+
+```
+
+#### References
 
 ## Components
 
 ### Prefer events to callbacks
+
 #### Example
+
 ##### Bad
+```javascript
+
+```
+
 ##### Good
+```javascript
+
+```
+
+#### References
 
 ### Action events vs direct action
+
 #### Example
+
 ##### Bad
+```javascript
+
+```
+
 ##### Good
+```javascript
+
+```
+
 #### References
 - [AOP: Aspect Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming)
 
@@ -469,22 +630,53 @@ However, this introduces several issues:
 - It might enforce bad practices, like code coupling or other anti-patterns.   
 
 #### Example
+
 ##### Bad
+```javascript
+
+```
+
 ##### Good
+```javascript
+
+```
+
+#### References
 
 ## Testing
 
 ### Prefer design by coding: TDD / BDD
+
 #### Example
+
 ##### Bad
+```javascript
+
+```
+
 ##### Good
+```javascript
+
+```
+
 #### References
 - [Design by Coding - YouTube video](https://www.youtube.com/watch?v=d5Y1B1cmaGQ)
 
 ### Add visual playground for UI parts
+
 #### Example
+
 ##### Bad
+```javascript
+
+```
+
 ##### Good
+```javascript
+
+```
+
+#### References
 
 ## Styling
 
