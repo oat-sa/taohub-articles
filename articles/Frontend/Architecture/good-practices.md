@@ -80,7 +80,7 @@ function doItAllFactory(config = {}) {
 ```
 
 ##### Good
-The JSDoc annotations helps to quickly have some insights on what the code is 
+The JSDoc annotations help to quickly have some insights on what the code is 
 intended for. On the example below such annotations have been added, and you
 can see how they can improve the readability, especially on the way to use the 
 exposed code.
@@ -311,7 +311,7 @@ way to express an action. They are short, concise and clear. As examples:
 `change`, `update`, `render`, `init`.
 
 To distinguish too generic names, and give some context to the event, you may 
-add nouns to complete the name: `setvalue`, `clearname`.
+add nouns to complete the name: `setvalue`, `clearname`, `valuechange`.
 
 The main rule is to be directive.
 
@@ -360,11 +360,11 @@ function valueObserverFactory(value) {
 - [Events model](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/events-model.md)
 
 ### Use properly the event namespaces
-The events model allows to add namespaces to scope events. However, there are
-specificities for each events system. Usually namespaces are applied by the
-event listeners, in order to group events under a same context, making it
-easier to manage them, for instance to remove all events listen by a specific
-component, and not the ones that are listen by the others.
+The events model allows to add namespaces for purposes of scoping events.
+However, each events system have its own specificities. Usually namespaces are 
+applied by the event listeners, in order to group events under a same context, 
+making it easier to manage them. For instance this give the ability to remove 
+all events listened for a specific context, without altering other listeners.
 
 Where this become a little more complex is when the namespace is applied upon
 emitting the event. In the TAO implementation, so called the [eventifier](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/events-model.md),
@@ -386,24 +386,27 @@ const emitter = eventifier({
 });
 
 // listen to the `set` event, under the namespace `value`
-emitter.on('set.value', () => {});
+emitter.on('set.value', () => console.log('set.value'));
 
 // listen to the `set` event, all namespaces
-emitter.on('set', () => {});
+emitter.on('set', () => console.log('set'));
 
 // listen to the `set` event, under the namespace `value.foo`
-emitter.on('set.value.foo', () => {});
+emitter.on('set.value.foo', () => console.log('set.value.foo'));
+
+// will trigger the event
+emitter.setValue('foo');
 ```
 
 Only the listener bound to the exact namespaced event will be actioned. The non 
 namespaced event will never get actioned. And the over namespaced listener as
-well, but even with properly emitted event this listener will never be actioned.
+well.
 
 Sometimes, however, for some edge case this pattern might be useful. But this
 has to be motivated by a strong reason. 
 
 #### Good
-A better implemenation of the previous example might be:
+A better implementation of the previous example might be:
 
 ```javascript
 const emitter = eventifier({
@@ -413,17 +416,19 @@ const emitter = eventifier({
 });
 
 // listen to the `setvalue` event, under the namespace `foo`
-emitter.on('setvalue.foo', () => {});
+emitter.on('setvalue.foo', () => console.log('setvalue.foo'));
 
 // listen to the `setvalue` event, all namespaces
-emitter.on('setvalue', () => {});
+emitter.on('setvalue', () => console.log('setvalue'));
 
 // listen to the `setvalue` event, under the namespace `foo.bar`
-emitter.on('setvalue.foo.bar', () => {});
+emitter.on('setvalue.foo.bar', () => console.log('setvalue.foo.bar'));
+
+// will trigger the event
+emitter.setValue('foo');
 ```
 
-Each listener applying to the `setvalue` event will get actioned. Except the
-one that is over namespaced, as it will never match the namespace, by design.
+Each listener applying to the `setvalue` event will get actioned. 
 
 #### References
 - [Events model](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/events-model.md)
@@ -435,22 +440,24 @@ Usually a module is loaded along with the page. Or later in case of lazy
 loading. In all cases it will remain available till the page is closed. That 
 means every code that is contained at the root of the module will be executed 
 upon loading. For that reason code defined in the module must be static, and 
-should not launch nor trigger any behavior, unless this is the bootstrap of 
-the application, or unless this is a worker.
+should not launch nor trigger any behavior, unless this is the bootstrap of the 
+application, or unless this is a worker. Per definition, the purpose of a 
+module is to define, scope, and provide features. But those features should not
+be activated without need.  
 
 Keep in mind that what is inside a module will be executed immediately, even if
 it is not needed. And it will be executed only once for the whole application. 
 Of course, the code inside the functions won't be executed without an explicit
-call to them. But this will be the case if the function is invoked, and that
-is exactly the case if the function is attached to an event.
+call to them. But this will be the case if the function is invoked. And for 
+instance this will occur if the function is immediately attached to an event.
 
 Code executed in modules will slow down the loading process. And started 
 processes will remain in memory till they are stopped and garbage collected.
 Attaching an event listener upon loading, because it might serve a part of the 
 application, is not a good habit as it will unnecessarily consume resources.
-Especially if the launched process is only used by a component that could not
-be enabled or activated. Or if the consumer will only be activated time to
-time. In that case it is far better to start and stop the process when needed.  
+Especially if the launched process is only used by a component that might not
+be enabled or activated. Or if the consumer will only be activated sparsely. 
+In that case it is far better to start and stop the process when needed.  
 
 That being said, we must generally consider the following:
 - Avoid to directly execute code from a module, unless this is needed to build 
@@ -458,8 +465,9 @@ some structure and the code is fast enough to not have negative impact on the
 page bootstrap.
 - Avoid to register events from the module, prefer to implement an API to start
 and stop the event listening when needed.
-- For workers or bootstrap modules, having auto executed is legit.
-- Registering adapters is also ok since the purpose is to load not to execute.  
+- For workers or bootstrap modules, having auto executed code is legit.
+- Registering adapters is also ok since the purpose is to load not to start a 
+process.  
 
 #### Example
 
@@ -499,18 +507,16 @@ implement the feature using a proper pattern. The example is only there to
 illustrate the concept.
 
 In this example one is exposing a factory to wrap the resize feature. Once
-again, don't take as a final solution, but as an illustration.
+again, don't take it as a final solution, but as an illustration.
 
 Beside the fact a factory is responsible to manage the access and the life 
 cycle of the event listener, some high level API is also offered to work
 directly with the default event context.
 
-The important concept to remind here is the life cycle management. The global
-event is not immediately installed. The manager waits for an actual consumer
-to require the service before registering the event. And it will also free
-the resources if no more consumer is requiring the service.
-
-The same for the default context manager served by the high level API.
+The important concept to pay attention to is the life cycle management. The 
+global event listener is not immediately installed. The manager waits for an 
+actual consumer to require the service before registering the event. And it 
+will also free the resources if no more consumer is requiring the service.
 
 Please also note the use of `lodash` to throttle the event, in order to
 reduce the possible impact on performances. 
@@ -518,6 +524,7 @@ reduce the possible impact on performances.
 ```javascript
 export function resizeObserverFactory({context=window, throttle=50} = {}) {
     const elements = new Map();
+    // throttle the callback, allowing only one call per period
     const observer = _.throttle(e => {
         elements.forEach(element => {
             // do something
@@ -525,6 +532,9 @@ export function resizeObserverFactory({context=window, throttle=50} = {}) {
     }, throttle);
     let started = false;
     return {
+        /**
+         * Installs the event listener on the defined context
+         */
         start() {
             if (!started) {
                 context.addEventListener('resize', observer);
@@ -532,6 +542,9 @@ export function resizeObserverFactory({context=window, throttle=50} = {}) {
             }
             return this;
         },
+        /**
+         * Removes the event listener from the defined context
+         */
         stop() {
             if (started) {
                 context.removeEventListener('resize', observer);
@@ -539,6 +552,25 @@ export function resizeObserverFactory({context=window, throttle=50} = {}) {
             }
             return this;
         },
+        /**
+         * Tells if the manager is observing the event.
+         * @returns {Boolean}
+         */
+        running() {
+            return started;
+        },       
+        /**
+         * Checks if consumers are registered.
+         * @returns {Boolean}
+         */
+        hasConsumers() {
+            return !!elements.size;
+        },
+        /**
+         * Registers an element to resize. The identifier might be overridden.
+         * @param {Element} element
+         * @param {String} id
+         */ 
         register(element, id) {
             if (element instanceof Element) {
                 elements.set(id || element.id, element);
@@ -548,17 +580,23 @@ export function resizeObserverFactory({context=window, throttle=50} = {}) {
             }
             return this;
         },
+        /**
+         * Unregisters an element to resize. The identifier might be overridden.
+         * @param {String} id
+         */
         unregister(id) {
             elements.delete(id);
 
             // dispose the event if no consumer is needing it
-            if (!elements.size) {
+            if (!this.hasConsumers()) {
                 this.stop();
             }
             return this;
         }
     };
 }
+
+// high level API, to illustrate the use case
 let resizeObserver = null;
 export function getResizeObserver() {
     if (!resizeObserver) {
@@ -570,7 +608,14 @@ export function addResizeElement(element, id = null) {
     getResizeObserver().register(element, id);
 }
 export function removeResizeElement(id) {
-    getResizeObserver().unregister(id);
+    const observer = getResizeObserver();
+    observer.unregister(id);
+    
+    // free resources if no more consumer is registered
+    if (!observer.hasConsumers()) {
+        observer.stop();
+        resizeObserver = null;
+    }
 }
 ```
 
@@ -581,7 +626,7 @@ A module is loaded along with the page, or later in case of lazy loading.
 In all cases it will remain available till the page is closed. And each
 function within the module will have access to the module scope. To the same 
 set of variables. They won't get duplicated. That means module variables will 
-be share across every module functions, and even if you create instances from
+be shared across every module functions, and even if you create instances from
 these functions, they will still access to the same unique dataset. If one is 
 modifying the shared data, all others will benefit or suffer of that.
 
@@ -599,7 +644,13 @@ Then a factory is creating instances that will manage these tabs.
 ```javascript
 import component from 'ui/component';
 import tabsTpl from 'tpl/tabs';
+
+// This variable will be shared for all instances
 let tabs = [];
+
+// This definition will also be shared across all instances. While this might 
+// be ok as this looks like to be immutable, since this code is referring to 
+// the module variable `tabs`, it will modify it.
 const tabsApi = {
     setTabs(newTabs) {
         tabs = [...newTabs];
@@ -627,6 +678,9 @@ const tabsApi = {
         return this;
     }
 };
+
+// This factory will create different instances, all relying on the same API
+// definition, but also relying on the exact same variable to store the data.
 export function tabsFactory(container, config) {
     return component(tabsApi)
         .setTemplate(tabsTpl)
@@ -663,26 +717,26 @@ const tabs2 = tabsFactory('.container2', {
     ]
 });
 
-// this will fail because the tab `t1` does not exist anymore
-// the shared tabs array has been overwritten by another dataset 
+// This will fail because the tab `t1` does not exist anymore,
+// the shared tabs array has been overwritten by another dataset. 
 tabs1.activateTabByName('t1');
 
-// this might work, but the emitted name will be wrong: `t4` instead of `t2` 
+// This might work, but the emitted name will be wrong: `t4` instead of `t2`. 
 tabs1.activateTabByIndex(1);
 
-// this will work however, since the list of tabs has been replaces by the
-// set of the second instance. But the select DOM element will have the id `t1`
+// This will work however, since the list of tabs has been replaces by the set 
+// of the second instance. But the select DOM element will have the id `t1`.
 tabs1.activateTabByName('t3');
 
-// and obviously the following line will work as expected since the instance is
-// the most recent one and is working with the last dataset 
+// And obviously the following line will work as expected since the instance is
+// the most recent one and is working with the last dataset.
 tabs2.activateTabByName('t3');
 ```
 
 This kind of bad design should be prevented by proper unit tests, as different 
-tests might conflict, or might work and fail time to time. Unstable and 
-inconsistent unit test executions are often the symptom of memory access 
-conflict within factories.
+tests might conflict, or might work and fail in cycle. Unstable and inconsistent 
+unit test executions are often the symptom of memory access conflict within 
+factories.
 
 ##### Good
 Respecting the concept of immutable module variables, the following 
@@ -695,7 +749,12 @@ the related data, without polluting possible other instances.
 import component from 'ui/component';
 import tabsTpl from 'tpl/tabs';
 export function tabsFactory(config) {
+    // This variable is scoped and liked to the created instance. 
+    // It won't be shared.
     let tabs = [];
+    
+    // Since this code is directly relying on the `tabs` variable, it cannot
+    // be moved outside of the factory.
     const tabsApi = {
         setTabs(newTabs) {
             tabs = [...newTabs];
@@ -738,6 +797,39 @@ export function tabsFactory(config) {
         })
         .init(config);
 }
+```
+
+Then the following usages should be fine:
+```javascript
+import tabsFactory from 'ui/tabs';
+
+const tabs1 = tabsFactory('.container1', {
+    tabs: [
+        {name: 't1', label: 'Tab1'}, 
+        {name: 't2', label: 'Tab2'}
+    ]
+});
+
+const tabs2 = tabsFactory('.container2', {
+    tabs: [
+        {name: 't3', label: 'Tab3'}, 
+        {name: 't4', label: 'Tab4'}
+    ]
+});
+
+// This will properly work without conflict, since the instances of the tabs
+// component are correctly scoped. 
+tabs1.activateTabByName('t1');
+
+// Th tab `t2` will be activated, as expected. 
+tabs1.activateTabByIndex(1);
+
+// This won't work, the tab `t3` is not defined in the `tabs1` instance, and
+// is not reachable.
+tabs1.activateTabByName('t3');
+
+// This will work as expected. The tab `t3` is part of the instance `tabs2`.
+tabs2.activateTabByName('t3');
 ```
 
 #### References
