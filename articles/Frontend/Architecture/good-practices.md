@@ -836,18 +836,109 @@ tabs2.activateTabByName('t3');
 
 ## Components
 
-### Respect the atomicity principle
+### Respect the separation of concerns and the atomicity principles
+Component must follow the principle of separation of concerns. They must only
+take care of the feature set they have to provide. They must also respect the
+atomicity, and must not alter the surrounding nor alter the internals of 
+embedded elements.
+
+When a collaboration is required between components, a communication API must
+be applied, without introducing any coupling. For instance, when a change is 
+needed in the HTML markup of an associated component, no direct modification
+must be applied, but instead a dedicated API must be invoked. If needed, such 
+an API could be added and then utilized.
+
+As other example, when an operation is required to be performed on higher level,
+it is better to emit an event than relying on an hypothetical surrounding API or
+adding arbitrarily other high level element. Then the responsibility will belong
+to the container to take care of the notification or forward the information at 
+higher level. This way the component is not introducing any coupling, and remain
+able to work in any context. Components must be modular and pluggable.  
 
 #### Example
 
 ##### Bad
-```javascript
+In the following snippet the layout helper `loadingBar` is called from a component.
+It might seem legit to apply such a practice, since the events `load` and `loaded`
+are properly used to start and stop the loading bar. However, this introduces a
+coupling with the layout. And therefore the component won't be able to work in a
+context that does not provide a loading bar. A less evident flaw is this approach
+will lead to concurrency issue if several components are calling the loading bar
+at the same period, degrading the user experience as a process could still be
+running.
 
+```javascript
+function toolFactory(container, config) {
+    const api = {
+        load() {
+            this.trigger('load');
+            dataProvider
+                .getData()
+                .then(data => this.trigger('loaded', data))
+                .catch(err => this.trigger('error', err));
+            return this;
+        }
+    };
+    return component(api)
+        .setTemplate(toolTpl)
+        .on('init', function onInit() {
+            if (container) {
+                this.render('container');
+            }
+        })
+        .on('render', function onRender() {
+            // ...
+        })
+        // load and loaded events are used to action the layout helper 
+        .on('load', () => loadingBar.start())
+        .on('loaded', () => loadingBar.stop());
+}
+
+// fake controller that use the component
+function controller() {
+    // instanciate and perform the action
+    toolFactory('.markup').load();
+}
 ```
 
 ##### Good
-```javascript
+The appropriate approach is to only provide the API from the component, then
+transfer the responsibility to the controller that will manage the component
+and pipe the events.
 
+```javascript
+function toolFactory(container, config) {
+    const api = {
+        load() {
+            this.trigger('load');
+            dataProvider
+                .getData()
+                .then(data => this.trigger('loaded', data))
+                .catch(err => this.trigger('error', err));
+            return this;
+        }
+    };
+    return component(api)
+        .setTemplate(toolTpl)
+        .on('init', function onInit() {
+            if (container) {
+                this.render('container');
+            }
+        })
+        .on('render', function onRender() {
+            // ...
+        });
+}
+
+// fake controller that use the component
+function controller() {
+    toolFactory('.markup')
+        // the controller pipe the component API with the loading bar 
+        .on('load', () => loadingBar.start())
+        .on('loaded', () => loadingBar.stop())
+        // still perform the action
+        .load();
+}
 ```
 
 #### References
@@ -965,7 +1056,8 @@ SASS and LESS are providing some useful shortcuts, but could also lead to
 unreadable and unmaintainable code. The parent selector (`&`) is a very useful 
 tool, but it must be reserved to chain classes, not to build complex names.
 Using the parent selector to build complex names prevents to retrieve easily 
-the class names, and is hard to maintain as it introduces some mess in the code.  
+the class names. This is hard to maintain as it introduces some mess in the 
+code.  
 
 #### Example
 
@@ -1033,20 +1125,23 @@ like `disabled` or `hidden`. But when we talk about scope class, it is better
 to rely on unique and self-explaining names. Please avoid also verbose styling, 
 like Bootstrap use to do. This has the same downside as hardcoding the style 
 within the markup. It couples hard meaning to the design, and this is not easy 
-to to apply proper design later on. 
+to apply proper design later on. 
 
 #### Example
 
 ##### Bad
 This HTML markup makes use of redundant class name, in different context, 
 making difficult to apply consistent rules. `dashboard-sidebar` should be the 
-root class for the component, and in this context `container`, `root` and 
-`list` are both useless and too generic as they could mean anything.
+root class for the component, and in this context `container`, `root` and `list` 
+are both useless and too generic as they could mean anything. Please also not 
+the misuse of class names with `wide-margin`, `align-left`, and `align-right`,
+that all are related to enforcing style. A better approach would have been to
+rely on a single class name to apply the expected style. 
 
 ```html
-<div class="dashboard-sidebar container">
-    <div class="dashboard-sidebar root"></div>
-    <div class="dashboard-sidebar list"></div>
+<div class="dashboard-sidebar container wide-margin">
+    <div class="dashboard-sidebar root align-left"></div>
+    <div class="dashboard-sidebar list align-right"></div>
 </div>
 ```
 
