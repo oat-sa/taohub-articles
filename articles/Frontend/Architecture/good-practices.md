@@ -219,7 +219,7 @@ function doItAllFactory(config = {}) {
 Code might be self explanatory, if well written. Good code is easy to 
 understand, with respect to the related complexity it might have. A part of the 
 code readability is linked to the way the identifiers are named. As mentioned in 
-the [coding guide](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/coding-guide.md#general-rules), 
+the [coding guide](coding-guide.md#general-rules), 
 the names must express the intent in a clear way. Too long names make reading 
 difficult, as well as too generic names are hard to follow.
 
@@ -303,7 +303,7 @@ myTree.root.children.node2.action();
 ```
 
 #### References
-- [Coding guide: General rules](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/coding-guide.md#general-rules)
+- [Coding guide: General rules](coding-guide.md#general-rules)
 
 ### Use verbs to name events
 Event names must express the action they are referring to. And verbs are a good 
@@ -356,8 +356,8 @@ function valueObserverFactory(value) {
 ```
 
 #### References
-- [Coding guide: General rules](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/coding-guide.md#general-rules)
-- [Events model](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/events-model.md)
+- [Coding guide: General rules](coding-guide.md#general-rules)
+- [Events model](events-model.md)
 
 ### Use properly the event namespaces
 The events model allows to add namespaces for purposes of scoping events.
@@ -367,7 +367,7 @@ making it easier to manage them. For instance this give the ability to remove
 all events listened for a specific context, without altering other listeners.
 
 Where this become a little more complex is when the namespace is applied upon
-emitting the event. In the TAO implementation, so called the [eventifier](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/events-model.md),
+emitting the event. In the TAO implementation, so called the [eventifier](events-model.md),
 when a namespace is applied upon emitting the event, only the listeners
 registered under the same namespace will be triggered. And therefore, since
 namespace cannot be chained, it is impossible to enforce the scope for those
@@ -431,7 +431,7 @@ emitter.setValue('foo');
 Each listener applying to the `setvalue` event will get actioned. 
 
 #### References
-- [Events model](https://github.com/oat-sa/taohub-articles/blob/article/frontend-good-practices/articles/Frontend/Architecture/events-model.md)
+- [Events model](events-model.md)
 
 ## Modules
 
@@ -833,6 +833,7 @@ tabs2.activateTabByName('t3');
 ```
 
 #### References
+- [Component abstraction](component-abstraction.md)
 
 ## Components
 
@@ -942,22 +943,118 @@ function controller() {
 ```
 
 #### References
+- [Component abstraction](component-abstraction.md)
+- [Events model](events-model.md)
 
 ### Prefer events to callbacks
+When it comes to add a subscription mechanism to a system performing asynchronous 
+tasks, like a UI component, it might be obvious to rely on a simple callback. The 
+subscriber registers a callback function to get notified when a process has been 
+done. However, simple callback means only one subscriber at a time. If a second
+subscriber wants to enter the party, it will either replace the already registered
+subscriber, or will be rejected. This is not very convenient.
+
+In the context of a system call, that is not shareable, it is legit to only have
+one possible subscriber, like in the Node.js FileSystem API. But in the context
+of components, this is too restrictive.
+
+Eventually, a callback queue might be implemented to take care of *1-to-N* 
+relationship. However, fortunately the component abstraction is built on top of 
+the [`eventifier`](events-model.md), and therefore it offers a good support for 
+an extensive API. The events manager allows a *1-to-N* relationship, which is 
+pretty convenient for a component.
+
+Thanks to the [`eventifier`](events-model.md), every component can emit events.
+It is strongly recommended to rely on this ability, and the use of simple 
+callbacks should be avoided.
 
 #### Example
 
 ##### Bad
-```javascript
+In the following example callbacks are offered to react on click. And as expected
+only one subscriber can be registered. An additional flaw is presented here as
+the callback can only be set upon creating the component instance. 
 
+```javascript
+/**
+ * @param {Element|String} container
+ * @param {Object} config
+ * @param {String} label
+ * @param {Function} onClick
+ */
+function button(container, config) {
+    return component()
+        .setTemplate(buttonTpl)
+        .on('init', function onInit() {
+            if (container) {
+                this.render(container);
+            }           
+        })
+        .on('render', function onRender() {
+            this.getElement().on('click', () => {
+                if (this.getConfig().onClick) {
+                    this.getConfig().onClick.call(this);
+                }               
+            });                 
+        })
+}
+
+// create a button, and bind a click callback
+const b = button('.fixture', {
+    label: 'Ok', 
+    onClick: () => console.log('ok')
+});
+
+// eventually, the click callback can be changed
+b.getConfig().onClick = () => console.log('changed callback');
+
+// unfortunately, we cannot register more than one callback
+// the following will replace the callback once again
+b.getConfig().onClick = () => alert('click');
 ```
 
 ##### Good
-```javascript
+Using simple callbacks reduces the extensibility, as it prevents to share the API 
+among several consumers. A callback queue might be implemented, but this would be
+useless since the [component abstraction](component-abstraction.md) already offers 
+such a mechanism, thanks to the [`eventifier`](events-model.md).
 
+```javascript
+/**
+ * @param {Element|String} container
+ * @param {Object} config
+ * @param {String} label
+ * @param {Function} onClick
+ */
+function button(container, config) {
+    return component()
+        .setTemplate(buttonTpl)
+        .on('init', function onInit() {
+            if (container) {
+                this.render(container);
+            }           
+        })
+        .on('render', function onRender() {
+            this.getElement().on('click', () => {
+                this.trigger('click');
+            });                 
+        })
+}
+
+// create a button, and bind a click callback
+const b = button('.fixture', {label: 'Ok'})
+    .on('click', () => console.log('ok'));
+
+// eventually, the click callback can be changed
+b.off('click').on('click', () => console.log('changed callback'));
+
+// and, we can register more than one callback
+b.on('click', () => alert('click'));
 ```
 
 #### References
+- [Component abstraction](component-abstraction.md)
+- [Events model](events-model.md)
 
 ### Action events vs direct action
 
@@ -974,6 +1071,8 @@ function controller() {
 ```
 
 #### References
+- [Component abstraction](component-abstraction.md)
+- [Events model](events-model.md)
 - [AOP: Aspect Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming)
 
 ### Prefer simplicity
