@@ -892,7 +892,8 @@ function toolFactory(container, config) {
         })
         // load and loaded events are used to action the layout helper 
         .on('load', () => loadingBar.start())
-        .on('loaded', () => loadingBar.stop());
+        .on('loaded', () => loadingBar.stop())
+        .init(config);
 }
 
 // fake controller that use the component
@@ -928,7 +929,8 @@ function toolFactory(container, config) {
         })
         .on('render', function onRender() {
             // ...
-        });
+        })
+        .init(config);
 }
 
 // fake controller that use the component
@@ -982,7 +984,7 @@ the callback can only be set upon creating the component instance.
  * @param {String} label
  * @param {Function} onClick
  */
-function button(container, config) {
+function buttonFactory(container, config) {
     return component()
         .setTemplate(buttonTpl)
         .on('init', function onInit() {
@@ -997,20 +999,21 @@ function button(container, config) {
                 }               
             });                 
         })
+        .init(config);
 }
 
 // create a button, and bind a click callback
-const b = button('.fixture', {
+const button = buttonFactory('.fixture', {
     label: 'Ok', 
     onClick: () => console.log('ok')
 });
 
 // eventually, the click callback can be changed
-b.getConfig().onClick = () => console.log('changed callback');
+button.getConfig().onClick = () => console.log('changed callback');
 
 // unfortunately, we cannot register more than one callback
 // the following will replace the callback once again
-b.getConfig().onClick = () => alert('click');
+button.getConfig().onClick = () => alert('click');
 ```
 
 ##### Good
@@ -1024,9 +1027,9 @@ such a mechanism, thanks to the [`eventifier`](events-model.md).
  * @param {Element|String} container
  * @param {Object} config
  * @param {String} label
- * @param {Function} onClick
+ * @fires click when the button is clicked
  */
-function button(container, config) {
+function buttonFactory(container, config) {
     return component()
         .setTemplate(buttonTpl)
         .on('init', function onInit() {
@@ -1036,20 +1039,24 @@ function button(container, config) {
         })
         .on('render', function onRender() {
             this.getElement().on('click', () => {
+                /**
+                 * @event click
+                 */
                 this.trigger('click');
             });                 
         })
+        .init(config);
 }
 
-// create a button, and bind a click callback
-const b = button('.fixture', {label: 'Ok'})
+// create a button, and bind to the click event
+const button = buttonFactory('.fixture', {label: 'Ok'})
     .on('click', () => console.log('ok'));
 
-// eventually, the click callback can be changed
-b.off('click').on('click', () => console.log('changed callback'));
+// eventually, the click listener can be changed
+button.off('click').on('click', () => console.log('changed callback'));
 
-// and, we can register more than one callback
-b.on('click', () => alert('click'));
+// and, we can register more than one listener
+button.on('click', () => alert('click'));
 ```
 
 #### References
@@ -1057,17 +1064,129 @@ b.on('click', () => alert('click'));
 - [Events model](events-model.md)
 
 ### Action events vs direct action
+When building a component, it can be handy to create dedicated API to perform
+an action. For instance `activateTab()` to actually change the current tab on
+a tabs manager. And then the method will directly perform the action, 
+eventually emitting an event at some point to notify it.
+
+Thanks to the [events model](events-model.md) we can also apply 
+[Aspect Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming).
+So instead of directly performing the action upon calling the method, we might
+only emit the related event, then internally listen to this event to perform 
+the action.
+
+The benefit of such a practice is to allow to easily hook the action. Either
+by binding on it an additional behavior, or by preventing the action to occur
+if a particular condition is met. The side effect will be that the action will
+be somehow deferred, since it will be performed when the event will be received.
 
 #### Example
 
-##### Bad
+##### Standard
+In the following example, a simple button executes an action upon click. 
+ 
 ```javascript
-
+/**
+ * @param {Element|String} container
+ * @param {Object} config
+ * @param {String} label
+ * @fires click when the button is clicked
+ */
+function buttonFactory(container, config) {
+    return component({
+            click() {
+                // performs some action
+                activateSomething();
+                
+                /**
+                 * @event click
+                 */
+                this.trigger('click');
+            }
+        })
+        .setTemplate(buttonTpl)
+        .on('init', function onInit() {
+            if (container) {
+                this.render(container);
+            }           
+        })
+        .on('render', function onRender() {
+            this.getElement().on('click', () => this.click());                 
+        })
+        .init(config);
+}
 ```
 
-##### Good
-```javascript
+Then the use of this component is as usual:
 
+```javascript
+const button = buttonFactory('.fixture', {label: 'Ok'});
+
+button.on('click', () => console.log('button clicked'));
+
+// the action will be immediately performed
+button.click();
+```
+
+##### Improved
+The previous example can be improved using action event instead of immediate 
+action. 
+ 
+```javascript
+/**
+ * @param {Element|String} container
+ * @param {Object} config
+ * @param {String} label
+ * @fires click when the button is clicked
+ */
+function buttonFactory(container, config) {
+    return component({
+            /**
+             * Triggers a click action
+             * @fires click
+             */
+            click() {
+                /**
+                 * @event click
+                 */
+                this.trigger('click');
+            }
+        })
+        .setTemplate(buttonTpl)
+        .on('init', function onInit() {
+            if (container) {
+                this.render(container);
+            }           
+        })
+        .on('render', function onRender() {
+            // the physical click on the button is forwarded to the API 
+            this.getElement().on('click', () => this.click());                 
+        })
+        // listen to the click event in order to actually perform the action 
+        .on('click', () => activateSomething())
+        .init(config);
+}
+```
+
+Then we can hook the click action, preventing it to happen by rejecting the 
+click event.
+
+```javascript
+const button = buttonFactory('.fixture', {label: 'Ok'});
+
+button.on('click', () => console.log('button clicked'));
+
+// the action will be performed very soon
+button.click();
+// the action might not be performed yet, but it will
+
+// prevent the click event to happen
+button.before('click', e => {
+    return Promise.reject();
+})
+
+// the action will never be performed, since the before event step is rejecting it
+button.click();
 ```
 
 #### References
@@ -1076,42 +1195,133 @@ b.on('click', () => alert('click'));
 - [AOP: Aspect Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming)
 
 ### Prefer simplicity
-When designing an API it might be temptating to offer several ways to perform an action. For instance give the ability to register events both from the config and by using explicit setter methods.
+When designing an API it might be temptating to offer several ways to perform 
+an action. For instance give the ability to register events both from the 
+config and by using explicit setter methods.
+
 However, this introduces several issues:
-- It adds unnecessary complexity, as it requires more code paths to implement the "features". 
-- It makes the code harder to maintain, because of the increased complexity and also because of different coding flavours it might introduce.
-- It introduces discrepancies in the use cases, some developers will favor one way over the other, and then the less used form might persist in a small part, making more difficult to refactor the code.
+- It adds unnecessary complexity, as it requires more code paths to implement 
+the "features". 
+- It makes the code harder to maintain, because of the increased complexity 
+and also because of different coding flavours it might introduce.
+- It introduces discrepancies in the use cases, some developers will favor one 
+way over the other, and then the less used form might persist in a small part, 
+making more difficult to refactor the code.
 - It might enforce bad practices, like code coupling or other anti-patterns.   
 
 #### Example
 
 ##### Bad
-```javascript
+In the following example, both callback and events are offered to react to a 
+button click. Even if the result looks the same, they are behaving exactly
+identically, the callback being called after the event.
 
+The API is redundant, and does not add any value.
+
+```javascript
+/**
+ * @param {Element|String} container
+ * @param {Object} config
+ * @param {String} label
+ * @param {Function} [onClick]
+ * @fires click when the button is clicked
+ */
+function buttonFactory(container, config) {
+    return component({
+            click() {
+                // performs some action
+                activateSomething();
+                
+                /**
+                 * @event click
+                 */
+                this.trigger('click');
+            }
+        })
+        .setTemplate(buttonTpl)
+        .on('init', function onInit() {
+            if (container) {
+                this.render(container);
+            }           
+        })
+        .on('render', function onRender() {
+            this.getElement().on('click', () => this.click());                 
+        })
+        .on('click', () => {
+            if (this.getConfig().onClick) {
+                this.getConfig().onClick.call(this);
+            }   
+        })
+        .init(config);
+}
 ```
 
 ##### Good
-```javascript
+In the previous example the API was redundant, and did not add any value. The
+following snippet fix that by removing the useless API.
 
+```javascript
+/**
+ * @param {Element|String} container
+ * @param {Object} config
+ * @param {String} label
+ * @fires click when the button is clicked
+ */
+function buttonFactory(container, config) {
+    return component({
+            click() {
+                // performs some action
+                activateSomething();
+                
+                /**
+                 * @event click
+                 */
+                this.trigger('click');
+            }
+        })
+        .setTemplate(buttonTpl)
+        .on('init', function onInit() {
+            if (container) {
+                this.render(container);
+            }           
+        })
+        .on('render', function onRender() {
+            this.getElement().on('click', () => this.click());                 
+        })
+        .init(config);
+}
 ```
 
 #### References
+- [Coding guide: General rules](coding-guide.md#general-rules)
 
 ## Testing
 
 ### Prefer design by coding: TDD / BDD
+When writing code, a developer must check the works is going the right way.
+Usually, some manual checks are made aside. But it may become more and more
+time consuming as long as the progress is made. So it is better to automate
+somehow those manual checks. And on convenient way to do so is to write
+unit tests.
 
-#### Example
+A method well describes the process, it is called [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development).
+The principle is to write tests aside at the same period of time you are
+implementing. The best being to start writing test, then implement the feature.
 
-##### Bad
-```javascript
+It might seem tricky to start writing unit tests while you have no idea how
+you will implement the feature. However, some patterns might help you.
 
-```
+For instance, if you intent to write a component, since this is a well know
+pattern you might start by bootstrapping a common test pattern applied to 
+components: check the format of the component factory, check the common API, 
+prepare the check of the life cycle, and add a visual test. Then you may 
+start implementing the component, adding more unit tests each time you 
+augment the component implementation.
 
-##### Good
-```javascript
-
-```
+Another way of doing TDD might be to design by coding. If you know what you
+intent to implement, start by drafting the client, the code that will consume
+the feature. This way you will draft out the implementation. Take a look at the
+resource video shared in the references section below.  
 
 #### References
 - [Design by Coding - YouTube video](https://www.youtube.com/watch?v=d5Y1B1cmaGQ)
@@ -1133,17 +1343,67 @@ However, this introduces several issues:
 #### References
 
 ### Add visual playground for UI parts
+When building a UI component, it useful to also provide a visual playground
+with the unit tests. This allows to demo the behavior of the component. This
+is useful to quickly get an idea of what the component looks like. This is also
+a good helper to quickly see what is the current state of the development during
+the build process, aside the writing of unit tests. This will also avoid to have
+to setup an environment to see the component in situation at an earlier stage.
+
+In other words, this will save time at several stages. 
 
 #### Example
+The following example gives a simple example of how a visual test could be 
+added to a test suite.
 
-##### Bad
-```javascript
-
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ui Test - Button Component</title>
+        <script type="text/javascript" src="/environment/require.js"></script>
+        <script type="text/javascript">
+            require(['/environment/config.js'], function() {
+                require(['qunitEnv'], function() {
+                    require(['test/ui/button/test'], function() {
+                        QUnit.start();
+                    });
+                });
+            });
+        </script>
+        <style>
+            #visual-test {
+                background: #EEE;
+                position: relative;
+                margin: 10px;
+                padding: 10px;
+            }
+            #visual-test button {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="fixture-render"></div>
+        </div>
+        <div id="visual-test"></div>
+    </body>
+</html>
 ```
 
-##### Good
 ```javascript
+QUnit.module('Button Visual Test');
 
+    QUnit.test('simple button', function(assert) {
+        assert.expect(1);
+        button('#visual-test', {label: 'Button'})
+            .on('render', function() {
+                assert.ok(true, 'Button "' + id + '" is rendered');
+            });
+    });
 ```
 
 #### References
