@@ -226,8 +226,8 @@ difficult, as well as too generic names are hard to follow.
 #### Example
 
 ##### Bad
-In the snippet below some silly names are in use. You can how horrible it is 
-when too long names are in place. The same for badly named variables.
+In the snippet below some silly names are in use. You can see how horrible it
+is when too long names are in place. The same for badly named variables.
 
 ```javascript
 function bobTheBobby(i) {
@@ -1327,20 +1327,193 @@ resource video shared in the references section below.
 - [Design by Coding - YouTube video](https://www.youtube.com/watch?v=d5Y1B1cmaGQ)
 
 ### Properly scope test fixtures
+Unit tests must be unique, predictable, and reproducible. They must not be
+dependant to other tests, and must not conflict as well. A common mistake is to
+rely on the same markup to render content for each unit test. This might be ok
+when tests are ran in series, one at a time. In that case the place must be
+cleaned between each iteration. However, when the tests are ran in parallel
+there is a big chance they will conflict, and will produce inconsistent results.
+
+Having inconsistent tests might be the symptom of concurrency issue within
+the test suite.
+
+To prevent any conflict, and to make sure each unit test is properly scoped
+this is a good habit to reserve one unique markup for each different test. 
+Keeping the same markup for a serie of tests is still legit however, as they 
+will run one after the other. The requirement being to clean the markup 
+between each test.
 
 #### Example
 
 ##### Bad
-```javascript
+Consider the following unit tests, and their associated HTML markup.
+Only one fixture is present, and it is shared among tests.
 
+Each test check if the container is empty, then rely on a single element
+inside it to perform the following checks. Since the test might be run
+in parallel and out of order, the test suite will succeed or fail randomly. 
+ 
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ui Test - Button Component</title>
+        <script type="text/javascript" src="/environment/require.js"></script>
+        <script type="text/javascript">
+            require(['/environment/config.js'], function() {
+                require(['qunitEnv'], function() {
+                    require(['test/ui/button/test'], function() {
+                        QUnit.start();
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+    </body>
+</html>
+``` 
+
+```javascript
+    QUnit.test('render', function(assert) {
+        const done = assert.async();
+        const config = {label: 'FOO'};
+        const container = document.getElementById('qunit-fixture', config);
+        assert.equal(container.children.length, 0, 'The container is empty');
+
+        buttonFactory('#qunit-fixture')
+            .on('ready', function onReady() {
+                const element = container.querySelector('.button');
+                assert.equal(container.children.length, 1, 'The container now have a child');
+                assert.equal(container.querySelectorAll('.button').length, 1, 'The button is rendered');
+                assert.equal(this.getElement(), element, 'The expected element is rendered');
+                assert.equal(element.innerHTML.trim(), config.label, 'The label has been properly set');
+                assert.equal(element.classList.contains('small'), true, 'The button has the proper style');
+                this.destroy();
+            })
+            .on('destroy', done);
+    });
+    QUnit.test('show/hide', function(assert) {
+        const done = assert.async();
+        const container = document.getElementById('qunit-fixture');
+        assert.equal(container.children.length, 0, 'The container is empty');
+
+        buttonFactory('#qunit-fixture')
+            .on('ready', function onReady() {
+                const element = container.querySelector('.button');
+                assert.equal(container.children.length, 1, 'The container now have a child');
+                assert.equal(container.querySelectorAll('.button').length, 1, 'The button is rendered');
+                assert.equal(this.getElement(), element, 'The expected element is rendered');
+
+                assert.equal(this.is('hidden'), false, 'The button instance is visible');
+                assert.equal(element.classList.contains('hidden'), false, 'The button instance does not have the hidden class');
+                
+                this.hide();
+                assert.equal(this.is('hidden'), true, 'The button instance is hidden');
+                assert.equal(element.classList.contains('hidden'), true, 'The button instance has the hidden class');
+                
+                this.show();
+                assert.equal(this.is('hidden'), false, 'The button instance is visible');
+                assert.equal(element.classList.contains('hidden'), false, 'The button instance does not have the hidden class');
+
+                this.destroy();
+            })
+            .on('destroy', done);
+    });
 ```
 
 ##### Good
-```javascript
+In the following unit tests you might wonder where are the differences if any.
+In fact they are very small. Look at the `qunit-fixture` markup. It now contains
+various entries, each one for a particular test.
 
+In the unit tests themselves, the only difference is on the selector for the
+containers. Each unit test rely on a unique fixture markup. This no conflict 
+due to test design should occur. If such conflict still raise, then it should
+be elsewhere. For instance in a bad component design, sharing memory across
+instances. 
+ 
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Ui Test - Button Component</title>
+        <script type="text/javascript" src="/environment/require.js"></script>
+        <script type="text/javascript">
+            require(['/environment/config.js'], function() {
+                require(['qunitEnv'], function() {
+                    require(['test/ui/button/test'], function() {
+                        QUnit.start();
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="fixture-render"></div>
+            <div id="fixture-show"></div>
+        </div>
+    </body>
+</html>
+``` 
+
+```javascript
+    QUnit.test('render', function(assert) {
+        const done = assert.async();
+        const config = {label: 'FOO'};
+        const container = document.getElementById('fixture-render', config);
+        assert.equal(container.children.length, 0, 'The container is empty');
+
+        buttonFactory('#fixture-render')
+            .on('ready', function onReady() {
+                const element = container.querySelector('.button');
+                assert.equal(container.children.length, 1, 'The container now have a child');
+                assert.equal(container.querySelectorAll('.button').length, 1, 'The button is rendered');
+                assert.equal(this.getElement(), element, 'The expected element is rendered');
+                assert.equal(element.innerHTML.trim(), config.label, 'The label has been properly set');
+                assert.equal(element.classList.contains('small'), true, 'The button has the proper style');
+                this.destroy();
+            })
+            .on('destroy', done);
+    });
+    QUnit.test('show/hide', function(assert) {
+        const done = assert.async();
+        const container = document.getElementById('fixture-show');
+        assert.equal(container.children.length, 0, 'The container is empty');
+
+        buttonFactory('#fixture-show')
+            .on('ready', function onReady() {
+                const element = container.querySelector('.button');
+                assert.equal(container.children.length, 1, 'The container now have a child');
+                assert.equal(container.querySelectorAll('.button').length, 1, 'The button is rendered');
+                assert.equal(this.getElement(), element, 'The expected element is rendered');
+
+                assert.equal(this.is('hidden'), false, 'The button instance is visible');
+                assert.equal(element.classList.contains('hidden'), false, 'The button instance does not have the hidden class');
+                
+                this.hide();
+                assert.equal(this.is('hidden'), true, 'The button instance is hidden');
+                assert.equal(element.classList.contains('hidden'), true, 'The button instance has the hidden class');
+                
+                this.show();
+                assert.equal(this.is('hidden'), false, 'The button instance is visible');
+                assert.equal(element.classList.contains('hidden'), false, 'The button instance does not have the hidden class');
+
+                this.destroy();
+            })
+            .on('destroy', done);
+    });
 ```
 
 #### References
+- [Definition](https://en.wikipedia.org/wiki/Unit_testing)
+- [Unit Testing](http://softwaretestingfundamentals.com/unit-testing/)
 
 ### Add visual playground for UI parts
 When building a UI component, it useful to also provide a visual playground
