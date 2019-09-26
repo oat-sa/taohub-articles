@@ -15,11 +15,12 @@ a list of good practices to apply. For each presented situation an example will
 be provided for both bad and good solutions, with some explanation around them.
 Regarding the provided examples, in order to make them more readable, only the 
 addressed topic will be represented, and good practices unrelated with it might 
-not be always presented in the code. 
+not be always presented in the code. Please also keep in mind that the provided
+examples are not final solutions, only illustrations.
 
 ## Code writing
 
-### Please always document your code
+### Always document your code
 Always document you code, using [JSDoc](https://jsdoc.app/). If too many 
 comments could lead to unreadable code, too few or missing comments will surely 
 reduce the readability as well, at least because of the cognitive impact due
@@ -28,16 +29,16 @@ to the additional effort needed to understand the intents.
 Code might be self explanatory, if well written. But exposed code must at 
 least precise the intents and must describe the income and the outcome.
 
-Every function must have a proper JSDoc block, declaring the expected 
-parameter and the possible return values. Emitted events and thrown errors 
-must also be described. For complex datasets, a type definition should 
-describe them. A code snippet could be presented as well to show how to use
-the exposed code.
+As a good practice it is strongly recommended to apply the following:
+- Add a file header to mention the release license, the author, and the copyright.
+- Every exposed function must have a proper JSDoc block, explaining the role,
+declaring the expected parameter and the possible return values.
+- Emitted events and thrown errors must be described.
+- For complex dataset, a type definition should describe them.
+- A code snippet could be presented as well to show how to use the exposed code.
 
-#### Example
-
-##### Bad
-This code snippet is hard to follow as it doesn't express the intend.
+#### Bad example: Undocumented code
+The following code snippet is hard to follow as it doesn't express the intents.
 
 ```javascript
 function doItAllFactory(config = {}) {
@@ -79,7 +80,7 @@ function doItAllFactory(config = {}) {
 }
 ```
 
-##### Good
+#### Good example: documented code
 The JSDoc annotations help to quickly have some insights on what the code is 
 intended for. On the example below such annotations have been added, and you
 can see how they can improve the readability, especially on the way to use the 
@@ -213,21 +214,20 @@ function doItAllFactory(config = {}) {
 ```
 
 #### References
+- [Coding guide: Documentation](coding-guide.md#javascript)
 - [jsdoc.app - The JSDoc website](https://jsdoc.app/)
 
 ### Choose short and self explaining names
 Code might be self explanatory, if well written. Good code is easy to 
 understand, with respect to the related complexity it might have. A part of the 
 code readability is linked to the way the identifiers are named. As mentioned in 
-the [coding guide](coding-guide.md#general-rules), 
-the names must express the intent in a clear way. Too long names make reading 
-difficult, as well as too generic names are hard to follow.
+the [coding guide](coding-guide.md#general-rules),  the names must express the 
+intent in a clear way. Too long names make reading difficult, as well as too 
+generic names are hard to follow.
 
-#### Example
-
-##### Bad
+#### Bad example: misnamed identifiers
 In the snippet below some silly names are in use. You can see how horrible it
-is when too long names are in place. The same for badly named variables.
+is when wrong names are in use, as well as too long names.
 
 ```javascript
 function bobTheBobby(i) {
@@ -263,7 +263,7 @@ const myTreeObjectIsSoCool = {
 myTreeObjectIsSoCool.firstLevelOfTheTree.childrenOfTheNode.secondLevelOfTheTreeNode2.actionOfTheNode();
 ```
 
-##### Good
+#### Good example: properly named identifiers
 Since the silly example was trivial, the equivalent respecting good practices 
 is trivial as well. Variables got a proper name, and long names are removed
 for the benefit of clearer versions. 
@@ -316,9 +316,8 @@ add nouns to complete the name: `setvalue`, `clearname`, `valuechange`.
 The main rule is to be directive.
 
 By convention event names must also be lowercase.
-#### Example
 
-##### Bad
+#### Bad example: verbose event name
 In the snippet below, a too verbose name is used as event. 
 
 ```javascript
@@ -329,14 +328,14 @@ function valueObserverFactory(value) {
         },
         setValue(newValue) {
             value = newValue;
-            this.trigger('valueHasBeenChanged', value);
+            this.trigger('theValueHasBeenChanged', value);
             return this;
         }
     });
 }
 ```
 
-##### Good
+#### Good example: accurate event naming
 In the snippet below, a more accurate name is applied. Since there is only 
 one event, and the scope is clear enough, a single verb is used.
 
@@ -363,7 +362,7 @@ function valueObserverFactory(value) {
 The events model allows to add namespaces for purposes of scoping events.
 However, each events system have its own specificities. Usually namespaces are 
 applied by the event listeners, in order to group events under a same context, 
-making it easier to manage them. For instance this give the ability to remove 
+making it easier to manage them. For instance this gives the ability to remove 
 all events listened for a specific context, without altering other listeners.
 
 Where this become a little more complex is when the namespace is applied upon
@@ -373,7 +372,7 @@ registered under the same namespace will be triggered. And therefore, since
 namespace cannot be chained, it is impossible to enforce the scope for those
 particular events.
 
-#### Bad
+#### Bad example: namespaced event emitted
 Consider the following snippet:
 
 ```javascript
@@ -403,9 +402,9 @@ namespaced event will never get actioned. And the over namespaced listener as
 well.
 
 Sometimes, however, for some edge case this pattern might be useful. But this
-has to be motivated by a strong reason. 
+has to be motivated by a strong reason. For instance internal purpose events.
 
-#### Good
+#### Good example: correct event triggering
 A better implementation of the previous example might be:
 
 ```javascript
@@ -469,9 +468,7 @@ and stop the event listening when needed.
 - Registering adapters is also ok since the purpose is to load not to start a 
 process.  
 
-#### Example
-
-##### Bad
+#### Bad example: immediate registration of heavy process
 In the following snippet, one is registering a listener on the resize event to 
 take care of size concerned elements, and an API to add elements to resize is
 offered. Beside the bad practice of registering a global event, the first issue 
@@ -498,7 +495,7 @@ export function addResizeElement(element, id = null) {
 } 
 ```
 
-##### Good
+#### Good example: on demand heavy process
 Having considered the need to rely on the `resize` event, a better approach
 would be as exposed in the following snippet. Of course this is not the only
 way to address the concern, especially as we did not motivate the need to
@@ -619,8 +616,6 @@ export function removeResizeElement(id) {
 }
 ```
 
-#### References
-
 ### Module scope vs factory scope
 A module is loaded along with the page, or later in case of lazy loading. 
 In all cases it will remain available till the page is closed. And each
@@ -635,9 +630,7 @@ be immutable. Created instances must not alter the shared content. Some
 exceptions are allowed though, like for registry managers or system services,
 but these cases are not frequent and must be considered as specific cases.
 
-#### Example
-
-##### Bad
+#### Bad example: unexpected sharing of variable across instances
 If the following example a module variable is used to store a list of tabs. 
 Then a factory is creating instances that will manage these tabs.
 
@@ -738,7 +731,7 @@ tests might conflict, or might work and fail in cycle. Unstable and inconsistent
 unit test executions are often the symptom of memory access conflict within 
 factories.
 
-##### Good
+#### Good example: proper wrapping of instance state
 Respecting the concept of immutable module variables, the following 
 implementation will offer a better solution.
 
@@ -856,9 +849,7 @@ to the container to take care of the notification or forward the information at
 higher level. This way the component is not introducing any coupling, and remain
 able to work in any context. Components must be modular and pluggable.  
 
-#### Example
-
-##### Bad
+#### Bad example: component that alter the surrounding
 In the following snippet the layout helper `loadingBar` is called from a component.
 It might seem legit to apply such a practice, since the events `load` and `loaded`
 are properly used to start and stop the loading bar. However, this introduces a
@@ -903,7 +894,7 @@ function controller() {
 }
 ```
 
-##### Good
+#### Good example: notify the consumer of a responsibility
 The appropriate approach is to only provide the API from the component, then
 transfer the responsibility to the controller that will manage the component
 and pipe the events.
@@ -970,9 +961,7 @@ Thanks to the [`eventifier`](events-model.md), every component can emit events.
 It is strongly recommended to rely on this ability, and the use of simple 
 callbacks should be avoided.
 
-#### Example
-
-##### Bad
+#### Bad example: using callbacks
 In the following example callbacks are offered to react on click. And as expected
 only one subscriber can be registered. An additional flaw is presented here as
 the callback can only be set upon creating the component instance. 
@@ -1016,7 +1005,7 @@ button.getConfig().onClick = () => console.log('changed callback');
 button.getConfig().onClick = () => alert('click');
 ```
 
-##### Good
+#### Good example: rely on events model
 Using simple callbacks reduces the extensibility, as it prevents to share the API 
 among several consumers. A callback queue might be implemented, but this would be
 useless since the [component abstraction](component-abstraction.md) already offers 
@@ -1080,38 +1069,42 @@ by binding on it an additional behavior, or by preventing the action to occur
 if a particular condition is met. The side effect will be that the action will
 be somehow deferred, since it will be performed when the event will be received.
 
-#### Example
-
-##### Standard
-In the following example, a simple button executes an action upon click. 
+#### Standard example: execute action when invoked
+In the following example, a button directly activates a tab. 
  
 ```javascript
 /**
  * @param {Element|String} container
  * @param {Object} config
- * @param {String} label
- * @fires click when the button is clicked
+ * @param {Object[]} config.tabs
+ * @fires activate when the tab is activated
  */
-function buttonFactory(container, config) {
+function tabsFactory(container, config) {
     return component({
-            click() {
-                // performs some action
-                activateSomething();
+            activate(id) {
+                // activate the tab
+                this.getElement()
+                    .find('[data-id]')
+                    .removeClass('active')
+                    .filter(`[data-id=${id}]`)
+                    .addClass('active');
                 
                 /**
-                 * @event click
+                 * @event activate
                  */
-                this.trigger('click');
+                this.trigger('activate');
             }
         })
-        .setTemplate(buttonTpl)
+        .setTemplate(tabsTpl)
         .on('init', function onInit() {
             if (container) {
                 this.render(container);
             }           
         })
         .on('render', function onRender() {
-            this.getElement().on('click', () => this.click());                 
+            this.getElement().on('click', '[data-id]', e => {
+                this.activate(e.currentTarget.dataset.id);
+            });                 
         })
         .init(config);
 }
@@ -1120,15 +1113,20 @@ function buttonFactory(container, config) {
 Then the use of this component is as usual:
 
 ```javascript
-const button = buttonFactory('.fixture', {label: 'Ok'});
+const tabs = tabsFactory('.fixture', {
+    tabs: [
+        {id: 'tab1', label: 'Tab 1'},
+        {id: 'tab2', label: 'Tab 2'}
+    ] 
+});
 
-button.on('click', () => console.log('button clicked'));
+tabs.on('activate', id => console.log('tab activated', id));
 
 // the action will be immediately performed
-button.click();
+tabs.activate('tab2');
 ```
 
-##### Improved
+#### Improved example: defer the action to event
 The previous example can be improved using action event instead of immediate 
 action. 
  
@@ -1136,57 +1134,87 @@ action.
 /**
  * @param {Element|String} container
  * @param {Object} config
- * @param {String} label
- * @fires click when the button is clicked
+ * @param {Object[]} config.tabs
+ * @fires activate when the tab is activated
+ * @fires activated once the tab has been activated
  */
-function buttonFactory(container, config) {
+function tabsFactory(container, config) {
     return component({
             /**
              * Triggers a click action
-             * @fires click
-             */
-            click() {
+             * @params {String} id
+             * @fires activate
+             */            
+            activate(id) {
                 /**
-                 * @event click
+                 * @event activate
+                 * @params {String} id
                  */
-                this.trigger('click');
+                this.trigger('activate', id);
             }
         })
-        .setTemplate(buttonTpl)
+        .setTemplate(tabsTpl)
         .on('init', function onInit() {
             if (container) {
                 this.render(container);
             }           
         })
         .on('render', function onRender() {
-            // the physical click on the button is forwarded to the API 
-            this.getElement().on('click', () => this.click());                 
+            // the physical click on the button is forwarded to the API
+            this.getElement().on('click', '[data-id]', e => {
+                this.activate(e.currentTarget.dataset.id);
+            });                 
         })
         // listen to the click event in order to actually perform the action 
-        .on('click', () => activateSomething())
+        .on('activate', id => {
+            // activate the tab
+            this.getElement()
+                .find('[data-id]')
+                .removeClass('active')
+                .filter(`[data-id=${id}]`)
+                .addClass('active');
+
+            /**
+             * @event activated
+             * @params {String} id
+             */
+            this.trigger('activated', id);
+        })
         .init(config);
 }
 ```
 
-Then we can hook the click action, preventing it to happen by rejecting the 
-click event.
+Then we can hook the `activate` action, preventing it to happen by 
+rejecting the event.
 
 ```javascript
-const button = buttonFactory('.fixture', {label: 'Ok'});
+const tabs = tabsFactory('.fixture', {
+    tabs: [
+        {id: 'tab1', label: 'Tab 1'},
+        {id: 'tab2', label: 'Tab 2'}
+    ] 
+});
 
-button.on('click', () => console.log('button clicked'));
+tabs.on('activate', id => console.log('tab being activated', id));
+tabs.on('activated', id => console.log('tab has been activated', id));
 
 // the action will be performed very soon
-button.click();
+tabs.activate();
 // the action might not be performed yet, but it will
 
-// prevent the click event to happen
-button.before('click', e => {
-    return Promise.reject();
+// prevent the activate event to happen, the tab2 won't be activated
+tabs.before('activate', (e, id) => {
+    if (id === 'tab2') {
+        return Promise.reject();
+    }
 })
 
 // the action will never be performed, since the before event step is rejecting it
-button.click();
+tabs.activate('tab2');
+// the activated event will never be emitted
+
+// the action will be performed since the tab1 is not prevented
+tabs.activate('tab1');
 ```
 
 #### References
@@ -1209,9 +1237,7 @@ way over the other, and then the less used form might persist in a small part,
 making more difficult to refactor the code.
 - It might enforce bad practices, like code coupling or other anti-patterns.   
 
-#### Example
-
-##### Bad
+#### Bad example: redundant API 
 In the following example, both callback and events are offered to react to a 
 button click. Even if the result looks the same, they are behaving exactly
 identically, the callback being called after the event.
@@ -1254,9 +1280,16 @@ function buttonFactory(container, config) {
         })
         .init(config);
 }
+
+// we may add a callback to listen to click
+button('.fixture', {label: 'Ok', onClick: () => { ... }});
+
+// or we may listen to an event for the same result
+button('.fixture', {label: 'Ok'})
+    .on('click', () => { ... });
 ```
 
-##### Good
+#### Good example: one purpose API
 In the previous example the API was redundant, and did not add any value. The
 following snippet fix that by removing the useless API.
 
@@ -1290,6 +1323,10 @@ function buttonFactory(container, config) {
         })
         .init(config);
 }
+
+// Only a single way of reacting to click actions
+button('.fixture', {label: 'Ok'})
+    .on('click', () => { ... });
 ```
 
 #### References
@@ -1343,9 +1380,7 @@ Keeping the same markup for a serie of tests is still legit however, as they
 will run one after the other. The requirement being to clean the markup 
 between each test.
 
-#### Example
-
-##### Bad
+#### Bad example: one fixture for all tests
 Consider the following unit tests, and their associated HTML markup.
 Only one fixture is present, and it is shared among tests.
 
@@ -1425,7 +1460,7 @@ in parallel and out of order, the test suite will succeed or fail randomly.
     });
 ```
 
-##### Good
+#### Good example: one dedicated fixture per test
 In the following unit tests you might wonder where are the differences if any.
 In fact they are very small. Look at the `qunit-fixture` markup. It now contains
 various entries, each one for a particular test.
@@ -1525,7 +1560,7 @@ to setup an environment to see the component in situation at an earlier stage.
 
 In other words, this will save time at several stages. 
 
-#### Example
+#### Example: add a visual playground
 The following example gives a simple example of how a visual test could be 
 added to a test suite.
 
@@ -1591,9 +1626,7 @@ Using the parent selector to build complex names prevents to retrieve easily
 the class names. This is hard to maintain as it introduces some mess in the 
 code.  
 
-#### Example
-
-##### Bad
+#### Bad example: building class names with parent selector
 The following snippet shows how messy the code could be with a misuse of the 
 parent selector. Can you quickly see what will be the outcome of that?
 
@@ -1625,7 +1658,7 @@ parent selector. Can you quickly see what will be the outcome of that?
 }
 ```
 
-##### Good
+#### Good example: finite class names and inheritance with parent selector
 A proper implementation, keeping the same class names, will be:
 
 ```scss
@@ -1659,9 +1692,7 @@ like Bootstrap use to do. This has the same downside as hardcoding the style
 within the markup. It couples hard meaning to the design, and this is not easy 
 to apply proper design later on. 
 
-#### Example
-
-##### Bad
+#### Bad example: unspecific class names
 This HTML markup makes use of redundant class name, in different context, 
 making difficult to apply consistent rules. `dashboard-sidebar` should be the 
 root class for the component, and in this context `container`, `root` and `list` 
@@ -1677,7 +1708,7 @@ rely on a single class name to apply the expected style.
 </div>
 ```
 
-##### Good
+#### Good example: specific class names
 Here is a better solution, even if not the only one. `dashboard-sidebar` is the
 root class that will define the main component style. `dashboard-sidebar-root` 
 should define the style of the related part in the component, the same for 
