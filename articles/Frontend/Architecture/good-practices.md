@@ -1358,7 +1358,7 @@ augment the component implementation.
 Another way of doing TDD might be to design by coding. If you know what you
 intent to implement, start by drafting the client, the code that will consume
 the feature. This way you will draft out the implementation. Take a look at the
-resource video shared in the references section below.  
+resource video shared in the resources section below.  
 
 #### Resources
 - [Design by Coding - YouTube video](https://www.youtube.com/watch?v=d5Y1B1cmaGQ)
@@ -1384,8 +1384,8 @@ between each test.
 Consider the following unit tests, and their associated HTML markup.
 Only one fixture is present, and it is shared among tests.
 
-Each test check if the container is empty, then rely on a single element
-inside it to perform the following checks. Since the test might be run
+Each test checks if the container is empty, then rely on a single element
+inside it to perform the following checks. Since the test might be ran
 in parallel and out of order, the test suite will succeed or fail randomly. 
  
 ```html
@@ -1466,10 +1466,14 @@ In fact they are very small. Look at the `qunit-fixture` markup. It now contains
 various entries, each one for a particular test.
 
 In the unit tests themselves, the only difference is on the selector for the
-containers. Each unit test rely on a unique fixture markup. This no conflict 
-due to test design should occur. If such conflict still raise, then it should
-be elsewhere. For instance in a bad component design, sharing memory across
-instances. 
+containers. Each unit test relies on a unique fixture markup. This will ensure
+that no conflict due to test design should occur. If such conflict still raise, 
+then it should be elsewhere. For instance in a bad component design, sharing 
+memory across instances. 
+
+Unit tests must be reliable, and must not introduce flaws. If the test fails,
+this should be because there is an error in the tested feature, not an error
+inside the test.
  
 ```html
 <!DOCTYPE html>
@@ -1551,7 +1555,7 @@ instances.
 - [Unit Testing](http://softwaretestingfundamentals.com/unit-testing/)
 
 ### Add visual playground for UI parts
-When building a UI component, it useful to also provide a visual playground
+When building a UI component, it is useful to also provide a visual playground
 with the unit tests. This allows to demo the behavior of the component. This
 is useful to quickly get an idea of what the component looks like. This is also
 a good helper to quickly see what is the current state of the development during
