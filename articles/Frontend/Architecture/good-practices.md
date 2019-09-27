@@ -213,7 +213,7 @@ function doItAllFactory(config = {}) {
 }
 ```
 
-#### References
+#### Resources
 - [Coding guide: Documentation](coding-guide.md#javascript)
 - [jsdoc.app - The JSDoc website](https://jsdoc.app/)
 
@@ -302,7 +302,7 @@ const myTree = {
 myTree.root.children.node2.action();
 ```
 
-#### References
+#### Resources
 - [Coding guide: General rules](coding-guide.md#general-rules)
 
 ### Use verbs to name events
@@ -354,7 +354,7 @@ function valueObserverFactory(value) {
 }
 ```
 
-#### References
+#### Resources
 - [Coding guide: General rules](coding-guide.md#general-rules)
 - [Events model](events-model.md)
 
@@ -429,7 +429,7 @@ emitter.setValue('foo');
 
 Each listener applying to the `setvalue` event will get actioned. 
 
-#### References
+#### Resources
 - [Events model](events-model.md)
 
 ## Modules
@@ -825,7 +825,7 @@ tabs1.activateTabByName('t3');
 tabs2.activateTabByName('t3');
 ```
 
-#### References
+#### Resources
 - [Component abstraction](component-abstraction.md)
 
 ## Components
@@ -935,7 +935,7 @@ function controller() {
 }
 ```
 
-#### References
+#### Resources
 - [Component abstraction](component-abstraction.md)
 - [Events model](events-model.md)
 
@@ -1048,7 +1048,7 @@ button.off('click').on('click', () => console.log('changed callback'));
 button.on('click', () => alert('click'));
 ```
 
-#### References
+#### Resources
 - [Component abstraction](component-abstraction.md)
 - [Events model](events-model.md)
 
@@ -1217,7 +1217,7 @@ tabs.activate('tab2');
 tabs.activate('tab1');
 ```
 
-#### References
+#### Resources
 - [Component abstraction](component-abstraction.md)
 - [Events model](events-model.md)
 - [AOP: Aspect Oriented Programming](https://en.wikipedia.org/wiki/Aspect-oriented_programming)
@@ -1329,7 +1329,7 @@ button('.fixture', {label: 'Ok'})
     .on('click', () => { ... });
 ```
 
-#### References
+#### Resources
 - [Coding guide: General rules](coding-guide.md#general-rules)
 
 ## Testing
@@ -1360,7 +1360,7 @@ intent to implement, start by drafting the client, the code that will consume
 the feature. This way you will draft out the implementation. Take a look at the
 resource video shared in the references section below.  
 
-#### References
+#### Resources
 - [Design by Coding - YouTube video](https://www.youtube.com/watch?v=d5Y1B1cmaGQ)
 
 ### Properly scope test fixtures
@@ -1546,7 +1546,7 @@ instances.
     });
 ```
 
-#### References
+#### Resources
 - [Definition](https://en.wikipedia.org/wiki/Unit_testing)
 - [Unit Testing](http://softwaretestingfundamentals.com/unit-testing/)
 
@@ -1613,8 +1613,6 @@ QUnit.module('Button Visual Test');
             });
     });
 ```
-
-#### References
 
 ## Styling
 
