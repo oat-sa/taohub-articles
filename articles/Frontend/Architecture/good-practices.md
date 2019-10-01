@@ -737,8 +737,12 @@ factories.
 Respecting the concept of immutable module variables, the following 
 implementation will offer a better solution.
 
-The instances created by the factory will all get a dedicated context to store
-the related data, without polluting possible other instances.
+The factory function scopes the variables managed by the created instance, and
+each instance will have a dedicated and separated context. Only static content
+is shared across instances, like the component factory and the layout template.
+
+When an instance modifies the `tabs` variable, it doesn't interfere with `tabs`
+variable attached to another instance. 
 
 ```javascript
 import component from 'ui/component';
