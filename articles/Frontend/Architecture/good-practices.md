@@ -31,8 +31,9 @@ least precise the intents and must describe the income and the outcome.
 
 As a good practice it is strongly recommended to apply the following:
 - Add a file header to mention the release license, the author, and the copyright.
-- Every exposed function must have a proper JSDoc block, explaining the role,
-declaring the expected parameter and the possible return values.
+- All modules's public API must be documented, with a proper JSDoc block 
+explaining the role, declaring the expected parameter and the possible return 
+values.
 - Emitted events and thrown errors must be described.
 - For complex dataset, a type definition should describe them.
 - A code snippet could be presented as well to show how to use the exposed code.
@@ -214,7 +215,8 @@ function doItAllFactory(config = {}) {
 ```
 
 #### Resources
-- [Coding guide: Documentation](coding-guide.md#javascript)
+- [Coding guide: Documentation](coding-guide.md#documentation)
+- [Coding guide: JavaScript rules](coding-guide.md#javascript)
 - [jsdoc.app - The JSDoc website](https://jsdoc.app/)
 
 ### Choose short and self explaining names
