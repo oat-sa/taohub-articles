@@ -1340,16 +1340,16 @@ button('.fixture', {label: 'Ok'})
 
 ## Testing
 
-### Prefer design by coding: TDD / BDD
+### Prefer design by coding
 When writing code, a developer must check the works is going the right way.
 Usually, some manual checks are made aside. But it may become more and more
 time consuming as long as the progress is made. So it is better to automate
-somehow those manual checks. And on convenient way to do so is to write
-unit tests.
+somehow those manual checks. And a convenient way to do so is to write unit 
+tests.
 
-A method well describes the process, it is called [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development).
-The principle is to write tests aside at the same period of time you are
-implementing. The best being to start writing test, then implement the feature.
+In order to ease the process, and in order to improve the quality of the 
+tests, it is recommended to apply [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development).
+The principle is to write tests before you implement the feature.
 
 It might seem tricky to start writing unit tests while you have no idea how
 you will implement the feature. However, some patterns might help you.
@@ -1364,7 +1364,7 @@ augment the component implementation.
 Another way of doing TDD might be to design by coding. If you know what you
 intent to implement, start by drafting the client, the code that will consume
 the feature. This way you will draft out the implementation. Take a look at the
-resource video shared in the resources section below.  
+video shared in the resources section below.  
 
 #### Resources
 - [Design by Coding - YouTube video](https://www.youtube.com/watch?v=d5Y1B1cmaGQ)
