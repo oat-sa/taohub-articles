@@ -1075,6 +1075,16 @@ by binding on it an additional behavior, or by preventing the action to occur
 if a particular condition is met. The side effect will be that the action will
 be somehow deferred, since it will be performed when the event will be received.
 
+However, this might not apply for every situation. To decide when use the
+action event instead of direct action, ask yourself the question: 
+"Can the consumer prevent or change the behavior?". So if you want to keep the 
+implementation closed, then let's use the method. But if it can be changed,
+prevented or hooked, then let's implement it in the handler.
+
+Please also note that if this patterns offers obvious benefit, it also comes
+with a downside, decreasing the readability as the action is now spread in
+several places. 
+
 #### Standard example: execute action when invoked
 In the following example, a button directly activates a tab. 
  
@@ -1134,7 +1144,12 @@ tabs.activate('tab2');
 
 #### Improved example: defer the action to event
 The previous example can be improved using action event instead of immediate 
-action. 
+action. The benefit being you can now prevent the tab to be activated.
+
+However, please keep in mind this is not an universal solution. Depending on
+what you intend it might not be the better approach. Once again, ask yourself
+if the action can be prevented by the consumer. In many cases this is not
+needed.
  
 ```javascript
 /**
@@ -1191,7 +1206,10 @@ function tabsFactory(container, config) {
 ```
 
 Then we can hook the `activate` action, preventing it to happen by 
-rejecting the event.
+rejecting the event *before* it is applied. Worth to mention, an 
+additional event `activated` is emitted once the action has been performed. 
+However, this is not required since the [AOP](https://en.wikipedia.org/wiki/Aspect-oriented_programming)
+also offers a way to execute something *after* an event.
 
 ```javascript
 const tabs = tabsFactory('.fixture', {
@@ -1214,6 +1232,8 @@ tabs.before('activate', (e, id) => {
         return Promise.reject();
     }
 })
+// execute something once the action has been applied
+tabs.after('activate', id => console.log('tab has been activated', id));
 
 // the action will never be performed, since the before event step is rejecting it
 tabs.activate('tab2');
