@@ -1391,115 +1391,16 @@ video shared in the resources section below.
 
 ### Properly scope test fixtures
 Unit tests must be unique, predictable, and reproducible. They must not be
-dependant to other tests, and must not conflict as well. A common mistake is to
-rely on the same markup to render content for each unit test. This might be ok
-when tests are ran in series, one at a time. In that case the place must be
-cleaned between each iteration. However, when the tests are ran in parallel
-there is a big chance they will conflict, and will produce inconsistent results.
+dependant to other tests, and must not conflict as well. Moreover, they must 
+not introduce flaws. If the test fails, this should be because there is an 
+error in the tested feature, not an error inside the test.
 
-Having inconsistent tests might be the symptom of concurrency issue within
-the test suite.
+This is a good habit to reserve one unique markup for each different test, 
+in order to be able to setup a proper and dedicated test context.
 
-To prevent any conflict, and to make sure each unit test is properly scoped
-this is a good habit to reserve one unique markup for each different test. 
-Keeping the same markup for a serie of tests is still legit however, as they 
-will run one after the other. The requirement being to clean the markup 
-between each test.
-
-#### Bad example: one fixture for all tests
-Consider the following unit tests, and their associated HTML markup.
-Only one fixture is present, and it is shared among tests.
-
-Each test checks if the container is empty, then rely on a single element
-inside it to perform the following checks. Since the test might be ran
-in parallel and out of order, the test suite will succeed or fail randomly. 
- 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Ui Test - Button Component</title>
-        <script type="text/javascript" src="/environment/require.js"></script>
-        <script type="text/javascript">
-            require(['/environment/config.js'], function() {
-                require(['qunitEnv'], function() {
-                    require(['test/ui/button/test'], function() {
-                        QUnit.start();
-                    });
-                });
-            });
-        </script>
-    </head>
-    <body>
-        <div id="qunit"></div>
-        <div id="qunit-fixture"></div>
-    </body>
-</html>
-``` 
-
-```javascript
-    QUnit.test('render', function(assert) {
-        const done = assert.async();
-        const config = {label: 'FOO'};
-        const container = document.getElementById('qunit-fixture', config);
-        assert.equal(container.children.length, 0, 'The container is empty');
-
-        buttonFactory('#qunit-fixture')
-            .on('ready', function onReady() {
-                const element = container.querySelector('.button');
-                assert.equal(container.children.length, 1, 'The container now have a child');
-                assert.equal(container.querySelectorAll('.button').length, 1, 'The button is rendered');
-                assert.equal(this.getElement(), element, 'The expected element is rendered');
-                assert.equal(element.innerHTML.trim(), config.label, 'The label has been properly set');
-                assert.equal(element.classList.contains('small'), true, 'The button has the proper style');
-                this.destroy();
-            })
-            .on('destroy', done);
-    });
-    QUnit.test('show/hide', function(assert) {
-        const done = assert.async();
-        const container = document.getElementById('qunit-fixture');
-        assert.equal(container.children.length, 0, 'The container is empty');
-
-        buttonFactory('#qunit-fixture')
-            .on('ready', function onReady() {
-                const element = container.querySelector('.button');
-                assert.equal(container.children.length, 1, 'The container now have a child');
-                assert.equal(container.querySelectorAll('.button').length, 1, 'The button is rendered');
-                assert.equal(this.getElement(), element, 'The expected element is rendered');
-
-                assert.equal(this.is('hidden'), false, 'The button instance is visible');
-                assert.equal(element.classList.contains('hidden'), false, 'The button instance does not have the hidden class');
-                
-                this.hide();
-                assert.equal(this.is('hidden'), true, 'The button instance is hidden');
-                assert.equal(element.classList.contains('hidden'), true, 'The button instance has the hidden class');
-                
-                this.show();
-                assert.equal(this.is('hidden'), false, 'The button instance is visible');
-                assert.equal(element.classList.contains('hidden'), false, 'The button instance does not have the hidden class');
-
-                this.destroy();
-            })
-            .on('destroy', done);
-    });
-```
-
-#### Good example: one dedicated fixture per test
-In the following unit tests you might wonder where are the differences if any.
-In fact they are very small. Look at the `qunit-fixture` markup. It now contains
-various entries, each one for a particular test.
-
-In the unit tests themselves, the only difference is on the selector for the
-containers. Each unit test relies on a unique fixture markup. This will ensure
-that no conflict due to test design should occur. If such conflict still raise, 
-then it should be elsewhere. For instance in a bad component design, sharing 
-memory across instances. 
-
-Unit tests must be reliable, and must not introduce flaws. If the test fails,
-this should be because there is an error in the tested feature, not an error
-inside the test.
+#### Example: one dedicated fixture per test
+Look at the `qunit-fixture` markup. It contains various entries, each one for 
+a particular test.
  
 ```html
 <!DOCTYPE html>
