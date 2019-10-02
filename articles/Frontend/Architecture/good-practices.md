@@ -1147,7 +1147,7 @@ The previous example can be improved using action event instead of immediate
 action. The benefit being you can now prevent the tab to be activated.
 
 However, please keep in mind this is not an universal solution. Depending on
-what you intend it might not be the better approach. Once again, ask yourself
+what you intend it might not be the best approach. Once again, ask yourself
 if the action can be prevented by the consumer. In many cases this is not
 needed.
  
@@ -1367,8 +1367,8 @@ time consuming as long as the progress is made. So it is better to automate
 somehow those manual checks. And a convenient way to do so is to write unit 
 tests.
 
-In order to ease the process, and in order to improve the quality of the 
-tests, it is recommended to apply [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development).
+In order to ease the process and improve the quality of the tests, it is 
+recommended to apply [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development).
 The principle is to write tests before you implement the feature.
 
 It might seem tricky to start writing unit tests while you have no idea how
