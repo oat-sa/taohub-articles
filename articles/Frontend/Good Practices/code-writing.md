@@ -6,7 +6,7 @@ tags:
         - "Good practices"
 -->
 
-## Code writing
+# Code writing
 
 > This document describes good practices regarding frontend code writing.
 
@@ -21,7 +21,29 @@ addressed topic will be represented, and good practices unrelated with it might
 not be always presented in the code. Please also keep in mind that the provided
 examples are not final solutions, only illustrations.
 
-### Always document your code
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Code writing](#code-writing)
+    - [Always document your code](#always-document-your-code)
+        - [Bad example: Undocumented code](#bad-example-undocumented-code)
+        - [Good example: documented code](#good-example-documented-code)
+        - [Resources](#resources)
+    - [Choose short and self explaining names](#choose-short-and-self-explaining-names)
+        - [Bad example: misnamed identifiers](#bad-example-misnamed-identifiers)
+        - [Good example: properly named identifiers](#good-example-properly-named-identifiers)
+        - [Resources](#resources)
+    - [Use verbs to name events](#use-verbs-to-name-events)
+        - [Bad example: verbose event name](#bad-example-verbose-event-name)
+        - [Good example: accurate event naming](#good-example-accurate-event-naming)
+        - [Resources](#resources)
+    - [Use properly the event namespaces](#use-properly-the-event-namespaces)
+        - [Bad example: namespaced event emitted](#bad-example-namespaced-event-emitted)
+        - [Good example: correct event triggering](#good-example-correct-event-triggering)
+        - [Resources](#resources)
+
+<!-- /TOC -->
+
+## Always document your code
 Always document you code, using [JSDoc](https://jsdoc.app/). If too many
 comments could lead to unreadable code, too few or missing comments will surely
 reduce the readability as well, at least because of the cognitive impact due
@@ -39,7 +61,7 @@ values.
 - For complex dataset, a type definition should describe them.
 - A code snippet could be presented as well to show how to use the exposed code.
 
-#### Bad example: Undocumented code
+### Bad example: Undocumented code
 The following code snippet is hard to follow as it doesn't express the intents.
 
 ```javascript
@@ -82,7 +104,7 @@ function doItAllFactory(config = {}) {
 }
 ```
 
-#### Good example: documented code
+### Good example: documented code
 The JSDoc annotations help to quickly have some insights on what the code is
 intended for. On the example below such annotations have been added, and you
 can see how they can improve the readability, especially on the way to use the
@@ -215,12 +237,12 @@ function doItAllFactory(config = {}) {
 }
 ```
 
-#### Resources
+### Resources
 - [Coding guide: Documentation](coding-guide.md#documentation)
 - [Coding guide: JavaScript rules](coding-guide.md#javascript)
 - [jsdoc.app - The JSDoc website](https://jsdoc.app/)
 
-### Choose short and self explaining names
+## Choose short and self explaining names
 Code might be self explanatory, if well written. Good code is easy to
 understand, with respect to the related complexity it might have. A part of the
 code readability is linked to the way the identifiers are named. As mentioned in
@@ -228,7 +250,7 @@ the [coding guide](coding-guide.md#general-rules),  the names must express the
 intent in a clear way. Too long names make reading difficult, as well as too
 generic names are hard to follow.
 
-#### Bad example: misnamed identifiers
+### Bad example: misnamed identifiers
 In the snippet below some silly names are in use. You can see how horrible it
 is when wrong names are in use, as well as too long names.
 
@@ -266,7 +288,7 @@ const myTreeObjectIsSoCool = {
 myTreeObjectIsSoCool.firstLevelOfTheTree.childrenOfTheNode.secondLevelOfTheTreeNode2.actionOfTheNode();
 ```
 
-#### Good example: properly named identifiers
+### Good example: properly named identifiers
 Since the silly example was trivial, the equivalent respecting good practices
 is trivial as well. Variables got a proper name, and long names are removed
 for the benefit of clearer versions.
@@ -305,10 +327,10 @@ const myTree = {
 myTree.root.children.node2.action();
 ```
 
-#### Resources
+### Resources
 - [Coding guide: General rules](coding-guide.md#general-rules)
 
-### Use verbs to name events
+## Use verbs to name events
 Event names must express the action they are referring to. And verbs are a good
 way to express an action. They are short, concise and clear. As examples:
 `change`, `update`, `render`, `init`.
@@ -320,7 +342,7 @@ The main rule is to be directive.
 
 By convention event names must also be lowercase.
 
-#### Bad example: verbose event name
+### Bad example: verbose event name
 In the snippet below, a too verbose name is used as event.
 
 ```javascript
@@ -338,7 +360,7 @@ function valueObserverFactory(value) {
 }
 ```
 
-#### Good example: accurate event naming
+### Good example: accurate event naming
 In the snippet below, a more accurate name is applied. Since there is only
 one event, and the scope is clear enough, a single verb is used.
 
@@ -357,11 +379,11 @@ function valueObserverFactory(value) {
 }
 ```
 
-#### Resources
+### Resources
 - [Coding guide: General rules](coding-guide.md#general-rules)
 - [Events model](events-model.md)
 
-### Use properly the event namespaces
+## Use properly the event namespaces
 The events model allows to add namespaces for purposes of scoping events.
 However, each events system have its own specificities. Usually namespaces are
 applied by the event listeners, in order to group events under a same context,
@@ -375,7 +397,7 @@ registered under the same namespace will be triggered. And therefore, since
 namespace cannot be chained, it is impossible to enforce the scope for those
 particular events.
 
-#### Bad example: namespaced event emitted
+### Bad example: namespaced event emitted
 Consider the following snippet:
 
 ```javascript
@@ -407,7 +429,7 @@ well.
 Sometimes, however, for some edge case this pattern might be useful. But this
 has to be motivated by a strong reason. For instance internal purpose events.
 
-#### Good example: correct event triggering
+### Good example: correct event triggering
 A better implementation of the previous example might be:
 
 ```javascript
@@ -432,5 +454,5 @@ emitter.setValue('foo');
 
 Each listener applying to the `setvalue` event will get actioned.
 
-#### Resources
+### Resources
 - [Events model](events-model.md)

@@ -6,7 +6,7 @@ tags:
         - "Good practices"
 -->
 
-## Testing
+# Testing
 
 > This document describes good practices regarding frontend testing.
 
@@ -21,14 +21,27 @@ addressed topic will be represented, and good practices unrelated with it might
 not be always presented in the code. Please also keep in mind that the provided
 examples are not final solutions, only illustrations.
 
-### Prefer design by coding
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Testing](#testing)
+	- [Prefer design by coding](#prefer-design-by-coding)
+		- [Resources](#resources)
+	- [Properly scope test fixtures](#properly-scope-test-fixtures)
+		- [Example: one dedicated fixture per test](#example-one-dedicated-fixture-per-test)
+		- [Resources](#resources)
+	- [Add visual playground for UI parts](#add-visual-playground-for-ui-parts)
+		- [Example: add a visual playground](#example-add-a-visual-playground)
+
+<!-- /TOC -->
+
+## Prefer design by coding
 When writing code, a developer must check the works is going the right way.
 Usually, some manual checks are made aside. But it may become more and more
 time consuming as long as the progress is made. So it is better to automate
-somehow those manual checks. And a convenient way to do so is to write unit 
+somehow those manual checks. And a convenient way to do so is to write unit
 tests.
 
-In order to ease the process and improve the quality of the tests, it is 
+In order to ease the process and improve the quality of the tests, it is
 recommended to apply [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development).
 The principle is to write tests before you implement the feature.
 
@@ -36,33 +49,33 @@ It might seem tricky to start writing unit tests while you have no idea how
 you will implement the feature. However, some patterns might help you.
 
 For instance, if you intent to write a component, since this is a well know
-pattern you might start by bootstrapping a common test pattern applied to 
-components: check the format of the component factory, check the common API, 
-prepare the check of the life cycle, and add a visual test. Then you may 
-start implementing the component, adding more unit tests each time you 
+pattern you might start by bootstrapping a common test pattern applied to
+components: check the format of the component factory, check the common API,
+prepare the check of the life cycle, and add a visual test. Then you may
+start implementing the component, adding more unit tests each time you
 augment the component implementation.
 
 Another way of doing TDD might be to design by coding. If you know what you
 intent to implement, start by drafting the client, the code that will consume
 the feature. This way you will draft out the implementation. Take a look at the
-video shared in the resources section below.  
+video shared in the resources section below.
 
-#### Resources
+### Resources
 - [Design by Coding - YouTube video](https://www.youtube.com/watch?v=d5Y1B1cmaGQ)
 
-### Properly scope test fixtures
+## Properly scope test fixtures
 Unit tests must be unique, predictable, and reproducible. They must not be
-dependant to other tests, and must not conflict as well. Moreover, they must 
-not introduce flaws. If the test fails, this should be because there is an 
+dependant to other tests, and must not conflict as well. Moreover, they must
+not introduce flaws. If the test fails, this should be because there is an
 error in the tested feature, not an error inside the test.
 
-This is a good habit to reserve one unique markup for each different test, 
+This is a good habit to reserve one unique markup for each different test,
 in order to be able to setup a proper and dedicated test context.
 
-#### Example: one dedicated fixture per test
-Look at the `qunit-fixture` markup. It contains various entries, each one for 
+### Example: one dedicated fixture per test
+Look at the `qunit-fixture` markup. It contains various entries, each one for
 a particular test.
- 
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -88,7 +101,7 @@ a particular test.
         </div>
     </body>
 </html>
-``` 
+```
 
 ```javascript
     QUnit.test('render', function(assert) {
@@ -123,11 +136,11 @@ a particular test.
 
                 assert.equal(this.is('hidden'), false, 'The button instance is visible');
                 assert.equal(element.classList.contains('hidden'), false, 'The button instance does not have the hidden class');
-                
+
                 this.hide();
                 assert.equal(this.is('hidden'), true, 'The button instance is hidden');
                 assert.equal(element.classList.contains('hidden'), true, 'The button instance has the hidden class');
-                
+
                 this.show();
                 assert.equal(this.is('hidden'), false, 'The button instance is visible');
                 assert.equal(element.classList.contains('hidden'), false, 'The button instance does not have the hidden class');
@@ -138,11 +151,11 @@ a particular test.
     });
 ```
 
-#### Resources
+### Resources
 - [Definition](https://en.wikipedia.org/wiki/Unit_testing)
 - [Unit Testing](http://softwaretestingfundamentals.com/unit-testing/)
 
-### Add visual playground for UI parts
+## Add visual playground for UI parts
 When building a UI component, it is useful to also provide a visual playground
 with the unit tests. This allows to demo the behavior of the component. This
 is useful to quickly get an idea of what the component looks like. This is also
@@ -150,10 +163,10 @@ a good helper to quickly see what is the current state of the development during
 the build process, aside the writing of unit tests. This will also avoid to have
 to setup an environment to see the component in situation at an earlier stage.
 
-In other words, this will save time at several stages. 
+In other words, this will save time at several stages.
 
-#### Example: add a visual playground
-The following example gives a simple example of how a visual test could be 
+### Example: add a visual playground
+The following example gives a simple example of how a visual test could be
 added to a test suite.
 
 ```html
