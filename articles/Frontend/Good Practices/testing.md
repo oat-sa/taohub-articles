@@ -10,12 +10,12 @@ tags:
 
 > This document describes good practices regarding frontend testing.
 
-*Description* -
+**Description** -
 In order to prevent trivial issues due to bad design, this article will propose
 a list of good practices to apply. For each presented situation an example will
 be provided for both bad and good solutions, with some explanation around them.
 
-*Disclaimer* -
+**Disclaimer** -
 Regarding the provided examples, in order to make them more readable, only the
 addressed topic will be represented, and good practices unrelated with it might
 not be always presented in the code. Please also keep in mind that the provided
