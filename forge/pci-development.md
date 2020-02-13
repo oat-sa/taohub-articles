@@ -148,7 +148,7 @@ grunt portableelement --extension=extensionName (--identifier=interactionTypeIde
 grunt portableelement -e=extensionName (-i=interactionTypeIdentifier)
 
 #Real example:
-cd tao/views/build
+cd tao/views
 grunt portableelement -e=qtiItemPci -i=likertScaleInteraction
 ```
 

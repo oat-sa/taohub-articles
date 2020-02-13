@@ -97,7 +97,7 @@ The configuration options can be modified through the template and the controlle
 
 ### Test and build configuration
 
-A static and lighter version of the configuration is located at `tao/views/build/config/requirejs.build.json`.
+A static and lighter version of the configuration is located at `tao/views/config/requirejs.build.json`.
 *It needs to be updated manually.*
 
 ### Module configuration

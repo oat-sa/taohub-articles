@@ -33,10 +33,10 @@ Grunt runs on node.js, so you need [node.js](https://nodejs.org/en/download/) in
 
 - Then to install and set up Grunt :
 
-    cd tao/views/build
+    cd tao/views
     npm install
 
-Then you should be able to see available grunt tasks from the `tao/views/build` directory:
+Then you should be able to see available grunt tasks from the `tao/views` directory:
 
     grunt --help
 
