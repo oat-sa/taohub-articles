@@ -34,9 +34,9 @@ examples are not final solutions, only illustrations.
 <!-- /TOC -->
 
 ## Use explicit class names
-SASS and LESS are providing some useful shortcuts, but could also lead to
-unreadable and unmaintainable code. The parent selector (`&`) is a very useful
-tool, but it must be reserved to chain classes, not to build complex names.
+SASS is providing some useful shortcuts, but could also lead to unreadable
+and unmaintainable code. The parent selector (`&`) is a very useful tool,
+but it must be reserved to chain classes, not to build complex names.
 Using the parent selector to build complex names prevents to retrieve easily
 the class names. This is hard to maintain as it introduces some mess in the
 code.
@@ -102,10 +102,9 @@ Always prefer specific and well defined class name to match a component part.
 Using generic name could lead to conflicts as they could be broadly used for
 different purposes. Unless, of course, the intent is to have a generic behavior,
 like `disabled` or `hidden`. But when we talk about scope class, it is better
-to rely on unique and self-explaining names. Please avoid also verbose styling,
-like Bootstrap use to do. This has the same downside as hardcoding the style
-within the markup. It couples hard meaning to the design, and this is not easy
-to apply proper design later on.
+to rely on unique and self-explaining names. Please avoid also verbose styling.
+This has the same downside as hardcoding the style within the markup. It couples 
+hard meaning to the design, and this is not easy to apply proper design later on.
 
 ### Bad example: unspecific class names
 This HTML markup makes use of redundant class name, in different context,
