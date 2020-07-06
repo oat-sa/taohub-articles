@@ -3,21 +3,21 @@ authors:
     - "Jean-Sébastien Conan"
 tags:
     Frontend Architecture:
-        - "Good practices"
+        - "Best practices"
 -->
 
 # Code writing
 
-> This document describes good practices regarding frontend code writing.
+> This document describes the best practices regarding frontend code writing.
 
 **Description** -
 In order to prevent trivial issues due to bad design, this article will propose
-a list of good practices to apply. For each presented situation an example will
+a list of best practices to apply. For each presented situation an example will
 be provided for both bad and good solutions, with some explanation around them.
 
 **Disclaimer** -
 Regarding the provided examples, in order to make them more readable, only the
-addressed topic will be represented, and good practices unrelated with it might
+addressed topic will be represented, and the best practices unrelated with it might
 not be always presented in the code. Please also keep in mind that the provided
 examples are not final solutions, only illustrations.
 
@@ -52,7 +52,7 @@ to the additional effort needed to understand the intents.
 Code might be self explanatory, if well written. But exposed code must at
 least precise the intents and must describe the income and the outcome.
 
-As a good practice it is strongly recommended to apply the following:
+As best practice it is strongly recommended to apply the following:
 - Add a file header to mention the release license, the author, and the copyright.
 - All modules's public API must be documented, with a proper JSDoc block
 explaining the role, declaring the expected parameter and the possible return
@@ -289,7 +289,7 @@ myTreeObjectIsSoCool.firstLevelOfTheTree.childrenOfTheNode.secondLevelOfTheTreeN
 ```
 
 ### Good example: properly named identifiers
-Since the silly example was trivial, the equivalent respecting good practices
+Since the silly example was trivial, the equivalent respecting the best practices
 is trivial as well. Variables got a proper name, and long names are removed
 for the benefit of clearer versions.
 

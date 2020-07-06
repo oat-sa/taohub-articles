@@ -3,29 +3,29 @@ authors:
     - "Jean-Sébastien Conan"
 tags:
     Frontend Architecture:
-        - "Good practices"
+        - "Best practices"
 -->
 
-# TAO Frontend Good Practices
+# TAO Frontend Best Practices
 
 ## Components
 
-> This document describes good practices regarding frontend components on Current Gen.
+> This document describes the best practices regarding frontend `core/components`.
 
 **Description** -
 In order to prevent trivial issues due to bad design, this article will propose
-a list of good practices to apply. For each presented situation an example will
+a list of best practices to apply. For each presented situation an example will
 be provided for both bad and good solutions, with some explanation around them.
 
 **Disclaimer** -
 Regarding the provided examples, in order to make them more readable, only the
-addressed topic will be represented, and good practices unrelated with it might
+addressed topic will be represented, and the best practices unrelated with it might
 not be always presented in the code. Please also keep in mind that the provided
 examples are not final solutions, only illustrations.
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [TAO Frontend Good Practices](#tao-frontend-good-practices)
+- [TAO Frontend Best Practices](#tao-frontend-best-practices)
 	- [Components](#components)
 		- [Respect the separation of concerns and the atomicity principles](#respect-the-separation-of-concerns-and-the-atomicity-principles)
 			- [Bad example: component that alter the surrounding](#bad-example-component-that-alter-the-surrounding)
