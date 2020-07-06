@@ -449,4 +449,4 @@ tabs2.activateTabByName('t3');
 
 ### Resources
 - [Component abstraction](component-abstraction.md)
-- [Dependency injection](../architecture/amd-requirejs.md#dependency-injection)
+- [Dependency injection](../Architecture/amd-require.md#dependency-injection)
