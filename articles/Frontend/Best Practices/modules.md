@@ -36,13 +36,29 @@ examples are not final solutions, only illustrations.
 
 ## Be careful with module scope
 Usually a module is loaded along with the page. Or later in case of lazy
-loading. In all cases it will remain available till the page is closed. That
-means every code that is contained at the root of the module will be executed
-upon loading. For that reason code defined in the module must be static, and
-should not launch nor trigger any behavior, unless this is the bootstrap of the
-application, or unless this is a worker. Per definition, the purpose of a
-module is to define, scope, and provide features. But those features should not
-be activated without need.
+loading. In all cases it will remain available till the page is closed.
+
+If it's an AMD module, the module is a function. This function is called when 
+the module is required as a dependency for the first time. So the module's root 
+scope is executed only once when loaded. This can have side effect if a behaviour 
+is defined in the scope, or can be used to share an instance across modules.
+
+Every code contained at the root of a module will be executed upon loading.
+This is the reason why code defined in the module must be static, and
+should not launch nor trigger any behavior. Per definition, the purpose of a
+module is to define, scope, and provide features.
+
+Variables declared in the root scope of a module should be static, their references
+will remain accessible by any exposed function. If such a variable is used to store
+values related to a generated instance, every instance will share the same reference
+and will pollute each other in case of modification to this variable.
+
+However, there are still use cases to have behavior directly in the root scope of a
+module. For example:
+- the module is the bootstrap of the application
+- this is a worker
+- the module is sharing a static instance
+- the module is sharing a registry
 
 Keep in mind that what is inside a module will be executed immediately, even if
 it is not needed. And it will be executed only once for the whole application.
@@ -65,8 +81,10 @@ page bootstrap.
 - Avoid to register events from the module, prefer to implement an API to start
 and stop the event listening when needed.
 - For workers or bootstrap modules, having auto executed code is legit.
-- Registering adapters is also ok since the purpose is to load not to start a
-process.
+- A module can register providers/adapters from its root's scope, the purpose
+being to load and expose, not to start a process.
+- Keep belongings inside the instances, internal variables should remain inside
+the factories.
 
 ### Bad example: immediate registration of heavy process
 In the following snippet, one is registering a listener on the resize event to
@@ -431,3 +449,4 @@ tabs2.activateTabByName('t3');
 
 ### Resources
 - [Component abstraction](component-abstraction.md)
+- [Dependency injection](../architecture/amd-requirejs.md#dependency-injection)
