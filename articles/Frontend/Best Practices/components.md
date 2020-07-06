@@ -48,7 +48,7 @@ examples are not final solutions, only illustrations.
 
 ### Respect the separation of concerns and the atomicity principles
 Component must follow the principle of separation of concerns. They must only
-take care of the feature set they have to provide. They must also respect the
+take care of the feature-set they have to provide. They must also respect the
 atomicity, and must not alter the surrounding nor alter the internals of
 embedded elements.
 
@@ -58,12 +58,22 @@ needed in the HTML markup of an associated component, no direct modification
 must be applied, but instead a dedicated API must be invoked. If needed, such
 an API could be added and then utilized.
 
-As other example, when an operation is required to be performed on higher level,
-it is better to emit an event than relying on an hypothetical surrounding API or
-adding arbitrarily other high level element. Then the responsibility will belong
+Other example, when an operation must be triggered from a component to its
+surrounding, it should not directly perform the operation nor call an API from this
+surrounding. First of all, the component does not know anything about its container.
+Moreover, the surrounding might have a different composition that the expected one,
+or the expected API might not exist in the execution context. This locks the
+possibilities, prevents to use the component in various situations, and introduces
+undocumented relationships.
+
+It is better to emit an event instead, especially since the event model is part of
+the API available for every component. Then the responsibility will belong
 to the container to take care of the notification or forward the information at
-higher level. This way the component is not introducing any coupling, and remain
+higher level. This way the component is not introducing any coupling, and remains
 able to work in any context. Components must be modular and pluggable.
+
+Obviously, the available events must be known by the container.
+As a corollary, events must be documented.
 
 #### Bad example: component that alter the surrounding
 In the following snippet the layout helper `loadingBar` is called from a component.
@@ -163,18 +173,12 @@ done. However, simple callback means only one subscriber at a time. If a second
 subscriber wants to enter the party, it will either replace the already registered
 subscriber, or will be rejected. This is not very convenient.
 
-In the context of a system call, that is not shareable, it is legit to only have
-one possible subscriber, like in the Node.js FileSystem API. But in the context
-of components, this is too restrictive.
-
-Eventually, a callback queue might be implemented to take care of *1-to-N*
-relationship. However, fortunately the component abstraction is built on top of
-the [`eventifier`](events-model.md), and therefore it offers a good support for
-an extensive API. The events manager allows a *1-to-N* relationship, which is
-pretty convenient for a component.
+The component abstraction is built on top of the [`eventifier`](events-model.md), 
+and therefore it offers a good support for an extensive API. The events manage
+allows a *1-to-N* relationship, which is pretty convenient for a component.
 
 Thanks to the [`eventifier`](events-model.md), every component can emit events.
-It is strongly recommended to rely on this ability, and the use of simple
+It is strongly recommended relying on this ability, and the use of simple
 callbacks should be avoided.
 
 #### Bad example: using callbacks
@@ -358,8 +362,8 @@ action. The benefit being you can now prevent the tab to be activated.
 
 However, please keep in mind this is not an universal solution. Depending on
 what you intend it might not be the best approach. Once again, ask yourself
-if the action can be prevented by the consumer. In many cases this is not
-needed.
+if the action can be prevented by the consumer. **In many cases this is not
+needed.**
 
 ```javascript
 /**
