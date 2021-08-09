@@ -8,13 +8,13 @@
 
 > Extension required to advanced search integration with TAO platform `oat-sa/extension-tao-advanced-search`
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 ## Worker configuration
 Event processing related to the indexing isolated within separate taskQueue named `indexation_queue`. 
 It must be configured to work though RDS broker according to [this instruction](https://github.com/oat-sa/extension-tao-task-queue/blob/master/README)
 
-## Create an Indexer{#create-an-indexer}
+## Create an Indexer
 
 ## 1) Create a new Migration Indexing Task
 
@@ -45,7 +45,7 @@ class DeliveryResultMigrationTask extends AbstractIndexMigrationTask
 }
 ``` 
 
-### 2) Populate the indexes{#2-populate-the-indexes}
+### 2) Populate the indexes
 
 ### To warmup cache
 
@@ -55,37 +55,37 @@ This is necessary to optimize indexation:
 ./taoAdvancedSearch/scripts/tools/CacheWarmup.sh --help
 ```
 
-#### To populate ALL indexes, execute:{#to-populate-all-indexes-execute}
+#### To populate ALL indexes, execute:
 
 ```shell script
 ./taoAdvancedSearch/scripts/tools/IndexPopulator.sh --help
 ```
 
-#### To populate only resources indexes (Items, tests, etc), execute:{#to-populate-only-resources-indexes-items-tests-etc-execute}
+#### To populate only resources indexes (Items, tests, etc), execute:
 
 ```shell script
 ./taoAdvancedSearch/scripts/tools/IndexResources.sh --help
 ```
 
-#### To populate only resources from one class, execute:{#to-populate-only-resources-from-one-class-execute}
+#### To populate only resources from one class, execute:
 
 ```shell script
 ./taoAdvancedSearch/scripts/tools/IndexClassResources.sh --help
 ```
 
-#### To populate only class metadata indexes, execute:{#to-populate-only-class-metadata-indexes-execute}
+#### To populate only class metadata indexes, execute:
 
 ```shell script
 ./taoAdvancedSearch/scripts/tools/IndexClassMetatada.sh --help
 ```
 
-#### To populate only delivery results, execute:{#to-populate-only-delivery-results-execute}
+#### To populate only delivery results, execute:
 
 ```shell script
 ./taoAdvancedSearch/scripts/tools/IndexDeliveryResults.sh --help
 ```
 
-## Garbage collection{#garbage-collection}
+## Garbage collection
 
 To clean old documents in the indexes:
 
@@ -93,7 +93,7 @@ To clean old documents in the indexes:
 ./taoAdvancedSearch/scripts/tools/GarbageCollector.sh --help
 ````
 
-## Getting statistics{#getting-statistics}
+## Getting statistics
 
 Execute following command:
 ```shell

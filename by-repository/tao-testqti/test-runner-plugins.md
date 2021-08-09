@@ -39,7 +39,7 @@
 - [Features](#features)
 
 
-# Plugins{#plugins}
+# Plugins
 
 Thanks to the modular architecture of the new Test Runner, most of the features are provided through plugins.
 
@@ -61,12 +61,12 @@ Through the registry, plugins can be enabled or disabled for the whole platform.
 A system of [features](#features) also allows to enable/disable plugins per deliveries.
 
 
-## Content Plugins{#content-plugins}
+## Content Plugins
 
 Those plugins are intended to be related to the test content.
 
 
-### Dialog{#dialog}
+### Dialog
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -88,7 +88,7 @@ listen | `confirm.*` | `message`, `accept`, `reject` | Displays a confirm messag
 listen | `closedialog.*` | `accept` | Close all dialogs. The namespace of the event allows to restrict the target. By default all dialogs will be closed with reject. The `accept` parameter allows to close with accept.
 
 
-### Exit Messages{#exit-messages}
+### Exit Messages
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -108,7 +108,7 @@ listen | `leave` | `data` | When the `leave` event comes with a message, display
 emit | 'alert.leave' | `data.message` | Displays an alert message to bring the exit reason to the test taker
 
 
-### Feedback Modal Message{#feedback-modal-message}
+### Feedback Modal Message
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -128,7 +128,7 @@ Mode | Event | Parameters | Description
 emit | `plugin-resume.itemAlertMessage` | | The test taker has acknowledged the feedback
 
 
-### Feedback Inline Message{#feedback-inline-message}
+### Feedback Inline Message
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -148,7 +148,7 @@ Mode | Event | Parameters | Description
 emit | `plugin-resume.itemInlineMessage` | | The test taker has acknowledged the feedback
 
 
-### Modal Feedback{#modal-feedback}
+### Modal Feedback
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -172,7 +172,7 @@ listen | `plugin-resume.itemAlertMessage` | | Closes the feedback as the test ta
 listen | `plugin-resume.itemInlineMessage` | | Closes the feedback as the test taker acknowledge it
 
 
-### Feedback{#feedback}
+### Feedback
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -197,7 +197,7 @@ listen | `confirm.*` | | Closes existing feedback
 listen | `unloaditem` | | Closes existing feedback
 
 
-### Loading Bar{#loading-bar}
+### Loading Bar
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -217,7 +217,7 @@ listen | `unloaditem` | | Displays the loading bar
 listen | `renderitem` | | Hide the loading bar
 
 
-### Overlay{#overlay}
+### Overlay
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -251,7 +251,7 @@ listen | `enableitem` | | Hides the overlay
 listen | `unloaditem` | | Hides the overlay
 
 
-### Collapser{#collapser}
+### Collapser
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -288,7 +288,7 @@ listen | `renderitem` | | Update the size of the bar
 listen | `loaditem` | | Update the size of the bar
 
 
-### Rubric Block{#rubric-block}
+### Rubric Block
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -310,12 +310,12 @@ listen | `renderitem` | | Shows the rubric blocks if any
 listen | `unloaditem` | | Hides and removes the rubric blocks if any
 
 
-## Control Plugins{#control-plugins}
+## Control Plugins
 
 Those plugins are intended to provide a control on the test
 
 
-### Connectivity Check{#connectivity-check}
+### Connectivity Check
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -341,7 +341,7 @@ emit | `disconnect` | | Emit this event when the browser has loss the connection
 emit | `reconnect` | | Emit this event when the browser has retrieved the connection
 
 
-### Duration Record{#duration-record}
+### Duration Record
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -367,7 +367,7 @@ listen | `plugin-get.duration` | | Loads the duration from store
 listen | `finish` | | Removes the duration store
 
 
-### Progress Indicator{#progress-indicator}
+### Progress Indicator
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -388,7 +388,7 @@ listen | `ready`| | Updates the progress bar
 listen | `loaditem`| | Updates the progress bar
 
 
-### Test State{#test-state}
+### Test State
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -409,7 +409,7 @@ emit | `destroy` | | Force to leave the test if the state is inconsistent
 emit | `leave` | `data` | Force to leave the test it has been paused or finished, provide a message to display
 
 
-### Timer Indicator{#timer-indicator}
+### Timer Indicator
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -445,7 +445,7 @@ emit | `danger` | `message` | Displays a message about the remaining time with d
 emit | `error` | `message` | Displays a message about the remaining time with error layout
 
 
-### Title Indicator{#title-indicator}
+### Title Indicator
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -464,12 +464,12 @@ Mode | Event | Parameters | Description
 listen | `renderitem` | | Updates the displayed title
 
 
-## Navigation Plugins{#navigation-plugins}
+## Navigation Plugins
 
 Those plugins are intended to manage the navigation inside the test
 
 
-### Navigation and review panel{#navigation-and-review-panel}
+### Navigation and review panel
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -503,7 +503,7 @@ Name | Action | Parameters | Description
 `callTestAction` | `flagItem` | `position`, `flag` | Mark/unmark an item for later review
 
 
-### Next button{#next-button}
+### Next button
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -532,7 +532,7 @@ Name | Action | Parameters | Description
 `next` | | | Moves to the next available item
 
 
-### Previous button{#previous-button}
+### Previous button
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -560,7 +560,7 @@ Name | Action | Parameters | Description
 `previous` | | | Moves to the previously available item
 
 
-### Skip button{#skip-button}
+### Skip button
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -589,7 +589,7 @@ Name | Action | Parameters | Description
 `skip` | | | Skips the current item
 
 
-### Next section button{#next-section-button}
+### Next section button
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -618,12 +618,12 @@ Name | Action | Parameters | Description
 `next` | | `section` | Moves to the next available section
 
 
-## Security Plugins{#security-plugins}
+## Security Plugins
 
 Those plugins are intended to enforce the security of the assessment test
 
 
-### Disable right click{#disable-right-click}
+### Disable right click
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -636,12 +636,12 @@ Disables the right click and the context menu on items.
 >- **Namespace:** `taoQtiTest/runner/plugins/security/disableRightClick`
 
 
-## Tools Plugins{#tools-plugins}
+## Tools Plugins
 
 Those plugins are intended to provide a better user experience
 
 
-### Comment tool{#comment-tool}
+### Comment tool
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -669,7 +669,7 @@ Name | Action | Parameters | Description
 `callTestAction` | `comment` | `comment` | Sends the comment to the server
 
 
-### Document Viewer{#document-viewer}
+### Document Viewer
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -694,7 +694,7 @@ listen | `move` | | Hides the panel
 listen | `skip` | | Hides the panel
 
 
-### Item themes switcher{#item-themes-switcher}
+### Item themes switcher
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -718,7 +718,7 @@ listen | `disabletools` | |  Disables the button
 listen | `unloaditem` | |  Disables the button
 
 
-### Calculator{#calculator}
+### Calculator
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -744,7 +744,7 @@ emit | `plugin-calculator.open` | | Notify the plugin is opened
 emit | `plugin-calculator.close` | | Notify the plugin is closed
 
 
-### Zoom{#zoom}
+### Zoom
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -765,7 +765,7 @@ listen | `renderitem` | | Enables the plugin and targets the item content
 listen | `enabletools` | | Enables the plugin
 listen | `disabletools` | | Disables the plugin
 
-### Highlighter{#highlighter}
+### Highlighter
 
 Required | Default | Configurable | Platform Option | Test Option | Other Option
 --- | --- | --- | --- | --- | ---
@@ -788,7 +788,7 @@ listen | `disabletools` | | Disables the plugin
 emit | `start` | | Highlighting mode started
 emit | `end` | | Highlighting mode stopped
 
-# Registry{#registry}
+# Registry
 
 >- **Since:** v5.0.0
 
@@ -826,7 +826,7 @@ $allPlugins = $pluginService->getAllPlugins();
 ...
 ```
 
-## Registry API{#registry-api}
+## Registry API
 
 ## TestPluginService->getAllPlugins()
 Retrieve the list of all available plugins (from the registry).
@@ -834,35 +834,35 @@ Retrieve the list of all available plugins (from the registry).
 **Returns:** an array of `TestPlugin` instances
 
 
-### TestPluginService->getPlugin(string $id){#testpluginservice-getpluginstring-id}
+### TestPluginService->getPlugin(string $id)
 
 Retrieve a plugin by its identifier from the registry
 
 **Returns:** The `TestPlugin` or `null`
 
 
-### TestPluginService->loadPlugin(array $data){#testpluginservice-loadpluginarray-data}
+### TestPluginService->loadPlugin(array $data)
 
 Load a test plugin from the given data.
 
 **Returns:** The `TestPlugin` or `null`
 
 
-### TestPluginService->activatePlugin(TestPlugin $plugin){#testpluginservice-activateplugintestplugin-plugin}
+### TestPluginService->activatePlugin(TestPlugin $plugin)
 
 Change the state of a plugin to active.
 
 **Returns:** `true` if the process succeed, or `false`
 
 
-### TestPluginService->deactivatePlugin(TestPlugin $plugin){#testpluginservice-deactivateplugintestplugin-plugin}
+### TestPluginService->deactivatePlugin(TestPlugin $plugin)
 
 Change the state of a plugin to inactive.
 
 **Returns:** `true` if the process succeed, or `false`
 
 
-# Features{#features}
+# Features
 
 >- **Since:** v5.28.O
 

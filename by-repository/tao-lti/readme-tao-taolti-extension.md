@@ -8,7 +8,7 @@
 
 > Extension to manage LTI services for TAO
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you have already a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -41,20 +41,20 @@ As a system administrator you can also install it through the TAO Extension Mana
 - Settings (the gears on the right hand side of the menu) -> Extension manager
 - Select _taoLti_ on the right hand side, check the box and hit _install_
 
-## REST API{#rest-api}
+## REST API
 
 [Lti REST API](https://openapi.taotesting.com/viewer/?url=https://raw.githubusercontent.com/oat-sa/extension-tao-lti/master/doc/rest.json)
 
 <!-- Uncomment and describe if applicable
-## LTI Endpoints{#lti-endpoints}
+## LTI Endpoints
 
 -->
 
-## Configuration options{#configuration-options}
+## Configuration options
 
 ## auth.conf.php
 
-#### Configuration option `config`{#configuration-option-config}
+#### Configuration option `config`
 
 *Description:* this specifies a single option as the `adapter` key of the array. This adapter is to be used to authenticate LTI requests and is retrieved in [FactoryLtiAuthAdapterService](taoLti/models/classes/FactoryLtiAuthAdapterService.php).
 
@@ -65,7 +65,7 @@ As a system administrator you can also install it through the TAO Extension Mana
 * `['config' => ['adapter' => 'oat\\taoLti\\models\\classes\\LtiAuthAdapter']]`
 
 
-### CookieVerifyService.conf.php{#cookieverifyserviceconfphp}
+### CookieVerifyService.conf.php
 
 ### Configuration option `verify_cookie`
 
@@ -75,7 +75,7 @@ As a system administrator you can also install it through the TAO Extension Mana
 * `true`: enable the session check. 2 more HTTP redirects are needed
 * `false`: disable the session check
 
-### LtiUserService.conf.php{#ltiuserserviceconfphp}
+### LtiUserService.conf.php
 
 ### Configuration option `factoryLtiUser`
 
@@ -84,29 +84,29 @@ As a system administrator you can also install it through the TAO Extension Mana
 *Possible values:* 
 * an instance of any class that implements the `oat\taoLti\models\classes\user\LtiUserFactoryInterface` interface
 
-#### Configuration option `transaction-safe` (only for `OntologyLtiUserService` implementation){#configuration-option-transaction-safe-only-for-ontologyltiuserservice-implementation}
+#### Configuration option `transaction-safe` (only for `OntologyLtiUserService` implementation)
 
 *Description:* not used
 
-#### Configuration option `transaction-safe-retry` (only for `OntologyLtiUserService` implementation){#configuration-option-transaction-safe-retry-only-for-ontologyltiuserservice-implementation}
+#### Configuration option `transaction-safe-retry` (only for `OntologyLtiUserService` implementation)
 
 *Description:* not used
 
-#### Configuration option `lti_ku_` (only for `KvLtiUserService` implementation){#configuration-option-lti-ku-only-for-kvltiuserservice-implementation}
+#### Configuration option `lti_ku_` (only for `KvLtiUserService` implementation)
 
 *Description:* a prefix for storing `taoId` => `ltiId` relation in the key-value storage to look up LTI users
 
 *Possible values:* 
 * any unique string
 
-#### Configuration option `lti_ku_lkp_` (only for `KvLtiUserService` implementation){#configuration-option-lti-ku-lkp-only-for-kvltiuserservice-implementation}
+#### Configuration option `lti_ku_lkp_` (only for `KvLtiUserService` implementation)
 
 *Description:* a prefix for storing `ltiId` => `taoId` relation in the key-value storage to execute reverse lookup
 
 *Possible values:* 
 * any unique string
 
-### LtiValidatorService.conf.php{#ltivalidatorserviceconfphp}
+### LtiValidatorService.conf.php
 
 ### Configuration option `launchDataValidator`
 
@@ -118,6 +118,6 @@ As a system administrator you can also install it through the TAO Extension Mana
 *Value examples:* 
 * `[ new oat\taoLti\models\classes\LaunchData\Validator\Lti11LaunchDataValidator() ]`
 
-## Extension Wiki{#extension-wiki}
+## Extension Wiki
 
 You can find the [extension wiki here](https://github.com/oat-sa/extension-tao-lti/wiki).

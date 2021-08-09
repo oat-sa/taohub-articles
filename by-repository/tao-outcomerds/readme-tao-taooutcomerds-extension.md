@@ -8,7 +8,7 @@
 
 > Extension that allows a storage in relational database
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you have already a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -42,27 +42,27 @@ As a system administrator you also install it through the TAO Extension Manager:
 - Select _taoOutcomeRds_ on the right hand side, check the box and hit _install_
 
 <!-- Uncomment and describe if applicable
-## REST API{#rest-api}
+## REST API
 
 [](https://openapi.taotesting.com/viewer/?url=https://raw.githubusercontent.com/oat-sa/extension-tao-outcomerds/master/doc/rest.json)
 -->
 
 <!-- Uncomment and describe if applicable
-## LTI Endpoints{#lti-endpoints}
+## LTI Endpoints
 
 -->
 
-## Configuration options{#configuration-options}
+## Configuration options
 
 ## RdsResultStorage.conf.php
 
-#### Configuration option `persistence`{#configuration-option-persistence}
+#### Configuration option `persistence`
 
 *Description :* contains a persistence value of the RDS result storage .
 
 *Possible values of the `persistence` key:* 
 * a string value which equals to `default`.
 
-## Extension Wiki{#extension-wiki}
+## Extension Wiki
 
 You can find the [extension wiki here](https://github.com/oat-sa/extension-tao-outcomerds/wiki).

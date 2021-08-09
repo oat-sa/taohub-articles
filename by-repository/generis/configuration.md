@@ -4,7 +4,7 @@ The configuration of this extension can be found in two locations:
 * the file `config/generis.conf`
 * the directory `config/generis/`
 
-# generis.conf.php{#generisconfphp}
+# generis.conf.php
 
 This is the original configuration that is just loaded into global constants. Please do not add
 anything to this file, but register a service instead.
@@ -31,36 +31,36 @@ DEBU* G_MODE
 * CONFIG_PATH
 * GENERIS_CACHE_USERS_ROLES
 
-# Common system configurations{#common-system-configurations}
+# Common system configurations
 
 ## filesystem.conf.php
 
 Defines the filesystem abstraction, based on https://flysystem.thephpleague.com/v1/docs/
 
-### log.conf.php{#logconfphp}
+### log.conf.php
 
 Defines the log files, see [[Psr3-logger]]
 
-### persistences.conf.php{#persistencesconfphp}
+### persistences.conf.php
 
 Defines the abstraction for SQL and keyvalue databases
 
-# Advanced configurations{#advanced-configurations}
+# Advanced configurations
 
 ## auth.conf.php
 
-### event.conf.php{#eventconfphp}
+### event.conf.php
 
 ## LockService.conf.php
 
-### ontology.conf.php{#ontologyconfphp}
+### ontology.conf.php
 
 ## passwords.conf.php
 
-### permissions.conf.php{#permissionsconfphp}
+### permissions.conf.php
 
 ## SimpleCache.conf.php
 
-### UserLanguageService{#userlanguageservice}
+### UserLanguageService
 
  Do not change

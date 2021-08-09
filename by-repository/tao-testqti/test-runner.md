@@ -17,7 +17,7 @@
 - [Runner Configuration](#options)
 
 
-## Runner{#runner}
+## Runner
 
 There is currently two versions of the QTI Test Runner.
 
@@ -34,7 +34,7 @@ The following documentation is only related to the new version of the Test Runne
 To get more info on the runner implementation, please refer to the [taoTests extension](https://github.com/oat-sa/extension-tao-test/wiki/Test-Runner#runner).
 
 
-## Provider{#provider}
+## Provider
 
 The Test Runner engine is based on the *Delegation* design pattern.
 This means the engine delegates most of its API to an external **provider** that brings the implementation.
@@ -57,7 +57,7 @@ that can hook the life cycle steps or react to events.
 To get more info on the provider implementation, please refer to the [taoTests extension](https://github.com/oat-sa/extension-tao-test/wiki/Test-Runner#runner-provider).
 
 
-## Events{#events}
+## Events
 
 Events take a big place in the runner's life cycle. Here is the list of the events handled by the new Test Runner.
 
@@ -104,7 +104,7 @@ Event | Parameters | Purpose
 `warning` | `message` | A warning message will be displayed
 `info` | `message` | An info message will be displayed
 
-## Life Cycle{#life-cycle}
+## Life Cycle
 
 The life cycle of the runner is quite complex.
 Here is a very simplified life cycle to illustrate the main workflow of the runner:
@@ -118,7 +118,7 @@ A test runner does not carry on only one item, so the life cycle is manager thro
 
 To get more info on the standard life cycle of the runner, please refer to the [taoTests extension](https://github.com/oat-sa/extension-tao-test/wiki/Test-Runner#runner-life-cycle).
 
-## Proxy{#proxy}
+## Proxy
 
 The proxy brings the ability to communicate with the outside.
 Like the runner it is built using the *Delegation* design pattern.
@@ -150,11 +150,11 @@ Methods | Controller | Action | Purpose
 To setup the proxy, the provider relies on a config object that will translate and maintain the runner config set.
 This is the purpose of the `qtiServiceConfig` component.
 
-### Security{#security}
+### Security
 
 Some mechanisms are provided to enforce the securgity of the test. A security token is provided to validate the actions, and the time duration of the test is stored using a time line.
 
-#### Token{#token}
+#### Token
 
 Most of the interactions with the server will require a security token.
 This security token is unique and is generated with each action.
@@ -164,7 +164,7 @@ Once the action is done, the server generates and sens a new token to the client
 
 Not all actions require a security token, but the majority does.
 
-#### TimeLine{#timeline}
+#### TimeLine
 
 The time line is a a way to compute the time elapsed during the test both on the server and the client sides, and is intended to synchronize the two.
 
@@ -185,7 +185,7 @@ A time line is a suite of time point pairs: [start, end]. To be able to compute 
 If a pair is incomplete the result cannot be computed. The same if the pair is bad built (like 2 starts for 1 end, or vice-versa).
 This is why the time points are set as often as possible.
 
-## Controller{#controller}
+## Controller
 
 A particular controller is dedicated to the Test Runner life cycle: `taoQtiTest_actions_Runner`
 
@@ -462,7 +462,7 @@ The exposed TestRunner actions are:
     - *Possible error*: An error may be triggered if the test session is already finished, or if the test does not exist.
 
 
-## Layout{#layout}
+## Layout
 
 The new Test Runner does not use iframes anymore, it relies instead on a HTML5 layout, and delegate the access handling to an [AreaBroker](https://github.com/oat-sa/extension-tao-test/wiki/Test-Runner#area-broker).
 
@@ -479,7 +479,7 @@ Basically, this AreaBroker gives access to:
 The layout is built and injected to the page by the [provider](#provider) when the Test Runner is rendered.
 
 
-### Access to the layout{#access-to-the-layout}
+### Access to the layout
 
 Each component of the Test Runner must rely on the AreaBroker to get access to the layout.
 To do so, the Test Runner provides an API to get the AreaBroker instance:
@@ -512,12 +512,12 @@ For instance, the QTI provider bring also access to the actionBar, which contain
 To get more info on the area broker implementation, please refer to the [taoTests extension](https://github.com/oat-sa/extension-tao-test/wiki/Test-Runner#area-broker).
 
 
-## Helpers{#helpers}
+## Helpers
 
 Some helpers are provided to centralize the common features.
 
 
-### Map{#map}
+### Map
 
 The Map Helper brings several API to manipulate the Map of the test assessment.
 Each of these API need the map to manipulate as their first parameter.
@@ -546,7 +546,7 @@ Methods | Returns Type | Description
 **Note:** Each time a component needs to manipulate the map, it should use this helper.
 
 
-### Messages{#messages}
+### Messages
 
 The Messages Helper is intended to complete the message displayed when trying to leave the test.
 
@@ -562,13 +562,13 @@ An [option](#option) allows to prevent this completion: `test-taker-unanswered-i
 Each time the runner must display a message related to an exit, it must use this helper to complete the message.
 
 
-## Plugins{#plugins}
+## Plugins
 
 [A chapter](Test-Runner-Plugins) is dedicated to the standard available plugins.
 
 To get more info on the plugin implementation, please refer to the [taoTests extension](https://github.com/oat-sa/extension-tao-test/wiki/Test-Runner#plugins).
 
 
-## Options{#options}
+## Options
 
 [A chapter](Test-Runner-Config) is dedicated to the available options and how to manage them.

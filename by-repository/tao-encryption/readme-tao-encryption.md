@@ -10,13 +10,13 @@ You can add the Tao Encryption as a standard TAO extension to your current TAO i
  $ composer require oat-sa/extension-tao-encryption
 ```
 
-## Encrypted services supported{#encrypted-services-supported}
+## Encrypted services supported
 
 ## 1. Results Encryption
 
 - #### Setup scripts for Tao Server instance
 
-###### Encrypt{#encrypt}
+###### Encrypt
 
 ```bash
  $ sudo -u www-data php index.php 'oat\taoEncryption\scripts\tools\SetupAsymmetricKeys' generate
@@ -30,7 +30,7 @@ _Note_:
 _Note_: 
 > On Server Tao instance. You need both keys
 
-###### Decrypt{#decrypt}
+###### Decrypt
 
 In order to decrypt your results use the following script by passing a delivery id.
 
@@ -61,7 +61,7 @@ In order to sync encrypted results the script needs to be run on the server tao 
  
 ![alt text](docs/result_encryption.png)
 
-### 2. Test State data encryption{#2-test-state-data-encryption}
+### 2. Test State data encryption
 
 - #### Setup scripts for Tao Client instance
 
@@ -79,7 +79,7 @@ This service it's using the symmetric algorithm in order to encrypt information.
 
 ![alt text](docs/state_encryption.png)
 
-### 3. User Encryption{#3-user-encryption}
+### 3. User Encryption
 
 - #### Setup scripts for Tao Client instance
 
@@ -103,7 +103,7 @@ _Note_:
 
 ![alt text](docs/user_encryption.png)
 
-### 4. Setup Encrypted File Systems{#4-setup-encrypted-file-systems}
+### 4. Setup Encrypted File Systems
 
 - #### Setup scripts for Tao Client instance
 

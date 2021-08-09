@@ -2,7 +2,7 @@
 
 An extension for TAO to create test booklets (publishable in MS-Word and PDF along with Answer Sheets)
 
-## Warning{#warning}
+## Warning
 
 Due to the move to `ES2015`, some code might not work on legacy browsers. 
 Especially for code that use to rely on polyfills, like for the `Promise`.
@@ -13,12 +13,12 @@ the generation of PDF only works with bundled version (aka production mode).
 As a reminder, to activate the production mode, open the config file `config/generis.conf.php`, line 50,
 and set the constant `DEBUG_MODE` to `false`:
 ```php
-# mode{#mode}
+# mode
 
 define('DEBUG_MODE', false);
 ```
 
-## Requirements{#requirements}
+## Requirements
 
 This extension needs a third-party tool to generate the PDF files.
 So to be able to generate the booklet, you should install `wkhtmltopdf` on your server.

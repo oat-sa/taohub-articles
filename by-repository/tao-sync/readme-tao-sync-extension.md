@@ -12,7 +12,7 @@ All types of data and results can be synchronized. All HTTP requests are require
 
 **Important note: While this article uses American spelling, some of the command line instructions are in British spelling for historical reasons, e. g. `synchronisation` instead of `synchronization`!**
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you already have a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -39,7 +39,7 @@ As a system administrator you can also install it through the TAO Extension Mana
 - Settings (the gears on the right-hand side of the menu) -> Extension manager
 - Select _taoSync_ on the right-hand side, check the box and hit _install_
 
-## Synchronization{#synchronization}
+## Synchronization
 
 ## Data synchronization
 
@@ -60,7 +60,7 @@ $ sudo -u www-data php index.php '\oat\taoSync\scripts\tool\synchronisation\Sync
 
 When a delivery is published it exports a sanpshot of a QTI test package. This snapshot will be used during synchronization.
 
-### Result synchronization{#result-synchronization}
+### Result synchronization
 
 Once the Client Server has the delivery result, a script sends it to the Central Server. Only completed delivery executions will be sent, results will be submitted only once. When a delivery execution is sent, the synchronization history will be updated to log the action. You can set the `deleteAfterSend` parameter to `true` to delete results after the synchronization.
 
@@ -71,7 +71,7 @@ Execute the following command to synchronize the result:
 $ sudo -u www-data php index.php '\oat\taoSync\scripts\tool\synchronisation\SynchronizeResult'
 ```
 
-### Synchronizing all data and results{#synchronizing-all-data-and-results}
+### Synchronizing all data and results
 
 To synchronize data and results at the same time, use the following command:
 
@@ -79,7 +79,7 @@ To synchronize data and results at the same time, use the following command:
 $ sudo -u www-data php index.php '\oat\taoSync\scripts\tool\synchronisation\SynchronizeAll'
 ```
 
-## OAuth credentials{#oauth-credentials}
+## OAuth credentials
 
 ## Generating credentials to allow a user to connect to the platform
 
@@ -96,7 +96,7 @@ The output of this command will contain the following data:
 
 _Note: Add the `-cmd` flag to this command to execute it on the Client Server._
 
-### Importing OAuth credentials to Client Server{#importing-oauth-credentials-to-client-server}
+### Importing OAuth credentials to Client Server
 
 The following command will import the consumer you have created above into the Client Server. The arguments are the output from the previous command, `$rootUrl` is the domain name of the host server.
 
@@ -104,7 +104,7 @@ The following command will import the consumer you have created above into the C
 $ sudo -u www-data php index.php 'oat\taoSync\scripts\tool\OAuth\ImportOAuthCredentials' -k $key -s $secret -tu $tokenUrl -u $rootUrl
 ```
 
-### Scoping synchronization to a test center identifier{#scoping-synchronization-to-a-test-center-identifier}
+### Scoping synchronization to a test center identifier
 
 To be able to bind a synchronization to the organzition ID of a test center, the platform needs to register a `test-center` property. The SyncService has also to register new synchronizers to process by organisation id.
 

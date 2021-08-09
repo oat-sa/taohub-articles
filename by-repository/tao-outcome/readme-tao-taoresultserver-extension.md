@@ -8,7 +8,7 @@
 
 > Result Core Extension. Provides a results server management, exposes interfaces for results data submission
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you have already a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -41,16 +41,16 @@ As a system administrator you can also install it through the TAO Extension Mana
 - Settings (the gears on the right hand side of the menu) -> Extension manager
 - Select _taoResultServer_ on the right hand side, check the box and hit _install_
 
-## REST API{#rest-api}
+## REST API
 
 [QTI Result REST API](https://openapi.taotesting.com/viewer/?url=https://raw.githubusercontent.com/oat-sa/extension-tao-outcome/master/doc/rest.json)
 
 <!-- Uncomment and describe if applicable
-## LTI Endpoints{#lti-endpoints}
+## LTI Endpoints
 
 -->
 
-## Configuration options{#configuration-options}
+## Configuration options
 
 ## qtiResultsService.conf.php
 
@@ -59,14 +59,14 @@ As a system administrator you can also install it through the TAO Extension Mana
 *Possible values:* 
 * Objects of a class that implements the `QtiResultsService` interface.
 
-### ResultAliasService.conf.php{#resultaliasserviceconfphp}
+### ResultAliasService.conf.php
 
 *Description:* Default implementation of service treats delivery execution id as result id and vice versa.
 
 *Possible values:* 
 * Objects of a class that implements the `ResultAliasService` interface.
 
-### resultservice.conf.php{#resultserviceconfphp}
+### resultservice.conf.php
 
 ### Configuration option `result_storage`
 
@@ -75,12 +75,12 @@ As a system administrator you can also install it through the TAO Extension Mana
 *Possible values:* 
 * Objects of a class that implements the `ResultServerService` interface.
 
-## Command to switch to file storage{#command-to-switch-to-file-storage}
+## Command to switch to file storage
 
 ```bash
 php index.php '\oat\taoResultServer\scripts\install\InstallFileStorage'
 ``` 
 
-## Extension Wiki{#extension-wiki}
+## Extension Wiki
 
 You can find the [extension wiki here](https://github.com/oat-sa/extension-tao-outcome/wiki).

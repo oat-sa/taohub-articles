@@ -39,7 +39,7 @@ Return Values:
   * **200** for a finished delivery
   * **201** for a terminated delivery
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you have already a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -72,27 +72,27 @@ As a system administrator you also install it through the TAO Extension Manager:
 - Settings (the gears on the right hand side of the menu) -> Extension manager
 - Select _ltiDeliveryProvider_ on the right hand side, check the box and hit _install_
 
-## REST API{#rest-api}
+## REST API
 
 [LTI delivery service REST API](https://openapi.taotesting.com/viewer/?url=https://raw.githubusercontent.com/oat-sa/extension-tao-ltideliveryprovider/master/doc/rest.json)
 
 <!-- Uncomment and describe if applicable
-## LTI Endpoints{#lti-endpoints}
+## LTI Endpoints
 
 -->
 
-## Configuration options{#configuration-options}
+## Configuration options
 
 ## LaunchQueue.conf.php
 
-#### Configuration option `relaunchInterval`{#configuration-option-relaunchinterval}
+#### Configuration option `relaunchInterval`
 
 *Description:* specifies time (in seconds) for a test taker to wait before the page is reloaded when waiting in LTI queue
 
 *Possible values:*
 * Any numerical value (> 0)
 
-#### Configuration option `relaunchIntervalDeviation`{#configuration-option-relaunchintervaldeviation}
+#### Configuration option `relaunchIntervalDeviation`
 
 *Description:* specifies time (in seconds) to pick a random amount of seconds between 0 and `relaunchIntervalDeviation`, then the random result is randomly added to or subtracted from relaunchInterval for each time the queue page is being reloaded. 
 The goal of this option is to prevent knocking the backend simultaneously by multiple clients. 
@@ -100,7 +100,7 @@ The goal of this option is to prevent knocking the backend simultaneously by mul
 *Possible values:*
 * Any numerical value between 0 and `relaunchInterval`
 
-### LtiDeliveryExecution.conf.php{#ltideliveryexecutionconfphp}
+### LtiDeliveryExecution.conf.php
 
 ### Configuration option `queue_persistence`
 
@@ -110,7 +110,7 @@ The goal of this option is to prevent knocking the backend simultaneously by mul
 * `default`
 * `cache`
 
-### LtiNavigation.conf.php{#ltinavigationconfphp}
+### LtiNavigation.conf.php
 
 ### Configuration option `thankyouScreen`
 
@@ -121,7 +121,7 @@ The goal of this option is to prevent knocking the backend simultaneously by mul
 * `true`
 * `false`
 
-#### Configuration option `delivery_return_status`{#configuration-option-delivery-return-status}
+#### Configuration option `delivery_return_status`
 
 *Description:* if enabled, the `deliveryExecutionStatus` return parameter will be included in a consumer return URL.
 This parameter will always be set to a delivery execution state label.
@@ -130,7 +130,7 @@ This parameter will always be set to a delivery execution state label.
 * `true`: include the parameter in consumer return URLs
 * `false`: omit the parameter
 
-#### Configuration option `message`{#configuration-option-message}
+#### Configuration option `message`
 
 *Description:* a factory for producing LTI messages
 
@@ -140,7 +140,7 @@ This parameter will always be set to a delivery execution state label.
 *Value example:* 
 * `new oat\ltiDeliveryProvider\model\navigation\DefaultMessageFactory()`
 
-### LtiResultIdStorage.conf.php{#ltiresultidstorageconfphp}
+### LtiResultIdStorage.conf.php
 
 ### Configuration option `persistence`
 *Description:* a persistence that LTI result aliases should be stored in. Should be a persistence name that's registered in `generis/persistences.conf.php`
@@ -149,6 +149,6 @@ This parameter will always be set to a delivery execution state label.
 * `default`
 * `cache`
 
-## Extension Wiki{#extension-wiki}
+## Extension Wiki
 
 You can find the [extension wiki here](https://github.com/oat-sa/extension-tao-ltideliveryprovider/wiki).

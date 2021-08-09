@@ -4,7 +4,7 @@
 
 * Note: requires TAO >= 3.1
 
-## Request to API{#request-to-api}
+## Request to API
 
 The entry point is located on taoResultServer extension:
 
@@ -17,7 +17,7 @@ This API is only available via the HTTP GET method for the moment. It has two en
 - `getLatest`: requires two parameters, `testtaker uri` and `delivery uri`
 - `getQtiResultXml`: requires two parameters, `delivery uri` and `result identifier`.
 
-## Response from API{#response-from-api}
+## Response from API
 
 All responses are REST compliant.
 
@@ -44,11 +44,11 @@ All responses are REST compliant.
 - **500 - Internal error**
     Should never happen
 
-## Swagger description{#swagger-description}
+## Swagger description
 
 https://hub.taocloud.org/restapis/tag/tao-outcome
 
-## Sample code{#sample-code}
+## Sample code
 
 ```php
     // Entry point of QTI results api
@@ -93,7 +93,7 @@ https://hub.taocloud.org/restapis/tag/tao-outcome
 
 ```
 
-## Example of a QTI result{#example-of-a-qti-result}
+## Example of a QTI result
 
 ```xml
     <assessmentResult xmlns="http://www.imsglobal.org/xsd/imsqti_result_v2p1">

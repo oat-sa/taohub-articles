@@ -5,7 +5,7 @@
 Some scripts are provided to easily activate the TestRunner in a particular version.
 
 
-### New Version{#new-version}
+### New Version
 
 From the command line of your server, type and execute the following command:
 
@@ -20,7 +20,7 @@ New test runner activated
 ```
 
 
-### Old Version{#old-version}
+### Old Version
 
 From the command line of your server, type and execute the following command:
 
@@ -35,7 +35,7 @@ Old test runner activated
 ```
 
 
-### Check the Version{#check-the-version}
+### Check the Version
 
 >- *since v5.30.0*
 
@@ -68,12 +68,12 @@ The Test Runner seems to be misconfigured!
 
 ```
 
-## Set up manually{#set-up-manually}
+## Set up manually
 
 In order to correctly set up the Test Runner in the wanted version you need to set up several config file.
 
 
-### New Version{#new-version}
+### New Version
 
 In order to use the new version of the Test Runner you need to set up the following configurations :
 
@@ -119,7 +119,7 @@ class SetNewTestRunner extends \common_ext_action_InstallAction
 ```
 
 
-### Old Version{#old-version}
+### Old Version
 
 In order to use the old version of the Test Runner you need to set up the following configurations :
 

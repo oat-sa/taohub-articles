@@ -4,12 +4,12 @@ Tao platform logger is set in config `generis/log.conf.php`. It accepts a Psr3 l
 
 To make life easier a wrapper exists to send log through monolog.
 
-### 1°) Propagation{#10-propagation}
+### 1°) Propagation
 
 The logger is passed to object in platform bootstrapping. It means that `ConfigurableService`, `Action` and Controller using LoggerAwareInterface will receive the logger.
 It can be accessed also via ServiceManager with key `generis/log`
 
-### 2°) Log Level{#20-log-level}
+### 2°) Log Level
 
 To implements different strategy, developers must use logger following log level  described by [RFC 5424](http://tools.ietf.org/html/rfc5424).
                                                                                  
@@ -37,7 +37,7 @@ To implements different strategy, developers must use logger following log level
      
 The `LoggerAwareTrait` provides wrapper methods, see \Psr\Log\LoggerTrait
 
-### 3°) Tao Monolog{#30-tao-monolog}
+### 3°) Tao Monolog
 
 To send log to monolog a wrapper exists: `TaoMonolog`. It is a configurable service in charge to build the monolog logger from a config.<br/>
 All monolog handlers can be loaded through taoMonolog. An handler is an array with `class` to construct and `options` as constructor arguments.
@@ -66,7 +66,7 @@ To have a better view of monolog possibility, please check:
 * generis/config/header/log.conf.php
 * https://github.com/Seldaek/monolog/blob/master/doc/02-handlers-formatters-processors.md
 
-### 4°) Backward compatibility{#40-backward-compatibility}
+### 4°) Backward compatibility
 
 To ensure backward compatibility `common_Logger` wrap all cal to logger service. 
 `common_Logger` is now deprecated.
@@ -92,7 +92,7 @@ return new oat\oatbox\log\LoggerService(array(
 ));
 ```
 
-### 5°) Using setup.json{#50-using-setupjson}
+### 5°) Using setup.json
 
 To use TaoMonolog:
 ```json
@@ -167,7 +167,7 @@ To use TaoMonolog:
                   
 ```
 
-### 6°) Fluentd Logger{#60-fluentd-logger}
+### 6°) Fluentd Logger
 
 To use Fluentd as log handler combined with trace and environment processors and TAO JSON formatter.
 

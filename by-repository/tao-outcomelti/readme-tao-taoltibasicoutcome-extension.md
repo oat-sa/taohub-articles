@@ -8,7 +8,7 @@
 
 > Extension implements the LTI basic outcome engine for LTI Result Server
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you have already a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -42,22 +42,22 @@ As a system administrator you also install it through the TAO Extension Manager:
 - Select _taoLtiBasicOutcome_ on the right hand side, check the box and hit _install_
 
 <!-- Uncomment and describe if applicable
-## REST API{#rest-api}
+## REST API
 
 [](https://openapi.taotesting.com/viewer/?url=https://raw.githubusercontent.com/oat-sa/extension-tao-outcomelti/master/doc/rest.json)
 -->
 
 <!-- Uncomment and describe if applicable
-## LTI Endpoints{#lti-endpoints}
+## LTI Endpoints
 
 -->
 
 <!-- Uncomment and describe if applicable
-## Configuration options{#configuration-options}
+## Configuration options
 
 ## *.conf.php
 
-#### Configuration option `*`{#configuration-option}
+#### Configuration option `*`
 
 *Description :* some text.
 
@@ -65,6 +65,6 @@ As a system administrator you also install it through the TAO Extension Manager:
 * some text.
 -->
 
-## Extension Wiki{#extension-wiki}
+## Extension Wiki
 
 You can find the [extension wiki here](https://github.com/oat-sa/extension-tao-outcomelti/wiki).

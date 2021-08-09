@@ -2,20 +2,20 @@
 
 [Task Queue Doc](models/classes/taskQueue/README)
 
-# Feature flag{#feature-flag}
+# Feature flag
 
 You can now define feature flag in environment global variables. 
 
-## How to use it{#how-to-use-it}
+## How to use it
 
 You can use feature flag to easily switch off/on parts of TAO functionality.
 
-### Feature flag name{#feature-flag-name}
+### Feature flag name
 
 It is import tht we will use `FEATURE_FLAG` prefix for our feature flags to recognise them and they prupose 
 in environment variable list. 
 
-### AbstractFeatureFlagFormPropertyMapper{#abstractfeatureflagformpropertymapper}
+### AbstractFeatureFlagFormPropertyMapper
 
 To hide/show form fields you can extend `AbstractFeatureFlagFormPropertyMapper` with your configurable service that has
 `OPTION_FEATURE_FLAG_FORM_FIELDS` mapped to list of fields that you want to hide/show. 
@@ -37,7 +37,7 @@ return new FeatureFlagFormPropertyMapper(
 
 This configuration will display `formField_01` when `FEATURE_FLAG_NAME` is enabled
 
-### SectionVisibilityFilterInterface{#sectionvisibilityfilterinterface}
+### SectionVisibilityFilterInterface
 
 `tao/SectionVisibilityFilter` is responsible for listing sections that can be disabled from user. In order to add more 
 sections that have to be disabled/enabled based on feature flag. 
@@ -56,20 +56,20 @@ return new oat\tao\model\menu\SectionVisibilityFilter(array(
 
 This configuration will display `sectionName` when `FETURE_FLAG_01` is enabled.
 
-## Advanced Search feature flag{#advanced-search-feature-flag}
+## Advanced Search feature flag
 
 Advanced search feature will be enabled by default (but it requires elastic search library).
 You can define `FEATURE_FLAG_ADVANCED_SEARCH_DISABLED=true` or `FEATURE_FLAG_ADVANCED_SEARCH_DISABLED=1` feature flag 
 in global environment variables to disable Advanced Search feature.
 
 
-# Webhooks{#webhooks}
+# Webhooks
 
 # Description
 
 Webhooks allow you to send a request to remote server based on triggered event
 
-## How to use it{#how-to-use-it}
+## How to use it
 
 ## Register event webhook.
 
@@ -83,7 +83,7 @@ $ php index.php 'oat\tao\scripts\tools\RegisterEventWebhook'
     \ -e "<<Class FQN>>"
 ``` 
 
-# Check ACL Permissions{#check-acl-permissions}
+# Check ACL Permissions
 
 In order to check ACL permissions, you can use the `PermissionChecker`:
 
@@ -98,12 +98,12 @@ $permissionChecker->hasGrantAccess('resourceId');
 
 **Important**: It takes into consideration the current user in the session, if no user is provided.
 
-# Roles Access (rules and action permissions){#roles-access-rules-and-action-permissions}
+# Roles Access (rules and action permissions)
 
 # Description
 Script allow you to apply (add)/revoke (remove) list of rules and/or permissions to a specific roles and actions.
 
-## How to use it{#how-to-use-it}
+## How to use it
 
 Execute the following command to apply (add) new rules/permissions:
 ```
@@ -117,7 +117,7 @@ $ php index.php 'oat\tao\scripts\tools\accessControl\SetRolesAccess' \
 --config [config.json|json_string]
 ```
 
-### Config example{#config-example}
+### Config example
 
 ```json
 {

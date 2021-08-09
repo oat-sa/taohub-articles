@@ -2,18 +2,18 @@
 
 extension that gather development tools for TAO
 
-# Scripts{#scripts}
+# Scripts
 
 # Item generator
 
 Generates a tree of items. 
 
-### Run{#run}
+### Run
 
 ```shell
 php index.php '\oat\taoDevTools\models\ItemTreeGenerator'
 ```
-### Options{#options}
+### Options
 
 ```
   Optional Arguments:

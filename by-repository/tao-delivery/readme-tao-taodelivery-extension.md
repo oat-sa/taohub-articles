@@ -8,7 +8,7 @@
 
 > Extension to manage deliveries
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you have already a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -41,20 +41,20 @@ As a system administrator you also install it through the TAO Extension Manager:
 - Settings (the gears on the right hand side of the menu) -> Extension manager
 - Select _taoDelivery_ on the right hand side, check the box and hit _install_
 
-## REST API{#rest-api}
+## REST API
 
 [Open API Specification](https://openapi.taotesting.com/viewer/?url=https://raw.githubusercontent.com/oat-sa/extension-tao-delivery/master/doc/rest.json)
 
 <!-- Uncomment and describe if applicable
-## LTI Endpoints{#lti-endpoints}
+## LTI Endpoints
 
 -->
 
-## Configuration options{#configuration-options}
+## Configuration options
 
 ## AttemptService.conf.php
 
-#### Configuration option `states_to_exclude`{#configuration-option-states-to-exclude}
+#### Configuration option `states_to_exclude`
 
 *Description :* when retrieving attempts (executions), those attempts with specified states won't be retrieved
 
@@ -66,7 +66,7 @@ As a system administrator you also install it through the TAO Extension Manager:
 
 One can specify multiple states as an array to exclude.
 
-### authorization.conf.php{#authorizationconfphp}
+### authorization.conf.php
 
 ### Configuration option `providers`
 
@@ -80,7 +80,7 @@ One can specify multiple states as an array to exclude.
 * `[ new oat\taoDelivery\model\authorization\strategy\StateValidation(), oat\taoDelivery\model\authorization\strategy\AuthorizationAggregator() ]`
 
 
-### DeliveryExecutionDelete.conf.php{#deliveryexecutiondeleteconfphp}
+### DeliveryExecutionDelete.conf.php
 
 ### Configuration option `deleteDeliveryExecutionDataServices`
 
@@ -90,7 +90,7 @@ One can specify multiple states as an array to exclude.
 * Objects of a class that implements the `DeliveryExecutionDelete` interface.
 
 
-### deliveryFields.conf.php{#deliveryfieldsconfphp}
+### deliveryFields.conf.php
 
 ### Configuration option `http://www.tao.lu/Ontologies/TAODelivery.rdf#CustomLabel`
 
@@ -102,7 +102,7 @@ One can specify multiple states as an array to exclude.
 *Value examples:* 
 * `[ 'http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole' ]`
 
-### returnUrl.conf.php{#returnurlconfphp}
+### returnUrl.conf.php
 
 ### Configuration option `extension`
 
@@ -114,7 +114,7 @@ One can specify multiple states as an array to exclude.
 *Value examples:* 
 * `taoDelivery`
 
-#### Configuration option `controller`{#configuration-option-controller}
+#### Configuration option `controller`
 
 *Description:* a controller (module) name for composing a return URL
 
@@ -124,7 +124,7 @@ One can specify multiple states as an array to exclude.
 *Value examples:* 
 * `Main`
 
-#### Configuration option `method`{#configuration-option-method}
+#### Configuration option `method`
 
 *Description:* a method (action) for composing a return URL
 
@@ -134,6 +134,6 @@ One can specify multiple states as an array to exclude.
 *Value examples:* 
 * `index`
 
-## Extension Wiki{#extension-wiki}
+## Extension Wiki
 
 You can find the [extension wiki here](https://github.com/oat-sa/extension-tao-delivery/wiki).

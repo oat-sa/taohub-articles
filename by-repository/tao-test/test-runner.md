@@ -41,7 +41,7 @@
     - [Plugins Life Cycle](#plugins-life-cycle)
 
 
-## Runner{#runner}
+## Runner
 
 The new Test Runner is built using the *Delegation* design pattern.
 This means most of the API is delegated to an external **provider** that provides the implementation.
@@ -74,7 +74,7 @@ In addition to the standard components, the Test Runner behavior can be extended
 that can hook the life cycle steps or react to events.
 
 
-### Runner Usage{#runner-usage}
+### Runner Usage
 
 First you need to require the modules.
 ```javascript
@@ -124,7 +124,7 @@ And then the runner can start its life cycle.
 ```
 
 
-### Runner Provider{#runner-provider}
+### Runner Provider
 
 A provider is an object that contains a list of particular methods expected by the runner API.
 Some of these methods are mandatory, but most of them are not.
@@ -154,7 +154,7 @@ Methods | Mandatory | Promise | Purpose
 `setPersistentState(name, active)`| [ ] | [x] | Writes a persistent state. The operation can be asynchronous.
 
 
-### Runner API{#runner-api}
+### Runner API
 
 The runner provides an API its providers must reflect for a big part. Here is a list:
 
@@ -198,7 +198,7 @@ Methods | Provider | Promise | Plugin | Events | State | Purpose
 `timeout(scope, ref)` | [ ] | [ ] | | `timeout` | | Triggers a timeout for a particular scope.
 
 
-### Runner Events{#runner-events}
+### Runner Events
 
 Events take a big place in the runner's life cycle. Here is the list of the standard events.
 Each provider implementation can extend this list, so it is not an exhaustive enumeration.
@@ -228,7 +228,7 @@ Event | Parameters | Purpose
 `timeout` | `scope`, `ref` | Notifies a timeout. The parameters provide the scope and the reference of the timed out element.
 
 
-### Runner States{#runner-states}
+### Runner States
 
 The runner maintains some internal states. Here is the list of the standard states.
 Each provider implementation can extend this list, so it is not an exhaustive enumeration.
@@ -253,7 +253,7 @@ State | Purpose
 `disabled` | Set when the item is disabled.
 
 
-### Runner Life Cycle{#runner-life-cycle}
+### Runner Life Cycle
 
 The life cycle of the runner is quite complex. In addition, any provider implementation can extend this life cycle through the events.
 
@@ -268,7 +268,7 @@ A test runner does not carry on only one item, so the life cycle is manager thro
 
 ![Runner Life Cycle](/resources/extension-tao-test/wiki/runner-flow.png)
 
-## Proxy{#proxy}
+## Proxy
 
 The proxy brings the ability to communicate with the outside. Like the runner it is built using the *Delegation* design pattern.
 Thus the remarks made about this design pattern regarding the Test Runner are also valid for the proxy:
@@ -288,7 +288,7 @@ the middlewares and the communication channels.
 **Note:** The runner automatically catches the proxy errors. So you can listen to them through the `error` event.
 
 
-### Create a Proxy Instance{#create-a-proxy-instance}
+### Create a Proxy Instance
 
 First you need to require the modules.
 ```javascript
@@ -338,7 +338,7 @@ Example for a runner provider:
 ```
 
 
-### Proxy Usage{#proxy-usage}
+### Proxy Usage
 
 From inside the runner you can access to the proxy by the `.getProxy()` method.
 If the proxy is not already created, this method will invoke the `.loadProxy()` method the provider must implement.
@@ -365,7 +365,7 @@ Almost all proxy methods return promises, so do not forget to catch them.
 ```
 
 
-### Proxy Middlewares{#proxy-middlewares}
+### Proxy Middlewares
 
 A proxy middleware is a piece of code that acts as a filter and will be executed after each request and before the result is provided to the runner.
 Each middleware is able to alter this result. Several middlewares can be registered onto a proxy and will be executed in order.
@@ -418,7 +418,7 @@ You can also register several middlewares at once:
 ```
 
 
-### Proxy Provider{#proxy-provider}
+### Proxy Provider
 
 A provider is an object that contains a list of particular methods expected by the proxy API.
 Although no method is strictly mandatory, some of them must be present, otherwise the proxy will not work properly.
@@ -446,7 +446,7 @@ Methods | Recommended | Promise | Purpose
 `telemetry(uri, signal, params)` | [ ] | [x] | Sends a telemetry signal.
 
 
-### Proxy API{#proxy-api}
+### Proxy API
 
 The proxy provides a simple API its providers must reflect. Here is a list:
 
@@ -472,7 +472,7 @@ Methods | Provider | Promise | Middleware | Events | Purpose
 `telemetry(uri, action, params)`| [x] | [x] | [x] | `telemetry` | Sends a telemetry signal.
 
 
-### Proxy Events{#proxy-events}
+### Proxy Events
 
 The proxy triggers events, and some of them are forwarded to the runner. Here is a list:
 
@@ -493,7 +493,7 @@ Event | Forwarded | Parameters | Purpose
 `telemetry` | [ ] | `promise`, `uri`, `signal`, `params` | Triggered when the `telemetry()` method has been called. The result is provided as parameter, then the rest of the parameters.
 
 
-### Proxy Life Cycle{#proxy-life-cycle}
+### Proxy Life Cycle
 
 The life cycle of the proxy is pretty simple.
 
@@ -502,7 +502,7 @@ init -> messages loop -> destroy
 **Note:** Except for the communicator, the messages loop pass through the middlewares.
 
 
-## Communicator{#communicator}
+## Communicator
 
 The proxy offers a bidirectional communication channel through an abstraction, called communicator,
 that also relies on the *Delegation* design pattern.
@@ -535,7 +535,7 @@ However the registration of channels will never fail.
 - The communicator cannot be affected by the middlewares.
 
 
-### Create a Communicator Instance{#create-a-communicator-instance}
+### Create a Communicator Instance
 
 First you need to require the module.
 ```javascript
@@ -575,7 +575,7 @@ Example for a proxy provider:
 ```
 
 
-### Communicator Usage{#communicator-usage}
+### Communicator Usage
 
 It is not needed to deal directly with the communicator as the proxy provides API to utilize seamlessly the communicator abilities.
 
@@ -609,7 +609,7 @@ When the proxy is destroyed, it also destroys the communicator, so do not bother
 ```
 
 
-### Communicator Provider{#communicator-provider}
+### Communicator Provider
 
 A provider is an object that contains a list of particular methods expected by the communicator API.
 Although no method is mandatory, some of them must be present, otherwise the communicator will not work properly.
@@ -631,7 +631,7 @@ Methods | Recommended | Promise | Purpose
 **Note:** For now there is only one existing provider, that polls the endpoint every period of time: `core/communicator/poll`.
 
 
-### Communicator API{#communicator-api}
+### Communicator API
 
 The communicator provides a simple API its providers must reflect. Here is a list:
 
@@ -648,7 +648,7 @@ Methods | Provider | Promise | Events | State | Purpose
 `getState(name)`| [ ] | [ ] | | | Gets a state.
 
 
-### Communicator Events{#communicator-events}
+### Communicator Events
 
 The communicator triggers events, and some of them are forwarded to the proxy. Here is a list:
 
@@ -670,7 +670,7 @@ Event | Forwarded | Parameters | Purpose
 `receive` | [x] | `data` | Triggered each time the endpoint sends data. The provided parameter contains the raw received data.
 
 
-### Communicator States{#communicator-states}
+### Communicator States
 
 The communicator maintains some internal states. Here is a list:
 
@@ -680,14 +680,14 @@ State | Purpose
 `open` | Set when the communicator has opened the communication with its endpoint. This state is erased when the communication is closed.
 
 
-### Communicator Life Cycle{#communicator-life-cycle}
+### Communicator Life Cycle
 
 The life cycle of the communicator is pretty simple.
 
 `init` -> `open` -> `messages loop` -> `close` -> `destroy`
 
 
-## Area Broker{#area-broker}
+## Area Broker
 
 The runner does not have a direct access to the user interface. It needs a particular component that provides entry points.
 This component is the **Area Broker**.
@@ -706,7 +706,7 @@ Area | Description
 The provider bound to the runner must provide a `.loadAreaBroker()` methods that returns a configured Area Broker.
 
 
-### Create an Area Broker Instance{#create-an-area-broker-instance}
+### Create an Area Broker Instance
 
 First you need to require the module.
 ```javascript
@@ -739,7 +739,7 @@ Example for a runner provider:
 ```
 
 
-### Area Broker Usage{#area-broker-usage}
+### Area Broker Usage
 
 From inside the runner you can access to the area broker by the `.getAreaBroker()` method.
 If the area broker is not already created, this method will invoke the `.loadAreaBroker()` method the provider must implement.
@@ -762,7 +762,7 @@ Example with jQuery as a layer to manage the user interface:
 ```
 
 
-### Area Broker API{#area-broker-api}
+### Area Broker API
 
 The area broker provides a simple API. Here is a list:
 
@@ -774,7 +774,7 @@ Methods | Purpose
 `get<Name>Area()` | The factory creates an alias for each known area.
 
 
-## Probe Overseer{#probe-overseer}
+## Probe Overseer
 
 Optionally the runner can be audited in order to produce stats. To do so a particular component must be injected: the **Probe Overseer**.
 
@@ -785,7 +785,7 @@ There are two kinds of probes:
 - probes that compute time spent from their activation to their deactivation and capture info at this time
 
 
-### Create a Probe Overseer Instance{#create-a-probe-overseer-instance}
+### Create a Probe Overseer Instance
 
 First you need to require the module.
 ```javascript
@@ -812,7 +812,7 @@ Example for a runner provider:
 ```
 
 
-### Probe Overseer Usage{#probe-overseer-usage}
+### Probe Overseer Usage
 
 From inside the runner you can access to the probe overseer by the `.getProbeOverseer()` method.
 If the probe overseer is not already created, this method will invoke the `.loadProbeOverseer()` method the provider must implement.
@@ -886,7 +886,7 @@ Do not forget to stop the probe overseer in order to clean the storage:
 You have to manage the life cycle of the probe overseer in the runner provider.
 
 
-### Probe Overseer API{#probe-overseer-api}
+### Probe Overseer API
 
 The area broker provides an API to register probes and manage them. Here is a list:
 
@@ -901,7 +901,7 @@ Methods | Purpose
 `stop()` | Stops the probes, then clears the store and the queue
 
 
-## Plugins{#plugins}
+## Plugins
 
 Plugins also use the *Delegation* design pattern.
 However they don't need to address several implementations through registered providers, and the plugin factory just
@@ -920,7 +920,7 @@ It also implements a layer for host binding and an API to forward events to the 
 **Note:** The host must implement an eventifier, otherwise an error will be thrown when you will try to bound a plugin to this host.
 
 
-### Create a Plugin{#create-a-plugin}
+### Create a Plugin
 
 First you need to require the module.
 ```javascript
@@ -945,7 +945,7 @@ You can also provide an area broker to allow access to the user interface, and a
 ```
 
 
-### Plugins Usage{#plugins-usage}
+### Plugins Usage
 
 After you have got a plugin instance you can access all the plugin API. By example:
 
@@ -965,7 +965,7 @@ Almost all plugin methods return promises, so do not forget to catch them.
 ```
 
 
-### Plugins Provider{#plugins-provider}
+### Plugins Provider
 
 A provider is an object that contains a list of particular methods expected by the plugin API.
 There is no mandatory method, however it is recommended to implement either `install()` or `init()`.
@@ -989,7 +989,7 @@ Methods | Recommended | Promise | Purpose
 `disable()` | [ ] | [x] | Disables the plugin.
 
 
-### Plugins API{#plugins-api}
+### Plugins API
 
 Plugins must suit to their host life cycle, so a big part of the plugin API is dedicated to this.
 The rest is provided to manage the plugin itself.
@@ -1017,7 +1017,7 @@ Methods | Provider | Promise | Events | State | Purpose
 `disable()` | [x] | [x] | `disable` | erase `enabled` | Disables the plugin.
 
 
-### Plugins Life Cycle{#plugins-life-cycle}
+### Plugins Life Cycle
 
 The life cycle of a plugin depends of its host. However, regarding its API, a common life cycle can be described.
 

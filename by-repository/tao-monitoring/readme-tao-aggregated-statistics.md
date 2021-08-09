@@ -2,7 +2,7 @@
 
 This extension contains services for creating and maintaining aggregated statistics.
 
-## Usages:{#usages}
+## Usages:
 
 Using `MonitoringPlugService` you can configure which statistics will be logged.
 

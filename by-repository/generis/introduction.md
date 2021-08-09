@@ -4,7 +4,7 @@ When it is time to introduce a new feature in a TAO Current Gen Extension, it is
 
 In this Best Practice document, the reader will learn how to introduce a new feature by creating a Dummy TAO Service in the _[taoOutcomeRds](https://github.com/oat-sa/extension-tao-outcomerds)_ extension, in addition with all the components required to make it installed properly on a new TAO Platform Instance (_Installation Process_), but also integrable on a long-running TAO Platform Instance (_Update Process_) using Migrations to properly update configuration and database schema.
 
-# Core Feature Components{#core-feature-components}
+# Core Feature Components
 
 In our Dummy Feature example, we will introduce a new `DummyFeatureManager` Service  that relies on an upgraded database schema. It requires that we have a `dummytable` table in the database on which we will rely on. The core feature component is then a simple `oat\oatbox\service\ConfigurableService` as described below.
 
@@ -144,11 +144,11 @@ class DummyFeatureManager extends ConfigurableService
 
 This is beautiful, but we now have to integrate this within the TAO ecosystem. To do so, we will have to wire everything together to make our `DummyFeatureManager` Service available after a successful _Installation Process_ or _Update Process_.
 
-# Installation Process{#installation-process}
+# Installation Process
 
 In order to make sure that our `DummyFeatureManager` Service is registered and our database schema gets updated during a fresh TAO _Installation Process_, we need proceed with two things. First of all, we have to provide a default _Instantiation Pattern_ to our Service. Secondly, we have to make sure that the database schema will be updated by creating an _Installation Action_.
 
-## Service Instantiation{#service-instantiation}
+## Service Instantiation
 
 During a TAO Extension _Installation Process_, the `config/default` directory of the Extension will be scanned to find default _Service Instantiation Patterns_ for implemented Services. The file name must correspond to the **second part of the Service ID** + .`conf.php`. As our `DummyFeatureManager` Service has the `"taoOutcomeRds/DummyFeatureManager"` Service ID, we will create our _Service Instantiation Pattern_ as below.
 
@@ -170,7 +170,7 @@ return new DummyFeatureManager([
 
 By doing this, we are sure that at the _[taoOutcomeRds](https://github.com/oat-sa/extension-tao-outcomerds)_ Extension installation time, this file will be copied in `config/taoOutcomeRds/DummyFeatureManager.conf.php`. The service will be then automatically registered and then available via the TAO Service Locator for further usage.
 
-## Installation Action{#installation-action}
+## Installation Action
 
 We can now take care of the _Installation Action_ containing the code to be executed to properly activate our new  feature. It is easy to implement it as an `__invokable()` action by extending the `oat\oatbox\extension\AbstractAction` class.
 
@@ -244,7 +244,7 @@ return [
 ];
 ```
 
-# Update Process{#update-process}
+# Update Process
 
 For the _Update Process_, the only thing to do is to create a new _Migration_. Execute the following command in your terminal to create a new _Migration Class Skeleton_ for the taoOutcomeRds extension.
 
@@ -386,11 +386,11 @@ final class Version202006101217421904_taoOutcomeRds extends AbstractMigration
 }
 ```
 
-# Testing the Solution{#testing-the-solution}
+# Testing the Solution
 
 The final touch is to make sure that what we provide for the _Update Process_ and _Installation Process_ works. If you implemented the `down()` method of your _Migration Class_, you must also test the Rollback Process.
 
-## Update Process Testing{#update-process-testing}
+## Update Process Testing
 
 Let us get back to the original source code state by retrieving all `develop` by using `composer update`. Install the platform. Now, switch to the appropriate branch of your feature in the `composer.json` file and perform `composer update` again to get your new feature code.
 
@@ -504,7 +504,7 @@ MariaDB [tao-community]> DESCRIBE dummytable;
 1 row in set (0.002 sec)
 ```
 
-### Single Migration Testing{#single-migration-testing}
+### Single Migration Testing
 
 Please execute/rollback migrations manually only for debugging or testing purposes. 
 
@@ -516,7 +516,7 @@ Run `php index.php "oat\tao\scripts\tools\Migrations" -c execute -v <version>` t
 
 Run `php index.php "oat\tao\scripts\tools\Migrations" -c rollback -v <version>` to rollback single migration, where `<version>` is fully qualified class name.____
 
-## Installation Process Testing{#installation-process-testing}
+## Installation Process Testing
 
 Now that we have the appropriate new code source in our local environment, we also have to check that the _Installation Process_ is working well. Reinstall the platform and validate the 4 following checkpoints.
 
@@ -533,11 +533,11 @@ php index.php "oat\tao\scripts\tools\Migrations" -c status
 
 The output must be exactly the same as the one you received while checking the _Update Process_ at the **2nd checkpoint**.
 
-# Additional Concepts{#additional-concepts}
+# Additional Concepts
 
 There are other concepts to be taken into account while creating a new feature. It is critical they are well understood.
 
-## Long Migrations{#long-migrations}
+## Long Migrations
 
 **It is absolutely critical to respect the following rules as it could affect deployment in production.**
 
@@ -660,7 +660,7 @@ cd ~/root/installation/directory
 php index.php "oat\taoOutcomeRds\scripts\update\DummyExternalProcessing"
 ```
 
-## No Migration{#no-migration}
+## No Migration
 
 In case of your new feature or bugfix does not contain any code aiming at updating the platform (database schema, configuration, …) there is no need to create a _Migration Class_. The only thing you have to do is to update the version in the `manifest.php` file. As an example, in case of a bugfix on the _[taoOutcomeRds](https://github.com/oat-sa/extension-tao-outcomerds)_ extension, you would perform the following change.
 
@@ -679,7 +679,7 @@ return [
 ];
 ```
 
-## Irreversible Migrations{#irreversible-migrations}
+## Irreversible Migrations
 
 Sometimes, implementing the `AbstractMigration::down()` is very difficult or close to impossible. Reverting complex data changes can take too much time to implement, or simply to execute. In such a case, an agreement must occur between the developer and the reviewer. In case of a Migration is Irreversible, the implementation of the `AbstractMigration::down()` must throw a `Doctrine\Migrations\Exception\IrreversibleMigration` exception as in the following example
 
@@ -714,6 +714,6 @@ final class Version202006191726251904_taoOutcomeRds extends AbstractMigration
 }
 ```
 
-# Conclusion{#conclusion}
+# Conclusion
 
 In this Best Practice document, the reader could learn how to implement a new feature from end to end for a TAO Current Gen Extension. He knows how to create a new _TAO Service_ and configure it for installation using _Service Instantiation Patterns_ and _Installation Scripts_. In addition he could learn how to properly update the database and configuration using _Migrations_.

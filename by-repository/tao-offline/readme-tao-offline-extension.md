@@ -8,7 +8,7 @@
 
 > TAO Offline Capability offers schools the possibility to take assessments in environments with unstable internet connections. It uses Virtual Machines (VM) and a Central Server (CS). The assessment is performed on the VMs that contain a TAO installation as well as the tests. At the end the results of the test will be synchronized with the Central Server. 
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you already have a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -35,12 +35,12 @@ As a system administrator you can also install it through the TAO Extension Mana
 - Settings (the gears on the right-hand side of the menu) -> Extension manager
 - Select _taoOffline_ on the right-hand side, check the box and hit _install_
 
-## Synchronization and Encryption{#synchronization-and-encryption}
+## Synchronization and Encryption
 
 ## Synchronization
 The synchronization process is based upon two actors, the Client Server, which is installed on a Virtual Machine, and the Central Server.
 
-#### Setting up the Client Server{#setting-up-the-client-server}
+#### Setting up the Client Server
 
 The following script needs to be run on a TAO instance in order to create a Client Server:
 
@@ -56,7 +56,7 @@ Point the instance to a specific server by executing the following command:
 sudo -u www-data php index.php '\oat\taoSync\scripts\tool\RegisterHandShakeRootURL' --rootUrl=http://tao-central.dev/
  ```
 
-#### Setting up the Central Server{#setting-up-the-central-server}
+#### Setting up the Central Server
 
 Run the following to turn a TAO instance into a Central Server.
 
@@ -66,7 +66,7 @@ sudo -u www-data php index.php 'oat\taoOffline\scripts\tools\setup\SetupCentralS
 
 Again, instances with `taoEncryption` will benefit from encryption.
 
-#### Types of available synchronizations{#types-of-available-synchronizations}
+#### Types of available synchronizations
 
 * Central Server to VM
     * Test Centers
@@ -80,21 +80,21 @@ Again, instances with `taoEncryption` will benefit from encryption.
     * Result Logs
     * LTI Users
     
-#### Overview of the workflow{#overview-of-the-workflow}
+#### Overview of the workflow
 
 ![Overview workflow](docs/overview_sync.png)
 
-##### Sequence Diagram{#sequence-diagram}
+##### Sequence Diagram
 
 ![Sequence Diagram](docs/sync_flow.png)
 
-#### Synchronizing users with encryption{#synchronizing-users-with-encryption}
+#### Synchronizing users with encryption
 
 Every user has been assigned an application key that is used to decrypt the delivery content. Properties that are excluded from the synchronization process can be found under `excludedProperties` in the configuration file `config/taoSync/syncService.conf.php`.  Properties that are encrypted are defined inside `config/taoEncryption/encryptUserSyncFormatter.conf.php`.
 
 ![Synchronizing users](docs/sync_users.png)
 
-#### Synchronizing deliveries with encryption{#synchronizing-deliveries-with-encryption}
+#### Synchronizing deliveries with encryption
 
 During the synchronization of the deliveries, the test package is sent to the client. The client then imports the test and generates a delivery. 
 
@@ -102,7 +102,7 @@ _Note: If you are synchronizing a delivery that already exists on the VM a new i
 
 ![Synchronizing Deliveries](docs/sync_delivery.png)
 
-##### Synchronizing results with encryption{#synchronizing-results-with-encryption}
+##### Synchronizing results with encryption
 
 The `chunkSize` of a result is an essential configuration parameter that needs to be set in advance; the default is `10`. It can be set depending on the number of variables included in a result.
 
@@ -112,6 +112,6 @@ The statuses of a result that needs to be sent can be configured under `statusEx
 
 ![Synchronizing Results](docs/sync_results.png)
 
-#### Synchronizing results - Logs{#synchronizing-results-logs}
+#### Synchronizing results - Logs
 
 Each result log is synchronized with the Central Server to maintain a history of the test. The number of logs sent per request is defined in the configuration inside `config/taoSync/SyncDeliveryLogService.conf.php`.

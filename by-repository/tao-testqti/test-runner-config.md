@@ -7,7 +7,7 @@
     - [Item Usage](#item-usage)
 
 
-# Runner Options{#runner-options}
+# Runner Options
 
 Most of the features of the Test Runner are configurable. Some are enabled by default, some are not.
 Thanks to the modular architecture of the new Test Runner, most of the features are provided through plugins.
@@ -19,7 +19,7 @@ Apart the features options, there is also a config dedicated to the version of t
 [A chapter](Qti-Client-Test-Runner) is dedicated to this aspect.
 
 
-## Platform Options{#platform-options}
+## Platform Options
 
 Most of the Test Runner options are platform wide and are managed through a config file.
 They target both versions of the Test Runner.
@@ -29,7 +29,7 @@ Those options are located into the config file: `config/taoQtiTest/testRunner.co
 Here is a description of each platform options.
 
 
-### `timerWarning`{#timerwarning}
+### `timerWarning`
 
 >- *Default: None*
 >- *since v2.6.1*
@@ -64,7 +64,7 @@ To setup the timer warning, you must follow this syntax and replace accordingly 
     ),
 ```
 
-### `timer`{#timer}
+### `timer`
 
 >- *Default: `['target' => 'server']`*
 >- *since v2.23.0*
@@ -83,7 +83,7 @@ For more info please refer to the [Test Runner documentation](Test-Runner#timeli
     ),
 ```
 
-### `progress-indicator`{#progress-indicator}
+### `progress-indicator`
 
 >- *Default: `percentage`*
 >- *since v2.7.0*
@@ -97,7 +97,7 @@ Tells what type of progress bar to use. Can be:
     'progress-indicator' => 'percentage',
 ```
 
-### `progress-indicator-scope`{#progress-indicator-scope}
+### `progress-indicator-scope`
 
 >- *Default: `testSection`*
 >- *since v2.7.0*
@@ -112,7 +112,7 @@ When the `progress-indicator` option is set to `position`, define the scope of p
     'progress-indicator-scope' => 'testSection',
 ```
 
-### `progress-indicator-forced`{#progress-indicator-forced}
+### `progress-indicator-forced`
 
 >- *Default: `false`*
 >- *since v2.12.0*
@@ -123,7 +123,7 @@ Force the progress indicator to be always displayed
     'progress-indicator-forced' => false,
 ```
 
-### `test-taker-review`{#test-taker-review}
+### `test-taker-review`
 
 >- *Default: `true`*
 >- *since v2.7.0*
@@ -136,7 +136,7 @@ Please see the chapter [Test Options](#test-options) for more information.
     'test-taker-review' => true,
 ```
 
-### `test-taker-review-region`{#test-taker-review-region}
+### `test-taker-review-region`
 
 >- *Default: `left`*
 >- *since v2.7.0*
@@ -150,7 +150,7 @@ When the test taker review screen is enabled, set the position of the side panel
     'test-taker-review-region' => 'left',
 ```
 
-### `test-taker-review-force-title`{#test-taker-review-force-title}
+### `test-taker-review-force-title`
 
 >- *Default: `false`*
 >- *since v2.11.0*
@@ -161,7 +161,7 @@ Forces a unique title for all test items. When enabled even if each item has its
     'test-taker-review-force-title' => false,
 ```
 
-### `test-taker-review-item-title`{#test-taker-review-item-title}
+### `test-taker-review-item-title`
 
 >- *Default: `Item %d`*
 >- *since v2.11.0*
@@ -174,7 +174,7 @@ This title will be processed through a `sprintf()` call, with the item sequence 
     'test-taker-review-item-title' => 'Item %d',
 ```
 
-### `test-taker-review-scope`{#test-taker-review-scope}
+### `test-taker-review-scope`
 
 >- *Default: `test`*
 >- *since v2.9.0*
@@ -189,7 +189,7 @@ Limits the test taker review screen to a particular scope. Can be:
     'test-taker-review-scope' => 'test',
 ```
 
-### `test-taker-review-prevents-unseen`{#test-taker-review-prevents-unseen}
+### `test-taker-review-prevents-unseen`
 
 >- *Default: `true`*
 >- *since v2.7.0*
@@ -200,7 +200,7 @@ Prevents the test taker to access unseen items.
     'test-taker-review-prevents-unseen' => true,
 ```
 
-### `test-taker-review-can-collapse`{#test-taker-review-can-collapse}
+### `test-taker-review-can-collapse`
 
 >- *Default: `false`*
 >- *since v2.10.0*
@@ -211,7 +211,7 @@ Allows the test taker to collapse the review screen: when collapsed the componen
     'test-taker-review-can-collapse' => false,
 ```
 
-### `test-taker-unanswered-items-message`{#test-taker-unanswered-items-message}
+### `test-taker-unanswered-items-message`
 
 >- *Default: `true`*
 >- *since v5.26.0*
@@ -222,7 +222,7 @@ Enable/Disable the warning message about unanswered items at the end of the test
     'test-taker-unanswered-items-message' => true,
 ```
 
-### `exitButton`{#exitbutton}
+### `exitButton`
 
 >- *Default: `false`*
 >- *since v2.7.0*
@@ -233,7 +233,7 @@ Replace the logout button by an exit button...
     'exitButton' => false,
 ```
 
-### `next-section`{#next-section}
+### `next-section`
 
 >- *Default: `false`*
 >- *since v2.14.0*
@@ -244,7 +244,7 @@ Allows the next section button...
     'next-section' => false,
 ```
 
-### `keep-timer-up-to-timeout`{#keep-timer-up-to-timeout}
+### `keep-timer-up-to-timeout`
 
 >- *Default: `false`*
 >- *since v5.28.0*
@@ -256,7 +256,7 @@ This option allows to just freeze the timer when the section is left, and allows
     'keep-timer-up-to-timeout' => false,
 ```
 
-### `extraContextBuilder`{#extracontextbuilder}
+### `extraContextBuilder`
 
 >- *Default: `null`*
 >- *since v2.19.0*
@@ -268,7 +268,7 @@ This class have to implements `\oat\taoQtiTest\models\TestContextBuilder`
     'extraContextBuilder' => null,
 ```
 
-### `plugins`{#plugins}
+### `plugins`
 
 >- *Default: please see the [plugins chapter](Test-Runner-Plugins)*
 >- *since v2.20.0*
@@ -279,7 +279,7 @@ A collection of plugins related config sets. Each particular plugin config is in
     'plugins' => [],
 ```
 
-### `csrf-token`{#csrf-token}
+### `csrf-token`
 
 >- *Default: `true`*
 >- *since v2.22.0*
@@ -290,7 +290,7 @@ Enable the cross site request forgery token. For more info please refer to the [
     'csrf-token' => true,
 ```
 
-### `enable-allow-skipping`{#enable-allow-skipping}
+### `enable-allow-skipping`
 
 >- *Default: `false`*
 >- *since v3.1.0*
@@ -301,7 +301,7 @@ Enable Allow/Disallow Skipping feature. When enabled (true), the test taker will
     'enable-allow-skipping' => false,
 ```
 
-### `force-branchrules`{#force-branchrules}
+### `force-branchrules`
 
 >- *Default: `false`*
 >- *since v5.6.0*
@@ -312,7 +312,7 @@ Force branch rules to be executed even if the current navigation mode is non-lin
     'force-branchrules' => false,
 ```
 
-### `force-preconditions`{#force-preconditions}
+### `force-preconditions`
 
 >- *Default: `false`*
 >- *since v5.6.0*
@@ -323,7 +323,7 @@ Force preconditions to be executed even if the current navigation mode is non-li
     'force-preconditions' => false,
 ```
 
-### `path-tracking`{#path-tracking}
+### `path-tracking`
 
 >- *Default: `false`*
 >- *since v5.6.0*
@@ -334,7 +334,7 @@ Enable path tracking (consider taken route items, rather than default route item
     'path-tracking' => false,
 ```
 
-### `always-allow-jumps`{#always-allow-jumps}
+### `always-allow-jumps`
 
 >- *Default: `false`*
 >- *since v5.7.0*
@@ -345,7 +345,7 @@ Always allow jumps, even if the current navigation mode is linear.
     'always-allow-jumps' => false,
 ```
 
-### `check-informational`{#check-informational}
+### `check-informational`
 
 >- *Default: `true`*
 >- *since v5.11.0*
@@ -357,7 +357,7 @@ the informational items are not taken into account in the answered/flagged count
     'check-informational' => true,
 ```
 
-### `allow-shortcuts`{#allow-shortcuts}
+### `allow-shortcuts`
 
 >- *Default: `true`*
 >- *since v5.31.0*
@@ -368,7 +368,7 @@ Allows to use keyboard shortcuts to interact with the test runner.
     'allow-shortcuts' => true,
 ```
 
-### `shortcuts `{#shortcuts}
+### `shortcuts `
 
 >- *Default: `array()`*
 >- *since v5.31.0*
@@ -383,7 +383,7 @@ Shortcuts scheme applied to the test runner.
     ],
 ```
 
-### `allow-browse-next-item`{#allow-browse-next-item}
+### `allow-browse-next-item`
 
 >- *Default: `false`*
 >- *since v5.61.0*
@@ -394,7 +394,7 @@ Allows to pre-load the next items and put them in a local cache. This option wil
     'allow-browse-next-item' => true,
 ```
 
-### `item-cache-size`{#item-cache-size}
+### `item-cache-size`
 
 >- *Default: 3*
 >- *since v10.1.0*
@@ -405,13 +405,13 @@ Defines the number of items to cache, when the feature is allowed (allow-browse-
     'item-cache-size' => 3,
 ```
 
-## Implementation Options{#implementation-options}
+## Implementation Options
 
 Some platform options located in the config file `config/taoQtiTest/testRunner.conf.php` are dedicated to the version of the Test Runner.
 
 Here is a description of those implementation options.
 
-### `reset-timer-after-resume`{#reset-timer-after-resume}
+### `reset-timer-after-resume`
 
 >- *Default: `false`*
 >- *since v2.13.1*
@@ -422,7 +422,7 @@ For the old Test Runner only, after resuming test session timers will be reset t
     'reset-timer-after-resume' => false,
 ```
 
-### `test-session`{#test-session}
+### `test-session`
 
 >- *Default: `\taoQtiTest_helpers_TestSession`*
 >- *since v2.25.0*
@@ -430,7 +430,7 @@ For the old Test Runner only, after resuming test session timers will be reset t
 Set the FQCN of the TestSession class. This class will be used to manage server side of the Test Runner sessions.
 
 
-### `test-session-storage`{#test-session-storage}
+### `test-session-storage`
 
 >- *Default: `\taoQtiTest_helpers_TestSessionStorage`*
 >- *since v6.11.0*
@@ -441,7 +441,7 @@ Set the FQCN of the TestSessionStorage class. This class will be used to manage 
     'test-session' => '\taoQtiTest_helpers_TestSession',
 ```
 
-### `bootstrap`{#bootstrap}
+### `bootstrap`
 
 >- *Default: see sample below*
 >- *since v2.28.0*
@@ -478,7 +478,7 @@ For the new Test Runner only, defines the config set that will be provided thoug
 ```
 
 
-## Test Options{#test-options}
+## Test Options
 
 It is possible to activate or configure certain features per test. This is achieved by the use of item categories:
 at the item definition level it is possible to assign one or more category, which are like tags.
@@ -498,63 +498,63 @@ Obviously, there are not covered by this documentation.
 Here is a description of the currently available options.
 
 
-### `x-tao-option-reviewScreen`{#x-tao-option-reviewscreen}
+### `x-tao-option-reviewScreen`
 
 >- *since v2.15.0*
 
 Displays the review/navigation panel. The platform option `test-taker-review` must be enabled in order to make this working.
 Please see the chapter [Platform Options](#platform-options) for more information.
 
-### `x-tao-option-markReview`{#x-tao-option-markreview}
+### `x-tao-option-markReview`
 
 >- *since v2.14.0*
 
 Displays the mark for review button when the [review/navigation panel](#x-tao-option-reviewscreen) is enabled.
 
-### `x-tao-option-exit`{#x-tao-option-exit}
+### `x-tao-option-exit`
 
 >- *since v2.14.0*
 
 Displays an exit button that allow to finish and exit the test before its conventional end.
 
-### `x-tao-option-nextSection`{#x-tao-option-nextsection}
+### `x-tao-option-nextSection`
 
 >- *since v2.15.0*
 
 Displays the next section button
 
-### `x-tao-option-nextSectionWarning`{#x-tao-option-nextsectionwarning}
+### `x-tao-option-nextSectionWarning`
 
 >- *since v2.15.0*
 
 Displays a next section button, that warns, when clicked, the user that they will not be able to return to the section.
 
-### `x-tao-option-endTestWarning`{#x-tao-option-endtestwarning}
+### `x-tao-option-endTestWarning`
 
 >- *since v5.20.0*
 
 Displays a warning before the user finishes the test
 
-### `x-tao-option-unansweredWarning`{#x-tao-option-unansweredwarning}
+### `x-tao-option-unansweredWarning`
 
 >- *since v5.53.0*
 
 displays a warning before the user finishes the test, but only if there are unanswered/marked for review items
 
-### `x-tao-option-noExitTimedSectionWarning`{#x-tao-option-noexittimedsectionwarning}
+### `x-tao-option-noExitTimedSectionWarning`
 
 >- *since v5.22.0*
 
 Disables the warning automatically displayed upon exiting a timed section
 
-### `x-tao-option-calculator`{#x-tao-option-calculator}
+### `x-tao-option-calculator`
 
 >- *since v2.28.0*
 
 Displays the calculator button, that bring a basic four function calculator
 
 
-## Item Usage{#item-usage}
+## Item Usage
 
 >- *since v5.11.0*
 
@@ -563,17 +563,17 @@ The item categories are not only managed to be used as Test Runner options in TA
 Here is a description of the currently available item usages.
 
 
-### `x-tao-itemusage-default`{#x-tao-itemusage-default}
+### `x-tao-itemusage-default`
 
 When this category is assigned to an item, that is always the case if no other item usage is set, the item is processed as a standard item.
 
 
-### `x-tao-itemusage-informational`{#x-tao-itemusage-informational}
+### `x-tao-itemusage-informational`
 
 When this category is assigned to an item, the contained interactions are considered as informational only, the possible responses are not taken into account for the stats.
 This means the review panel won't take care of those items. However the score is still processed server side if any.
 
 
-### `x-tao-itemusage-seeding`{#x-tao-itemusage-seeding}
+### `x-tao-itemusage-seeding`
 
 Consider the assigned item is for seeding purpose. At the moment of the writing of this chapter, there is no implementation of this feature yet.

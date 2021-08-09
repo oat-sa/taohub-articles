@@ -3,7 +3,7 @@
 Extension supposed to be used to monitor the status of some services and the correct configuration of the TAO.
 
 
-## Installation{#installation}
+## Installation
 
 Requires the following CRON job on ALL instances (web and workers):
 
@@ -16,7 +16,7 @@ NOTE: For AWS environemnts make sure that both Web Server Role and Worker Server
 - rds:DescribeDBInstances
 - cloudwatch:GetMetricData
 
-## Link to the help desk:{#link-to-the-help-desk}
+## Link to the help desk:
 
 Configure `\oat\taoSystemStatus\model\SystemStatus\SystemStatusService::OPTION_SUPPORT_PORTAL_LINK` of `SystemStatusService` service 
 with appropriate url to show the link to the Help Desk portal on the Tao's system status page

@@ -13,7 +13,7 @@ The **Daily Exports** are run once a night and provided to the customer on a Mon
 
 In order to make sure that DevOps can configure the Daily and Full exports, we have to provide them with the commands to execute. To do so, please follow the following pattern.
 
-### Daily Export Commands{#daily-export-commands}
+### Daily Export Commands
 
 ```shell
 sudo -u www-data php index.php "oat\taoResultExports\scripts\tools\GenerateCsvFile" -d ${DELIVERY_URIS} -s label --policy response -b numAttempts,duration --prefix MyPrefix
@@ -21,7 +21,7 @@ sudo -u www-data php index.php "oat\taoResultExports\scripts\tools\GenerateCsvFi
 
 In the command pattern above, the `${DELIVERY_URIs}` must be replaced with a commas (`,`) separated list of URIs corresponding to the Deliveries that will be taken by Test-Takers (**NOT the QA Deliveries!**). These URIs can be found in the `ingestion.json` file of the [Ingestion Package](https://github.com/oat-sa/extension-tao-operations/wiki/Ingestion-Packages#basic-structure-of-an-ingestion-package) dedicated to the customer activity.
 
-### Full Export Commands{#full-export-commands}
+### Full Export Commands
 
 ```shell
 sudo -u www-data php index.php "oat\taoInvalsi\scripts\tools\GenerateCsvFile" -d ${DELIVERY_URIS} -s label --policy all -b MAXSCORE --prefix fullExport
@@ -29,7 +29,7 @@ sudo -u www-data php index.php "oat\taoInvalsi\scripts\tools\GenerateCsvFile" -d
 
 In the command pattern above, the `${DELIVERY_URIs}` must be replaced with a commas (`,`) separated list of URIs corresponding to the Deliveries that will be taken by Test-Takers (**NOT the QA Deliveries!**). These URIs can be found in the `ingestion.json` file of the [Ingestion Package](https://github.com/oat-sa/extension-tao-operations/wiki/Ingestion-Packages#basic-structure-of-an-ingestion-package) dedicated to the customer activity.
 
-## Early Header Exports{#early-header-exports}
+## Early Header Exports
 
 Right after proceeding to the creation of an Ingestion Package following the [standard procedure](https://github.com/oat-sa/extension-tao-operations/wiki/Ingestion-Packages#customer-ingestion-package-creation-process), we have to provide our customer with a an "empty" sample export that we call **Early Header Exports**.
 

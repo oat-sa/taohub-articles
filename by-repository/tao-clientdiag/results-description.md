@@ -4,7 +4,7 @@ Results are stored in the `diagnostic_report` table.
 
 Most of the thresholds and test requirements can be calibrated via platform configuration.
 
-# Workstation performance{#workstation-performance}
+# Workstation performance
 
 | Column | Content | Unit |
 | -- | -- | -- |
@@ -21,7 +21,7 @@ This is done multiple times (`performance_count`).
 
 Sample items can be customised so they are representative of the planned assessment.
 
-# Bandwidth{#bandwidth}
+# Bandwidth
 
 | Column | Content | Unit |
 | -- | -- | -- |
@@ -41,14 +41,14 @@ This number can be dynamically lowered if the detected bandwidth is very slow, s
 The diagnostic tool is calibrated by default so a test taker needs 0.35 Mbps to 0.5 Mbps to pass a test. 
 With this calibration, the necessary bandwidth (`bandwidth_average`) for 25 test takers taking the test simultaneously is between 8.75 Mbps and 12.5 Mbps.
 
-# Upload speed{#upload-speed}
+# Upload speed
 
 | Column | Content | Unit |
 | -- | -- | -- |
 | upload_max | maximum upload bandwidth | Mbps |
 | upload_avg | average upload bandwidth | Mbps |
 
-# Workstation configuration{#workstation-configuration}
+# Workstation configuration
 
 | Column | Content |
 | -- | -- | 
@@ -67,7 +67,7 @@ You can interpret the `compatible` column in the following way:
 | 1  | OS / Browser combination has been tested |
 | 2  | OS / Browser combination has NOT been tested |
 
-# General information{#general-information}
+# General information
 
 | Column | Content |
 | -- | -- |

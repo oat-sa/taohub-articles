@@ -11,7 +11,7 @@
 - Go back to your newly created LTI consumer and paste the URL in the *Callback URL* field.
 
 
-## Tasks on the LTI emulator{#tasks-on-the-lti-emulator}
+## Tasks on the LTI emulator
 
 - Open the [IMS LTI Tool Consumer emulator](http://lti.tools/test/tc.php).
 - Complete the *Registration settings* with the values from your *LTI consumer*. 
@@ -28,7 +28,7 @@ Certain extensions may have there own configuration options.
 
 Eventually click on *Save data*, then on *Launch TP*.
 
-## Act as a Proctor{#act-as-a-proctor}
+## Act as a Proctor
 
 The LTI Proctoring extension makes the proctoring interface available via LTI
 
@@ -47,7 +47,7 @@ Alternatively all deliveries can be proctored by omitting the delivery parameter
 The expected role of the proctor is:
 `urn:lti:role:ims/lis/TeachingAssistant`, which means you need to set *User Data > Roles* to *TeachingAssistant*
 
-## Running Client Diagnostics as a Proctor{#running-client-diagnostics-as-a-proctor}
+## Running Client Diagnostics as a Proctor
 
 - Set the *Launch URL* to `https://YOUR_DOMAIN/ltiClientdiag/ClientdiagTool/launch`
 - Set *User Data > Roles* to *TeachingAssistant*

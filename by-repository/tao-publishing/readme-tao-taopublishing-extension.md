@@ -9,7 +9,7 @@
 > Publish deliveries, tests and interactions to other tao platforms during the delivery creation.
 
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you have already a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -43,7 +43,7 @@ As a system administrator you can also install it through the TAO Extension Mana
 - Settings (the gears on the right hand side of the menu) -> Extension manager
 - Select _taoPublishing_ on the right hand side, check the box and hit _install_
 
-## Set up deliveries on TAO Platform{#set-up-deliveries-on-tao-platform}
+## Set up deliveries on TAO Platform
 
 To be able to synchronize, you need to set up the publication targets that you want to publish. You can do it by:
  - Clicking on Settings Icon (top corner right side) -> Publication Targets -> Add Button.

@@ -16,11 +16,11 @@ Privileges are additive, meaning that if:
 
 Then User X he will have read and write access to Item 1
 
-## How to enable ACL management{#how-to-enable-acl-management}
+## How to enable ACL management
 
 In order to see the `Access control` button on the backoffice panel a few changes are necessary.
 
-### Enable this in the actions{#enable-this-in-the-actions}
+### Enable this in the actions
 
 Change the `actions/structures.xml` file by adding the attribute `allowClassActions="true"` in the `actions` node:
 
@@ -40,7 +40,7 @@ Change the `actions/structures.xml` file by adding the attribute `allowClassActi
 </structures>
 ```
 
-### Enable ACL in an endpoint{#enable-acl-in-an-endpoint}
+### Enable ACL in an endpoint
 
 Add the annotation `requiresRight` with proper `field` and `grant level` to check permissions:
 
@@ -57,7 +57,7 @@ class MyController extends tao_actions_SaSModule
 }
 ```
 
-### Checking ACL internally (without annotations) in the endpoint{#checking-acl-internally-without-annotations-in-the-endpoint}
+### Checking ACL internally (without annotations) in the endpoint
 
 If extending `tao_actions_RdfController` we can use the method `hasWriteAccess`:
 
@@ -86,7 +86,7 @@ $canWrite = $dataAccessControl->hasPrivileges($user, [$item->getUri() => 'WRITE'
 $canRead = $dataAccessControl->hasPrivileges($user, [$item->getUri() => 'READ']);
 ```
 
-## Permissions save strategies{#permissions-save-strategies}
+## Permissions save strategies
 
 Currently, we have the following saving/propagating permissions strategies:
 

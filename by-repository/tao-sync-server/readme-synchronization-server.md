@@ -2,15 +2,15 @@
 
 Synchronization logic specific only for the server server. 
 
-## Available Scripts{#available-scripts}
+## Available Scripts
 
 List of console scripts available with this package
 
-### Sync Package{#sync-package}
+### Sync Package
 
 Controls synchronization packages
 
-#### Generate Package{#generate-package}
+#### Generate Package
 
 **Command**
 

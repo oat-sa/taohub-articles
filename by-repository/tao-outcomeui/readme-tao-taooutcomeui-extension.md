@@ -8,7 +8,7 @@
 
 > Extension implements resultServer interface to store results using ontology/statements table
 
-## Installation instructions{#installation-instructions}
+## Installation instructions
 
 These instructions assume that you have already a TAO installation on your system. If you don't, go to
 [package/tao](https://github.com/oat-sa/package-tao) and follow the installation instructions.
@@ -42,35 +42,35 @@ As a system administrator you also install it through the TAO Extension Manager:
 - Select _taoOutcomeUi_ on the right hand side, check the box and hit _install_
 
 <!-- Uncomment and describe if applicable
-## REST API{#rest-api}
+## REST API
 
 [](https://openapi.taotesting.com/viewer/?url=https://raw.githubusercontent.com/oat-sa/extension-tao-outcomeui/master/doc/rest.json)
 -->
 
 <!-- Uncomment and describe if applicable
-## LTI Endpoints{#lti-endpoints}
+## LTI Endpoints
 
 -->
 
-## Configuration options{#configuration-options}
+## Configuration options
 
 ## resultService.conf.php
 
-#### Configuration option `class`{#configuration-option-class}
+#### Configuration option `class`
 
 *Description :* contains the class name of a delivery results service.
 
 *Possible values of the `class` key:* 
 * an instance of any class that implements the `ServiceLocatorAwareInterface` interface.
 
-#### Configuration option `resultColumnsChunkSize`{#configuration-option-resultcolumnschunksize}
+#### Configuration option `resultColumnsChunkSize`
 
 *Description :* contains a chunk size value.
 
 *Possible values of the `resultColumnsChunkSize` key:* 
 * a preset integer value of `20`
 
-### resultViewer.conf.php{#resultviewerconfphp}
+### resultViewer.conf.php
 
 ### Configuration option `deleteDeliveryExecutionDataServices`
 
@@ -79,18 +79,18 @@ As a system administrator you also install it through the TAO Extension Manager:
 *Possible values:* 
 * a `ResultsViewerService` model.
 
-### Registering default (phpfile) result page cache{#registering-default-phpfile-result-page-cache}
+### Registering default (phpfile) result page cache
 
 ```bash
  $ sudo -u www-data php index.php '\oat\taoOutcomeUi\scripts\tools\RegisterDefaultResultCache'
 ```
 
-### Delete result cache for a delivery execution aka. result{#delete-result-cache-for-a-delivery-execution-aka-result}
+### Delete result cache for a delivery execution aka. result
 
 ```bash
  $ sudo -u www-data php index.php 'oat\taoOutcomeUi\scripts\tools\DeleteResultCache' -u {deliveryExecutionUri}
 ```
 
-## Extension Wiki{#extension-wiki}
+## Extension Wiki
 
 You can find the [extension wiki here](https://github.com/oat-sa/extension-tao-outcomeui/wiki).

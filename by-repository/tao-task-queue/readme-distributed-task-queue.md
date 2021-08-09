@@ -10,7 +10,7 @@ You can add the Task Queue as a standard TAO extension to your current TAO insta
  $ composer require oat-sa/extension-tao-task-queue
 ```
 
-### Queue component{#queue-component}
+### Queue component
 
 Queue can work with different types of queue brokers, here two types are to accomplish ASYNC mechanism:
 - **RdsQueueBroker** which stores tasks in RDS.
@@ -20,12 +20,12 @@ _Note_:
 > When SqsQueueBroker is used, please make sure that "**oat-sa/lib-generis-aws**" is included in the main composer.json and you have 
 > generis/awsClient.conf.php properly configured.
 
-#### Weight{#weight}
+#### Weight
 
 A Queue can have a weight. If multiple Queues are in use, this weight will be used for randomly select a Queue to be consumed. 
 For example, if QueueA has weight of 1 and QueueB has weight of 2, then QueueB has about a 66% chance of being selected.
 
-### Worker component{#worker-component}
+### Worker component
 
 Here we have a so called `LongRunningWorker` which can run unlimited time.
 It has built-in signal handling for the following actions:
@@ -39,7 +39,7 @@ _Note_:
 After processing the given task, the worker saves the generated report for the task through the Task Log.
 
 
-## Service setup examples{#service-setup-examples}
+## Service setup examples
 
 ## Multiple Queues settings
 
@@ -84,7 +84,7 @@ try {
 }
 ```
 
-### Initializing the queues and the task log container{#initializing-the-queues-and-the-task-log-container}
+### Initializing the queues and the task log container
 
 You can run this script if you want to be sure that the required queues and the task log container are created.
 
@@ -122,7 +122,7 @@ Option "persistence" is required, "receive" (Maximum amount of tasks that can be
  $ sudo -u www-data php index.php 'oat\taoTaskQueue\scripts\tools\InitializeQueue' --strategy="\oat\taoTaskQueue\model\TaskSelector\StrictPriorityStrategy"
 ```
 
-### Running a worker{#running-a-worker}
+### Running a worker
 
 To run a worker, use the following command. It will start a worker for running infinitely and iterating over every registered Queues based in their weights.
 
@@ -149,7 +149,7 @@ If you want to associate specyfic task to new queue you can use this command:
 ```
 Next time when defined task will be created, it will be assign to specified queue. 
 
-### Summarize stuck tasks{#summarize-stuck-tasks}
+### Summarize stuck tasks
 
 Execute this command if you want to summarize stuck tasks. Example: 
 
@@ -160,7 +160,7 @@ sudo -u www-data php index.php 'oat\taoTaskQueue\scripts\tools\StuckTaskSummary'
 --whitelist "oat\tao\model\search\tasks\UpdateResourceInIndex,oat\tao\model\search\tasks\UpdateClassInIndex"
 ```
 
-### Restart stuck tasks{#restart-stuck-tasks}
+### Restart stuck tasks
 
 Execute this command if you want to restart stuck tasks. Example: 
 
@@ -171,12 +171,12 @@ sudo -u www-data php index.php 'oat\taoTaskQueue\scripts\tools\StuckTaskRestart'
 --whitelist "oat\tao\model\search\tasks\UpdateResourceInIndex,oat\tao\model\search\tasks\UpdateClassInIndex"
 ```
 
-## Rest API{#rest-api}
+## Rest API
 
 The task log reports can be viewed/consume using the Application Programming Interface (API).
 In order to use it please check the swagger file in (doc/taskApi.yml).
 
-## Command Line Utility{#command-line-utility}
+## Command Line Utility
 
 Besides using the API to check reports of tasks, another way it's using the command line. 
 ```bash
