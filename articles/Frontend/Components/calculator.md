@@ -199,7 +199,6 @@ var mathsExpression = evaluate('(3 + x) * (5 - y)', {x: 3, y: 7});
     } 
 */
 ```
-
 ## Events model
 The calculator is a complex and extensible component. It relies on several
 mechanisms to perform its job, and one of those mechanisms is the events model:
