@@ -108,7 +108,7 @@ GET result
     }
 
 
-1.  Retrieve all data about one delivery Result
+\# Retrieve all data about one delivery Result
 
 
 
