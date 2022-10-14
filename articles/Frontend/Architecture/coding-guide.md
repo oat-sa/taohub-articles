@@ -1,6 +1,7 @@
 <!--
 authors:
     - "Bertrand Chevrier"
+    - "Andrey Shaveko"
 tags:
     Frontend Architecture:
         - "Coding guide"
@@ -51,14 +52,14 @@ Here is the default open source header :
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
- * Copyright (c) 2019 Open Assessment Technologies SA;
+ * Copyright (c) 2022 Open Assessment Technologies SA;
  */
 
 ```
 
 ### JavaScript
 
-We use a **subset** of the [jsdoc](http://usejsdoc.org/) format for the JavaScript code documentation.
+We use a **subset** of the [jsdoc](https://jsdoc.app/) format for the JavaScript code documentation.
 
 Mostly we document :
  - functions and method parameters
