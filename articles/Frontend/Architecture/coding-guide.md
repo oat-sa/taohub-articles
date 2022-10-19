@@ -167,7 +167,7 @@ The following coding rules apply on ES2015 code :
 - Be careful with destructuring, this can create code difficult to read. A reviewer can ask to rewrite a destructred assignment if the produced code is cryptic.
 - Use arrow functions for [lambda](https://en.wikipedia.org/wiki/Anonymous_function) to avoid unnecessary lexical scopes, but avoid them for top-level factories or [pure function](https://en.wikipedia.org/wiki/Pure_function) definitions.
 - Use template literals instead of string concatenation.
-- Use destructuring and default parameters for method's `options` parameter : `function({label = "", num =0} = {}) { }`
+- Use destructuring and default parameters for method's `options` parameter : `function({label = "", num = 0} = {}) { }`
 
 ### SASS/CSS
 
