@@ -286,32 +286,29 @@ When mixins are pure methods or stateless by preference. There shouldn't be any 
 
 Delegation pattern is composition pattern where component delegates functionality to other module
 
-```
+```js
 const person = {
-	  name: "Carl",
-	  allowanceLimit: 20,
+  name: "Carl",
+  allowanceLimit: 20,
 };
 
 const allowance = {
-  	substract(amount) {
-	  	if (amount <= this.allowanceLimit) {
-		  	this.allowanceLimit -= amount;
-			  return this.allowanceLimit;
-		  } else {
-		  	return 0;
-		  }
-	  },
-	  getAllowanceLimit() {
-	  	return this.allowanceLimit;
-	  },
+  substract(amount) {
+    if (amount <= this.allowanceLimit) {
+      this.allowanceLimit -= amount;
+    }
+  },
+  getAllowanceLimit() {
+    return this.allowanceLimit;
+  },
 };
 
 function delegate(source, methods, provider) {
-  	methods.forEach((methodName) => {
-  		source[methodName] = function () {
-	  		return provider[methodName].apply(source, arguments);
-		  };
-	  });
+  methods.forEach((methodName) => {
+    source[methodName] = function () {
+      return provider[methodName].apply(source, arguments);
+    };
+  });
 }
 
 delegate(person, ["substract", "getAllowanceLimit"], allowance);
@@ -324,7 +321,6 @@ console.log(person.getAllowanceLimit()); //5
 
 person.substract(10);
 console.log(person.getAllowanceLimit()); //5 (did not substract because of limit)
-
 ```
 
 `delegate` function does late binding of `provider` mathods to person objects.
@@ -334,34 +330,34 @@ Later we call `delegate` to attach allowance operation from `person` to `allowan
 
 Forwarding design pattern is used to completely forward data and control to other module. This is the good approach to manage shared states and distribute permission for shared state operation.
 
-```
+```js
 const person1 = {
-	  name: "Bob",
+  name: "Bob",
 };
 
 const person2 = {
-	  name: "Alice",
+  name: "Alice",
 };
 
 const familyWallet = {
-    balance: 0,
-    earn(amount) {
-        this.balance += amount;
-    },
-    spend(amount) {
-        this.balance -= amount;
-    },
-    getBalance() {
-        return this.balance;
-    },
+  balance: 0,
+  earn(amount) {
+    this.balance += amount;
+  },
+  spend(amount) {
+    this.balance -= amount;
+  },
+  getBalance() {
+    return this.balance;
+  },
 };
 
 function forward(person, methods, provider) {
-	  methods.forEach((methodName) => {
-		  person[methodName] = function () {
-			  return provider[methodName].apply(provider, arguments);
-		  };
-	});
+  methods.forEach((methodName) => {
+    person[methodName] = function () {
+      return provider[methodName].apply(provider, arguments);
+    };
+  });
 }
 
 forward(person1, ["earn", "spend", "getBalance"], familyWallet);
@@ -474,7 +470,32 @@ Please check out the [eventifier documentation](#eventifier).
 
 When multiples implementation of a given API can be defined, or dynamically defined, the provider pattern is used.
 
-_TBD_
+```js
+const jsonDataProvider = {
+  requestData() {
+    //read some json file and return data
+  },
+};
+
+const csvDataProvider = {
+  requestData() {
+    //read some csv file and return data
+  },
+};
+
+const person = {
+  dataProvider,
+  data,
+  updateData() {
+    this.data = this.dataProvider.requestData();
+  },
+  registerProvider(provider) {
+    this.dataProvider = provider;
+  },
+};
+```
+
+In this example two providers are defined, which have same `requestData` API method. `person` object does not request data directly and doesn't implement any data parsing logic, it just registers the appropriated provider and request data from it. This allows to decouple components, keep components small and easy testable.
 
 ### Components
 
