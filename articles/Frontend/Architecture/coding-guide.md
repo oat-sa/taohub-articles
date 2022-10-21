@@ -284,11 +284,100 @@ When mixins are pure methods or stateless by preference. There shouldn't be any 
 
 3. Delegation
 
-_TBD_
+Delegation pattern is composition pattern where component delegates functionality to other module
+
+```
+const person = {
+	  name: "Carl",
+	  allowanceLimit: 20,
+};
+
+const allowance = {
+  	substract(amount) {
+	  	if (amount <= this.allowanceLimit) {
+		  	this.allowanceLimit -= amount;
+			  return this.allowanceLimit;
+		  } else {
+		  	return 0;
+		  }
+	  },
+	  getAllowanceLimit() {
+	  	return this.allowanceLimit;
+	  },
+};
+
+function delegate(source, methods, provider) {
+  	methods.forEach((methodName) => {
+  		source[methodName] = function () {
+	  		return provider[methodName].apply(source, arguments);
+		  };
+	  });
+}
+
+delegate(person, ["substract", "getAllowanceLimit"], allowance);
+
+person.substract(5);
+console.log(person.getAllowanceLimit()); //15
+
+person.substract(10);
+console.log(person.getAllowanceLimit()); //5
+
+person.substract(10);
+console.log(person.getAllowanceLimit()); //5 (did not substract because of limit)
+
+```
+
+`delegate` function does late binding of `provider` mathods to person objects.
+Later we call `delegate` to attach allowance operation from `person` to `allowance` module. Allowance methods then update person state
 
 4. Forwarding
 
-_TBD_
+Forwarding design pattern is used to completely forward data and control to other module. This is the good approach to manage shared states and distribute permission for shared state operation.
+
+```
+const person1 = {
+	  name: "Bob",
+};
+
+const person2 = {
+	  name: "Alice",
+};
+
+const familyWallet = {
+    balance: 0,
+    earn(amount) {
+        this.balance += amount;
+    },
+    spend(amount) {
+        this.balance -= amount;
+    },
+    getBalance() {
+        return this.balance;
+    },
+};
+
+function forward(person, methods, provider) {
+	  methods.forEach((methodName) => {
+		  person[methodName] = function () {
+			  return provider[methodName].apply(provider, arguments);
+		  };
+	});
+}
+
+forward(person1, ["earn", "spend", "getBalance"], familyWallet);
+forward(person2, ["spend", "getBalance"], familyWallet);
+
+person1.earn(30);
+console.log(person1.getBalance()); // 30
+
+person2.spend(10);
+person1.spend(10);
+
+console.log(person2.getBalance()); // 10
+```
+
+`forward` function does late binding of `provider` mathods to person objects.
+Later we call `forward` to attach wallet operation from `person1` and `person2` to `familyWallet`.
 
 ### Factories
 
