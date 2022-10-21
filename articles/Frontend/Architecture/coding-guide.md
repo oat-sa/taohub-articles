@@ -504,10 +504,10 @@ A component can be atomic (a button) or a larger part of the GUI (a dashboard) t
 The atomicity level is up to use cases and usually defined by the way the component will be used.
 The purpose of a component is to render a DOM from a given set of data, react to the time and user events, and change based on a given state.
 
-An article is dedicated to [components](./component-abstraction).
+An article is dedicated to [components](./component-abstraction.md).
 
 > The way to do components in TAO has evolved a lot and only stabilized a few years ago, but expect the way to build component to be changed again soon. Remember if the way change the concept remains the same.
 
 ### Plugins
 
-An article is dedicated to [plugins](./plugins-model).
+An article is dedicated to [plugins](./plugins-model.md).
