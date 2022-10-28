@@ -105,6 +105,20 @@ Please configure your IDE or development editor to support :
 2.  CSS, SASS, HTML, JSON and Handlebars templates, etc.
 3.  [ESLint](https://eslint.org), make sure IDE uses `.eslintrc.js` which imports config from [eslint-config-tao](https://github.com/oat-sa/eslint-config-tao)
 4.  [Prettier](https://prettier.io/), if `prettier.config.js` exists in repository, configure IDE to use, this file imports config from [prettier-config](https://github.com/oat-sa/prettier-config). You should setup [this configuration](../../resources/frontend/prettier.config.js) as a fallback option
+`package.json` config example :
+```
+{
+  "prettier": "@oat-sa/prettier-config",
+  "devDependencies": {
+    "@oat-sa/eslint-config-tao": "^1.1.1",
+    "@oat-sa/prettier-config": "^0.1.1",
+    "eslint": "^8.25.0",
+    "eslint-plugin-es": "^4.1.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "prettier": "^2.7.1"
+  }
+}
+```
 5.  [EditorConfig](https://editorconfig.org/), using this [configuration](../../resources/frontend/lint/.editorconfig)
 
 ### General rules
