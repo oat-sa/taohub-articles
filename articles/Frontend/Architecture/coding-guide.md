@@ -77,8 +77,7 @@ For example :
  * A fooBar provides you the foo.
  * @type {fooBar}
  */
-return {
-
+const fooBar = {
   /**
    * This is how you get foo
    * @param {String[]} ids - the foo identifiers
@@ -88,8 +87,8 @@ return {
    * @fires fooBar#foo once the foo has foo the foo event is triggered
    * @throws {TypeError} if the parameters are invalid
    */
-  foo : fuction foo(ids, options){
-     //...
+  foo(ids, options) {
+    //...
   }
 };
 ```
@@ -105,8 +104,8 @@ Please configure your IDE or development editor to support :
 1.  JavaScript ES5 and ES2015+ style
 2.  CSS, SASS, HTML, JSON and Handlebars templates, etc.
 3.  [ESLint](https://eslint.org), make sure IDE uses `.eslintrc.js` which imports config from [eslint-config-tao](https://github.com/oat-sa/eslint-config-tao)
-4.  [Prettier](https://prettier.io/), if `prettier.config.js` exists in repository, configure IDE to use, this file imports config from [prettier-config](https://github.com/oat-sa/prettier-config)
-5.  [EditorConfig](https://editorconfig.org/), is one or the options to configure code formatting using [this configuration](../../resources/frontend/lint/.editorconfig)
+4.  [Prettier](https://prettier.io/), if `prettier.config.js` exists in repository, configure IDE to use, this file imports config from [prettier-config](https://github.com/oat-sa/prettier-config). You should setup [this configuration](../../resources/frontend/prettier.config.js) as a fallback option
+5.  [EditorConfig](https://editorconfig.org/), using this [configuration](../../resources/frontend/lint/.editorconfig)
 
 ### General rules
 
