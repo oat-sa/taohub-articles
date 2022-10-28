@@ -225,9 +225,9 @@ If multiple functions serve the same purpose they can be grouped into an object 
 
 ```js
 //a case module util
-return {
-  capitalize: function capitalize(inputString) {},
-  camelToSnake: function camelToSnake(inputString) {},
+const stringUtil = {
+  capitalize(inputString) {},
+  camelToSnake(inputString) {}
 };
 ```
 
@@ -272,19 +272,19 @@ For example,
 ```js
 //the mixin, a separate behavior you'll add on multiple objects
 const assignee = {
-  getAssignments() {
-    return this.assignments;
-  },
-  setAssignments(deliveries) {
-    this.assignments = assignments;
-  },
+    getAssignments() {
+        return this.assignments;
+    },
+    setAssignments(deliveries) {
+        this.assignments = assignments;
+    }
 };
 const aUser = {
-  firstName: "john",
-  lastName: "snow",
-  getName() {
-    return `${this.firstName} ${this.lastName}`;
-  },
+    firstName: 'john',
+    lastName: 'snow',
+    getName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
 };
 
 const testTaker = Object.assign(aUser, assignee);
@@ -302,30 +302,30 @@ Delegation pattern is composition pattern where component delegates functionalit
 
 ```js
 const person = {
-  name: "Carl",
-  allowanceLimit: 20,
+    name: 'Carl',
+    allowanceLimit: 20
 };
 
 const allowance = {
-  substract(amount) {
-    if (amount <= this.allowanceLimit) {
-      this.allowanceLimit -= amount;
+    substract(amount) {
+        if (amount <= this.allowanceLimit) {
+            this.allowanceLimit -= amount;
+        }
+    },
+    getAllowanceLimit() {
+        return this.allowanceLimit;
     }
-  },
-  getAllowanceLimit() {
-    return this.allowanceLimit;
-  },
 };
 
 function delegate(source, methods, provider) {
-  methods.forEach((methodName) => {
-    source[methodName] = function () {
-      return provider[methodName].apply(source, arguments);
-    };
-  });
+    methods.forEach(methodName => {
+        source[methodName] = function (...args) {
+            return provider[methodName].apply(source, args);
+        };
+    });
 }
 
-delegate(person, ["substract", "getAllowanceLimit"], allowance);
+delegate(person, ['substract', 'getAllowanceLimit'], allowance);
 
 person.substract(5);
 console.log(person.getAllowanceLimit()); //15
@@ -346,36 +346,36 @@ Forwarding design pattern is used to completely forward data and control to othe
 
 ```js
 const person1 = {
-  name: "Bob",
+    name: 'Bob'
 };
 
 const person2 = {
-  name: "Alice",
+    name: 'Alice'
 };
 
 const familyWallet = {
-  balance: 0,
-  earn(amount) {
-    this.balance += amount;
-  },
-  spend(amount) {
-    this.balance -= amount;
-  },
-  getBalance() {
-    return this.balance;
-  },
+    balance: 0,
+    earn(amount) {
+        this.balance += amount;
+    },
+    spend(amount) {
+        this.balance -= amount;
+    },
+    getBalance() {
+        return this.balance;
+    }
 };
 
 function forward(person, methods, provider) {
-  methods.forEach((methodName) => {
-    person[methodName] = function () {
-      return provider[methodName].apply(provider, arguments);
-    };
-  });
+    methods.forEach(methodName => {
+        person[methodName] = function (...args) {
+            return provider[methodName](...args);
+        };
+    });
 }
 
-forward(person1, ["earn", "spend", "getBalance"], familyWallet);
-forward(person2, ["spend", "getBalance"], familyWallet);
+forward(person1, ['earn', 'spend', 'getBalance'], familyWallet);
+forward(person2, ['spend', 'getBalance'], familyWallet);
 
 person1.earn(30);
 console.log(person1.getBalance()); // 30
@@ -398,24 +398,24 @@ When a module needs to keep a state and hide some implementation details, the fa
 
 ```js
 var countDownFactory = function countDownFactory(config) {
-  var currentValue = config.value || 0; //private but accessible through the API
-  var interval = null; //kept private
+    var currentValue = config.value || 0; //private but accessible through the API
+    var interval = null; //kept private
 
-  return {
-    getValue: function getValue() {
-      //expose some internal va
-      return currentValue;
-    },
-    start: function start() {
-      interval = setInterval(function () {
-        currentValue--;
-      }, config.delay);
-    },
-    stop: function stop() {
-      clearInterval(interval);
-    },
-    reset: function reset() {},
-  };
+    return {
+        getValue: function getValue() {
+            //expose some internal va
+            return currentValue;
+        },
+        start: function start() {
+            interval = setInterval(function () {
+                currentValue--;
+            }, config.delay);
+        },
+        stop: function stop() {
+            clearInterval(interval);
+        },
+        reset: function reset() {}
+    };
 };
 ```
 
@@ -439,7 +439,7 @@ const countdown = eventifier({
             this.interval = setInterval( () => {
                 this.value--;
 
-                this.trigger('update', value));
+                this.trigger('update', value);
 
                 if(this.value <= 0){
                     this.stop();
@@ -467,7 +467,6 @@ countdown
     .on('update', value => console.log(`Please wait ${value}seconds.`))
     .on('stop',  () => console.log('Please enter'))
     .start();
-
 ```
 
 TAO provides an implementation, the `core/eventifier` module, it has the following features :
@@ -486,26 +485,26 @@ When multiples implementation of a given API can be defined, or dynamically defi
 
 ```js
 const jsonDataProvider = {
-  requestData() {
-    //read some json file and return data
-  },
+    requestData() {
+        //read some json file and return data
+    }
 };
 
 const csvDataProvider = {
-  requestData() {
-    //read some csv file and return data
-  },
+    requestData() {
+        //read some csv file and return data
+    }
 };
 
 const person = {
-  dataProvider,
-  data,
-  updateData() {
-    this.data = this.dataProvider.requestData();
-  },
-  registerProvider(provider) {
-    this.dataProvider = provider;
-  },
+    dataProvider,
+    data,
+    updateData() {
+        this.data = this.dataProvider.requestData();
+    },
+    registerProvider(provider) {
+        this.dataProvider = provider;
+    }
 };
 ```
 
