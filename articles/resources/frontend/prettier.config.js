@@ -1,12 +1,21 @@
-{
-    "prettier": "@oat-sa/prettier-config",
-    "devDependencies": {
-      "@oat-sa/eslint-config-tao": "^1.1.1",
-      "@oat-sa/prettier-config": "^0.1.1",
-      "eslint": "^8.25.0",
-      "eslint-plugin-es": "^4.1.0",
-      "eslint-plugin-jsdoc": "^39.3.6",
-      "prettier": "^2.7.1"
-    }
-  }
-  
+/**
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ * Copyright (c) 2020-2021 (original work) Open Assessment Technologies SA ;
+ */
+
+ const config = require('@oat-sa/prettier-config');
+ module.exports = config;
+ 
