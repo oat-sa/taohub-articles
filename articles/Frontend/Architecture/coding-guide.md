@@ -389,6 +389,35 @@ console.log(person2.getBalance()); // 10
 `forward` function does late binding of `provider` mathods to person objects.
 Later we call `forward` to attach wallet operation from `person1` and `person2` to `familyWallet`.
 
+
+5. Adapter
+
+It happens quite often when API of the module you want to delegate or forward the calls is a bit different. To keep consistency of modules and APIs you can use `Adapter` pattern which has contains logic of API aligning.
+
+Mind the previous example, but now we want to use `secureFamilyWallet` which requires some `key` to spend money
+
+```js
+const secureFamilyWallet = {
+    // ...
+    spend(amount, key) {
+        this.balance -= amount;
+    }
+    // ...
+};
+
+function secureFamilyWalletAdapter(key, wallet) {
+    return {
+        //...
+        spend(amount) {
+            return secureFamilyWallet.spend.call(wallet, amount, key);
+        }
+        //...
+    };
+}
+```
+
+You can now create the instance of `secureFamilyWalletAdapter` with the key specified and forward person operations to it. No API change of person nor forward function is required.
+
 ### Factories
 
 > "The best thing about JavaScript is its implementation of functions. It got almost everything right. But, as you should expect with JavaScript, it didn't get everything right."
@@ -397,9 +426,9 @@ Later we call `forward` to attach wallet operation from `person1` and `person2` 
 When a module needs to keep a state and hide some implementation details, the factory pattern will be selected.
 
 ```js
-var countDownFactory = function countDownFactory(config) {
-    var currentValue = config.value || 0; //private but accessible through the API
-    var interval = null; //kept private
+const countDownFactory = function countDownFactory(config) {
+    let currentValue = config.value || 0; //private but accessible through the API
+    let interval = null; //kept private
 
     return {
         getValue: function getValue() {
@@ -509,6 +538,7 @@ const person = {
 ```
 
 In this example two providers are defined, which have same `requestData` API method. `person` object does not request data directly and doesn't implement any data parsing logic, it just registers the appropriated provider and request data from it. This allows to decouple components, keep components small and easy testable.
+You can combine the provider with forwarding/delegation patterns and delegate some common routines to shared modules (i.e. authentication or validation).
 
 ### Components
 
