@@ -26,7 +26,7 @@ Be sure node.js, npm, grunt and sass are available on your system. See [this sec
 
 Go to the build folder (where `{tao_dist}` is your TAO installation directory):
 
-    $> cd {tao_dist}/tao/views/build
+    $> cd {tao_dist}/tao/views
 
 Then run
 

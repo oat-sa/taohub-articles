@@ -13,7 +13,7 @@ JavaScript unit tests
 Setup
 -----
 
-    cd tao/views/build
+    cd tao/views
     npm install
 
 Running tests
@@ -25,7 +25,7 @@ Running tests
 
 ### Specific extension:
 
-    cd tao/views/build
+    cd tao/views
     grunt connect:test [extname+test]
     grunt connect:test taoqtiitemtest
     grunt connect:test taotest
@@ -35,7 +35,7 @@ Running tests
 
 You can either open the test.html in a browser or adapt the following command line:
 
-    cd tao/views/build
+    cd tao/views
     grunt connect:test qunit:single --test=[/path/to/test.html]
     grunt connect:test qunit:single --test=/taoQtiItem/views/js/qtiCreator/test/MathEditor/test.html
     ...
